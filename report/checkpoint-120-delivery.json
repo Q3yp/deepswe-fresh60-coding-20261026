@@ -1,0 +1,10 @@
+{
+  "checkpoint": 120,
+  "snapshot_scored_slots": 122,
+  "delivered_at": "2026-10-28T11:55:20.402Z",
+  "report": "report/checkpoint-120.md",
+  "data": "report/checkpoint-120-data.json",
+  "visual_attachment": "d224ece1-2aaa-4bfa-b0fc-482554a8e070-de97110e-bd76-45c1-9986-51f983e0c241-html",
+  "delivery": "Inline checkpoint visualization posted in this monitoring turn; saved report is the companion final-reply link.",
+  "final_study_complete": false
+}

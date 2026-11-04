@@ -1,0 +1,36 @@
+{
+  "bundled": {
+    "planned": 120,
+    "scored": 120,
+    "passed": 84,
+    "scored_with_verified_isolation": 120,
+    "scored_with_provider_interruption": 0,
+    "scored_model_resource_failures": 1,
+    "unscored_errors": 0,
+    "pending": 0,
+    "running": 0,
+    "infrastructure_hold": 0,
+    "awaiting_grader_recovery": 0,
+    "official_graded": 120,
+    "recovered_grades": 4,
+    "native_graded": 116,
+    "native_passed": 82
+  },
+  "override-coding": {
+    "planned": 120,
+    "scored": 120,
+    "passed": 94,
+    "scored_with_verified_isolation": 120,
+    "scored_with_provider_interruption": 0,
+    "scored_model_resource_failures": 0,
+    "unscored_errors": 0,
+    "pending": 0,
+    "running": 0,
+    "infrastructure_hold": 0,
+    "awaiting_grader_recovery": 0,
+    "official_graded": 120,
+    "recovered_grades": 2,
+    "native_graded": 118,
+    "native_passed": 94
+  }
+}

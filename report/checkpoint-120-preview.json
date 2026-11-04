@@ -1,0 +1,38 @@
+{
+  "previews": [
+    {
+      "width": 728,
+      "contentHeight": 805,
+      "capturedHeight": 805,
+      "consoleMessages": [
+        {
+          "level": "log",
+          "text": "Checkpoint render: 122 completed; 30 task pairs; 10 quantitative marks."
+        }
+      ],
+      "screenshot": {
+        "mimeType": "image/png",
+        "width": 728,
+        "height": 805
+      }
+    },
+    {
+      "width": 360,
+      "contentHeight": 880,
+      "capturedHeight": 880,
+      "consoleMessages": [
+        {
+          "level": "log",
+          "text": "Checkpoint render: 122 completed; 30 task pairs; 10 quantitative marks."
+        }
+      ],
+      "screenshot": {
+        "mimeType": "image/png",
+        "width": 360,
+        "height": 880
+      }
+    }
+  ],
+  "inspected": "Light728px and dark360px screenshots: score/resource values visible, no overlaps or clipping; no console errors. Native details table is presentation-only.",
+  "passed": true
+}

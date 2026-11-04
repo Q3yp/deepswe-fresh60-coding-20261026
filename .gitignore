@@ -1,0 +1,8 @@
+# Ignore unpacked raw trace directories (packaged inside traces.zip)
+/jobs/
+/review/
+/infrastructure/
+/recoveries/
+/deepswe-fresh60-coding-20261026/
+/__pycache__/
+*.pyc

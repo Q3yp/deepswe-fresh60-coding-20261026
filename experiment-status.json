@@ -1,0 +1,9 @@
+{
+  "finished": true,
+  "finished_at": "2026-10-30T16:06:06.263933+00:00",
+  "planned": 240,
+  "scored": 240,
+  "passed": 178,
+  "new_model_trials": 240,
+  "reused_trials": 0
+}

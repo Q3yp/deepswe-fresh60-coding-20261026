@@ -1,0 +1,2566 @@
+{
+  "benchmark": "DeepSWE 1.1",
+  "benchmark_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+  "pier_version": "0.3.1",
+  "pier_commit": "4d3c14041d16443f3f9f460dcdf23629994a304e",
+  "codex_version": "0.163.0",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "xhigh",
+  "verbosity": "medium",
+  "population_tasks": 113,
+  "attempts_per_condition_per_task": 2,
+  "agent_timeout_sec": 10800,
+  "verifier_timeout_sec": 1800,
+  "cpus": 2,
+  "memory_mb": 8192,
+  "storage_mb": 20480,
+  "architecture": "linux/amd64 on Apple M4 through Rosetta in a dedicated Colima VM",
+  "allowed_model_domains": [
+    "api.openai.com",
+    "chatgpt.com",
+    "auth.openai.com"
+  ],
+  "runtime_previous_root": "/Users/huizai/.t3/benchmarks/codex-base-deepswe-20261022",
+  "created_at": "2026-10-26T06:27:18.744115+00:00",
+  "sample_seed": 20261026,
+  "study": "fresh60-coding-20261026",
+  "total_trials": 240,
+  "additional_model_trials": 240,
+  "reused_jobs": {},
+  "remote_root": "/Users/huizai/.t3/benchmarks/codex-base-deepswe-20261022/followups/fresh60-coding-20261026",
+  "local_root": "/Users/huizai/.t3/scratch/2026-10-21-just-found-this-openai-docs-54a8e070/deepswe-fresh60-coding-20261026",
+  "candidate_tasks": 83,
+  "language_quotas": {
+    "typescript": 20,
+    "go": 18,
+    "python": 18,
+    "javascript": 2,
+    "rust": 2
+  },
+  "selection": "Exclude all30 prior tasks; within each metadata language, shuffle repository groups and choose one task per selected repository with seed20261026. Quotas20TS/18Go/18Python/2JS/2Rust, approximating remaining-task language shares. Randomize task order and30ABBA/30BAAB sequences. No outcomes used.",
+  "tasks": [
+    {
+      "name": "wazero-multi-module-snapshots",
+      "language": "go",
+      "repository": "https://github.com/wazero/wazero",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh77sbk25h3f5383rz7xqx98th822fd4-v1.1",
+      "base_commit": "3ec1e028c8cbda984a71bf72321008723ebdcb51",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "dasel-html-document-format",
+      "language": "go",
+      "repository": "https://github.com/TomWright/dasel",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7c7rrg3zke74w7068nawak9x82t6am-v1.1",
+      "base_commit": "0dd6132e0c58edbd9b1a5f7ffd00dfab1e6085ad",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "textual-richlog-follow-state",
+      "language": "python",
+      "repository": "https://github.com/Textualize/textual",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh70247kxfz01g03p1dpz9fqv183g47e-v1.1",
+      "base_commit": "0f0849fd37fbd0d4d6f81889476c22340129df67",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "updo-policy-alerting",
+      "language": "go",
+      "repository": "https://github.com/Owloops/updo",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7dk7mmh6ewnyc9h46wyag19d831gmy-v1.1",
+      "base_commit": "9ecd74f5bd56fa915501e5b77da044d97c450a74",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "actionlint-action-pinning-lint",
+      "language": "go",
+      "repository": "https://github.com/rhysd/actionlint",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh79dnvkvq8j9bs22ededmsc79823akj-v1.1",
+      "base_commit": "0bdc95715fa58f64e3fd6e63b0f89be8733cbbab",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "mobly-grouped-test-barriers",
+      "language": "python",
+      "repository": "https://github.com/google/mobly",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh74b2m0tjfn59vq8btqrj774s821570-v1.1",
+      "base_commit": "ec052921917ef201e73cc8e275dc91c5706b345f",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "vitest-duration-sharding",
+      "language": "typescript",
+      "repository": "https://github.com/vitest-dev/vitest",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh788hvxvxaz825205djm3ctth822xms-v1.1",
+      "base_commit": "647e6ade3b99523e3a0387a65fccfe918c331236",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "prometheus-transactional-reload-status",
+      "language": "typescript",
+      "repository": "https://github.com/prometheus/prometheus",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7faaexjnnv9h4vt84e0r1v4d82qtv7-v1.1",
+      "base_commit": "24a057bbf9089677b4c49eac4ae1f28287ac8bb9",
+      "repository_seen_in_previous30": true
+    },
+    {
+      "name": "aiomonitor-task-snapshots-diff",
+      "language": "python",
+      "repository": "https://github.com/aio-libs/aiomonitor",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh75rc2q0zhmsqwk7wewfwwtrx830v2n-v1.1",
+      "base_commit": "b73fea2e0682803bda7531c93cd1dfb360839175",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "fastapi-deprecation-response-headers",
+      "language": "python",
+      "repository": "https://github.com/fastapi/fastapi",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh75azsnb5eqs3mf4xm0zkzha582rvcd-v1.1",
+      "base_commit": "11614be9021aa4ac078d4d0693a8b5250a1010d8",
+      "repository_seen_in_previous30": true
+    },
+    {
+      "name": "dynamodb-toolbox-lazy-recursive-schemas",
+      "language": "typescript",
+      "repository": "https://github.com/dynamodb-toolbox/dynamodb-toolbox",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh72mtcjbhgxmwq036jccx77dh83dj5n-v1.1",
+      "base_commit": "1f2a18664f8aded292707fcafb01ff15ea33d3b8",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "awilix-async-container-initialization",
+      "language": "typescript",
+      "repository": "https://github.com/jeffijoe/awilix",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh70bg8gy4xks4eyh1s71ecmk9822p9c-v1.1",
+      "base_commit": "82ac179c1de4c216c4e333093044fac643303f0c",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "kgateway-consistent-hash-policy",
+      "language": "go",
+      "repository": "https://github.com/kgateway-dev/kgateway",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh74gnp94dw8fx3h047h4m4ht9830bat-v1.1",
+      "base_commit": "7abc5278782e3280fec8292b39807ec1b537eaf4",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "kysely-window-grouping-helpers",
+      "language": "typescript",
+      "repository": "https://github.com/kysely-org/kysely",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh799f394epg9pb2j9fhzky98183e8ec-v1.1",
+      "base_commit": "91cf3733b2a419f5b17dff118cedb7052ab5300d",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "scriggo-method-declarations",
+      "language": "go",
+      "repository": "https://github.com/open2b/scriggo",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7adk413brr6nnvzntz1qvb51833me1-v1.1",
+      "base_commit": "11703bb5e02cca28d08fe83ac9a4bdd2e087235e",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "pwntools-tube-multiplexing",
+      "language": "python",
+      "repository": "https://github.com/Gallopsled/pwntools",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh74mb9dzz76a6zgdqmmf5mvk1833cnk-v1.1",
+      "base_commit": "76894a5404a65d2800b6d0adaf3485ecba275caa",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "langchain-request-coalescing",
+      "language": "python",
+      "repository": "https://github.com/langchain-ai/langchain",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh71y4gxtry9p0m42wvg4th515831mwz-v1.1",
+      "base_commit": "7cef35b",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "ofetch-per-origin-circuit-breaker",
+      "language": "typescript",
+      "repository": "https://github.com/unjs/ofetch",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7aq6h38q4e91mragyvr8cd3n82xxxr-v1.1",
+      "base_commit": "dfbe3ca4ef8a22fc023fca5a5ef530e525f5e523",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "claude-code-by-agents-recursive-delegation",
+      "language": "typescript",
+      "repository": "https://github.com/baryhuang/claude-code-by-agents",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh734ehfw2s3bztf7pzc9xf3x18212bs-v1.1",
+      "base_commit": "5e0a2247d446c49a9951a06bb83b6e956dc7eb41",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "wasmi-trap-coredumps",
+      "language": "rust",
+      "repository": "https://github.com/wasmi-labs/wasmi",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh70h37djmvc9ac48jeh25gwz582xgqv-v1.1",
+      "base_commit": "e1f76e285b9ad68a952b7cf5297bbb7ab91e6028",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "kcp-go-multiplexed-kcp-streams",
+      "language": "go",
+      "repository": "https://github.com/xtaci/kcp-go",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh72w47mwm321wh9xj47vskc8d822e9t-v1.1",
+      "base_commit": "56b1fffecd743df1e7490235e69b51c44701f34c",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "helm-array-merge-strategies",
+      "language": "go",
+      "repository": "https://github.com/helm/helm",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh72a3qcr0kjpdr153havavn8s83bx8t-v1.1",
+      "base_commit": "42f78ba60edf531d5161e00d9819a7c34d976343",
+      "repository_seen_in_previous30": true
+    },
+    {
+      "name": "opa-template-string-reconstruction",
+      "language": "go",
+      "repository": "https://github.com/open-policy-agent/opa",
+      "category": "bugfix",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7eq7eek21pjhv1zx8c2cmmed82yd7v-v1.1",
+      "base_commit": "1ac64ef1a57a531c2723c59848890b88e816d777",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "tengo-destructuring-bindings",
+      "language": "go",
+      "repository": "https://github.com/d5/tengo",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7ajwvesks1d5kkpeqx7y79sd8238zn-v1.1",
+      "base_commit": "3cad0da7a51b1206c6f01e3f4fbb44b976d5275c",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "termenv-preserve-ansi-resets",
+      "language": "go",
+      "repository": "https://github.com/muesli/termenv",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh731cskx45z0t0961464d9ezx8220nt-v1.1",
+      "base_commit": "368a3572b8146cc038b3f240da6792003d7e42c5",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "ytt-jsonpath-query-api",
+      "language": "go",
+      "repository": "https://github.com/carvel-dev/ytt",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh77w0w2z8qs6m904k2hs9eg058325j8-v1.1",
+      "base_commit": "452382821dd9dae7cc36995960656bb94dc47212",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "csstree-shorthand-expansion-compression",
+      "language": "javascript",
+      "repository": "https://github.com/csstree/csstree",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh72qraccnjwdet6ynagsccr4x82y65c-v1.1",
+      "base_commit": "88e3d965c0b1628642a30a841745b410d6835052",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "fd-deterministic-multi-key-sorting",
+      "language": "rust",
+      "repository": "https://github.com/sharkdp/fd",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh79s1ny2ab454f8caet44rv5n82za06-v1.1",
+      "base_commit": "227883606023d62275fb48701aeac90f2b604143",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "igel-persist-feature-schema",
+      "language": "python",
+      "repository": "https://github.com/nidhaloff/igel",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7brwh7cv23ggeshkz85ac5fx831x5k-v1.1",
+      "base_commit": "bf4544d6c86ab4ace21254cb38a011ce3e845700",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "koota-entity-snapshot-rollback",
+      "language": "python",
+      "repository": "https://github.com/pmndrs/koota",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh71b98xenay7p45357036xq5x82tcdf-v1.1",
+      "base_commit": "72ebef44b8e024d877250f055eea60cdfaa4506",
+      "repository_seen_in_previous30": true
+    },
+    {
+      "name": "go-critic-doc-link-checker",
+      "language": "go",
+      "repository": "https://github.com/go-critic/go-critic",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh727w7pxd9cv476t3cxptxcg182e1e5-v1.1",
+      "base_commit": "9aea378c4dccd6f4394196ad8f0873b3e84678c8",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "anko-default-function-arguments",
+      "language": "go",
+      "repository": "https://github.com/mattn/anko",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7fj3hc92zehtc8azrm32xzb182w9dr-v1.1",
+      "base_commit": "9d2d84bb1564e9513287998c56ccf16c01c19008",
+      "repository_seen_in_previous30": true
+    },
+    {
+      "name": "superjson-error-stack-serialization",
+      "language": "typescript",
+      "repository": "https://github.com/flightcontrolhq/superjson",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh701jywhzgddknqwzsq6npjv98226tq-v1.1",
+      "base_commit": "010c4bdb4b8758844fd44eacf38e42b22eba8aea",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "arktype-json-schema-refs-dependencies",
+      "language": "typescript",
+      "repository": "https://github.com/arktypeio/arktype",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh771gpr8crkjsnt9pj81bafgs8229em-v1.1",
+      "base_commit": "04355e8b26d1ad5264ef62314a2bc46c4de58ed8",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "geo-shapeindex-serialization",
+      "language": "go",
+      "repository": "https://github.com/golang/geo",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh74gd4v9cty7573mr6k7va39183ngrq-v1.1",
+      "base_commit": "87f5a40ea07a4ea629ee5623c72660f3d1b217fa",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "tomlkit-toml-table-converters",
+      "language": "python",
+      "repository": "https://github.com/python-poetry/tomlkit",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7ezsk4ze1jyjta967ypwnxhh83etpm-v1.1",
+      "base_commit": "dd05eebc8ed9e30fc6c223088a5a450cb54c1cab",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "python-statemachine-state-data-scoping",
+      "language": "python",
+      "repository": "https://github.com/fgmacedo/python-statemachine",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh719np6e210pf8skawv132rw183pfyy-v1.1",
+      "base_commit": "8d17ba9f6ba8420cf05fddb94013bc221ed9a222",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "mnamer-daemon-watch-lifecycle",
+      "language": "python",
+      "repository": "https://github.com/jkwill87/mnamer",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh71jf6d7mtqaw5z1h69krrarx820dys-v1.1",
+      "base_commit": "73f5b537c8cad998e8e6d6bc40ad60e2e23bf268",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "cliffy-config-file-parsing",
+      "language": "typescript",
+      "repository": "https://github.com/c4spar/cliffy",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh72088pg9vkc6peacnkc35yy9832jff-v1.1",
+      "base_commit": "132a437c40cffbdfbe474ca808c8debde59e2633",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "eicrud-keyset-pagination-cursor",
+      "language": "typescript",
+      "repository": "https://github.com/eicrud/eicrud",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh79vgnwnp3wfz0b63ft8zbs81822re8-v1.1",
+      "base_commit": "68dafce",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "mashumaro-flattened-dataclass-fields",
+      "language": "python",
+      "repository": "https://github.com/Fatal1ty/mashumaro",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh70k6aj3y457hgtraar0rmgdn822qx8-v1.1",
+      "base_commit": "de139fd51c4d347666d109a8aea9d25451d908f6",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "sqlfmt-create-table-ddl-formatting",
+      "language": "python",
+      "repository": "https://github.com/tconbeer/sqlfmt",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh71t2fb7qvx4y0svvv77e5p3182hnvq-v1.1",
+      "base_commit": "da140993a4547170ef85dc5ce7ce1c270f4322b3",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "meriyah-explicit-resource-declarations",
+      "language": "typescript",
+      "repository": "https://github.com/meriyah/meriyah",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7398skqnxqwg9hbmdj7ncmk1822aa0-v1.1",
+      "base_commit": "d141eb14a40b79c04d1b1db5c20c6afa3844c0d9",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "sqlite-utils-safe-import-checkpoints",
+      "language": "python",
+      "repository": "https://github.com/simonw/sqlite-utils",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh73xpqyc0vqx9prf3m106nqe5821dcb-v1.1",
+      "base_commit": "8d74ffc93292c604d5827e2b44fffedca0c28c19",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "obsidian-linter-link-format-conversion",
+      "language": "typescript",
+      "repository": "https://github.com/platers/obsidian-linter",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7anfdjd1c4e5ejxncny0j1ed82xjm4-v1.1",
+      "base_commit": "6393b3ab32a2ace1fc24d4b0f5e0f13a179c874f",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "sql-formatter-bigquery-pipe-formatting",
+      "language": "typescript",
+      "repository": "https://github.com/sql-formatter-org/sql-formatter",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh712k0bfwxew9fvg12k70g59n83pw33-v1.1",
+      "base_commit": "954e5a474b9e3d45ca58f02a3a4eac8e1947acc5",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "kombu-virtual-queue-dead-lettering",
+      "language": "python",
+      "repository": "https://github.com/celery/kombu",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh72pgvncj82fnbfq2bvmy1qs183jdc5-v1.1",
+      "base_commit": "3c5c1bd86376ee73d52a4cc770bdaeab15bbc2f3",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "quill-shared-toolbar-focus",
+      "language": "typescript",
+      "repository": "https://github.com/slab/quill",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh73sgee6751fmh72hwwctyscx832frj-v1.1",
+      "base_commit": "539cbffd0a13b18e9c65eb84dd35e6596e403158",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "psd-tools-blend-range-api",
+      "language": "python",
+      "repository": "https://github.com/psd-tools/psd-tools",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh72dq33t9djm894gqagmgpkhd82yvjv-v1.1",
+      "base_commit": "c5e03189188daa3c5589326a9d74506d7dc48bc9",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "go-genai-streamed-function-args",
+      "language": "go",
+      "repository": "https://github.com/googleapis/go-genai",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7ahy57bb3jmdjzmbvq257swh8353nm-v1.1",
+      "base_commit": "87c0e5a4f27d04569d927717769f34483e0ba475",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "effect-sse-httpapi-streaming",
+      "language": "typescript",
+      "repository": "https://github.com/Effect-TS/effect",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7ajcjberhnnhk914qezwwt0x830v6v-v1.1",
+      "base_commit": "9245bc59ebfa688e8c92dd691296ee69d0815e59",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "valibot-recursive-schema-composition",
+      "language": "typescript",
+      "repository": "https://github.com/open-circle/valibot",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh77krxpg096a66tm8s8ztcarn82zzyv-v1.1",
+      "base_commit": "50016c77c808f9ca80391cf1abc96cc5416cf57d",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "bandit-interprocedural-taint-checks",
+      "language": "python",
+      "repository": "https://github.com/PyCQA/bandit",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh77yap0nc4zwm5bysc954xbr182tptg-v1.1",
+      "base_commit": "b46fa3a2723635aa29cc012538df4867ac2ac006",
+      "repository_seen_in_previous30": true
+    },
+    {
+      "name": "abs-module-cache-flags",
+      "language": "go",
+      "repository": "https://github.com/abs-lang/abs",
+      "category": "enhancement",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh75679ajj3b8dtd7se3h7z0a1833y6r-v1.1",
+      "base_commit": "cb1b3b671d0ee9fa9da9f7b02f86967953ffd10a",
+      "repository_seen_in_previous30": true
+    },
+    {
+      "name": "adaptix-name-mapping-aliases",
+      "language": "python",
+      "repository": "https://github.com/reagento/adaptix",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh73dq4n55jdxasppe6jjmth4183d47n-v1.1",
+      "base_commit": "a691069fcadf9131e5f7a5a130a022dc678f3e1d",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "optique-conditional-option-dependencies",
+      "language": "typescript",
+      "repository": "https://github.com/dahlia/optique",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh79vadftp8bjw2qzqjw8a0b9s82ytpj-v1.1",
+      "base_commit": "14bbe4efc7ded67932771b9ca18d9d637bb4cf27",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "query-persist-restored-query-state",
+      "language": "typescript",
+      "repository": "https://github.com/TanStack/query",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh76g3pdaddrcg12k7jse0xrzn83a5fd-v1.1",
+      "base_commit": "1047cdc393fac7c98822c993d70c28f58833c63d",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "testem-per-launcher-reports",
+      "language": "javascript",
+      "repository": "https://github.com/testem/testem",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7322qjz1xfjspavxy0kamf9h83277p-v1.1",
+      "base_commit": "158f61ea91c9613d2011c41ee9be40ada1d7a307",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "happy-dom-deterministic-intersectionobserver",
+      "language": "typescript",
+      "repository": "https://github.com/capricorn86/happy-dom",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh75ggdejhnymjbhkbtkxvhz758352br-v1.1",
+      "base_commit": "82a0888cb2c87a6123e05424b528f8e8c9b3e426",
+      "repository_seen_in_previous30": true
+    },
+    {
+      "name": "go-git-worktree-merge-conflicts",
+      "language": "go",
+      "repository": "https://github.com/go-git/go-git",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7bnb92eb32zvxx50fzjnshes822db0-v1.1",
+      "base_commit": "424e9964d3a33c6507a77c126841f2c5897262af",
+      "repository_seen_in_previous30": false
+    }
+  ],
+  "schedule": [
+    {
+      "task": "wazero-multi-module-snapshots",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "wazero-multi-module-snapshots",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "wazero-multi-module-snapshots",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "wazero-multi-module-snapshots",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "dasel-html-document-format",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "dasel-html-document-format",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "dasel-html-document-format",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "dasel-html-document-format",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "textual-richlog-follow-state",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "textual-richlog-follow-state",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "textual-richlog-follow-state",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "textual-richlog-follow-state",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "updo-policy-alerting",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "updo-policy-alerting",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "updo-policy-alerting",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "updo-policy-alerting",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "actionlint-action-pinning-lint",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "actionlint-action-pinning-lint",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "actionlint-action-pinning-lint",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "actionlint-action-pinning-lint",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "mobly-grouped-test-barriers",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "mobly-grouped-test-barriers",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "mobly-grouped-test-barriers",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "mobly-grouped-test-barriers",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "vitest-duration-sharding",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "vitest-duration-sharding",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "vitest-duration-sharding",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "vitest-duration-sharding",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "prometheus-transactional-reload-status",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "prometheus-transactional-reload-status",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "prometheus-transactional-reload-status",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "prometheus-transactional-reload-status",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "aiomonitor-task-snapshots-diff",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "aiomonitor-task-snapshots-diff",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "aiomonitor-task-snapshots-diff",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "aiomonitor-task-snapshots-diff",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "fastapi-deprecation-response-headers",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "fastapi-deprecation-response-headers",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "fastapi-deprecation-response-headers",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "fastapi-deprecation-response-headers",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "dynamodb-toolbox-lazy-recursive-schemas",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "dynamodb-toolbox-lazy-recursive-schemas",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "dynamodb-toolbox-lazy-recursive-schemas",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "dynamodb-toolbox-lazy-recursive-schemas",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "awilix-async-container-initialization",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "awilix-async-container-initialization",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "awilix-async-container-initialization",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "awilix-async-container-initialization",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "kgateway-consistent-hash-policy",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "kgateway-consistent-hash-policy",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "kgateway-consistent-hash-policy",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "kgateway-consistent-hash-policy",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "kysely-window-grouping-helpers",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "kysely-window-grouping-helpers",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "kysely-window-grouping-helpers",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "kysely-window-grouping-helpers",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "scriggo-method-declarations",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "scriggo-method-declarations",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "scriggo-method-declarations",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "scriggo-method-declarations",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "pwntools-tube-multiplexing",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "pwntools-tube-multiplexing",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "pwntools-tube-multiplexing",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "pwntools-tube-multiplexing",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "langchain-request-coalescing",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "langchain-request-coalescing",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "langchain-request-coalescing",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "langchain-request-coalescing",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "ofetch-per-origin-circuit-breaker",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "ofetch-per-origin-circuit-breaker",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "ofetch-per-origin-circuit-breaker",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "ofetch-per-origin-circuit-breaker",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "claude-code-by-agents-recursive-delegation",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "claude-code-by-agents-recursive-delegation",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "claude-code-by-agents-recursive-delegation",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "claude-code-by-agents-recursive-delegation",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "wasmi-trap-coredumps",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "wasmi-trap-coredumps",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "wasmi-trap-coredumps",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "wasmi-trap-coredumps",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "kcp-go-multiplexed-kcp-streams",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "kcp-go-multiplexed-kcp-streams",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "kcp-go-multiplexed-kcp-streams",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "kcp-go-multiplexed-kcp-streams",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "helm-array-merge-strategies",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "helm-array-merge-strategies",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "helm-array-merge-strategies",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "helm-array-merge-strategies",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "opa-template-string-reconstruction",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "opa-template-string-reconstruction",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "opa-template-string-reconstruction",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "opa-template-string-reconstruction",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "tengo-destructuring-bindings",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "tengo-destructuring-bindings",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "tengo-destructuring-bindings",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "tengo-destructuring-bindings",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "termenv-preserve-ansi-resets",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "termenv-preserve-ansi-resets",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "termenv-preserve-ansi-resets",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "termenv-preserve-ansi-resets",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "ytt-jsonpath-query-api",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "ytt-jsonpath-query-api",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "ytt-jsonpath-query-api",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "ytt-jsonpath-query-api",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "csstree-shorthand-expansion-compression",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "csstree-shorthand-expansion-compression",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "csstree-shorthand-expansion-compression",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "csstree-shorthand-expansion-compression",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "fd-deterministic-multi-key-sorting",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "fd-deterministic-multi-key-sorting",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "fd-deterministic-multi-key-sorting",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "fd-deterministic-multi-key-sorting",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "igel-persist-feature-schema",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "igel-persist-feature-schema",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "igel-persist-feature-schema",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "igel-persist-feature-schema",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "koota-entity-snapshot-rollback",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "koota-entity-snapshot-rollback",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "koota-entity-snapshot-rollback",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "koota-entity-snapshot-rollback",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "go-critic-doc-link-checker",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "go-critic-doc-link-checker",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "go-critic-doc-link-checker",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "go-critic-doc-link-checker",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "anko-default-function-arguments",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "anko-default-function-arguments",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "anko-default-function-arguments",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "anko-default-function-arguments",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "superjson-error-stack-serialization",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "superjson-error-stack-serialization",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "superjson-error-stack-serialization",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "superjson-error-stack-serialization",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "arktype-json-schema-refs-dependencies",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "arktype-json-schema-refs-dependencies",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "arktype-json-schema-refs-dependencies",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "arktype-json-schema-refs-dependencies",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "geo-shapeindex-serialization",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "geo-shapeindex-serialization",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "geo-shapeindex-serialization",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "geo-shapeindex-serialization",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "tomlkit-toml-table-converters",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "tomlkit-toml-table-converters",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "tomlkit-toml-table-converters",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "tomlkit-toml-table-converters",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "python-statemachine-state-data-scoping",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "python-statemachine-state-data-scoping",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "python-statemachine-state-data-scoping",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "python-statemachine-state-data-scoping",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "mnamer-daemon-watch-lifecycle",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "mnamer-daemon-watch-lifecycle",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "mnamer-daemon-watch-lifecycle",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "mnamer-daemon-watch-lifecycle",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "cliffy-config-file-parsing",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "cliffy-config-file-parsing",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "cliffy-config-file-parsing",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "cliffy-config-file-parsing",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "eicrud-keyset-pagination-cursor",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "eicrud-keyset-pagination-cursor",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "eicrud-keyset-pagination-cursor",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "eicrud-keyset-pagination-cursor",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "mashumaro-flattened-dataclass-fields",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "mashumaro-flattened-dataclass-fields",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "mashumaro-flattened-dataclass-fields",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "mashumaro-flattened-dataclass-fields",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "sqlfmt-create-table-ddl-formatting",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "sqlfmt-create-table-ddl-formatting",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "sqlfmt-create-table-ddl-formatting",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "sqlfmt-create-table-ddl-formatting",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "meriyah-explicit-resource-declarations",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "meriyah-explicit-resource-declarations",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "meriyah-explicit-resource-declarations",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "meriyah-explicit-resource-declarations",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "sqlite-utils-safe-import-checkpoints",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "sqlite-utils-safe-import-checkpoints",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "sqlite-utils-safe-import-checkpoints",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "sqlite-utils-safe-import-checkpoints",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "obsidian-linter-link-format-conversion",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "obsidian-linter-link-format-conversion",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "obsidian-linter-link-format-conversion",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "obsidian-linter-link-format-conversion",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "sql-formatter-bigquery-pipe-formatting",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "sql-formatter-bigquery-pipe-formatting",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "sql-formatter-bigquery-pipe-formatting",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "sql-formatter-bigquery-pipe-formatting",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "kombu-virtual-queue-dead-lettering",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "kombu-virtual-queue-dead-lettering",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "kombu-virtual-queue-dead-lettering",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "kombu-virtual-queue-dead-lettering",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "quill-shared-toolbar-focus",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "quill-shared-toolbar-focus",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "quill-shared-toolbar-focus",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "quill-shared-toolbar-focus",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "psd-tools-blend-range-api",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "psd-tools-blend-range-api",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "psd-tools-blend-range-api",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "psd-tools-blend-range-api",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "go-genai-streamed-function-args",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "go-genai-streamed-function-args",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "go-genai-streamed-function-args",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "go-genai-streamed-function-args",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "effect-sse-httpapi-streaming",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "effect-sse-httpapi-streaming",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "effect-sse-httpapi-streaming",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "effect-sse-httpapi-streaming",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "valibot-recursive-schema-composition",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "valibot-recursive-schema-composition",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "valibot-recursive-schema-composition",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "valibot-recursive-schema-composition",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "bandit-interprocedural-taint-checks",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "bandit-interprocedural-taint-checks",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "bandit-interprocedural-taint-checks",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "bandit-interprocedural-taint-checks",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "abs-module-cache-flags",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "abs-module-cache-flags",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "abs-module-cache-flags",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "abs-module-cache-flags",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "adaptix-name-mapping-aliases",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "adaptix-name-mapping-aliases",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "adaptix-name-mapping-aliases",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "adaptix-name-mapping-aliases",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "optique-conditional-option-dependencies",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "optique-conditional-option-dependencies",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "optique-conditional-option-dependencies",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "optique-conditional-option-dependencies",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "query-persist-restored-query-state",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "query-persist-restored-query-state",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "query-persist-restored-query-state",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "query-persist-restored-query-state",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "testem-per-launcher-reports",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "testem-per-launcher-reports",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "testem-per-launcher-reports",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "testem-per-launcher-reports",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "happy-dom-deterministic-intersectionobserver",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "happy-dom-deterministic-intersectionobserver",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "happy-dom-deterministic-intersectionobserver",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "happy-dom-deterministic-intersectionobserver",
+      "condition": "override-coding",
+      "repeat": 2
+    },
+    {
+      "task": "go-git-worktree-merge-conflicts",
+      "condition": "override-coding",
+      "repeat": 1
+    },
+    {
+      "task": "go-git-worktree-merge-conflicts",
+      "condition": "bundled",
+      "repeat": 1
+    },
+    {
+      "task": "go-git-worktree-merge-conflicts",
+      "condition": "bundled",
+      "repeat": 2
+    },
+    {
+      "task": "go-git-worktree-merge-conflicts",
+      "condition": "override-coding",
+      "repeat": 2
+    }
+  ],
+  "excluded_previous_tasks": [
+    "abs-stepped-slices",
+    "anko-typed-variable-bindings",
+    "bandit-structured-nosec-directives",
+    "cattrs-partial-structuring-recovery",
+    "clack-async-autocomplete-options",
+    "dateutil-rfc5545-timezone-interop",
+    "drizzle-orm-window-function-builders",
+    "expr-try-catch-errors",
+    "fastapi-implicit-head-options",
+    "gql-incremental-graphql-delivery",
+    "happy-dom-abort-pending-body-reads",
+    "helm-unified-manifest-stream",
+    "httpx-deterministic-cookie-store",
+    "ink-grid-box-layout",
+    "ipython-session-bundle-replay",
+    "katex-multicolumn-array-spans",
+    "kea-atomic-signal-selectors",
+    "koota-deferred-mutation-buffer",
+    "narwhals-rolling-window-suite",
+    "oxvg-structural-selector-preservation",
+    "participle-grammar-conflict-analysis",
+    "pebble-durability-wait-apis",
+    "pest-character-class-coalescing",
+    "prometheus-typed-label-sorting",
+    "returns-validated-error-accumulation",
+    "skrub-duration-encoding",
+    "task-task-graph-export",
+    "ts-pattern-match-each",
+    "yaegi-go-embed-directives",
+    "yjs-map-conflict-detection"
+  ],
+  "candidate_pool": [
+    {
+      "name": "abs-module-cache-flags",
+      "language": "go",
+      "repository": "https://github.com/abs-lang/abs",
+      "category": "enhancement",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh75679ajj3b8dtd7se3h7z0a1833y6r-v1.1",
+      "base_commit": "cb1b3b671d0ee9fa9da9f7b02f86967953ffd10a",
+      "repository_seen_in_previous30": true
+    },
+    {
+      "name": "actionlint-action-pinning-lint",
+      "language": "go",
+      "repository": "https://github.com/rhysd/actionlint",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh79dnvkvq8j9bs22ededmsc79823akj-v1.1",
+      "base_commit": "0bdc95715fa58f64e3fd6e63b0f89be8733cbbab",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "adaptix-name-mapping-aliases",
+      "language": "python",
+      "repository": "https://github.com/reagento/adaptix",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh73dq4n55jdxasppe6jjmth4183d47n-v1.1",
+      "base_commit": "a691069fcadf9131e5f7a5a130a022dc678f3e1d",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "aiomonitor-task-snapshots-diff",
+      "language": "python",
+      "repository": "https://github.com/aio-libs/aiomonitor",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh75rc2q0zhmsqwk7wewfwwtrx830v2n-v1.1",
+      "base_commit": "b73fea2e0682803bda7531c93cd1dfb360839175",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "anko-default-function-arguments",
+      "language": "go",
+      "repository": "https://github.com/mattn/anko",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7fj3hc92zehtc8azrm32xzb182w9dr-v1.1",
+      "base_commit": "9d2d84bb1564e9513287998c56ccf16c01c19008",
+      "repository_seen_in_previous30": true
+    },
+    {
+      "name": "arcane-drift-detection-baselines",
+      "language": "go",
+      "repository": "https://github.com/getarcaneapp/arcane",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh70nj38qyatmsmj1d5zh57j25820vrx-v1.1",
+      "base_commit": "d34a5e2a6c5eb0f0955039775f5b9538424b58ff"
+    },
+    {
+      "name": "arktype-json-schema-refs-dependencies",
+      "language": "typescript",
+      "repository": "https://github.com/arktypeio/arktype",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh771gpr8crkjsnt9pj81bafgs8229em-v1.1",
+      "base_commit": "04355e8b26d1ad5264ef62314a2bc46c4de58ed8",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "awilix-async-container-initialization",
+      "language": "typescript",
+      "repository": "https://github.com/jeffijoe/awilix",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh70bg8gy4xks4eyh1s71ecmk9822p9c-v1.1",
+      "base_commit": "82ac179c1de4c216c4e333093044fac643303f0c",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "bandit-incremental-cache-control",
+      "language": "python",
+      "repository": "https://github.com/PyCQA/bandit",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7drfg2vkvdvfh9xx0nfd5pz9821xr7-v1.1",
+      "base_commit": "765f00d3f202f83f61d03f882f80a2d5142d81f8"
+    },
+    {
+      "name": "bandit-interprocedural-taint-checks",
+      "language": "python",
+      "repository": "https://github.com/PyCQA/bandit",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh77yap0nc4zwm5bysc954xbr182tptg-v1.1",
+      "base_commit": "b46fa3a2723635aa29cc012538df4867ac2ac006",
+      "repository_seen_in_previous30": true
+    },
+    {
+      "name": "boa-hierarchical-evaluation-cancellation",
+      "language": "rust",
+      "repository": "https://github.com/boa-dev/boa",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh71kat2v58yys3pnyybkgycax832vj2-v1.1",
+      "base_commit": "70409a5052984325dccfdc5f6520818568a81f39"
+    },
+    {
+      "name": "claude-code-by-agents-recursive-delegation",
+      "language": "typescript",
+      "repository": "https://github.com/baryhuang/claude-code-by-agents",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh734ehfw2s3bztf7pzc9xf3x18212bs-v1.1",
+      "base_commit": "5e0a2247d446c49a9951a06bb83b6e956dc7eb41",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "cliffy-config-file-parsing",
+      "language": "typescript",
+      "repository": "https://github.com/c4spar/cliffy",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh72088pg9vkc6peacnkc35yy9832jff-v1.1",
+      "base_commit": "132a437c40cffbdfbe474ca808c8debde59e2633",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "csstree-shorthand-expansion-compression",
+      "language": "javascript",
+      "repository": "https://github.com/csstree/csstree",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh72qraccnjwdet6ynagsccr4x82y65c-v1.1",
+      "base_commit": "88e3d965c0b1628642a30a841745b410d6835052",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "dasel-html-document-format",
+      "language": "go",
+      "repository": "https://github.com/TomWright/dasel",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7c7rrg3zke74w7068nawak9x82t6am-v1.1",
+      "base_commit": "0dd6132e0c58edbd9b1a5f7ffd00dfab1e6085ad",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "dynamodb-toolbox-conditional-attribute-requirements",
+      "language": "typescript",
+      "repository": "https://github.com/dynamodb-toolbox/dynamodb-toolbox",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh79xyw12drtaz3reht4enc2hs83ef6v-v1.1",
+      "base_commit": "1f2a18664f8aded292707fcafb01ff15ea33d3b8"
+    },
+    {
+      "name": "dynamodb-toolbox-lazy-recursive-schemas",
+      "language": "typescript",
+      "repository": "https://github.com/dynamodb-toolbox/dynamodb-toolbox",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh72mtcjbhgxmwq036jccx77dh83dj5n-v1.1",
+      "base_commit": "1f2a18664f8aded292707fcafb01ff15ea33d3b8",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "effect-sse-httpapi-streaming",
+      "language": "typescript",
+      "repository": "https://github.com/Effect-TS/effect",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7ajcjberhnnhk914qezwwt0x830v6v-v1.1",
+      "base_commit": "9245bc59ebfa688e8c92dd691296ee69d0815e59",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "eicrud-keyset-pagination-cursor",
+      "language": "typescript",
+      "repository": "https://github.com/eicrud/eicrud",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh79vgnwnp3wfz0b63ft8zbs81822re8-v1.1",
+      "base_commit": "68dafce",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "etree-xml-diff-patch",
+      "language": "go",
+      "repository": "https://github.com/beevik/etree",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7e0e2z02keqh6j7db6bcg1c9822140-v1.1",
+      "base_commit": "4032e04c8f2e2f35e43ce5d772fcef14a5df4d74"
+    },
+    {
+      "name": "fastapi-deprecation-response-headers",
+      "language": "python",
+      "repository": "https://github.com/fastapi/fastapi",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh75azsnb5eqs3mf4xm0zkzha582rvcd-v1.1",
+      "base_commit": "11614be9021aa4ac078d4d0693a8b5250a1010d8",
+      "repository_seen_in_previous30": true
+    },
+    {
+      "name": "fd-deterministic-multi-key-sorting",
+      "language": "rust",
+      "repository": "https://github.com/sharkdp/fd",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh79s1ny2ab454f8caet44rv5n82za06-v1.1",
+      "base_commit": "227883606023d62275fb48701aeac90f2b604143",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "geo-shapeindex-serialization",
+      "language": "go",
+      "repository": "https://github.com/golang/geo",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh74gd4v9cty7573mr6k7va39183ngrq-v1.1",
+      "base_commit": "87f5a40ea07a4ea629ee5623c72660f3d1b217fa",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "go-critic-doc-link-checker",
+      "language": "go",
+      "repository": "https://github.com/go-critic/go-critic",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh727w7pxd9cv476t3cxptxcg182e1e5-v1.1",
+      "base_commit": "9aea378c4dccd6f4394196ad8f0873b3e84678c8",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "go-genai-streamed-function-args",
+      "language": "go",
+      "repository": "https://github.com/googleapis/go-genai",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7ahy57bb3jmdjzmbvq257swh8353nm-v1.1",
+      "base_commit": "87c0e5a4f27d04569d927717769f34483e0ba475",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "go-git-worktree-merge-conflicts",
+      "language": "go",
+      "repository": "https://github.com/go-git/go-git",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7bnb92eb32zvxx50fzjnshes822db0-v1.1",
+      "base_commit": "424e9964d3a33c6507a77c126841f2c5897262af",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "goreleaser-retry-publish-auditing",
+      "language": "go",
+      "repository": "https://github.com/goreleaser/goreleaser",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7cc4hqw7wb87h3kwwnkq0pv1830gjz-v1.1",
+      "base_commit": "399ef141161f212f4e81b5d7497b84633fc712d9"
+    },
+    {
+      "name": "happy-dom-deterministic-intersectionobserver",
+      "language": "typescript",
+      "repository": "https://github.com/capricorn86/happy-dom",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh75ggdejhnymjbhkbtkxvhz758352br-v1.1",
+      "base_commit": "82a0888cb2c87a6123e05424b528f8e8c9b3e426",
+      "repository_seen_in_previous30": true
+    },
+    {
+      "name": "helm-array-merge-strategies",
+      "language": "go",
+      "repository": "https://github.com/helm/helm",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh72a3qcr0kjpdr153havavn8s83bx8t-v1.1",
+      "base_commit": "42f78ba60edf531d5161e00d9819a7c34d976343",
+      "repository_seen_in_previous30": true
+    },
+    {
+      "name": "httpx-multipart-response-parsing",
+      "language": "python",
+      "repository": "https://github.com/encode/httpx",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7fr6f1yw1289ye5ttsfvaqen8319dq-v1.1",
+      "base_commit": "b5addb64f0161ff6bfe94c124ef76f6a1fba5254"
+    },
+    {
+      "name": "httpx-streaming-json-iteration",
+      "language": "python",
+      "repository": "https://github.com/encode/httpx",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh73snc7v9x3psk69rg4eqvjgs836v5a-v1.1",
+      "base_commit": "b5addb64f0161ff6bfe94c124ef76f6a1fba5254"
+    },
+    {
+      "name": "igel-persist-feature-schema",
+      "language": "python",
+      "repository": "https://github.com/nidhaloff/igel",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7brwh7cv23ggeshkz85ac5fx831x5k-v1.1",
+      "base_commit": "bf4544d6c86ab4ace21254cb38a011ce3e845700",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "kcp-go-multiplexed-kcp-streams",
+      "language": "go",
+      "repository": "https://github.com/xtaci/kcp-go",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh72w47mwm321wh9xj47vskc8d822e9t-v1.1",
+      "base_commit": "56b1fffecd743df1e7490235e69b51c44701f34c",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "kgateway-consistent-hash-policy",
+      "language": "go",
+      "repository": "https://github.com/kgateway-dev/kgateway",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh74gnp94dw8fx3h047h4m4ht9830bat-v1.1",
+      "base_commit": "7abc5278782e3280fec8292b39807ec1b537eaf4",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "kombu-single-active-consumer-priority",
+      "language": "python",
+      "repository": "https://github.com/celery/kombu",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh71vrtr4b1jj5vavv6aybnvjd83pcar-v1.1",
+      "base_commit": "3c5c1bd86376ee73d52a4cc770bdaeab15bbc2f3"
+    },
+    {
+      "name": "kombu-virtual-queue-dead-lettering",
+      "language": "python",
+      "repository": "https://github.com/celery/kombu",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh72pgvncj82fnbfq2bvmy1qs183jdc5-v1.1",
+      "base_commit": "3c5c1bd86376ee73d52a4cc770bdaeab15bbc2f3",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "koota-composite-trait-aspects",
+      "language": "typescript",
+      "repository": "https://github.com/pmndrs/koota",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh705e1hgmtj22pyetcmqa8ygs83bh33-v1.1",
+      "base_commit": "9c434858b2b522002f8c5eb4a554fa8836a7cf3c"
+    },
+    {
+      "name": "koota-entity-snapshot-rollback",
+      "language": "python",
+      "repository": "https://github.com/pmndrs/koota",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh71b98xenay7p45357036xq5x82tcdf-v1.1",
+      "base_commit": "72ebef44b8e024d877250f055eea60cdfaa4506",
+      "repository_seen_in_previous30": true
+    },
+    {
+      "name": "koota-pair-relation-tracking",
+      "language": "typescript",
+      "repository": "https://github.com/pmndrs/koota",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7cshjqfe84fmtb2ye37nrd6h82dds6-v1.1",
+      "base_commit": "9c434858b2b522002f8c5eb4a554fa8836a7cf3c"
+    },
+    {
+      "name": "koota-query-predicates",
+      "language": "typescript",
+      "repository": "https://github.com/pmndrs/koota",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7dkes3xb054yt1fd3g6nym5s83bz2h-v1.1",
+      "base_commit": "9c434858b2b522002f8c5eb4a554fa8836a7cf3c"
+    },
+    {
+      "name": "kysely-window-grouping-helpers",
+      "language": "typescript",
+      "repository": "https://github.com/kysely-org/kysely",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh799f394epg9pb2j9fhzky98183e8ec-v1.1",
+      "base_commit": "91cf3733b2a419f5b17dff118cedb7052ab5300d",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "langchain-request-coalescing",
+      "language": "python",
+      "repository": "https://github.com/langchain-ai/langchain",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh71y4gxtry9p0m42wvg4th515831mwz-v1.1",
+      "base_commit": "7cef35b",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "mashumaro-flattened-dataclass-fields",
+      "language": "python",
+      "repository": "https://github.com/Fatal1ty/mashumaro",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh70k6aj3y457hgtraar0rmgdn822qx8-v1.1",
+      "base_commit": "de139fd51c4d347666d109a8aea9d25451d908f6",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "meriyah-explicit-resource-declarations",
+      "language": "typescript",
+      "repository": "https://github.com/meriyah/meriyah",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7398skqnxqwg9hbmdj7ncmk1822aa0-v1.1",
+      "base_commit": "d141eb14a40b79c04d1b1db5c20c6afa3844c0d9",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "mnamer-daemon-watch-lifecycle",
+      "language": "python",
+      "repository": "https://github.com/jkwill87/mnamer",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh71jf6d7mtqaw5z1h69krrarx820dys-v1.1",
+      "base_commit": "73f5b537c8cad998e8e6d6bc40ad60e2e23bf268",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "mobly-grouped-test-barriers",
+      "language": "python",
+      "repository": "https://github.com/google/mobly",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh74b2m0tjfn59vq8btqrj774s821570-v1.1",
+      "base_commit": "ec052921917ef201e73cc8e275dc91c5706b345f",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "numba-stencil-boundary-modes",
+      "language": "python",
+      "repository": "https://github.com/numba/numba",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7ag6w2nh5a47ta6bg7hj2mk1823qwj-v1.1",
+      "base_commit": "5781334aa654972fdc749003e7c1e93e6d277110"
+    },
+    {
+      "name": "obsidian-linter-auto-table-of-contents",
+      "language": "typescript",
+      "repository": "https://github.com/platers/obsidian-linter",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh74j15mp1vrxx737y8b47tc8h832a37-v1.1",
+      "base_commit": "6393b3ab32a2ace1fc24d4b0f5e0f13a179c874f"
+    },
+    {
+      "name": "obsidian-linter-link-format-conversion",
+      "language": "typescript",
+      "repository": "https://github.com/platers/obsidian-linter",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7anfdjd1c4e5ejxncny0j1ed82xjm4-v1.1",
+      "base_commit": "6393b3ab32a2ace1fc24d4b0f5e0f13a179c874f",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "obsidian-linter-scoped-ignore-markers",
+      "language": "typescript",
+      "repository": "https://github.com/platers/obsidian-linter",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7fmf1y6r9ajpg3htmaj237h182vztd-v1.1",
+      "base_commit": "6393b3ab32a2ace1fc24d4b0f5e0f13a179c874f"
+    },
+    {
+      "name": "ofetch-per-origin-circuit-breaker",
+      "language": "typescript",
+      "repository": "https://github.com/unjs/ofetch",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7aq6h38q4e91mragyvr8cd3n82xxxr-v1.1",
+      "base_commit": "dfbe3ca4ef8a22fc023fca5a5ef530e525f5e523",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "onedump-dump-encryption-pipeline",
+      "language": "go",
+      "repository": "https://github.com/liweiyi88/onedump",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh73t6ych6s1a4vtkbgr61ecr1823tt2-v1.1",
+      "base_commit": "a48e806195c538a73b6916b281939577b370952d"
+    },
+    {
+      "name": "opa-rego-rule-profiling",
+      "language": "go",
+      "repository": "https://github.com/open-policy-agent/opa",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh78zjag0xnxppgym5v4sshav982y8s4-v1.1",
+      "base_commit": "1ac64ef1a57a531c2723c59848890b88e816d777"
+    },
+    {
+      "name": "opa-template-string-reconstruction",
+      "language": "go",
+      "repository": "https://github.com/open-policy-agent/opa",
+      "category": "bugfix",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7eq7eek21pjhv1zx8c2cmmed82yd7v-v1.1",
+      "base_commit": "1ac64ef1a57a531c2723c59848890b88e816d777",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "optique-conditional-option-dependencies",
+      "language": "typescript",
+      "repository": "https://github.com/dahlia/optique",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh79vadftp8bjw2qzqjw8a0b9s82ytpj-v1.1",
+      "base_commit": "14bbe4efc7ded67932771b9ca18d9d637bb4cf27",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "prometheus-transactional-reload-status",
+      "language": "typescript",
+      "repository": "https://github.com/prometheus/prometheus",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7faaexjnnv9h4vt84e0r1v4d82qtv7-v1.1",
+      "base_commit": "24a057bbf9089677b4c49eac4ae1f28287ac8bb9",
+      "repository_seen_in_previous30": true
+    },
+    {
+      "name": "psd-tools-blend-range-api",
+      "language": "python",
+      "repository": "https://github.com/psd-tools/psd-tools",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh72dq33t9djm894gqagmgpkhd82yvjv-v1.1",
+      "base_commit": "c5e03189188daa3c5589326a9d74506d7dc48bc9",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "pwntools-tube-multiplexing",
+      "language": "python",
+      "repository": "https://github.com/Gallopsled/pwntools",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh74mb9dzz76a6zgdqmmf5mvk1833cnk-v1.1",
+      "base_commit": "76894a5404a65d2800b6d0adaf3485ecba275caa",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "python-statemachine-state-data-scoping",
+      "language": "python",
+      "repository": "https://github.com/fgmacedo/python-statemachine",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh719np6e210pf8skawv132rw183pfyy-v1.1",
+      "base_commit": "8d17ba9f6ba8420cf05fddb94013bc221ed9a222",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "query-persist-restored-query-state",
+      "language": "typescript",
+      "repository": "https://github.com/TanStack/query",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh76g3pdaddrcg12k7jse0xrzn83a5fd-v1.1",
+      "base_commit": "1047cdc393fac7c98822c993d70c28f58833c63d",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "quill-shared-toolbar-focus",
+      "language": "typescript",
+      "repository": "https://github.com/slab/quill",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh73sgee6751fmh72hwwctyscx832frj-v1.1",
+      "base_commit": "539cbffd0a13b18e9c65eb84dd35e6596e403158",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "scc-bounded-memory-spilling",
+      "language": "go",
+      "repository": "https://github.com/boyter/scc",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh71j0gr2axgn6v1f92cam6s6x82rkv6-v1.1",
+      "base_commit": "bc2796e01998ebc2d40818323f93113aed2542ea"
+    },
+    {
+      "name": "scriggo-method-declarations",
+      "language": "go",
+      "repository": "https://github.com/open2b/scriggo",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7adk413brr6nnvzntz1qvb51833me1-v1.1",
+      "base_commit": "11703bb5e02cca28d08fe83ac9a4bdd2e087235e",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "sql-formatter-bigquery-pipe-formatting",
+      "language": "typescript",
+      "repository": "https://github.com/sql-formatter-org/sql-formatter",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh712k0bfwxew9fvg12k70g59n83pw33-v1.1",
+      "base_commit": "954e5a474b9e3d45ca58f02a3a4eac8e1947acc5",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "sqlfmt-create-table-ddl-formatting",
+      "language": "python",
+      "repository": "https://github.com/tconbeer/sqlfmt",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh71t2fb7qvx4y0svvv77e5p3182hnvq-v1.1",
+      "base_commit": "da140993a4547170ef85dc5ce7ce1c270f4322b3",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "sqlite-utils-safe-import-checkpoints",
+      "language": "python",
+      "repository": "https://github.com/simonw/sqlite-utils",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh73xpqyc0vqx9prf3m106nqe5821dcb-v1.1",
+      "base_commit": "8d74ffc93292c604d5827e2b44fffedca0c28c19",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "superjson-error-stack-serialization",
+      "language": "typescript",
+      "repository": "https://github.com/flightcontrolhq/superjson",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh701jywhzgddknqwzsq6npjv98226tq-v1.1",
+      "base_commit": "010c4bdb4b8758844fd44eacf38e42b22eba8aea",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "tengo-callable-instance-isolation",
+      "language": "go",
+      "repository": "https://github.com/d5/tengo",
+      "category": "bugfix",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh77n9t7ybdq9387d08jzdp1y183ffe6-v1.1",
+      "base_commit": "3cad0da7a51b1206c6f01e3f4fbb44b976d5275c"
+    },
+    {
+      "name": "tengo-destructuring-bindings",
+      "language": "go",
+      "repository": "https://github.com/d5/tengo",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7ajwvesks1d5kkpeqx7y79sd8238zn-v1.1",
+      "base_commit": "3cad0da7a51b1206c6f01e3f4fbb44b976d5275c",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "termenv-preserve-ansi-resets",
+      "language": "go",
+      "repository": "https://github.com/muesli/termenv",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh731cskx45z0t0961464d9ezx8220nt-v1.1",
+      "base_commit": "368a3572b8146cc038b3f240da6792003d7e42c5",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "testem-bail-on-test-failure",
+      "language": "javascript",
+      "repository": "https://github.com/testem/testem",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh77k18d31qx7jj0c7nyv0xd8s82cznp-v1.1",
+      "base_commit": "06a1adb7a70e85e7322d8cfae3181508785de95d"
+    },
+    {
+      "name": "testem-per-launcher-reports",
+      "language": "javascript",
+      "repository": "https://github.com/testem/testem",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7322qjz1xfjspavxy0kamf9h83277p-v1.1",
+      "base_commit": "158f61ea91c9613d2011c41ee9be40ada1d7a307",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "textual-kitty-key-phases",
+      "language": "python",
+      "repository": "https://github.com/Textualize/textual",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7b36e22me6fzbav0na7kt14h82wk1m-v1.1",
+      "base_commit": "9737a5ab723f79e59f0a83eb036a3d15fad6b054"
+    },
+    {
+      "name": "textual-richlog-follow-state",
+      "language": "python",
+      "repository": "https://github.com/Textualize/textual",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh70247kxfz01g03p1dpz9fqv183g47e-v1.1",
+      "base_commit": "0f0849fd37fbd0d4d6f81889476c22340129df67",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "tomlkit-toml-table-converters",
+      "language": "python",
+      "repository": "https://github.com/python-poetry/tomlkit",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7ezsk4ze1jyjta967ypwnxhh83etpm-v1.1",
+      "base_commit": "dd05eebc8ed9e30fc6c223088a5a450cb54c1cab",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "true-myth-iterable-collection-combinators",
+      "language": "typescript",
+      "repository": "https://github.com/true-myth/true-myth",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh74r2t7kdnt7h2efdk0hf5asx82zr0s-v1.1",
+      "base_commit": "d8fbebc75de4991a32354518beff1abf628d0b07"
+    },
+    {
+      "name": "updo-policy-alerting",
+      "language": "go",
+      "repository": "https://github.com/Owloops/updo",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7dk7mmh6ewnyc9h46wyag19d831gmy-v1.1",
+      "base_commit": "9ecd74f5bd56fa915501e5b77da044d97c450a74",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "valibot-recursive-schema-composition",
+      "language": "typescript",
+      "repository": "https://github.com/open-circle/valibot",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh77krxpg096a66tm8s8ztcarn82zzyv-v1.1",
+      "base_commit": "50016c77c808f9ca80391cf1abc96cc5416cf57d",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "vitest-duration-sharding",
+      "language": "typescript",
+      "repository": "https://github.com/vitest-dev/vitest",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh788hvxvxaz825205djm3ctth822xms-v1.1",
+      "base_commit": "647e6ade3b99523e3a0387a65fccfe918c331236",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "vulture-persistent-analysis-cache",
+      "language": "python",
+      "repository": "https://github.com/jendrikseipp/vulture",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7992s6336c7yhv34x198jqy182zpmt-v1.1",
+      "base_commit": "1eb212f0a0707ad6f4c720bb2010c2b7517cf0f9"
+    },
+    {
+      "name": "wasmi-trap-coredumps",
+      "language": "rust",
+      "repository": "https://github.com/wasmi-labs/wasmi",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh70h37djmvc9ac48jeh25gwz582xgqv-v1.1",
+      "base_commit": "e1f76e285b9ad68a952b7cf5297bbb7ab91e6028",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "wazero-multi-module-snapshots",
+      "language": "go",
+      "repository": "https://github.com/wazero/wazero",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh77sbk25h3f5383rz7xqx98th822fd4-v1.1",
+      "base_commit": "3ec1e028c8cbda984a71bf72321008723ebdcb51",
+      "repository_seen_in_previous30": false
+    },
+    {
+      "name": "ytt-jsonpath-query-api",
+      "language": "go",
+      "repository": "https://github.com/carvel-dev/ytt",
+      "category": "feature_request",
+      "image": "public.ecr.aws/d3j8x8q7/swe-bench-202605:kh77w0w2z8qs6m904k2hs9eg058325j8-v1.1",
+      "base_commit": "452382821dd9dae7cc36995960656bb94dc47212",
+      "repository_seen_in_previous30": false
+    }
+  ],
+  "conditions": [
+    "bundled",
+    "override-coding"
+  ],
+  "prompt_files": {
+    "bundled": "prompts/bundled.md",
+    "override-coding": "prompts/override-coding.md"
+  },
+  "current_prompt_source": "/Users/huizai/.codex/prompts/base-instructions.md",
+  "prompt_revision": "2026-10-26 coding rules and speculative-complexity buy-in; no additional requirement-first wording.",
+  "isolation": "Fresh containers/home per trial; memory use/generation disabled; only frozen conveying5.1.0. No plugins/apps/bundled skills/subagents. Same endpoint-only egress and separate official verifier.",
+  "official_task_files_unchanged": true,
+  "reference_gate": "Reuse prior validated harness calibration. No new oracle/nop/preflight runs; diagnose only concrete infrastructure faults.",
+  "primary_outcome": "Official binary reward for every attempt, paired by task; no best-of-two, score-based exclusions, or successful-only resource summaries.",
+  "authorization": "User requested more runs after prompt changes, said usage is not an issue and authorized a larger subset. Current announced design:60 previously unrun tasks,2attempts,2conditions,240fresh model trials.",
+  "limitations": [
+    "Whole-prompt comparison, not a clause ablation; cannot isolate effects of test-writing or coding-style instructions.",
+    "60 new tasks from the remaining83, not a random full113-task leaderboard sample. Prior30 informed prompt development; keep their results separate.",
+    "At most one task per repository within this sample; some repositories overlap the old study. Language quotas use benchmark metadata.",
+    "Codex0.163.0/Pier0.3.1 on linux/amd64 through M4 Rosetta; official CPU/RAM enforced, storage quota not enforced.",
+    "Two stochastic attempts per condition; no model seed; model endpoint may drift. Paired counterbalanced execution mitigates but does not eliminate time effects.",
+    "Visible behavior review is non-blind; do not infer hidden reasoning or publish raw sessions/secrets."
+  ]
+}

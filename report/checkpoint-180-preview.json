@@ -1,0 +1,69 @@
+{
+  "checks": [
+    {
+      "width": 728,
+      "contentHeight": 823,
+      "capturedHeight": 823,
+      "consoleMessages": [
+        {
+          "level": "log",
+          "text": "Layout: 728 728"
+        },
+        {
+          "level": "log",
+          "text": "Checkpoint render: 182 completed; 45 task pairs; 10 quantitative marks."
+        }
+      ],
+      "screenshot": {
+        "mimeType": "image/png",
+        "width": 728,
+        "height": 823
+      }
+    },
+    {
+      "width": 360,
+      "contentHeight": 898,
+      "capturedHeight": 898,
+      "consoleMessages": [
+        {
+          "level": "log",
+          "text": "Layout: 360 360"
+        },
+        {
+          "level": "log",
+          "text": "Checkpoint render: 182 completed; 45 task pairs; 10 quantitative marks."
+        }
+      ],
+      "screenshot": {
+        "mimeType": "image/png",
+        "width": 360,
+        "height": 898
+      }
+    },
+    {
+      "width": 360,
+      "contentHeight": 2580,
+      "capturedHeight": 2580,
+      "consoleMessages": [
+        {
+          "level": "log",
+          "text": "Layout: 360 360"
+        },
+        {
+          "level": "log",
+          "text": "Checkpoint render: 182 completed; 45 task pairs; 10 quantitative marks."
+        },
+        {
+          "level": "log",
+          "text": "Expanded detail: true rows: 45 width: 360 360"
+        }
+      ],
+      "screenshot": {
+        "mimeType": "image/png",
+        "width": 360,
+        "height": 2580
+      }
+    }
+  ],
+  "observed": "728px dark and360px light render;360px dark native details click opens45rows. No horizontaloverflow or consoleerrors; values match saved snapshot."
+}

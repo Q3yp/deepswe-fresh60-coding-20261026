@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "planned_slots": 240,
+  "tasks": 60,
+  "condition_counts": {
+    "bundled": 120,
+    "override-coding": 120
+  },
+  "distinct_repositories": 60,
+  "frozen_prompt_and_skill_bytes_match": true,
+  "official_task_files_compared": 600,
+  "python_files_parsed": [
+    "attest_trial.py",
+    "summarize.py",
+    "prompt_agent.py",
+    "run_batch.py",
+    "audit_isolation.py",
+    "run_experiment.py"
+  ],
+  "memory_and_optional_features_disabled": true,
+  "model_grader_preflight_runs": 0,
+  "method": "Read actual runner/adapter/configuration; parse modified Python, reconcile schedule, byte-compare frozen inputs and official task material. First actual native trial remains the runtime validation."
+}

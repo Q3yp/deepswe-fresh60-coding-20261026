@@ -1,0 +1,26 @@
+{
+  "bundled": {
+    "planned": 120,
+    "scored": 79,
+    "passed": 54,
+    "scored_with_verified_isolation": 79,
+    "scored_with_provider_interruption": 0,
+    "unscored_errors": 0,
+    "pending": 40,
+    "running": 1,
+    "infrastructure_hold": 0,
+    "awaiting_grader_recovery": 0
+  },
+  "override-coding": {
+    "planned": 120,
+    "scored": 80,
+    "passed": 63,
+    "scored_with_verified_isolation": 80,
+    "scored_with_provider_interruption": 0,
+    "unscored_errors": 0,
+    "pending": 40,
+    "running": 0,
+    "infrastructure_hold": 0,
+    "awaiting_grader_recovery": 0
+  }
+}

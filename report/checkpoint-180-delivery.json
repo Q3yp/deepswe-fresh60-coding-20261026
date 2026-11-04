@@ -1,0 +1,13 @@
+{
+  "checkpoint": 180,
+  "snapshot_scored_slots": 182,
+  "delivered_at": "2026-10-29T10:16:51.182275+00:00",
+  "report": "report/checkpoint-180.md",
+  "data": "report/checkpoint-180-data.json",
+  "visual_attachment": "d224ece1-2aaa-4bfa-b0fc-482554a8e070-5f939ca3-3a08-47f6-8acb-41cfbdf6d76a-html",
+  "delivery_receipt": "report/checkpoint-180-delivery.json",
+  "rendered_inline": true,
+  "preview_checked": true,
+  "validation": "report/checkpoint-180-validation.json",
+  "native_evidence_validation": "review/monitor-20261029T1002-validation.json"
+}

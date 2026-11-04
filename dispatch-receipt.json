@@ -1,0 +1,7 @@
+{
+  "dispatched_at": "2026-10-26T06:32:48.923520+00:00",
+  "launcher_pid": 95789,
+  "root": "/Users/huizai/.t3/benchmarks/codex-base-deepswe-20261022/followups/fresh60-coding-20261026",
+  "scope": "240fresh model slots; shared lock and no active dedicated containers checked before dispatch",
+  "old_stop_preserved": true
+}

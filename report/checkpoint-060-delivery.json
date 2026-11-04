@@ -1,0 +1,13 @@
+{
+  "checkpoint": 60,
+  "snapshot_scored_slots": 60,
+  "snapshot_at": "2026-10-27T08:38:51.474561+00:00",
+  "delivered_at": "2026-10-27T08:48:35.399416+00:00",
+  "report": "report/checkpoint-060.md",
+  "data": "report/checkpoint-060-data.json",
+  "results": "report/checkpoint-060-results.json",
+  "validation": "report/checkpoint-060-validation.json",
+  "visual_attachment": "d224ece1-2aaa-4bfa-b0fc-482554a8e070-d408bf51-7fd9-494b-9876-de065d50cd10-html",
+  "delivery": "T3 inline html_render completed; accompanying written analysis in this checkpoint turn.",
+  "next_checkpoint": 90
+}

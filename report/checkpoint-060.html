@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+html,body{margin:0;background:transparent;color:var(--foreground);font-family:var(--font-sans)}
+#checkpoint60{font-size:var(--font-size-base,14px)}h2{font-weight:500;margin:0 0 8px}p{margin:0 0 16px}.muted{color:var(--muted-foreground)}
+table{width:100%;border-collapse:collapse;margin:12px 0 22px;font-variant-numeric:tabular-nums}th,td{text-align:right;padding:8px 3px;border-bottom:1px solid var(--border);font-weight:400}th:first-child,td:first-child{text-align:left;padding-left:0}th{font-weight:500}caption{text-align:left;font-weight:500;margin-bottom:4px}
+.legend{display:flex;gap:16px;flex-wrap:wrap;margin:8px 0 12px}.swatch{display:inline-block;width:14px;height:9px;margin-right:6px}.bundled{background:var(--chart-1)}.coding{background:var(--chart-2)}
+.task-row{display:grid;grid-template-columns:90px minmax(0,1fr) 42px;column-gap:8px;row-gap:5px;align-items:center;margin-bottom:14px}.name{grid-row:span 2;overflow-wrap:anywhere}.track{height:8px;background:var(--muted)}.bar{height:8px}.value{text-align:right;font-variant-numeric:tabular-nums}.axis{display:flex;justify-content:space-between;margin:0 50px 10px 98px;color:var(--muted-foreground)}.note{margin:12px 0 0}
+</style></head><body><section id="checkpoint60">
+<h2>60 / 240 complete</h2>
+<p class="muted">27 Oct, 16:38 Shanghai · 15 tasks · both repeats in each condition</p>
+<table aria-label="Original official outcomes"><thead><tr><th>Official passes</th><th>Bundled</th><th>Coding</th></tr></thead><tbody><tr><td>Same 15 tasks</td><td>21 / 30<br>70.0%</td><td>25 / 30<br>83.3%</td></tr></tbody></table>
+<h2>Agent time by task</h2>
+<p class="muted">Mean of both attempts, including failures · minutes</p>
+<div class="legend"><span><i class="swatch bundled"></i>Bundled</span><span><i class="swatch coding"></i>October 26 coding override</span></div>
+<div class="axis" aria-hidden="true"><span>0</span><span id="mid-axis"></span><span id="max-axis"></span></div>
+<div id="bars" role="img" aria-label="Paired mean agent times for 15 tasks. Coding is faster on 13 tasks; Aiomonitor and Scriggo are slower. Each bar has its value in minutes."></div>
+<table aria-label="All outcome per-attempt efficiency on matched tasks"><caption>Mean per attempt · all 60 attempts</caption><thead><tr><th>Resource</th><th>Bundled</th><th>Coding</th><th>Change</th></tr></thead><tbody>
+<tr><td>Agent time</td><td>21.6 min</td><td>18.5 min</td><td>−14.7%</td></tr>
+<tr><td>Output tokens</td><td>37,417</td><td>28,450</td><td>−24.0%</td></tr>
+<tr><td>Outer tool calls</td><td>38.3</td><td>31.7</td><td>−17.4%</td></tr>
+<tr><td>Uncached input</td><td>103,697</td><td>101,996</td><td>−1.6%</td></tr>
+</tbody></table>
+<p class="note muted">Raw scores, no adjusted grades. Four-pass gap: two test-overlay collisions, one exact-golden mismatch, one scope-handling failure. Time excludes setup and grading. Descriptive interim results; no significance or capability claim.</p>
+</section><script>
+const root=document.getElementById('checkpoint60');
+const tasks=[{"name": "Wazero", "a": 19.108728225, "b": 17.213494275000002}, {"name": "Dasel", "a": 17.600335508333334, "b": 14.762443325}, {"name": "Textual", "a": 28.900309033333333, "b": 25.694743116666668}, {"name": "Updo", "a": 15.496785225, "b": 11.687036758333333}, {"name": "Actionlint", "a": 15.011330275, "b": 12.496476075}, {"name": "Mobly", "a": 28.957157975000005, "b": 19.198213741666667}, {"name": "Vitest", "a": 19.52818819166667, "b": 16.779476141666667}, {"name": "Prometheus", "a": 25.613288058333335, "b": 15.41004445}, {"name": "Aiomonitor", "a": 12.806792866666667, "b": 13.268254641666665}, {"name": "FastAPI", "a": 14.465667849999999, "b": 10.402308891666667}, {"name": "DynamoDB", "a": 33.15485905, "b": 30.138536483333333}, {"name": "Awilix", "a": 19.850688441666666, "b": 16.214453666666667}, {"name": "Kgateway", "a": 26.949512925, "b": 19.16606283333333}, {"name": "Kysely", "a": 14.993280841666666, "b": 8.698195066666667}, {"name": "Scriggo", "a": 32.177365900000005, "b": 45.63343995}];
+const ceiling=Math.ceil(Math.max(...tasks.flatMap(t=>[t.a,t.b]))/10)*10;
+root.querySelector('#mid-axis').textContent=String(ceiling/2);
+root.querySelector('#max-axis').textContent=ceiling+' min';
+root.querySelector('#bars').innerHTML=tasks.map(t=>`<div class="task-row"><span class="name">${t.name}</span><div class="track"><div class="bar bundled" style="width:${100*t.a/ceiling}%"></div></div><span class="value" aria-label="${t.name}, bundled, ${t.a.toFixed(1)} minutes">${t.a.toFixed(1)}</span><div class="track"><div class="bar coding" style="width:${100*t.b/ceiling}%"></div></div><span class="value" aria-label="${t.name}, coding, ${t.b.toFixed(1)} minutes">${t.b.toFixed(1)}</span></div>`).join('');
+requestAnimationFrame(()=>console.log(JSON.stringify({taskCount:tasks.length,barCount:root.querySelectorAll('.bar').length,ceiling,scrollWidth:document.documentElement.scrollWidth,clientWidth:document.documentElement.clientWidth,allBarsWithinScale:tasks.every(t=>t.a<=ceiling&&t.b<=ceiling)})));
+</script></body></html>

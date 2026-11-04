@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DeepSWE checkpoint 90</title>
+<style>
+:root{--track:var(--muted);--viz-series-1:var(--chart-1);--viz-series-2:var(--chart-2);--font-size-base:14px}
+*{box-sizing:border-box}body{margin:0;padding:12px 0;font-family:var(--font-sans),system-ui,sans-serif;font-size:var(--font-size-base);color:var(--foreground);background:transparent}h1,h2,p{margin:0}h1,h2{font-size:inherit;font-weight:500}h1{padding-right:90px}h2{margin-bottom:14px}.muted{color:var(--muted-foreground)}.small{font-size:12px}.tabular{font-variant-numeric:tabular-nums}section{margin-top:26px}.progress{height:6px;background:var(--track);margin-top:12px}.progress span{display:block;height:100%;background:var(--foreground)}.line{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:7px}.bar{height:13px;background:var(--track)}.bar span{display:block;height:100%}.bundled{background:var(--viz-series-1)}.coding{background:var(--viz-series-2)}.score{margin-bottom:14px}.legend{display:flex;gap:18px;flex-wrap:wrap;margin:12px 0}.swatch{display:inline-block;width:12px;height:8px;margin-right:6px}.metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 28px}.metric h2{margin-bottom:10px}.metric .bar{height:9px;margin-bottom:8px}.metric .line{font-size:12px;gap:8px}.foot{margin-top:12px;line-height:1.5}hr{border:0;border-top:1px solid var(--border);margin:24px 0}.note{line-height:1.5}details{margin-top:18px}summary{font-weight:500;cursor:pointer}details p{margin-top:10px;line-height:1.5}@media(max-width:480px){body{padding:12px 0}.metrics{grid-template-columns:1fr}.line{gap:6px}h1{padding-right:0}}
+</style></head><body><main id="deepswe-checkpoint-090">
+<h1>Checkpoint 90 · 91 / 240 trials complete</h1>
+<p class="muted small" style="margin-top:8px">October 28, 07:39 Shanghai · 22 fully matched tasks + 3 OPA attempts</p>
+<div class="progress" role="progressbar" aria-label="Completed trials" aria-valuemin="0" aria-valuemax="240" aria-valuenow="91"><span style="width:37.9166667%"></span></div>
+<section aria-label="Matched official scores">
+<h2>Official passes on the same 22 tasks</h2>
+<div class="score"><div class="line"><span>Bundled</span><span class="tabular">31 / 44 · 70.5%</span></div><div class="bar"><span class="bundled" style="width:70.454545%"></span></div></div>
+<div class="score"><div class="line"><span>Coding override</span><span class="tabular">38 / 44 · 86.4%</span></div><div class="bar"><span class="coding" style="width:86.363636%"></span></div></div>
+<p class="small muted foot">Raw scores retained. Of the seven-pass gap, four points involve test-overlay collisions and one depends on warning spelling.</p>
+</section>
+<hr>
+<section aria-label="Efficiency on fully matched tasks" style="margin-top:0">
+<h2>Mean per attempt · both repeats, all outcomes</h2>
+<div class="legend small"><span><i class="swatch bundled"></i>Bundled</span><span><i class="swatch coding"></i>Coding override</span></div>
+<div class="metrics">
+<div class="metric"><h2>Agent time</h2><div class="line"><span>Bundled</span><span class="tabular">22.1 min</span></div><div class="bar"><span class="bundled" style="width:100%"></span></div><div class="line"><span>Coding</span><span class="tabular">19.7 min · −10.9%</span></div><div class="bar"><span class="coding" style="width:89.138677%"></span></div></div>
+<div class="metric"><h2>Output tokens</h2><div class="line"><span>Bundled</span><span class="tabular">38,643</span></div><div class="bar"><span class="bundled" style="width:100%"></span></div><div class="line"><span>Coding</span><span class="tabular">30,492 · −21.1%</span></div><div class="bar"><span class="coding" style="width:78.906694%"></span></div></div>
+<div class="metric"><h2>Outer tool calls</h2><div class="line"><span>Bundled</span><span class="tabular">36.1</span></div><div class="bar"><span class="bundled" style="width:100%"></span></div><div class="line"><span>Coding</span><span class="tabular">30.0 · −16.9%</span></div><div class="bar"><span class="coding" style="width:83.144654%"></span></div></div>
+<div class="metric"><h2>Uncached input tokens</h2><div class="line"><span>Bundled</span><span class="tabular">101,228</span></div><div class="bar"><span class="bundled" style="width:100%"></span></div><div class="line"><span>Coding</span><span class="tabular">95,635 · −5.5%</span></div><div class="bar"><span class="coding" style="width:94.474547%"></span></div></div>
+</div>
+<p class="small muted foot">Custom is faster on 17 / 22 task means. Setup and grading excluded; tool calls include polls. Descriptive interim results, not significance tests.</p>
+</section>
+<hr>
+<h2>OPA is not fully matched yet</h2>
+<p class="note small">First attempts: both pass. Custom repeat 2: no requested commit, empty submitted patch, official zero. Bundled repeat 2 is running. All-trial totals: bundled 32 / 45; coding 39 / 46.</p>
+<details><summary>Visible behavior and remaining work</summary><p class="small">New test files: bundled 44 / 44, coding 5 / 44 on fully matched tasks. Both repository tests and temporary application drivers caught real defects. The custom OPA draft passed local checks but was left staged and never reached the grader.</p><p class="small">149 slots remain. Seven grader-only build diagnostics are deferred until the queue finishes. Prompts and isolation remain frozen; prior studies are separate.</p></details>
+</main></body></html>

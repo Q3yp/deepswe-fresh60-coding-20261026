@@ -1,0 +1,96 @@
+{
+  "requested_on": "2026-10-26",
+  "unit": "completed trial slots",
+  "interval": 30,
+  "thresholds": [
+    30,
+    60,
+    90,
+    120,
+    150,
+    180,
+    210,
+    240
+  ],
+  "routine_report": "One brief status line unless a material issue needs attention",
+  "milestone_report": "Moderately detailed progress: scores, matched efficiency, visible behavior and coding differences, caveats and remaining work",
+  "delivered_checkpoints": [
+    {
+      "checkpoint": 30,
+      "snapshot_scored_slots": 31,
+      "delivered_at": "2026-10-26T19:49:21.602Z",
+      "report": "report/checkpoint-030.md",
+      "data": "report/checkpoint-030-data.json",
+      "visual_attachment": "d224ece1-2aaa-4bfa-b0fc-482554a8e070-aed74f77-7e8c-4a5e-b011-3321b9f8b83e-html",
+      "delivery_receipt": "report/checkpoint-030-delivery.json"
+    },
+    {
+      "checkpoint": 60,
+      "snapshot_scored_slots": 60,
+      "delivered_at": "2026-10-27T08:48:35.399416+00:00",
+      "report": "report/checkpoint-060.md",
+      "data": "report/checkpoint-060-data.json",
+      "visual_attachment": "d224ece1-2aaa-4bfa-b0fc-482554a8e070-d408bf51-7fd9-494b-9876-de065d50cd10-html",
+      "delivery_receipt": "report/checkpoint-060-delivery.json"
+    },
+    {
+      "checkpoint": 90,
+      "snapshot_scored_slots": 91,
+      "delivered_at": "2026-10-27T23:49:06.084Z",
+      "report": "report/checkpoint-090.md",
+      "data": "report/checkpoint-090-data.json",
+      "visual_attachment": "d224ece1-2aaa-4bfa-b0fc-482554a8e070-0ce9f8d3-ef1e-4e78-a898-647f212e89a7-html",
+      "delivery_receipt": "report/checkpoint-090-delivery.json"
+    },
+    {
+      "checkpoint": 120,
+      "snapshot_scored_slots": 122,
+      "delivered_at": "2026-10-28T11:55:20.402Z",
+      "report": "report/checkpoint-120.md",
+      "data": "report/checkpoint-120-data.json",
+      "visual_attachment": "d224ece1-2aaa-4bfa-b0fc-482554a8e070-de97110e-bd76-45c1-9986-51f983e0c241-html",
+      "delivery_receipt": "report/checkpoint-120-delivery.json"
+    },
+    {
+      "checkpoint": 150,
+      "snapshot_scored_slots": 153,
+      "delivered_at": "2026-10-28T22:47:55.575Z",
+      "report": "report/checkpoint-150.md",
+      "data": "report/checkpoint-150-data.json",
+      "visual_attachment": "d224ece1-2aaa-4bfa-b0fc-482554a8e070-d463e366-708f-4012-86f4-95c78f098d1e-html",
+      "delivery_receipt": "report/checkpoint-150-delivery.json"
+    },
+    {
+      "checkpoint": 180,
+      "snapshot_scored_slots": 182,
+      "delivered_at": "2026-10-29T10:16:51.182275+00:00",
+      "report": "report/checkpoint-180.md",
+      "data": "report/checkpoint-180-data.json",
+      "visual_attachment": "d224ece1-2aaa-4bfa-b0fc-482554a8e070-5f939ca3-3a08-47f6-8acb-41cfbdf6d76a-html",
+      "delivery_receipt": "report/checkpoint-180-delivery.json"
+    },
+    {
+      "checkpoint": 210,
+      "snapshot_scored_slots": 212,
+      "delivered_at": "2026-10-30T04:18:41.409Z",
+      "report": "report/checkpoint-210.md",
+      "data": "report/checkpoint-210-data.json",
+      "visual_attachment": "d224ece1-2aaa-4bfa-b0fc-482554a8e070-da0f69b8-5d38-48eb-b249-d4ec6e1c8b4f-html",
+      "delivery_receipt": "report/checkpoint-210-delivery.json"
+    },
+    {
+      "checkpoint": 240,
+      "snapshot_scored_slots": 240,
+      "delivered_at": "2026-10-30 18:35:17 UTC",
+      "report": "report/final-report.md",
+      "data": "report/final-analysis.json",
+      "visual_attachment": "d224ece1-2aaa-4bfa-b0fc-482554a8e070-839889e8-6835-47ea-8495-9ac6f41d7367-html",
+      "delivery_receipt": "report/checkpoint-240-delivery.json"
+    }
+  ],
+  "last_reported_checkpoint": 240,
+  "experiment_change": false,
+  "health_check_interval_ms": 7200000,
+  "cadence_amended_on": "2026-10-29",
+  "cadence_amendment": "User intentionally changed health checks to every two hours. Keep this cadence; 30-completed-slot milestone reporting is unchanged."
+}

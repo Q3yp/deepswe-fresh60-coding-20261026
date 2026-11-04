@@ -1,0 +1,978 @@
+{
+  "checkpoint": 120,
+  "snapshot_at": "2026-10-28T11:40:17.776888+00:00",
+  "scored_slots": 122,
+  "fully_matched_tasks": 30,
+  "fully_matched_slots": 120,
+  "partial_tasks": [
+    {
+      "task": "go-critic-doc-link-checker",
+      "slots": [
+        {
+          "task": "go-critic-doc-link-checker",
+          "condition": "bundled",
+          "repeat": 1,
+          "language_metadata": "go",
+          "job": "go-critic-doc-link-checker--bundled--r1",
+          "status": "scored",
+          "reward": 0,
+          "f2p_total": 3,
+          "f2p_passed": 2,
+          "p2p_total": 16,
+          "p2p_passed": 15,
+          "partial": 0.8947368421052632,
+          "exception": null,
+          "native_attestation_passed": true,
+          "native_identity_attestation_passed": true,
+          "provider_interruption": false,
+          "completion_state": "completed",
+          "agent_seconds": 998.041809,
+          "setup_seconds": 0.299464,
+          "verifier_seconds": 73.231734,
+          "input_tokens": 1956295,
+          "cached_input_tokens": 1878144,
+          "output_tokens": 24475,
+          "reasoning_output_tokens": 12230,
+          "tool_calls": 28,
+          "visible_messages": 11,
+          "expected_prompt_recorded": true,
+          "isolation_audit_passed": true,
+          "enabled_skills": "conveying",
+          "isolation_audit_path": "jobs/go-critic-doc-link-checker--bundled--r1/go-critic-doc-link-checker__qMcRgxu/agent/isolation-audit.json",
+          "result_path": "jobs/go-critic-doc-link-checker--bundled--r1/go-critic-doc-link-checker__qMcRgxu/result.json",
+          "review_path": "review/go-critic-doc-link-checker--bundled--r1.json"
+        },
+        {
+          "task": "go-critic-doc-link-checker",
+          "condition": "override-coding",
+          "repeat": 1,
+          "language_metadata": "go",
+          "job": "go-critic-doc-link-checker--override-coding--r1",
+          "status": "scored",
+          "reward": 1,
+          "f2p_total": 3,
+          "f2p_passed": 3,
+          "p2p_total": 16,
+          "p2p_passed": 16,
+          "partial": 1.0,
+          "exception": null,
+          "native_attestation_passed": true,
+          "native_identity_attestation_passed": true,
+          "provider_interruption": false,
+          "completion_state": "completed",
+          "agent_seconds": 701.566736,
+          "setup_seconds": 0.297697,
+          "verifier_seconds": 72.799783,
+          "input_tokens": 1466954,
+          "cached_input_tokens": 1388160,
+          "output_tokens": 16510,
+          "reasoning_output_tokens": 9645,
+          "tool_calls": 22,
+          "visible_messages": 10,
+          "expected_prompt_recorded": true,
+          "isolation_audit_passed": true,
+          "enabled_skills": "conveying",
+          "isolation_audit_path": "jobs/go-critic-doc-link-checker--override-coding--r1/go-critic-doc-link-checker__4nS9Fzx/agent/isolation-audit.json",
+          "result_path": "jobs/go-critic-doc-link-checker--override-coding--r1/go-critic-doc-link-checker__4nS9Fzx/result.json",
+          "review_path": "review/go-critic-doc-link-checker--override-coding--r1.json"
+        }
+      ]
+    }
+  ],
+  "matched_metrics": {
+    "agent_seconds": {
+      "bundled_mean": 1277.7366423333333,
+      "coding_mean": 1091.1402596666667,
+      "relative_change_percent": -14.603665300379465,
+      "tasks_lower_for_coding": 25,
+      "median_task_percent_change": -16.438560131100125
+    },
+    "input_tokens": {
+      "bundled_mean": 3099505.75,
+      "coding_mean": 2461609.1,
+      "relative_change_percent": -20.580592567056854,
+      "tasks_lower_for_coding": 26,
+      "median_task_percent_change": -24.468918143749157
+    },
+    "cached_input_tokens": {
+      "bundled_mean": 3004584.533333333,
+      "coding_mean": 2371447.466666667,
+      "relative_change_percent": -21.07236656657665,
+      "tasks_lower_for_coding": 26,
+      "median_task_percent_change": -25.434567820765345
+    },
+    "uncached_input_tokens": {
+      "bundled_mean": 94921.21666666666,
+      "coding_mean": 90161.63333333333,
+      "relative_change_percent": -5.01424602472963,
+      "tasks_lower_for_coding": 15,
+      "median_task_percent_change": 0.1700756806549908
+    },
+    "output_tokens": {
+      "bundled_mean": 36949.53333333333,
+      "coding_mean": 28119.916666666668,
+      "relative_change_percent": -23.896422688243234,
+      "tasks_lower_for_coding": 28,
+      "median_task_percent_change": -28.146990018054588
+    },
+    "reasoning_output_tokens": {
+      "bundled_mean": 14487.366666666667,
+      "coding_mean": 13593.55,
+      "relative_change_percent": -6.1696282508208355,
+      "tasks_lower_for_coding": 17,
+      "median_task_percent_change": -1.495067147709661
+    },
+    "tool_calls": {
+      "bundled_mean": 33.483333333333334,
+      "coding_mean": 27.433333333333334,
+      "relative_change_percent": -18.068690890990545,
+      "tasks_lower_for_coding": 25,
+      "median_task_percent_change": -20.157400355420158
+    }
+  },
+  "matched_task_rows": [
+    {
+      "task": "wazero-multi-module-snapshots",
+      "conditions": {
+        "bundled": {
+          "reward_sum": 0,
+          "agent_seconds": 1146.5236935,
+          "input_tokens": 1625390.5,
+          "cached_input_tokens": 1544640,
+          "uncached_input_tokens": 80750.5,
+          "output_tokens": 30290.5,
+          "reasoning_output_tokens": 9908.5,
+          "tool_calls": 24
+        },
+        "override-coding": {
+          "reward_sum": 0,
+          "agent_seconds": 1032.8096565,
+          "input_tokens": 1512565.5,
+          "cached_input_tokens": 1445760,
+          "uncached_input_tokens": 66805.5,
+          "output_tokens": 20914,
+          "reasoning_output_tokens": 9880,
+          "tool_calls": 26
+        }
+      }
+    },
+    {
+      "task": "dasel-html-document-format",
+      "conditions": {
+        "bundled": {
+          "reward_sum": 2,
+          "agent_seconds": 1056.0201305,
+          "input_tokens": 1455832,
+          "cached_input_tokens": 1384832,
+          "uncached_input_tokens": 71000,
+          "output_tokens": 28246,
+          "reasoning_output_tokens": 7636,
+          "tool_calls": 20.5
+        },
+        "override-coding": {
+          "reward_sum": 2,
+          "agent_seconds": 885.7465995,
+          "input_tokens": 1298215,
+          "cached_input_tokens": 1228160,
+          "uncached_input_tokens": 70055,
+          "output_tokens": 19839.5,
+          "reasoning_output_tokens": 8502.5,
+          "tool_calls": 20
+        }
+      }
+    },
+    {
+      "task": "textual-richlog-follow-state",
+      "conditions": {
+        "bundled": {
+          "reward_sum": 2,
+          "agent_seconds": 1734.018542,
+          "input_tokens": 3582305.5,
+          "cached_input_tokens": 3482816,
+          "uncached_input_tokens": 99489.5,
+          "output_tokens": 39062.5,
+          "reasoning_output_tokens": 16424.5,
+          "tool_calls": 42.5
+        },
+        "override-coding": {
+          "reward_sum": 2,
+          "agent_seconds": 1541.6845870000002,
+          "input_tokens": 2304689,
+          "cached_input_tokens": 2202496,
+          "uncached_input_tokens": 102193,
+          "output_tokens": 34426,
+          "reasoning_output_tokens": 16071.5,
+          "tool_calls": 29.5
+        }
+      }
+    },
+    {
+      "task": "updo-policy-alerting",
+      "conditions": {
+        "bundled": {
+          "reward_sum": 1,
+          "agent_seconds": 929.8071135,
+          "input_tokens": 1437810.5,
+          "cached_input_tokens": 1341760,
+          "uncached_input_tokens": 96050.5,
+          "output_tokens": 28034.5,
+          "reasoning_output_tokens": 6240,
+          "tool_calls": 19.5
+        },
+        "override-coding": {
+          "reward_sum": 2,
+          "agent_seconds": 701.2222055,
+          "input_tokens": 1337321,
+          "cached_input_tokens": 1248832,
+          "uncached_input_tokens": 88489,
+          "output_tokens": 19087,
+          "reasoning_output_tokens": 6975.5,
+          "tool_calls": 19
+        }
+      }
+    },
+    {
+      "task": "actionlint-action-pinning-lint",
+      "conditions": {
+        "bundled": {
+          "reward_sum": 1,
+          "agent_seconds": 900.6798165,
+          "input_tokens": 1882064,
+          "cached_input_tokens": 1792704,
+          "uncached_input_tokens": 89360,
+          "output_tokens": 28639.5,
+          "reasoning_output_tokens": 7986,
+          "tool_calls": 24
+        },
+        "override-coding": {
+          "reward_sum": 2,
+          "agent_seconds": 749.7885645,
+          "input_tokens": 1487182.5,
+          "cached_input_tokens": 1393920,
+          "uncached_input_tokens": 93262.5,
+          "output_tokens": 17623,
+          "reasoning_output_tokens": 6946,
+          "tool_calls": 20
+        }
+      }
+    },
+    {
+      "task": "mobly-grouped-test-barriers",
+      "conditions": {
+        "bundled": {
+          "reward_sum": 2,
+          "agent_seconds": 1737.4294785000002,
+          "input_tokens": 2197414.5,
+          "cached_input_tokens": 2122816,
+          "uncached_input_tokens": 74598.5,
+          "output_tokens": 44259,
+          "reasoning_output_tokens": 17305.5,
+          "tool_calls": 27
+        },
+        "override-coding": {
+          "reward_sum": 2,
+          "agent_seconds": 1151.8928245,
+          "input_tokens": 1135638,
+          "cached_input_tokens": 1059328,
+          "uncached_input_tokens": 76310,
+          "output_tokens": 22165,
+          "reasoning_output_tokens": 11015.5,
+          "tool_calls": 17.5
+        }
+      }
+    },
+    {
+      "task": "vitest-duration-sharding",
+      "conditions": {
+        "bundled": {
+          "reward_sum": 2,
+          "agent_seconds": 1171.6912915,
+          "input_tokens": 3108609.5,
+          "cached_input_tokens": 3024064,
+          "uncached_input_tokens": 84545.5,
+          "output_tokens": 32987,
+          "reasoning_output_tokens": 11059.5,
+          "tool_calls": 37.5
+        },
+        "override-coding": {
+          "reward_sum": 2,
+          "agent_seconds": 1006.7685684999999,
+          "input_tokens": 2302212.5,
+          "cached_input_tokens": 2201792,
+          "uncached_input_tokens": 100420.5,
+          "output_tokens": 26940.5,
+          "reasoning_output_tokens": 10966.5,
+          "tool_calls": 28
+        }
+      }
+    },
+    {
+      "task": "prometheus-transactional-reload-status",
+      "conditions": {
+        "bundled": {
+          "reward_sum": 0,
+          "agent_seconds": 1536.7972835,
+          "input_tokens": 6083652.5,
+          "cached_input_tokens": 5976832,
+          "uncached_input_tokens": 106820.5,
+          "output_tokens": 44075,
+          "reasoning_output_tokens": 20614,
+          "tool_calls": 59.5
+        },
+        "override-coding": {
+          "reward_sum": 0,
+          "agent_seconds": 924.602667,
+          "input_tokens": 3937641,
+          "cached_input_tokens": 3827968,
+          "uncached_input_tokens": 109673,
+          "output_tokens": 24190.5,
+          "reasoning_output_tokens": 9298,
+          "tool_calls": 42
+        }
+      }
+    },
+    {
+      "task": "aiomonitor-task-snapshots-diff",
+      "conditions": {
+        "bundled": {
+          "reward_sum": 2,
+          "agent_seconds": 768.4075720000001,
+          "input_tokens": 1903076,
+          "cached_input_tokens": 1823936,
+          "uncached_input_tokens": 79140,
+          "output_tokens": 31671,
+          "reasoning_output_tokens": 8544.5,
+          "tool_calls": 25.5
+        },
+        "override-coding": {
+          "reward_sum": 2,
+          "agent_seconds": 796.0952785,
+          "input_tokens": 1430829.5,
+          "cached_input_tokens": 1363776,
+          "uncached_input_tokens": 67053.5,
+          "output_tokens": 28340,
+          "reasoning_output_tokens": 10933,
+          "tool_calls": 22.5
+        }
+      }
+    },
+    {
+      "task": "fastapi-deprecation-response-headers",
+      "conditions": {
+        "bundled": {
+          "reward_sum": 2,
+          "agent_seconds": 867.940071,
+          "input_tokens": 1917946,
+          "cached_input_tokens": 1832256,
+          "uncached_input_tokens": 85690,
+          "output_tokens": 31012,
+          "reasoning_output_tokens": 12931.5,
+          "tool_calls": 27
+        },
+        "override-coding": {
+          "reward_sum": 2,
+          "agent_seconds": 624.1385335,
+          "input_tokens": 1121865,
+          "cached_input_tokens": 1049856,
+          "uncached_input_tokens": 72009,
+          "output_tokens": 20959.5,
+          "reasoning_output_tokens": 10501,
+          "tool_calls": 17.5
+        }
+      }
+    },
+    {
+      "task": "dynamodb-toolbox-lazy-recursive-schemas",
+      "conditions": {
+        "bundled": {
+          "reward_sum": 2,
+          "agent_seconds": 1989.291543,
+          "input_tokens": 11172835.5,
+          "cached_input_tokens": 10985984,
+          "uncached_input_tokens": 186851.5,
+          "output_tokens": 62273,
+          "reasoning_output_tokens": 30184,
+          "tool_calls": 77.5
+        },
+        "override-coding": {
+          "reward_sum": 2,
+          "agent_seconds": 1808.312189,
+          "input_tokens": 8953589.5,
+          "cached_input_tokens": 8765632,
+          "uncached_input_tokens": 187957.5,
+          "output_tokens": 54583,
+          "reasoning_output_tokens": 28082.5,
+          "tool_calls": 65.5
+        }
+      }
+    },
+    {
+      "task": "awilix-async-container-initialization",
+      "conditions": {
+        "bundled": {
+          "reward_sum": 1,
+          "agent_seconds": 1191.0413065,
+          "input_tokens": 1755184.5,
+          "cached_input_tokens": 1687744,
+          "uncached_input_tokens": 67440.5,
+          "output_tokens": 32911,
+          "reasoning_output_tokens": 11992.5,
+          "tool_calls": 25.5
+        },
+        "override-coding": {
+          "reward_sum": 2,
+          "agent_seconds": 972.86722,
+          "input_tokens": 1285383.5,
+          "cached_input_tokens": 1217600,
+          "uncached_input_tokens": 67783.5,
+          "output_tokens": 23137,
+          "reasoning_output_tokens": 12316,
+          "tool_calls": 20
+        }
+      }
+    },
+    {
+      "task": "kgateway-consistent-hash-policy",
+      "conditions": {
+        "bundled": {
+          "reward_sum": 0,
+          "agent_seconds": 1616.9707755,
+          "input_tokens": 7431869.5,
+          "cached_input_tokens": 7286336,
+          "uncached_input_tokens": 145533.5,
+          "output_tokens": 41985,
+          "reasoning_output_tokens": 16414,
+          "tool_calls": 62
+        },
+        "override-coding": {
+          "reward_sum": 1,
+          "agent_seconds": 1149.9637699999998,
+          "input_tokens": 4312670,
+          "cached_input_tokens": 4180928,
+          "uncached_input_tokens": 131742,
+          "output_tokens": 32643.5,
+          "reasoning_output_tokens": 10772.5,
+          "tool_calls": 41
+        }
+      }
+    },
+    {
+      "task": "kysely-window-grouping-helpers",
+      "conditions": {
+        "bundled": {
+          "reward_sum": 2,
+          "agent_seconds": 899.5968505,
+          "input_tokens": 2979236.5,
+          "cached_input_tokens": 2850112,
+          "uncached_input_tokens": 129124.5,
+          "output_tokens": 37788.5,
+          "reasoning_output_tokens": 8877,
+          "tool_calls": 33.5
+        },
+        "override-coding": {
+          "reward_sum": 2,
+          "agent_seconds": 521.891704,
+          "input_tokens": 1516912.5,
+          "cached_input_tokens": 1436224,
+          "uncached_input_tokens": 80688.5,
+          "output_tokens": 21829,
+          "reasoning_output_tokens": 5258.5,
+          "tool_calls": 21.5
+        }
+      }
+    },
+    {
+      "task": "scriggo-method-declarations",
+      "conditions": {
+        "bundled": {
+          "reward_sum": 2,
+          "agent_seconds": 1930.6419540000002,
+          "input_tokens": 8724428.5,
+          "cached_input_tokens": 8565376,
+          "uncached_input_tokens": 159052.5,
+          "output_tokens": 48019.5,
+          "reasoning_output_tokens": 21083.5,
+          "tool_calls": 69.5
+        },
+        "override-coding": {
+          "reward_sum": 2,
+          "agent_seconds": 2738.006397,
+          "input_tokens": 11591373.5,
+          "cached_input_tokens": 11375872,
+          "uncached_input_tokens": 215501.5,
+          "output_tokens": 60068,
+          "reasoning_output_tokens": 31710.5,
+          "tool_calls": 85
+        }
+      }
+    },
+    {
+      "task": "pwntools-tube-multiplexing",
+      "conditions": {
+        "bundled": {
+          "reward_sum": 2,
+          "agent_seconds": 1706.0724395,
+          "input_tokens": 1532589,
+          "cached_input_tokens": 1465088,
+          "uncached_input_tokens": 67501,
+          "output_tokens": 38623,
+          "reasoning_output_tokens": 19480.5,
+          "tool_calls": 21.5
+        },
+        "override-coding": {
+          "reward_sum": 2,
+          "agent_seconds": 1742.88102,
+          "input_tokens": 1267724,
+          "cached_input_tokens": 1191296,
+          "uncached_input_tokens": 76428,
+          "output_tokens": 36962.5,
+          "reasoning_output_tokens": 22944,
+          "tool_calls": 18.5
+        }
+      }
+    },
+    {
+      "task": "langchain-request-coalescing",
+      "conditions": {
+        "bundled": {
+          "reward_sum": 2,
+          "agent_seconds": 2159.619185,
+          "input_tokens": 3949998,
+          "cached_input_tokens": 3822656,
+          "uncached_input_tokens": 127342,
+          "output_tokens": 64342.5,
+          "reasoning_output_tokens": 28905,
+          "tool_calls": 42.5
+        },
+        "override-coding": {
+          "reward_sum": 2,
+          "agent_seconds": 1968.68473,
+          "input_tokens": 3023000.5,
+          "cached_input_tokens": 2951360,
+          "uncached_input_tokens": 71640.5,
+          "output_tokens": 54730,
+          "reasoning_output_tokens": 27810.5,
+          "tool_calls": 37
+        }
+      }
+    },
+    {
+      "task": "ofetch-per-origin-circuit-breaker",
+      "conditions": {
+        "bundled": {
+          "reward_sum": 2,
+          "agent_seconds": 647.8128105000001,
+          "input_tokens": 932052.5,
+          "cached_input_tokens": 876416,
+          "uncached_input_tokens": 55636.5,
+          "output_tokens": 21005,
+          "reasoning_output_tokens": 6897.5,
+          "tool_calls": 19
+        },
+        "override-coding": {
+          "reward_sum": 2,
+          "agent_seconds": 853.2876645,
+          "input_tokens": 551078.5,
+          "cached_input_tokens": 504128,
+          "uncached_input_tokens": 46950.5,
+          "output_tokens": 15819,
+          "reasoning_output_tokens": 8527,
+          "tool_calls": 11.5
+        }
+      }
+    },
+    {
+      "task": "claude-code-by-agents-recursive-delegation",
+      "conditions": {
+        "bundled": {
+          "reward_sum": 2,
+          "agent_seconds": 572.657099,
+          "input_tokens": 852622,
+          "cached_input_tokens": 781184,
+          "uncached_input_tokens": 71438,
+          "output_tokens": 15943,
+          "reasoning_output_tokens": 5859,
+          "tool_calls": 15
+        },
+        "override-coding": {
+          "reward_sum": 2,
+          "agent_seconds": 408.2073005,
+          "input_tokens": 817922,
+          "cached_input_tokens": 752960,
+          "uncached_input_tokens": 64962,
+          "output_tokens": 11551,
+          "reasoning_output_tokens": 5443,
+          "tool_calls": 16
+        }
+      }
+    },
+    {
+      "task": "wasmi-trap-coredumps",
+      "conditions": {
+        "bundled": {
+          "reward_sum": 2,
+          "agent_seconds": 1266.7572005,
+          "input_tokens": 4945366,
+          "cached_input_tokens": 4806016,
+          "uncached_input_tokens": 139350,
+          "output_tokens": 40026.5,
+          "reasoning_output_tokens": 13592,
+          "tool_calls": 44.5
+        },
+        "override-coding": {
+          "reward_sum": 2,
+          "agent_seconds": 1785.7321780000002,
+          "input_tokens": 6593769.5,
+          "cached_input_tokens": 6444864,
+          "uncached_input_tokens": 148905.5,
+          "output_tokens": 47709.5,
+          "reasoning_output_tokens": 24501.5,
+          "tool_calls": 52
+        }
+      }
+    },
+    {
+      "task": "kcp-go-multiplexed-kcp-streams",
+      "conditions": {
+        "bundled": {
+          "reward_sum": 0,
+          "agent_seconds": 1496.3636025,
+          "input_tokens": 2004755.5,
+          "cached_input_tokens": 1898880,
+          "uncached_input_tokens": 105875.5,
+          "output_tokens": 47293.5,
+          "reasoning_output_tokens": 22075.5,
+          "tool_calls": 27
+        },
+        "override-coding": {
+          "reward_sum": 2,
+          "agent_seconds": 852.1591535,
+          "input_tokens": 573674,
+          "cached_input_tokens": 516096,
+          "uncached_input_tokens": 57578,
+          "output_tokens": 26032,
+          "reasoning_output_tokens": 14299.5,
+          "tool_calls": 10.5
+        }
+      }
+    },
+    {
+      "task": "helm-array-merge-strategies",
+      "conditions": {
+        "bundled": {
+          "reward_sum": 0,
+          "agent_seconds": 1869.3223014999999,
+          "input_tokens": 5459685.5,
+          "cached_input_tokens": 5355264,
+          "uncached_input_tokens": 104421.5,
+          "output_tokens": 61649.5,
+          "reasoning_output_tokens": 31488.5,
+          "tool_calls": 50.5
+        },
+        "override-coding": {
+          "reward_sum": 1,
+          "agent_seconds": 1807.705731,
+          "input_tokens": 4180383,
+          "cached_input_tokens": 4072832,
+          "uncached_input_tokens": 107551,
+          "output_tokens": 51265.5,
+          "reasoning_output_tokens": 31783,
+          "tool_calls": 40.5
+        }
+      }
+    },
+    {
+      "task": "opa-template-string-reconstruction",
+      "conditions": {
+        "bundled": {
+          "reward_sum": 2,
+          "agent_seconds": 2224.2962025,
+          "input_tokens": 5377563,
+          "cached_input_tokens": 5243008,
+          "uncached_input_tokens": 134555,
+          "output_tokens": 58339.5,
+          "reasoning_output_tokens": 34077,
+          "tool_calls": 54.5
+        },
+        "override-coding": {
+          "reward_sum": 1,
+          "agent_seconds": 1365.981129,
+          "input_tokens": 3105450.5,
+          "cached_input_tokens": 3007296,
+          "uncached_input_tokens": 98154.5,
+          "output_tokens": 35486,
+          "reasoning_output_tokens": 22476.5,
+          "tool_calls": 36
+        }
+      }
+    },
+    {
+      "task": "tengo-destructuring-bindings",
+      "conditions": {
+        "bundled": {
+          "reward_sum": 2,
+          "agent_seconds": 739.418126,
+          "input_tokens": 2016289.5,
+          "cached_input_tokens": 1921792,
+          "uncached_input_tokens": 94497.5,
+          "output_tokens": 25221,
+          "reasoning_output_tokens": 7296,
+          "tool_calls": 25
+        },
+        "override-coding": {
+          "reward_sum": 2,
+          "agent_seconds": 646.4894509999999,
+          "input_tokens": 1400016,
+          "cached_input_tokens": 1319744,
+          "uncached_input_tokens": 80272,
+          "output_tokens": 18865,
+          "reasoning_output_tokens": 8538.5,
+          "tool_calls": 19
+        }
+      }
+    },
+    {
+      "task": "termenv-preserve-ansi-resets",
+      "conditions": {
+        "bundled": {
+          "reward_sum": 0,
+          "agent_seconds": 910.3467875,
+          "input_tokens": 735450.5,
+          "cached_input_tokens": 694976,
+          "uncached_input_tokens": 40474.5,
+          "output_tokens": 30347,
+          "reasoning_output_tokens": 9983,
+          "tool_calls": 15.5
+        },
+        "override-coding": {
+          "reward_sum": 0,
+          "agent_seconds": 675.971084,
+          "input_tokens": 755740.5,
+          "cached_input_tokens": 697920,
+          "uncached_input_tokens": 57820.5,
+          "output_tokens": 21623.5,
+          "reasoning_output_tokens": 10255,
+          "tool_calls": 14.5
+        }
+      }
+    },
+    {
+      "task": "ytt-jsonpath-query-api",
+      "conditions": {
+        "bundled": {
+          "reward_sum": 2,
+          "agent_seconds": 794.3755525,
+          "input_tokens": 1366286,
+          "cached_input_tokens": 1307712,
+          "uncached_input_tokens": 58574,
+          "output_tokens": 28604,
+          "reasoning_output_tokens": 6971.5,
+          "tool_calls": 22.5
+        },
+        "override-coding": {
+          "reward_sum": 2,
+          "agent_seconds": 577.9321745,
+          "input_tokens": 821968,
+          "cached_input_tokens": 769344,
+          "uncached_input_tokens": 52624,
+          "output_tokens": 19478,
+          "reasoning_output_tokens": 7589.5,
+          "tool_calls": 15.5
+        }
+      }
+    },
+    {
+      "task": "csstree-shorthand-expansion-compression",
+      "conditions": {
+        "bundled": {
+          "reward_sum": 2,
+          "agent_seconds": 1124.7076925000001,
+          "input_tokens": 1229222.5,
+          "cached_input_tokens": 1164672,
+          "uncached_input_tokens": 64550.5,
+          "output_tokens": 28221,
+          "reasoning_output_tokens": 10606.5,
+          "tool_calls": 19.5
+        },
+        "override-coding": {
+          "reward_sum": 2,
+          "agent_seconds": 776.839414,
+          "input_tokens": 932698,
+          "cached_input_tokens": 866048,
+          "uncached_input_tokens": 66650,
+          "output_tokens": 18391,
+          "reasoning_output_tokens": 8621.5,
+          "tool_calls": 15.5
+        }
+      }
+    },
+    {
+      "task": "fd-deterministic-multi-key-sorting",
+      "conditions": {
+        "bundled": {
+          "reward_sum": 2,
+          "agent_seconds": 1106.9076810000001,
+          "input_tokens": 1848082,
+          "cached_input_tokens": 1760128,
+          "uncached_input_tokens": 87954,
+          "output_tokens": 27778,
+          "reasoning_output_tokens": 9647,
+          "tool_calls": 23.5
+        },
+        "override-coding": {
+          "reward_sum": 2,
+          "agent_seconds": 996.0940565000001,
+          "input_tokens": 1956488.5,
+          "cached_input_tokens": 1863040,
+          "uncached_input_tokens": 93448.5,
+          "output_tokens": 20708.5,
+          "reasoning_output_tokens": 8752,
+          "tool_calls": 24.5
+        }
+      }
+    },
+    {
+      "task": "igel-persist-feature-schema",
+      "conditions": {
+        "bundled": {
+          "reward_sum": 0,
+          "agent_seconds": 927.5865530000001,
+          "input_tokens": 1197743.5,
+          "cached_input_tokens": 1129472,
+          "uncached_input_tokens": 68271.5,
+          "output_tokens": 22202.5,
+          "reasoning_output_tokens": 7841.5,
+          "tool_calls": 20
+        },
+        "override-coding": {
+          "reward_sum": 0,
+          "agent_seconds": 852.905822,
+          "input_tokens": 1068028.5,
+          "cached_input_tokens": 999872,
+          "uncached_input_tokens": 68156.5,
+          "output_tokens": 18576,
+          "reasoning_output_tokens": 8733,
+          "tool_calls": 18.5
+        }
+      }
+    },
+    {
+      "task": "koota-entity-snapshot-rollback",
+      "conditions": {
+        "bundled": {
+          "reward_sum": 1,
+          "agent_seconds": 1308.9986145,
+          "input_tokens": 2279811.5,
+          "cached_input_tokens": 2208064,
+          "uncached_input_tokens": 71747.5,
+          "output_tokens": 37636,
+          "reasoning_output_tokens": 12699.5,
+          "tool_calls": 29
+        },
+        "override-coding": {
+          "reward_sum": 1,
+          "agent_seconds": 817.5461164999999,
+          "input_tokens": 1272243.5,
+          "cached_input_tokens": 1188480,
+          "uncached_input_tokens": 83763.5,
+          "output_tokens": 19654.5,
+          "reasoning_output_tokens": 8302.5,
+          "tool_calls": 18.5
+        }
+      }
+    }
+  ],
+  "raw_scores": {
+    "bundled": {
+      "passed": 42,
+      "scored": 61
+    },
+    "override-coding": {
+      "passed": 49,
+      "scored": 61
+    }
+  },
+  "matched_scores": {
+    "bundled": {
+      "passed": 42,
+      "scored": 60
+    },
+    "override-coding": {
+      "passed": 48,
+      "scored": 60
+    }
+  },
+  "behavior": {
+    "bundled": {
+      "reviewed_slots": 60,
+      "source_before_edit": 60,
+      "new_test_files_slots": 60
+    },
+    "override-coding": {
+      "reviewed_slots": 60,
+      "source_before_edit": 60,
+      "new_test_files_slots": 5
+    }
+  },
+  "task_score_comparison": {
+    "coding_higher": 6,
+    "bundled_higher": 1,
+    "ties": 23
+  },
+  "archived_interruption_usage": {
+    "recorded_at": "2026-10-28T03:44:55.868725+00:00",
+    "policy": "protocol-amendments/network-provider-reruns-20261028.json",
+    "attempts": [
+      {
+        "job": "termenv-preserve-ansi-resets--override-coding--r2",
+        "archive": "infrastructure/attempts/termenv-preserve-ansi-resets--override-coding--r2--external-interruption-a1-20261028",
+        "reason": "Selected model is at capacity. Please try a different model.",
+        "native_result": "infrastructure/attempts/termenv-preserve-ansi-resets--override-coding--r2--external-interruption-a1-20261028/termenv-preserve-ansi-resets__UNKYwTo/result.json",
+        "original_reward": {
+          "reward": 0,
+          "f2p_total": 35,
+          "f2p_passed": 0,
+          "p2p_total": 87,
+          "p2p_passed": 87,
+          "f2p": 0.0,
+          "p2p": 1.0,
+          "partial": 0.7131147540983607
+        },
+        "agent_seconds": 424.163801,
+        "input_tokens": 179269,
+        "cached_input_tokens": 138624,
+        "output_tokens": 10255,
+        "tool_calls": 6,
+        "usage_observed": true,
+        "excluded_from_primary_slots": true
+      },
+      {
+        "job": "ytt-jsonpath-query-api--bundled--r1",
+        "archive": "infrastructure/attempts/ytt-jsonpath-query-api--bundled--r1--external-interruption-a1-20261028",
+        "reason": "workspace routing discovery unauthorized (401)",
+        "native_result": "infrastructure/attempts/ytt-jsonpath-query-api--bundled--r1--external-interruption-a1-20261028/ytt-jsonpath-query-api__NLdAy6T/result.json",
+        "original_reward": {
+          "reward": 0,
+          "f2p_total": 103,
+          "f2p_passed": 0,
+          "p2p_total": 1,
+          "p2p_passed": 1,
+          "f2p": 0.0,
+          "p2p": 1.0,
+          "partial": 0.009615384615384616
+        },
+        "agent_seconds": 51.40765,
+        "input_tokens": null,
+        "cached_input_tokens": null,
+        "output_tokens": null,
+        "tool_calls": 0,
+        "usage_observed": false,
+        "excluded_from_primary_slots": true
+      }
+    ],
+    "note": "Interrupted attempts only. Do not add to primarypairedresources. Nullusage means unreported, notmeasuredzero."
+  },
+  "unrun_grading_only_diagnostics": 10,
+  "remaining_slots": 118,
+  "inferential_statistics": "Deferred to final60task analysis; interimdescriptive only."
+}

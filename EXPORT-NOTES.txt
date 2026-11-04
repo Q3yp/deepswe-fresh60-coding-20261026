@@ -1,0 +1,5 @@
+Fresh60 DeepSWE1.1 completed experiment
+
+Start with report/final-report.md. All240 primary trial records and saved raw traces are included. Scores and frozen prompts are unchanged.
+
+This private export redacts only known obsolete per-trial proxy credentials; original local records are untouched. EXPORT-MANIFEST.json lists every source file, sizes and redaction count. No auth files were present. Earlier experiments and Docker/VM images are not included.

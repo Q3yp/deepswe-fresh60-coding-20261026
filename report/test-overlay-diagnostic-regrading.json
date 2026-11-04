@@ -1,0 +1,184 @@
+{
+  "recorded_at": "2026-11-01T01:46:20+00:00",
+  "scope": "Post-hoc diagnostic regrading of the 12 documented test-overlay and fixture mismatches from infrastructure/fixture-diagnostics-final-disposition.json, with unchanged model.patch implementations.",
+  "primary_scores_replaced": false,
+  "model_executions": 0,
+  "summary": {
+    "denominator_per_condition": 120,
+    "tasks": 60,
+    "repeats_per_condition": 2,
+    "bundled": {
+      "original_passes": 84,
+      "original_rate": 0.7,
+      "diagnostic_adjusted_passes": 91,
+      "diagnostic_adjusted_rate": 0.7583333333333333,
+      "additional_passes": 7
+    },
+    "override_coding": {
+      "original_passes": 94,
+      "original_rate": 0.7833333333333333,
+      "diagnostic_adjusted_passes": 94,
+      "diagnostic_adjusted_rate": 0.7833333333333333,
+      "additional_passes": 0
+    },
+    "difference_coding_minus_bundled": {
+      "original_passes_diff": 10,
+      "original_percentage_points": 8.333333333333334,
+      "original_exact_sign_flip_p": 0.03967,
+      "diagnostic_passes_diff": 3,
+      "diagnostic_percentage_points": 2.5,
+      "task_paired_bootstrap_95_ci_pp": [-2.5, 7.5],
+      "bootstrap_draws": 100000,
+      "bootstrap_seed": 20261101,
+      "exact_task_paired_sign_flip_p": 0.5078
+    }
+  },
+  "replayed_cases": [
+    {
+      "attempt": "wazero-multi-module-snapshots--bundled--r1",
+      "condition": "bundled",
+      "original_binary": 0,
+      "diagnostic_binary": 0,
+      "f2p_passed": 77,
+      "f2p_total": 78,
+      "p2p_passed": 2,
+      "p2p_total": 2,
+      "remaining_failures": [
+        "[f2p] github.com/tetratelabs/wazero/experimental/snapshot.TestCoordinator_CaptureIncremental_FromIncrementalBaseline"
+      ]
+    },
+    {
+      "attempt": "wazero-multi-module-snapshots--bundled--r2",
+      "condition": "bundled",
+      "original_binary": 0,
+      "diagnostic_binary": 0,
+      "f2p_passed": 77,
+      "f2p_total": 78,
+      "p2p_passed": 2,
+      "p2p_total": 2,
+      "remaining_failures": [
+        "[f2p] github.com/tetratelabs/wazero/experimental/snapshot.TestCoordinator_CaptureIncremental_FromIncrementalBaseline"
+      ]
+    },
+    {
+      "attempt": "updo-policy-alerting--bundled--r2",
+      "condition": "bundled",
+      "original_binary": 0,
+      "diagnostic_binary": 1,
+      "f2p_passed": 17,
+      "f2p_total": 17,
+      "p2p_passed": 123,
+      "p2p_total": 123,
+      "remaining_failures": []
+    },
+    {
+      "attempt": "actionlint-action-pinning-lint--bundled--r1",
+      "condition": "bundled",
+      "original_binary": 0,
+      "diagnostic_binary": 1,
+      "f2p_passed": 55,
+      "f2p_total": 55,
+      "p2p_passed": 145,
+      "p2p_total": 145,
+      "remaining_failures": []
+    },
+    {
+      "attempt": "prometheus-transactional-reload-status--bundled--r1",
+      "condition": "bundled",
+      "original_binary": 0,
+      "diagnostic_binary": 0,
+      "f2p_passed": 10,
+      "f2p_total": 15,
+      "p2p_passed": 82,
+      "p2p_total": 82,
+      "remaining_failures": [
+        "[f2p] github.com/prometheus/prometheus/cmd/prometheus.TestReloadStatusEndpointAndStateFile_BlackBox",
+        "[f2p] github.com/prometheus/prometheus/cmd/prometheus.TestTransactionalConfigReload_ConcurrentReloadRequestsConverge",
+        "[f2p] github.com/prometheus/prometheus/cmd/prometheus.TestTransactionalConfigReload_RollsBackOnPartialApplyFailure",
+        "[f2p] github.com/prometheus/prometheus/cmd/prometheus.TestTransactionalConfigReload_Sequence_45ReloadAttemptsMaintainInvariants",
+        "[f2p] github.com/prometheus/prometheus/cmd/prometheus.TestTransactionalConfigReload_SuccessfulReloadUpdatesStatusAndSuccessMetric"
+      ]
+    },
+    {
+      "attempt": "kcp-go-multiplexed-kcp-streams--bundled--r1",
+      "condition": "bundled",
+      "original_binary": 0,
+      "diagnostic_binary": 1,
+      "f2p_passed": 30,
+      "f2p_total": 30,
+      "p2p_passed": 12,
+      "p2p_total": 12,
+      "remaining_failures": []
+    },
+    {
+      "attempt": "kcp-go-multiplexed-kcp-streams--bundled--r2",
+      "condition": "bundled",
+      "original_binary": 0,
+      "diagnostic_binary": 1,
+      "f2p_passed": 30,
+      "f2p_total": 30,
+      "p2p_passed": 12,
+      "p2p_total": 12,
+      "remaining_failures": []
+    },
+    {
+      "attempt": "igel-persist-feature-schema--override-coding--r1",
+      "condition": "override-coding",
+      "original_binary": 0,
+      "diagnostic_binary": 0,
+      "f2p_passed": 23,
+      "f2p_total": 24,
+      "p2p_passed": 2,
+      "p2p_total": 2,
+      "remaining_failures": [
+        "[f2p] tests.test_igel.test_feature_schema_persistence.test_fit_rejects_when_all_features_are_removed"
+      ]
+    },
+    {
+      "attempt": "igel-persist-feature-schema--override-coding--r2",
+      "condition": "override-coding",
+      "original_binary": 0,
+      "diagnostic_binary": 0,
+      "f2p_passed": 23,
+      "f2p_total": 24,
+      "p2p_passed": 2,
+      "p2p_total": 2,
+      "remaining_failures": [
+        "[f2p] tests.test_igel.test_feature_schema_persistence.test_fit_rejects_when_all_features_are_removed"
+      ]
+    },
+    {
+      "attempt": "go-critic-doc-link-checker--bundled--r1",
+      "condition": "bundled",
+      "original_binary": 0,
+      "diagnostic_binary": 1,
+      "f2p_passed": 3,
+      "f2p_total": 3,
+      "p2p_passed": 16,
+      "p2p_total": 16,
+      "remaining_failures": []
+    },
+    {
+      "attempt": "go-critic-doc-link-checker--bundled--r2",
+      "condition": "bundled",
+      "original_binary": 0,
+      "diagnostic_binary": 1,
+      "f2p_passed": 3,
+      "f2p_total": 3,
+      "p2p_passed": 16,
+      "p2p_total": 16,
+      "remaining_failures": []
+    },
+    {
+      "attempt": "geo-shapeindex-serialization--bundled--r2",
+      "condition": "bundled",
+      "original_binary": 0,
+      "diagnostic_binary": 1,
+      "f2p_passed": 24,
+      "f2p_total": 24,
+      "p2p_passed": 599,
+      "p2p_total": 599,
+      "remaining_failures": []
+    }
+  ]
+}

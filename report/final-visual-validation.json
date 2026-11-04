@@ -1,0 +1,9 @@
+{
+  "desktop": [
+    "{\"width\":728,\"contentHeight\":1298,\"capturedHeight\":1298,\"consoleMessages\":[{\"level\":\"log\",\"text\":\"{\\\"tasks\\\":60,\\\"passes\\\":{\\\"bundled\\\":84,\\\"override-coding\\\":94},\\\"slots\\\":240,\\\"buttons\\\":60,\\\"selected\\\":\\\"wazero-multi-module-snapshots · passes B 0/2, C 0/2. Mean time 19.1 → 17.2 min; output 30,291 → 20,914; source additions 665 → 533.\\\",\\\"overflow\\\":false}\"}],\"screenshot\":{\"mimeType\":\"image/png\",\"width\":728,\"height\":1298}}"
+  ],
+  "mobile": [
+    "{\"width\":360,\"contentHeight\":1979,\"capturedHeight\":1979,\"consoleMessages\":[{\"level\":\"log\",\"text\":\"{\\\"tasks\\\":60,\\\"passes\\\":{\\\"bundled\\\":84,\\\"override-coding\\\":94},\\\"slots\\\":240,\\\"buttons\\\":60,\\\"selected\\\":\\\"wazero-multi-module-snapshots · passes B 0/2, C 0/2. Mean time 19.1 → 17.2 min; output 30,291 → 20,914; source additions 665 → 533.\\\",\\\"overflow\\\":false}\"},{\"level\":\"log\",\"text\":\"{\\\"interaction\\\":\\\"go-git-worktree-merge-conflicts · passes B 2/2, C 2/2. Mean time 27.4 → 20.3 min; output 43,524 → 30,213; source additions 679 → 561.\\\",\\\"selected\\\":1,\\\"overflow\\\":false}\"}],\"screenshot\":{\"mimeType\":\"image/png\",\"width\":360,\"height\":1979}}"
+  ],
+  "inspection": "Desktop dark 728px and final mobile light 360px inspected. No overflow. Mobile interaction selected the last task, showing both 2/2 scores and correct paired resources; exactly one selected task. Final data has 60 buttons and 240 slots."
+}

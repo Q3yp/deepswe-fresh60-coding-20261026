@@ -1,0 +1,20 @@
+model_instructions_file = "/installed-agent/base-instructions.md"
+model_reasoning_effort = "xhigh"
+model_verbosity = "medium"
+approval_policy = "never"
+sandbox_mode = "danger-full-access"
+web_search = "disabled"
+notify = []
+
+[memories]
+use_memories = false
+generate_memories = false
+
+[features]
+multi_agent = false
+memories = false
+plugins = false
+apps = false
+
+[skills.bundled]
+enabled = false

