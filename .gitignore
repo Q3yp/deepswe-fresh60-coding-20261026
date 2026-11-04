@@ -1,0 +1,9 @@
+# Ignore everything by default, track only the 3 core deliverables
+*
+!.gitignore
+!.gitattributes
+!README.md
+!traces.zip
+!prompts/
+!prompts/bundled.md
+!prompts/override-coding.md
